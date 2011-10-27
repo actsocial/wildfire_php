@@ -1,0 +1,47 @@
+﻿<div align="center" >
+<div class="operate">
+<a href='<?php echo $this->url(array('controller'=>'campaigninvitation',
+'action'=>'admincreate'));?>'><?php echo $this->translate('Add_Campaign_Invitation');?></a>
+</div>
+<br>
+
+<br/>
+<h2><?php echo $this->translate('Campaign_Invitations');?></h2>
+<br>
+<table>
+<tr>
+<th>No.</th>
+<th><?php echo $this->translate('Campaign_Invitations_Name');?></th>
+<th><?php echo $this->translate('Consumers_Name');?></th>
+<th><?php echo $this->translate('Consumers_Email');?></th>
+<th><?php echo $this->translate('State');?></th>
+<th><?php echo $this->translate('Create_Date');?></th>
+<!-- <th>操作</th> -->
+</tr>
+<?php $count = 1; foreach($this->campaignInvitations as $campaignInvitation) : ?>
+<tr>
+<td ><?php echo $count++;?></td>
+<td><?php echo $this->escape($campaignInvitation['cam_name']);?></td>
+<td><?php echo $this->escape($campaignInvitation['con_name']);?></td>
+<td><?php echo $this->escape($campaignInvitation['email']);?></td>
+<td><?php echo $this->translate($this->escape($campaignInvitation['state']));?></td>
+<td><?php echo $this->escape($campaignInvitation['create_date']);?></td>
+<!-- <td>
+<a href="<?php echo $this->url(array('controller'=>'campaigninvitation',
+'action'=>'admindelete', 'id'=>$campaignInvitation['id']));?>">Delete</a>
+</td> -->
+</tr>
+<?php endforeach; ?>
+</table>
+
+<ul>
+<li><a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'adminindex'));?>'><?php echo $this->translate('Back');?></a></li>
+</ul>
+</div>
+
+
+
+
+
+
+

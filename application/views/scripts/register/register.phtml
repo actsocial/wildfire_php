@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="word-of-mouth marketing" />
+<meta name="title" content="Sign Up" />
+<meta name="author" content="Wang Weiqi" />
+<meta name="description"
+	content="Wildfire XingXingHuo - Asias Word-of-Mouth Community" />
+<meta name="generator"
+	content="Joomla! 1.5 - Open Source Content Management" />
+<title><?php echo $this->translate('Register_Title');?></title>
+<link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet"
+	href="<?php echo $this->joomlahome;?>/modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css"
+	type="text/css" />
+<script type="text/javascript" media="screen"
+	src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>
+
+<!-- 
+<link rel="stylesheet"
+	href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/general.css"
+	type="text/css" />
+	-->
+<!-- use CDN -->
+
+<link rel="stylesheet"
+	href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/general.css"
+	type="text/css" /> 
+
+<!--[if IE]>
+<link href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/ieonly.css"  rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+	<div class="header"><div class="header-inner">
+		<div class="logo">
+			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/images/mainlogo.gif" /></a>
+		</div>
+		<div class="login-panel">
+			<form action="<?php echo $this->url(array('controller'=>'login','action'=>'login'));?>" method="post">
+				<div class="user-info">
+					<label for="username"><?php echo $this->translate("Common_Username")?></label>
+
+					<input type="text" name="username" id="username"/>
+					<label for="password"><?php echo $this->translate("Common_Password")?></label>
+					<input type="password" name="password" id="password"/>
+				</div>
+				<input type="submit" name="login" value=<?php echo $this->translate("Common_login")?> />
+				<input type="button" name="help" value=<?php echo $this->translate("Common_help")?> /> 
+			</form>
+		</div>
+
+		<div class="navigator">
+			<ul id="mainlevel-nav"><li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=frontpage&amp;Itemid=1&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_home")?></a></li>
+			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=53&amp;lang=zh" class="mainlevel-nav" id="active_menu-nav"><?php echo $this->translate("Common_about_us")?></a></li>
+			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=49&amp;Itemid=54&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_about_Sparks")?></a></li>
+			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=56&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_hire_us")?></a></li></ul>
+			<div class="language-selector">
+			<div id="jflanguageselection">
+				<ul class="jflanguageselection"><li id="active_language"><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>"><span lang="zh" xml:lang="zh">中文&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li><li><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>" ><span lang="en" xml:lang="en">English</span></a></li></ul></div>		
+				<div id="jflanguageselection"></div>
+			</div>
+		</div>
+
+		<div class="clear"></div>
+	</div></div>
+	<div class="container"><div class="container-inner">
+		<div class="banner">
+			<img src="<?php echo $this->baseUrl();?>/images/text-banner2.jpg"/>
+		</div>
+	<div class="contents-3-col">
+		<div class="article-box"><div class="article-box-inner">
+			<?php echo $this->translate('Register_Capital_Content');?>
+		</div>
+	</div>
+	<div style="color: red">
+		<?php foreach ($this->messages as $msg): ?>
+			<?php echo $msg; ?>
+		<?php endforeach?>
+	</div>
+<?php if(!$this->registered){?>
+<form
+			action="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>"
+			method="post">
+		<fieldset><legend><?php echo $this->translate('Invitation_Code');?></legend>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<colgroup>
+				<col class="label" />
+				<col class="value" />
+			</colgroup>
+			<tr>
+				<td><?php echo $this->translate('Enter_Code');?></td>
+				<td><?php echo $this->registerForm->auth_code ;?></td>
+			</tr>
+		</table>
+
+		</fieldset>
+		<fieldset><legend><?php echo $this->translate('Register_Contact_Information');?></legend>
+		<table border="0" cellspacing="0" cellpadding="0">
+			<colgroup>
+				<col class="label" />
+				<col class="value" />
+			</colgroup>
+			<tr>
+				<td><?php echo $this->translate('Register_Contact_Email');?></td>
+				<td><?php echo $this->registerForm->registerEmail ;?></td>
+			</tr>
+			<tr>
+				<td><?php echo $this->translate('Register_Contact_Phone');?></td>
+				<td><?php echo $this->registerForm->loginPhone ;?></td>
+			</tr>
+			<tr>
+				<td><?php echo $this->translate('Register_Contact_Name');?></td>
+				<td><?php echo $this->registerForm->name ;?></td>
+			</tr>
+			<tr>
+				<td><?php echo $this->translate('Register_Contact_Password');?></td>
+				<td><?php echo $this->registerForm->registerPassword ;?></td>
+			</tr>
+			<tr>
+				<td><?php echo $this->translate('Register_Contact_Confirm_Password');?></td>
+				<td><?php echo $this->registerForm->repeat ;?></td>
+			</tr>
+
+		</table>
+		</fieldset>
+		<fieldset><legend><?php echo $this->translate('Register_Contact_Privacy_Policy');?></legend>
+		<table>
+
+			<colgroup>
+				<col class="label" />
+				<col class="value" />
+				<col class="other" />
+			</colgroup>
+			<tr>
+				<td colspan="3"><input onclick="allowSubmit();" type="checkbox"
+					name="agree" id="agree" class="agreement" disabled="disabled" /><?php echo $this->translate('Register_Contact_Privacy_Policy_Content1');?>
+				<a
+					href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=87&amp;Itemid=59"
+					target="_blank"><?php echo $this->translate('Register_Contact_Privacy_Policy_Content2');?></a>
+					<?php echo $this->translate('Register_Contact_Privacy_Policy_Content3');?>
+				<a
+					href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=60"
+					target="_blank"><?php echo $this->translate('Register_Contact_Privacy_Policy_Content4');?></a></td>
+
+			</tr>
+		</table>
+		</fieldset>
+		<div><?php echo $this->errMessage; ?></div><br/>
+		<div class="buttons-bar" style="float: left;"><?php echo $this->registerForm->submit ;?><div class="clear"></div></div>
+		</form>
+<?php }else{?>
+<div class="article-box">
+<div class="article-box-inner">
+<?php echo $this->translate('Register_Complete');?>
+</div>
+</div>
+
+<?php }?>
+	</div>
+	<div class="clear"></div>
+</div></div>
+	<div class="footer"><div class="footer-inner">
+	<div class="moduletable bottom_menu">
+		<table width="100%" border="0" cellpadding="0" cellspacing="1">
+		<tr><td nowrap="nowrap"><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=51&amp;Itemid=58&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Contacts');?></a>
+		<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=87&amp;Itemid=59&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Privacy_Policy');?></a>
+		<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=60&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Terms_and_Conditions');?></a>
+		<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=89&amp;Itemid=61&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Jobs');?></a>
+		<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=90&amp;Itemid=62&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Investors');?></a></td>
+		</tr>
+		</table>		
+	</div>
+	
+        </div></div>
+
+<script>
+<?php if (true):?>
+$("register").disabled=true;
+allowInput();
+<?php else:?>
+	$("registerEmail").disabled=true;
+	$("name").disabled=true;
+	$("registerPassword").disabled=true;
+	$("repeat").disabled=true;
+	$("register").disabled=true;
+<?php endif;?>
+
+function verifyCode(){
+	
+	url="<?php echo $this->url(array('controller'=>'register','action'=>'verify'));?>";
+	var auth_code = $F("auth_code");
+	var params = 'auth_code='+auth_code;
+
+	// notice the use of a proxy to circumvent the Same Origin Policy. 
+	new Ajax.Request(url, 
+			{
+				method: 'get',   
+				parameters:params,
+				onSuccess: function(transport) {
+				   if (transport.responseText.indexOf('verified')==0){
+					   allowInput();
+				   }else{
+						forbidInput();						
+				   }
+				   
+				}
+	}); 
+}
+
+function allowInput(){
+	$("registerEmail").disabled=false;
+	$("name").disabled=false;
+	$("registerPassword").disabled=false;
+	$("repeat").disabled=false;
+	$("agree").disabled=false;
+	$("registerEmail").className="input-enabled";
+	$("loginPhone").className="input-enabled";
+	$("name").className="input-enabled";
+	$("registerPassword").className="input-enabled";
+	$("repeat").className="input-enabled";
+	if ($("agree").checked == true){
+		$("register").disabled=false;
+		$("register").className="input-enabled";
+	}
+}
+
+function forbidInput(){
+	$("registerEmail").disabled=true;
+		$("loginPhone").disabled=true;
+	$("name").disabled=true;
+	$("registerPassword").disabled=true;
+	$("repeat").disabled=true;
+	$("register").disabled=true;
+	$("agree").disabled=true;
+
+	$("registerEmail").className="";
+	$("name").className="";
+	$("registerPassword").className="";
+	$("repeat").className="";
+	$("register").className="";
+}
+
+function allowSubmit(){
+	if ($("agree").checked == true){
+		$("register").disabled=false;
+		$("register").className="input-enabled";
+	}else{
+		$("register").disabled=true;
+		$("register").className="";
+	}
+	
+}
+</script>
+
+
+</body>
+</html>
+

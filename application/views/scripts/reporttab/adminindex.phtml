@@ -1,0 +1,22 @@
+<a href="<?php echo $this->url(array ('controller' => 'reporttab','action' => 'adminnew'));?>">New</a>
+<table>
+  <tbody>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Campaign</th>
+      <th>Action</th>
+    </tr>
+    <?php foreach($this->reporttabs as $reporttab) : ?>
+    <tr>
+      <td><?php echo $reporttab->id ?></td>
+      <td><?php echo $reporttab->name ?></td>
+      <td><?php echo $reporttab->campaign_name ?></td>
+      <td>
+        <a href="<?php echo $this->url(array ('controller' => 'reporttab','action' => 'adminedit', 'id'=>$reporttab->id));?>">Edit</a>
+        <a href="<?php echo $this->url(array ('controller' => 'reporttab','action' => 'admindelete', 'id'=>$reporttab->id));?>">Delete</a>
+      </td>
+    </tr>
+    <?php endforeach; ?>
+  </tbody>
+</table>  

@@ -1,0 +1,60 @@
+<div class="article-box"><div class="article-box-inner">
+<div class="campaign-images">
+	 <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_11_side.jpg"/>
+</div>
+<div class="main-column campaign-content" style="width:430px;margin-left:80px;padding-top:5px;">
+	<div class="submit-report"><a  onmouseover="openSubMenu();" onmouseout="closeSubMenu();" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>11));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>11));?>" class="standard-report-button">提交报告</a>
+		<div class="submit-menu" style="display:none;" onmouseover="openSubMenu();" onmouseout="closeSubMenu();">
+			<ul>
+				<li><a onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>11));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>11));?>">提交报告</a></li>
+
+				<!--  <li><a href="#" style="color: #999;">分享照片</a></li>-->
+				<li><a href="#" onclick="submitUrlDialogOpen();">分享网址</a></li>
+			</ul>
+	</div>
+	</div>
+
+	
+	<h1 style="width:240px">星星火农历新年“闹新春”活动</h1>
+	<h2 style="width:240px">秀秀你心爱的品牌吧！</h2>
+</div>
+<div class="campaign-content">
+
+	<p class="zh" style="width:640px">欢迎参加星星火农历新年“闹新春”活动！</p>
+	<p class="zh" style="width:640px">你有着自己热爱的品牌么？为了一份钟爱，和难以割舍的习惯，不离不弃，只因为它是那个品牌。。。那么来晒晒你的宝物吧，它必须是带有你最爱的品牌LOGO，并且为你所持有。</p>
+	<p class="zh" style="width:640px">提交一张宝物的照片，一份和亲戚朋友聊起过宝贝品牌的谈话报告，你就自动活动了由星星火提供的500积分！</p>
+</div>
+<div style="clear: both;"></div>
+</div></div>
+<div class="campaign-summary campaign-campbells">
+	<div id="campbells">
+	<div class="spark-report-box" style="margin-bottom:15px;">
+		<div class="spark-report-box-inner">
+			<div class="ul-wrapper" style="font-size:14px;">
+				<h1 style="font-size:16px;color:#3461ad;">“闹新春”活动进程
+</h1>
+				<br/>
+				<li >活动剩余时间: <strong><?php echo $this->dayCount?></strong> 天</li>
+				<li style="padding-top:4px;">已提交报告数: <strong><?php echo $this->reportCount?></strong> 份</li>
+				<li style="padding-top:4px;">获得星星火积分: <strong><?php echo $this->campaignPoint?></strong> 分</li>
+			
+			<!--<a href="<?php echo $this->baseUrl();?>/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>-->
+			</div>
+		</div>
+	</div>
+	<div class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<div class="ul-wrapper" style="font-size:14px;">
+				<h1 style="font-size:16px;color:#3461ad;">更多信息</h1>
+				<br/>
+				<li><a href="http://blog.xingxinghuo.com " target="blank">星星火博客</a></li>
+				<li><a href="http://user.qzone.qq.com/852666147/infocenter" target="blank">星星火QQ空间</a></li>
+				<li><a href="http://t.sina.com.cn/xxhuo" target="blank">星星火新浪微博</a></li>
+			
+			<!--<a href="<?php echo $this->baseUrl();?>/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>-->
+			</div>
+		</div>
+	</div>
+	</div>
+<div style="clear: both;"></div>
+</div>

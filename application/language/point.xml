@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+
+		<tu tuid='Point_Show_Header1'>
+			<tuv xml:lang="zh">
+				<seg>你已经获得</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You Have Earned</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Point_Show_Header2'>
+			<tuv xml:lang="zh">
+				<seg>点星星火积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Points!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Point_Show_Content'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+<p>为了答谢你花时间让我们了解你并分享你的口碑，我们将给予积分奖励。参与下面的一些事情，你将获得积分：</p>
+<ul>
+  <li>提交报告</li>
+  <li>完成问卷</li>
+</ul>
+<p>星星火积分可以被兑换成奖品，包括书籍、数码家电、精美化妆品等。
+</p>]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[ 
+<p>Spark points are a small thank you for taking the time to let us know about yourself and for sharing your word-of-mouth with us. Every time you do the following, you’ll earn Spark Points:</p>
+<ul>
+  <li>Submitting a Spark Report</li>
+  <li>Competing Polls</li>
+</ul>
+<p>Spark points can be exchanged for rewards, for a huge range of rewards from consumer electronics, cosmetic and so on.</p>]]></seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Trade_Your_Spark_Points'>
+			<tuv xml:lang="zh">
+				<seg>兑换你的星星火积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Trade Your Spark Points for Stuff</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Total_Spark_Points'>
+			<tuv xml:lang="zh">
+				<seg>总共星火积分：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Total Spark Points:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Total_Jifentong_Points'>
+			<tuv xml:lang="zh">
+				<seg>总共积分通积分（乐点）：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Total Jifentong Points (le dian):</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Now'>
+			<tuv xml:lang="zh">
+				<seg>现在就兑换</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Exchange Now</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Check_Gifts'>
+			<tuv xml:lang="zh">
+				<seg>看看礼品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Check Gifts</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Header'>
+			<tuv xml:lang="zh">
+				<seg>兑换星星火积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Redeem Spark Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Content1'>
+			<tuv xml:lang="zh">
+				<seg>你必须通过完成星星火活动来活动积分以便兑换。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Remember, you must complete the campaign in which you earned Spark points in order to trade them.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Content2'>
+			<tuv xml:lang="zh">
+				<seg>可用于兑换的星星火积分：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Total Spark Points Available to Trade: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Content3'>
+			<tuv xml:lang="zh">
+				<seg>请输入你想兑换的积分点数：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please enter the number of points you’d like to trade: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Trade_Now'>
+			<tuv xml:lang="zh">
+				<seg>立即兑换</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Trade Now</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Show_Title'>
+			<tuv xml:lang="zh">
+				<seg>查看积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Title'>
+			<tuv xml:lang="zh">
+				<seg>兑换积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Exchange Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Points_Hint'>
+			<tuv xml:lang="zh">
+				<seg>你需要完成一个星星火活动后才能兑换你的积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Remember, you must complete at least one campaign before you can redeem your Spark Points.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Points_Hint_1'>
+			<tuv xml:lang="zh">
+				<seg>你需要提交三个通过验证的活动报告后才能兑换你的积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You must submit more than three Spark Reports before you can redeem your Spark Points.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_New_Version_Notice'>
+			<tuv xml:lang="zh">
+				<seg>新版本积分兑换系统即将上线，请耐心等待。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>The new exchange system will be put into service soon, please wait...</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Points_Hint_2_1'>
+			<tuv xml:lang="zh">
+				<seg>你当前的积分可以兑换成</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your current points are worth </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Points_Hint_2_2'>
+			<tuv xml:lang="zh">
+				<seg>乐点。你可以登录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Le Dian from Jifen tong. Check out</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Points_Hint_2_3'>
+			<tuv xml:lang="zh">
+				<seg>积分通</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Jifentong </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Exchange_Points_Hint_2_4'>
+			<tuv xml:lang="zh">
+				<seg>预先查看这些积分将为你带来的哪些精美奖品！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>to see what rewards you can earn!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_don_not_join_any'>
+			<tuv xml:lang="zh">
+				<seg>很抱歉，你目前还没有参加过星星火活动！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You don't join any Spark Campaigns up to now!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Do_a_post-campaign_survey_to_finish'>
+			<tuv xml:lang="zh">
+				<seg>点击这里完成"</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Do a post-campaign survey to finish "</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Do_a_post-campaign_survey_to_finish_campaign'>
+			<tuv xml:lang="zh">
+				<seg>"活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>" campaign.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='First_campaign_still_is_active_1'>
+			<tuv xml:lang="zh">
+				<seg>你参加的第一个活动"</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>The first campaign "</seg>
+			</tuv>
+		</tu>
+		<tu tuid='First_campaign_still_is_active_2'>
+			<tuv xml:lang="zh">
+				<seg>"还有</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>" you joined have </seg>
+			</tuv>
+		</tu>
+		<tu tuid='First_campaign_still_is_active_3'>
+			<tuv xml:lang="zh">
+				<seg>天才结束，请等待。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> days Remaining.</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

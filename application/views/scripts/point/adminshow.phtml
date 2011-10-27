@@ -1,0 +1,64 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+
+<br/>
+<h2><?php echo $this->title; ?></h2>
+<br/>
+<p>&nbsp;Total Points:<?php echo $this->totaltPoints;?><br/>
+Total Redeem:<?php echo $this->totalExchangePoints;?></p>
+<p><a href="<?php echo $this->url(array('controller'=>'point','action'=>'adminshow', 'pest'=>'0'));?>"> >><?php echo $this->translate('Admin_Show_Points');?></a>
+&nbsp;&nbsp;&nbsp;	&nbsp;&nbsp;&nbsp;
+<a href="<?php echo $this->url(array('controller'=>'point','action'=>'adminshow', 'pest'=>'1'));?>"> >><?php echo $this->translate('Admin_Show_Pest_Points');?></a>
+<!--<a href="<?php echo $this->url(array('controller'=>'point','action'=>'adminshowexchangehistory', 'pest'=>'0'));?>"> >><?php echo $this->translate('Admin_48Hour_Exchange_Record');?></a>
+-->
+</p>
+<br/>
+<table width="900">
+	<tr>
+	<th width="20">No.</th>
+	<th width="100"><?php echo $this->translate('Email'); ?></th>
+	<th width="100"><?php echo $this->translate('Consumers_Name'); ?></th>
+	<th width="100"><?php echo $this->translate('Admin_Recipients_Name');?></th>
+	<th width="50"><?php echo $this->translate('Admin_Total_Reports'); ?></th>
+	<th width="50"><?php echo $this->translate('Admin_Total_Polls'); ?></th>
+	<th width="50"><?php echo $this->translate('Admin_Total_Points'); ?></th>
+	<th width="50"><?php echo $this->translate('Admin_Total_Echange_Points'); ?></th>
+	</tr>
+	
+	<?php $count = 1; foreach($this->amountPoints as $consumer) : ?>
+	
+	<tr<?php if ($count%2 == 10){ ?>  style="background-color: #EEF9EB "<?php }?> >
+	<td width="20"><?php echo $count++;?></td>
+	<td width="100"><?php echo $consumer['email'];?></td>
+	<td width="100"><a href="<?php echo $this->baseUrl().'/consumer/profile/uid/'.$consumer['id'];?>" target="_blank"><?php echo $consumer['name'];?></a></td>
+	<td width="100"><?php echo $consumer['recipients_name'];?></td>
+	<td width="50"><?php if(array_key_exists($consumer['id'],$this->totalReportsArray)){
+							echo $this->totalReportsArray[$consumer['id']];
+						}else{
+							echo 0;
+						}?>
+	</td>
+	<td width="50"><?php if(array_key_exists($consumer['id'],$this->totalPollsArray)){
+							echo $this->totalPollsArray[$consumer['id']];
+						}else{
+							echo 0;
+						}?>
+	</td>
+	<td width="50"><?php echo $consumer['sum(point_amount)'];?></td>
+	<td width="50"><?php if(array_key_exists($consumer['id'],$this->exchangePointArray)){
+							echo $this->exchangePointArray[$consumer['id']];
+						}else{
+							echo 0;
+						}?>
+	</td>
+	</tr>
+	<?php endforeach; ?>
+</table>
+
+
+
+<ul>
+<li><a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'adminindex'));?>'><?php echo $this->translate('Back'); ?></a></li>
+</ul>
+</div>
+

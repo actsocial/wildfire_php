@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+		<tu tuid='validation_null'>
+			<tuv xml:lang="zh">
+				<seg>输入值不能为空！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Value is required and can't be empty</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

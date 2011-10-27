@@ -1,0 +1,19 @@
+<div style="padding-bottom:40px;"></div>
+<div class="content" style="background-color:#fff;padding-top:0;">
+<form id='form' action="<?php echo $this->url(array('controller'=>'sms','action'=>'adminsmsmessage'));?><?php if($this->id) echo "/id/".$this->id;?>" method="post">
+<p><a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminsmsmessagelist'));?>">List sms</a>|<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminsmsmessage'));?>">Add sms</a></p>
+<?php if($this->saved){?>
+
+短信已经添加或者更新，<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'smsmessage'));?>">添加</a>新短信
+
+<?php }else{?>
+标题：
+<?php echo $this->form->subject;?>
+请输入短信信息：
+<?php echo $this->form->message;?>
+
+<?php echo $this->form->submit;?>
+<?php }?>
+</form>
+</div>
+</div>

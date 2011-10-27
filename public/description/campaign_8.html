@@ -1,0 +1,93 @@
+﻿<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery('#fillout-dialog').dialog({dialogClass: 'ui-fillout-dialog', bgiframe: true, autoOpen: false, resizable: false, modal: true, width: 680, height: 600, title: '提交口口相传报告' });
+	jQuery('#submit-url').dialog({bgiframe: true, autoOpen: false, resizable: false, modal: true, width: 400, height: 160, title: '提交口口相传报告' });
+	jQuery('#check-alert-dialog').dialog({title:'错误', bgiframe: true, autoOpen: false, resizable: false, modal: true, buttons: {
+			'确定': function() {
+				jQuery(this).dialog('close');
+			}
+		}
+	});
+  });
+
+var filloutDialogOpen = function(url) {
+    jQuery("#fillout-dialog .content").load(url,function(){
+    });
+    jQuery("#fillout-dialog").dialog('open');
+}
+var submitUrlDialogOpen = function() {
+    jQuery("#submit-url").dialog('open');
+}
+</script>
+<script type="text/javascript">
+<!--
+var openSubMenu = function() {
+	jQuery('.submit-menu').show();
+}
+var closeSubMenu = function() {
+	jQuery('.submit-menu').hide();
+}
+//-->
+</script>
+
+<div class="article-box"><div class="article-box-inner">
+<div class="campaign-images">
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_8_01.jpg"/>
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_8_02.jpg"/>
+</div>
+<div class="main-column campaign-content" style="width:510px;">
+<div class="submit-report"><a class="standard-report-button" href="/public/report/create/id/8" onclick="filloutDialogOpen('/public/report/create/id/8');return false;" onmouseout="closeSubMenu();" onmouseover="openSubMenu();">提交报告</a>
+		<div onmouseout="closeSubMenu();" onmouseover="openSubMenu();" style="display: none;" class="submit-menu">
+			<ul>
+				<li><a href="/public/report/create/id/8" onclick="filloutDialogOpen('/public/report/create/id/8');return false;">提交报告</a></li>
+
+				<!--  <li><a href="#" style="color: #999;">分享照片</a></li>-->
+				<li><a onclick="submitUrlDialogOpen();" href="#">分享网址</a></li>
+			</ul>
+	</div>
+	</div>
+	<h1>力士洗护发产品星星火活动</h1>
+	<h2>“没有不美的女人, 只有还未觉醒的女人”</h2>
+	<p class="zh">欢迎参加力士洗护发产品星星火口碑活动！</p>
+	<p class="zh">“没有不美的女人, 只有还未觉醒的女人”, 力士相信美丽不只是属于少数人的奢侈品，而是一种生活态度，是一种不断进取、追求美丽的精神。</p>
+	<p class="zh">
+尽管力士已经是世界上最有名的洗发香波和护法素品牌，但是依然有很多力士的用户没有机会同时使用力士洗发香波和护发素。如果您想要自己的头发闪亮，一起用会非常有效果！
+</p>
+<p class="zh">
+这个活动不仅给您自己一个尝试力士的机会，同时也让您可以和办公室的同事分享试用装。您的口碑活动体验礼包包含：<br/>
+
+    * 10套－ 力士柔亮洗发乳（50ml)和润发精华素（50ml) <br/>   
+    * 1瓶  － 力士柔亮洗发乳（200ml)            <br/>                            
+    * 1瓶  － 力士柔亮润发精华素（200ml)    <br/>
+    * 很多关于力士的有用的信息</p>
+</div>
+<div style="clear: both;"></div>
+</div></div>
+<div class="campaign-summary campaign-campbells">
+	<div id="campbells">
+	<div style="margin-bottom: 15px;" class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<div style="font-size: 14px;" class="ul-wrapper">
+				<h1 style="font-size: 16px; color: rgb(52, 97, 173);">活动进程</h1>
+				<br>
+				<li>活动剩余时间: <strong><?php echo $this->dayCount;?></strong> 天</li>
+				<li style="padding-top: 4px;">已提交报告数: <strong><?php echo $this->reportCount;?></strong> 份</li>
+			
+			<!--<a href="/public/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>-->
+			</div>
+		</div>
+	</div>
+	<div class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<div style="font-size: 14px;" class="ul-wrapper">
+				<h1 style="font-size: 16px; color: rgb(52, 97, 173);">更多有趣的内容</h1>
+				<br>
+				<li><a target="blank" href="http://www.luxstyle.com.cn/Yanghufangan2.html">LUX新活产品</a></li>
+				<li style="padding-top: 4px;"><a target="blank" href="http://www.luxstyle.com.cn/">LUX官网</a></li>
+			<!--<a href="/public/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>-->
+			</div>
+		</div>
+	</div>
+	</div>
+<div style="clear: both;"></div>
+</div>

@@ -1,0 +1,1760 @@
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	// <![CDATA[
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie > 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length > MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+	// ]]>
+	-->
+	</script>
+<div class="main-container-outer" style="background: #fff;width:100%;">
+	<div id="container" style="background: #fff;">
+		<div id="header" class="header" style="display: none;">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			<div class="main-logo" id="main-logo">
+				<a href="http://www.ostrakon.org" target="_blank">
+				</a>
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div> <!-- header -->
+		<div id="nav" class="navigation" style="display:none;">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content" style="background:#fff;width:100%;">
+ 		
+
+<div id="content" style="width:100%;">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	mandatoryElements = new Array(); 
+// ]]>
+-->
+</script>
+<div class="fillout-container">
+<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
+<div class="mainOneContent">
+
+<div style="margin-top:10px;"></div>
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
+  <div id="mainzone-top-left">
+    <div id="mainzone-top-right"></div>
+  </div>
+</div>
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none;">
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"/></td>
+		<td bgcolor="#ffffff">
+			<div class="web-dialog-message">
+				<p id="web-dialog-message-text" class=""></p>
+			</div>
+			<div class="buttons" id="web-dialog-buttons">
+			</div>
+		</td>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"/></td>
+	</tr>
+</table>
+
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	var WebDialog = {
+		element : $('web-dialog'),
+		onok : function() {},
+		oncancel : function() {},
+		show : function() {
+			var width = document.body.clientWidth;
+			var height = document.body.offsetHeight;
+			var left = (width - this.element.offsetWidth) / 2;
+			var top = (height - this.element.offsetHeight) / 2;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+		},
+		alert : function(msg,agree,disagree,onok,oncancel) {
+			var buttons = ["OK","Cancel"];
+			var callbacks = [onok, oncancel];
+			this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+		},
+		ok : function() {
+			this.onok();
+		},
+		close : function() {
+			this.element.hide();
+			$('mask').hide();
+			this.oncancel();
+		},
+		showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions) {
+			// icon_type : "none", "alert", "question"
+			// msg_align : "left", "center", "right"
+			// width : -1 means auto
+			
+			var width = document.body.clientWidth;
+			var height = window.screen.availHeight;
+			var left = (width - window_width) / 2;
+			var top = (height - 300) / 2;
+			var pos = 0;
+			if (window.innerHeight) {
+		    	pos = window.pageYOffset
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
+		    	pos = document.documentElement.scrollTop
+		    } else if (document.body) {
+		    	pos = document.body.scrollTop;
+		    }
+		    top += pos;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+			$('mask').style.height = document.body.scrollHeight + "px";
+			
+			if (width != undefined) {
+				this.element.style.width = window_width + "px";
+			}
+			if (msg != undefined) {
+				$('web-dialog-message-text').innerHTML = msg;
+			}
+			if (icon_type != undefined && msg_align != undefined) {
+				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
+			} else if (icon_type == undefined && msg_align == undefined) {
+				$('web-dialog-message-text').className = "icon-none left";
+			} else if (icon_type == undefined) {
+				$('web-dialog-message-text').className = msg_align;
+			} else {
+				$('web-dialog-message-text').className = "icon-"+icon_type;
+			}
+			
+			$('web-dialog-buttons').innerHTML = "";
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
+					if (buttons[i]==undefined || callback_functions[i]==undefined) {
+						continue;
+					}
+					var e = document.createElement('a');
+					e.setAttribute('href', '#');
+					e.innerHTML = buttons[i];
+					e.onclick = callback_functions[i];
+					$('web-dialog-buttons').appendChild(e);
+				}
+			}
+			
+			
+			this.element.show();
+			$('mask').show();
+		}
+	}
+// ]]>
+-->
+</script>
+<div id="mainzone">
+<div id="mainzone-inner">
+
+
+<input type="hidden" name="id" value="" id="id" />
+<input type="hidden" name="theme" value="wildfire" id="theme" />
+
+<div class="page-bar-area">
+<span id="pageBar">Page:&nbsp;</span>
+<strong class="no-answer">No Answer</strong><img class="no-answer" src="/images/no_answer.gif" align="absmiddle"/>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+
+	
+	<div id="page_0">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1557" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How much time do you normally spend on watching video per week?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8218].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8218].id" value="" id="answers[8218].id" />
+<ul>
+	<li>
+			<input group="8218" type="radio" id="8218_0" name="answers[8218].value" value="5418"  class="selection question_radio_8218"  />		<label for="8218_0">Less than 5 hours</label>
+	</li>
+	<li>
+			<input group="8218" type="radio" id="8218_1" name="answers[8218].value" value="5419"  class="selection question_radio_8218"  />		<label for="8218_1">5-10 hours</label>
+	</li>
+	<li>
+			<input group="8218" type="radio" id="8218_2" name="answers[8218].value" value="5420"  class="selection question_radio_8218"  />		<label for="8218_2">10-15 hours</label>
+	</li>
+	<li>
+			<input group="8218" type="radio" id="8218_3" name="answers[8218].value" value="5421"  class="selection question_radio_8218"  />		<label for="8218_3">15-20 hours</label>
+	</li>
+	<li>
+			<input group="8218" type="radio" id="8218_4" name="answers[8218].value" value="5422"  class="selection question_radio_8218"  />		<label for="8218_4">20-30 hours</label>
+	</li>
+	<li>
+			<input group="8218" type="radio" id="8218_5" name="answers[8218].value" value="5423"  class="selection question_radio_8218"  />		<label for="8218_5">More than 30 hours</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8218  qc_0 radio" type="radio" name="answers[8218].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1558" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What percentage of this time do you watch video online?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8219].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8219].id" value="" id="answers[8219].id" />
+<ul>
+	<li>
+			<input group="8219" type="radio" id="8219_0" name="answers[8219].value" value="5424"  class="selection question_radio_8219"  />		<label for="8219_0">0%</label>
+	</li>
+	<li>
+			<input group="8219" type="radio" id="8219_1" name="answers[8219].value" value="5425"  class="selection question_radio_8219"  />		<label for="8219_1">10%</label>
+	</li>
+	<li>
+			<input group="8219" type="radio" id="8219_2" name="answers[8219].value" value="5426"  class="selection question_radio_8219"  />		<label for="8219_2">20%</label>
+	</li>
+	<li>
+			<input group="8219" type="radio" id="8219_3" name="answers[8219].value" value="5427"  class="selection question_radio_8219"  />		<label for="8219_3">30%</label>
+	</li>
+	<li>
+			<input group="8219" type="radio" id="8219_4" name="answers[8219].value" value="5428"  class="selection question_radio_8219"  />		<label for="8219_4">40%</label>
+	</li>
+	<li>
+			<input group="8219" type="radio" id="8219_5" name="answers[8219].value" value="5429"  class="selection question_radio_8219"  />		<label for="8219_5">50%</label>
+	</li>
+	<li>
+			<input group="8219" type="radio" id="8219_6" name="answers[8219].value" value="5430"  class="selection question_radio_8219"  />		<label for="8219_6">60%</label>
+	</li>
+	<li>
+			<input group="8219" type="radio" id="8219_7" name="answers[8219].value" value="5431"  class="selection question_radio_8219"  />		<label for="8219_7">70%</label>
+	</li>
+	<li>
+			<input group="8219" type="radio" id="8219_8" name="answers[8219].value" value="5432"  class="selection question_radio_8219"  />		<label for="8219_8">80%</label>
+	</li>
+	<li>
+			<input group="8219" type="radio" id="8219_9" name="answers[8219].value" value="5433"  class="selection question_radio_8219"  />		<label for="8219_9">90%</label>
+	</li>
+	<li>
+			<input group="8219" type="radio" id="8219_10" name="answers[8219].value" value="5434"  class="selection question_radio_8219"  />		<label for="8219_10">100%</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8219  qc_0 radio" type="radio" name="answers[8219].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1572" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Which online video streaming sites have you heard of before?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8220].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8220].id" value="" id="answers[8220].id" />
+
+
+
+
+<span id="hint_8220">
+</span>
+<ul>
+	<li>
+			<input group="8220" class="question_radio_8220 selection" type="checkbox" id="8220_0" name="answers[8220].value" value="5500" 	onclick=" "/>		<label for="8220_0">PPS</label>
+	</li>
+	<li>
+			<input group="8220" class="question_radio_8220 selection" type="checkbox" id="8220_1" name="answers[8220].value" value="5501" 	onclick=" "/>		<label for="8220_1">PPLive</label>
+	</li>
+	<li>
+			<input group="8220" class="question_radio_8220 selection" type="checkbox" id="8220_2" name="answers[8220].value" value="5502" 	onclick=" "/>		<label for="8220_2">Xunlei</label>
+	</li>
+	<li>
+			<input group="8220" class="question_radio_8220 selection" type="checkbox" id="8220_3" name="answers[8220].value" value="5503" 	onclick=" "/>		<label for="8220_3">qqlive</label>
+	</li>
+	<li>
+			<input group="8220" class="question_radio_8220 selection" type="checkbox" id="8220_4" name="answers[8220].value" value="5504" 	onclick=" "/>		<label for="8220_4">UUSee</label>
+	</li>
+	<li>
+			<input group="8220" class="question_radio_8220 selection" type="checkbox" id="8220_5" name="answers[8220].value" value="5505" 	onclick=" "/>		<label for="8220_5">cctv</label>
+	</li>
+	<li>
+			<input group="8220" class="question_radio_8220 selection" type="checkbox" id="8220_6" name="answers[8220].value" value="5506" 	onclick=" "/>		<label for="8220_6">sopcast</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1561" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Where did you watch online video last time?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8221].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8221].id" value="" id="answers[8221].id" />
+<ul>
+	<li>
+			<input group="8221" type="radio" id="8221_0" name="answers[8221].value" value="5444"  class="selection question_radio_8221"  />		<label for="8221_0">PPS</label>
+	</li>
+	<li>
+			<input group="8221" type="radio" id="8221_1" name="answers[8221].value" value="5445"  class="selection question_radio_8221"  />		<label for="8221_1">PPLive</label>
+	</li>
+	<li>
+			<input group="8221" type="radio" id="8221_2" name="answers[8221].value" value="5446"  class="selection question_radio_8221"  />		<label for="8221_2">Xunlei</label>
+	</li>
+	<li>
+			<input group="8221" type="radio" id="8221_3" name="answers[8221].value" value="5447"  class="selection question_radio_8221"  />		<label for="8221_3">qqlive</label>
+	</li>
+	<li>
+			<input group="8221" type="radio" id="8221_4" name="answers[8221].value" value="5448"  class="selection question_radio_8221"  />		<label for="8221_4">UUSee</label>
+	</li>
+	<li>
+			<input group="8221" type="radio" id="8221_5" name="answers[8221].value" value="5449"  class="selection question_radio_8221"  />		<label for="8221_5">cctv</label>
+	</li>
+	<li>
+			<input group="8221" type="radio" id="8221_6" name="answers[8221].value" value="5450"  class="selection question_radio_8221"  />		<label for="8221_6">sopcast</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8221  qc_0 radio" type="radio" name="answers[8221].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1562" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Why did you choose this website?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[8222].id" value="" id="answers[8222].id" />
+<textarea name="answers[8222].value" id="question_8222" cols="40" group="8222" rows="5" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[8222].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1563" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=100% valign="top">
+					<div class="question-title">
+						How likely have you to recommend this site to your friends?
+					</div>
+							<div class="elementInfoText " >
+							   
+							</div>
+				</td>
+			</tr>
+			 <tr>
+				<td width=100% valign="top" class="question-td twoColumnLayout" style="padding-left:15px;">
+<span class="error-content" id="err_answers[8223].value" ></span>
+<input type="hidden" name="answers[8223].id" value="" id="answers[8223].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">Not much</div>
+	<table class="rating-table">
+		<tr class="radio-line">
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[8223].value" value="0" id="8223_0" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8223].value" value="1" id="8223_1" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8223].value" value="2" id="8223_2" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8223].value" value="3" id="8223_3" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8223].value" value="4" id="8223_4" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8223].value" value="5" id="8223_5" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8223].value" value="6" id="8223_6" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8223].value" value="7" id="8223_7" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8223].value" value="8" id="8223_8" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8223].value" value="9" id="8223_9" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[8223].value" value="10" id="8223_10" group="8223" class="question_radio_8223 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+		</tr>
+	</table> <div class="right-label">Very much</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[8223].value" value="" id="answers[8223].value" class="q_8223 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1564" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Are you a registered member of any online video streaming site?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8224].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8224].id" value="" id="answers[8224].id" />
+<ul>
+	<li>
+			<input group="8224" type="radio" id="8224_0" name="answers[8224].value" value="5451"  class="selection question_radio_8224"  />		<label for="8224_0">Yes</label>
+	</li>
+	<li>
+			<input group="8224" type="radio" id="8224_1" name="answers[8224].value" value="5452"  class="selection question_radio_8224"  />		<label for="8224_1">No</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8224  qc_0 radio" type="radio" name="answers[8224].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1565" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						In your mind what are the benefits of registering as a member?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8225].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8225].id" value="" id="answers[8225].id" />
+
+
+
+
+<span id="hint_8225">
+</span>
+<ul>
+	<li>
+			<input group="8225" class="question_radio_8225 selection" type="checkbox" id="8225_0" name="answers[8225].value" value="5453" 	onclick=" "/>		<label for="8225_0">Ensures speed for watching</label>
+	</li>
+	<li>
+			<input group="8225" class="question_radio_8225 selection" type="checkbox" id="8225_1" name="answers[8225].value" value="5454" 	onclick=" "/>		<label for="8225_1">Comments on the videos</label>
+	</li>
+	<li>
+			<input group="8225" class="question_radio_8225 selection" type="checkbox" id="8225_2" name="answers[8225].value" value="5455" 	onclick=" "/>		<label for="8225_2">Collect and share my favorite videos</label>
+	</li>
+	<li>
+			<input group="8225" class="question_radio_8225 selection" type="checkbox" id="8225_3" name="answers[8225].value" value="5456" 	onclick=" "/>		<label for="8225_3">More functions</label>
+	</li>
+		<li>
+			<input class="question_radio_8225" type="checkbox" id="8225_other"   value="0" onclick="showOtherValueInputInCheckBox(this)" />			<label for="8225_other">Other</label>
+			<input id="8225_other_input" type="text" name="answers[8225].otherValue" value="" style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1566" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Do you own either a house or an apartment?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8226].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8226].id" value="" id="answers[8226].id" />
+<ul>
+	<li>
+			<input group="8226" type="radio" id="8226_0" name="answers[8226].value" value="5457"  class="selection question_radio_8226"  />		<label for="8226_0">Yes</label>
+	</li>
+	<li>
+			<input group="8226" type="radio" id="8226_1" name="answers[8226].value" value="5458"  class="selection question_radio_8226"  />		<label for="8226_1">No</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8226  qc_0 radio" type="radio" name="answers[8226].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1567" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What audio-video equipment do you normally use for watching movies?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8227].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8227].id" value="" id="answers[8227].id" />
+
+
+
+
+<span id="hint_8227">
+</span>
+<ul>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_0" name="answers[8227].value" value="5459" 	onclick=" "/>		<label for="8227_0">Flat-screen TV (High Definition ready)</label>
+	</li>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_1" name="answers[8227].value" value="5460" 	onclick=" "/>		<label for="8227_1">Flat-screen TV (normal quality)</label>
+	</li>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_2" name="answers[8227].value" value="5461" 	onclick=" "/>		<label for="8227_2">DVD Player</label>
+	</li>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_3" name="answers[8227].value" value="5462" 	onclick=" "/>		<label for="8227_3">Blue-Ray Player</label>
+	</li>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_4" name="answers[8227].value" value="5463" 	onclick=" "/>		<label for="8227_4">Surround Sound System with Base</label>
+	</li>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_5" name="answers[8227].value" value="5464" 	onclick=" "/>		<label for="8227_5">High-Quality Stereo Sound System</label>
+	</li>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_6" name="answers[8227].value" value="5465" 	onclick=" "/>		<label for="8227_6">Video Projector (fixed in room)</label>
+	</li>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_7" name="answers[8227].value" value="5466" 	onclick=" "/>		<label for="8227_7">Video Projector (portable)</label>
+	</li>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_8" name="answers[8227].value" value="5467" 	onclick=" "/>		<label for="8227_8">Home Theatre</label>
+	</li>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_9" name="answers[8227].value" value="5468" 	onclick=" "/>		<label for="8227_9">Personal Computer</label>
+	</li>
+	<li>
+			<input group="8227" class="question_radio_8227 selection" type="checkbox" id="8227_10" name="answers[8227].value" value="5469" 	onclick=" "/>		<label for="8227_10">Laptop</label>
+	</li>
+		<li>
+			<input class="question_radio_8227" type="checkbox" id="8227_other"   value="0" onclick="showOtherValueInputInCheckBox(this)" />			<label for="8227_other">Other</label>
+			<input id="8227_other_input" type="text" name="answers[8227].otherValue" value="" style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1568" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Which audio-video equipment do you own?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8228].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8228].id" value="" id="answers[8228].id" />
+
+
+
+
+<span id="hint_8228">
+</span>
+<ul>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_0" name="answers[8228].value" value="5470" 	onclick=" "/>		<label for="8228_0">Flat-screen TV (High Definition ready)</label>
+	</li>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_1" name="answers[8228].value" value="5471" 	onclick=" "/>		<label for="8228_1">Flat-screen TV (normal quality)</label>
+	</li>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_2" name="answers[8228].value" value="5472" 	onclick=" "/>		<label for="8228_2">DVD Player</label>
+	</li>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_3" name="answers[8228].value" value="5473" 	onclick=" "/>		<label for="8228_3">Blue-Ray Player</label>
+	</li>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_4" name="answers[8228].value" value="5474" 	onclick=" "/>		<label for="8228_4">Surround Sound System with Base</label>
+	</li>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_5" name="answers[8228].value" value="5475" 	onclick=" "/>		<label for="8228_5">High-Quality Stereo Sound System</label>
+	</li>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_6" name="answers[8228].value" value="5476" 	onclick=" "/>		<label for="8228_6">Video Projector (fixed in room)</label>
+	</li>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_7" name="answers[8228].value" value="5477" 	onclick=" "/>		<label for="8228_7">Video Projector (portable)</label>
+	</li>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_8" name="answers[8228].value" value="5478" 	onclick=" "/>		<label for="8228_8">Home Theatre</label>
+	</li>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_9" name="answers[8228].value" value="5479" 	onclick=" "/>		<label for="8228_9">Personal Computer</label>
+	</li>
+	<li>
+			<input group="8228" class="question_radio_8228 selection" type="checkbox" id="8228_10" name="answers[8228].value" value="5480" 	onclick=" "/>		<label for="8228_10">Laptop</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1569" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How often do you normally watch/share videos together with family, friends and colleagues?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8229].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8229].id" value="" id="answers[8229].id" />
+<ul>
+	<li>
+			<input group="8229" type="radio" id="8229_0" name="answers[8229].value" value="5481"  class="selection question_radio_8229"  />		<label for="8229_0">Three times and more per week</label>
+	</li>
+	<li>
+			<input group="8229" type="radio" id="8229_1" name="answers[8229].value" value="5482"  class="selection question_radio_8229"  />		<label for="8229_1">Once or twice per week</label>
+	</li>
+	<li>
+			<input group="8229" type="radio" id="8229_2" name="answers[8229].value" value="5483"  class="selection question_radio_8229"  />		<label for="8229_2">Occasionally, but less than once a week</label>
+	</li>
+	<li>
+			<input group="8229" type="radio" id="8229_3" name="answers[8229].value" value="5484"  class="selection question_radio_8229"  />		<label for="8229_3">Quite Rarely</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8229  qc_0 radio" type="radio" name="answers[8229].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1570" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						In what ways do you normally share movies with friends?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8230].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8230].id" value="" id="answers[8230].id" />
+
+
+
+
+<span id="hint_8230">
+</span>
+<ul>
+	<li>
+			<input group="8230" class="question_radio_8230 selection" type="checkbox" id="8230_0" name="answers[8230].value" value="5485" 	onclick=" "/>		<label for="8230_0">Share on CD/DVD</label>
+	</li>
+	<li>
+			<input group="8230" class="question_radio_8230 selection" type="checkbox" id="8230_1" name="answers[8230].value" value="5486" 	onclick=" "/>		<label for="8230_1">Copy via hard disk</label>
+	</li>
+	<li>
+			<input group="8230" class="question_radio_8230 selection" type="checkbox" id="8230_2" name="answers[8230].value" value="5487" 	onclick=" "/>		<label for="8230_2">Copy via usb stick</label>
+	</li>
+	<li>
+			<input group="8230" class="question_radio_8230 selection" type="checkbox" id="8230_3" name="answers[8230].value" value="5488" 	onclick=" "/>		<label for="8230_3">Copy through local network</label>
+	</li>
+	<li>
+			<input group="8230" class="question_radio_8230 selection" type="checkbox" id="8230_4" name="answers[8230].value" value="5489" 	onclick=" "/>		<label for="8230_4">Copy through internet</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1571" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What problems bother you related to watching media?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8231].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8231].id" value="" id="answers[8231].id" />
+
+
+
+
+<span id="hint_8231">
+</span>
+<ul>
+	<li>
+			<input group="8231" class="question_radio_8231 selection" type="checkbox" id="8231_0" name="answers[8231].value" value="5490" 	onclick=" "/>		<label for="8231_0">Cannot find the video resource/ only find a part</label>
+	</li>
+	<li>
+			<input group="8231" class="question_radio_8231 selection" type="checkbox" id="8231_1" name="answers[8231].value" value="5491" 	onclick=" "/>		<label for="8231_1">Slow downloading speed for video / an on - again, off - again streaming</label>
+	</li>
+	<li>
+			<input group="8231" class="question_radio_8231 selection" type="checkbox" id="8231_2" name="answers[8231].value" value="5492" 	onclick=" "/>		<label for="8231_2">Difficult to buy high quality DVD/BR disk on the market</label>
+	</li>
+	<li>
+			<input group="8231" class="question_radio_8231 selection" type="checkbox" id="8231_3" name="answers[8231].value" value="5493" 	onclick=" "/>		<label for="8231_3">Not enough room space for all DVD collections</label>
+	</li>
+	<li>
+			<input group="8231" class="question_radio_8231 selection" type="checkbox" id="8231_4" name="answers[8231].value" value="5494" 	onclick=" "/>		<label for="8231_4">My equipments sound output is not good enough</label>
+	</li>
+	<li>
+			<input group="8231" class="question_radio_8231 selection" type="checkbox" id="8231_5" name="answers[8231].value" value="5495" 	onclick=" "/>		<label for="8231_5">I want a BR player, but it’s too expensive</label>
+	</li>
+	<li>
+			<input group="8231" class="question_radio_8231 selection" type="checkbox" id="8231_6" name="answers[8231].value" value="5496" 	onclick=" "/>		<label for="8231_6">BR is not officially support in China</label>
+	</li>
+	<li>
+			<input group="8231" class="question_radio_8231 selection" type="checkbox" id="8231_7" name="answers[8231].value" value="5497" 	onclick=" "/>		<label for="8231_7">My disk collections can’t be read after several year storagy</label>
+	</li>
+	<li>
+			<input group="8231" class="question_radio_8231 selection" type="checkbox" id="8231_8" name="answers[8231].value" value="5498" 	onclick=" "/>		<label for="8231_8">The online streaming site cannot remember my last episode number</label>
+	</li>
+	<li>
+			<input group="8231" class="question_radio_8231 selection" type="checkbox" id="8231_9" name="answers[8231].value" value="5499" 	onclick=" "/>		<label for="8231_9">Don’t have copyright (The resource has been removed)</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+	
+
+
+</div> 
+<br/>
+<div style="clear:both"></div>
+</div> 
+</div> 
+
+<div id="mainzone-bottom-wrapper">
+	<div id="mainzone-bottom-left">
+		<div id="mainzone-bottom-right">&nbsp;</div>
+	</div>
+</div>
+<br/>
+<div class="fillout-submit">
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+</div>
+
+</form>
+</div> 
+<div class="clear"></div>
+<br/>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+  var pageNum=0;
+ 
+  var noPage0 = false;
+  var currentPage=0;
+  
+
+  function showPage(_pageIndex) {
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex == pageNum) {
+    	Element.hide("nextPageButton");
+    } else {
+    	Element.show("nextPageButton");
+    }
+    
+    if (_pageIndex <1 && noPage0) return ;
+  	var _pageElement = $("page_"+_pageIndex);
+  	var _currElement = $("page_"+currentPage);
+  	
+  	Element.hide(_currElement);
+  	Element.show(_pageElement);
+	
+	if($("pageNum" + _pageIndex) != undefined) {
+		$("pageNum" + _pageIndex).style.fontWeight = "bolder"; 
+		$("pageNum" + _pageIndex).style.textDecoration = "underline";
+	}
+    if($("pageNum" + currentPage) != undefined) {		
+  		$("pageNum" + currentPage).style.fontWeight = "normal"; 
+		$("pageNum" + currentPage).style.textDecoration = "none";
+	}
+	
+
+  	currentPage = _pageIndex;
+	
+	if(_pageIndex == pageNum) {
+		Element.show($('submit'));
+	} else if ( _pageIndex < pageNum) {
+		Element.hide($('submit'));
+	}
+  }
+  
+  function showNextPage(){
+  	showPage(currentPage+1);
+  }
+  
+  function showPrevPage(){
+  	showPage(currentPage-1);
+  }
+  
+  function initPages() {
+  	var i;
+
+  	for (i=0; i<=pageNum; i++) {
+  		Element.hide($("page_"+i));
+  	}
+  	
+ 
+  	var _pageBar = document.getElementById("pageBar");
+  	if (pageNum==0) {
+  		_pageBar.innerHTML = "";
+  	} else {
+	  	for (i=0; i<=pageNum; i++) {
+			var s ="";
+			if( i == 0 ) {
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
+			}
+
+			if (noPage0){
+	  		 if (i!=0){ 
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
+	  		  }
+	  		}else{
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
+	  		}
+	  		
+			if( i == pageNum ) {
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
+			}
+	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  	}		
+  	}
+  }
+  
+  initPages();
+  if (noPage0){
+  	showPage(1);
+  }else{
+  	showPage(0);
+  }
+// ]]>
+-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+    //do not include radio answers
+	if(typeof checkNoAnswer=="undefined") {
+		checkNoAnswer=function(index,checkbox) {
+			var question = $("question_" + index);
+			var checked = checkbox.checked;
+			if( checked) {
+				question.disabled="disabled";
+				checkbox.value=false;
+			} else {
+				question.disabled="";
+				checkbox.value=true;
+			}
+		};
+	};
+	
+		if(typeof checkRadioNoAnswer=="undefined") {
+		checkRadioNoAnswer = function(index,checkbox) {
+			var clazz = "question_radio_" +index;
+			var radios = document.getElementsByClassName(clazz).each(function(radio) {
+				var checked = checkbox.checked;
+			    if( checked) {
+					if(radio.checked="checked")radio.checked="";
+					radio.disabled="disabled";
+					checkbox.value=false;
+			    } else {
+					radio.disabled="";
+					checkbox.value=true;
+			    }
+			});
+		};
+	}
+	
+	if(typeof checkSubboxes=="undefined") {
+		checkSubboxes = function(qc_id) {
+			//get the question context checkbox's value
+			var qc_value = $("qc_checkbox_" + qc_id).checked;
+			//get the checkBoxed belongs to the above question context
+			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
+			for(var i = 0; i < checkBoxes.length;i++) {
+				var checkBox = checkBoxes[i];
+				//to reuse checkRadioNoAnswer and checkNoAnswer
+				checkBox.checked=qc_value;
+				var clazzName = checkBox.className;
+				var question_id = clazzName.split(" ")[0].split("_")[1];
+				if( clazzName.indexOf("radio") != -1) {
+					checkRadioNoAnswer(question_id,checkBox);
+				} else {
+					checkNoAnswer(question_id,checkBox);
+				}
+			}
+		}
+		
+	}
+// ]]>
+-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function loading() {
+		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
+		WebDialog.showMessageBox(html, "none", "center", 600);
+	}
+	
+	function checkMandatory() {
+	    var fillMandatory = true;
+	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+			if(elements.length > 1) {
+			  var filled = false;
+			  for(var i=0; i < elements.length; i++) {
+			  	var element = elements[i];
+				if(element.checked) {
+				  filled = true;
+				  break;
+				}
+			  }
+			  if(!filled) {
+			  	fillMandatory = false;
+			  	break;
+			  }
+			} else {
+			  var element = elements[0];
+			  if(element.hasClassName("selection")) {
+			  	if(element.value.strip() == '') {
+	    			fillMandatory =  false;
+	    			break;                                  
+	    		}
+			  } else if (element.hasClassName("input-text")) {
+			 	if(element.value == 0) {
+					fillMandatory = false;
+					break;
+				}
+			  }
+			}
+	    }
+	    if(!fillMandatory) {
+	    	var html = 'Mandatory questions must be filled out';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    }
+            return fillMandatory;
+	}
+	
+	function checkMandatoryOfSelectionQuestion() {
+	 var mandatory = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+
+
+	function checkAnswerSet() {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
+		    return true;
+		} else {
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			return false;
+		}
+	}
+	
+	function checkAnswersOfSelectionQuestions() {
+	 var filled = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+	
+	function checkAnswersOfRatingQuestions() {
+	    var filled = false;
+	    $$('input.rating').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;  
+										}
+	                                });
+
+		 return filled;
+	}
+	
+	function checkAnswersOfCommentQuestions() {
+	    var filled = false;
+	    $$('.input-text').each(function(element) {
+	                                    if(element.value.strip() != '') {
+	                                        filled = true;
+	                                    	throw $break;                                 
+	                                    }
+	                                });
+		 return filled;
+	}
+	
+	function locateErrorPage() {
+		var errorElements = $$('span.error-content') ;
+		var hasError = false;
+		var errorElementsPointer = 0;
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+			var html = errorElements[errorElementsPointer].innerHTML;
+			if (html != "") {
+				hasError = true;
+				break;
+			}
+		}
+		if( hasError ) {
+			var errorParentElement = errorElements[errorElementsPointer].up('div');
+			while (errorParentElement != undefined) {
+			var elementId = errorParentElement.id;
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
+				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
+				showPage(errorPageNum);
+				break;
+		}
+		errorParentElement = errorParentElement.up('div');
+		}
+		}
+	}
+	locateErrorPage();
+	
+	function showOtherValueInputInSelect(element) {
+	    var options = element.options;
+	    var selectedOption;
+	    for( var i = 0; i < options.length; i++) {
+	       if( options[i].selected) {
+	       	 selectedOption = options[i];
+	       }
+	    }
+	    var selectedOptionId = selectedOption.id;
+	    if( selectedOptionId.indexOf("other") != -1) {
+	    	$(element.id + "_other").show();
+	    } else {
+	        $(element.id + "_other").value = "";
+	    	$(element.id + "_other").hide();
+	    }
+	}
+	
+	function showOtherValueInputInRadio(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( value == 0 ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+	function showOtherValueInputInCheckBox(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( element.checked ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+// ]]>
+-->
+</script>
+</div>
+</div> 
+</div>
+
+<div class="footer" style="display:none;">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/c/methodName/c"  target="_blank">Help</a> | <a href="http://www.ostrakon.org"  target="_blank">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow" style="display:none;"></div>
+	<div style="clear: both"></div>
+	
+</div> 
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+
+
+	 Element.hide("q_1565");
+
+
+var myrules = {
+	   
+	   "input#8219_4": function(el){
+			el.onclick = function(){
+				if ($("8219_4").checked){
+						Element.show($("q_1572"));
+						Element.show($("q_1561"));
+						Element.show($("q_1562"));
+						Element.show($("q_1563"));
+						Element.show($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8219_8": function(el){
+			el.onclick = function(){
+				if ($("8219_8").checked){
+						Element.show($("q_1572"));
+						Element.show($("q_1561"));
+						Element.show($("q_1562"));
+						Element.show($("q_1563"));
+						Element.show($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8224_1": function(el){
+			el.onclick = function(){
+				if ($("8224_1").checked){
+						Element.hide($("q_1565"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8219_0": function(el){
+			el.onclick = function(){
+				if ($("8219_0").checked){
+						Element.hide($("q_1572"));
+						Element.hide($("q_1561"));
+						Element.hide($("q_1562"));
+						Element.hide($("q_1563"));
+						Element.hide($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8219_5": function(el){
+			el.onclick = function(){
+				if ($("8219_5").checked){
+						Element.show($("q_1572"));
+						Element.show($("q_1561"));
+						Element.show($("q_1562"));
+						Element.show($("q_1563"));
+						Element.show($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8219_1": function(el){
+			el.onclick = function(){
+				if ($("8219_1").checked){
+						Element.show($("q_1572"));
+						Element.show($("q_1561"));
+						Element.show($("q_1562"));
+						Element.show($("q_1563"));
+						Element.show($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8219_7": function(el){
+			el.onclick = function(){
+				if ($("8219_7").checked){
+						Element.show($("q_1572"));
+						Element.show($("q_1561"));
+						Element.show($("q_1562"));
+						Element.show($("q_1563"));
+						Element.show($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8219_2": function(el){
+			el.onclick = function(){
+				if ($("8219_2").checked){
+						Element.show($("q_1572"));
+						Element.show($("q_1561"));
+						Element.show($("q_1562"));
+						Element.show($("q_1563"));
+						Element.show($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8219_6": function(el){
+			el.onclick = function(){
+				if ($("8219_6").checked){
+						Element.show($("q_1572"));
+						Element.show($("q_1561"));
+						Element.show($("q_1562"));
+						Element.show($("q_1563"));
+						Element.show($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8219_3": function(el){
+			el.onclick = function(){
+				if ($("8219_3").checked){
+						Element.show($("q_1572"));
+						Element.show($("q_1561"));
+						Element.show($("q_1562"));
+						Element.show($("q_1563"));
+						Element.show($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8219_10": function(el){
+			el.onclick = function(){
+				if ($("8219_10").checked){
+						Element.show($("q_1572"));
+						Element.show($("q_1561"));
+						Element.show($("q_1562"));
+						Element.show($("q_1563"));
+						Element.show($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8219_9": function(el){
+			el.onclick = function(){
+				if ($("8219_9").checked){
+						Element.show($("q_1572"));
+						Element.show($("q_1561"));
+						Element.show($("q_1562"));
+						Element.show($("q_1563"));
+						Element.show($("q_1564"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8224_0": function(el){
+			el.onclick = function(){
+				if ($("8224_0").checked){
+						Element.show($("q_1565"));
+				}
+			}
+		}
+}
+
+Behaviour.register(myrules);
+
+// ]]>
+-->
+</script>

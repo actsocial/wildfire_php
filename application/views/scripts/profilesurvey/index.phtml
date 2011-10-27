@@ -1,0 +1,58 @@
+<div class="article-box"><div class="article-box-inner">
+<h1 style="margin-left:0;"><?php echo $this->translate('Tell_Us_More_About_Yourself');?></h1>
+<p><?php echo $this->translate('Tell_Us_More_About_Yourself_Content');?>
+</p>
+</div></div>
+
+<div class="article-box" style="background:#fff;padding-top:0"><div class="article-box-inner" style="background:#fff;padding-top:0">
+<ul class="updates">
+<?php foreach ($this->surveys as $survey) : ?>
+    <?php if(($survey['public']==1)||($survey['invitaitonId'] != NUll )){?>
+	<?php $flag="new"?>
+	<?php foreach ($this->completedPolls as $completedPoll):?>
+		<?php if ($completedPoll["poll_id"]==$survey["id"]):?>
+			<?php $flag="completed"?>
+		<?php endif;?>
+	<?php endforeach;?>
+	<?php if ($flag=="new") :?>
+	<li>
+		<?php if ($this->lang=='en'):?> 
+			<a style="text-decoration:none;" href="<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'participate', 'id'=>$survey['id']));?>">
+				 <?php echo $survey['english_name'];?> 
+			</a>
+		<?php else:?>
+			<a style="text-decoration:none;" href="<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'participate', 'id'=>$survey['id']));?>">
+				 <?php echo $survey['name'];?> 
+			</a>
+		<?php endif;?>			 
+	( <?php echo $survey->points?> points )
+	</li>
+	<?php endif;?>
+	<?php }?>
+<?php endforeach; ?>
+
+<?php foreach ($this->surveys as $survey) : ?>
+
+	<?php $flag="new"?>
+	<?php foreach ($this->completedPolls as $completedPoll):?>
+		<?php if ($completedPoll["poll_id"]==$survey["id"]):?>
+			<?php $flag="completed"?>
+			<?php $earnedPoints = $completedPoll['point_amount']?>
+		<?php endif;?>
+	<?php endforeach;?>
+	<?php if ($flag=="completed") :?>
+	 <?php if(($survey['public']==1)||($survey['invitaitonId'] != NUll )){?>
+	<li>
+		<?php if ($this->lang=='en'):?> <?php echo $survey['english_name'];?> <?php else:?> <?php echo $survey['name'];?> <?php endif?> ( <?php echo $survey['points']?> points ) <img src="<?php echo $this->baseUrl();?>/images/action_check.gif"/>
+	</li>
+	<?php }?>
+	<?php endif;?>
+<?php endforeach; ?>
+</ul>
+</div></div>
+
+<!--<div class="special-event">-->
+<!--	<h1><a href="#">征募儿童营养大使（南京，杭州）</a></h1>-->
+<!--	<div class="intro">问卷调查让我们更加了解你。这样以便我们开展一些更加适合你和让你感兴趣的活动。完成问卷调查，让你更有可能获得</div>-->
+<!--</div>-->
+

@@ -1,0 +1,29 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2>Spam Check Result</h2>
+<div style='width:700px;text-align:left;padding-top:20px;'>
+From: <?php echo $this->from?>
+<br/>
+Subject: <?php echo $this->subject?>
+<br/>
+Body: <?php echo $this->body?>
+<br/>
+Total Score: <?php echo $this->score?>
+<br/>
+<table>
+<tr>
+<td>index</td>
+<td>identifier</td>
+<td>rule</td>
+<td>score</td>
+</tr>
+<?php $count = 1; foreach($this->result as $arr) : ?>
+<tr>
+<td><?php echo $count++ ?></td>
+<td><?php echo $arr[1] ?></td>
+<td><?php echo $arr[0] ?></td>
+<td><?php echo $arr[2] ?></td>
+</tr>
+<?php endforeach; ?>
+</table>
+</div></div>

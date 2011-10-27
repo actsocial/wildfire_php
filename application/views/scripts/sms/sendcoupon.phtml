@@ -1,0 +1,29 @@
+<?php 
+if(count($this->message)){
+	foreach($this->message as $val){
+		echo '<font color="red">'.$val.'</font><br/>';
+	}
+}
+?>
+
+<form target="_parent" method="post" action="<?php echo $this->baseUrl();?>/sms/sendcoupon/uid/<?php echo $this->coupon;?>" enctype="application/x-www-form-urlencoded">
+		
+<div class="login_form">
+<br>
+<table>
+	<tbody><tr><td><dt><label class="required" for="username"><?php echo $this->translate('Coupon_Name');?></label></dt>
+<dd>
+<input type="text" value="<?php echo $this->postData['username']?>" id="email" name="username"></dd></td><td>&nbsp;</td></tr>
+	<tr><td><dt><label class="required" for="telephone"><?php echo $this->translate('Coupon_Telephone');?></label></dt>
+<dd>
+<input type="text" value="<?php echo $this->postData['telephone']?>" id="password" name="telephone"></dd></td></tr>
+</tbody></table>
+
+  <div style="clear: both;"></div>  <br>
+</div>
+<div class="buttons-bar">
+<dt>&nbsp;</dt><dd>
+<input type="submit" value="<?php echo $this->translate('Coupon_Recieve');?>" id="login" name="submit"></dd>
+<input type="hidden" value="3"  name="apitype">
+</div>
+</form>

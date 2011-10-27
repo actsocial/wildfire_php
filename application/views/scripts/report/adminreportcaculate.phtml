@@ -1,0 +1,136 @@
+<center>
+<p>&nbsp</p>
+<p>&nbsp</p>	
+	
+<form action = '<?php echo $this->url(array('controller'=>'report','action'=>'adminreportcaculate'));?>/' id='form_1' name = 'form_1' method='post' >
+	<table style="width:750px;font-size:13px">
+	<tr vlign="top">
+	<td style="vertical-align:top;width:40px" >
+	 活动：
+	 </td>
+	 <td>
+     <?php 
+     $i = 1;
+     $checked = '';
+     $br = '';
+     if(in_array('all',$this->campaigns)){
+     	$checked = 'checked';
+     }
+     echo '<label style="width:130px;display:block;float:left"><input type="checkbox" value="all" '.$checked.' name="campaign[]">'.'All</label>';
+	 foreach($this->campaignData as $val){
+	 	$i++ ;
+	 	$checked = '';
+	 	if(isset($this->campaigns)&&!in_array('all',$this->campaigns)&&(in_array($val->id,$this->campaigns))){
+	 		$checked = 'checked';
+	 	}
+	 	echo '<label style="width:130px;display:block;float:left"><input type="checkbox" value="'.$val->id.'" '.$checked.' name="campaign[]">'.$val->name.$br.'</label>';
+	 }
+	 ?></td>
+	 </tr>
+	<tr><td colspan=2>&nbsp;</td></tr>
+	 <tr>
+	<td style="vertical-align:top;width:70px">
+	管理员：</td>
+	 <td width="400">
+     <?php 
+     $j = 0;
+     $br = '';
+     $i = 1;
+     $checked = '';
+     $br = '';
+     if(in_array('all',$this->admins)){
+     	$checked = 'checked';
+     }
+     echo '<label style="width:100px;display:block;float:left"><input type="checkbox" value="all" '.$checked.' name="admin[]">'.'All</label>';
+	 foreach($this->adminData as $val){
+	 	$j++ ;
+	 	$checked = '';
+	 	if(isset($this->admins)&&!in_array('all',$this->admins)&&(in_array($val->id,$this->admins))){
+	 		$checked = 'checked';
+	 	}
+	 	echo '<label style="width:100px;display:block;float:left"><input type="checkbox" value="'.$val->id.'" '.$checked.' name="admin[]">'.$val->name.$br.'</label>';
+	 }
+	 ?></td>
+	 
+	 </tr>
+	 <tr><td colspan=2>&nbsp;</td></tr>
+	<tr>
+	<td width=70>
+	开始时间：</td>
+	 <td>
+	 <input value="<?php if(isset($this->start_date)) echo $this->start_date;?>" type="text" name="start_date" id="start_date"/>
+	 例如:2010-09-29 11:43:27(或者为空).
+     </td>
+	 </tr>
+	 	 <tr><td colspan=2>&nbsp;</td></tr>
+	<tr>
+	<td width=70>
+	结束时间：</td>
+	 <td>
+	 <input value="<?php if(isset($this->end_date)) echo $this->end_date;?>" type="text" name="end_date" id="end_date"/>
+	 例如:2010-10-29 11:43:27(或者为空).
+     </td>
+	 </tr>
+	 <tr><td colspan="2">
+	 <input value="提交" type="submit"/>
+	 </td>
+	 </tr>
+	 <?php if(isset($this->link)){?>
+	 <tr><td colspan="2"><a href="<?php echo $this->url(array('controller'=>'report','action'=>'adminaddreport'));?>/uid/<?php echo $this->uid;?>/survey/<?php echo $this->surveyId?>/file/<?php echo $this->link?>?TB_iframe=true" class="thickbox">点击填写报告</a></td></tr>
+	 <?php }?>
+	 </table>
+	 	</form>
+	<?php if(isset($this->campaigns)){?>
+	<table style="width:750px;font-size:13px" cellspacing="0" cellpadding="0" >
+		</tr>
+	<?php $count = 0 ;$total_reply = 0;$report_wait=0; foreach($this->paginator as $reportBatch) : ?>
+	     <?php $total_reply += count(explode(',',$reportBatch['report_ids']))-2;?>
+	     <?php 
+	     if ($reportBatch['state']=='NEW'){
+	     	$report_wait += count(explode(',',$reportBatch['report_ids']))-2;
+	     }  
+	     ?>
+	<?php endforeach; ?>
+	
+	<tr style="background:#ccc">
+	<td>总计:</td><td><?php echo $total_reply;?></td><td><?php echo $report_wait;?></td>
+	</tr>
+	<tr>
+	<th>No.</th>
+	<th><?php echo $this->translate('Admin_Report_Batch_amount');?></th>
+	<th><?php echo $this->translate('Admin_Report_Batch_left');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Create_Date');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Duration_Date');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Average_Time');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Name');?></th>
+	<th><?php if($this->admin_id == '2'){echo $this->translate('Admin_Assign_TO');}?></th>
+	<th>&nbsp;</th>
+	</tr>
+	<?php $count = 0 ;$total_reply = 0;$report_wait=0; foreach($this->paginator as $reportBatch) : ?>
+	<tr>
+	<td ><?php echo $count++;?></td>
+	<td><?php $total_reply += count(explode(',',$reportBatch['report_ids']))-2;echo count(explode(',',$reportBatch['report_ids']))-2;?></td>
+	<td><?if ($reportBatch['state']=='NEW'):?><?php $report_wait += count(explode(',',$reportBatch['report_ids']))-2; echo count(explode(',',$reportBatch['report_ids']))-2;?><?php else:?><?php echo $reportBatch['state'];?><?php endif?></td>
+	<td><?php echo $reportBatch['start_datetime'];?></td>
+	<td><?php if($reportBatch['end_datetime'] == null || $reportBatch['end_datetime'] == ''){echo $this->translate('Admin_Report_Batch_NotFinished');}
+	else{echo floor($reportBatch['totaltime']/60).'min';}?></td>
+	<td><?php if($reportBatch['end_datetime'] == null || $reportBatch['end_datetime'] == ''){echo $this->translate('Admin_Report_Batch_NotFinished');}
+	else{echo round($reportBatch['totaltime']/60/(count(explode(',',$reportBatch['report_ids']))-2),1).'min';}?></td>
+	<td><?php echo $reportBatch['campaign_name'];?></td>
+	
+	<td><?php echo $reportBatch['admin_name'];?></td>
+	<td>
+	<a href="<?php echo $this->url(array('controller'=>'report','action'=>'admincreatebatch', 'batch_id'=>$reportBatch['id']));?>" target='blank'><?php echo $this->translate('Admin_Process_Report');?></a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</td>
+	</tr>
+	<?php endforeach; ?>
+	</table>
+	<?php }?>
+</center>
+<script type="text/javascript">
+jQuery(function() {
+	jQuery( "#start_date" ).datepicker({ dateFormat: 'yy-mm-dd' });
+	jQuery( "#end_date" ).datepicker({ dateFormat: 'yy-mm-dd' });
+});
+</script>

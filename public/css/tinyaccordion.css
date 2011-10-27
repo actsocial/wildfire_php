@@ -1,0 +1,130 @@
+* {
+	margin: 0;
+	padding: 0;
+	font: 12px Verdana, Arial
+}
+
+code {
+	font-family: "Courier New", Courier
+}
+
+.options {
+	width: 657px;
+	text-align: right;
+	color: #9ac1c9;
+	align:left;
+}
+
+.options a {
+	text-decoration: none;
+	color: #9ac1c9
+}
+
+.options a:hover {
+	color: #033
+}
+
+.acc {
+	width: 657px;
+	list-style: none;
+}
+
+.acc .acc_header {
+	border: 1px solid #9ac1c9;
+	padding: 6px 6px 8px;
+	font-weight: bold;
+	margin-top: 5px;
+	/*cursor: pointer;*/
+}
+
+.acc .acc_header_expand {
+    cursor: pointer;
+}
+
+
+.acc .acc_section {
+	overflow: hidden;
+}
+
+.acc .acc-content {
+	width: 625px;
+	padding: 15px;
+	border: 1px solid #9ac1c9;
+	border-top: none;
+}
+
+.viewed_color {
+    color: #6688DD;
+    background-color: #EFEFEF;
+}
+
+.new_color {
+    color: #0C4298;
+    font-weight: bold;
+    background-color: #FFFFFF;
+}
+
+.nested {
+	width: 625px;
+	list-style: none;
+	margin-bottom: 15px;
+}
+
+.nested h3 {
+	border: 1px solid #9ac1c9;
+	padding: 6px 6px 8px;
+	font-weight: bold;
+	margin-top: 5px;
+	cursor: pointer;
+	background: url(../images/tinyaccordion_header.gif)
+}
+
+.nested h3:hover {
+	background: url(../images/tinyaccordion_header_over.gif)
+}
+
+.nested .acc_section {
+	overflow: hidden;
+}
+
+.nested .acc-content {
+	width: 593px;
+	padding: 15px;
+	border: 1px solid #9ac1c9;
+	border-top: none;
+}
+
+.nested .acc-selected {
+	background: url(../images/tinyaccordion_header_over.gif)
+}
+
+.entry-icons {
+    background: transparent url(../images/client_inbox_icons.png) no-repeat scroll 0 0;
+    padding:1px 8px 1px 16px;
+}
+
+.star {
+	background-position: -16px -33px;
+}
+
+.unstar {
+    background-position:0 -1px;
+}
+
+.expand {
+    background-position:0 -352px;
+}
+
+.link {
+    color:#7C8CC5;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.reply {
+    background-position:-96px -194px;
+}
+
+.unread {
+    background-position:-64px -128px;
+}

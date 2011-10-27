@@ -1,0 +1,23 @@
+		<table class="campaigns-history">
+			<colgroup>
+				
+				<col id="name" />
+				<col id="accept-date" />
+				<col id="expire-date" />
+			</colgroup>
+			<tr>
+				<th><?php echo $this->translate("His_campaign_name")?></th>
+				<th><?php echo $this->translate("His_accept_date")?></th>
+				<th><?php echo $this->translate("His_expire_date")?></th>
+			</tr>
+			<?php 
+			foreach ($this->paginator as $campaigns):?>
+			<tr>
+				
+				<td><?php echo $campaigns['name']?></td>
+				<td><?php echo $campaigns['accept_date']?></td>
+				<td><?php echo $campaigns['expire_date']?></td>
+			</tr>
+			<?php endforeach;?>
+		</table>
+		<div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?></div>

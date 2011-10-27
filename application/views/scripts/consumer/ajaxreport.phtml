@@ -1,0 +1,41 @@
+<div style="padding: 10px;">
+<h1 style='margin-left: 0px;'>Old reports for this campaign:</h1>
+
+<?php if (count ( $this->oldreports ) == 0) {
+	echo "No other reports right now.";
+}
+$i = 0;
+foreach ( $this->oldreports as $report ) : ?>
+
+	<p>Report <?php 	echo ++ $i; ?>--Your answer(<?php 	echo $report ['create_date']?>):</p>
+	
+	<p id="report_<?php 	echo $report ['id']?>">
+		<img 	src="<?php	echo $this->baseUrl ();	?>/images/loading.gif"	style="height: 150px; width: 150px;" /> 
+		<script type="text/javascript">
+			var t=setTimeout("fetchreport<?php 	echo $report ['id']?>()",<?php 	echo ($i * 5000 + 2000); ?>);
+			function fetchreport<?php 	echo $report ['id']?>(){
+				jQuery.ajax({
+					  url: "<?php 	echo $this->url ( array ('controller' => 'site', 'action' => 'remoteurl' ) ); ?>",
+					  data: {url: "<?php 	echo $report ['url']?>"},
+					  dataType:'text',
+					  success: function(data) {
+					    jQuery("#report_<?php 	echo $report ['id']?>").html(data);
+					  }
+					});
+			}
+		</script>
+	</p>
+	
+	<p>
+		Report <?php 	echo $i; ?>
+		--<FONT	style='FONT-SIZE: 14px; COLOR: #cc0000'><?php	echo $report ['adminname'];	?></font> 
+		response(<?php 	echo $report ['replydate']; ?>):
+	</p>
+	<p>
+		<?php 	echo $report ['replycontent']; ?><br>
+		Tag: <FONT style='FONT-SIZE: 14px; COLOR: #cc0000'><?php 	echo $report ['tag']; ?></font>
+	</p>
+	<br>
+	<br>
+<?php endforeach; ?>
+</div>

@@ -1,0 +1,9 @@
+<div style="padding-bottom:40px;"></div>
+<div align='center'>
+<div style="width:800px;" >
+<h1 ><?php echo $this->translate("Submit_you_report_1"); echo ' ('.$this->name.') '; echo ' "'.$this->campaing_name.'" '; echo $this->translate("Submit_you_report_2");?></h1>
+<p><div id='source'>Source Report: <?php echo $this->sms ?></div></p>
+
+<?php readfile("$this->filloutPage")?>
+</div>
+</div>

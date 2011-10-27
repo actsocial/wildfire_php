@@ -1,0 +1,32 @@
+﻿<?php if(!$this->flag){?>
+<?php echo $this->campaign->name;?>
+<form method='post' action='<?php echo $this->url(array('controller'=>'campaignparticipation', 'action'=>'adminexportdata', 'id'=>$this->campaign->id));?>&'>
+<select name="action">
+<option value='all'>全部</option>
+<option value='sent'>已发送</option>
+<option value='notsent'>未发送</option>
+</select>
+<input type='submit' value='提交'/>
+</form>
+<?php }?>
+<?php if($this->flag){?>
+<?php if($this->file){
+header('Content-type: application/vnd.ms-excel');
+//下载显示的名字
+header('Content-Disposition: attachment; filename="'.$this->filename.'"');
+readfile($this->file);
+exit(); 
+	?>
+<a href='<?php echo $this->baseUrl().'/csv/'.$this->file?>'>下载文件</a>
+<?php }else{?>
+<form method='post' action='<?php echo $this->url(array('controller'=>'campaignparticipation', 'action'=>'adminexportdata', 'id'=>$this->campaign->id));?>'>
+<select name="action">
+<option value='all'>全部</option>
+<option value='sent'>已发送</option>
+<option value='notsent'>未发送</option>
+</select>
+<input type='submit' value='提交'/>
+</form>
+无数据
+<?php }?>
+<?php }?>

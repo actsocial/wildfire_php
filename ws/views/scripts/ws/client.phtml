@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div style="margin: 50px; padding: 20px; " align ="center">
+<p >WS Test</p>
+<br>
+<form name="form"
+	action="<?php echo $this->url(array('controller'=>'Ws','action'=>'client'));?>"
+	method="post">
+	<table>
+	<tr>
+		<td>Interface:</td>
+		<td>
+			<select name="interface" id="interface" onChange="JavaScript:ChangeOption('interface')">
+				<option value="">Unselected</option>
+				<option value="decrypt">decrypt</option>
+				<option value="verifyAccount">verifyAccount</option>
+				<option value="exchange">exchange</option>
+				<option value="getCurrentPoint">getCurrentPoint</option>
+			</select>
+		</td>
+	</tr>
+	<tr id ="tr1" name="tr1" style="display:none;">
+		<td id="tr1_td" ></td>
+		<td>
+			<input  type="text" id="paramter1" name="paramter1" />
+		</td>
+	</tr>
+	<tr id ="tr2" name="tr2" style="display: none;">
+		<td id="tr2_td"></td>
+		<td>
+			<input  type="text" id="paramter2" name="paramter2" />
+		</td>
+	</tr>
+	<tr id ="tr3" name="tr3" style="display: none;">
+		<td id="tr3_td"></td>
+		<td>
+			<input  type="text" id="paramter3" name="paramter3" />
+		</td>
+	</tr>
+	<tr id ="tr4" name="tr4" style="display: none;">
+		<td id="tr4_td"></td>
+		<td>
+			<input  type="text" id="paramter4" name="paramter4" />
+		</td>
+	</tr>
+	<tr id ="tr5" name="tr5" style="display: none;">
+		<td id="tr5_td"></td>
+		<td>
+			<input  type="text" id="paramter5" name="paramter5" />
+		</td>
+	</tr>
+
+	<tr></tr>
+	<tr>
+	<td></td>
+	<td><input  type="submit" id="submit" name="submit" valut="Submit"/></td>
+	</tr>
+	<tr>
+	<td>WS Interface:</td>
+	<td><?php echo $this->inter; ?></td>
+	</tr>
+	<tr>
+	<td>Paramter 1:</td>
+	<td><?php echo $this->paramter1; ?></td>
+	</tr>
+	<tr>
+	<td>Paramter 2:</td>
+	<td><?php echo $this->paramter2; ?></td>
+	</tr>
+	<tr>
+	<td>Paramter 3:</td>
+	<td><?php echo $this->paramter3; ?></td>
+	</tr>
+	<tr>
+	<td>Paramter 4:</td>
+	<td><?php echo $this->paramter4; ?></td>
+	</tr>
+	<tr>
+	<td>Paramter 5:</td>
+	<td><?php echo $this->paramter5; ?></td>
+	</tr>
+	<tr>
+	<td>Result:</td>
+	<td><?php echo $this->result; ?></td>
+	</tr>
+	</table>
+</form>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+function ChangeOption(Interface){
+	var inter = document.form.elements[Interface].value;
+
+	switch(inter){
+		case 'decrypt':
+			document.getElementsByName("tr1")[0].style.display = "";
+			document.getElementsByName("tr1_td")[0].innerHTML  ="site:";
+			document.getElementsByName("tr2")[0].style.display = "";
+			document.getElementsByName("tr2_td")[0].innerHTML  ="userName:";
+			document.getElementsByName("tr3")[0].style.display = "";
+			document.getElementsByName("tr3_td")[0].innerHTML  ="password:";
+			document.getElementsByName("tr4")[0].style.display = "";
+			document.getElementsByName("tr4_td")[0].innerHTML  ="realname:";
+			document.getElementsByName("tr5")[0].style.display = "";
+			document.getElementsByName("tr5_td")[0].innerHTML  ="auth:";
+			break;
+		case 'verifyAccount':
+			document.getElementsByName("tr1")[0].style.display = "";
+			document.getElementsByName("tr1_td")[0].innerHTML  ="UserName:";
+			document.getElementsByName("tr2")[0].style.display = "";
+			document.getElementsByName("tr2_td")[0].innerHTML  ="Password:";
+			
+			document.getElementsByName("tr3")[0].style.display = "none";
+			document.getElementsByName("tr4")[0].style.display = "none";
+			document.getElementsByName("tr5")[0].style.display = "none";
+			break;
+		case 'exchange':
+			document.getElementsByName("tr1")[0].style.display = "";
+			document.getElementsByName("tr1_td")[0].innerHTML  ="UserName:";
+			document.getElementsByName("tr2")[0].style.display = "";
+			document.getElementsByName("tr2_td")[0].innerHTML  ="Password:";
+			document.getElementsByName("tr3")[0].style.display = "";
+			document.getElementsByName("tr3_td")[0].innerHTML  ="Points:";
+			
+			document.getElementsByName("tr4")[0].style.display = "none";
+			document.getElementsByName("tr5")[0].style.display = "none";
+			break;
+		case 'getCurrentPoint':
+			document.getElementsByName("tr1")[0].style.display = "";
+			document.getElementsByName("tr1_td")[0].innerHTML  ="UserName:";		
+			document.getElementsByName("tr2")[0].style.display = "";
+			document.getElementsByName("tr2_td")[0].innerHTML  ="Password:";
+			
+			document.getElementsByName("tr3")[0].style.display = "none";
+			document.getElementsByName("tr4")[0].style.display = "none";
+			document.getElementsByName("tr5")[0].style.display = "none";
+			break;
+		default:
+			break;
+	}
+}
+</script>

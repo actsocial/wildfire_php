@@ -1,0 +1,26 @@
+<div class="article-box"><div class="article-box-inner">
+<div class="campaign-images">
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/bugslock/cam_bugslock_01.gif"/>
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/bugslock/cam_bugslock_02.gif"/>
+</div>
+<div class="main-column campaign-content" style="width:510px;">
+	<div class="submit-report"><a onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>3));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>3));?>" class="en">Submit Report</a></div>
+	<h1>BugsLock Mosquito Repellant Band Spark Campaign</h1>
+	<h2>BugsLock – "It's 100% Natural, and it's a Bracelet!"</h2>
+	<p>Welcome to the BugsLock Spark Campaign!</p>
+	<p>There are few things in the world more annoying than Mosquitoes, and though most people don’t know it, there are few things more dangerous. Mosquitoes spread disease, including malaria, dengue fever, and Japanese encephalitis, all of which are endemic to China.</p>
+	<p>With BugsLock Mosquito Repellant Bands, there is finally a convenient, 100% natural way to keep safe from mosquitoes and the diseases they carry. </p>
+</div>
+<div style="clear: both;"></div>
+</div></div>
+<div class="campaign-summary">
+	<div class="logo"><img src="<?php echo $this->baseUrl();?>/images/campaign/bugslock/cam_bugslock_logo.jpg"/></div>
+	<div class="summary summary-en">
+		<ul>
+			<li>Days Remaining: <strong><?php echo $this->dayCount?></strong></li>
+			<li>Reports Submitted: <strong><?php echo $this->reportCount?></strong></li>
+			<li>Spark Points Earned: <strong><?php echo $this->campaignPoint?></strong></li>
+		</ul>
+	</div>
+<div style="clear: both;"></div>
+</div>

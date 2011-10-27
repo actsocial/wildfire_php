@@ -1,0 +1,211 @@
+<?php if(isset($this->msgMap)) { ?>
+<div align="left" style="padding-top:40px;padding-left:200px;">
+<div><h2 style="font-size: 18px;"><?php echo $this->translate('Client_Message InBox');?></h2></div>
+<?php if(!isset($this->paginator) || count($this->paginator)>0) { ?>
+<script type="text/javascript" charset="utf-8">
+dataTables data in JS
+$(document).ready(function() {
+
+	$('div.expandable p').expander({
+        slicePoint:       80,  // default is 100
+        expandText:       'more', // default is 'read more...'
+        userCollapseText: '[^]'  // default is '[collapse expanded text]'
+    });
+} );
+</script>
+
+<!-- tiny accordion -->
+<div class="options">
+    <a href="javascript:parentAccordion.pr(1)"><?php echo $this->translate('Client_Message_Expand_All');?></a> | <a href="javascript:parentAccordion.pr(-1)"><?php echo $this->translate('Client_Message_Collapse_All');?></a>
+</div>
+<ul class="acc" id="acc">
+<?php $i=1; foreach($this->paginator as $row) {
+	$message = $row['MESSAGE'];
+	$replyArray = $row['REPLY'];
+	$fromName = $row['FROM_NAME'];
+	$lastTime = isset($row['LASTTIME'])?$row['LASTTIME']:$message->create_date;
+?>
+    <li id="li_<?php echo $message['id'];?>" <?php if($message["state"]=="NEW") { echo "class='new_color'"; } else { echo "class='viewed_color'"; }?>>
+        <div class="acc_header" id="<?php echo $message['id'];?>" style="width: 643px;">
+            <div>
+              <span id="subject_<?php echo $message['id'];?>" class="entry-icons <?php if($message['star']==null){ echo 'unstar';} else {echo 'star';};?>" onclick="onMessageStar(<?php echo $message['id'];?>)" style="cursor: pointer;"></span><span style="font-size:125%; font-weight:bold;"><?php echo $message['subject'];?></span>
+              <span class="message_date" style="align:right;float:right;" title="<?php echo $lastTime;?>"><?php echo $this->prettyDate($lastTime);?></span>
+            </div>
+            <span class="acc_header_expand">
+            <div>
+              <span><?php echo $this->translate('Client_Message_Type');?>: <?php echo $this->translate('Client_Message_Type '.$message['type']);?></span>
+              <span style="padding-left:15px;"><?php echo $this->translate('Client_Message_From_ID');?>: <?php echo $fromName;?></span>
+              <span style="padding-left:15px;"><?php echo $this->translate('Client_Message_Reply_Prefix');?>(<?php echo count($replyArray);?>)</span>
+            </div>
+            <div class="expandable"><p><?php echo $message['content'];?></p></div>
+            </span>
+            <div>
+              <span class="entry-icons unstar link" onclick="onMessageStar(<?php echo $message['id'];?>)">加星标注</span>
+              <span class="entry-icons unread link" onclick="onMessageState(<?php echo $message['id'];?>)">保持未读</span>
+              <span class="acc_header_expand"><span class="entry-icons reply link"><?php echo $this->translate('Client_Message_Reply');?></span></span>
+            </div>
+            <div><input id="state_<?php echo $message['id'];?>" type="hidden" value="<?php echo $message['state'];?>" /></div>
+        </div>
+        <div class="acc_section">
+            <div class="acc-content">
+                <?php if(count($replyArray)>0) { ?>
+                <div style="align:center">Reply List</div>
+                <div class="options" style="width:625px;">
+				    <a href="javascript:nestedAccordion<?php echo $message['id'];?>.pr(1)"><?php echo $this->translate('Client_Message_Expand_All_Reply');?></a> | <a href="javascript:nestedAccordion<?php echo $message['id'];?>.pr(-1)"><?php echo $this->translate('Client_Message_Collapse_All_Reply');?></a>
+				</div>
+				<?php } ?>
+                <ul class="nested" id="nested_<?php echo $message['id'];?>">
+	            <?php if(count($replyArray)>0) {
+	                    $index=1; foreach($replyArray as $reply) { ?>
+                    <li id="li_<?php echo $reply['id'];?>" <?php if($reply["state"]=="NEW") { echo "class='new_color'"; } else { echo "class='viewed_color'"; }?>>
+                        <h3 class="acc_header" id="<?php echo $reply['id'];?>" style="width: 611px;">
+                          <div class="acc_header_expand" style="cursor: pointer;">
+                            <span><?php echo $index++;?>#<?php echo ($reply['subject']!=null) ? $reply['subject'] : "回复";?></span>
+                            <span class="message_date" style="align:right;float:right;" title="<?php echo $reply['create_date'];?>"><?php echo $this->prettyDate($reply['create_date']);?></span>
+                          </div>
+                        </h3>
+                        <div class="acc_section">
+                            <div class="acc-content"><?php echo $reply['content'];?></div>
+                            <input id="state_<?php echo $reply['id'];?>" type="hidden" value="<?php echo $reply['state'];?>" />
+                        </div>
+                    </li>
+                    <?php } //end foreach 
+                      } //end if?>
+                    <li>
+                        <h3 style="width: 611px;">
+                            <span>增加新回复</span>
+                        </h3>
+                        <div>
+                            <div class="acc-content">
+                            <form action="<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientreplysave'));?>" method="post">
+                            <table>
+                              <tr>
+                                <td><?php echo $this->translate('Client_Message_Subject');?>: </td>
+                                <td>
+                                  <input type="text" name="subject" value="<?php echo $this->translate('Client_Message_Reply_Prefix');?><?php echo $message['subject'];?>" />
+                                </td>
+                              </tr>
+                              <tr>
+                                <td valign="top"><?php echo $this->translate('Client_Message_Content');?>: </td>
+                                <td>
+                                  <textarea columns="25" name="content"></textarea>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td>
+                                  <button style="cursor:pointer; padding:0.2em;" class="ui-state-default ui-corner-all" type="submit"><?php echo $this->translate('Client_Message_Reply');?></button>
+                                  <input type="hidden" name="message_id" value="<?php echo $message['id'];?>" />
+                                </td>
+                              </tr>
+                            </table>
+                            </form>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+<?php } ?>
+</ul>
+<div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?></div>
+
+<script type="text/javascript">
+
+//message accordion
+var parentOpened=-1;
+//if reply open current message
+<?php if(isset($this->current_message_id)) { echo "parentOpened=0; "; } ?>
+var parentAccordion = new TINY.accordion.slider("parentAccordion");
+parentAccordion.init("acc","h3",false,parentOpened);
+
+
+//reply accordion
+<?php if(isset($this->current_message_id)) {
+$key = $this->current_message_id;
+?>
+var nestedAccordion<?php echo $key;?> = new TINY.accordion.slider("nestedAccordion<?php echo $key;?>");
+nestedAccordion<?php echo $key;?>.init("nested_<?php echo $key;?>","h3",false,<?php echo count($this->msgMap[$key]['REPLY'])-1 ;?>,"acc-selected",1);
+<?php unset($this->msgMap[$key]['REPLY']); }?>
+
+<?php foreach($this->msgMap as $key=>$value) {
+    if(count($value['REPLY'])>0) {
+?>
+var nestedAccordion<?php echo $key;?> = new TINY.accordion.slider("nestedAccordion<?php echo $key;?>");
+nestedAccordion<?php echo $key;?>.init("nested_<?php echo $key;?>","h3",false,-1,"acc-selected",1);
+<?php } //end if
+} //end foreach ?>
+
+function onHeaderOpen(obj) {
+    //show message if necessary
+    if($("#"+obj.id+" .read-more").attr("class") == "read-more"
+        && $("#"+obj.id+" .details").attr("class") == "details") {
+        $("#"+obj.id+" .read-more").attr("style","display: none;");
+        $("#"+obj.id+" .details").attr("style","display: inline;");
+    }
+    $("#li_"+obj.id).attr("style","background-color:#F6F9FE;");
+    //update state
+    if($("#state_"+obj.id).val()=="NEW") {
+    	onMessageState(obj.id);
+    }
+    
+}
+
+function onHeaderClose(obj) {
+    //hide message if necessary
+    if($("#"+obj.id+" .read-more").attr("class") == "read-more"
+        && $("#"+obj.id+" .details").attr("class") == "details") {
+        $("#"+obj.id+" .read-more").attr("style","display: inline;");
+        $("#"+obj.id+" .details").attr("style","display: none;");
+    }
+    $("#li_"+obj.id).attr("style","background-color:none;");
+}
+
+function onMessageStar(id) {
+        //update star
+    $.ajax({
+        type:"GET",
+        url: "<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientmessagestar'));?>",
+        data:"message_id="+id,
+        dataType:'json',
+        success: function(json) {
+            if(json==null) {
+                $("#subject_"+id).attr("class","entry-icons unstar");
+            } else {
+                $("#subject_"+id).attr("class","entry-icons star");
+            }
+        }
+    });
+}
+
+function onMessageState(id) {
+    //update state
+    $.ajax({
+        type:"GET",
+        url: "<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientmessagestate'));?>",
+        data:"message_id="+id,
+        dataType:'json',
+        success: function(json) {
+            if(json=="NEW") {
+                $("#li_"+id).attr("class","new_color");
+                $("#state_"+id).val("NEW");
+            } else {
+                $("#li_"+id).attr("class","viewed_color");
+                $("#state_"+id).val("VIEWED");
+            }
+        }
+    });
+}
+
+</script>
+<?php } else { ?>
+<div><br/><?php echo $this->translate('Client_Message InBox NoMessage');?></div>
+<?php } ?>
+<style type="text/css">
+<!--
+
+-->
+</style>
+</div>
+<?php } ?>

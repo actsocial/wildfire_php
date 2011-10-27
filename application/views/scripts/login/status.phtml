@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title><?php if ($this->lang=="en"):?>Spark Home<?php else:?>我的星星火<?php endif;?></title>
+  <style>
+body, input {
+	font-family: Calibri,Arial,sans-serif;
+	font-size: 12px;
+}
+dt, dd {
+	margin:0;
+	padding:0;
+	float: left;
+background: #fff;
+height: 24px;
+border-top: 1px solid #999;
+border-bottom: 1px solid #999;
+}
+
+.login-form {
+	border-left: 1px solid #999;
+border: 1px solid #f00;
+	height: 24px;
+	width: 390px;
+	margin-left: 90px;
+}
+.login-form dt label {
+	color: #666;
+	height: 24px;
+	line-height: 24px;
+	font-size: 12px;
+	margin: 0 5px;
+}
+.login-form dd input {
+	font-family: Calibri,Arial,sans-serif;
+	border: 0px;
+	border: none;
+	height: 14px;
+	line-height: 14px;
+	margin-top: 4px;
+	width: 130px;
+	color: #666;
+}
+.login-form dd input#password {
+	width: 74px;
+}
+.login-form dd input#login {
+	margin:0;
+	width: 60px;
+	height: 24px;
+	line-height: 20px;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	background: #fff;
+margin:0;
+padding:0;
+
+
+}
+.login-form input#register {
+	display:none;
+}
+.login-form a{
+	text-decoration:none;
+}
+.login-form dd {
+	border: 1px solid #0f0;
+padding:0;
+height: 10px;
+}
+.login-form form {
+border: 0px solid #00f;
+float: left;
+}
+  </style>
+ </head>
+ <body style="font-size:10px; height: 44px;background: #FF9899;">
+<?php if ($this->currentUser): ?>
+<div id="date" style="text-align:right;">
+		<div class="login-form" style="font-size: 12px;">
+		<?php if ($this->lang=="en"):?>Welcome<?php else:?>欢迎<?php endif;?>, <?php echo $this->currentUser->name?>	&nbsp;
+		<a target='_parent' href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><?php if ($this->lang=="en"):?>Spark Home<?php else:?>我的星星火<?php endif;?></a>
+		<a target='_parent' href="<?php echo $this->url(array('controller'=>'login','action'=>'logout'));?>"><?php if ($this->lang=="en"):?>Logout<?php else:?>退出<?php endif;?></a>&nbsp;&nbsp;&nbsp;&nbsp;
+		</div>
+	</div>
+<?php else:?>
+	<div id="date">
+		<div class="login-form">
+		<form action="<?php echo $this->url(array('controller'=>'login','action'=>'login'));?>" method="post" target="_parent">
+		<?php echo $this->form->email ;?>
+		<?php echo $this->form->password ;?>
+		<dd style="border: 1px solid #00f;height: 24px;padding:0;"><input type="submit" name="login" value="登录" style="margin:0;padding:0;"/></dd>
+		</form>
+		</div>
+	</div>
+<?php endif;?>
+</body>
+</html>

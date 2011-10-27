@@ -1,0 +1,85 @@
+<div align ="center" style="padding-top:40px;">
+<h2><?php echo $this->translate('Client_Kraft WOW Report');?></h2><br/>
+<div class="RoundedCorner">
+<div id="drip_title" class="drip_title" >
+        <div class="points"><?php echo $this->translate('Client_Drip Reaction');?></div>
+        <div class="people"><?php echo $this->translate('Client_Drip Reach');?></div>
+        <div class="date"><?php echo $this->translate('Client_Drip Date');?></div>
+        <div class="content"><?php echo $this->translate('Client_Drip Narrative');?></div>
+</div>
+</div>
+<div style="clear: both;"></div>
+<div id="dashboard" align ="left" style="OVERFLOW-y:auto;">
+<?php foreach($this->reportMap as $row) { 
+    if (count($row) < 5) {
+        continue;
+    }
+    ?>
+    <div id="report_<?php echo $row['REPORT_ID'];?>" class="message" >
+        <div class="points" title="<?php echo $this->translate('Client_Tip Reaction');?>"><?php echo isset($row['SCORE'])?$row['SCORE']:'n/a';?></div>
+        <div class="people" title="<?php echo $this->translate('Client_Tip Reach');?>"><?php echo $row['FRIENDS'];?></div>
+        <div class="date"><?php echo $row['REPORT_TIME'];?></div>
+        <div id="content_<?php echo $row['REPORT_ID'];?>" class="content" onclick="report_detail(<?php echo $row['REPORT_ID'];?>)"><span style="cursor:pointer;" class="consumer_name"><strong><?php echo $row['CONSUMER_NAME'];?> </strong></span>: <?php echo $row['COMMENTS'];?>
+        <?php if(isset($row['REPLY_CONTENT'])) { ?>
+        <div id="reply_<?php echo $row['REPORT_ID'];?>" style="display:none;">
+        <div id="separate-line"><hr/></div>
+        <strong><?php echo $this->translate('Client_Wildfire Reply');?></strong>: <?php echo $row['REPLY_CONTENT'];?></div>
+        </div>
+        <?php } ?>
+    </div>
+<?php }?>
+</div>
+
+
+<div id="drip-dialog" style="display: none;">
+    <div id="drip-dialog-content" class="message"></div>
+</div>
+
+<script>
+//round corner
+$("#drip_title").corner("5px");
+
+//div drip
+//var speed = 1000;
+//var t = setInterval(myfunc,speed);
+//var d = document.getElementById("dashboard");
+//function myfunc() {
+//    var o = d.firstChild;
+//    d.removeChild(o);
+//    d.appendChild(o);
+//}
+//d.onmouseover = function() {clearInterval(t)};
+//d.onmouseout = function() {t = setInterval(myfunc,speed)};
+
+//dialog
+var report_div = '';
+var reply_div = '';
+$("#drip-dialog").dialog({
+    width:600, 
+    height:250,
+    autoOpen:false, 
+    title:"<?php echo $this->translate('Client_Report Detail');?>", 
+    close: function(event,ui) { $(reply_div).hide(); }
+});
+
+function report_detail(id) {
+    if (report_div != '') {
+    	document.getElementById(report_div).style.background="";
+    }
+    report_div = "report_" + id;
+    
+    document.getElementById(report_div).style.background="#c2edff";
+    reply_div = "#reply_" + id;
+    $(reply_div).show();
+    $("#drip-dialog-content").html($("#content_" + id).html());
+    $("#drip-dialog").dialog("open");
+}
+
+</script>
+
+<style type="text/css">
+<!--
+.ui-widget-content { color:#404040; }
+-->
+</style>
+</div>

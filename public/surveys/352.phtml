@@ -1,0 +1,1296 @@
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	// <![CDATA[
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie > 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length > MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+	// ]]>
+	-->
+	</script>
+<div class="main-container-outer" style="background: #fff;width:100%;">
+	<div id="container" style="background: #fff;">
+		<div id="header" class="header" style="display: none;">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			<div class="main-logo" id="main-logo">
+				<a href="http://www.ostrakon.org" target="_blank">
+				</a>
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div> <!-- header -->
+		<div id="nav" class="navigation" style="display:none;">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content" style="background:#fff;width:100%;">
+ 		
+
+<div id="content" style="width:100%;">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	mandatoryElements = new Array(); 
+// ]]>
+-->
+</script>
+<div class="fillout-container">
+<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
+<div class="mainOneContent">
+
+<div style="margin-top:10px;"></div>
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
+  <div id="mainzone-top-left">
+    <div id="mainzone-top-right"></div>
+  </div>
+</div>
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none;">
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"/></td>
+		<td bgcolor="#ffffff">
+			<div class="web-dialog-message">
+				<p id="web-dialog-message-text" class=""></p>
+			</div>
+			<div class="buttons" id="web-dialog-buttons">
+			</div>
+		</td>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"/></td>
+	</tr>
+</table>
+
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	var WebDialog = {
+		element : $('web-dialog'),
+		onok : function() {},
+		oncancel : function() {},
+		show : function() {
+			var width = document.body.clientWidth;
+			var height = document.body.offsetHeight;
+			var left = (width - this.element.offsetWidth) / 2;
+			var top = (height - this.element.offsetHeight) / 2;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+		},
+		alert : function(msg,agree,disagree,onok,oncancel) {
+			var buttons = ["OK","Cancel"];
+			var callbacks = [onok, oncancel];
+			this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+		},
+		ok : function() {
+			this.onok();
+		},
+		close : function() {
+			this.element.hide();
+			$('mask').hide();
+			this.oncancel();
+		},
+		showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions) {
+			// icon_type : "none", "alert", "question"
+			// msg_align : "left", "center", "right"
+			// width : -1 means auto
+			
+			var width = document.body.clientWidth;
+			var height = window.screen.availHeight;
+			var left = (width - window_width) / 2;
+			var top = (height - 300) / 2;
+			var pos = 0;
+			if (window.innerHeight) {
+		    	pos = window.pageYOffset
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
+		    	pos = document.documentElement.scrollTop
+		    } else if (document.body) {
+		    	pos = document.body.scrollTop;
+		    }
+		    top += pos;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+			$('mask').style.height = document.body.scrollHeight + "px";
+			
+			if (width != undefined) {
+				this.element.style.width = window_width + "px";
+			}
+			if (msg != undefined) {
+				$('web-dialog-message-text').innerHTML = msg;
+			}
+			if (icon_type != undefined && msg_align != undefined) {
+				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
+			} else if (icon_type == undefined && msg_align == undefined) {
+				$('web-dialog-message-text').className = "icon-none left";
+			} else if (icon_type == undefined) {
+				$('web-dialog-message-text').className = msg_align;
+			} else {
+				$('web-dialog-message-text').className = "icon-"+icon_type;
+			}
+			
+			$('web-dialog-buttons').innerHTML = "";
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
+					if (buttons[i]==undefined || callback_functions[i]==undefined) {
+						continue;
+					}
+					var e = document.createElement('a');
+					e.setAttribute('href', '#');
+					e.innerHTML = buttons[i];
+					e.onclick = callback_functions[i];
+					$('web-dialog-buttons').appendChild(e);
+				}
+			}
+			
+			
+			this.element.show();
+			$('mask').show();
+		}
+	}
+// ]]>
+-->
+</script>
+<div id="mainzone">
+<div id="mainzone-inner">
+
+
+<input type="hidden" name="id" value="" id="id" />
+<input type="hidden" name="theme" value="wildfire" id="theme" />
+
+<div class="mandatory"><span style="color: red;">* </span>- It is mandatory</div>
+<div class="page-bar-area">
+<span id="pageBar">Page:&nbsp;</span>
+<strong class="no-answer">No Answer</strong><img class="no-answer" src="/images/no_answer.gif" align="absmiddle"/>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+	<div id="page_0">
+
+
+
+
+
+<div class="header-section" id="h_184">
+	<h3></h3>
+<span class="header-title">
+<h2>关于手部卫生</h2>
+</span>
+	<h3></h3>
+</div>
+<!-- <span  class="no-answer-all">No answer all <input type="checkbox" name="qc_checkbox_184" value="" id="qc_checkbox_184" onClick="checkSubboxes(184)" />
+ </span>-->
+<div style="clear: both ;"></div><script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_184_1303" style="margin-bottom:0px;" class="question-even question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您知道到80%的疾病是通过手来传播的？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[6884].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[6884].id" value="" id="answers[6884].id" />
+<ul>
+	<li>
+			<input group="6884" type="radio" id="6884_0" name="answers[6884].value" value="4239"  class="selection question_radio_6884"  />		<label for="6884_0">知道</label>
+	</li>
+	<li>
+			<input group="6884" type="radio" id="6884_1" name="answers[6884].value" value="4240"  class="selection question_radio_6884"  />		<label for="6884_1">不知道</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_6884  qc_184 radio" type="radio" name="answers[6884].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_184_1304" style="margin-bottom:0px;" class="question-odd question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您关注猪流感吗？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+<span class="error-content" id="err_answers[6885].value" ></span>
+<input type="hidden" name="answers[6885].id" value="" id="answers[6885].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">不关注</div>
+	<table class="rating-table">
+		<tr class="radio-line">
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[6885].value" value="1" id="6885_1" group="6885" class="question_radio_6885 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[6885].value" value="2" id="6885_2" group="6885" class="question_radio_6885 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[6885].value" value="3" id="6885_3" group="6885" class="question_radio_6885 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[6885].value" value="4" id="6885_4" group="6885" class="question_radio_6885 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[6885].value" value="5" id="6885_5" group="6885" class="question_radio_6885 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+		</tr>
+	</table> <div class="right-label">非常关注</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[6885].value" value="" id="answers[6885].value" class="q_6885 qc_184 radio" />
+</td>
+</tr>
+</table>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_184_1305" style="margin-bottom:0px;" class="question-even question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您采取什么措施来避免猪流感？?
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[6886].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[6886].id" value="" id="answers[6886].id" />
+
+
+
+
+<span id="hint_6886">
+</span>
+<ul>
+	<li>
+			<input group="6886" class="question_radio_6886 selection" type="checkbox" id="6886_0" name="answers[6886].value" value="4241" 	onclick=" "/>		<label for="6886_0">不吃猪肉</label>
+	</li>
+	<li>
+			<input group="6886" class="question_radio_6886 selection" type="checkbox" id="6886_1" name="answers[6886].value" value="4242" 	onclick=" "/>		<label for="6886_1">用酒精消毒</label>
+	</li>
+	<li>
+			<input group="6886" class="question_radio_6886 selection" type="checkbox" id="6886_2" name="answers[6886].value" value="4243" 	onclick=" "/>		<label for="6886_2">不在外面吃饭</label>
+	</li>
+	<li>
+			<input group="6886" class="question_radio_6886 selection" type="checkbox" id="6886_3" name="answers[6886].value" value="4244" 	onclick=" "/>		<label for="6886_3">经常洗手</label>
+	</li>
+	<li>
+			<input group="6886" class="question_radio_6886 selection" type="checkbox" id="6886_4" name="answers[6886].value" value="4245" 	onclick=" "/>		<label for="6886_4">稍比平常小心一些</label>
+	</li>
+	<li>
+			<input group="6886" class="question_radio_6886 selection" type="checkbox" id="6886_5" name="answers[6886].value" value="4246" 	onclick=" "/>		<label for="6886_5">没做什么特别的事</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_184_1306" style="margin-bottom:0px;" class="question-odd question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您一天洗手多少次？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[6887].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[6887].id" value="" id="answers[6887].id" />
+<ul>
+	<li>
+			<input group="6887" type="radio" id="6887_0" name="answers[6887].value" value="4247"  class="selection question_radio_6887"  />		<label for="6887_0">每天少于5次</label>
+	</li>
+	<li>
+			<input group="6887" type="radio" id="6887_1" name="answers[6887].value" value="4248"  class="selection question_radio_6887"  />		<label for="6887_1">每天5-10次</label>
+	</li>
+	<li>
+			<input group="6887" type="radio" id="6887_2" name="answers[6887].value" value="4249"  class="selection question_radio_6887"  />		<label for="6887_2">每小时1次</label>
+	</li>
+	<li>
+			<input group="6887" type="radio" id="6887_3" name="answers[6887].value" value="4250"  class="selection question_radio_6887"  />		<label for="6887_3">每小时多次</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_6887  qc_184 radio" type="radio" name="answers[6887].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_184_1307" style="margin-bottom:0px;" class="question-even question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您有小孩吗？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[6888].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[6888].id" value="" id="answers[6888].id" />
+<ul>
+	<li>
+			<input group="6888" type="radio" id="6888_0" name="answers[6888].value" value="4251"  class="selection question_radio_6888"  />		<label for="6888_0">有</label>
+	</li>
+	<li>
+			<input group="6888" type="radio" id="6888_1" name="answers[6888].value" value="4252"  class="selection question_radio_6888"  />		<label for="6888_1">没有</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_6888  qc_184 radio" type="radio" name="answers[6888].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_184_1308" style="margin-bottom:0px;" class="question-odd question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您使用什么为您的孩子清洁？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[6889].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[6889].id" value="" id="answers[6889].id" />
+
+
+
+
+<span id="hint_6889">
+</span>
+<ul>
+	<li>
+			<input group="6889" class="question_radio_6889 selection" type="checkbox" id="6889_0" name="answers[6889].value" value="4253" 	onclick=" "/>		<label for="6889_0">肥皂</label>
+	</li>
+	<li>
+			<input group="6889" class="question_radio_6889 selection" type="checkbox" id="6889_1" name="answers[6889].value" value="4254" 	onclick=" "/>		<label for="6889_1">洗手液</label>
+	</li>
+	<li>
+			<input group="6889" class="question_radio_6889 selection" type="checkbox" id="6889_2" name="answers[6889].value" value="4255" 	onclick=" "/>		<label for="6889_2">湿巾</label>
+	</li>
+	<li>
+			<input group="6889" class="question_radio_6889 selection" type="checkbox" id="6889_3" name="answers[6889].value" value="4256" 	onclick=" "/>		<label for="6889_3">酒精</label>
+	</li>
+	<li>
+			<input group="6889" class="question_radio_6889 selection" type="checkbox" id="6889_4" name="answers[6889].value" value="4257" 	onclick=" "/>		<label for="6889_4">净手消毒液</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_184_1309" style="margin-bottom:0px;" class="question-even question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您自己使用过净手消毒液吗？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[6890].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[6890].id" value="" id="answers[6890].id" />
+<ul>
+	<li>
+			<input group="6890" type="radio" id="6890_0" name="answers[6890].value" value="4258"  class="selection question_radio_6890"  />		<label for="6890_0">用过</label>
+	</li>
+	<li>
+			<input group="6890" type="radio" id="6890_1" name="answers[6890].value" value="4259"  class="selection question_radio_6890"  />		<label for="6890_1">没用过</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_6890  qc_184 radio" type="radio" name="answers[6890].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_184_1310" style="margin-bottom:0px;" class="question-odd question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您为什么使用净手消毒液（可多选）？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[6891].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[6891].id" value="" id="answers[6891].id" />
+
+
+
+
+<span id="hint_6891">
+</span>
+<ul>
+	<li>
+			<input group="6891" class="question_radio_6891 selection" type="checkbox" id="6891_0" name="answers[6891].value" value="4260" 	onclick=" "/>		<label for="6891_0">挤压式取量，方便快捷</label>
+	</li>
+	<li>
+			<input group="6891" class="question_radio_6891 selection" type="checkbox" id="6891_1" name="answers[6891].value" value="4261" 	onclick=" "/>		<label for="6891_1">消毒瞬间除菌，安全护肤滋润</label>
+	</li>
+	<li>
+			<input group="6891" class="question_radio_6891 selection" type="checkbox" id="6891_2" name="answers[6891].value" value="4262" 	onclick=" "/>		<label for="6891_2">实用性较强，方便携带，随时随地使用</label>
+	</li>
+	<li>
+			<input group="6891" class="question_radio_6891 selection" type="checkbox" id="6891_3" name="answers[6891].value" value="4263" 	onclick=" "/>		<label for="6891_3">防止交叉感染，干净卫生</label>
+	</li>
+	<li>
+			<input group="6891" class="question_radio_6891 selection" type="checkbox" id="6891_4" name="answers[6891].value" value="4264" 	onclick=" "/>		<label for="6891_4">环保，节水</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_184_1311" style="margin-bottom:0px;" class="question-even question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您所熟悉的净手消毒液品牌？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[6892].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[6892].id" value="" id="answers[6892].id" />
+
+
+
+
+<span id="hint_6892">
+</span>
+<ul>
+	<li>
+			<input group="6892" class="question_radio_6892 selection" type="checkbox" id="6892_0" name="answers[6892].value" value="4265" 	onclick=" "/>		<label for="6892_0">普瑞来</label>
+	</li>
+	<li>
+			<input group="6892" class="question_radio_6892 selection" type="checkbox" id="6892_1" name="answers[6892].value" value="4266" 	onclick=" "/>		<label for="6892_1">安利</label>
+	</li>
+	<li>
+			<input group="6892" class="question_radio_6892 selection" type="checkbox" id="6892_2" name="answers[6892].value" value="4267" 	onclick=" "/>		<label for="6892_2">威露士</label>
+	</li>
+	<li>
+			<input group="6892" class="question_radio_6892 selection" type="checkbox" id="6892_3" name="answers[6892].value" value="4268" 	onclick=" "/>		<label for="6892_3">屈臣氏</label>
+	</li>
+	<li>
+			<input group="6892" class="question_radio_6892 selection" type="checkbox" id="6892_4" name="answers[6892].value" value="4269" 	onclick=" "/>		<label for="6892_4">WOODWARD’S</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_184_1312" style="margin-bottom:0px;" class="question-odd question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					猪流感爆发后，您和您的朋友谈论清洁的方法吗？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+<span class="error-content" id="err_answers[6893].value" ></span>
+<input type="hidden" name="answers[6893].id" value="" id="answers[6893].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">很少</div>
+	<table class="rating-table">
+		<tr class="radio-line">
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[6893].value" value="1" id="6893_1" group="6893" class="question_radio_6893 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[6893].value" value="2" id="6893_2" group="6893" class="question_radio_6893 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[6893].value" value="3" id="6893_3" group="6893" class="question_radio_6893 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[6893].value" value="4" id="6893_4" group="6893" class="question_radio_6893 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[6893].value" value="5" id="6893_5" group="6893" class="question_radio_6893 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+		</tr>
+	</table> <div class="right-label">很多</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[6893].value" value="" id="answers[6893].value" class="q_6893 qc_184 radio" />
+</td>
+</tr>
+</table>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+
+</div> 
+<br/>
+<div style="clear:both"></div>
+</div> 
+</div> 
+
+<div id="mainzone-bottom-wrapper">
+	<div id="mainzone-bottom-left">
+		<div id="mainzone-bottom-right">&nbsp;</div>
+	</div>
+</div>
+<br/>
+<div class="fillout-submit">
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
+</div>
+
+</form>
+</div> 
+<div class="clear"></div>
+<br/>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+  var pageNum=0;
+ 
+  var noPage0 = false;
+  var currentPage=0;
+  
+
+  function showPage(_pageIndex) {
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex == pageNum) {
+    	Element.hide("nextPageButton");
+    } else {
+    	Element.show("nextPageButton");
+    }
+    
+    if (_pageIndex <1 && noPage0) return ;
+  	var _pageElement = $("page_"+_pageIndex);
+  	var _currElement = $("page_"+currentPage);
+  	
+  	Element.hide(_currElement);
+  	Element.show(_pageElement);
+	
+	if($("pageNum" + _pageIndex) != undefined) {
+		$("pageNum" + _pageIndex).style.fontWeight = "bolder"; 
+		$("pageNum" + _pageIndex).style.textDecoration = "underline";
+	}
+    if($("pageNum" + currentPage) != undefined) {		
+  		$("pageNum" + currentPage).style.fontWeight = "normal"; 
+		$("pageNum" + currentPage).style.textDecoration = "none";
+	}
+	
+
+  	currentPage = _pageIndex;
+	
+	if(_pageIndex == pageNum) {
+		Element.show($('submit'));
+	} else if ( _pageIndex < pageNum) {
+		Element.hide($('submit'));
+	}
+  }
+  
+  function showNextPage(){
+  	showPage(currentPage+1);
+  }
+  
+  function showPrevPage(){
+  	showPage(currentPage-1);
+  }
+  
+  function initPages() {
+  	var i;
+
+  	for (i=0; i<=pageNum; i++) {
+  		Element.hide($("page_"+i));
+  	}
+  	
+ 
+  	var _pageBar = document.getElementById("pageBar");
+  	if (pageNum==0) {
+  		_pageBar.innerHTML = "";
+  	} else {
+	  	for (i=0; i<=pageNum; i++) {
+			var s ="";
+			if( i == 0 ) {
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
+			}
+
+			if (noPage0){
+	  		 if (i!=0){ 
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
+	  		  }
+	  		}else{
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
+	  		}
+	  		
+			if( i == pageNum ) {
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
+			}
+	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  	}		
+  	}
+  }
+  
+  initPages();
+  if (noPage0){
+  	showPage(1);
+  }else{
+  	showPage(0);
+  }
+// ]]>
+-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+    //do not include radio answers
+	if(typeof checkNoAnswer=="undefined") {
+		checkNoAnswer=function(index,checkbox) {
+			var question = $("question_" + index);
+			var checked = checkbox.checked;
+			if( checked) {
+				question.disabled="disabled";
+				checkbox.value=false;
+			} else {
+				question.disabled="";
+				checkbox.value=true;
+			}
+		};
+	};
+	
+		if(typeof checkRadioNoAnswer=="undefined") {
+		checkRadioNoAnswer = function(index,checkbox) {
+			var clazz = "question_radio_" +index;
+			var radios = document.getElementsByClassName(clazz).each(function(radio) {
+				var checked = checkbox.checked;
+			    if( checked) {
+					if(radio.checked="checked")radio.checked="";
+					radio.disabled="disabled";
+					checkbox.value=false;
+			    } else {
+					radio.disabled="";
+					checkbox.value=true;
+			    }
+			});
+		};
+	}
+	
+	if(typeof checkSubboxes=="undefined") {
+		checkSubboxes = function(qc_id) {
+			//get the question context checkbox's value
+			var qc_value = $("qc_checkbox_" + qc_id).checked;
+			//get the checkBoxed belongs to the above question context
+			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
+			for(var i = 0; i < checkBoxes.length;i++) {
+				var checkBox = checkBoxes[i];
+				//to reuse checkRadioNoAnswer and checkNoAnswer
+				checkBox.checked=qc_value;
+				var clazzName = checkBox.className;
+				var question_id = clazzName.split(" ")[0].split("_")[1];
+				if( clazzName.indexOf("radio") != -1) {
+					checkRadioNoAnswer(question_id,checkBox);
+				} else {
+					checkNoAnswer(question_id,checkBox);
+				}
+			}
+		}
+		
+	}
+// ]]>
+-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function loading() {
+		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
+		WebDialog.showMessageBox(html, "none", "center", 600);
+	}
+	
+	function checkMandatory() {
+	    var fillMandatory = true;
+	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+			if(elements.length > 1) {
+			  var filled = false;
+			  for(var i=0; i < elements.length; i++) {
+			  	var element = elements[i];
+				if(element.checked) {
+				  filled = true;
+				  break;
+				}
+			  }
+			  if(!filled) {
+			  	fillMandatory = false;
+			  	break;
+			  }
+			} else {
+			  var element = elements[0];
+			  if(element.hasClassName("selection")) {
+			  	if(element.value.strip() == '') {
+	    			fillMandatory =  false;
+	    			break;                                  
+	    		}
+			  } else if (element.hasClassName("input-text")) {
+			 	if(element.value == 0) {
+					fillMandatory = false;
+					break;
+				}
+			  }
+			}
+	    }
+	    if(!fillMandatory) {
+	    	var html = 'Mandatory questions must be filled out';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    }
+            return fillMandatory;
+	}
+	
+	function checkMandatoryOfSelectionQuestion() {
+	 var mandatory = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+
+
+	function checkAnswerSet() {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
+		    return true;
+		} else {
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			return false;
+		}
+	}
+	
+	function checkAnswersOfSelectionQuestions() {
+	 var filled = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+	
+	function checkAnswersOfRatingQuestions() {
+	    var filled = false;
+	    $$('input.rating').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;  
+										}
+	                                });
+
+		 return filled;
+	}
+	
+	function checkAnswersOfCommentQuestions() {
+	    var filled = false;
+	    $$('.input-text').each(function(element) {
+	                                    if(element.value.strip() != '') {
+	                                        filled = true;
+	                                    	throw $break;                                 
+	                                    }
+	                                });
+		 return filled;
+	}
+	
+	function locateErrorPage() {
+		var errorElements = $$('span.error-content') ;
+		var hasError = false;
+		var errorElementsPointer = 0;
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+			var html = errorElements[errorElementsPointer].innerHTML;
+			if (html != "") {
+				hasError = true;
+				break;
+			}
+		}
+		if( hasError ) {
+			var errorParentElement = errorElements[errorElementsPointer].up('div');
+			while (errorParentElement != undefined) {
+			var elementId = errorParentElement.id;
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
+				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
+				showPage(errorPageNum);
+				break;
+		}
+		errorParentElement = errorParentElement.up('div');
+		}
+		}
+	}
+	locateErrorPage();
+	
+	function showOtherValueInputInSelect(element) {
+	    var options = element.options;
+	    var selectedOption;
+	    for( var i = 0; i < options.length; i++) {
+	       if( options[i].selected) {
+	       	 selectedOption = options[i];
+	       }
+	    }
+	    var selectedOptionId = selectedOption.id;
+	    if( selectedOptionId.indexOf("other") != -1) {
+	    	$(element.id + "_other").show();
+	    } else {
+	        $(element.id + "_other").value = "";
+	    	$(element.id + "_other").hide();
+	    }
+	}
+	
+	function showOtherValueInputInRadio(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( value == 0 ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+	function showOtherValueInputInCheckBox(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( element.checked ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+// ]]>
+-->
+</script>
+</div>
+</div> 
+</div>
+
+<div class="footer" style="display:none;">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/c/methodName/c"  target="_blank">Help</a> | <a href="http://www.ostrakon.org"  target="_blank">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow" style="display:none;"></div>
+	<div style="clear: both"></div>
+	
+</div> 
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+
+
+	 Element.hide("q_184_1308");
+	 Element.hide("q_184_1310");
+
+
+var myrules = {
+	   
+	   "input#6888_0": function(el){
+			el.onclick = function(){
+				if ($("6888_0").checked){
+						Element.show($("q_184_1308"));
+				}
+			}
+		}
+	,
+	   
+	   "input#6890_0": function(el){
+			el.onclick = function(){
+				if ($("6890_0").checked){
+						Element.show($("q_184_1310"));
+				}
+			}
+		}
+	,
+	   
+	   "input#6888_1": function(el){
+			el.onclick = function(){
+				if ($("6888_1").checked){
+						Element.hide($("q_184_1308"));
+				}
+			}
+		}
+	,
+	   
+	   "input#6890_1": function(el){
+			el.onclick = function(){
+				if ($("6890_1").checked){
+						Element.hide($("q_184_1310"));
+				}
+			}
+		}
+}
+
+Behaviour.register(myrules);
+
+// ]]>
+-->
+</script>

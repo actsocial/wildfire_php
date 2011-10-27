@@ -1,0 +1,73 @@
+﻿<div id="main_bg" class="main_bg_center">
+<?php include("./header.html");?>
+<br clear="all" />
+<div id="maincolumn">
+                <div class="path"><span class="breadcrumbs pathway"></div>
+
+<div class="nopad">
+
+<div class="operate">
+<a href="<?php echo $this->url(array('controller'=>'consumer',
+'action'=>'index'));?>"><?php echo $this->translate('List_Consumer')?></a>
+<a href="<?php echo $this->url(array('controller'=>'campaiginvitation',
+'action'=>'list'));?>"><?php echo $this->translate('List_All_Campaign_Invitation')?></a>
+<a href="<?php echo $this->url(array('controller'=>'campaign',
+'action'=>'add'));?>"><?php echo $this->translate('Add_New_Campaign')?></a>
+</div>
+<fieldset>
+<?php if ($this->campaign) :?>
+<p><?php echo $this->translate('Be_Sure_To_Delete')?> '<?php echo $this->escape($this->campaign->name); ?>'
+<?php echo $this->translate('For')?> '<?php echo $this->escape($this->campaign->company); ?>' <?php echo $this->translate('Interrogation_Mark')?></p>
+<form action="<?php echo $this->url(array('controller'=>'campaign','action'=>'delete')); ?>"
+	method="post">
+	<div>
+		<input type="hidden" name="id"	value="<?php echo $this->campaign->id; ?>" /> 
+		<input type="submit" name="del" value="<?php echo $this->translate('Yes')?>" /> <input type="submit" name="del" value="<?php echo $this->translate('No')?>" />
+	</div>
+</form>
+
+<?php else: ?>
+	<p>Cannot find the campaign.</p>
+<?php endif;?>
+</fieldset>
+
+
+<ul class="blank">
+<li><a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'index'));?>'><?php echo $this->translate('Back')?></a></li>
+</ul>
+
+
+<span class="article_separator">&nbsp;</span>
+</div>
+            </div>
+        	<div id="leftcolumn">
+			                		<div class="moduletable_menu">
+
+					<h3>Main Menu</h3>
+					<ul class="menu"><li class="item1"><a href="http://beta1.wildfire.asia/"><span>Home</span></a></li><li class="parent item27"><a href="/index.php?option=com_content&amp;view=article&amp;id=19&amp;Itemid=27&amp;lang=en"><span>Joomla! Overview</span></a></li><li class="item2"><a href="/index.php?option=com_content&amp;view=article&amp;id=5&amp;Itemid=2&amp;lang=en"><span>Joomla! License</span></a></li><li class="item37"><a href="/index.php?option=com_content&amp;view=section&amp;id=4&amp;Itemid=37&amp;lang=en"><span>More about Joomla!</span></a></li><li class="item41"><a href="/index.php?option=com_content&amp;view=section&amp;id=3&amp;Itemid=41&amp;lang=en"><span>FAQ</span></a></li><li id="current" class="active item50"><a href="/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=1&amp;Itemid=50&amp;lang=en"><span>The News</span></a></li><li class="item48"><a href="/index.php?option=com_weblinks&amp;view=categories&amp;Itemid=48&amp;lang=en"><span>Web Links</span></a></li><li class="item49"><a href="/index.php?option=com_newsfeeds&amp;view=categories&amp;Itemid=49&amp;lang=en"><span>News Feeds</span></a></li></ul>		</div>
+			<div class="moduletable_menu">
+					<h3>Key Concepts</h3>
+
+					<ul class="menu"><li class="item40"><a href="/index.php?option=com_content&amp;view=article&amp;id=26&amp;Itemid=40&amp;lang=en"><span>Extensions</span></a></li><li class="item38"><a href="/index.php?option=com_content&amp;view=article&amp;id=24&amp;Itemid=38&amp;lang=en"><span>Content Layouts</span></a></li><li class="item43"><a href="/index.php?option=com_content&amp;view=article&amp;id=43&amp;Itemid=43&amp;lang=en"><span>Example Pages</span></a></li></ul>		</div>
+	
+                        </div>
+        	<div id="rightcolumn">
+			            </div>
+            <br clear="all" />
+        </div>
+        
+		        
+			
+        <p id="power_by" align="center">
+
+            Powered by <a href="http://www.joomla.org">Joomla!</a>.
+            Designed by: <a href="http://www.themza.com/joomla1.5/rise-of-technology-template.html" target="_blank" title="Rise of Technology">Joomla 1.5 Template</a>, <a href="http://www.ntchosting.com/" target="_blank" title="web hosting">ecommerce web hosting</a>.&nbsp;Valid <a href="http://validator.w3.org/check/referer">XHTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer">CSS</a>.
+        </p>
+        
+	</div>
+</div>
+
+
+
+
+

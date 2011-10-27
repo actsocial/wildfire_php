@@ -1,0 +1,41 @@
+<script type="text/javascript">
+swfobject.embedSWF("<?php echo $this->baseUrl();?>/open-flash-chart.swf", "mychart3", "650", "250", "9.0.0", "expressInstall.swf", {"get-data":"getdata3"} );
+</script>
+
+<script type="text/javascript">
+
+function ofc_ready()
+{
+//    alert('ofc_ready');
+}
+function getdata3()
+{
+	return JSON.stringify(data3);
+}
+function findSWF(movieName) {
+  if (navigator.appName.indexOf("Microsoft")!= -1) {
+    return window[movieName];
+  } else {
+    return document[movieName];
+  }
+}
+    
+var data3 = <?php echo $this->chart3->toPrettyString(); ?>;
+
+</script>
+<div align="center">
+<div style="padding-top:40px; ">
+<h2><?php echo $this->translate('Client_Campaign_Name_'.$this->campaign_id).$this->translate('Client_Spraks Comments');?></h2><br/>
+<table>
+	<tr>
+		<td width="650" valign="top">
+			<div>
+				<div id="mychart3"></div>
+			</div>
+		</td>
+	</tr>
+</table>
+</div>
+</div>
+	  <div style="text-align:center;margin: 0 auto;">
+	  </div>

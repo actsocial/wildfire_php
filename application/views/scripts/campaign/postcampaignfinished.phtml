@@ -1,0 +1,11 @@
+<div class="article-box" style="height:150px;">
+	<div class="article-box-inner">
+		<!--<h2><?php echo $this->translate('Thanks_For_Post_Campaign_Survey_'.$this->campaign_id)?></h2>-->
+		<h2> <?php echo $this->campaign["thanks_for_post_campaign_survey"]?> </h2>
+		<!--<p style="padding-top: 20px;"><?php echo $this->translate('Thanks_For_Post_Campaign_Survey_Content_'.$this->campaign_id)?></p>-->
+		<p style="padding-top:20px;"><?php echo $this->campaign["thanks_for_post_campaign_survey_content"]?></p>
+		<div class="buttons-bar" style="padding-top: 20px;">
+			<a class="button" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"><?php echo $this->translate('Back_to_home')?></a>
+		</div>
+	</div>
+</div>

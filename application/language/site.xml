@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence"
+		adminlang="en-us" srclang="de-de" o-tmf="abc" creationtool="XYZTool">
+	</header>
+	<body>
+
+		<tu tuid='Site_Contactus'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[<h2>联系方式</h2>		
+<tr>
+<td valign="top">
+<p>我们很想听到你的意见。请把你的意见发送至：<strong>
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var path = 'hr' + 'ef' + '=';
+ var addy95558 = '&#105;nf&#111;' + '&#64;';
+ addy95558 = addy95558 + 'w&#105;ldf&#105;r&#101;' + '&#46;' + '&#97;s&#105;&#97;';
+ document.write( '<a ' + path + '\'' + prefix + ':' + addy95558 + '\'>' );
+ document.write( addy95558 );
+ document.write( '<\/a>' );
+ //-->\n </script> <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '<span style=\'display: none;\'>' );
+ //-->
+ </script>该E-mail地址已受到防止垃圾邮件机器人的保护，你必须启用浏览器的Java Script才能看到。
+ <script language='JavaScript' type='text/javascript'>
+ <!--
+ document.write( '</' );
+ document.write( 'span>' );
+ //-->
+ </script></strong>。</p><table border="0" width="618" height="126"><tbody><tr valign="top"><td><p><span style="font-weight: bold; font-size: 16px">北京:</span></p><p> 东直门外大街48号<br /> 东方银座 C座22D <br /> 北京, 中国  100027</p><p>电话: +86 400 600 8707<br />传真:  +86 21 5836 3217</p></td><td><p><span style="font-weight: bold; font-size: 16px">上海:</span></p><p> 浦东南路1101号<br />  远东大厦518室<br />  上海, 中国200120</p><p>电话: +86 400 600 8707<br />传真:  +86 21 5836 3217</p></td></tr><tr><td><p><span style="font-weight: bold; font-size: 16px">新加坡:</span> </p><p>星星火私人有限公司<br />Expara<br />1 George Street<br />#17-05 One George Street<br />新加坡 049145<br /><br />电话: +65 6435 5295<br />传真: +65 6536 7908</p></td><td> </td></tr></tbody></table>
+
+</td>
+</tr>]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[<h2>Contact Us</h2>
+<p>We'd love to talk to you. Contact us at <a
+	href="mailto:info@wildfire.asia">info@wildfire.asia</a>, or give us a
+ring:</p>
+<table border="0" width="618" height="126"><tbody>
+<tr valign="top"><td><p><span style="font-weight: bold; font-size: 16px">Beijing:</span></p><p> DongZhiMenWaiDaJie #48<br /> Oriental Kenzo Building (DongFangYinZuo)<br /> Tower C, 22D<br /> Beijing, China 100027<br /> </p></td><td><p><span style="font-weight: bold; font-size: 16px">Shanghai:</span></p><p>  South Pudong Road #1101<br />  YuanDong Building (YuanDongDaSha)<br />  Room 518<br />  Shanghai, China 200120</p><p>Telephone: +86 21 5836 3216<br />Fax:  +86 21 5836 3217</p></td></tr><tr><td><p><span style="font-weight: bold; font-size: 16px">Singapore:</span> </p><p>Wildfire Pte Ltd<br />Expara<br />1 George Street<br />#17-05 One George Street<br />Singapore 049145<br /><br />Telephone: +65 6435 5295<br />Fax: +65 6536 7908</p></td><td> </td></tr></tbody></table><p>&nbsp;</p>
+</td>
+</tr></table>]]></seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Site_Privacy_Policy'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[<tr><h2>隐私声明</h2></tr><br>
+<tr>
+<td valign="top">
+<h2>星星火的服务条款协议 </h3><p>无论是在注册过程中还是参与星星火活动中提供给我们的，我们将时刻保护个人注册信息的隐私。只有在会员自己申请将资料提供给第三方时我们才会共享这些信息。若要请求这方面的资料共享，可能需要提供的信息如：名字，姓氏，职业，e-mail地址，邮编，电话号码，或出生日期等。加入星星火，你有权利不接收我们的邮件。</p><h2>信息收集和使用</h3><p>欧世康软件（上海）有限公司是星星火网站以及所收集的信息的唯一所有者， 星星火有限公司不会以任何方式出售，共享或出租用户个人信息。 星星火网站在站内不同的地方收集用户信息。星星火有限公司会与商务伙伴分享这些信息的匿名的统计结果，但绝不会分享会直接关联到你私人联系方式或帐户的信息。此外，在法律程序需要时，星星火将公开个人隐私信息。</p><h2>注册</h3><p>为了使用星星火网站，用户必须先填写表格进行注册。在注册过程中，用户需要给出自己的联络信息（如姓名，电子邮件地址，邮政地址）以及其他个人信息和递货所需的信息。这些信息是用来通知用户新的活动，具体的活动指令，奖励批准，最新的产品等。帐户创建过程还需要用户提供核实了的电子邮箱地址。除此之外，我们还需要用户提供经过验证的有效地址，这样做的是为了防止欺诈行为的产生。这个地址同时也会用来邮寄奖品。如果我们邮寄奖品时遇到问题的话，这个地址就会被用来联系用户。</p><h2>帐户</h3><p>一旦你成为星星火的会员，你将收到一对帐号和密码。你有责任保护你的账号和密码的保密性。另外，你对此帐号的所有行为负有完全的责任。你同意如果发现你的账号或者任何其他人账号下有违反授权的活动或漏洞时，都会立即通知星星火。</p><h2>我们的cookies</h3><p>Cookies是一种数据包，它用来存储每一次用户会话以及会话中使用的ID。我们使用cookies 来让你能个人化你的星星火页面。使用Cookie不会泄露任何你的个人身份信息。一旦你的会话结束， cookie就会终止。我们使用cookie以便于让你畅游在星星火网站的各个页面间而不需要重新登录。如果有人拒绝使用cookie，他们可能还是可以使用星星火，我们将把你的会话ID编码到你的浏览器地址中。</p><h2>日志文件 </h3><p>我们会时时跟踪一些信息供我们内部使用，比如浏览器的类型，登录时间等等。我们利用这些信息只是跟踪使用者的位置和使用的软件。我们保存这些文件，以增加我们的线上经验和星星火的网页。这些信息不会透露给任何人，只会对星星火本身带来帮助。</p><h2>安全</h3><p>当你给我们传输信息时，为了你的信息的安全，我们使用SSL安全链接为你的链接加密。对数据的访问将严格受内部防火墙的控制。当使用者通过网络提交信息时，你的信息不论是在网上或是在线下都是安全的。同时我们利用用户名和密码的形式来保护你的信息，并尽力在线下保护你的信息。所有使用者的信息即使在公司内部，也是有限制的。当我们的员工需要使用者信息进行一些特殊工作时，必须提供员工身份信息才能获取。最后，我们保存个人信息的服务器也处于安全和专业的保护下。你仅仅需要保证你的密码和用户信息的安全。无论你什么时候上线，请小心仔细，保证你的信息安全。</p><h2>特别优惠及电子邮箱</h3><p>我们会向所有新成员发送欢迎注册的电子邮件，以验证用户名和密码。如果会员确定愿意参加，他们会偶尔收到有关新的产品广告，奖励等等事情的电子邮件。“确定参加”意味着他们已经允许星星火发送邮件给他们。</p><h2>网站及服务通告</h3><p>星星火有限公司在很特殊的情况下可能需要联系特定用户，以便对星星火网站或服务的变化做出重要的宣布。成员无法退订这些消息，因为它们可能包含了非常重要的信息。然而，在这些发生这些变化之前，星星火通常都会在网站上做出声明。当需要更改账户错误或有重要事情时，星星火保留与用户联系的权利。</p><h2>更正/更新个人信息</h3><p>星星火有限公司允许用户在任何时候更改个人信息。更改信息最方便的方式是登录后点击“我的设置”。</p><h2>年龄/居住地要求</h3><p><!--  /* Font Definitions */  @font-face 	{font-family:宋体; 	panose-1:2 1 6 0 3 1 1 1 1 1; 	mso-font-alt:SimSun; 	mso-font-charset:134; 	mso-generic-font-family:auto; 	mso-font-pitch:variable; 	mso-font-signature:3 135135232 16 0 262145 0;} @font-face 	{font-family:"Cambria Math"; 	panose-1:2 4 5 3 5 4 6 3 2 4; 	mso-font-charset:1; 	mso-generic-font-family:roman; 	mso-font-format:other; 	mso-font-pitch:variable; 	mso-font-signature:0 0 0 0 0 0;} @font-face 	{font-family:"\@宋体"; 	panose-1:2 1 6 0 3 1 1 1 1 1; 	mso-font-charset:134; 	mso-generic-font-family:auto; 	mso-font-pitch:variable; 	mso-font-signature:3 135135232 16 0 262145 0;}  /* Style Definitions */  p.MsoNormal, li.MsoNormal, div.MsoNormal 	{mso-style-unhide:no; 	mso-style-qformat:yes; 	mso-style-parent:""; 	margin:0cm; 	margin-bottom:.0001pt; 	text-align:justify; 	text-justify:inter-ideograph; 	mso-pagination:none; 	font-size:10.5pt; 	mso-bidi-font-size:12.0pt; 	font-family:"Times New Roman","serif"; 	mso-fareast-font-family:宋体; 	mso-font-kerning:1.0pt;} .MsoChpDefault 	{mso-style-type:export-only; 	mso-default-props:yes; 	font-size:10.0pt; 	mso-ansi-font-size:10.0pt; 	mso-bidi-font-size:10.0pt; 	mso-ascii-font-family:"Times New Roman"; 	mso-fareast-font-family:宋体; 	mso-hansi-font-family:"Times New Roman"; 	mso-font-kerning:0pt;}  /* Page Definitions */  @page 	{mso-page-border-surround-header:no; 	mso-page-border-surround-footer:no;} @page Section1 	{size:612.0pt 792.0pt; 	margin:72.0pt 90.0pt 72.0pt 90.0pt; 	mso-header-margin:36.0pt; 	mso-footer-margin:36.0pt; 	mso-paper-source:0;} div.Section1 	{page:Section1;} --><span style="font-size: 10.5pt; font-family: 宋体">只要你是已满</span><span style="font-size: 10.5pt; font-family: 'Times New Roman','serif'">13</span><span style="font-size: 10.5pt; font-family: 宋体">周岁的中国公民就可以加入星星火，你可以使用你的</span><span style="font-size: 10.5pt; font-family: 'Times New Roman','serif'">Email</span><span style="font-size: 10.5pt; font-family: 宋体">地址来进行注册。此项活动仅对个人开放，并不包括公司和法人实体。每个参加这项活动的个人都需要在此提供个人信息，并经常更新以确保信息的正确性。不确定的或有歧义的信息都会对星星火开展活动和对会员要求的服务产生负面影响。鉴于这种考虑，星星火有权对提供错误和误导个人信息的会员取消会员资格。星星火有权在通知或不通知会员的情况下，修改或者废止活动。星星火对于活动的修改和废止都不会依赖于会员或者任何第三方。</span> </p><h2>终止服务</h3><p>无论是会员还是星星火有限公司都可以在任何时候终止服务，并立即生效。 星星火将不承担会员或任何第三方终止服务的责任。</p>
+
+</td>
+</tr>
+]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[<h2>Privacy Policy</h2>
+<h2><span>Wildfire Terms of Service Agreement</span></h2>
+<p class="MsoNormal"><span>We will closely guard any personally
+identifiable information you disclose to us during registration or at
+any other point during your Wildfire experience. Information will only
+be shared with a third party if a member requests for that information
+to be shared, by participating in an offer/program/opt-in/opt-out. A
+member may request that this information be shared, by opting-in to
+programs or newsletters that may require information such as, but not be
+limited to, first name, last name, occupation, e-mail address, mailing
+address, phone number, selected interests or date of birth. Not all
+offers/programs/opt-ins/opt-outs specify exactly which pieces of
+information will be shared. By joining Wildfire, you are able to opt-in
+to receive mail from Wildfire.</span></p>
+<h2 class="MsoNormal"><span>Information Collection & Use</span></h2>
+<p class="MsoNormal"><span>Ostrakon Software (Shanghai) Co. Ltd. (DBA
+"Wildfire", hereafter: Wildfire) is the sole owner of the information
+collected on this site, and from its licensed software. We will not
+sell, share, or rent this information to others in ways different from
+what is disclosed in this statement. Wildfire collects information from
+our users at several different points on our website. Wildfire may share
+aggregated and anonymous demographic and statistical information with
+its business partners, but no such information can be linked directly to
+you or your account. Furthermore, we may need to disclose personally
+identifiable information when required by law.</span></p>
+<h2 class="MsoNormal"><span>Registration</span></h2>
+<p class="MsoNormal"><span>In order to use this website, a user must
+first complete the registration form. During registration a user is
+required to give their contact information (such as name, e-mail
+address, and postal address), additional psychographic information, and
+information needed for shipping rewards. This information is used to
+notify the user about new campaigns, specific campaign directives,
+reward approvals, and changes in point offerings. Users are also
+required to provide and verify a valid e-mail address before the account
+creation process can be completed. In addition, we ask a user to provide
+legitimate proof of address. Proof of address is required in order to
+guard Wildfire from fraudulent activities. This information is also used
+for shipping purposes for rewards. If we have trouble processing a
+reward, this contact information may be utilized to contact a user.</span></p>
+<h2 class="MsoNormal"><span>Account</span></h2>
+<p class="MsoNormal"><span>Once you become a member of Wildfire, you
+will receive a password and an account. You are responsible for
+maintaining the confidentiality of your password and account.
+Furthermore, you are entirely responsible for any and all activities
+that occur under your account. You agree to immediately notify Wildfire
+of any unauthorized use of your account or any other breach of security
+known to the member.</span></p>
+<h2 class="MsoNormal"><span>Our Cookies</span></h2>
+<p class="MsoNormal"><span>A cookie is a piece of data we store for each
+user session that gives you a unique ID number for that session. We use
+cookies to allow us to personalize your experience on the Wildfire
+website. Usage of a cookie is not linked to any personally identifiable
+information while on our site. Once you end your session, the cookie
+simply terminates. We use cookies on our site so that you can move from
+page to page while staying logged into your account. If a user rejects
+the cookie, they may still use our site, and we will set each link to
+contain the user's unique id number for your current session.</span></p>
+<h2 class="MsoNormal"><span>Log Files</span></h2>
+<p class="MsoNormal"><span>We do track certain information such as type
+of browser and log on time for our own use. We use this information only
+to track where our users may be coming from and what type of software
+they are using. We keep this information so we can continuously improve
+our users' online experience and improve the Wildfire website. None of
+this information can ever be traced back to any specific person and is
+useful only to Wildfire.</span></p>
+<h2 class="MsoNormal"><span>Security</span></h2>
+<p class="MsoNormal"><span>We work to protect your information by using
+Secure Socket Layers (SSL) software to encrypt your information when it
+is being transmitted to us. Access to data is limited through the use of
+internal firewalls and strictly enforced. When users submit information
+via the website, your information is protected both online and off-line.
+While we use both passwords and usernames to protect information online,
+we also do everything in our power to protect users' information
+off-line. All of our users' information is restricted in our offices.
+Only employees who need the information to perform a specific job are
+granted access to personally identifiable information. Finally, the
+servers that we store personally identifiable information on are kept in
+a secure environment and professionally maintained. You are solely
+responsible for maintaining the secrecy of your passwords and/or any
+account information. Please be careful and responsible whenever you're
+online.</span></p>
+<h2 class="MsoNormal"><span>Special Offers & E-mail</span></h2>
+<p class="MsoNormal"><span>We send all new members a welcoming e-mail to
+verify password and username. Established members will occasionally
+receive e-mails containing information regarding new campaigns, rewards,
+and directives from Wildfire if they have opted-in. "Opted-in" means the
+user has approved certain e-mails to be sent to them from Wildfire.</span></p>
+<h2 class="MsoNormal"><span>Site & Service Announcements</span></h2>
+<p class="MsoNormal"><span>Under rare circumstances Wildfire may need to
+contact specific or all users in order to make an important announcement
+about the Wildfire site or service changes. Members are not able to
+unsubscribe, or "opt-in/opt-out" of these announcements because they may
+contain very important information regarding their accounts. Before
+these measures are taken, however, Wildfire will post information
+regarding changes directly on the website. Wildfire reserves the right
+to contact users to correct account errors or to supply important
+information Wildfire deems relevant.</span></p>
+<h2 class="MsoNormal"><span>Correction/Updating Personal Information</span></h2>
+<p class="MsoNormal"><span>Wildfire users are able to change their
+personal information at any time. The fastest way to change personal
+information is to log on and simply click on "My Profile".</span></p>
+<h2 class="MsoNormal"><span>Age/Residency Requirements</span></h2>
+<p class="MsoNormal"><span>To enroll in Wildfire, you must be at least
+13 years old, be a resident in China, and have a valid e-mail address to
+enroll in the Wildfire Program ("Program"). Enrollment and participation
+in the Program is open to individuals only (no corporations or other
+legal entities). Each individual who enrolls in the Program is
+responsible for providing this information requested herein and for
+updating any such information to insure its accuracy. Receipt of
+inaccurate or misleading information will adversely affect the ability
+of Wildfire to operate the Program and provide services to clients
+required by members and participants. In this regard, Wildfire reserves
+the right to terminate a member's membership in the Program if
+misleading or intentionally incorrect personal information is provided.
+Wildfire reserves the right to modify or discontinue the Program with or
+without notice to members. Wildfire will not be liable to any member or
+any third party should Wildfire exercise its right to modify or
+discontinue the Program.</span></p>
+<h2 class="MsoNormal"><span>Termination</span></h2>
+<p class="MsoNormal"><span>Either the member or Wildfire may terminate
+the service with or without cause at any time and effective immediately.
+Wildfirewill not be liable to the member or any third party for
+termination of service. </span></p>]]></seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Site_Terms'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[<tr><h2>条款</h3></tr>
+<tr>
+<td >
+<p>星星火条款是由我们的法律顾问小组完成的，以下为条款梗概，便于理解。</p><ul><li>星星火网页上的内容都属于星星火所有，包括星星火的客户</li><li>作为星星火社区的一员，你必须正确的进行操作。如果你有违反，我们有权取消你的会员资格</li><li>管理准则很重要，请遵守。如果违反造成损失，星星火不承担赔偿责任</li><li>使用星星火的网页，说明你参与星星火的活动，抽奖，调查以及其他口口相传的活动。我们有权利给任何人提供有用的信息</li></ul><p>以下是星星火详细的服务条款</p>
+<h2>一、接受条款</h3><p>欢迎光临星星火，星星火根据以下服务条款为你提供服务。这些条款可由星星火随时更新，且毋须另行通知。星星火服务条款（以下简称“本服务条款”）一旦发生变动,星星火将在网页上公布修改内容。修改后的服务条款一旦在网页上公布即有效代替原来的服务条款。你可随时造访星星火查阅最新版服务条款。此外，当你使用星星火特殊服务时，你和星星火应遵守本网站随时公布的与该服务相关的指引和规则。前述所有的指引和规则，均构成本服务条款的一部分。你在使用相关服务时,应关注并遵守其所适用的相关条款。</p><p>你在使用星星火提供的各项服务之前，应仔细阅读本服务条款。如你不同意本服务条款及随时对其的修改，你可以主动取消本网站提供的服务；你一旦使用本网站服务，即视为你已了解并完全同意本服务条款各项内容，包括星星火对服务条款随时所做的任何修改，并成为星星火用户（以下简称“用户”）。</p>
+<h2>二、服务说明</h3><p>星星火目前，向用户提供免费申请、免费体验、积分换礼等诸多服务，包括精彩体验回顾、个人化内容等（以下简称“本服务”）。除非本服务条款另有其它明示规定，增加或强化目前本服务的任何新功能，包括所推出的新产品，均受到本服务条款之规范。你了解并同意，本服务仅依其当前所呈现的状况提供，对于任何用户通讯或个人化设定之时效、删除、传递错误、未予储存或其它任何问题，星星火均不承担任何责任。星星火保留不经事先通知为维修保养、升级或其它目的暂停本服务任何部分的权利。为使用本服务，你必须能够自行经有法律资格对你提供互联网接入服务的第三方，进入国际互联网，并应自行支付相关服务费用。此外，你必须自行配备及负责与国际联网连线所需之一切必要装备，包括计算机、数据机或其它存取装置。</p>
+<h2>三、遵守法律</h3><p>你同意遵守《中华人民共和国合同法》、《中华人民共和国著作权法》及其实施条例、《全国人民代表大会常务委员会关于维护互联网安全的决定》（“人大安全决定”）、《中华人民共和国保守国家秘密法》、《中华人民共和国电信条例》（“电信条例” ）、《中华人民共和国计算机信息系统安全保护条例》、《中华人民共和国计算机信息网络国际联网管理暂行规定》及其实施办法、《计算机信息系统国际联网保密管理规定》、《互联网信息服务管理办法》、《计算机信息网络国际联网安全保护管理办法》、《互联网电子公告服务管理规定》（“电子公告规定”）等相关中国法律法规的任何及所有的规定，并对以任何方式使用你的密码和你的帐号使用本服务的任何行为及其结果承担全部责任。如违反《人大安全决定》有可能构成犯罪，被追究刑事责任。《电子公告规定》则有明文规定，上网用户使用电子公告服务系统对所发布的信息负责。《电信条例》也强调，使用电信网络传输信息的内容及其后果由电信用户负责。在任何情况下，如果本网站有理由认为你的任何行为，包括但不限于你的任何言论和其它行为违反或可能违反上述法律和法规的任何规定，星星火可在任何时候不经任何事先通知终止向你提供服务。</p>
+<h2>四、你的注册义务</h3><p>为了能使用本服务，你同意以下事项∶依本服务注册表之提示提供你本人真实、正确、最新及完整的资料（以下简称“登记资料”）；及随时更新登记资料，确保其为真实、正确、最新及完整的资料。若你提供任何错误、不实、过时或不完整或具误导性的资料；或者星星火有理由怀疑前述资料为错误、不实、过时或不完整或具误导性的，星星火有权暂停或终止你的帐号，并拒绝你于现在和未来使用本服务之全部或任何部分。星星火十分关心所有用户（特别是儿童）的安全及隐私。请记住，本服务设计之目的在于符合广大用户的需要。因此本服务及“内容”是否适合于你的子女，你身为定监护人有责任加以判断。星星火无须对任何用户的任何登记资料承担任何责任，包括但不限于鉴别、核实任何登记资料的真实性、正确性、完整性、适用性及是否为最新资料的责任。</p>
+<h2>五、星星火隐私权政策</h3><p>你提供的登记资料及星星火保留的有关你的若干其它资料将受到中国有关隐私的法律和本公司《隐私权政策》之规范。请访问星星火查阅星星火完整的隐私权政策。</p>
+<h2>六、用户帐号、密码及安全</h3><p>你应对所有用你的密码及帐号的活动负完全的责任。当你的密码或帐号遭到未获授权的使用，或者发生其它任何安全问题时，应第一时间通知星星火。</p>
+<h2>七、提供者之责任</h3><p>根据有关法律法规，星星火在此郑重提请你注意，任何经由本服务以上载、张贴、发送电子邮件或任何其它方式传送的资讯、资料、文字、软件、音乐、音讯、照片、图形、视讯、信息或其它资料（以下简称“内容”），无论系公开还是私下传送，均由内容提供者承担责任。星星火无法控制经由本服务传送之内容，因此不保证内容的正确性、完整性或品质。你已预知使用本服务时，可能会接触到令人不快、不适当或令人厌恶之内容。在任何情况下，星星火均不为任何内容负责，包含但不限于任何内容之任何错误或遗漏，以及经由本服务以张贴、发送电子邮件或其它方式传送任何内容而衍生之任何损失或损害。但星星火有权依法停止传输任何前述内容并采取相应行动，包括但不限于暂停用户使用本服务的全部或部分，保存有关记录，并向有关机关报告。</p>
+<h2>八、用户行为</h3><p>用户应同意将不会利用本服务进行任何违法或不正当的活动，包括但不限于下列行为∶</p><ol><li>上载、张贴、发送电子邮件或以其它方式传送含有下列内容之一的信息： <ul><li>反对宪法所确定的基本原则的；</li><li>危害国家安全，泄露国家秘密，颠覆国家政权，破坏国家统一的；</li><li>损害国家荣誉和利益的；</li><li>煽动民族仇恨、民族歧视、破坏民族团结的；</li><li>破坏国家宗教政策，宣扬邪教和封建迷信的；</li><li>散布谣言，扰乱社会秩序，破坏社会稳定的；</li><li>散布淫秽、色情、赌博、暴力、凶杀、恐怖或者教唆犯罪的；</li><li>侮辱或者诽谤他人，侵害他人合法权利的；</li><li>含有虚假、有害、胁迫、侵害他人隐私、骚扰、侵害、中伤、粗俗、猥亵、或其它道德上令人反感的内容；</li><li>含有中国法律、法规、规章、条例以及任何具有法律效力之规范所限制或禁止的其它内容的；</li></ul></li><li>以任何方式危害未成年人的利益；</li><li>冒充任何人或机构，包含但不限于星星火员工，或以虚伪不实的方式陈述或谎称与任何人或机构有关；</li><li>伪造标题或以其它方式操控识别资料，以伪造经由本服务传送之任何内容之来源；</li><li>将依据任何法律或合约或法定关系（例如由于雇佣关系和依据保密合约所得知或揭露之内部资料、专属及机密资料）知悉但无权传送之任何内容加以上载、张贴、发送电子邮件或以其它方式传送；</li><li>将侵害他人著作权、专利权、商标权、商业秘密、或其它专属权利（以下简称“专属权利”）之内容加以上载、张贴、发送电子邮件或以其它方式传送；</li><li>将设计目的在于干扰、破坏或限制任何计算机软件、硬件或通讯设备功能之计算机病毒（包括但不限于木马程序(Trojan horses)、蠕虫(worms)、定时炸弹、删除蝇(cancelbots)（以下简称“病毒”））或其它计算机代码、档案和程序之任何资料，加以上载、张贴、发送电子邮件或以其它方式传送；</li><li>破坏正常的对话流程、造成荧屏快速移动，或使本服务其它用户无法输入，或对其它用户参加即时交流的能力产生负面影响；</li><li>干扰或破坏本服务或与本服务相连线之服务器和网络，或违反任何关于本服务连线网络之规定、程序、政策或规范；</li><li>跟踪或以其它方式骚扰他人；</li><li>故意或非故意地违反任何适用的当地、国家和国际法律；</li><li>未经合法授权而截获、篡改、收集、储存或删除他人个人信息、电子邮件或其它数据资料，或将获知的此类资料用于任何非法或不正当目的；</li><li>用户在对星星火招募的产品进行申请体验、开始体验、体验日志、体验报告和与体验产品相关的言论、话题、图片、帖子均不可已任何方式对第三方传播。当同意本服务条款，此项内容受法律保护。</li></ol><p>你已认可星星火未对本服务内容加以任何事先审查，对用户的使用行为也无法进行全面控制，你使用任何内容时，包括依赖前述内容之正确性、完整性或实用性时，你同意将自行加以判断并承担所有风险，而不依赖于星星火。但星星火及其指定人有权（但无义务）依其自行之考虑，拒绝和删除可经由本服务提供之违反本条款的或其它引起星星火反感的任何内容。你了解并同意，星星火依据法律法规的要求，或基于诚信为了以下目的或在合理必要范围内，认定必须将内容加以保存或揭露时，得加以保存或揭露：</p><p>(a)遵守法律程序；<br />(b)执行本服务条款；<br />(c)回应任何第三人提出的权利主张；<br />(d)保护星星火、其用户及公众之权利、财产或个人安全；<br />(e)其它本网站认为有必要的情况。 </p><p>你了解并同意经由本服务之技术处理及传送，你提供的任何内容，可能</p><p>(a)经由各个网路加以传送。<br />(b)为了符合及配合连线网路或装置之技术要求而进行改变。</p>
+<h2>九、国际使用之特别警告</h3><p>你已了解国际互联网的无国界性，同意遵守当地所有关于网上行为及内容之法律法规。你特别同意遵守有关从中国或你所在国家或地区输出信息之传输的所有适用法律法规。</p>
+<h2>十、在星星火张贴的公开信息</h3><ol><li>在本服务条款中，“本服务公开使用区域”系指一般公众可以使用的区域。</li><li>你同意已就你于本服务公开使用区域及本服务其它任何公开使用区域张贴之内容，或包括照片、图形或影音资料等内容，授予星星火全球性、免许可费及非独家的使用权，星星火可以为了展示、散布及推广张贴前述内容之特定服务目的，将前述内容复制、修改、改写、改编或出版，对于照片及图形资料的上述使用，仅为张贴该照片或图形于本服务之目的而为之。在你将前述内容放入本服务期间，使用权持续有效；若你将前述内容自本服务中删除，则使用权于删除时终止。</li><li>你同意已就你于本服务其它公开使用区域张贴的其它内容，授予星星火免许可费、永久有效、不可撤销、非独家及可完全再授权之权利在全球使用、复制、修改、改写、改编、发行、翻译、创造衍生性著作，及将前述内容（部分或全部）加以散布、表演、展示，及放入利用任何现在已知和未来开发出之形式、媒体和科技之其它著作物当中。</li></ol>
+<h2>十一、赔偿</h3><p>由于你通过本服务提供、张贴或传送之内容、你与本服务连线、你违反本服务条款、或你侵害他人任何权利因而衍生或导致任何第三人提出任何索赔或请求，包括合理的律师费，你同意赔偿星星火及上级公司、关联企业、高级职员、代理人、品牌共有人或其它合作伙伴及员工，并使其免受损害。</p>
+<h2>十二、 禁止商业行为</h3><p>你同意不对本服务任何部分或本服务之使用或获得，进行复制、拷贝、出售、转售或用于任何其它商业目的。</p>
+<h2>十三、 关于使用及储存之一般措施</h3><p>你承认关于本服务的使用星星火有权制订一般措施及限制，包含但不限于本服务将保留所张贴内容或其它上载内容之最长期间以及一定期间内你使用本服务之次数上限（及每次使用时间之上限）。通过本服务存储或传送之任何信息、通讯资料和其它内容，如被删除或未予储存，你同意星星火毋须承担任何责任。你亦同意，长时间未使用的帐号，星星火有权关闭。你也同意，星星火有权依其自行之考虑，不论通知与否，随时变更这些一般措施及限制。</p>
+<h2>十四、 服务之修改</h3><p>星星火有权于任何时间暂时或永久修改或终止本服务（或其任何部分），而无论其通知与否。你同意对于本服务所作的任何修改、暂停或终止，星星火对你和任何第三人均无需承担任何责任。</p>
+<h2>十五、 终止服务</h3><p>你同意星星火基于其自行之考虑，因任何理由，包含但不限于缺乏使用，或星星火认为你已经违反本服务条款的文字及精神，终止你的密码、帐号或本服务之使用（或服务之任何部分），并将你在本服务内任何内容加以移除并删除。星星火亦得依其自行之考虑，于通知或未通知之情形下，随时终止本服务或其任何部分。你同意依本服务条款任何规定提供之本服务，无需进行事先通知即可中断或终止，你承认并同意，星星火可立即关闭或删除你的帐号及你帐号中所有相关信息及文件，及禁止继续使用前述文件或本服务。此外，你同意若本服务之使用被中断或终止或你的帐号及相关信息和文件被关闭或删除，星星火对你或任何第三人均不承担任何责任。</p>
+<h2>十六、 星星火之专属权利</h3><p>你了解并同意，本服务及本服务所使用之相关软件（以下简称“软件”）含有受到相关知识产权及其它法律保护之专有保密资料。你也了解并同意，经由本服务或广告商向你呈现之赞助广告或信息所包含之内容，亦受到著作权、商标权、服务商标、专利权或其它专属权利之法律保护。未经星星火或广告商明示授权，你不得修改、出租、出借、出售、散布本服务或软件之任何部份或全部，或据以制作衍生著作，或使用擅自修改后的软件，包括但不限于为了未经授权而使用本服务之目的。星星火仅授予你个人、不可移转及非专属之使用权，使你得于单机计算机使用其软件之目的码，但你不得（并不得允许任何第三人）复制、修改、创作衍生著作、进行还原工程、反向组译，或以其它方式发现原始码，或出售、转让、再授权或提供软件设定担保，或以其它方式移转软件之任何权利。你同意将通过由星星火所提供的界面而非任何其它途径使用本服务。</p>
+<h2>十七、 担保与保证</h3><p>你明确了解并同意∶</p><ol><li>你使用本服务之风险由你个人负担。本服务系依“现状”及“现有”基础提供。星星火对本服务不提供任何明示或默示的担保或保证，包含但不限于商业适售性、特定目的之适用性及未侵害他人权利等担保或保证。</li><li>星星火不保证以下事项∶ (a)本服务将符合你的要求。 (b)本服务将不受干扰、及时提供、安全可靠或不会出错。 (c)使用本服务取得之结果正确可靠。 (d)你经由本服务购买或取得之任何产品、服务、资讯或其它信息将符合你的期望。 (e)软件中任何错误都将得到更正。</li><li>是否使用本服务下载或取得任何资料应由你自行考虑且自负风险，因任何资料之下载而导致的你电脑系统之任何损坏或数据流失等后果，由你自行承担。</li><li>你自星星火或经由本服务取得的任何建议或信息，无论是书面或口头形式，除非本服务条款有明确规定，将不构成本服务条款以外之任何保证。</li></ol>
+<h2>十八、 责任限制</h3><p>你明确了解并同意，基于以下原因而造成的，包括但不限于利润、信誉、应用、数据损失或其它无形损失，星星火不承担任何直接、间接、附带、特别、衍生性或惩罚性赔偿责任（即使星星火事先已被告知发生此种赔偿之可能性亦然）： (a)本服务之使用或无法使用。(b)为替换从或通过本服务购买或取得之任何商品、数据、信息、服务，收到的讯息，或缔结之交易而发生的成本。 (c)你的传输或数据遭到未获授权的存取或变造。 (d) 任何第三方在本服务中所作之声明或行为。 (e)与本服务相关的其它事宜，但本服务条款有明确规定的除外。</p><p>你明确了解并同意，星星火只作为信息交流的平台，因此星星火对任何第三方通过星星火提供的商品或服务不存在任何明示或默示的担保，包括但不限于商品或服务的安全性、使用性能、质量保证、对商品和服务的知情权、公平交易等。因第三方的商品和服务的提供和使用导致的任何瑕疵、过错、责任和纠纷，星星火不承担责任。</p>
+<h2>十九、 通知</h3><p>向你发出的通知可经由电子邮件和普通邮件告之。本服务条款或其它事项有所变更时，本服务一般将向你显示此种通知或与该通知相关之链结。</p>
+<h2>二十、 用户专属权利</h3><p>星星火尊重他人知识产权，呼吁用户也要同样尊重知识产权。若你认为你的作品的著作权遭到侵害或你的知识产权被侵犯，请向星星火之著作权代理人提供以下资料∶</p><ol><li>著作权或其它知识产权所有人之有权代理人之电子或实体签名。</li><li>对你主张遭到侵权之作品或知识产权进行的描述。</li><li>对你主张遭到侵权之作品在网站上所处的位置进行的描述。</li><li>你的地址、电话号码及电子邮件地址。</li><li>你一秉善意所作的认为该有争议的使用未经著作权或其它知识产权所有人、其代理人或依照法律授权之声明。</li><li>你已充分了解做虚假指证的全部法律后果，在此前提下你保证所提供的前述资料均为合法的、正确的，并且你是著作权或知识产权的所有人或已经合法授权有权代理著作权或知识产权的所有人。</li></ol>
+<h2>二十一、 一般条款</h3><ol><li>本服务条款构成你与星星火之全部协议，并规范你对于本服务之使用行为，并取代你先前与星星火所达成的全部协议。在你使用相关服务、使用第三方提供的内容或软件时，亦应遵从所适用之附加条款及条件。</li><li>本服务条款及你与星星火之关系，均受到中华人民共和国法律管辖。</li><li>星星火未行使或执行本服务条款任何权利或规定，不构成对前述权利或权利之放弃。</li><li>倘本服务条款之任何规定因与中华人民共和国法律抵触而无效，你依然同意应依照法律，努力使该规定所反映之当事人意向具备效力，且本服务条款其它规定仍应具有完整的效力及效果。</li><li>你因星星火服务提出的任何争议，如未能协商解决，均应提交北京市仲裁委员会并依其规则助理。</li><li>本服务条款之标题仅供方便而设，不具任何法律或契约效果。</li></ol>
+<h2>二十二、 举报</h3><p>若发现任何违反本服务条款的情况，请通知星星火相关部门。</p>
+</td>
+</tr>]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[<h2 class="MsoNormal"><span>Wildfire Terms of Service Agreement</span></h2>
+<p class="MsoNormal"><span>Welcome to Wildfire, an online community
+designed to harness consumer's passions to utilize, understand and
+measure naturally occurring word of mouth (WOM). The Wildfire service is
+operated by Wildfire Pte. Ltd. through Ostrakon Software (Shanghai) Co.
+Ltd., under the Wildfire brand ("Wildfire"). By using the Wildfire web
+site (the "Web site") you agree to be bound by these Terms of Service
+(this "Agreement"). If you wish to become a Member in the Wildfire
+community (a "Member" or "Spark") and make use of the Wildfire service
+(the "Service"), read these Terms of Conditions and indicate your
+acceptance of them by following the instructions in the Sign Up page.</span></p>
+<p class="MsoNormal"><span>This Agreement sets out the legally binding
+terms of your use of the Web site and your participation in the Service
+and may be modified by Wildfire at any time and without prior notice,
+such modifications to be effective upon posting by Wildfire on the Web
+site. This Agreement includes and incorporates Wildfire's acceptable use
+policy for content posted on the web site, Wildfire's Privacy Policy,
+and any notices regarding the Web site. This Agreement also includes and
+incorporates the Wildfire Code of Conduct, which governs your behavior
+as a member of the Wildfire community and is applicable to all Members.</span></p>
+<h2 class="MsoNormal"><span>Wildfire Content</span></h2>
+<p class="MsoNormal"><span>The contents of Wildfire and the Web site,
+and of all other websites under Wildfire's control, whether partial or
+otherwise, such as text, graphics, images, logos, button icons, software
+and other content (collectively, "Wildfire Content") and the compilation
+(meaning the collection, arrangement and assembly) of all Wildfire
+Content, are protected under both International and Chinese copyright,
+trademark and other laws. Wildfire and such other websites are sometimes
+collectively referred to as "Wildfire Sites". As between you and
+Wildfire, all Wildfire Content is Wildfire's exclusive property.
+Unauthorized use of Wildfire Content may violate copyright, trademark,
+and other laws. You must retain all copyright, trademark, service mark
+and other proprietary notices contained in Wildfire Content on any
+permitted copy you make of Wildfire Content. You may not sell or modify
+Wildfire Content or reproduce, display, publicly perform, distribute or
+otherwise use Wildfire Content in any way for any public or commercial
+purpose. The use of Wildfire Content on any other web site for any
+purpose is prohibited.</span></p>
+<p class="MsoNormal"><span>You shall not copy or adapt the code that
+Wildfire creates to generate any Wildfire Content or the pages making up
+any Wildfire Site, which is code also protected by Wildfire's copyright.</span></p>
+<h2 class="MsoNormal"><span>Copyrights and Trademarks</span></h2>
+<p class="MsoNormal"><span>All materials included on wildfire.asia
+including but not limited to text, design, graphics, interfaces or code,
+and the selection and arrangements thereof is copyrighted as a
+collective work under Chinese and international copyright laws, and is
+the intellectual property of Wildfire Pte. Ltd., its partners,
+subsidiaries or its clients, unless otherwise noted or attributed.
+Spark, Spark Campaign, Wildfire, and the Wildfire Logo are registered
+trademarks of Wildfire Pte. Ltd., 2009. All rights reserved.</span></p>
+<p class="MsoNormal"><span>Text excerpts, diagrams, logos or other
+information may be quoted within the content of this site, and the
+respective copyright holders retain their rights to this material.</span></p>
+<p class="MsoNormal"><span>You may download, view, e-mail, copy and
+print documents and graphics incorporated in the documents from this web
+site subject to the following: (1) the documents may be used solely for
+involvement in campaigns or personal, informational, non-commercial
+purposes; and (2) the documents may not be modified or altered in any
+way. Except as expressly provided herein, you may not use, download,
+upload, copy, print, display, perform, reproduce, publish, license,
+post, transmit, distribute, modify, remove or create derivative works of
+any information from the Web site in whole or in part without the prior
+written permission of Wildfire.</span></p>
+<h2 class="MsoNormal"><span>Eligibility and Responsibility</span></h2>
+<p class="MsoNormal"><span>You must be 13 years of age or older to visit
+or use Wildfire in any manner. By visiting Wildfire or accepting these
+Terms, you represent and warrant that you are 13 years of age or older,
+that you have the right, authority and capacity to agree to and abide by
+these Terms, and that you will use Wildfire solely for your personal,
+noncommercial use, in a manner consistent with any and all applicable
+laws and regulations. You agree to abide by the Code of Conduct. In
+particular, you warrant and represent that the contents of all reports
+submitted by you to the Web site (including all "Spark Reports") shall
+be honest, true and correct to the best of your knowledge. Submitting
+dishonest or false Spark Reports is strictly prohibited. You must not
+resell or assign your rights or obligations under these Terms of Use.
+You must not create multiple accounts or accounts using false or someone
+else's personal information.</span></p>
+<h2 class="MsoNormal"><span>Security Rules</span></h2>
+<p class="MsoNormal"><span>Members must not violate or attempt to
+violate the security of any Wildfire Site, including without limitation,
+(a) accessing data not intended for such Member or logging into a
+server, (b) attempting to probe, scan or test the vulnerability of a
+system or network or to breach security or authentication measures or
+using any device, software or routine to interfere or attempt to
+interfere with the proper working of any Wildfire Site or any activity
+being conducted on any Wildfire Site, (c) attempting to interfere with
+the availability of any Wildfire Site to any Member, host or network,
+including, without limitation, via means of submitting a virus to any
+Wildfire Site, overloading, "flooding", "spamming", "mailbombing" or
+"crashing" any Wildfire Site, (d) sending Members unsolicited e-mail,
+including promotions and/or advertising of products or service, (e)
+forging any TCP/IP packet header or any part of the header information
+in any e-mail or newsgroup posting or (f) using a password or access
+code not issued to such Member Site. Violations of system or network
+security may result in civil or criminal liability or terminate you as a
+Member. Wildfire will investigate occurrences that may involve such
+violations and may involve, and cooperate with, law enforcement
+authorities in identifying, investigating and/or prosecuting Members who
+are involved in such violations.</span></p>
+<h2 class="MsoNormal"><span>Term</span></h2>
+<p class="MsoNormal"><span>This Agreement will remain in full force and
+effect while you use the Web site and/or are a Member. You may terminate
+your participation in the Wildfire community at any time, for any reason
+by following the instructions on the Cancel Account page in Account
+Settings. Wildfire may terminate you as a Member for any reason, at any
+time. If Wildfire terminates you because you have breached the
+Agreement, you will not be entitled to redeem Points for any Rewards. In
+the event that you are terminated as a Member, your Points shall be
+immediately voided and of no further effect and you shall not be
+entitled to redeem Points for any Rewards. Even after your participation
+is terminated, this Agreement will remain in effect.</span></p>
+<p class="MsoNormal"><span>Wildfire reserves the right, at its sole
+discretion, to pursue all of its legal remedies, including but not
+limited to deletion of your Account, Profile and Submitted Content from
+Wildfire and the immediate termination of, and termination of Wildfire
+services and the services of other Wildfire Sites to you, upon any
+breach by you of these Terms or if Wildfire is unable to verify or
+authenticate any information you submit to Wildfire or any other
+Wildfire Site.</span></p>
+<h2 class="MsoNormal"><span>Privacy</span></h2>
+<p class="MsoNormal"><span>Use of the Web site and/or the Service is
+also governed by our Privacy Policy.</span></p>
+<h2 class="MsoNormal"><span>The Company's Liability</span></h2>
+<p class="MsoNormal"><span>Wildfire is only a venue and Wildfire does
+not screen or censor the Profiles or Submitted Content offered. We are
+under no legal obligation to, and generally do not control the Submitted
+Content or information provided by other Members that is made available
+through Wildfire. As a result, Wildfire has no control over the truth or
+accuracy of information communicated by Members and/or submitted by
+Members to Wildfire. Wildfire makes no representations about the
+accuracy, reliability, completeness or timeliness of any Profile or
+Submitted Content. In addition, note that there are risks, including but
+not limited to the risk of physical harm, of dealing with strangers,
+foreign nationals, underage persons or people acting under false
+pretenses. You assume all risks associated with dealing with other
+Members with whom you come in contact through Wildfire. By its very
+nature, other people's information may be offensive, harmful or
+inaccurate, and in some cases will be mislabeled or deceptively labeled.
+We expect that you will use caution and common sense when using Wildfire
+and/or the other Wildfire Sites.</span></p>
+<p class="MsoNormal"><span>Because Member authentication on the Internet
+is difficult, Wildfire cannot and does not confirm that each Member is
+who they claim to be. Because we do not and cannot be involved in
+Member-to-Member dealings or control the behavior of Members on any
+Wildfire Site, in the event that you have a dispute with one or more
+Members, you release Wildfire (and our agents and employees) from
+claims, demands and damages (actual and consequential, direct and
+indirect) of every kind and nature, known and unknown, suspected and
+unsuspected, disclosed and undisclosed, arising out of or in any way
+connected with such disputes. You are entirely responsible for
+maintaining the confidentiality of your password and account.
+Furthermore, you are entirely responsible for any and all activities
+that occur under your account.</span></p>
+<p class="MsoNormal"><span>Wildfire may provide links to other websites
+or resources of possible interest to Members. Also, our websites may
+include contributions by Members. Because we have no control over such
+websites or resources or the individuals who make such contributions,
+you acknowledge and agree that Wildfire is not responsible for the
+availability of such websites or resources or any contributions, and
+neither endorses nor is responsible or liable for any content,
+advertising, products or other materials on or available from such
+websites or resources or the content of any contributions. You also
+acknowledge and agree that Wildfire shall not be responsible or liable,
+directly or indirectly, for any damage or loss caused or alleged to be
+caused by or in connection with the use of or reliance on any such
+content, goods or services available on or through any such websites or
+resource. When you access these third-party websites or otherwise use or
+rely on such content, you do so at your own risk. All such websites are
+subject to the policies and procedures of the owner of such websites.</span></p>
+<h2 class="MsoNormal"><span>Disclaimer of Consequential Damages</span></h2>
+<p class="MsoNormal"><span>IN NO EVENT SHALL WILDFIRE, ITS SUPPLIERS, OR
+ANY THIRD PARTIES MENTIONED ON ANY WILDFIRE SITE BE LIABLE FOR ANY
+DAMAGES WHATSOEVER (INCLUDING, WITHOUT LIMITATION, INCIDENTAL AND
+CONSEQUENTIAL DAMAGES, LOST PROFITS, OR DAMAGES RESULTING FROM LOST DATA
+OR BUSINESS INTERRUPTION) RESULTING FROM THE USE OR INABILITY TO USE ANY
+WILDFIRE SITE AND THE WILDFIRE CONTENT, WHETHER BASED ON WARRANTY,
+CONTRACT, TORT OR ANY OTHER LEGAL THEORY, AND WHETHER OR NOT WILDFIRE IS
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</span></p>
+<h2 class="MsoNormal"><span>Limitation of Liability</span></h2>
+<p class="MsoNormal"><span>Wildfire, its directors, officers, employees,
+clients, agents and affiliates shall not be liable for any damages,
+special, consequential or otherwise, arising out of, or in any way
+connected with your participation in the program, the use of information
+provided by you in connection with the Services, any statements made by
+you, or the merchandise or services obtained by you through points,
+rewards or other special offers or perks redeemed or otherwise exercised
+by you under the program. Wildfire disclaims any liability or obligation
+in connection with any points, rewards or special offers (including
+without limitation discounts or coupons) offered by third parties
+through the Wildfire website.</span></p>
+<p class="MsoNormal"><span>Wildfire's maximum liability arising out of
+or in connection with any Wildfire site or your use of Wildfire, or the
+Wildfire Content, regardless of the cause of action (whether in
+contract, tort, breach of warranty or otherwise), will not exceed S$100.</span></p>
+<p class="MsoNormal"><span>Some jurisdictions limit the exclusion of
+damages or limitation of liability, so the above exclusions and
+limitations may not apply to you. If any part of the exclusions of
+damages or limitation of liability set forth above is unenforceable
+under applicable law, Wildfire and its affiliates' aggregate liability
+will be limited to the maximum extent permitted by law.</span></p>
+<h2 class="MsoNormal"><span>Confidentiality</span></h2>
+<p class="MsoNormal"><span>You are responsible for maintaining the
+confidentiality and all uses of your Account, and password whether or
+not authorized by you. You agree to immediately notify Wildfire of any
+unauthorized use of your Account, and password. To enhance the value of
+your experience on Wildfire, Wildfire and its affiliates may on occasion
+share selected personal information with third parties for the limited
+purposes of data verification and supplementation. Such third parties
+will agree to maintain the confidentiality and protection of your
+personal information, at all times during and after providing</span></p>
+<h2 class="MsoNormal"><span>Disputes Among Members</span></h2>
+<p class="MsoNormal"><span>You are solely responsible for your
+interactions with other Wildfire Members. Wildfire reserves the right,
+but has no obligation, to monitor disputes between you and other
+Members.</span></p>
+<h2 class="MsoNormal"><span>Import and Export Restrictions</span></h2>
+<p class="MsoNormal"><span>This Web site is controlled and operated by
+Wildfire from its offices within China. Wildfire makes no representation
+that the products, services and other materials available through this
+Web site are appropriate or available for use in other countries, and
+access to them from countries where their contents or use is illegal is
+prohibited.</span></p>
+<h2 class="MsoNormal"><span>Member Submission</span></h2>
+<p class="MsoNormal"><span>Except for any personally identifiable
+information we may collect from you under the guidelines established in
+our Privacy Policy, any material, information or other communication you
+transmit, upload or post to the Wildfire Sites (including without
+limitation any Spark Reports or any other text, graphics, video or
+audio) ("Communications") will be considered non-confidential and
+non-proprietary. Wildfire will have no obligations with respect to the
+Communications. However, you hereby assign and all rights to the
+Communications to Wildfire and Wildfire, its designees, licensees or
+assignees will be free to use, copy, disclose, reproduce, modify, adapt,
+publish, translate, create derivative works from, distribute, perform,
+play and exercise all copyright and publicity rights with respect to any
+such work worldwide and/or to incorporate the Communications in other
+works in any media, with such rights extending to all data, images,
+sounds, text and other things embodied therein for any and all
+commercial or noncommercial purposes. If you do not wish to grant such
+rights to Wildfire, it is suggested that you do not submit your
+contribution to the Wildfire Sites. By submitting your Communication to
+any Wildfire Site, you represent and warrant the following:</span></p>
+<p class="MsoNormal"><span>that either such Communication is your own
+original work or that you own or have the necessary licenses, rights,
+consents, and permissions to use and authorize Wildfire to use all
+patent, trademark, trade secret, copyright or other proprietary rights
+in and to any and all Contributions to enable inclusion and use of the
+Communications in the manner contemplated by the applicable Wildfire
+Sites and these Terms of Use;</span></p>
+<p class="MsoNormal"><span>you have the written consent, release, and/or
+permission of each and every identifiable individual person in the
+Communication to use the name or likeness of each and every such
+identifiable individual person to enable inclusion and use of the
+Communication in the manner contemplated by the applicable Wildfire Site
+and these Terms of use;</span></p>
+<p class="MsoNormal"><span>you agree to waive any moral rights in your
+Communications for all the purposes specified herein; and</span></p>
+<p class="MsoNormal"><span>you agree to indemnify Wildfire against all
+legal fees, damages and other expenses that may be incurred by Wildfire
+as a result of your breach of the above warranty.</span></p>
+<h2 class="MsoNormal"><span>Right to be Removed from Programs</span></h2>
+<p class="MsoNormal"><span>Wildfire reserves the right, in its sole
+discretion, to determine who shall be eligible to participate in any of
+the campaigns or other programs offered from time-to-time on the Web
+site. Further, Wildfire may, at its discretion, remove a Member from a
+"Campaign" or any other program at any time for any reason. If you are
+removed you will be contacted via e-mail.</span></p>
+<h2 class="MsoNormal"><span>Wildfire Does Not Guarantee Product Shipment</span></h2>
+<p class="MsoNormal"><span>Due to the nature of shipping products,
+Wildfire cannot guarantee the condition of products shipped. Wildfire
+makes all attempts to ship products (Rewards & Spark Kits) in a timely
+manner, but we cannot guarantee a specific timeframe due to the nature
+of the shipping and fulfillment industry.</span></p>
+<h2 class="MsoNormal"><span>Products Not Intended for Resale</span></h2>
+<p class="MsoNormal"><span>Products are not intended for resale. Any
+product, service or coupon related thereto offered by Wildfire (as
+Rewards, incentives in Spark Kit, etc.) are not intended for resale. Any
+violation (as determined solely by Wildfire) of this provision by a
+Member may result in removal from the applicable campaign or other
+program, or from Wildfire and all Wildfire Web sites in general.</span></p>
+<h2 class="MsoNormal"><span>Contact with Wildfire</span></h2>
+<p class="MsoNormal"><span>Wildfire will periodically contact Members of
+the Wildfire community with information, updates and special offers via
+e-mail. We make all reasonable effort to review and edit each
+"Communication". If there are any inaccuracies Wildfire will not be held
+responsible.</span></p>
+<h2 class="MsoNormal"><span>Feedback in Communications</span></h2>
+<p class="MsoNormal"><span>Wildfire's policy is to review all
+Communications by Members and to provide feedback to the Communication
+via e-mail to the Member. We make all reasonable effort to review and
+edit feedback. If there are any inaccuracies Wildfire will not be held
+responsible.</span></p>
+<p class="MsoNormal"><span>Should you have any questions or complaints
+regarding your Communications, please contact us.</span></p>
+<h2 class="MsoNormal"><span>Polls, Surveys, and Sweepstakes</span></h2>
+<p class="MsoNormal"><span>Polls, surveys and sweepstakes might be
+available on the Web site for Members, sponsored by Wildfire, merchants
+and/or strategic partners. You will not be required to participate in
+polls, surveys or sweepstakes in order to use the Web site or access
+your account. Wildfire uses the data collected from these activities to
+assist it and its merchants, advertisers and strategic partners to
+provide you better services and products. No personally identifiable
+information is provided to merchants, advertisers or to strategic
+partners.</span></p>
+<h2 class="MsoNormal"><span>Activity-based Benefits</span></h2>
+<p class="MsoNormal"><span>Wildfire will grant Members certain
+privileges and benefits based on a Member's level of activity in the
+various Wildfire "Spark Campaigns" in which he or she participates.
+Members with high levels of activity and involvement in a Campaign may
+receive access to special Campaign previews, Campaign pre-registration,
+and enhanced product and handout packages. Wildfire will determine
+which, if any, benefits a Member is eligible to receive in its sole
+discretion.</span></p>
+<h2 class="MsoNormal"><span>Right to Offer Campaigns to Select Wildfire
+Sparks<br />
+</span></h2>
+<p class="MsoNormal"><span>"Campaigns" will be offered to Members based
+on various demographic and psychographic parameters and "Activity" in
+the Wildfire system. Determinations regarding which Members may be
+offered "Campaigns" from time-to-time shall be at the sole discretion of
+the Wildfire. If Wildfire determines that you are eligible to
+participate in the "Campaign," you will have the ability to join the
+"Campaign" on the Campaigns You Can Join section of the Wildfire Web
+site. You may also be contacted directly via e-mail when a "Campaign" is
+launched.</span></p>
+<h2 class="MsoNormal"><span>Indemnity</span></h2>
+<p class="MsoNormal"><span>You agree to indemnify and hold Wildfire, its
+subsidiaries, affiliates, officers, agents, and other partners and
+employees, harmless from any loss, liability, claim, or demand,
+including reasonable attorney's fees, made by any third-party due to or
+arising out of your participation in the Program, use of the Service in
+violation of this Agreement and/or arising from a breach of this
+Agreement and/or any breach of your representations and warranties set
+forth above.</span></p>
+<h2 class="MsoNormal"><span>Comments, Complaints and Questions</span></h2>
+<p class="MsoNormal"><span>We welcome your feedback about the Web site.
+However, any comments, ideas, notes, messages, suggestions or other
+communications sent to the Web site (including, without limitation, the
+Communications) shall be and remain the exclusive property of Wildfire,
+and we may use all such communications in any manner, including
+reproducing, disclosing and publishing such communications, all without
+compensation to you.</span></p>
+<p class="MsoNormal"><span>Should you have any questions or complaints
+regarding these terms and conditions, please contact us.</span></p>
+<h2 class="MsoNormal"><span>Legal Compliance and Applicable Law</span></h2>
+<p class="MsoNormal"><span>You agree to comply with all Singaporean and
+foreign laws, rules, regulations and court orders that are applicable to
+your use of this Web site, and not to use this Web site for any purpose
+that is contrary to any such laws, rules, regulations or orders.</span></p>
+<p class="MsoNormal"><span>All matters relating to your access to, and
+use of, the Web site or any services provided by Wildfire shall be
+governed by Singaporean law. </span></p>
+<p class="MsoNormal"><span>The terms and conditions set forth above
+shall constitute the entire understanding between Wildfire and each
+Member enrolled and participating in the program.</span></p>
+<h2 class="MsoNormal"><span>Notices and Legal Disclaimer</span></h2>
+<p class="MsoNormal"><span>Wildfire from time to time may send you legal
+or other required notices. You agree that Wildfire may provide to you
+required notices, agreements and other information electronically. We
+will post the notices on the home page of the Web site or on the
+relevant web page of the applicable service. If you want to withdraw
+your consent to receive notices electronically, you must discontinue
+your use of this Web site. This Web site may contain other proprietary
+notices and copyright information, the terms of which must be observed
+and followed.</span></p>
+<p class="MsoNormal"><span>The Wildfire Content may contain inaccuracies
+or typographical errors or technical inaccuracies. The Company makes no
+representations about the accuracy, reliability, completeness, or
+timeliness of any Wildfire Site or the Wildfire Content. The use of the
+Wildfire Sites and the Wildfire's Content is at your own risk. Changes
+are periodically made to the Wildfire and may be made at any time.</span></p>
+<p class="MsoNormal"><span>Information may be changed or updated without
+notice. Wildfire, Inc. may also make improvements and/or changes in the
+products and/or the programs described in this information at any time
+without notice.</span></p>
+<h2 class="MsoNormal"><span>Charitable Contributions</span></h2>
+<p class="MsoNormal"><span>From time to time, Wildfire may offer you the
+opportunity to select a charity to which Wildfire will donate a designed
+amount as a charitable contribution ("Donations"). To participate, you
+must be a legal resident of China. Participating in the Program is
+subject to this Agreement. Wildfire can disqualify you from the Program
+if Wildfire believes you are not complying with this Agreement or if you
+are suspected of engaging in activities that Wildfire deems as unlawful
+or contrary to the goals of the Program. Wildfire may also change the
+amounts you can accrue in connection with a designated activity at any
+time during the Program.</span></p>
+<p class="MsoNormal"><span>Wildfire may limit the number of Donations to
+any charity, and may also limit the daily Donations that may be
+generated per user. You must not use any bot, macro or other manual or
+automated way to participate in an activity or the Program in excess of
+the designated amount. Wildfire reserves the right to withhold Donations
+from any user or charity suspected of activities that violate the Terms
+or are otherwise unlawful. Donations are not your personal property.
+Once you make a donation, it cannot be cancelled or refunded. Donations
+provided in this Program are not valid in, and may not be used in
+combination with, any other reward programs offered by Wildfire or third
+parties.</span></p>
+<p class="MsoNormal"><span>In connection with the Donations, Wildfire
+shall make the cash donation to the charity at intervals determined by
+Wildfire, in its sole discretion. To the extent that the initial
+designated charity is no longer available or eligible to participate; or
+(ii) the aggregated Donation for your charity is under $10.00, Wildfire
+may donate such funds to another charity, chosen at its discretion.
+Wildfire is not responsible for late, lost, incomplete, delayed,
+inaccurate, garbled, undelivered or damaged registrations, Donations to
+charity or other errors or problems of any kind, whether typographical,
+technical, computer, network, human, mechanical, electronic or
+otherwise, including without limitation errors or problems which may
+occur in administration of the Program, processing registrations,
+tabulating Donations, making Donations, or in any Program-related
+materials.</span></p>
+<h2 class="MsoNormal"><span>Rewards: Special Terms and Conditions</span></h2>
+<p class="MsoNormal"><span>Wildfires' rewards program is called Rewards.
+Sparks that participate in Rewards will be eligible to receive special
+thank you reward offers as he or she participates in word-of-mouth
+activities. Rewards may include reward points, coupons, free trials
+and/or other promotions (collectively, the "Rewards") that are offered
+by advertisers and other third parties. In all cases, fulfillment of the
+actual Rewards shall be the sole obligation of such third party offering
+the Rewards, subject to the terms and conditions set by those third
+parties. Wildfire makes no warranty with regard to any Rewards obtained
+by you through Rewards or through Wildfire's advertisers or other third
+parties and Wildfire disclaims any and all liability related to the
+offer, fulfillment and/or return thereof. You are under no obligation to
+accept any such Rewards.</span></p>]]></seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

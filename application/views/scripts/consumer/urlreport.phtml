@@ -1,0 +1,48 @@
+		<table class="" style ="width:;">
+
+			<tr>
+				<th>编号</th>
+				<th>链接</th>
+				<th>日期 </th>
+				<th>活动</th>
+				<th>结果</th>
+				<th><?php echo $this->translate("邮件回复的内容")?></th>
+			</tr>
+			<?php $i = $this->NoInitValue ;
+				foreach ($this->urlReports as $report):
+				$report_id = $report['id'];
+			?>
+			
+				<tr	>
+				<td width='30px'><?php echo $report_id;?></td>
+				<td width='40px'><a href='<?php echo $report['url']?>' target='_blank';>
+				<?php echo $report['url']; if(array_key_exists($report['url'], $this->duplicatedUrlArray) && $report['state'] =='NEW'){ echo '  (提醒：该网址已提交过!)'; }?></a></td>
+				<td  width='20px'><?php echo $report['create_date']?></td>
+				<td  width='30px'><?php echo $report['name']?></td>
+				<td width=''>
+				<?php if($report['state'] !=null && $report['state'] == 'APPROVED'){?>
+					<?php echo $this->translate("His_Reports_APPROVED")?>
+				<?php }else{?> 
+					<select id='state_<?php echo $i; ?>' name='state_<?php echo $i; ?>' onchange = "javascript:saveSelectedReportState('<?php echo $i; ?>')" >	
+						<OPTION VALUE="APPROVED" ><?php echo $this->translate("His_Reports_APPROVED")?></OPTION>
+						<OPTION VALUE="UNAPPROVED" ><?php echo $this->translate("His_Reports_UNAPPROVED")?></OPTION>
+						<?php if($report['state'] != null && $report['state'] == 'NEW'){?>
+						<OPTION VALUE="NEW" Selected ><?php echo $this->translate("His_Reports_NEW")?></OPTION>
+						<?php }?> 
+					</select>
+					<?php }?>
+				</td>
+				<td width='200px' >
+				<?php if($report['content'] !=null && $report['content'] != ''){?>
+					<?php echo $report['content']?>
+				<?php }else{?>
+                      未回复
+				<?php }?>
+				</td>
+				</tr>
+				<input type="text" id="consumer_email_<?php echo $i; ?>"  value="<?php echo $report['email']?>" style="display:none;" />
+				<input type="text" id="report_id_<?php echo $i; ?>"  value="<?php echo $report['id']?>" style="display:none;" />
+				<input type="text" id="consumer_id_<?php echo $i; ?>"  value="<?php echo $report['consumer_id']?>" style="display:none;" />
+			<?php $i++;
+			endforeach;?>
+		</table>

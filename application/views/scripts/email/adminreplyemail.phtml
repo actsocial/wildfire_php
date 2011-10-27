@@ -1,0 +1,31 @@
+<?php 
+ if($this->sent == 0){
+
+?>
+<form action="<?php echo $this->url(array('controller'=>'email','action'=>'adminreplyemail'));?>/id/<?php echo $this->id;?>" method="post">
+<input type="hidden" value="<?php echo $this->id?>" name="id" />
+<table style="padding-top:50px;padding-left:100px">
+<?php 
+if(count($this->message)){
+	echo "<tr><td style='font-size:12px'><font color='red'>";
+	foreach ($this->message as $val){
+		echo $val.'<br/>';
+	}
+	echo "</font></td></tr>";
+}
+?>
+<tr><td>收件人:</td><td><input type="text" value="<?php echo $this->email?>" readonly  name="email"/></td></tr>
+<tr><td>主题:</td><td><input type="text" value="" name="subject" /></td></tr>
+<tr><td valign="top">内容:</td><td><textarea rows="10" cols="30" name="content"></textarea></td></tr>
+<tr><td colspan=2 align=right><input type="submit" value="回复"/></td></tr>
+</table>
+</form>
+<?php  }else{?>
+<table style="padding-top:50px;padding-left:100px" id="suceessInfo">
+<tr><td>邮件已经成功发送到:<br/>
+<?php echo $this->email?></td></tr>
+</table>
+<script type="text/javascript">
+setTimeout("parent.location.reload(true)",2000);
+</script>
+<?php }?>

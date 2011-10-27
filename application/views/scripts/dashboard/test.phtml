@@ -1,0 +1,346 @@
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/redmond/jquery-ui-1.7.2.custom.css" />
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.base64.js" ></script>
+<div align="center" style="padding-top:40px;">
+<h2><?php echo $this->translate('Client_Kraft WOW Report');?></h2><br/>
+<script type="text/javascript" charset="utf-8">
+
+//dataTables data in JS
+$(document).ready(function() {
+    //1.jQuery UI Tabs
+    $("#report_tabs").tabs();
+    $("#report_tabs").show();
+    
+    //2.dataTables
+    oTable = $('#report_table').dataTable({
+        "bJQueryUI": true,
+        "bFilter": true,
+        "sPaginationType": "full_numbers",
+        //"aaData": aDataSet,
+        "aaSorting": [[2,'desc']],
+        "aoColumns": [
+                      {
+                          "sType": "html"
+                      },
+                      {
+                          "sType": "html"
+                      },
+                      {
+                          "sType": "html"
+                      },
+                      {
+                    	  "sType": "html",
+                    	  "bSortable": false
+                      },
+                      {
+                          "bVisible": false
+                      }
+        ],
+        "oLanguage": {
+            "sSearch": "在谈话内容中查询:",
+            "sLengthMenu": "每页显示 _MENU_ 条数据",
+            "sZeroRecords": "没有找到符合条件的数据",
+            "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条数据",
+            "sInfoFiltered": "(从总数 _MAX_ 条数据中查找)",
+            "oPaginate" : {
+                "sFirst" : "第一页",
+                "sPrevious" : "前一页",
+                "sNext" : "后一页",
+                "sLast" : "最后一页"
+            }
+        }
+        
+    });
+    $("#report_board").show();
+
+    //search button click event
+    $("#search_button").click( function() {
+        /* Filter on the column (the index) of this element */
+        //alert($("#search_text").val());
+        oTable.fnFilter( $("#search_text").val(), 5 );
+    });
+
+    // high light all selectd rows
+//    $('#report_table tr').click( function() {
+//        if ( $(this).hasClass('row_selected') )
+//            $(this).removeClass('row_selected');
+//        else
+//            $(this).addClass('row_selected');
+//    });
+    
+    // high light current selectd rows
+    $("#report_table tbody").click(function(event) {
+        $(oTable.fnSettings().aoData).each(function (){
+            $(this.nTr).removeClass('row_selected');
+        });
+        $(event.target.parentNode.parentNode).addClass('row_selected');
+    });
+
+    //report list dialog
+    $("#drip-dialog").dialog({
+        width:600, 
+        height:250,
+        autoOpen:false, 
+        title:"<?php echo $this->translate('Client_Report Detail');?>", 
+        close: function(event,ui) {  }
+    });
+
+    //consumer dialog
+    $("#consumer-dialog").dialog({
+        title:"用户信息",
+        autoOpen:false,
+        width:400,
+        height:210,
+        resizable: 'false',
+        buttons:{"确认":function(){ $(this).dialog("close"); }},
+        close: function(event,ui) {
+            val = $("#consumer-dialog-comment").attr("value");
+            if (val != '') {
+                //document.consumer_dialog_form.submit();
+                $("#consumer_dialog_form").submit();
+            }
+        }
+    });
+    
+    //ajax to save comment
+    $('#consumer_dialog_form').ajaxForm(
+        function() {
+            alert("Thank you for your comment!");
+        }
+    );
+    
+} );
+
+</script>
+<div id="report_tabs">
+    <ul>
+        <li><a href="#report_board" onclick='tag_filter("")'><span>全部</span></a></li>
+        <li><a href="#report_board" onclick='tag_filter("27|30|33")'><span>好评</span></a></li>
+        <li><a href="#report_board" onclick='tag_filter("28|34")'><span>差评</span></a></li>
+        <li><a href="#report_board" onclick='tag_filter("36")'><span>使用环境</span></a></li>
+    </ul>
+</div>
+<div id="report_board">
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="report_table">
+    <thead>
+        <tr>
+            <th style="width: 64px"><?php echo $this->translate('Client_Drip Reaction');?></th>
+            <th style="width: 51px"><?php echo $this->translate('Client_Drip Reach');?></th>
+            <th style="width: 60px"><?php echo $this->translate('Client_Drip Date');?></th>
+            <th style="width: 500px"><?php echo $this->translate('Client_Drip Narrative');?></th>
+            <th>TAGS</th>
+        </tr>
+    </thead>
+    <tbody>
+<?php foreach($this->reportMap as $row) {
+    if (count($row) < 5) {
+        continue;
+    }
+?>
+        <tr>
+            <td><div class='reaction'><?php echo $row['SCORE']==''?'n/a':$row['SCORE'];?></div></td>
+            <td><div class='reach'><?php echo $row['FRIENDS']==''?'n/a':$row['FRIENDS'];?></div></td>
+            <td><div class='date'><?php echo $row['REPORT_TIME'];?></div></td>
+            <td><div class='content' id='content_<?php echo $row['REPORT_ID'];?>' onclick='report_detail(<?php echo $row['REPORT_ID'];?>)'><span style='cursor:pointer;' class='consumer_name' onclick='consumer_detail(<?php echo $row['REPORT_ID'];?>)'><strong><?php echo $row['CONSUMER_NAME'];?></strong></span>: <?php echo $row['COMMENTS'];?></div></td>
+            <td><?php echo $row['TAG_IDS'];?></td>
+        </tr>
+<?php } ?>
+    </tbody>
+</table>
+</div>
+
+<!-- report detail dialog -->
+<div id="drip-dialog" style="display: none;z-index:8;">
+    <div id="drip-dialog-content" class="message"></div>
+    <div style="padding-top: 5px; padding-bottom: 5px;"><hr/></div>
+    <div id="drip-dialog-reply"><strong><?php echo $this->translate('Client_Wildfire Reply');?></strong>: </div>
+</div>
+
+<!-- consumer detail dialog -->
+<div id="consumer-dialog">
+<div id="consumer-dialog-main" style="display:none;z-index:9;">
+<form id="consumer_dialog_form" name="consumer_dialog_form" action="<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientsavecomment'));?>" method="post">
+<table>
+<tr><td width="50%">
+    <div id="consumer-dialog-content">
+    <div style="padding-left:15px;"><img id="consumer-dialog-photo" src="<?php echo $this->baseUrl();?>/images/no_photo_no_gender.jpg" /></div>
+    <div id="consumer-dialog-name"></div>
+    <div id="consumer-dialog-location"></div>
+    <div id="consumer-dialog-addr"></div>
+    </div>
+</td>
+<td width="50%">
+<div style="padding-bottom:5px;">您有什么想告诉我：</div>
+<textarea id="consumer-dialog-comment" rows="3" columns="15" name="comment"></textarea>
+<input type="hidden" id="consumer-dialog-id" name="report_id" value="0" />
+</td></tr>
+</table>
+</form>
+</div>
+</div>
+
+
+<script type="text/javascript">
+function report_detail(id) {
+    $("#drip-dialog-content").html($("#content_" + id).html());
+    //get reply from ajax
+    $.ajax({
+        type:"POST",
+        url: "<?php echo $this->url(array('controller'=>'dashboard','action'=>'getreply'));?>",
+        data:"report_id="+id,
+        dataType:'json',
+        success: function(json) {
+            var oldContent = $("#drip-dialog-reply").html();
+            $("#drip-dialog-reply").html(oldContent + json.content);
+        }
+    });
+    //open dialog
+    $("#drip-dialog").dialog("open");
+    $("#drip-dialog").dialog('moveToTop');
+}
+
+function consumer_detail(reportId) {
+    $("#consumer-dialog-main").show();
+    $("#consumer-dialog-id").val(reportId);
+    //get reply from ajax
+    $.ajax({
+        type:"POST",
+        url: "<?php echo $this->url(array('controller'=>'dashboard','action'=>'getconsumer'));?>",
+        data:"report_id="+reportId,
+        dataType:'json',
+        success: function(json) {
+        	//alert($("#consumer-dialog-photo").attr("src"));
+            if (json.gender == "female" || json.gender == "male") {
+            	$("#consumer-dialog-photo").attr("src","<?php echo $this->baseUrl();?>/images/no_photo_" + json.gender + ".jpg");
+            }
+            $("#consumer-dialog-location").html(json.province + "-" + json.city);
+            $("#consumer-dialog-addr").html(json.address);
+        }
+    });
+    $("#consumer-dialog").dialog("open");
+    $("#consumer-dialog").dialog('moveToTop');
+}
+
+function tag_filter(ids) {
+    oTable.fnFilter(ids, 4, false);
+}
+
+</script>
+
+<style type="text/css">
+<!--
+
+#report_tabs {
+    width: 750px;
+    border: none;
+    display: none;
+}
+
+#report_board {
+    width: 750px;
+    border: none;
+    display: none;
+}
+
+#report_table {
+    border:1px solid #4297D7;
+}
+
+#report_table th {
+    font-size: 10px;
+}
+
+#report_table tr.odd {
+    background-color: #f1f1f1;
+}
+
+
+#drip-dialog-content,#drip-dialog-reply {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#drip-dialog-reply strong,.content strong {
+    color:#5a83d6;
+}
+
+#report_board .reaction {
+    width: 100%;
+    color: #555;
+    height: 50px;
+    line-width: 100%;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 2px;
+    background: url(<?php echo $this->baseUrl();?>/images/message_points.gif) no-repeat left center;
+}
+
+#report_board .reach {
+    width: 100%;
+    height: 40px;
+    padding-left: 15px;
+    padding-top: 10px;
+    float: left;
+    text-align: left;
+    line-width: 50px;
+    line-height: 40px;
+    font-size: 10px;
+    color: #5a83d6;
+    background: url(<?php echo $this->baseUrl();?>/images/message_people.gif) no-repeat left center;
+}
+
+#report_board .date {
+    width: 60px;
+    height: 40px;
+    color: #5a83d6;
+    padding-left: 5px;
+    float: left;
+    text-align: left;
+    line-height: 18px;
+    font-size: 10px;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    background: url(<?php echo $this->baseUrl();?>/images/message_date.gif) no-repeat left center;
+}
+
+#report_board .content {
+    width: 495px;
+    height: 40px;
+    padding-top: 5px;
+    overflow: hidden;
+    float: left;
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 10px;
+    color: #555;
+    cursor: pointer;
+}
+
+
+#report_board .dataTables_info {
+	float:none;
+}
+
+#report_board .dataTables_paginate {
+	float:none;
+	padding: 5px 0;
+	text-align:center;
+}
+
+#report_board .paging_full_numbers {
+    width: 80% !important;
+}
+
+#report_board .dataTables_length {
+    display: none;
+}
+
+#report_board .dataTables_filter {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+-->
+</style>
+</div>
+

@@ -1,0 +1,84 @@
+﻿<div align="center" >
+	<input id="button" type="button"  value="<?php echo $this->translate('Send')?>" onclick="onSend();">	
+	<div id="notice" style="padding-left: 10px; font-size: 15px; color: red; display:none;" >Please wait...</div>
+	<input type="hidden" id="startDate" name="startDate" value="<?php echo $this->sentStartDate;?>" />
+</div>	
+<div align="left" style="padding-left:200px;">	
+	<p>
+	<?php $count = 1;?>
+	<?php 
+	foreach($this->emailArray as $email):
+		if(trim($email) != '' && trim($email) != null){
+	?>
+		<div id='email_<?php echo trim($email)?>'>
+			<?php 
+			echo $count++.".  ";
+			echo $email;?>
+			<img id='email_image_<?php echo trim($email)?>' src="<?php echo $this->baseUrl();?>/images/action_check.gif" style="display:none;"/>
+		</div>
+	<?php }
+	endforeach;
+	?>
+	</p>
+	<p><?php if($this->sentcount != null) {echo 'Total:'.$this->sentcount;}?></p>
+</div>
+<div>
+<form id='form' action="#" method="post">
+	<input type="hidden" id="subject" name='subject' value='<?php echo $this->formData['subject']?>' />
+	<input type="hidden" id="message" name='message' value='<?php echo $this->formData['message']?>' />
+	<input type="hidden" id="htmlmessage" name='htmlmessage' value='<?php echo $this->formData['htmlmessage']?>' />
+	<input type="hidden" id="campaignId" name='campaignId' value='<?php echo $this->formData['campaignId']?>' />
+	<input type="hidden" id="code_source" name='code_source' value='<?php echo $this->formData['code_source']?>' />
+	<input type="hidden" id="emailCategory" name='emailCategory' value='<?php echo $this->formData['emailCategory']?>' />
+	<input type="hidden" id="emailList" name='emailList' value='<?php echo $this->formData['emailList']?>' />
+	<input type="hidden" id="startDate" name='startDate' value='<?php echo $this->formData['startDate']?>'/>
+</div>
+<script type="text/javascript">
+//var sendeach = 1;
+//
+//function onReady(){
+//	$('notice').style.display = "";
+//	var emailstr = $('emailList').value;
+//	var emailarray = emailstr.split(';');
+//	var sendamount = sendeach;
+//	// send 100 emails each time;
+//	while(sendamount < emailarray.length){
+//		var p = emailstr.indexOf(emailarray[sendamount]);
+//		$('emailList').value=emailstr.substring(0,p);
+//		emailstr = emailstr.substring(p,emailstr.length);
+//		sendamount += sendeach;
+//		onSend();
+////		alert('a');
+//	}
+//	$('emailList').value = emailstr;
+//	onSend();
+//	$('notice').innerHTML = "The sending have finished!";
+//}
+function onSend(){
+	$('notice').style.display = "";
+	var url = '<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminajax'));?>';  
+	var pars = Form.serialize($('form'));  
+	new Ajax.Request(     
+		url,      
+		{     
+		method: 'post',  
+		parameters: pars,
+		onComplete: update
+		}
+	);
+}
+function update(originalRequest)
+{
+	$('notice').innerHTML = "The sending have finished!";
+	if(originalRequest.responseText == '' || originalRequest.responseText == null){
+		return;
+	}else{
+		var idstr =  originalRequest.responseText;
+		idstr = idstr.substring(1,idstr.length-2);
+		var idarray = idstr.split(',');
+		var i = 0;
+		for(; i< idarray.length; i++)
+		{$('email_image_'+idarray[i]).style.display = "";}
+	}
+}
+</script>

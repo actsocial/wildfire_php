@@ -1,0 +1,110 @@
+<div class="cart">
+	<ul class="cart-guide">
+		<li class="first">1.<?php echo $this->translate('Gift_Flow_Add_to_Cart');?></li>
+		<li>2.<?php echo $this->translate('Gift_Flow_Confirm');?></li>
+		<li>3.<?php echo $this->translate('Gift_Flow_Payment');?></li>
+		<li>4.<?php echo $this->translate('Gift_Flow_Gift_wrap');?></li>
+		<li class="last">5.<?php echo $this->translate('Gift_Flow_Finished');?></li>
+	</ul>
+<?php if (count($this->gifts)>0):?>
+	<?php if($this->notQualified != null && $this->notQualified) : ?>
+		<div class="error">
+		<p><?php echo $this->translate('Gift_For_the_following_reason');?></p>
+			<ul>
+				<?php if($this->notHaveEnoughPoint != null && $this->notHaveEnoughPoint) :?>
+				<li><?php echo $this->translate('Gift_have_no_enough_point');?></li>
+				<?php endif;?>
+
+				<?php if($this->finishingCampaign != null && $this->finishingCampaign != ''):?>
+					<li>
+					<?php echo $this->translate('Exchange_Points_Hint');?>
+					<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'postcampaign', 'id' =>$this->finishingCampaign[0]['id']));?>">
+					<?php echo $this->translate('Do_a_post-campaign_survey_to_finish');?><?php echo $this->finishingCampaign[0]['name']?><?php echo $this->translate('Do_a_post-campaign_survey_to_finish_campaign');?>	
+					</a>
+					</li>
+				<?php endif;?>
+				
+				<?php if($this->runningCampaign != null && $this->runningCampaign != ''):?>
+					<li>
+					<?php echo $this->translate('Exchange_Points_Hint');?>
+					<?php echo $this->translate('First_campaign_still_is_active_1');?><?php echo $this->runningCampaigName?><?php echo $this->translate('First_campaign_still_is_active_2');?><?php echo $this->daysLeftBeforeExpire?><?php echo $this->translate('First_campaign_still_is_active_3');?>
+					</li>
+				<?php endif;?>
+				
+				<?php if($this->notJoinAnyCampaigns):?>
+					<li>
+					<?php echo $this->translate('Exchange_Points_Hint');?>
+					<?php echo $this->translate('You_don_not_join_any');?>	
+					</li>
+				<?php endif;?>
+			
+				<!--<?php if($this->notSubmitEnoughReport != null && $this->notSubmitEnoughReport) :?>
+				<li><?php echo $this->translate('Gift_have_not_submit_enough_reports');?>
+				<a href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>">
+				<?php echo $this->translate('Gift_submit_reports_right_now');?></a>
+				</li>
+				<?php endif;?>-->
+				
+				<?php if($this->isPest != null && $this->isPest) :?>
+				<li><?php echo $this->translate('Gift_can_not_redeem_gifts_right_now');?></li>
+				<?php endif;?>
+			</ul>
+		</div>
+	<?php endif;?>
+		<div class="cart-controllers">
+			<a href="<?php echo $this->url(array('controller'=>'gift','action'=>'clearcart')); ?>"  onclick="return confirm('<?php echo $this->translate('Gift_Are_you_sure_delete_gift_cart?');?>');"><?php echo $this->translate('Gift_Delete_Cart');?></a>
+		</div>
+	<form action="<?php echo $this->url(array('controller'=>'gift','action'=>'confirmcart')); ?>" method="post">
+		<table>
+			<tr><th><?php echo $this->translate('Gift_gift_id');?></th>
+			<th><?php echo $this->translate('Gift_gift_name');?></th>
+			<th><?php echo $this->translate('Gift_Flow_Qty');?></th>
+			<th><?php echo $this->translate('Gift_Each_Price');?></th>
+			<th><?php echo $this->translate('Gift_Gift_Point');?></th><th></th></tr>
+		<?php foreach ($this->gifts as $gift):?>
+			<tr>
+				<td><?php echo $gift['id'];?><input type="hidden" name="id[]" value="<?php echo $gift['id'];?>" /></td>
+				<td><?php echo $gift['name'];?></td>
+				<td><input type='text' name='amount_<?php echo $gift['id'];?>' value="<?php echo $gift['amount'];?>"></input></td>
+				<td><?php echo $gift['point'];?></td>
+				<td><?php echo $gift['point']*$gift['amount'];?></td>
+				<td><a title="<?php echo $this->translate('Gift_Delete')?>" href="<?php echo $this->url(array('controller'=>'gift','action'=>'deletegift',"id"=> $gift['id'])); ?>"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a></td>
+			</tr>
+		<?php endforeach;?>
+			<tr>
+				<td colspan='3'></td>
+				<th><?php echo $this->translate('Gift_Gift_Subtotal');?></th>
+				<td><strong><?php echo $this->sum;?></strong></td>
+				<td></td>
+			</tr>
+		</table>
+		<div class="buttons-bar center3btn">
+		<?php if($this->notQualified != null && $this->notQualified) : ?>
+
+			<input id="submit-type" type="hidden" name='type' value='modify'/>
+			<input type="submit" value="<?php echo $this->translate('Gift_Edit');?>" class="button" />
+			<input type="submit" value="<?php echo $this->translate('Gift_Go_to_redeem');?>" class="disabled-button" disabled="disabled"/>
+		<a class="button" href="<?php echo $this->url(array('controller'=>'gift','action'=>'list'));?>">
+	<?php echo $this->translate('Gift_See_more_gifts');?></a>
+		<?php else : ?>
+
+			<input id="submit-type" type="hidden" name='type' value='modify'/>
+			<input type="submit" value="<?php echo $this->translate('Gift_Edit');?>" class="button" onclick="document.getElementById('submit-type').value='modify'"/>
+			<input type="submit" value="<?php echo $this->translate('Gift_Go_to_redeem');?>" class="button" onclick="document.getElementById('submit-type').value='confirm'"/>
+		<a class="button" href="<?php echo $this->url(array('controller'=>'gift','action'=>'list'));?>">
+	<?php echo $this->translate('Gift_See_more_gifts');?></a>
+		<?php endif; ?>
+		</div>
+	</form>
+<?php else : ?>
+	<div class="cart-empty">
+		<h1><?php echo $this->translate('Gift_Your_shopping_cart_is_empty');?></h1>
+		
+	</div>
+	<div style="clear: both;"></div>
+			<div class="buttons-bar center1btn">
+			<a class="button" href="<?php echo $this->url(array('controller'=>'gift','action'=>'list'));?>">
+			<?php echo $this->translate('Gift_See_more_gifts');?></a>
+	</div>
+<?php endif;?>
+</div>

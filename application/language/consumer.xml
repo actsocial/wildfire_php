@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+			<tu tuid='Or'>
+			<tuv xml:lang="zh">
+				<seg>或者</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Or</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Edit_Account_Settings'>
+			<tuv xml:lang="zh">
+				<seg>账户设置</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Edit Account Settings</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Change_Password'>
+			<tuv xml:lang="zh">
+				<seg>修改密码</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Change password</seg>
+			</tuv>
+		</tu>
+				
+		<tu tuid='Consumers'>
+			<tuv xml:lang="zh">
+				<seg>用户列表</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Consumers</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Consumers_Name'>
+			<tuv xml:lang="zh">
+				<seg>姓名</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid='YOUR PROFILE'>
+			<tuv xml:lang="zh">
+				<seg>你的个人信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your Profile</seg>
+			</tuv>
+		</tu>
+		<tu tuid='YOUR PROFILE HINT'>
+			<tuv xml:lang="zh">
+				<seg>请你及时更新的个人信息，特别是邮寄地址，以便你参加活动后我们给你邮寄各种精美的免费产品和材料。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Update your profile often so we can invite you to as many great Spark Campaigns as possible, and ship you products and other campaign materials. 
+You can also update your contact information and preferences.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION'>
+			<tuv xml:lang="zh">
+				<seg>联系信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Contact Information</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Confirm_shipping_address'>
+			<tuv xml:lang="zh">
+				<seg>请确认快递收件人信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Confirm shipping address</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_NAME'>
+			<tuv xml:lang="zh">
+				<seg>用户名：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Name:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_RECIPIENTS_NAME'>
+			<tuv xml:lang="zh">
+				<seg>收件人姓名：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Recipient: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_ADDRESS'>
+			<tuv xml:lang="zh">
+				<seg>地址：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Address:  </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_ADDRESS1'>
+			<tuv xml:lang="zh">
+				<seg>地址：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Address: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_ADDRESS2'>
+			<tuv xml:lang="zh">
+				<seg>备选地址：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Address 2: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT CITY'>
+			<tuv xml:lang="zh">
+				<seg>所在城市：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>City: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT POSTAL_CODE'>
+			<tuv xml:lang="zh">
+				<seg>邮政编码：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Postal Code: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT COUNTRY'>
+			<tuv xml:lang="zh">
+				<seg>国家：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Country: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_PHONE'>
+			<tuv xml:lang="zh">
+				<seg>电话：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Phone: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_EMAIL'>
+			<tuv xml:lang="zh">
+				<seg>邮箱：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email:</seg>
+			</tuv>
+		</tu>
+				<tu tuid='CONTACT INFORMATION_LOGIN_PHONE'>
+			<tuv xml:lang="zh">
+				<seg>电话：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Phone:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT BIRTHDAY'>
+			<tuv xml:lang="zh">
+				<seg>生日：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Birthday: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT GENDER'>
+			<tuv xml:lang="zh">
+				<seg>性别: </seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Gender: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT GENDER_MALE'>
+			<tuv xml:lang="zh">
+				<seg>男</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Male</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT GENDER_FEMALE'>
+			<tuv xml:lang="zh">
+				<seg>女</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Female</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT NOT_SPECIFIED'>
+			<tuv xml:lang="zh">
+				<seg>保密</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Not specified</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_EDIT'>
+			<tuv xml:lang="zh">
+				<seg>修改</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Edit</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT ACCOUNT_DATA'>
+			<tuv xml:lang="zh">
+				<seg>帐户信息:</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Account Data:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT CONTACT_INFORMATION'>
+			<tuv xml:lang="zh">
+				<seg>联系信息:</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Contact Information:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT MAILING_ADDRESS'>
+			<tuv xml:lang="zh">
+				<seg>邮寄地址:</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Mailing Address:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_EDIT'>
+			<tuv xml:lang="zh">
+				<seg>确定</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Confirm</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT_INFORMATION_EDIT_AND_RERURN'>
+			<tuv xml:lang="zh">
+				<seg>确认</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Confirm</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT OTHER'>
+			<tuv xml:lang="zh">
+				<seg>其它:</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Other:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT SELECT_DATE'>
+			<tuv xml:lang="zh">
+				<seg>选择日期</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Select Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='EDIT PROFILE'>
+			<tuv xml:lang="zh">
+				<seg>编辑更多个人信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Edit Your Spark Profile</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_OLDPASSWORD'>
+			<tuv xml:lang="zh">
+				<seg>旧密码：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>OldPassword:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_NEWPASSWORD'>
+			<tuv xml:lang="zh">
+				<seg>新密码：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>NewPassword:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_CONFIRMNEWPASSWORD'>
+			<tuv xml:lang="zh">
+				<seg>确认新密码：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Confirm:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_CHANGEPASSWORD'>
+			<tuv xml:lang="zh">
+				<seg>修改密码</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Change Password</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Please_enter_your_name'>
+			<tuv xml:lang="zh">
+				<seg>不能为空，且不能超过50字符!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Name cann't be empty!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Please_enter_your_recipients_name'>
+			<tuv xml:lang="zh">
+				<seg>收件人不能超过30字符!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Must be less than 30 characters!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Please_enter_your_address'>
+			<tuv xml:lang="zh">
+				<seg>地址长度不能超过240字符!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Must be less than 240 characters!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Please_enter_your_postalcode'>
+			<tuv xml:lang="zh">
+				<seg>邮政编码不能超过30字符!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Must be less than 30 characters!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Please_enter_your_country'>
+			<tuv xml:lang="zh">
+				<seg>国家长度不能超过30字符!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Must be less than 30 characters!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Please_enter_your_birthdate'>
+			<tuv xml:lang="zh">
+				<seg>请输入正确出生日期!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please enter the correct birthday!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Please_enter_your_phone'>
+			<tuv xml:lang="zh">
+				<seg>电话号码不能超过50字符!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Must be less than 50 characters!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Save_Successfully'>
+			<tuv xml:lang="zh">
+				<seg>密码修改成功!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Change password Successfully!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Password_is_wrong'>
+			<tuv xml:lang="zh">
+				<seg>旧密码不正确!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Old password is incorrect!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='New_password_and_repeat_must_be_consistent'>
+			<tuv xml:lang="zh">
+				<seg>新密码不匹配!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>New password and Repeat must be consistent!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Can_not_be_empty'>
+			<tuv xml:lang="zh">
+				<seg>不能为空，且必须大于6个字符小于20字符！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Can not be empty, and more than 6 characters!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Please_enter_and_confirm_your_new_password'>
+			<tuv xml:lang="zh">
+				<seg>请输入你的新密码</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please enter and confirm your new password</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Please_enter_and_confirm_your_new_password_hint'>
+			<tuv xml:lang="zh">
+				<seg>（密码长度必须大于6个字符）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>(6 character minimum, password is case sensitive.)</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Submit'>
+			<tuv xml:lang="zh">
+				<seg>提交</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Forgot_your_password?'>
+			<tuv xml:lang="zh">
+				<seg>忘记你的密码？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Forgot your password?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Forgot_your_password_Content_By_SMS'>
+			<tuv xml:lang="zh">
+				<seg>请你输入你在星星火注册的电话号码，我们将发送重置密码的短信给你。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Type in the phone number associated with your wildfire account and we'll send you an sms with instructions to reset your password.</seg>
+			</tuv>
+		</tu>
+				<tu tuid='Forgot_your_password_Content'>
+			<tuv xml:lang="zh">
+				<seg>请你输入你在星星火注册的电话号码，我们将发送重置密码的短信给你。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Type in the phone number associated with your wildfire account and we'll send you an sms with instructions to reset your password.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Check_you_email'>
+			<tuv xml:lang="zh">
+				<seg>请查收你的邮件</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please check your email</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Check_you_phone'>
+			<tuv xml:lang="zh">
+				<seg>请查收你的短信</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please check your SMS</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Check_you_email_Content1'>
+			<tuv xml:lang="zh">
+				<seg>谢谢！我们已经将邮件发送到</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Thank you. We have sent an email to </seg>
+			</tuv>
+		</tu>
+				<tu tuid='Check_you_phone_Content1'>
+			<tuv xml:lang="zh">
+				<seg>谢谢！我们已经将短信发送到</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Thank you. We have sent one SMS to </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Check_you_email_Content2'>
+			<tuv xml:lang="zh">
+				<seg>，请在24小时内点击邮件中的链接重置你的星星火密码。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> with instructions to reset your password. Please follow the link in the email within 24 hours to complete your password reset.</seg>
+			</tuv>
+		</tu>
+				<tu tuid='Check_you_phone_Content2'>
+			<tuv xml:lang="zh">
+				<seg>，请在24小时内访问短信中的链接重置你的星星火密码。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> with instructions to reset your password. Please follow the link in the SMS within 24 hours to complete your password reset.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Send_fail_Try_Again'>
+			<tuv xml:lang="zh">
+				<seg>发送失败！请再试一次或联系我们。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Send fail! Try again or Contact us.</seg>
+			</tuv>
+		</tu>
+				<tu tuid='The_phone_is_not_existed'>
+			<tuv xml:lang="zh">
+				<seg>该电话号码在星星火中并不存在，请输入你在星星火注册的电话号码。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>This phone is not existed in Wildfire! Please enter a valid phone.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='The_email_is_not_existed'>
+			<tuv xml:lang="zh">
+				<seg>该邮件地址在星星火中并不存在，请输入你在星星火注册的邮箱地址。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>This email is not existed in Wildfire! Please enter a valid email.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Your_reset_passwrod_link'>
+			<tuv xml:lang="zh">
+				<seg>你的重置密码链接不正确或已经过期。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your reset passwrod link is incorrect or overdue!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_have_reset_the_password!'>
+			<tuv xml:lang="zh">
+				<seg>你已经成功重置星星火密码！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have reset the password!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Fail_New_password_is_incorrect!'>
+			<tuv xml:lang="zh">
+				<seg>重置失败：你输入的新密码不合法！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Fail: New password is incorrect!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Log in'>
+			<tuv xml:lang="zh">
+				<seg>登录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Log in</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Back'>
+			<tuv xml:lang="zh">
+				<seg>返回</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Back</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Forget_password'>
+			<tuv xml:lang="zh">
+				<seg>忘记密码？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Forget password?</seg>
+			</tuv>
+		</tu>
+        <tu tuid='Last_Time_Login'>
+            <tuv xml:lang="zh">
+                <seg>上一次登录时间：</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Last time login:</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_gender'>
+            <tuv xml:lang="zh">
+                <seg>性别：</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Gender:</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_gender_Female'>
+            <tuv xml:lang="zh">
+                <seg>女</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Female</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_gender_Male'>
+            <tuv xml:lang="zh">
+                <seg>男</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Male</seg>
+            </tuv>
+        </tu>
+        
+        <tu tuid='Consumer_birth_year'>
+            <tuv xml:lang="zh">
+                <seg>你的出生年份：</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Your Birth year:</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_birth_year_Before 1960'>
+            <tuv xml:lang="zh">
+                <seg>1960以前</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Before 1960</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_birth_year_After 1995'>
+            <tuv xml:lang="zh">
+                <seg>1995以后</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>After 1995</seg>
+            </tuv>
+        </tu>
+        
+        <tu tuid='Consumer_profession'>
+            <tuv xml:lang="zh">
+                <seg>你的职业：</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Profession:</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Student'>
+            <tuv xml:lang="zh">
+                <seg>在校学生</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Student</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Education'>
+            <tuv xml:lang="zh">
+                <seg>教育/科研</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Education</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Freelancers'>
+            <tuv xml:lang="zh">
+                <seg>自由职业者</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Freelancers</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Housewife/Retirement'>
+            <tuv xml:lang="zh">
+                <seg>家庭主妇/退休</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Housewife/Retirement</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Manufacturing/Operating'>
+            <tuv xml:lang="zh">
+                <seg>生产/营运</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Manufacturing/Operating</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Construction'>
+            <tuv xml:lang="zh">
+                <seg>建筑/房地产</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Construction</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Art/Design'>
+            <tuv xml:lang="zh">
+                <seg>艺术/设计</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Art/Design</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Advertising/Marketing'>
+            <tuv xml:lang="zh">
+                <seg>广告/市场/媒体</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Advertising/Marketing</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Finance/Banking'>
+            <tuv xml:lang="zh">
+                <seg>金融/银行/保险</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Finance/Banking</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_IT/Electronics Industry'>
+            <tuv xml:lang="zh">
+                <seg>计算机/互联网/通信/电子</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>IT/Electronics Industry</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Service Industry'>
+            <tuv xml:lang="zh">
+                <seg>服务业</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Service Industry</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Financial Accounting'>
+            <tuv xml:lang="zh">
+                <seg>会计/财务</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Financial Accounting</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Servant/Interpreter'>
+            <tuv xml:lang="zh">
+                <seg>公务员/翻译</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Servant/Interpreter</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_HR/Administration'>
+            <tuv xml:lang="zh">
+                <seg>人事/行政/高级管理</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>HR/Administration</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Medical treatment'>
+            <tuv xml:lang="zh">
+                <seg>医疗/护理</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Medical treatment</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Consulting/Lawyer'>
+            <tuv xml:lang="zh">
+                <seg>咨询/法律</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Consulting/Lawyer</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Marketing'>
+            <tuv xml:lang="zh">
+                <seg>销售</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Marketing</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Purchasing/Distributing'>
+            <tuv xml:lang="zh">
+                <seg>采购/物流</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Purchasing/Distributing</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Biology/Pharmacy'>
+            <tuv xml:lang="zh">
+                <seg>生物/制药</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Biology/Pharmacy</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Supporting'>
+            <tuv xml:lang="zh">
+                <seg>客服/技术支持</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Supporting</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_profession_Other'>
+            <tuv xml:lang="zh">
+                <seg>其他</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Other</seg>
+            </tuv>
+        </tu>
+        
+        <tu tuid='Consumer_education'>
+            <tuv xml:lang="zh">
+                <seg>最高学历：</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Education:</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_education_High-School'>
+            <tuv xml:lang="zh">
+                <seg>高中</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>High-School</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_education_Junior_college'>
+            <tuv xml:lang="zh">
+                <seg>大专</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Junior college</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_education_Bachelor'>
+            <tuv xml:lang="zh">
+                <seg>本科</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Bachelor</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_education_Master'>
+            <tuv xml:lang="zh">
+                <seg>硕士</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Master</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_education_Doctorate'>
+            <tuv xml:lang="zh">
+                <seg>博士</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Doctorate</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_education_Other'>
+            <tuv xml:lang="zh">
+                <seg>其他</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Other</seg>
+            </tuv>
+        </tu>
+        
+        <tu tuid='Consumer_have_children'>
+            <tuv xml:lang="zh">
+                <seg>你目前有孩子吗？</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Do you have children now?</seg>
+            </tuv>
+        </tu>
+        
+        <tu tuid='Consumer_children_birth_year'>
+            <tuv xml:lang="zh">
+                <seg>你的孩子出生年份？</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>What's the birth year of your child? </seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_children_birth_year_Before 1980'>
+            <tuv xml:lang="zh">
+                <seg>1980以前</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Before 1980</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_children_birth_year_After 2010'>
+            <tuv xml:lang="zh">
+                <seg>2010以后</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>After 2010</seg>
+            </tuv>
+        </tu>
+        
+         <tu tuid='Consumer_income_level_per_month'>
+            <tuv xml:lang="zh">
+                <seg>你现在的月收入水平？</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Your income level per month?</seg>
+            </tuv>
+        </tu>
+        
+        <tu tuid='Consumer_do_your_often_go_shopping_online'>
+            <tuv xml:lang="zh">
+                <seg>你经常在网上购物吗？</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Do your often make some online shopping?</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_do_your_often_go_shopping_online_Never'>
+            <tuv xml:lang="zh">
+                <seg>从不</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Never</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_do_your_often_go_shopping_online_Once a week or more'>
+            <tuv xml:lang="zh">
+                <seg>每周一次或多次</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Once a week or more</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_do_your_often_go_shopping_online_Once a month or more'>
+            <tuv xml:lang="zh">
+                <seg>每月一次或多次</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Once a month or more</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_do_your_often_go_shopping_online_Less then once a month'>
+            <tuv xml:lang="zh">
+                <seg>少于每月一次</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Less then once a month</seg>
+            </tuv>
+        </tu>
+        
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for'>
+            <tuv xml:lang="zh">
+                <seg>如果你得到一笔意外的奖金，会倾向于拿它做哪些事？</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>If you get an unexpected bonus, what will you use it for?</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_Traveling'>
+            <tuv xml:lang="zh">
+                <seg>用于旅游</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Traveling</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_House ware'>
+            <tuv xml:lang="zh">
+                <seg>购置家里需要的东西</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Purchase house ware</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_Further education'>
+            <tuv xml:lang="zh">
+                <seg>继续深造，参加各种培训</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Further education</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_Clothes and shoes'>
+            <tuv xml:lang="zh">
+                <seg>购买好看的衣服和鞋子</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Purchase nice clothes and shoes</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_Electronic products'>
+            <tuv xml:lang="zh">
+                <seg>购买自己喜欢的电子产品或玩具</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Purchase Electronic products or toys</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_Good food'>
+            <tuv xml:lang="zh">
+                <seg>购买有营养的食物改善家人的饮食</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Good food to improve their family's diet</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_Luxury'>
+            <tuv xml:lang="zh">
+                <seg>购买奢侈品体现自己的品味</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Purchase luxury products</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_Skin care products'>
+            <tuv xml:lang="zh">
+                <seg>用于身体/皮肤的护理</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Body/skin care</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_Gym and yoga'>
+            <tuv xml:lang="zh">
+                <seg>用于健身，瑜伽</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Gym and yoga</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_High-level party'>
+            <tuv xml:lang="zh">
+                <seg>参加高档次的酒会和Party</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Cocktail party</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_What_will_you_use_extra_bouns_for_Investment and stock'>
+            <tuv xml:lang="zh">
+                <seg>用于投资，股票，基金等</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Investment, stocks, funds, etc.</seg>
+            </tuv>
+        </tu>
+        
+        <tu tuid='Consumer_Extra_Info_Subject'>
+			<tuv xml:lang="zh">
+				<seg>完善你的个人资料</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your personal info</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Consumer_Extra_Info_Completeness'>
+			<tuv xml:lang="zh">
+				<seg>你的资料完整度：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Completeness:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Consumer_Extra_Info_Notice_Content'>
+			<tuv xml:lang="zh">
+				<seg>填写下面问题有助于我们了解你，从而为你提供合适的口碑活动。星星火尊重会员的隐私，严格保密会员的个人资料。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Filling in the following questions will help us understand you, so we will invite you to join more campaigns.
+				</seg>
+			</tuv>
+		</tu>
+        <tu tuid='Consumer_Extra_Info_Confirm'>
+			<tuv xml:lang="zh">
+				<seg>提交</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Confirm</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Forget_Password_SMS'>
+		  <tuv xml:lang="zh">
+			<seg>星星火密码重置验证码:</seg>
+		  </tuv>
+		  <tuv xml:lang="en">
+		    <seg>Wildfire Password Reset Code:</seg>
+		  </tuv>
+		</tu>
+		<tu tuid='Address Notice'>
+		  <tuv xml:lang="zh">
+			<seg>请填写上海地区的办公地址</seg>
+		  </tuv>
+		  <tuv xml:lang="en">
+		    <seg></seg>
+		  </tuv>
+		</tu>
+		<tu tuid='Rank_Detail'>
+		  <tuv xml:lang="zh">
+			<seg>这是等级相关信息：</seg>
+		  </tuv>
+		  <tuv xml:lang="en">
+		    <seg></seg>
+		  </tuv>
+		</tu>
+		<tu tuid='Rank'>
+		  <tuv xml:lang="zh">
+			<seg>等级：</seg>
+		  </tuv>
+		  <tuv xml:lang="en">
+		    <seg></seg>
+		  </tuv>
+		</tu>
+	</body>
+</tmx>

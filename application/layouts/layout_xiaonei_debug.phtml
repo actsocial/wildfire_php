@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>校内 - 星星火 </title>
+<link href="<?php echo $this->baseUrl();?>/css/new_xiaonei_debug.css" rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->baseUrl();?>/css/new_xiaonei.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div class="container">
+    	<div class="header">
+        	<div class="logo"><a href="#"><img src="<?php echo $this->imageUrl;?>/images/new_xiaonei/logo.gif" /></a></div>
+            <ul>
+            	<li class="selected"><a href="#">首页</a></li>
+                <li><a href="#">邀请好友</a></li>
+                <li><a href="#">操作记录</a></li>
+                <li><a href="#">帮助与培训</a></li>
+            </ul>
+            <div class="personal-info">
+            	<img src="<?php echo $this->imageUrl;?>/images/new_xiaonei/face.gif" />
+                <div class="points">我的积分:<strong>4400</strong></div>
+                <div class="status"><a href="#">3天前:我参加了Bugslock的活动,并且提交了一份报告</a></div>
+            </div>
+        </div>
+		<?php echo $this->layout()->content; ?>
+		<div class="footer"></div>
+	</div>
+</body>
+</html>

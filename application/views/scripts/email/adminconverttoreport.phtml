@@ -1,0 +1,45 @@
+ <link href="/index.php?format=feed&amp;type=rss&amp;lang=en" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+ <link href="/index.php?format=feed&amp;type=atom&amp;lang=en" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+ <link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+ <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/calendar-win2k-1.css" />
+ <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/smoothness/jquery-ui-1.7.2.custom.css" />
+ <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/thickbox.css" />
+ <script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js" ></script>
+ <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/thickbox.js"></script>
+
+<link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/newhome.css" type="text/css"/>
+<link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/questionnaire.css" type="text/css"/>
+<?php if(!$this->consumer){?>
+      <center>没有对应的用户。</center>
+  <?php }elseif(!$this->invitation){?>
+      <center>该用户没有参加活动。</center>
+  <?php }?>
+ <?php if($this->consumer&&$this->invitation){?>
+
+<?php 
+if (isset($this->file)) {  // if static file exist
+    include($this->file);
+}
+?>
+<?php if (isset($this->file)) { ?>
+<script language="JavaScript" type="text/javascript">
+  $('id').value = '';
+  $('submit').disabled='disabled';
+  var url = "<?php echo $this->url(array('controller'=>'common','action'=>'getaccesscode'));?>";
+  var params = 'surveyId='+ <?php echo $this->surveyId ;?>+'&email=<?php echo $this->consumer->email?>';
+  new Ajax.Request(
+      url,
+      {
+      method: 'get',
+      parameters: params,
+      onSuccess: function(msg) {
+          var accessCode = msg.responseText;
+          $('id').value = accessCode.substring(1,accessCode.length-1);
+          $('submit').disabled='';
+          }
+      }
+  );
+</script>
+<?php } ?>
+
+<?php } ?>

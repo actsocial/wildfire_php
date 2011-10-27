@@ -1,0 +1,61 @@
+
+
+<div class="search_field">
+<p>参加“Bailey”活动任务,分享你所感受的</p>
+</div>	
+		
+		<div>
+		<table class='mission' CELLPADDING="5px" style="font-size:11px">
+			<tr >
+				<td style="width:35%">
+					<div class="mission_instruction">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/one.jpg' width=36 height=36 />拍摄自己和百利创意照片</p>
+					</div>
+				</td>
+				<td style="background: url('<?php echo $this->baseUrl();?>images/mission/arrow1.jpg') no-repeat bottom left;"></td>
+				<td style="width:25%"></td>
+			</tr>
+			<tr style="width:50%">
+				<td></td>
+				<td>
+					<div class="mission_process">
+						<p><img src='<?php echo $this->baseUrl();?>/images/mission/two.jpg' width=36 height=36 /><a style="color:#FE6700;font-weight:bold;">
+							点击链接提交你的百利故事和照片,等待管理员审核			
+						</p>
+					</div>
+				</td>
+				<td style="background: url('<?php echo $this->baseUrl();?>/images/mission/arrow1.jpg') no-repeat bottom left;"></td>
+			</tr>
+			<tr >
+				<td>
+					<div class="mission_reward">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/three.jpg' width=35 height=36 />如果合格获得相应的积分,用于礼品兑换,更有机会获得“百利达人”称号并获得精美奖品(共三名)。</p>
+					</div>
+				</td>
+				<td style="background: url('<?php echo $this->baseUrl();?>/images/mission/arrow3.jpg') no-repeat top left ;"></td>
+				<td>
+					<div class="mission_reward">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/four.jpg' width=36 height=36 />如果不合格，请再次提交。</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td style="height:60px; background: url('<?php echo $this->baseUrl();?>/images/mission/button.jpg') no-repeat center center; ">
+				<ul class="submit-report" style="display: block;">
+			<div class="li-wrapper">
+		<li><?php if ($this->state == 'COMPLETED'){?>
+		
+		           <div style="font-weight:bold; font-size:16px; text-align:center;"><a  onclick="return false;" href="#">已经完成任务</a></div>
+		<?php }else{?>
+			<div style="font-weight:bold; font-size:16px; text-align:center;"><a  onclick="filloutDialogOpen('<?php echo $this->baseUrl();?>/mission/paticipate/id/<?php echo $this->campaign_id ?>');return false;" href="#">点击参与任务</a></div>
+		<?php }?>
+		</li>
+			</div>
+</ul>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		
+		</div>

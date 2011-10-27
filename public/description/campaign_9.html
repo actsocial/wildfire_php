@@ -1,0 +1,60 @@
+<div class="article-box"><div class="article-box-inner">
+<div class="campaign-images">
+	 <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_7_side.jpg"/>
+</div>
+<div class="main-column campaign-content" style="width:470px;margin-left:40px;padding-top:5px;">
+	<div class="submit-report"><a  onmouseover="openSubMenu();" onmouseout="closeSubMenu();" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>9));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>9));?>" class="standard-report-button">提交报告</a>
+		<div class="submit-menu" style="display:none;" onmouseover="openSubMenu();" onmouseout="closeSubMenu();">
+			<ul>
+				<li><a onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>9));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>9));?>">提交报告</a></li>
+
+				<!--  <li><a href="#" style="color: #999;">分享照片</a></li>-->
+				<li><a href="#" onclick="submitUrlDialogOpen();">分享网址</a></li>
+			</ul>
+	</div>
+	</div>
+
+	
+	<h1 style="width:240px">金宝汤口碑活动</h1>
+	<h2 style="width:240px">“浓汤真肉，开饭早！”</h2>
+</div>
+<div class="campaign-content">
+
+	<p class="zh" style="width:640px">欢迎参加金宝汤活动！</p>
+	<p class="zh" style="width:640px">美国金宝汤公司始创于1869年，是全球领先的汤品制造商。 2010年，作为汤品专家，金宝汤公司将领先的制汤技艺和中国的传统汤品经验结合，推出了多个成品原汤系列，以满足广大中国家庭和食汤爱好者多元化、高品质的品汤诉求。</p>
+	<p class="zh" style="width:640px">金宝汤帮你省去所有烧汤步骤 －买，汰，烧。打开包装，大块优质肉和蔬菜都能看得见。汤浓汁厚且醇香美味。让你手不沾菜就能和家人一起享受美味好汤！</p>
+
+</div>
+<div style="clear: both;"></div>
+</div></div>
+<div class="campaign-summary campaign-campbells">
+	<div id="campbells">
+	<div class="spark-report-box" style="margin-bottom:15px;">
+		<div class="spark-report-box-inner">
+			<div class="ul-wrapper" style="font-size:14px;">
+				<h1 style="font-size:16px;color:#3461ad;">活动进程</h1>
+				<br/>
+				<li >活动剩余时间: <strong><?php echo $this->dayCount?></strong> 天</li>
+				<li style="padding-top:4px;">已提交报告数: <strong><?php echo $this->reportCount?></strong> 份</li>
+				<li style="padding-top:4px;">获得星星火积分: <strong><?php echo $this->campaignPoint?></strong> 分</li>
+			
+			<!--<a href="<?php echo $this->baseUrl();?>/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>-->
+			</div>
+		</div>
+	</div>
+	<div class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<div class="ul-wrapper" style="font-size:14px;">
+				<h1 style="font-size:16px;color:#3461ad;">更多有趣的内容</h1>
+				<br/>
+				<li><a href="http://jinbaotang.xingxinghuo.com/ " target="blank">金宝汤活动官网</a></li>
+				<li style="padding-top:4px;"><a href="http://www.19lou.com/forum-9-thread-30455797-1-1.html" target="blank">看看其他妈妈们在19楼上讨论金宝汤</a></li>
+				<li style="padding-top:4px;"><a href="http://www.campbellsoup.com.hk/tc/home/index.asp" target="blank">看看更多关于金宝汤</a></li>
+			
+			<!--<a href="<?php echo $this->baseUrl();?>/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>-->
+			</div>
+		</div>
+	</div>
+	</div>
+<div style="clear: both;"></div>
+</div>

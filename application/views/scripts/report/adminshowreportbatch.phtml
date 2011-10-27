@@ -1,0 +1,271 @@
+<div align="center">
+		<h1 style="padding-top:40px;"><?php echo $this->translate("Admin_Reports")?></h1>
+		<p>Total:<?php echo $this->totalReports;?><br/>
+			Approved:<?php echo $this->totalApprovedReports;?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</p>
+		<table class="survey-history" style ="width:900px;">
+		<form name="form"
+	action="<?php echo $this->url(array('controller'=>'report','action'=>'admincreatebatch'));?>"
+	method="post">
+			<tr>
+				<!--<th></th>
+				-->
+				<th><?php echo $this->translate("His_No.")?></th>
+				<th><?php echo $this->translate("Amin_Consumer_email")?></th>
+				<th><?php echo $this->translate("His_Reports_date")?></th>
+				<th><?php echo $this->translate("Admin_Conumer_Report_Total")?></th>
+				<th><a href="#" onclick = "javascript:setSelectedReportState()"> >><?php echo $this->translate("His_Reports_state")?></a></th>
+				<th><?php echo $this->translate("Admin_Grade")?></th>
+				<th></th>
+			</tr>
+			<?php $i = $this->NoInitValue ;
+			foreach ($this->paginator as $report):
+				$report_id = $report['id'];
+			?>
+			
+				<tr	>
+				<!--<td><input type="checkbox" id="checkbox_<?php echo $i; ?>" name="checkbox_<?php echo $i; ?>"></td>
+				-->
+				<td><?php echo $i;?></td>
+				<td><?php echo $report['email']?></td>
+				<td><?php echo $report['create_date']?></td>
+				<td>&nbsp;&nbsp;<?php if(array_key_exists($report['consumer_id'],$this->reportAmountArray)){
+					
+					if(array_key_exists($report['consumer_id'],$this->reportCampaignAmountArray)){
+						echo $this->reportCampaignAmountArray[$report['consumer_id']];
+					}
+					echo '/'.$this->reportAmountArray[$report['consumer_id']];
+				}?></td>
+				<td>
+					<select id='state_<?php echo $i; ?>' name='state_<?php echo $i; ?>' onclick = "javascript:saveSelectedReportState('<?php echo $i; ?>')" >
+						<?php if($report['state'] !=null && $report['state'] == 'APPROVED'){?>
+						<OPTION style= "BACKGROUND-COLOR: #CFDDED" VALUE="APPROVED" Selected><?php echo $this->translate("His_Reports_APPROVED")?></OPTION>
+						<OPTION style= "BACKGROUND-COLOR: #CFDDED" VALUE="UNAPPROVED" ><?php echo $this->translate("His_Reports_UNAPPROVED")?></OPTION>
+						<OPTION VALUE="NEW" ><?php echo $this->translate("His_Reports_NEW")?></OPTION>
+						<?php }?>
+						<?php if($report['state'] !=null && $report['state'] == 'UNAPPROVED'){?>
+						<OPTION style= "BACKGROUND-COLOR: #CFDDED" VALUE="APPROVED" ><?php echo $this->translate("His_Reports_APPROVED")?></OPTION>
+						<OPTION style= "BACKGROUND-COLOR: #CFDDED" VALUE="UNAPPROVED" Selected><?php echo $this->translate("His_Reports_UNAPPROVED")?></OPTION>
+						<OPTION VALUE="NEW" ><?php echo $this->translate("His_Reports_NEW")?></OPTION>
+						<?php }?>
+						<?php if($report['state'] != null && $report['state'] == 'NEW'){?>
+						<OPTION style= "BACKGROUND-COLOR: #CFDDED" VALUE="APPROVED" ><?php echo $this->translate("His_Reports_APPROVED")?></OPTION>
+						<OPTION style= "BACKGROUND-COLOR: #CFDDED" VALUE="UNAPPROVED" ><?php echo $this->translate("His_Reports_UNAPPROVED")?></OPTION>
+						<OPTION VALUE="NEW" Selected><?php echo $this->translate("His_Reports_NEW")?></OPTION>
+						<?php }?>
+					</select>
+				</td>
+				<td>
+					<select id='grade_<?php echo $i; ?>' name='grade_<?php echo $i; ?>'>
+						<?php if(!array_key_exists($report_id,$this->pointArray) || $this->pointArray[$report_id] == '0'){?>
+						<OPTION VALUE="0" Selected>0</OPTION>
+						<OPTION VALUE="100" >100</OPTION>
+						<OPTION VALUE="200" >200</OPTION>
+						<OPTION VALUE="300" >300</OPTION>
+						<OPTION VALUE="400" >400</OPTION>
+						<OPTION VALUE="500" >500</OPTION>
+						<?php }else{?>
+							<?php if($this->pointArray[$report_id] == '100'){?>
+							<OPTION VALUE="0" >0</OPTION>
+							<OPTION VALUE="100" Selected>100</OPTION>
+							<OPTION VALUE="200" >200</OPTION>
+							<OPTION VALUE="300" >300</OPTION>
+							<OPTION VALUE="400" >400</OPTION>
+							<OPTION VALUE="500" >500</OPTION>
+							<?php }?>
+							<?php if($this->pointArray[$report_id] == '200'){?>
+							<OPTION VALUE="0" >0</OPTION>
+							<OPTION VALUE="100" >100</OPTION>
+							<OPTION VALUE="200" Selected>200</OPTION>
+							<OPTION VALUE="300" >300</OPTION>
+							<OPTION VALUE="400" >400</OPTION>
+							<OPTION VALUE="500" >500</OPTION>
+							<?php }?>
+							<?php if($this->pointArray[$report_id] == '300'){?>
+							<OPTION VALUE="0" >0</OPTION>
+							<OPTION VALUE="100" >100</OPTION>
+							<OPTION VALUE="200" >200</OPTION>
+							<OPTION VALUE="300" Selected>300</OPTION>
+							<OPTION VALUE="400" >400</OPTION>
+							<OPTION VALUE="500" >500</OPTION>
+							<?php }?>
+							<?php if($this->pointArray[$report_id] == '400'){?>
+							<OPTION VALUE="0" >0</OPTION>
+							<OPTION VALUE="100" >100</OPTION>
+							<OPTION VALUE="200" >200</OPTION>
+							<OPTION VALUE="300" >300</OPTION>
+							<OPTION VALUE="400" Selected>400</OPTION>
+							<OPTION VALUE="500" >500</OPTION>
+							<?php }?>
+							<?php if($this->pointArray[$report_id] == '500'){?>
+							<OPTION VALUE="0" >0</OPTION>
+							<OPTION VALUE="100" >100</OPTION>
+							<OPTION VALUE="200" >200</OPTION>
+							<OPTION VALUE="300" >300</OPTION>
+							<OPTION VALUE="400" >400</OPTION>
+							<OPTION VALUE="500" Selected>500</OPTION>
+							<?php }?>
+						<?php }?>
+					</select>
+				</td>
+
+					<input type="text" id="consumer_id_<?php echo $i; ?>" name='consumer_id' value=<?php echo $report['consumer_id']?> style="display:none;"/>
+					<input type="text" id="report_id_<?php echo $i; ?>" name='report_id' value=<?php echo $report['id']?> style="display:none;"/>
+				<td>
+					<a href='#' onclick = "javascript:setStatus('<?php echo $i; ?>')" ><?php echo $this->translate('His_Reports_setting');?></a>
+					<a href="#" onclick = "javascript:showReport('<?php echo $i; ?>', '<?php echo $report['accesscode']?>', '<?php echo $report['id']?>')" ><?php echo $this->translate('Admin_Show');?></a>
+					<a href="<?php echo $this->url(array('controller'=>'report','action'=>'adminreply', 'report_id'=>$report['id']));?>">
+					<?php if (!array_key_exists($report['id'], $this->allReplysArray)){ 
+						echo $this->translate('Admin_Reply');
+					}
+					else { 
+						$temp = $report['id'];
+						if($this->allReplysArray[$temp] == 'SENT') {echo $this->translate('Admin_Replied'); }
+						if($this->allReplysArray[$temp] == 'TEMP') {echo $this->translate('Not_Confirm'); }
+					}?>
+					
+					</a>
+					
+					
+				</td>
+				</tr>
+
+			
+			<tr id = "tr_<?php echo $i; ?>" name = "tr_<?php echo $i; ?>" style="display:none;">		
+				<td colspan="6" style ="width: 700px;"><div id = "div_<?php echo $i++; ?>" ></div></td>
+			</tr>
+			<?php endforeach;?>
+			<input type="text" id="tr_record" value="" style="display:none;">
+			<input type="text" id="reportAmount" value=<?php echo $i-1; ?> style="display:none;">
+			</form>
+		</table>
+		 <?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?> 
+		<br>
+</div>
+<script type="text/javascript">
+var arrayReportIds = new Array();　
+function saveSelectedReportState(i){
+	arrayReportIds.push(i);
+}
+function setSelectedReportState(){
+	
+	var reportids = "";
+//	for(i=1; i<=$('reportAmount').value; i++){
+//		if($('checkbox_'+i).checked){
+//			reportids += $('report_id_'+i).value+'@'+$('state_'+i).value+',';
+//		}
+//	}
+	for(i=0; i<arrayReportIds.length; i++){
+			reportids += $('report_id_'+arrayReportIds[i]).value+'@'+$('state_'+arrayReportIds[i]).value+',';
+	}
+//	alert(reportids);
+	var url = '<?php echo $this->url(array('controller'=>'report','action'=>'adminsetselectedreport'));?>';    	
+	var pars = 'type=reportState&reportids='+reportids;
+	new Ajax.Request(     
+		url,      
+		{     
+		method: 'post',      
+		parameters: pars,      
+		onSuccess: function(){
+			window.location.reload();	
+			}    
+		}
+	);
+	
+}
+function setStatus(i){
+
+	var url = '<?php echo $this->url(array('controller'=>'report','action'=>'adminupdatereport'));?>';    
+
+	var pars = 'grade='+$('grade_'+i).value+'&state='+$('state_'+i).value
+	+'&consumer_id='+$('consumer_id_'+i).value+'&set_report_id='+$('report_id_'+i).value;
+//	alert(pars);
+	new Ajax.Request(     
+		url,      
+		{     
+		method: 'post',      
+		parameters: pars,      
+		onSuccess: function(){
+				alert("设置成功！/ You have set it successfully!")
+			}    
+		}
+	);
+}
+function showReport(i,accesscode,report_id){
+	
+//	var tr = $('tr_'+i); 
+	if($('tr_record').value != null && $('tr_record').value == i){
+		document.getElementsByName('tr_'+i)[0].style.display = "none";
+		$('tr_record').value = '';
+	}else{
+		if($('tr_record').value != ''){
+			var j = $('tr_record').value;
+			document.getElementsByName('tr_'+j)[0].style.display = "none";
+		}
+		document.getElementsByName('tr_'+i)[0].style.display = "";
+		$('tr_record').value = i;
+	}
+	var url='<?php echo $this->url(array('controller'=>'report','action'=>'ajaxreport'));?>';
+	var params = 'url='+'/report/showAnswer/accessCode/'+accesscode+'&accessReportId='+report_id;
+	// notice the use of a proxy to circumvent the Same Origin Policy. 
+	new Ajax.Request(url, 
+			{
+				method: 'get',   
+				parameters:params,
+				onSuccess: function(transport) {
+				     var div = $('div_'+i);  
+				     div.innerHTML =  transport.responseText;
+//				     alert($F("div"));  
+				}
+	}); 
+}
+
+window.alert = function(txt)    
+{    
+ var shield = document.createElement("DIV");    
+ shield.id = "shield";    
+ shield.style.position = "absolute";    
+ shield.style.left = "0px";    
+ shield.style.top = "0px";    
+ shield.style.width = "100%";    
+ shield.style.height = document.body.scrollHeight+"px";    
+ shield.style.background = "";    
+ shield.style.textAlign = "center";    
+ shield.style.zIndex = "10000";    
+ shield.style.filter = "alpha(opacity=0)";    
+ var alertFram = document.createElement("DIV");    
+ alertFram.id="alertFram";    
+ alertFram.style.position = "absolute";    
+ alertFram.style.left = "50%";    
+ alertFram.style.top = "50%";    
+ alertFram.style.marginLeft = "-200px";    
+ alertFram.style.marginTop = "-75px";    
+ alertFram.style.width = "300px";    
+ alertFram.style.height = "100px";    
+ alertFram.style.background = "#ccc";    
+ alertFram.style.textAlign = "center";    
+ alertFram.style.lineHeight = "150px";    
+ alertFram.style.zIndex = "10001";    
+ strHtml = "<ul style=\"list-style:none;margin:0px;padding:0px;width:100%\">\n";    
+ strHtml += " <li style=\"background:#DD828D;text-align:left;padding-left:20px;font-size:14px;font-weight:bold;height:25px;line-height:25px;border:1px solid #F9CADE;\">[提示信息 / System Infor]</li>\n";    
+ strHtml += " <li style=\"background:#fff;text-align:center;font-size:12px;height:120px;line-height:120px;border-left:1px solid #F9CADE;border-right:1px solid #F9CADE;\">"+txt+"</li>\n";    
+ strHtml += " <li style=\"background:#FDEEF4;text-align:center;font-weight:bold;height:25px;line-height:25px; border:1px solid #F9CADE;\"><input type=\"button\" value=\"OK\" onclick=\"doOk()\" /></li>\n";    
+ strHtml += "</ul>\n";    
+ alertFram.innerHTML = strHtml;    
+ document.body.appendChild(alertFram);    
+ document.body.appendChild(shield);    
+ var c = 0;    
+ this.doAlpha = function(){    
+     if (c++ > 20){clearInterval(ad);return 0;}    
+     shield.style.filter = "alpha(opacity="+c+");";    
+ }    
+ var ad = setInterval("doAlpha()",5);    
+ this.doOk = function(){    
+     alertFram.style.display = "none";    
+     shield.style.display = "none";    
+ }    
+ alertFram.focus();    
+ document.body.onselectstart = function(){return false;};    
+}    
+
+</script>

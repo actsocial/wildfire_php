@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_1'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[欢迎你参加“益等水果吧”星星火活动]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Welcome to the Eden Juice Spark Campaign]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_1'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+  欢迎你参加益等水果吧“口口相传”活动！
+
+  星星火很高兴能为你推荐的益等水果吧，不仅仅是因为它是北京获得新鲜健康食品的最好去处，而且提供迅捷的送货上门服务。
+
+  你的益等水果吧优惠礼券将在几天内寄到，所以请确定你在星星火社区的个人地址信息是否正确。
+
+  在你收到优惠礼券后，你会发现有：
+   
+    - 一张可以得到一顿免费益等水果吧食物的优惠券
+    - 一张带上你朋友就可以得到两杯免费的果汁的优惠券
+    - 十张给你朋友的半价优惠券
+    - 关于益等水果吧和星星火社区的精美介绍材料
+
+  同时，别忘了登录星星火社区了解星星火如何给你带来惊喜，我们期待你的反馈报告！
+
+  星星火 — 中国唯一的“口口相传”社区
+
+----------------------------------------------
+
+如果遇到什么问题，请及时的联系我们：
+
+Email： info@wildfire.asia]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Welcome to the Eden Juice Word-Of-Mouth campaign!
+
+The Wildfire team in Beijing is really excited to be a part of Eden Juice’s success. Not only are they the best place in town to get fresh and healthy sandwiches and juices, but they’re fast and they’ll deliver straight to your door.
+
+Your Eden Juice Spark Kit will arrive in a few days, so please make sure the address in your Spark Profile is correct.
+
+In your Spark Kit, you’ll find:
+
+  -Voucher for a free meal and juice from Eden Juice
+  -Voucher for two free juices for a friend and yourself
+  -Ten 50% off coupons to give to your friends
+  -Lots of information on Eden Juice and Wildfire
+
+In the mean time, be sure to explore your Spark homepage to get a good idea of how Wildfire works. We look forward to reading your Spark reports!
+
+- Your friends at Wildfire.
+
+----------------------------------------------
+Contact us if you have any questions:
+Email： info@wildfire.asia]]></seg>
+			</tuv>
+		</tu>
+	
+		
+		<tu tuid='Finish_Spark_Campaign_Email_subject_campaign_1'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[Free Stuff from Eden Juice Bar(来自"益等果汁吧"的免费食物)]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Free Stuff from Eden Juice Bar(来自"益等果汁吧"的免费食物)]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Finish_Spark_Campaign_Email_body_campaign_1'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?,
+
+非常感谢你参加“益等果汁吧”星星火活动！希望你与你的朋友都机会去三里屯享受那新鲜美味的果汁！
+
+请你点击下面的链接完成问卷，以便让我们了解活动的进行情况，另外你将得到200点星星火积分。把你们的想法和谈话告诉我们，这对我们和益等果汁吧都非常重要。
+
+?URL?
+
+感谢你成为星星火社区的一员，别忘了记得去星星火看看最近有哪些令人兴奋的活动！
+
+星星火 — 中国唯一的“口口相传”社区
+
+----------------------------------------------
+
+www.xingxinghuo.cn
+
+如果遇到什么问题，请及时的联系我们：
+
+Email： info@wildfire.asia]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Dear ?USERNAME?, 
+
+Thanks for participating in the Eden Juice Bar Spark Campaign. Hopefully you and your friends had a chance to check out all the great smoothies they have over in sanlitun!
+
+Please take a quick second to give back to Eden Juice Bar by telling us know how the campaign went. This is important because it lets Eden Juice Bar know how many people heard about them and what everyone thought. You'll also earn 200 Spark Points! 
+
+?URL?
+
+Thanks for being a part of Wildfire’s word-of-mouth community, and be sure to check back for more exciting word-of-mouth campaigns soon!
+
+Sincerely,
+
+Your friends at Wildfire.
+
+----------------------------------------------
+
+www.xingxinghuo.cn
+
+Contact us if you have any questions:
+
+Email： info@wildfire.asia]]></seg>
+			</tuv>
+		</tu>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_2'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[欢迎你参加“蓝泉书店”星星火活动]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Welcome to the Blue Fountain Online Bookstore Spark Campaign]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_2'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+欢迎加入蓝泉网上书店口碑活动！
+
+有了蓝泉书店，中国的英文读者终于能够有一个方便又实惠的地方购买各种英文图书了。不再有让人无法忍受的越洋递送费用，也不再需要要挟朋友们从海外带书了！
+
+你的星星火礼包将会在几天内就到达，请确保你档案信息中的地址是正确的。
+
+在你的星星火礼包中将会包括：
+
+   - 一张150元代金券，可以用于从500,000本藏书中购买书籍和用于递送费
+
+   - 5张给你朋友的6折优惠券
+
+   - 15张给你朋友的8折优惠券
+
+同时，请确保让星星火网站知道事情进行得怎么样。我们期待着你的口碑报告！
+
+你星星火的朋友
+
+----------------------------------------------
+
+如你有任何问题请联系我们：
+
+Email： info@wildfire.asia]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Welcome to the Blue Fountain Online Bookstore Spark Campaign!
+
+With Blue Fountain, English readers in China finally have a fast and affordable place to get a full selection of English language books. No more outrageous international shipping charges, and no more blackmailing friends to lug books from overseas!
+
+Your Spark Kit will arrive in a few days, so please make sure the address in your profile is correct.
+
+In your Spark Kit, you’ll find:
+
+    - 150 RMB towards a free book and shipping, from 500,000 titles
+
+    - 5 vouchers for 40% off for your friends
+
+    - 15 vouchers for 20% off for your friends
+
+In the mean time, be sure to explore the Wildfire website to get a good idea of how everything works. We look forward to reading your Spark reports!
+
+Your friends at Wildfire.
+
+----------------------------------------------
+
+Contact us if you have any questions:
+
+Email： info@wildfire.asia]]></seg>
+			</tuv>
+		</tu>
+	
+		
+		
+		
+		
+		
+		
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_3'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[BugsLock星星火活动礼包将会在几天后快递到你手中]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Your BugsLock Spark Kit Will Arrive Soon]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_3'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的 ?USERNAME?，
+
+欢迎你参与BugsLock驱蚊环星星火口碑活动！
+
+身边的蚊虫不但非常烦人，而且还传播疾病——包括疟疾、登革热和乙型脑炎，它们都在国内的不同地区爆发过。
+
+有了BugsLock驱蚊环，让你有了一种简单方便，100%自然的方式远离蚊虫的烦扰和它们身上携带的疾病。
+
+你的星星火礼包将在几天后快递到你手中，请确保你的地址和联系信息正确！如果你想修改地址或是现在就开始提交星星火报告，请打开下面链接：
+
+http://home.xingxinghuo.cn/public/home/index
+
+在你的星星火礼包中，你将会看到：
+
+  - 5个新款BugsLock
+  - 15张给你朋友使用的6折优惠券
+  - 1本BugsLock星星火活动手册
+
+还有，一定不要忘了登录星星火查看我们是怎么运作的。当然，不一定要等到收到礼包，你现在就可以开始和朋友谈论BugsLock驱蚊环，并通过星星火报告来提交你们的谈论内容。您提交的报告越多，你将获得更多更好活动的邀请和精美礼品。
+
+你的朋友，
+白雪
+flora@xingxinghuo.cn
+400-600-8707
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Welcome to the BugsLock Mosquito Repellant Bracelet Spark Campaign!
+
+Not only are mosquitoes incredibly annoying, but they also spread disease - including malaria, dengue fever, and Japanese encephalitis, all of which are endemic to China.
+
+With BugsLock Mosquito Repellant Bands, there is finally a convenient, 100% natural way to keep safe from mosquitoes and the diseases they carry. 
+
+Your Spark Kit will arrive in a few days, so please make sure the address in your profile is correct. If you’d like to change your address or submit a report, you can do so here:
+
+http://home.xingxinghuo.cn/public/home/index
+
+In your Spark Kit, you’ll find:
+
+  - Five BugsLock Mosquito Repellant Bands
+  - Fifteen 40% off coupons for your friends
+  - BugsLock Spark Guide
+
+In the mean time, be sure to explore the Wildfire website to get a good idea of how everything works. Of course, you don’t have to wait until your Spark Kit arrives to tell your friends: you can submit a Spark Report at any time!
+
+
+Your friendly Wildfire Community Manager,
+Flora
+flora@xingxinghuo.cn
+400 600 8707
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+		</tu>
+		
+		
+		
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_4'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[普瑞来（PURELL）星星火活动体验包将会在几天后快递到你手中]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Your PURELL Spark Kit Will Arrive Soon]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_4'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+欢迎你参与普瑞来（PURELL）净手消毒液星星火口碑活动！
+
+日常生活中我们到处都会接触到病菌：电梯扶手、栏杆、门把手以及握手的时候。实际上，疾病是最有可能通过手部传染给我们！
+
+现在有一种在任何时间与地点都能有效阻止手部病菌传播的简单方法：
+
+普瑞来净手消毒液将在15秒时间内杀死99.99%的病菌。该产品来自美国，是美国洗手液销量第一的消毒液品牌，也是被国内许多大医院一直信赖的产品。
+
+你的星星火礼包将在几天后快递到你手中，请确保你的地址和联系信息正确！如果你想修改地址或是现在就开始提交星星火报告，请打开下面链接：
+
+http://home.xingxinghuo.cn/public/home/index
+
+在你的星星火礼包中，你将会看到：
+
+  - 1瓶250毫升普瑞来（PURELL）净手消毒液
+  - 3瓶15毫升与你好友分享的便携普瑞来净手消毒液
+  - 25张与其他人分享的7折优惠券
+
+还有，一定不要忘了登录星星火查看我们是怎么运作的。当然，不一定要等到收到礼包，你现在就可以开始和大家谈论普瑞来净手消毒液，并通过星星火报告来提交你们的谈论内容。您提交的报告越多，你将获得更多更好活动的邀请和精美礼品。
+
+
+你的朋友，
+白雪
+flora@xingxinghuo.cn
+400 600 8707
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Welcome to the PURELL Hand Sanitizer Spark Campaign!
+
+Germs are everywhere we touch: on escalators, railings, doorknobs, and every time we greet a friend. In fact, hands are one of the most common transmission points for disease! 
+
+But there is an easy, effective way to defend against germs, anytime, anywhere. 
+
+PURELL kills 99.99% of germs in 15 seconds or less. It’s the #1 recommended brand in the USA, imported from the USA, and is preferred by major hospitals in China. 
+
+Your Spark Kit will arrive in a few days, so please make sure the address in your profile is correct. If you’d like to change your address or submit a report, you can do so here:
+
+http://home.xingxinghuo.cn/public/home/index
+
+In your Spark Kit, you’ll find:
+
+  - One 250 ml bottle of PURELL
+  - Three 15 ml travel bottles, to share with your friends
+  - 30% off coupons, to share with your friends
+
+In the mean time, be sure to explore the Wildfire website to get a good idea of how everything works. Of course, you don’t have to wait until your Spark Kit arrives to tell your friends: you can submit a Spark Report at any time!
+
+
+Your friendly Wildfire Community Manager,
+Flora
+flora@xingxinghuo.cn
+400 600 8707
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+		</tu>
+		
+		
+		
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_5'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[普瑞来（PURELL）星星火活动体验包将会在几天后快递到你手中]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Your PURELL Spark Kit Will Arrive Soon]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_5'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+欢迎你参与普瑞来（PURELL）净手消毒液星星火口碑活动！
+
+日常生活中我们到处都会接触到病菌：电梯扶手、栏杆、门把手以及握手的时候。实际上，疾病是最有可能通过手部传染给我们！
+
+现在有一种在任何时间与地点都能有效阻止手部病菌传播的简单方法：
+
+普瑞来净手消毒液将在15秒时间内杀死99.99%的病菌。该产品来自美国，是美国洗手液销量第一的消毒液品牌，也是被国内许多大医院一直信赖的产品。
+
+你的星星火礼包将在几天后快递到你手中，请确保你的地址和联系信息正确！如果你想修改地址或是现在就开始提交星星火报告，请打开下面链接：
+
+http://home.xingxinghuo.cn/public/home/index
+
+在你的星星火礼包中，你将会看到：
+
+  - 1瓶250毫升普瑞来（PURELL）净手消毒液
+  - 3瓶15毫升与你好友分享的便携普瑞来净手消毒液
+  - 25张与其他人分享的7折优惠券
+
+还有，一定不要忘了登录星星火查看我们是怎么运作的。当然，不一定要等到收到礼包，你现在就可以开始和大家谈论普瑞来净手消毒液，并通过星星火报告来提交你们的谈论内容。您提交的报告越多，你将获得更多更好活动的邀请和精美礼品。
+
+
+你的朋友，
+白雪
+flora@xingxinghuo.cn
+400 600 8707
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Welcome to the PURELL Hand Sanitizer Spark Campaign!
+
+Germs are everywhere we touch: on escalators, railings, doorknobs, and every time we greet a friend. In fact, hands are one of the most common transmission points for disease! 
+
+But there is an easy, effective way to defend against germs, anytime, anywhere. 
+
+PURELL kills 99.99% of germs in 15 seconds or less. It’s the #1 recommended brand in the USA, imported from the USA, and is preferred by major hospitals in China. 
+
+Your Spark Kit will arrive in a few days, so please make sure the address in your profile is correct. If you’d like to change your address or submit a report, you can do so here:
+
+http://home.xingxinghuo.cn/public/home/index
+
+In your Spark Kit, you’ll find:
+
+  - One 250 ml bottle of PURELL
+  - Three 15 ml travel bottles, to share with your friends
+  - 30% off coupons, to share with your friends
+
+In the mean time, be sure to explore the Wildfire website to get a good idea of how everything works. Of course, you don’t have to wait until your Spark Kit arrives to tell your friends: you can submit a Spark Report at any time!
+
+
+Your friendly Wildfire Community Manager,
+Flora
+flora@xingxinghuo.cn
+400 600 8707
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+		</tu>
+		
+		
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_6'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[卡夫优冠早餐馅饼星星火活动体验包将会在几天后快递到你手中]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[卡夫优冠早餐馅饼星星火活动体验包将会在几天后快递到你手中]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_6'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+欢迎你参与卡夫优冠早餐馅饼星星火口碑活动！
+
+优冠早餐馅饼是卡夫食品中国公司最新开发的全中国第一个营养又美味的针对3 - 13岁孩子的包装早餐产品。它的质地松软美味，帮助早晨忙碌的您方便地保证孩子从早餐中摄入足够的营养。
+
+你的星星火礼包将在几天后快递到你手中，请确保你的地址和联系信息正确！如果你想修改地址或是现在就开始提交星星火报告，请打开下面链接：
+
+http://home.xingxinghuo.cn/public/home/index
+
+在你的星星火礼包中，你将会看到：
+
+  - 2包50克给你孩子的优冠早餐馅
+  - 4包50克与你好友分享的优冠早餐馅饼
+  - 1盒给你孩子的彩色蜡笔
+
+还有，一定不要忘了登录星星火查看我们是怎么运作的。当然，不一定要等到收到礼包，你现在就可以开始和大家谈论卡夫优冠早餐馅饼，并通过星星火报告来提交你们的谈论内容。您提交的报告越多，你将获得更多更好活动的邀请和精美礼品。
+
+
+你的朋友，
+白雪
+flora@xingxinghuo.cn
+400 600 8707
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+欢迎你参与卡夫优冠早餐馅饼星星火口碑活动！
+
+优冠早餐馅饼是卡夫食品中国公司最新开发的全中国第一个营养又美味的针对3 - 13岁孩子的包装早餐产品。它的质地松软美味，帮助早晨忙碌的您方便地保证孩子从早餐中摄入足够的营养。
+
+你的星星火礼包将在几天后快递到你手中，请确保你的地址和联系信息正确！如果你想修改地址或是现在就开始提交星星火报告，请打开下面链接：
+
+http://home.xingxinghuo.cn/public/home/index
+
+在你的星星火礼包中，你将会看到：
+
+  - 2包50克给你孩子的优冠早餐馅
+  - 4包50克与你好友分享的优冠早餐馅饼
+  - 1盒给你孩子的彩色蜡笔
+
+还有，一定不要忘了登录星星火查看我们是怎么运作的。当然，不一定要等到收到礼包，你现在就可以开始和大家谈论卡夫优冠早餐馅饼，并通过星星火报告来提交你们的谈论内容。您提交的报告越多，你将获得更多更好活动的邀请和精美礼品。
+
+
+你的朋友，
+白雪
+flora@xingxinghuo.cn
+400 600 8707
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+		</tu>
+		
+		
+		
+		
+		<!-- kraft -->
+				<tu tuid='pre_invitation_of_kraft_campaign_subject'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[还记得那漂亮的跳绳吗？卡夫现在给你千载难逢的机会]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[还记得那漂亮的跳绳吗？卡夫现在给你千载难逢的机会]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='pre_invitation_of_kraft_campaign_body'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+
+<strong>还记得那漂亮的跳绳吗？卡夫现在给你千载难逢的机会，只有2000位妈妈们将获得邀请</strong><br/><br/>
+
+我们问卷调查了<strong>数万的母亲</strong>，来寻找那些关心她们孩子营养，并且努力和朋友家人分享这些知识的妈妈们。<br/><br/>
+
+<strong>你已经被选择成为她们中的一员！</strong><br/><br/>
+
+如果你在最早加入的2000个人之中，你将会获得卡夫中国送出的最新儿童营养早餐食品，并且和你的孩子一起获得参观甚至参与卡夫全国广告的拍摄，以及其他众多礼品。<br/><br/>
+
+</strong><a href="http://home.xingxinghuo.cn/public/campaignpreinvitation/show/code/?CODE?">请在这里接受邀请</a></strong><br/><br/>
+
+请花费2分钟时间完成参与过程。一旦你完成了活动邀请确认，你将会在大约10-12天内收到官方的正式邀请。<br/><br/>
+
+你的私人信息对我们极其重要，所以你的信息绝不会被用来进行任何推销活动。<br/><br/>
+
+星星火 — 中国唯一的“口口相传”社区<br/>
+400-600-8707
+
+]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+<strong>Do you remember the lovely baloon? Kraft is now offering you a rare opportunity.Only 2,000 mothers are invited to participate in this.</strong><br/>
+<strong>还记得那漂亮的跳绳吗？卡夫现在给你千载难逢的机会，只有2000位妈妈们将获得邀请</strong><br/><br/>
+
+We’ve surveyed <strong>tens of thousands of women</strong> to find mothers who are passionate about their child’s nutrition, and who make a very strong effort to share their motherhood knowledge with friends and family. <br/>
+我们问卷调查了<strong>数万的母亲</strong>，来寻找那些关心她们孩子营养，并且努力和朋友家人分享这些知识的妈妈们。<br/><br/>
+
+<strong>You have been selected as one of these mothers!</strong><br/>
+<strong>你已经被选择成为她们中的一员！</strong><br/><br/>
+
+If you are one of the first 2,000 to join the campaign, you will receive a brand-new nutritional children’s breakfast food from Kraft, for free, and have the chance for your child to be in a nationally televised TV commercial, among lots of other rewards.<br/>
+如果你在最早加入的2000个人之中，你将会获得卡夫中国送出的最新儿童营养早餐食品，并且和你的孩子一起获得参观甚至参与卡夫全国广告的拍摄，以及其他众多礼品。<br/><br/>
+
+</strong><a href="http://home.xingxinghuo.cn/public/campaignpreinvitation/show/code/?CODE?">Click here to accept</a></strong><br/>
+</strong><a href="http://home.xingxinghuo.cn/public/campaignpreinvitation/show/code/?CODE?">请在这里接受邀请</a></strong><br/><br/>
+
+To join, click on the above link and take two minutes to complete the sign-up process. Once you have completed registration, you’ll receive your official invitation in approximately 10-12 days.<br/>
+请花费2分钟时间完成参与过程。一旦你完成了活动邀请确认，你将会在大约10-12天内收到官方的正式邀请。<br/><br/>
+
+Privacy is extremely important to us and your information will NOT be used for solicitation purposes. <br/>
+你的私人信息对我们极其重要，所以你的信息绝不会被用来进行任何推销活动。
+]]></seg>
+			</tuv>
+		</tu>
+		<!-- Campbells -->
+				<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_7'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你的金宝汤"全家福"体验包即将到达]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[你的金宝汤"全家福"体验包即将到达]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_7'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+
+欢迎你参与金宝汤星星火口碑活动！
+
+晚餐后还有很多家务要做？孩子放学已经饿的哇哇叫了？老公晚上还要准备第二天的工作？晚餐后总希望还有多余的空间做其它时间？
+
+金宝汤，创新成品原汤，帮助下班忙碌准备晚餐的妈妈们，省去繁琐的煲汤步骤，免去买、洗、摘、切菜的种种麻烦。晚餐早一点开始，家人更多开心！
+
+美国是全球领先的汤品制造商， 2010年，作为汤品专家，金宝汤公司首先将领先的制汤技艺和中国的传统汤品经验结合，推出了多个成品原汤系列，以满足广大中国家庭和食堂爱好者多元化、高品质的品汤诉求。
+
+你的体验包将在几天内到达，所以请确保提供正确的送货地址。如果你要改变地址或者提交报告，可点击登录：
+
+http://home.xingxinghuo.cn/public/home
+
+体验包里包含了：
+
+2  袋		金宝汤（口味可选）	 				
+1  套		金宝汤“全家福”餐具7件套	 			
+1  张		活动介绍DVD(内附90”广告珍藏版)			
+10 张	给朋友的店内试吃礼券			
+
+
+体验的同时，一定不要忘了登录星星火，了解如何参与我们的各项活动的哦！同时，你也可以登录19楼http://www.19lou.com/forum-9-thread-30455797-1-1.html 来和其它妈妈们分享体验故事。
+
+你可能在收到礼包之前， 就已经开始和大家谈论金宝汤了，所以任何时候都可以来提交你和朋友们的谈话报告了。提交的越多，你就能获得更多积分兑换礼品和更多的活动邀请哟！
+
+你的朋友，
+杨杨
+
+www.xingxinghuo.cn
+电话: 400 600 8707
+QQ: 852666147 
+邮箱／MSN / Kaixin001: yangyang@xingxinghuo.cn]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+亲爱的?USERNAME?，
+
+
+欢迎你参与金宝汤星星火口碑活动！
+
+晚餐后还有很多家务要做？孩子放学已经饿的哇哇叫了？老公晚上还要准备第二天的工作？晚餐后总希望还有多余的空间做其它时间？
+
+金宝汤，创新成品原汤，帮助下班忙碌准备晚餐的妈妈们，省去繁琐的煲汤步骤，免去买、洗、摘、切菜的种种麻烦。晚餐早一点开始，家人更多开心！
+
+美国是全球领先的汤品制造商， 2010年，作为汤品专家，金宝汤公司首先将领先的制汤技艺和中国的传统汤品经验结合，推出了多个成品原汤系列，以满足广大中国家庭和食堂爱好者多元化、高品质的品汤诉求。
+
+你的体验包将在两周左右到达，所以请确保提供正确的送货地址。如果你要改变地址或者提交报告，可点击登录：
+
+http://home.xingxinghuo.cn/public/home
+
+体验包里包含了：
+
+2  袋		金宝汤（口味可选）	 				
+1  套		金宝汤“全家福”餐具7件套	 			
+1  张		活动介绍DVD(内附90”广告珍藏版)			
+10 张	给朋友的店内试吃礼券	 
+
+
+体验的同时，一定不要忘了登录星星火，了解如何参与我们的各项活动的哦！同时，你也可以登录19楼http://www.19lou.com/forum-9-thread-30455797-1-1.html 来和其它妈妈们分享体验故事。
+
+你可能在收到礼包之前， 就已经开始和大家谈论金宝汤了，所以任何时候都可以来提交你和朋友们的谈话报告了。提交的越多，你就能获得更多积分兑换礼品和更多的活动邀请哟！
+
+你的朋友，
+杨杨
+
+www.xingxinghuo.cn
+电话: 400 600 8707
+QQ: 852666147 
+邮箱／MSN / Kaixin001: yangyang@xingxinghuo.cn
+]]></seg>
+			</tuv>
+		</tu>	
+		
+		
+		<!-- LUX -->
+				<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_8'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你的LUX体验包即将到达]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[你的LUX体验包即将到达]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_8'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+亲爱的?USERNAME?，
+
+
+欢迎你参加力士洗护发产品口碑活动！
+
+力士闪亮奇迹－洗发护发完美结合，闪亮直至发梢最后1厘米。实验证明，洗发＋护发系统试用，其效果：
+
+1.为头发提供比单用洗发水多达5倍的保湿喝滋养成分；
+2.相比单用洗发水的功效，更有双倍强韧秀发的作用；
+3.保水＋渗透的完美结合，水润直达发梢最后1厘米，数次使用后，发质明显改善，秀发更加闪亮。
+
+你的星星火力士体验礼包礼包将在几天后快递到你手中，请确保你的地址和联系信息正确！如果你想修改地址或是现在就开始提交星星火报告，请打开下面链接：
+http://home.xingxinghuo.cn/public/
+
+在你的力士体验礼包中，你将会看到：
+10套－ 力士柔亮洗发乳（50ml)和润发精华素（50ml)  
+1瓶－ 力士柔亮洗发乳（200ml)                        
+1瓶－ 力士柔亮润发精华素（200ml)                        
+
+体验的同时，一定不要忘了登录星星火，了解如何参与我们的各项活动的哦！ 当然，不一定要等到收到礼包，你现在就可以开始和大家谈论，并通过星星火报告来提交你们的谈论内容。您提交的报告越多，你将获得更多更好活动的邀请和精美礼品。祝你体验的开心！
+
+杨杨
+邮箱：yangyang@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+亲爱的?USERNAME?，
+
+
+欢迎你参加力士洗护发产品口碑活动！
+
+力士闪亮奇迹－洗发护发完美结合，闪亮直至发梢最后1厘米。实验证明，洗发＋护发系统试用，其效果：
+
+1.为头发提供比单用洗发水多达5倍的保湿喝滋养成分；
+2.相比单用洗发水的功效，更有双倍强韧秀发的作用；
+3.保水＋渗透的完美结合，水润直达发梢最后1厘米，数次使用后，发质明显改善，秀发更加闪亮。
+
+你的星星火力士体验礼包礼包将在几天后快递到你手中，请确保你的地址和联系信息正确！如果你想修改地址或是现在就开始提交星星火报告，请打开下面链接：
+http://home.xingxinghuo.cn/public/
+
+在你的力士体验礼包中，你将会看到：
+10套－ 力士柔亮洗发乳（50ml)和润发精华素（50ml)  
+1瓶－ 力士柔亮洗发乳（200ml)                        
+1瓶－ 力士柔亮润发精华素（200ml)                        
+
+体验的同时，一定不要忘了登录星星火，了解如何参与我们的各项活动的哦！ 当然，不一定要等到收到礼包，你现在就可以开始和大家谈论，并通过星星火报告来提交你们的谈论内容。您提交的报告越多，你将获得更多更好活动的邀请和精美礼品。祝你体验的开心！
+
+杨杨
+邮箱：yangyang@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia]]></seg>
+			</tuv>
+		</tu>
+
+		<!-- Campbells  second period-->
+				<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_9'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你的金宝汤"全家福"体验包即将到达]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[你的金宝汤"全家福"体验包即将到达]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_9'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?,
+
+你已经收到了星星火金宝汤体验礼包了么？希望你和你的同事们喜欢金宝汤的产品！
+
+如果你和你的朋友谈论起金宝汤的产品，我们很有兴趣知道你们谈论了什么呢。记得把你们谈话的时间、地点和内容告诉我们，就可以有更多机会参加星星火的活动，获取免费礼品哦！
+快登录这里提交“口碑报告”吧：
+http://home.xingxinghuo.cn
+
+更多更好的报告，可以获得星星火的积分奖励，兑换礼品哦：
+http://home.xingxinghuo.cn/public/gift/list/page/1
+
+要是你还没有收到星星火礼包，请用邮件后面的方式联系我们，我们会尽快查看你的包裹。
+
+COZY
+邮箱: cozy@wildfire.asia
+电话: 400 600 8707
+信息: 15000895221
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn
+
+星星火口碑活动是怎么进行的？
+第一步：接受活动邀请
+第二步：收到活动体验包
+第三步：和你们的亲友自由地谈论体验的产品，并让我们知道大家是怎么谈论的
+第四步：获得今后更多口碑活动的邀请以及更多免费产品]]>
+</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[亲爱的?USERNAME?,
+
+你已经收到了星星火金宝汤体验礼包了么？希望你和你的同事们喜欢金宝汤的产品！
+
+如果你和你的朋友谈论起金宝汤的产品，我们很有兴趣知道你们谈论了什么呢。记得把你们谈话的时间、地点和内容告诉我们，就可以有更多机会参加星星火的活动，获取免费礼品哦！
+快登录这里提交“口碑报告”吧：
+http://home.xingxinghuo.cn
+
+更多更好的报告，可以获得星星火的积分奖励，兑换礼品哦：
+http://home.xingxinghuo.cn/public/gift/list/page/1
+
+要是你还没有收到星星火礼包，请用邮件后面的方式联系我们，我们会尽快查看你的包裹。
+
+COZY
+邮箱: cozy@wildfire.asia
+电话: 400 600 8707
+信息: 15000895221
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn
+
+星星火口碑活动是怎么进行的？
+第一步：接受活动邀请
+第二步：收到活动体验包
+第三步：和你们的亲友自由地谈论体验的产品，并让我们知道大家是怎么谈论的
+第四步：获得今后更多口碑活动的邀请以及更多免费产品]]></seg>
+			</tuv>
+		</tu>
+		
+		
+		<!-- Rexona -->
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_10'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你的舒耐体验包将于本月寄出]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[你的舒耐体验包将于本月寄出]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_10'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+亲爱的?USERNAME?，
+
+
+欢迎你参加舒耐香体产品口碑活动！
+
+一整天都保持沐浴后的干净清爽, 呈现自己自信优雅的一面, 从容面对繁忙的工作, 是每个时尚白领早上出门前必备的功课。拥有百年历史的全球最大抑汗香体品牌 – 舒耐,必不负你所望。
+
+你的星星火力士体验礼包将于本月快递给你，请确保你提供的地址能在1月25日前收到我们的礼包，这样你才能参加1月31日以前的“舒耐腋下测试活动”哦！
+
+在你的力士体验礼包中，你将会看到：
+2瓶－ 舒耐抑汗清新喷雾（150ml） 
+1本－ 舒耐口碑活动指南
+
+在1月31日之前参加舒耐腋下测试并回复5次星星火给你发的短信，你将会再获得
+10瓶 -  舒耐抑汗清新喷雾（150ml） 
+                       
+体验的同时，一定不要忘了登录星星火，提交报告哦！当然，不一定要等到收到礼包，你现在就可以开始和大家谈论，并通过星星火报告来提交你们的谈论内容。您提交的报告越多，你将获得更多更好活动的邀请和精美礼品。祝你体验的开心！
+
+点击下面的链接，现在就开始提交星星火报告吧！
+http://home.xingxinghuo.cn/public/
+
+
+Cozy
+邮箱：cozy@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+			<seg><![CDATA[
+亲爱的?USERNAME?，
+
+
+欢迎你参加舒耐香体产品口碑活动！
+
+一整天都保持沐浴后的干净清爽, 呈现自己自信优雅的一面, 从容面对繁忙的工作, 是每个时尚白领早上出门前必备的功课。拥有百年历史的全球最大抑汗香体品牌 – 舒耐,必不负你所望。
+
+你的星星火力士体验礼包将于本月快递给你，请确保你提供的地址能在1月25日前收到我们的礼包，这样你才能参加1月31日以前的“舒耐腋下测试活动”哦！
+
+在你的力士体验礼包中，你将会看到：
+2瓶－ 舒耐抑汗清新喷雾（150ml） 
+1本－ 舒耐口碑活动指南
+
+在1月31日之前参加舒耐腋下测试并回复5次星星火给你发的短信，你将会再获得
+10瓶 -  舒耐抑汗清新喷雾（150ml） 
+                       
+体验的同时，一定不要忘了登录星星火，提交报告哦！当然，不一定要等到收到礼包，你现在就可以开始和大家谈论，并通过星星火报告来提交你们的谈论内容。您提交的报告越多，你将获得更多更好活动的邀请和精美礼品。祝你体验的开心！
+
+点击下面的链接，现在就开始提交星星火报告吧！
+http://home.xingxinghuo.cn/public/
+
+
+Cozy
+邮箱：cozy@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia]]></seg>
+			</tuv>
+		</tu>
+		
+	    <tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_11'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[星星火农历新年“闹新春”活动]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[星星火农历新年“闹新春”活动]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_11'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+亲爱的?USERNAME?，
+
+欢迎你参与星星火农历新年“闹新春”活动，来秀秀你心爱的品牌吧！
+
+你有着自己热爱的品牌么？为了一份钟爱，和难以割舍的习惯，不离不弃，只因为它是那个品牌。。。
+那么来晒晒你的宝物吧，它必须是带有你最爱的品牌LOGO，并且为你所持有。
+
+提交一张宝物的照片，一份和亲戚朋友聊起过宝贝品牌的谈话报告，你就自动活动了由星星火提供的500积分！
+
+所有这些，让星星火和你更亲近。你中意的品牌，你的分享，你的创意，将为你获得免费礼品。
+- 一等奖 10名  奖品  价值300元的电子相册一个
+- 二等奖 30名  奖品  价值100元的个性U盘一个
+所有奖品将于农历新年后发出，尽请等待。
+
+
+赶紧登陆以下地址，提交你的创意和分享吧：
+http://home.xingxinghuo.cn/public/home
+
+你的朋友，
+COZY
+www.xingxinghuo.cn
+邮箱：cozy@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+			<seg><![CDATA[
+亲爱的?USERNAME?，
+
+欢迎你参与星星火农历新年“闹新春”活动，来秀秀你心爱的品牌吧！
+
+你有着自己热爱的品牌么？为了一份钟爱，和难以割舍的习惯，不离不弃，只因为它是那个品牌。。。
+那么来晒晒你的宝物吧，它必须是带有你最爱的品牌LOGO，并且为你所持有。
+
+提交一张宝物的照片，一份和亲戚朋友聊起过宝贝品牌的谈话报告，你就自动活动了由星星火提供的500积分！
+
+所有这些，让星星火和你更亲近。你中意的品牌，你的分享，你的创意，将为你获得免费礼品。
+- 一等奖 10名  奖品  价值300元的电子相册一个
+- 二等奖 30名  奖品  价值100元的个性U盘一个
+所有奖品将于农历新年后发出，尽请等待。
+
+
+赶紧登陆以下地址，提交你的创意和分享吧：
+http://home.xingxinghuo.cn/public/home
+
+你的朋友，
+COZY
+www.xingxinghuo.cn
+邮箱：cozy@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+		</tu>
+	    <tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_12'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你的联系新加坡为职场添金体验礼包即将到达]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[你的联系新加坡为职场添金体验礼包即将到达]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_11'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+亲爱的?USERNAME?，
+欢迎你参加联系新加坡为职场添金口碑活动！
+
+新加坡拥有成熟的经商环境，促使7000多家跨国公司在新加坡设立了营运中心，也因此让新加坡成为全球顶尖人才的汇聚之地，到新加坡发展等同获得与来自世界各地精英合作共事的机会，不但能提升专业技能更让视野提升到国际化角度，成为真正的国际级专业人士。
+
+4月17日在上海新天地朗廷酒店将有一场为科技精英举办的Careers@Singapore新加坡就业宣讲会，将邀请500位上海地区的科技精英与来自Panasonic，Micron，Uniconnect等知名跨国企业的招聘单位进行面对面的交流。请详细阅读下面的说明，你可能就是这500位精英中的其中一位。
+
+在你的联系新加坡为职场添金体验礼包中，你将会看到：
+－前往新加坡工作，未来职业生涯发展的潜力介绍 
+－新加坡工作及生活环境介绍  							
+2册 －分享家指南                                 			
+1册  - 案例分享及环境介绍DVD	
+
+收到礼包后，与朋友一起分享这个为职场添金的好机会，在3月31日前到网上上传简历，并与我们确认10位朋友的名字，就有机会为你及朋友获得新加坡就业宣讲会邀请函及精英礼包兑换券。当让，你也可以现在按下下面的链接直接上传简历。
+http://www.contactsingapore.sg/cn/CareersSg/China/Apr2011/cam
+
+你的星星火联系新加坡为职场添金体验礼包将在几天后快递到你手中，请确保你的地址和联系信息正确！如果你想修改地址或是现在就开始提交星星火报告，请打开下面链接：
+http://home.xingxinghuo.cn/public/
+
+体验的同时，一定不要忘了登录星星火，了解如何参与我们的各项活动的哦！ 当然，不一定要等到收到礼包，你现在就可以开始和大家谈论，并通过星星火报告来提交你们的谈论内容。您提交的报告越多，你将获得更多更好活动的邀请和精美礼品。祝你体验的开心！
+
+Cozy
+邮箱：Cozy@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ: 852666147 
+MSN: cozy@xingxinghuo.cn]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+			<seg><![CDATA[
+亲爱的?USERNAME?，
+
+欢迎你参与星星火农历新年“闹新春”活动，来秀秀你心爱的品牌吧！
+
+你有着自己热爱的品牌么？为了一份钟爱，和难以割舍的习惯，不离不弃，只因为它是那个品牌。。。
+那么来晒晒你的宝物吧，它必须是带有你最爱的品牌LOGO，并且为你所持有。
+
+提交一张宝物的照片，一份和亲戚朋友聊起过宝贝品牌的谈话报告，你就自动活动了由星星火提供的500积分！
+
+所有这些，让星星火和你更亲近。你中意的品牌，你的分享，你的创意，将为你获得免费礼品。
+- 一等奖 10名  奖品  价值300元的电子相册一个
+- 二等奖 30名  奖品  价值100元的个性U盘一个
+所有奖品将于农历新年后发出，尽请等待。
+
+
+赶紧登陆以下地址，提交你的创意和分享吧：
+http://home.xingxinghuo.cn/public/home
+
+你的朋友，
+COZY
+www.xingxinghuo.cn
+邮箱：cozy@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ: 852666147 
+MSN: home@wildfire.asia
+Kaixin001: home@wildfire.asia
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+		</tu>
+		
+		<!-- Baileys -->
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_13'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[百利甜酒礼包将于七月中下旬寄出]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[百利甜酒礼包将于七月中下旬寄出]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_13'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+亲爱的：
+
+欢迎你参加星星火社区的百利甜酒大礼包体验分享活动！
+
+好友欢聚，小酌百利，与朋友分享惬意的休闲时光!
+
+如果你还没有提供详细的收件地址及好友姓名，请点击下面的链接填写并完成最后一步。
+http://home.xingxinghuo.cn/public/campaign/precampaignfinished/survey/604
+
+我们的体验分享礼包会在五月下旬前寄出，请确保你提供的地址到时能收到快递。
+
+请在试用的同时，不要忘了登录星星火网站，提交体验分享报告哦！当然，你现在就可以开始和大家谈论，并通过星星火网站提交你们的分享内容。你与我们分享的报告越多内容越详细，你将会获得更多的活动邀请和更多精美实用的体验礼品。
+
+祝你在星星火社区体验愉快！
+
+现在就进入下面的链接，进入“点击提交活动报告”，与我们分享你的体验感受！
+http://home.xingxinghuo.cn/public/home
+
+Alice
+邮箱：comdev@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ:   4006008707
+
+]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+			<seg><![CDATA[
+亲爱的：
+
+欢迎你参加星星火社区的百利甜酒大礼包体验分享活动！
+
+好友欢聚，小酌百利，与朋友分享惬意的休闲时光!
+
+如果你还没有提供详细的收件地址及好友姓名，请点击下面的链接填写并完成最后一步。
+http://home.xingxinghuo.cn/public/campaign/precampaignfinished/survey/604
+
+我们的体验分享礼包会在五月下旬前寄出，请确保你提供的地址到时能收到快递。
+
+请在试用的同时，不要忘了登录星星火网站，提交体验分享报告哦！当然，你现在就可以开始和大家谈论，并通过星星火网站提交你们的分享内容。你与我们分享的报告越多内容越详细，你将会获得更多的活动邀请和更多精美实用的体验礼品。
+
+祝你在星星火社区体验愉快！
+
+现在就进入下面的链接，进入“点击提交活动报告”，与我们分享你的体验感受！
+http://home.xingxinghuo.cn/public/home
+
+Alice
+邮箱：comdev@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ:   4006008707
+
+
+]]></seg>
+			</tuv>
+		</tu>
+	
+		<!-- BluBlocker -->
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_21'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[恭喜你成功参加星星火BluBlocker口碑活动]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[恭喜你成功参加星星火BluBlocker口碑活动]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_21'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+亲爱的：
+
+欢迎你参加星星火社区的BluBlocker太阳镜体验分享活动！炎炎夏日，尽情享受BluBlocker带给你的保护感和舒适感！
+
+在接受活动邀请后，请注意:
+
+如果你还没有提供详细的收件地址及好友姓名，请点击下面的链接填写并完成最后一步。
+http://home.xingxinghuo.cn/public/campaign/precampaignfinished/survey/643
+
+请在试用的同时，不要忘了登录星星火网站，提交体验分享报告哦！当然，你现在就可以开始和大家谈论，并通过星星火网站提交你们的分享内容。你与我们分享的报告越多内容越详细，你将会获得更多的活动邀请和更多精美实用的体验礼品。
+
+现在就进入下面的链接，进入“点击提交活动报告”，与我们分享你的体验感受！
+http://home.xingxinghuo.cn
+
+祝你在星星火社区体验愉快！
+
+
+Alice
+邮箱：alice@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ:   4006008707
+
+]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+			<seg><![CDATA[
+亲爱的：
+
+欢迎你参加星星火社区的BluBlocker太阳镜体验分享活动！炎炎夏日，尽情享受BluBlocker带给你的保护感和舒适感！
+
+在接受活动邀请后，请注意:
+
+如果你还没有提供详细的收件地址及好友姓名，请点击下面的链接填写并完成最后一步。
+http://home.xingxinghuo.cn/public/campaign/precampaignfinished/survey/643
+
+请在试用的同时，不要忘了登录星星火网站，提交体验分享报告哦！当然，你现在就可以开始和大家谈论，并通过星星火网站提交你们的分享内容。你与我们分享的报告越多内容越详细，你将会获得更多的活动邀请和更多精美实用的体验礼品。
+
+现在就进入下面的链接，进入“点击提交活动报告”，与我们分享你的体验感受！
+http://home.xingxinghuo.cn
+
+祝你在星星火社区体验愉快！
+
+
+Alice
+邮箱：alice@xingxinghuo.cn
+电话:  400 600 8707
+短信：15000895221
+QQ:   4006008707
+]]></seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

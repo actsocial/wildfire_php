@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>恭喜您已经被选入参加优冠馅饼体验活动</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/jquery.countdown.css" />
+  <link href="<?php echo $this->baseUrl();?>/css/jquery.alerts.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery-1.3.2.min.js" ></script>
+  <script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery-ui-1.7.2.custom.min.js" ></script>
+  <script src="<?php echo $this->baseUrl();?>/js/jquery.alerts.js" type="text/javascript"></script>
+<script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery.countdown.js" ></script>
+<script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery.countdown-zh-CN.js" ></script>
+<script type="text/javascript">
+ $(document).ready(function() {
+   var date = new Date(); 
+   date.setFullYear(2009, 11, 17);
+   date.setHours(0, 0, 0, 0);
+   $('#time_count').countdown({until: date}); 
+   <?php if(isset($this->message)) {?>
+   	jAlert("<?php echo $this->message;?>", '提示');
+   <?php } ?>
+ });
+
+  function check_yes_or_no() {
+  	var value = 0;
+  	$.each($("input:checked"), function(i, input){
+  	  value += parseInt($(input).attr('value'));
+  	});
+  	if(value == 2) {
+  	  $('#button').attr('value', 'yes');
+  	} else {
+  	  $('#button').attr('value', 'no');
+  	}
+  }
+  
+  function click_yes() {
+  	
+   <?php if(isset($this->message) && isset($this->message) == '您已经填写过了') {?>
+   	jAlert("<?php echo $this->message;?>", '提示');
+   	   	return false;
+   <?php } ?>
+  	
+  	
+  	if($('div#block2 textarea').attr('disabled')) {
+  		$('div#block2 textarea').attr('disabled', false);
+  		$('div#confirm input').attr('src', "<?php echo $this->baseUrl();?>/images/kraft/confirm.jpg");
+  		$('div#confirm input').attr('disabled', false);
+  	}
+  }
+  
+  function click_no() {
+  	<?php if(isset($this->message) && isset($this->message) == '您已经填写过了') {?>
+   	jAlert("<?php echo $this->message;?>", '提示');
+   	return false;
+   <?php } ?>
+  	if(!$('div#block2 textarea').attr('disabled')) {
+  		$('div#block2 textarea').attr('disabled', true);
+  		$('div#confirm input').attr('src', "<?php echo $this->baseUrl();?>/images/kraft/confirm_grey.jpg");
+  		$('div#confirm input').attr('disabled', true);
+  	} 
+  	jConfirm('确定没有兴趣吗?这样将不能参加本次活动', '提示', function(r) {
+      if(r) {
+        location.href = "<?php echo $this->baseUrl();?>/campaignpreinvitation/thankyou/choice/no";
+      }
+    });
+  }
+  
+  function check_content() {
+  	    var content = $('div#block2 textarea').val();
+  	    
+  	    if(content == '' || content.trim() == '') {
+  	      jAlert('请输入报告内容', '提示');
+  	    } else {
+  	      jConfirm('确定要提交吗?提交以后不能更改', '提示', function(r) {
+            if(r) {
+            	$('form').submit();
+            }
+          });
+  	    }
+  		return false;
+  	}
+</script>
+<style type="text/css">
+<!--
+.container {
+  width:960px;
+  height: 750px;
+  margin-left:auto;
+  margin-right:auto;
+  background: url("<?php echo $this->baseUrl();?>/images/kraft/background.jpg");
+}
+
+#content {
+  padding-top: 130px;
+}
+
+#left {
+	float:left;
+	width: 250px;
+	padding-left: 70px;
+}
+
+#right {
+	float: right;
+    width: 630px;
+    padding-left: 10px;
+    padding-top: 50px;
+}
+
+#people_count {
+  width: 139px;
+  height: 35px;
+  padding-left: 103px;
+  padding-top:8px;
+  font-size:20px;
+  font-weight:bold;
+  color: #ffffff;
+}
+
+#time_count {
+  width: 120px;
+  height: 35px;
+  padding-left: 125px;
+  padding-top: 10px;
+  vertical-align:middle;
+  font-size:20px;
+  font-weight:bold;
+  color: #ffffff;
+  float:left;
+}
+
+#block1 {
+  background: url("<?php echo $this->baseUrl();?>/images/kraft/block1.jpg");
+  height:157px;
+  width: 305px;
+}
+
+#block2 {
+width: 602px;
+height: 331px;
+  background: url("<?php echo $this->baseUrl();?>/images/kraft/block2.jpg");
+}
+
+#block2 textarea {
+	margin-left: 25px;
+	margin-top: 230px;
+}
+
+#confirm {
+	padding-right: 38px;
+	padding-top: 10px;
+}
+
+#confirm input {
+	float:right;
+}
+
+#yes_and_no {
+	padding: 0 35px;
+	padding-top: 80px;
+}
+
+#yes {
+	float:left;
+	cursor:hand;
+}
+
+#yes a {
+	border: none;
+}
+#yes a img{
+	border: none;
+}
+
+#no {
+	float:right;
+	cursor:hand;
+}
+
+#no a {
+	border: none;
+}
+#no a img{
+	border: none;
+}
+
+form {
+	margin:0;
+	padding:0;
+}
+-->
+</style>
+</head>
+<body>
+<div class="container">
+  <div id="content">
+    <div id="left">
+      <div id="people_count">
+      <span style="vertical-align:middle;"><?php echo (1000-(int)$this->people_count); ?></span>
+      </div>
+      <div id="time_count">
+      <span style="vertical-align:middle;"></span>
+      </div>
+    </div>
+    <div id="right">
+      <div id="block1">
+      <div id="yes_and_no">
+        <div id="yes">
+        <a href="#">
+        <img onclick="click_yes();return false;" src="<?php echo $this->baseUrl();?>/images/kraft/yes.jpg" />
+        </a>
+        </div>
+        <div id="no">
+        <a href="#">
+        <img onclick="click_no();return false;" src="<?php echo $this->baseUrl();?>/images/kraft/no.jpg" />
+        </a>
+        </div>
+        </div>
+      </div>
+
+      <form name="form" action="<?php echo $this->url(array('controller'=>'campaignpreinvitation','action'=>'show'));?>" method="post" onsubmit="return check_content();">
+      <div id="block2">
+       <input type="hidden" name="area" value="<?php echo $this->area;?>" />
+       <input type="hidden" name="code" value="<?php echo $this->code; ?>" />
+       <textarea name="content" cols="53" rows="3" disabled="disabled"></textarea>
+      </div>
+      <div id="confirm">
+        <input type="image" src="<?php echo $this->baseUrl();?>/images/kraft/confirm_grey.jpg" value="Submit" alt="Submit" disabled="disabled" />
+      </div>
+      </form>
+    </div>
+  </div>
+</div> 
+</body>
+</html>

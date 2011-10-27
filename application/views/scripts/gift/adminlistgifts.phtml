@@ -1,0 +1,80 @@
+<div style="padding:20px; margin-left:100px;">
+
+	<h3><?php echo $this->translate('Gift_list_gift_category')?></h3>
+		<li><a href="<?php echo $this->url(array('controller'=>'gift', 'action'=>'adminlistgifts', 't'=>'ALL', 'p1'=>$this->p1, 'p2'=>$this->p2,'status' => $this->status));?>" <?php if($this->t == "ALL") echo  'style="color:#ED1C24"';?>><?php echo $this->translate('Gift_list_category_all')?></a>	
+		<a href="<?php echo $this->url(array('controller'=>'gift', 'action'=>'adminlistgifts', 't'=>'Digital', 'p1'=>$this->p1, 'p2'=>$this->p2,'status' => $this->status));?>" <?php if($this->t == "Digital") echo  'style="color:#ED1C24"';?>><?php echo $this->translate('Gift_list_category_electronics')?></a>
+		<a href="<?php echo $this->url(array('controller'=>'gift', 'action'=>'adminlistgifts', 't'=>'Makeup', 'p1'=>$this->p1, 'p2'=>$this->p2,'status' => $this->status));?>" <?php if($this->t == "Makeup") echo  'style="color:#ED1C24"';?>><?php echo $this->translate('Gift_list_category_cosmetic')?></a>
+		<a href="<?php echo $this->url(array('controller'=>'gift', 'action'=>'adminlistgifts', 't'=>'Commodity', 'p1'=>$this->p1, 'p2'=>$this->p2,'status' => $this->status));?>" <?php if($this->t == "Commodity") echo  'style="color:#ED1C24"';?>><?php echo $this->translate('Gift_list_category_supplies')?></a>
+		<a href="<?php echo $this->url(array('controller'=>'gift', 'action'=>'adminlistgifts', 't'=>'Other', 'p1'=>$this->p1, 'p2'=>$this->p2,'status' => $this->status));?>" <?php if($this->t == "Other") echo  'style="color:#ED1C24"';?>><?php echo $this->translate('Gift_list_category_others')?></a></li>
+	<div class="clear"></div>
+	<h3><?php echo $this->translate('Gift_list_gift_points')?></h3>
+	<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'adminlistgifts', 't'=>$this->t, 'p1'=> '0', 'p2'=> '0','status' => $this->status));?>" <?php if($this->p2 == "0") echo  'style="color:#ED1C24"';?>><?php echo $this->translate('Gift_list_available_gifts')?></a>
+	    <a href="<?php echo $this->url(array('controller'=>'gift','action'=>'adminlistgifts', 't'=>$this->t, 'p1'=> '0', 'p2'=>'3000','status' => $this->status));?>" <?php if($this->p2 == "3000") echo  'style="color:#ED1C24"';?>>0~3000</a>
+		<a href="<?php echo $this->url(array('controller'=>'gift','action'=>'adminlistgifts', 't'=>$this->t, 'p1'=>'3001', 'p2'=>'5000','status' => $this->status));?>" <?php if($this->p2 == "5000") echo  'style="color:#ED1C24"';?>>3001~5000</a>
+		<a href="<?php echo $this->url(array('controller'=>'gift','action'=>'adminlistgifts', 't'=>$this->t, 'p1'=>'5001', 'p2'=>'8000','status' => $this->status));?>" <?php if($this->p2 == "8000") echo  'style="color:#ED1C24"';?>>5001~8000</a>
+		<a href="<?php echo $this->url(array('controller'=>'gift','action'=>'adminlistgifts', 't'=>$this->t, 'p1'=>'8001', 'p2'=>'100000','status' => $this->status));?>" <?php if($this->p2== "100000") echo  'style="color:#ED1C24"';?>><?php echo $this->translate('Gift_list_above_8000')?></a>
+		</li>
+	<p><br/>
+	筛选：
+	<form action="<?php echo $this->url(array('controller'=>'gift','action'=>'adminlistgifts', 't'=>$this->t, 'p1'=>$this->p1, 'p2'=>$this->p2));?>"  method="post" enctype="application/x-www-form-urlencoded" id="filter_form">
+		<select name="status" onchange="javascript:jQuery('#filter_form').submit()">
+		<OPTION VALUE="ALL" >ALL</OPTION>
+		<OPTION VALUE="OOS" <?php if($this->status == 'OOS') echo "selected";?>>缺货(OOS)</OPTION>
+		<OPTION VALUE="STOCK" <?php if($this->status == 'STOCK') echo "selected";?>>有货(STOCK)</OPTION>
+		</select>
+	</form>
+	<a style="width:165px;color:#ED1C24;font-weight:bold;border:1px solid #000000;font-size:14px;margin-left:100px" href="<?php echo $this->url(array('controller'=>'gift','action'=>'adminaddgift')); ?>">添加新产品</a>
+	</p>
+	
+	<h4>礼品列表</h4>
+	<div class="clear"></div>
+	<div id="gift_list">
+<table cellpadding="0" cellspacing="0" border="0" style="width:800px;">
+    <thead>
+        <tr>
+            <th width="5%">Index</th>
+            <th width="55%">Name</th>
+            <th width="10%">Point</th>
+            <th width="10%">State</th>
+            <th width="10%">Source</th>
+            <th width="10%">Category</th>
+            <th width="10%">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+    <?php $count = 1; foreach($this->products as $product):?>
+        <tr>
+            <td><?php echo $count++;?></td>
+            <td><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'admineditgift', 'product_id'=>$product['id']));?>"><?php echo $product['name']?></a></td>
+            <td><?php echo $product['point'];?></td>
+            <td><?php echo $product['state'];?></td>
+            <td><a href="<?php echo $product['url'];?>"><?php echo $product['source'];?></a></td>
+            <td><?php echo $product['category'];?></td>
+             <td><a href="javascript:deleteGift('<?php echo $product['id']?>')">删除</a></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+	</div>
+</div>
+<script type="text/javascript">
+function deleteGift(id){
+        var answer = confirm ("确认删除产品吗?")
+	if (answer){
+	jQuery.ajax({
+		   type: "POST",
+		   url: "<?php echo $this->url(array('controller'=>'gift','action'=>'deletegiftlogic'));?>",
+		   data: "id=" + id,
+		   success: function(msg){
+					alert(msg);
+					window.location.reload( true );
+		   }
+	});
+	}else{
+	    return;
+	}
+}
+
+
+</script>
+

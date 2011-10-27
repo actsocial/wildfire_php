@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+
+		<tu tuid='Gift_Redeem_More_Products'>
+			<tuv xml:lang="zh">
+				<seg>继续兑换奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Redeem more</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Return_to_Cart'>
+			<tuv xml:lang="zh">
+				<seg>返回订单</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Return to order</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_have_no_enough_point'>
+			<tuv xml:lang="zh">
+				<seg>你的积分不足，无法兑换当前选择的奖品！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have not enough points to redeem the reward!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_have_not_finished_post-campaign_survey'>
+			<tuv xml:lang="zh">
+				<seg>你需要完成一个活动结束问卷。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You must complete at least one campaign.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_do_post-campaign_survey_right_now'>
+			<tuv xml:lang="zh">
+				<seg>现在完成活动结束问卷</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Complete the campaign right now.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_have_not_submit_enough_reports'>
+			<tuv xml:lang="zh">
+				<seg>你需要提交三个通过验证的活动报告。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You must submit more than three Spark Reports.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_submit_reports_right_now'>
+			<tuv xml:lang="zh">
+				<seg>现在提交报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit Spark Reports</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_can_not_redeem_gifts_right_now'>
+			<tuv xml:lang="zh">
+				<seg>你目前无法兑换奖品。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You can not redeem rewards row.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_submit_orders_successfully'>
+			<tuv xml:lang="zh">
+				<seg>你的订单已提交成功，请等待我们的处理。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have submit the order successfully!</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Gift_Back_to_my_list'>
+			<tuv xml:lang="zh">
+				<seg>返回</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Back</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Gift_delete_order_fail'>
+			<tuv xml:lang="zh">
+				<seg>对不起，你取消订单失败或已经取消该订单！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You can not cancel or have canceled the order!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_delete_order_successfully'>
+			<tuv xml:lang="zh">
+				<seg>你已成功取消订单！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have cancel the order!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Gift_consumer_info_incorrect'>
+			<tuv xml:lang="zh">
+				<seg>你的星星火密码不正确！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please enter the correct password!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Gift_can_not_redeem_gift'>
+			<tuv xml:lang="zh">
+				<seg>你的当前的状态无法兑换奖品！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You can not redeem rewards now!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='GIFT_LIST'>
+			<tuv xml:lang="zh">
+				<seg>奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Rewards</seg>
+			</tuv>
+		</tu>
+		<tu tuid='GIFT_CART'>
+			<tuv xml:lang="zh">
+				<seg>挑选奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Select Rewards</seg>
+			</tuv>
+		</tu>
+		<tu tuid='GIFT_ORDER'>
+			<tuv xml:lang="zh">
+				<seg>订单</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Order</seg>
+			</tuv>
+		</tu>
+		<tu tuid='GIFT_DELETE_ORDER'>
+			<tuv xml:lang="zh">
+				<seg>删除订单</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Delete Order</seg>
+			</tuv>
+		</tu>
+		<tu tuid='GIFT_DELETE_CART'>
+			<tuv xml:lang="zh">
+				<seg>删除已选奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Delete All</seg>
+			</tuv>
+		</tu>
+		<tu tuid='GIFT_CONFIRM_CART'>
+			<tuv xml:lang="zh">
+				<seg>确认收件地址</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Confirm</seg>
+			</tuv>
+		</tu>
+		<tu tuid='GIFT_REDEEM'>
+			<tuv xml:lang="zh">
+				<seg>兑换</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>REDEEM</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Add to Cart'>
+			<tuv xml:lang="zh">
+				<seg>兑换奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Select</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_list_gift_category'>
+			<tuv xml:lang="zh">
+				<seg>奖品分类</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Category</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_list_gift_points'>
+			<tuv xml:lang="zh">
+				<seg>积分区间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Range</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_list_category_all'>
+			<tuv xml:lang="zh">
+				<seg>全部</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>All</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_list_category_electronics'>
+			<tuv xml:lang="zh">
+				<seg>数码/家电</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Electronics</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_list_category_cosmetic'>
+			<tuv xml:lang="zh">
+				<seg>美妆护肤</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Cosmetic</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_list_category_supplies'>
+			<tuv xml:lang="zh">
+				<seg>日用品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Home</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_list_category_others'>
+			<tuv xml:lang="zh">
+				<seg>其它</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Others</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_list_available_gifts'>
+			<tuv xml:lang="zh">
+				<seg>可兑换的奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Available rewards</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_list_show_details'>
+			<tuv xml:lang="zh">
+				<seg>奖品信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Details</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_list_above_8000'>
+			<tuv xml:lang="zh">
+				<seg>8000以上</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>>8000</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_points'>
+			<tuv xml:lang="zh">
+				<seg>积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Points</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Gift_Flow_Add_to_Cart'>
+			<tuv xml:lang="zh">
+				<seg>挑选奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Select</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Flow_Confirm'>
+			<tuv xml:lang="zh">
+				<seg>确认收货人信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Confirm</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Flow_Payment'>
+			<tuv xml:lang="zh">
+				<seg>扣除相应积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Redeem</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Flow_Gift_wrap'>
+			<tuv xml:lang="zh">
+				<seg>后台审核</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Delivery</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Flow_Finished'>
+			<tuv xml:lang="zh">
+				<seg>完成发货</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Completed</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_gift_id'>
+			<tuv xml:lang="zh">
+				<seg>奖品编号</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reward ID</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_gift_name'>
+			<tuv xml:lang="zh">
+				<seg>奖品名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reward Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Flow_Qty'>
+			<tuv xml:lang="zh">
+				<seg>兑换数量</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Qty</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Each_Price'>
+			<tuv xml:lang="zh">
+				<seg>单件积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Gift_Price'>
+			<tuv xml:lang="zh">
+				<seg>积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Gift_Point'>
+			<tuv xml:lang="zh">
+				<seg>所需积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Subtotal</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Gift_Subtotal'>
+			<tuv xml:lang="zh">
+				<seg>积分总计</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Total</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Delete'>
+			<tuv xml:lang="zh">
+				<seg>删除</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Delete</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Edit'>
+			<tuv xml:lang="zh">
+				<seg>保存修改</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Edit</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Confrim'>
+			<tuv xml:lang="zh">
+				<seg>确认</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Confirm</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Go_to_redeem'>
+			<tuv xml:lang="zh">
+				<seg>马上兑换</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Confirm</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Cancel'>
+			<tuv xml:lang="zh">
+				<seg>取消</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Cancel</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Delete_Cart'>
+			<tuv xml:lang="zh">
+				<seg>删除所有已选奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Delete All</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_See_more_gifts'>
+			<tuv xml:lang="zh">
+				<seg>返回挑选奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Back</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Your_shopping_cart_is_empty'>
+			<tuv xml:lang="zh">
+				<seg>你还未选择奖品，赶紧行动吧！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have not selected any rewards!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_choose_gifts'>
+			<tuv xml:lang="zh">
+				<seg>马上去挑选奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Choose rewards right away</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_For_the_following_reason'>
+			<tuv xml:lang="zh">
+				<seg>由于以下原因，你暂时无法兑换奖品：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>For the following reasons, you can not exchange rewards:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Shipping_Info'>
+			<tuv xml:lang="zh">
+				<seg>收货人信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Shipping Info</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Edit_Shipping_Cart'>
+			<tuv xml:lang="zh">
+				<seg>返回</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Back</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Confrim_Redeem'>
+			<tuv xml:lang="zh">
+				<seg>确认兑换</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Redeem</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Enter_Password_Info'>
+			<tuv xml:lang="zh">
+				<seg>请输入你的密码，确认后你将兑换</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please enter your password, and it will redeem </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Enter_Password_Info_Point'>
+			<tuv xml:lang="zh">
+				<seg>积分。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> points.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Place_Order'>
+			<tuv xml:lang="zh">
+				<seg>查看我的订单</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Current orders</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Order_create_date'>
+			<tuv xml:lang="zh">
+				<seg>下单时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Create Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Order_State'>
+			<tuv xml:lang="zh">
+				<seg>订单状态</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>State</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_My_Order'>
+			<tuv xml:lang="zh">
+				<seg>我的订单</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>My Order</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Cancel_the_Order?'>
+			<tuv xml:lang="zh">
+				<seg>你确定取消此订单?</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Are you sure cancel the order?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Order_Cancel'>
+			<tuv xml:lang="zh">
+				<seg>我要取消</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Cancel</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Delete_Order_result'>
+			<tuv xml:lang="zh">
+				<seg>处理结果：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>The results:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Order_Intro'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[<h2>订单状态说明：</h2>
+		<p><strong>新订单：</strong>你已经成功提交订单，等待后台管理员审核。</p>
+		<p><strong>订单确认：</strong>后台管理员已审核完成，正在准备发货。</p>
+		<p><strong>已发货：</strong>已经成功发货，请你在预留的收件地址注意查收。</p>
+		<p><strong>用户已取消订单：</strong>在订单确认之前，用户主动撤销的订单。</p>
+		<p><strong>审核未通过：</strong>后台审核未通过的订单，已兑换的积分将会被退还。</p>
+		<p>如有疑问，请拨打客服热线021-58363216-0。</p>]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[<h2>The state of order：</h2>
+		<p><strong>NEW：</strong>The order have been submitted and wait for processing.</p>
+		<p><strong>START：</strong>We have confirm your order and started processing.</p>
+		<p><strong>FINISHED：</strong>Your rewards have been sent.</p>
+		<p><strong>CANCELED：</strong>You have canceled the order.</p>
+		<p><strong>UNAPPROVED：</strong>The order is not approved.</p>
+		<p>If you have any questions, please contact with 021-58363216-0。</p>]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Description_Product_ID'>
+			<tuv xml:lang="zh">
+				<seg>商品编号：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reward ID:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Description_Product_Point'>
+			<tuv xml:lang="zh">
+				<seg>所需积分：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Points:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_gift_list_top_notice'>
+			<tuv xml:lang="zh">
+				<seg>下面的奖品是对你积极参与星星火活动的一种奖励。你也可以继续累积积分兑换更好的礼品。另外，你无需支付快递费，你将完全免费得到它们。别忘了，你必须参加完一个星火活动后你才可以兑换你的积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Rewards are just a small thank you for your honest participation in the Wildfire community. Shipping is provided free of charge.
+Remember, you must have completed at least one campaign to redeem your Spark points!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_gift_list_top_head'>
+			<tuv xml:lang="zh">
+				<seg>兑换奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Redeem Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Please_enter_the_Shipping_Info'>
+			<tuv xml:lang="zh">
+				<seg>请输入完整收件人信息！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please enter the Shipping Info completely!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_There_are_no_orders_now'>
+			<tuv xml:lang="zh">
+				<seg>你当前没有订单。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>There are no orders now.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Gift_Are_you_sure_delete_gift_cart?'>
+			<tuv xml:lang="zh">
+				<seg>你确定要删除所有已选的奖品？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Are you sure delete all selected rewards?</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

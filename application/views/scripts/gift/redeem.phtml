@@ -1,0 +1,30 @@
+<div class="article-box" style="height:180px;">
+	<div class="article-box-inner">
+		<h1 style="margin-left: 0; padding-top:10px;"><?php echo $this->showMessage; ?></h1>
+		<br/>
+		<table style="border-collapse:collapse;border:1px solid;" cellspacing="10px" cellpadding="10px">
+		<?php 
+		if($this->gifts != null){
+			$i = 1;
+			foreach ($this->gifts as $gift):?>
+			<tr>
+				<td style="border:1px solid;"><?php echo $i++;?></td>
+				<td style="border:1px solid;"><?php echo $gift['name'];?></td>
+				<td style="border:1px solid;"><?php echo $gift['amount'];?></input></td>
+				<td style="border:1px solid;"><?php echo $gift['point'];?></td>
+			</tr>
+		<?php endforeach;
+		}?>
+		</table>
+		<div class="buttons-bar">
+			<?php if($this->isErr != null && $this->isErr) {?>
+			<a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'gift','action'=>'confirmcart'));?>"><?php echo $this->translate('Gift_Return_to_Cart')?></a>
+			<?php } else{?>
+			<a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'gift','action'=>'list'));?>"><?php echo $this->translate('Gift_Redeem_More_Products')?></a>
+			<?php }?>
+			<a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"><?php echo $this->translate('Take_Me_Home')?></a>
+		</div>
+		<div style="clear: both;"></div>
+		<p><a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'gift','action'=>'listorder'));?>">查看我的订单</a></p>
+	</div>	
+</div>

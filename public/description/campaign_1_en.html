@@ -1,0 +1,57 @@
+<div class="article-box" >
+	<div class="article-box-inner" >
+		<div class="images-column" style="width: 120px;">
+			<img src="<?php echo $this->baseUrl();?>/images/campaign_1_03.jpg" />
+			<img src="<?php echo $this->baseUrl();?>/images/campaign_1_04.jpg" />
+		</div>
+		
+		<div class="main-column"  style="width: 495px; padding-left: 10px; padding-top:10px;">
+			<div class="main-column" >
+			<h2>Eden Juice Spark Campaign</h2>
+			<p style="font-size: 16px;font-weight:bold;font-style:italic;">Eden Juice – “Where it’s All Good!”</p>
+			</div>
+			<div class="main-column" >
+				<div style="clear:both"></div>
+				<div class="buttons-bar" style="padding-top: 10px; padding-left: 5px;" >
+				<a class="big-button" href="/public/report/create/id/1" ><font color="white">Submit Report</font></a>
+				</div>
+			</div>
+			<div style="clear:both;"></div>
+			<div >
+			<p>Congratulations on joining the Eden Juice Spark Campaign!</p>
+			<p>
+			Don’t have time to cook a healthy meal, or tired of the same greasy restaurants? Eden offers Beijings best healthy alternative, fast! Eden Juice is the perfect place to recharge with juices, smoothies, and sandwiches, made fresh.
+			</p>
+			<p>
+			Eden Juice uses organic ingredients and environmentaly friendly supplies - which means Eden Juice is just as healthy for the planet as it is for you!
+			</p>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
+<div class="article-box" style="background: #fff;" id="statistics">
+<div class="article-box-inner" style="background: #fff;">
+	<div class="images-column">
+		<img src="<?php echo $this->baseUrl();?>/images/campaign_<?php echo $this->id?>_1.jpg"/>
+	</div>
+	<div class="main-column">
+		<h2 style="padding-top: 10px; padding-bottom: 30px;"><?php echo $this->campaign->name?><?php echo $this->translate('Compaign_Statistics')?></h2>
+		<table style="height: 100px;">
+			<colgroup>
+				<col class="label"/>
+				<col class="value" />
+			</colgroup>
+			<tr><td><?php echo $this->translate('Days_Remaining_In_The_Campaign')?></td><td><?php echo $this->dayCount?> <?php echo $this->translate('Day')?></td></tr>
+			<tr><td><?php echo $this->translate('Reports_Submitted')?></td><td><?php echo $this->reportCount?></td></tr>
+			<tr><td><?php echo $this->translate('Spark_Points_Earned')?></td><td><?php echo $this->campaignPoint?></td></tr>
+		</table>
+	</div>
+	<div style="clear:both"></div>
+	<div class="buttons-bar">
+	<a class="big-button" style="float:right;" target="_blank" href="<?php echo $this->baseUrl();?>/download/campaign_<?php echo $this->id?>.pdf"><?php echo $this->translate('View_Spark_Guide')?></a>
+	</div>
+	
+</div>
+</div>

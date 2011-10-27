@@ -1,0 +1,3 @@
+ ALTER TABLE `wildfire`.`report_batch`     ADD COLUMN `totaltime` INT(10) DEFAULT '0' NULL AFTER `campaign_id`;
+  //change default time;
+ UPDATE report_batch SET totaltime =  (-start_datetime +end_datetime );

@@ -1,0 +1,46 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2>New Brand</h2>
+<br/>
+  <p>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'brand','action'=>'adminadd'));?>">New Brand</a></span>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'brand','action'=>'adminlist'));?>">Brand List</a></span>
+  </p>
+<form id="addbrand" name="addbrand" enctype="multipart/form-data" action="<?php echo $this->url(array('controller'=>'brand','action'=>'adminadd'));?>" method="post">
+  <table class="brandtable" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td align="right"><b>Name: </b></td>
+      <td>
+        <input name="name" type="text" size="25">
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Company: </b></td>
+      <td>
+        <input name="company" type="text" size="25">
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Desc: </b></td>
+      <td>
+        <textarea name="description" rows="10" cols="49"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Logo: </b></td>
+      <td>
+        <input id="logo" name="logo" type="file" />
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <input type="submit" value="Submit">
+      </td>
+    </tr>
+  </table>
+</form>
+<div><?php echo $this->error; ?></div>
+<style type="text/css">
+td {padding:4px;}
+</style>
+</div>

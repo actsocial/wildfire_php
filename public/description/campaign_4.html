@@ -1,0 +1,37 @@
+<div class="article-box"><div class="article-box-inner">
+<div class="campaign-images">
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/purell/cam_purell_01.gif"/>
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/purell/cam_purell_02.gif"/>
+</div>
+<div class="main-column campaign-content" style="width:510px;">
+	<div class="submit-report">
+		<a onmouseover="openSubMenu();" onmouseout="closeSubMenu();" href="#" class="standard-report-button">提交报告</a>
+		<div class="submit-menu" style="display:none;" onmouseover="openSubMenu();" onmouseout="closeSubMenu();">
+			<ul>
+				<li><a href="#" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>4));?>');return false;">提交报告</a></li>
+				<!--  <li><a href="#" style="color: #999;">分享照片</a></li>-->
+				<li><a href="#" onclick="submitUrlDialogOpen();">分享网址</a></li>
+			</ul>
+		</div>
+	</div>
+	<h1>普瑞来净手消毒液星星火活动</h1>
+	<h2>“清洁手部—普瑞来”</h2>
+	<p class="zh">欢迎参加普瑞来星星火口碑活动！</p>
+	<p class="zh">使用独家配方，由酒精、护肤霜和维他命E等材料配制而成的普瑞来（Purell）净手消毒液，能在15秒钟内杀死99.99%病菌。生活中病菌无处不在，使用普瑞来将会让你与家人在任何时候与地方远离手部病菌的传染！</p>
+	<p class="zh">普瑞来是多数美国医院最推荐的净手消毒品牌，同时它被上海和北京许多医院所信赖。作为星星火社区的会员，你将在国内最先体验到普瑞来净手消毒液！</p>
+</div>
+<div style="clear: both;"></div>
+</div></div>
+
+<div class="campaign-summary campaign-purell">
+	<div class="logo"><img src="<?php echo $this->baseUrl();?>/images/campaign/purell/cam_purell_logo_zh.jpg"/></div>
+	<div class="summary">
+		<ul>
+			<li>活动剩余时间: <strong><?php echo $this->dayCount?></strong> 天</li>
+			<li>已提交报告数: <strong><?php echo $this->reportCount?></strong> 份</li>
+			<li>获得星星火积分: <strong><?php echo $this->campaignPoint?></strong> 分</li>
+		</ul>
+		<a href="<?php echo $this->baseUrl();?>/download/campaign_4.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>
+	</div>
+<div style="clear: both;"></div>
+</div>

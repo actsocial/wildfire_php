@@ -1,0 +1,67 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+	
+	<div id="maincolumn" >
+        <div class="path"><span class="breadcrumbs pathway"></div>    
+	
+			<br>
+			<h2 ><?php echo $this->translate('Select_User');?></h2>
+			<br>
+			<form id="sqlform" name="sqlform" method="post" action = <?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'admincreate'));?>  >
+			<p style="padding-right:450px;">请输入Sql查询:</p>
+			<textarea rows="5" cols="100" id='sql' name='sql'><?php if($this->sqlstr != null){ echo $this->sqlstr;}else{ echo 'select consumer.id,consumer.email';}?></textarea>
+			<p><?php if($this->errMessage != null){echo $this->errMessage;}?></p>
+			<input type="submit" value="Search" />
+			</form>
+			<div style="padding-right:470px;"><?php if($this->rows != null){ echo "查询结果：";} ?></div>
+			<div style="padding-right:350px;">		
+				<table>
+					<?php $count = 1; foreach($this->rows as $row):?>
+					<tr>
+						<td><input type="checkbox" id="checkbox_<?php echo $count; ?>" name="checkbox_<?php echo $count; ?>" checked /></td>
+						<td><?php echo $count;?>	</td>
+						<?php
+						for($i = 0; $i<count($row)&& $i<=5; $i++){ ?>
+						<td><?php echo current($row);?>	</td>
+							<?php next($row);
+						}
+						
+						if(count($row) > 5){ ?>
+						<td><?php echo '...';?>	</td>
+						<?php
+						}
+						?>
+					</tr>
+					<input type="hidden" id="consumer_id_<?php echo $count; ?>" value=<?php echo $row['id'];?> />
+					<input type="hidden" id="consumer_email_<?php echo $count++; ?>" value=<?php echo $row['email'];?> />  
+					<?php endforeach;?>
+				</table>
+				<input type="hidden" id="invitationAmount" name="invitationAmount" value=<?php echo count($this->rows);?> />
+			<?php if($this->rows != null){?>	
+				<a href="#" style="padding-right:150px;" onclick="javascript:submitForm()" >邀请</a>
+			</div>
+			<?php }?>
+
+
+		<form id="invitationForm" name="invitationForm" method="post" action="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminselectedinvitation'));?>">
+			<input type="hidden" id="consumerids" name="consumerids" value="" />
+			<input type="hidden" id="consumeremails" name="consumeremails" value="" />
+		</form>
+		<span class="article_separator">&nbsp;</span>
+	</div>
+</div>
+<script type="text/javascript">
+function submitForm(){
+	var consumerids = '(';
+	var consumeremails = '';
+	for(var i=1; i<=$('invitationAmount').value; i++){
+		if($('checkbox_'+i).checked){
+			consumerids += $('consumer_id_'+i).value+',';
+			consumeremails += $('consumer_email_'+i).value+';';
+		}
+	}
+	document.invitationForm.consumerids.value = consumerids;
+	document.invitationForm.consumeremails.value = consumeremails;
+	document.forms['invitationForm'].submit(); 
+}
+</script>

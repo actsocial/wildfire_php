@@ -1,0 +1,14 @@
+<div style="padding-bottom:40px;"></div>
+<div class="content" style="background-color:#fff;padding-top:0;">
+<p><a href="<?php echo $this->url(array('controller'=>'sms','action'=>'smsmessagelist'));?>">List sms</a>|<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'smsmessage'));?>">Add sms</a></p>
+<table style="width:900px">
+<tr><th width="20%" align='left'>ID</th><th width="20%" align='left'>Subject</th><th align='left' width='40%'> Content</th><th align='left'>Action</th></tr>
+<?php 
+if (count($this->sms)){
+	foreach ($this->sms as $val){
+		echo "<tr><td>$val[id]</td><td>$val[subject]</td><td>$val[content]</td><td><a href=' ".$this->url(array('controller'=>'sms','action'=>'smsmessagelist'))."/id/$val[id]/do/delete'>Delete</a>|<a href=' ".$this->url(array('controller'=>'sms','action'=>'smsmessage'))."/id/$val[id]/'>Edit</a></td>";
+	}
+}?>
+</table>
+</div>
+</div>

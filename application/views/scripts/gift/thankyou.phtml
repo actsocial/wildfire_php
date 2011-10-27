@@ -1,0 +1,37 @@
+<div class="order-list">
+	<div class="message"><?php echo $this->showMessage; ?></div>
+	<table>
+		<tr>
+			<th>No.</th>
+			<th><?php echo $this->translate('Gift_gift_id');?></th>
+			<th><?php echo $this->translate('Gift_gift_name');?></th>
+			<th><?php echo $this->translate('Gift_Flow_Qty');?></th>
+			<th><?php echo $this->translate('Gift_Gift_Price');?></th>
+		</tr>
+		<?php 
+		if($this->gifts != null){
+			$i = 1;
+			foreach ($this->gifts as $gift):?>
+			<tr>
+				<td><?php echo $i++;?></td>
+				<td><?php echo $gift['id'];?></td>
+				<td><?php echo $gift['name'];?></td>
+				<td><?php echo $gift['amount'];?></td>
+				<td><?php echo $gift['point'];?></td>
+			</tr>
+		<?php endforeach;
+		}?>
+	</table>
+		<div class="buttons-bar center3btn">
+			<a class="button" target="_parent"  href="<?php echo $this->url(array('controller'=>'gift','action'=>'listorder'));?>"><?php echo $this->translate('Gift_Place_Order')?></a>
+			
+			<?php if($this->isErr != null && $this->isErr) {?>
+				<a class="button" target="_parent"  href="<?php echo $this->url(array('controller'=>'gift','action'=>'confirmcart'));?>"><?php echo $this->translate('Gift_Return_to_Cart')?></a>
+			<?php } else{?>
+				<a class="button" target="_parent"  href="<?php echo $this->url(array('controller'=>'gift','action'=>'list'));?>"><?php echo $this->translate('Gift_Redeem_More_Products')?></a>
+			<?php }?>
+			<a class="button" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"><?php echo $this->translate('Take_Me_Home')?></a>
+			<div class="clear"></div>
+		</div>
+	</div>	
+</div>

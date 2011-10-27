@@ -1,0 +1,28 @@
+<?php
+if(count($this->sms)){
+	?>
+<table>
+  <tr>
+    <th>号码</th>
+    <th>日期</th>
+    <th>来/去</th>
+    <th>内容</th>
+  </tr>
+  <?php 
+     foreach($this->sms as $sms){
+     	if(isset($sms['source'])){
+     		echo "<tr><td>".$sms['source'].'</td><td>'.$sms['time'].'</td><td>来</td><td>'.$sms['text'].'</td></tr>';
+     	}else{
+     		echo "<tr><td>".$sms['to'].'</td><td>'.$sms['time'].'</td><td>去</td><td>'.$sms['text'].'</td></tr>';
+     	}
+     	
+     }
+  
+  ?>
+</table>
+
+<?php 
+}else{
+?>
+<center>没有sms记录</center>
+<?php }?>

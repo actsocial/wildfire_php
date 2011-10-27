@@ -1,0 +1,9 @@
+<?php if($this->file){
+header('Content-type: application/vnd.ms-excel');
+//下载显示的名字
+header('Content-Disposition: attachment; filename="'.$this->filename.'"');
+//下载显示的名字
+readfile($this->file);
+exit(); 
+}
+?>

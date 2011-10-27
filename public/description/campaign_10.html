@@ -1,0 +1,60 @@
+<div class="article-box"><div class="article-box-inner">
+<div class="campaign-images">
+	 <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_10_side.jpg"/>
+</div>
+<div class="main-column campaign-content" style="width:470px;margin-left:40px;padding-top:5px;">
+	<div class="submit-report"><a  onmouseover="openSubMenu();" onmouseout="closeSubMenu();" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>10));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>10));?>" class="standard-report-button">提交报告</a>
+		<div class="submit-menu" style="display:none;" onmouseover="openSubMenu();" onmouseout="closeSubMenu();">
+			<ul>
+				<li><a onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>10));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>10));?>">提交报告</a></li>
+
+				<!--  <li><a href="#" style="color: #999;">分享照片</a></li>-->
+				<li><a href="#" onclick="submitUrlDialogOpen();">分享网址</a></li>
+			</ul>
+	</div>
+	</div>
+
+	
+	<h1 style="width:240px">舒耐抑汗香体产品活动</h1>
+	<h2 style="width:240px">一整天都保持沐浴后的干净清爽！</h2>
+</div>
+<div class="campaign-content">
+
+	<p class="zh" style="width:640px">欢迎参加舒耐分享活动！</p>
+	<p class="zh" style="width:640px">一整天都保持沐浴后的干净清爽, 呈现自己自信优雅的一面, 从容面对繁忙的工作, 是每个时尚白领早上出门前必备的功课。拥有百年历史的全球最大抑汗香体品牌 – 舒耐, 必不负你所望。</p>
+	<p class="zh" style="width:640px">如果您还没体验过舒耐所带来的干爽舒适, 现在正是绝佳时机, 还能跟同事们一起分享这个新发现, 如果您已经是舒耐的爱用者, 趁这个机会把心得跟更多的人分享</p>
+</div>
+<div style="clear: both;"></div>
+</div></div>
+<div class="campaign-summary campaign-campbells">
+	<div id="campbells">
+	<div class="spark-report-box" style="margin-bottom:15px;">
+		<div class="spark-report-box-inner">
+			<div class="ul-wrapper" style="font-size:14px;">
+				<h1 style="font-size:16px;color:#3461ad;">舒耐分享活动进程
+</h1>
+				<br/>
+				<li >活动剩余时间: <strong><?php echo $this->dayCount?></strong> 天</li>
+				<li style="padding-top:4px;">已提交报告数: <strong><?php echo $this->reportCount?></strong> 份</li>
+				<li style="padding-top:4px;">获得星星火积分: <strong><?php echo $this->campaignPoint?></strong> 分</li>
+			
+			<!--<a href="<?php echo $this->baseUrl();?>/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>-->
+			</div>
+		</div>
+	</div>
+	<div class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<div class="ul-wrapper" style="font-size:14px;">
+				<h1 style="font-size:16px;color:#3461ad;">更多舒耐信息</h1>
+				<br/>
+				<li><a href="http://www.rexona.com.cn " target="blank">舒耐官网</a></li>
+				<li style="padding-top:4px;"><a href="http://rexona.tmall.com/shop/viewShop.htm?prc=1" target="blank">舒耐淘宝网店</a></li>
+				<li style="padding-top:4px;">&nbsp;</li>
+			
+			<!--<a href="<?php echo $this->baseUrl();?>/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>-->
+			</div>
+		</div>
+	</div>
+	</div>
+<div style="clear: both;"></div>
+</div>

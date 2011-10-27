@@ -1,0 +1,27 @@
+<div class="article-box"><div class="article-box-inner">
+<div class="campaign-images">
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_6_01.jpg"/>
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_6_02.jpg"/>
+</div>
+<div class="main-column campaign-content" style="width:510px;">
+	<div class="submit-report"><a onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>6));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>6));?>" class="standard-report-button-en">Submit Report</a></div>
+	<h1>Kraft Uguan Bing Spark Campaign</h1>
+	<h2>"Kids Breakfast - Kraft Uguan"</h2>
+	<p>Welcome to the Kraft Uguan Spark Campaign!</p>
+	<p>Uguan Bing is the first package breakfast product in China developed by Kraft China for kids who are 3 to 13 year old， which is conbined good nutrion and nice taste. It's very soft and delicious. In busy mornings, it will easier for you to assure your kids get enough nutrition. </p>
+	<p>Uguan Kraft is famous biscuit brand around the world and have won the trust among mums. As a member of wildfire, you will be the first one experiencing Kraft Uguan breakfast Bing!</p>
+</div>
+<div style="clear: both;"></div>
+</div></div>
+<div class="campaign-summary campaign-purell">
+	<div class="logo"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_6_logo.jpg"/></div>
+	<div class="summary summary-en">
+		<ul>
+			<li>Days Remaining: <strong><?php echo $this->dayCount?></strong></li>
+			<li>Reports Submitted: <strong><?php echo $this->reportCount?></strong></li>
+			<li>Spark Points Earned: <strong><?php echo $this->campaignPoint?></strong></li>
+		</ul>
+		<!--<a href="<?php echo $this->baseUrl();?>/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">Spark Guide (PDF)</a>-->
+	</div>
+<div style="clear: both;"></div>
+</div>

@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+
+		<tu tuid='Administrator_Login'>
+			<tuv xml:lang="zh">
+				<seg>管理员登录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Administrator Login</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Administrator_Login'>
+			<tuv xml:lang="zh">
+				<seg>管理员登录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Administrator Login</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Administrator_Login'>
+			<tuv xml:lang="zh">
+				<seg>管理员登录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Administrator Login</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Administrator_Login'>
+			<tuv xml:lang="zh">
+				<seg>管理员登录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Administrator Login</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Online'>
+			<tuv xml:lang="zh">
+				<seg>网络</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Online</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Spark'>
+			<tuv xml:lang="zh">
+				<seg>会员</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Sparks</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Admin_Campaigns'>
+			<tuv xml:lang="zh">
+				<seg>活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaigns</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Campaigns_Name'>
+			<tuv xml:lang="zh">
+				<seg>活动名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaign Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Campaigns_Company_Name'>
+			<tuv xml:lang="zh">
+				<seg>公司名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Company Name</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Admin_Recipients_Name'>
+			<tuv xml:lang="zh">
+				<seg>收件人</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Recipients</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Invited_by'>
+			<tuv xml:lang="zh">
+				<seg>邀请人</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invited by</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Register_Date'>
+			<tuv xml:lang="zh">
+				<seg>注册日期</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Date</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Amin_Campaign_Participations'>
+			<tuv xml:lang="zh">
+				<seg>已参加活动用户列表</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaign Participations</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Admin_Address1'>
+			<tuv xml:lang="zh">
+				<seg>地址</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Address</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Phone'>
+			<tuv xml:lang="zh">
+				<seg>电话</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Phone</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Province'>
+			<tuv xml:lang="zh">
+				<seg>省份</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Province</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_City'>
+			<tuv xml:lang="zh">
+				<seg>城市</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>City</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Postal_Code'>
+			<tuv xml:lang="zh">
+				<seg>邮编</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Postal Code</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Date'>
+			<tuv xml:lang="zh">
+				<seg>日期</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Date</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Amin_Consumer_email'>
+			<tuv xml:lang="zh">
+				<seg>用户邮箱/电话</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Consumer email/phone</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Reply'>
+			<tuv xml:lang="zh">
+				<seg>回复</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reply</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Replied'>
+			<tuv xml:lang="zh">
+				<seg>已回复</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Replied</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Not_Confirm'>
+			<tuv xml:lang="zh">
+				<seg>已编写</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Not Confirm</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Select_Report'>
+			<tuv xml:lang="zh">
+				<seg>领取</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Select</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Report_Selected'>
+			<tuv xml:lang="zh">
+				<seg>被领取</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Selected</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Report_Finished'>
+			<tuv xml:lang="zh">
+				<seg>已审阅</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Finished</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Reply_Mission'>
+			<tuv xml:lang="zh">
+				<seg>回复列表</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Assignment</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Report_Batch_left'>
+			<tuv xml:lang="zh">
+				<seg>未回报告数</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Not reply</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Report_Batch_amount'>
+			<tuv xml:lang="zh">
+				<seg>总报告数</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Total report</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Report_Batch_NotFinished'>
+			<tuv xml:lang="zh">
+				<seg>未结束</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Not finished</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Show'>
+			<tuv xml:lang="zh">
+				<seg>查看</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Show</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Reports'>
+			<tuv xml:lang="zh">
+				<seg>用户报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reports</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_participants_state'>
+			<tuv xml:lang="zh">
+				<seg>活动参与者管理</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Participants State</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Recipients_name'>
+			<tuv xml:lang="zh">
+				<seg>收件人</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Participants</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Accept_date'>
+			<tuv xml:lang="zh">
+				<seg>参加时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Accept date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='KIT SENT'>
+			<tuv xml:lang="zh">
+				<seg>发送礼包</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>KIT SENT</seg>
+			</tuv>
+		</tu>
+		<tu tuid='PRODUCT USED'>
+			<tuv xml:lang="zh">
+				<seg>使用产品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>PRODUCT USED</seg>
+			</tuv>
+		</tu>
+		<tu tuid='REPORT SUBMITTED'>
+			<tuv xml:lang="zh">
+				<seg>提交报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>REPORT SUBMITTED</seg>
+			</tuv>
+		</tu>
+		<tu tuid='FINISHING'>
+			<tuv xml:lang="zh">
+				<seg>结束中</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>FINISHING</seg>
+			</tuv>
+		</tu>
+		<tu tuid='COMPLETED'>
+			<tuv xml:lang="zh">
+				<seg>结束</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>COMPLETED</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Amin_NEW'>
+			<tuv xml:lang="zh">
+				<seg>开始</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>NEW</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Campaigns_Create_Date'>
+			<tuv xml:lang="zh">
+				<seg>开始时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Start Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Campaigns_Expired_Date'>
+			<tuv xml:lang="zh">
+				<seg>结束时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Expired Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Campaigns_Duration_Date'>
+			<tuv xml:lang="zh">
+				<seg>持续时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Duration</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Campaigns_Average_Time'>
+			<tuv xml:lang="zh">
+				<seg>平均时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Average</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Assign_TO'>
+			<tuv xml:lang="zh">
+				<seg>负责人</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Assign to</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Report'>
+			<tuv xml:lang="zh">
+				<seg>报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Report</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Campaign_Report'>
+			<tuv xml:lang="zh">
+				<seg>口碑报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Admin Report</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Process_Report'>
+			<tuv xml:lang="zh">
+				<seg>处理报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Process Report</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Our_Response'>
+			<tuv xml:lang="zh">
+				<seg>的回复</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Response</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Campaign_Consumer_Set'>
+			<tuv xml:lang="zh">
+				<seg>设置</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Setting</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Send_post_email'>
+			<tuv xml:lang="zh">
+				<seg>结束活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Post-Campaign</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Send_post_campaign_email'>
+			<tuv xml:lang="zh">
+				<seg>设置会员参与活动状态</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Change Spark Participation State </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Send_post_campaign_email_Content1'>
+			<tuv xml:lang="zh">
+				<seg>一共需要设置</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>We need to set </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Send_post_campaign_email_Content2'>
+			<tuv xml:lang="zh">
+				<seg>会员的参与状态。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> participants' state.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='click here>> Send!'>
+			<tuv xml:lang="zh">
+				<seg>点击这里>> 发送！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>click here>> Send!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Save_Not_Send'>
+			<tuv xml:lang="zh">
+				<seg>保存回复</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Save and Not Send</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Email_Address_Notice'>
+			<tuv xml:lang="zh">
+				<seg>（请用空白或是";"将邮件地址分开！）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>(split email by ";")</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Email_Content_Notice'>
+			<tuv xml:lang="zh">
+				<seg>（?AUTHCODE? ?EMAIL? 用于“邀请非会员加入星星火”；?USERNAME?用于 “给会员发邮件”）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>(?AUTHCODE? ?EMAIL? for "Friends Invitation"; ?USERNAME? for "Send emails to Sparks")</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Non-Sparks_Invitation'>
+			<tuv xml:lang="zh">
+				<seg>邀请非会员参加活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Send invitations to Non-Sparks</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Sparks_Invitation'>
+			<tuv xml:lang="zh">
+				<seg>邀请会员参加活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Send invitations to Sparks</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Send_Mail_To_Sparks'>
+			<tuv xml:lang="zh">
+				<seg>给会员发普通邮件</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Send emails to Sparks</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_EmailCategory'>
+			<tuv xml:lang="zh">
+				<seg>发送邮件种类：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email Category：</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_EmailCategory_Notice'>
+			<tuv xml:lang="zh">
+				<seg>（若选择“给会员发活动邀请”，最后一个框无效）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>(Campaing and Code_source are just for "Friends Invitation")</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Code_source: (like 'BF CUSTOMER' or 'BF NONCUSTOMER')">
+			<tuv xml:lang="zh">
+				<seg>Code表source字段：（如 BF CUSTOMER 或 BF NONCUSTOMER）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Code_source: (like 'BF CUSTOMER' or 'BF NONCUSTOMER')</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Send_emails">
+			<tuv xml:lang="zh">
+				<seg>发送活动邀请邮件</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Send emails</seg>
+			</tuv>
+		</tu>
+		<tu tuid="ADMIN_NOT_AUTO_INVITATION">
+			<tuv xml:lang="zh">
+				<seg>不自动邀请参加活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Not be invited automatically</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Mail">
+			<tuv xml:lang="zh">
+				<seg>邮件</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Mail</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Conumer_Report_Total">
+			<tuv xml:lang="zh">
+				<seg>报告数</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Total</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Set_Spark_Kits">
+			<tuv xml:lang="zh">
+				<seg>设置礼包发送状态</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Set Sparks Kits</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Report_State">
+			<tuv xml:lang="zh">
+				<seg>设置报告状态</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Set Report State</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Reply_Grade">
+			<tuv xml:lang="zh">
+				<seg>评分:</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Grade:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Reply_Message_Sms_Note">
+			<tuv xml:lang="zh">
+				<seg>短信内容: （请不要超过70个字符或汉字，下面每行约60个字）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Sms:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Total_Reports">
+			<tuv xml:lang="zh">
+				<seg>报告数</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reports</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Total_Polls">
+			<tuv xml:lang="zh">
+				<seg>问卷数</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Polls</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Total_Invitations">
+			<tuv xml:lang="zh">
+				<seg>邀请数</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invitations</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Total_Joins">
+			<tuv xml:lang="zh">
+				<seg>加入数</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Join us</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Total_Points">
+			<tuv xml:lang="zh">
+				<seg>总分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Points</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Total_Echange_Points">
+			<tuv xml:lang="zh">
+				<seg>兑换</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Redeem</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Show_Gifts">
+			<tuv xml:lang="zh">
+				<seg>查看奖品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Show Rewards</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Show_Points">
+			<tuv xml:lang="zh">
+				<seg>用户积分列表</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Show Points</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Pest_Campaign_Report">
+			<tuv xml:lang="zh">
+				<seg>Pest报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Pest Reports</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Show_Pests">
+			<tuv xml:lang="zh">
+				<seg>查看Pest</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Show Pests</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Show_Invite_Friends">
+			<tuv xml:lang="zh">
+				<seg>查看"邀请朋友"</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Show Invitations</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Analyse_Address">
+			<tuv xml:lang="zh">
+				<seg>解析地址</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Analysis Address</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid="Admin_Show_Pest_Points">
+			<tuv xml:lang="zh">
+				<seg>Pest积分列表</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Show Pest's Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Exchange_Date">
+			<tuv xml:lang="zh">
+				<seg>时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Exchange_Point">
+			<tuv xml:lang="zh">
+				<seg>兑换积分数</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Redeem</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_48Hour_Exchange_Record">
+			<tuv xml:lang="zh">
+				<seg>48小时兑换记录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>The 48 Hour's Records</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Reply_the_report_successfully">
+			<tuv xml:lang="zh">
+				<seg>回复报告成功！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reply the report successfully!</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Name">
+			<tuv xml:lang="zh">
+				<seg>名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Amount">
+			<tuv xml:lang="zh">
+				<seg>数量</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Amount</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Point">
+			<tuv xml:lang="zh">
+				<seg>积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Point</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Category">
+			<tuv xml:lang="zh">
+				<seg>种类</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Category</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Redeem">
+			<tuv xml:lang="zh">
+				<seg>兑换</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Redeem</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Consmuer_Info">
+			<tuv xml:lang="zh">
+				<seg>用户信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Consumer Info</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Info">
+			<tuv xml:lang="zh">
+				<seg>奖品信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Rewards Info</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Consmuer_Info">
+			<tuv xml:lang="zh">
+				<seg>用户信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Consumer Info</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Redeem_Create_Date">
+			<tuv xml:lang="zh">
+				<seg>下单时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Create Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Redeem_handle_Date">
+			<tuv xml:lang="zh">
+				<seg>处理时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Handle Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_Redeem_State">
+			<tuv xml:lang="zh">
+				<seg>设置状态</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Set State</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_NEW">
+			<tuv xml:lang="zh">
+				<seg>新订单</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>NEW</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_START">
+			<tuv xml:lang="zh">
+				<seg>订单确认</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>START</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_FINISHED">
+			<tuv xml:lang="zh">
+				<seg>已发货</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>FINISHED</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_UNAPPROVED">
+			<tuv xml:lang="zh">
+				<seg>审核未通过</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>UNAPPROVED</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_Product_CANCEL">
+			<tuv xml:lang="zh">
+				<seg>用户已取消订单</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>CANCELED</seg>
+			</tuv>
+		</tu>
+		<tu tuid="Admin_SMTP_SETTING">
+			<tuv xml:lang="zh">
+				<seg>邮件发送服务器设置</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>SMTP Setting</seg>
+			</tuv>
+		</tu>
+        <tu tuid="Admin_Spam_Check">
+            <tuv xml:lang="zh">
+                <seg>邮件内容检查</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Spam check</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Admin_Conversation">
+            <tuv xml:lang="zh">
+                <seg>谈话记录</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Plans</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Coupon_Name">
+            <tuv xml:lang="zh">
+                <seg>姓名</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Name</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Coupon_Telephone">
+            <tuv xml:lang="zh">
+                <seg>手机号码</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Telephone</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Coupon_Recieve">
+            <tuv xml:lang="zh">
+                <seg>领取</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Recieve</seg>
+            </tuv>
+        </tu>
+	</body>
+</tmx>

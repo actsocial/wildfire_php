@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+		<tu tuid='His_Page'>
+			<tuv xml:lang="zh">
+				<seg>页码</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Page</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='His_Campaigns'>
+			<tuv xml:lang="zh">
+				<seg>活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaigns</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Referrals'>
+			<tuv xml:lang="zh">
+				<seg>邀请</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Referrals</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Surveys'>
+			<tuv xml:lang="zh">
+				<seg>问卷</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Surveys</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Stuff'>
+			<tuv xml:lang="zh">
+				<seg>积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Rewards</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_No.'>
+			<tuv xml:lang="zh">
+				<seg>编号</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>No.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Campaigns_History'>
+			<tuv xml:lang="zh">
+				<seg>参加活动历史</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaigns History</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_campaign_name'>
+			<tuv xml:lang="zh">
+				<seg>活动名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_accept_date'>
+			<tuv xml:lang="zh">
+				<seg>参加时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Start Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_expire_date'>
+			<tuv xml:lang="zh">
+				<seg>截止时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>End Date</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Referrals_History'>
+			<tuv xml:lang="zh">
+				<seg>邀请朋友历史</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Referrals History</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Referrals_recipients'>
+			<tuv xml:lang="zh">
+				<seg>受邀请人</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Recipient</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Referrals_date'>
+			<tuv xml:lang="zh">
+				<seg>时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Date Sent</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Referrals_type'>
+			<tuv xml:lang="zh">
+				<seg>类型</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Type</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Referrals_Invitation_Card'>
+			<tuv xml:lang="zh">
+				<seg>邀请卡</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invitation Card</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Referrals_Invitation_Mail'>
+			<tuv xml:lang="zh">
+				<seg>邀请邮件</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invitation Mail</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Referrals_Public_Link'>
+			<tuv xml:lang="zh">
+				<seg>邀请链接</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Public Link</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Surveys_History'>
+			<tuv xml:lang="zh">
+				<seg>参加问卷历史</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Surveys History</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Surveys_survey_name'>
+			<tuv xml:lang="zh">
+				<seg>问卷名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Survey</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Surveys_date_poll_taken'>
+			<tuv xml:lang="zh">
+				<seg>参与时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Date Completed</seg>
+			</tuv>		
+		</tu>
+		
+		<tu tuid='His_Stuff_History'>
+			<tuv xml:lang="zh">
+				<seg>获得积分历史</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Stuff History</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='His_Stuff_earned'>
+			<tuv xml:lang="zh">
+				<seg>获得或兑换积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Points Earned or Traded</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Wom_report'>
+			<tuv xml:lang="zh">
+				<seg>提交口碑报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Wom Report</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Invitation'>
+			<tuv xml:lang="zh">
+				<seg>邀请朋友</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invitation</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Poll'>
+			<tuv xml:lang="zh">
+				<seg>参与问卷</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Poll</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='His_Stuff_activity_description'>
+			<tuv xml:lang="zh">
+				<seg>获得积分描述</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Action</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='His_Stuff_Date'>
+			<tuv xml:lang="zh">
+				<seg>时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Date Completed</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Reports'>
+			<tuv xml:lang="zh">
+				<seg>报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reports</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Reports_campaign_name'>
+			<tuv xml:lang="zh">
+				<seg>活动名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaign</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Reports_state'>
+			<tuv xml:lang="zh">
+				<seg>报告状态</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Status</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Reports_date'>
+			<tuv xml:lang="zh">
+				<seg>提交时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Date Submitted</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Reports_Spark_Points'>
+			<tuv xml:lang="zh">
+				<seg>星星火积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Points</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Reports_APPROVED'>
+			<tuv xml:lang="zh">
+				<seg>审核通过</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>APPROVED</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Reports_UNAPPROVED'>
+			<tuv xml:lang="zh">
+				<seg>审核未通过</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>UNAPPROVED</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Reports_NEW'>
+			<tuv xml:lang="zh">
+				<seg>未审核</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Pending</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Reports_VIEWED'>
+			<tuv xml:lang="zh">
+				<seg>已审核</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>APPROVED</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Reports_No_Point'>
+			<tuv xml:lang="zh">
+				<seg>未得分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Pending</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Reports_setting'>
+			<tuv xml:lang="zh">
+				<seg>设置</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Set</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Reports_History'>
+			<tuv xml:lang="zh">
+				<seg>提交口碑报告历史</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reports History</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Your_Spark_History'>
+			<tuv xml:lang="zh">
+				<seg>你的星星火历史</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your Spark History</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Your_Spark_History_Content'>
+			<tuv xml:lang="zh">
+				<seg>下面是你在星星火活动记录，请告诉我们任何你想要了解的其它个人信息。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>The following is a summary of all of your activity with Wildfire. Please let us know if there is any further information you'd like to have at your fingertips!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='History_Reports_Hints'>
+			<tuv xml:lang="zh">
+				<seg>这里是当前你提交的所有星星火报告：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Here’s a list of all the Spark Reports you’ve submitted so far:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Your_Spark_Report_Summary'>
+			<tuv xml:lang="zh">
+				<seg>你提交的星星火报告：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your Spark Report Summary</seg>
+			</tuv>
+		</tu>
+		<tu tuid='History_Report_Hints'>
+			<tuv xml:lang="zh">
+				<seg>这里是你提交的星星火报告内容和我们的回复，以及报告所得到的分数：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Here’s what you reported, along with our response, and number of Spark Points earned:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_you_said'>
+			<tuv xml:lang="zh">
+				<seg>你的报告陈述：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What you said</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_we_said'>
+			<tuv xml:lang="zh">
+				<seg>我们的回复：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What we said</seg>
+			</tuv>
+		</tu>
+		<tu tuid='History_Campaigns_Hints'>
+			<tuv xml:lang="zh">
+				<seg>这里是当前你已经参与的所有星星火活动：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Here’s a list of all the Spark Campaigns you’ve participated in so far:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='History_Referrals_Hints'>
+			<tuv xml:lang="zh">
+				<seg>这里是当前你所有发出的邀请，以及你朋友的状态：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Here’s a list of all the invitations you’ve sent out so far, and you’re friends’ responses:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Referrals_Joined'>
+			<tuv xml:lang="zh">
+				<seg>已加入？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Joined?</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Referrals_Yes'>
+			<tuv xml:lang="zh">
+				<seg>是</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>yes</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Referrals_No'>
+			<tuv xml:lang="zh">
+				<seg>否</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>no</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Referrals_Resend'>
+			<tuv xml:lang="zh">
+				<seg>重新邀请？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Resend?</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='History_Surveys_Hints'>
+			<tuv xml:lang="zh">
+				<seg>这里是当前你已完成的所有问卷，以及获得积分历史：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Here’s a list of all the surveys you’ve completed so far, and Spark Points earned:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='History_Rewards_Hints'>
+			<tuv xml:lang="zh">
+				<seg>这里是当前你参与活动获得的积分，以及积分兑换历史：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Here’s a list of all your activity so far, Spark Points earned, as well as traded:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Surveys_Points_Earned'>
+			<tuv xml:lang="zh">
+				<seg>得分情况</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Points Earned</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_Rewards_Points_Earned_Trade'>
+			<tuv xml:lang="zh">
+				<seg>分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Rewards_Points_Exchange'>
+			<tuv xml:lang="zh">
+				<seg>兑换</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Redeem</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_Rewards_Points_Earned'>
+			<tuv xml:lang="zh">
+				<seg>获得</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Earned</seg>
+			</tuv>
+		</tu>
+		<tu tuid='History_Points'>
+			<tuv xml:lang="zh">
+				<seg> 分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Points</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_(Survey)'>
+			<tuv xml:lang="zh">
+				<seg>（问卷）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> (Poll)</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_(Invitation)'>
+			<tuv xml:lang="zh">
+				<seg>（邀请）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> (Invitation)</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_(Report)'>
+			<tuv xml:lang="zh">
+				<seg>（报告）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> (Report)</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='His_(Exchange)'>
+			<tuv xml:lang="zh">
+				<seg>（兑换）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> (Redeem)</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_(URLReport)'>
+			<tuv xml:lang="zh">
+				<seg>（分享网址）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> (URL Report)</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_(Event)'>
+			<tuv xml:lang="zh">
+				<seg>现场活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Event</seg>
+			</tuv>
+		</tu>
+		<tu tuid='His_(Reward)'>
+			<tuv xml:lang="zh">
+				<seg>奖励</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Reward</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Jifentong'>
+			<tuv xml:lang="zh">
+				<seg>积分通</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Jifentong</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Post-campaign_Survey'>
+			<tuv xml:lang="zh">
+				<seg>活动结束反馈</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Post-campaign Survey</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

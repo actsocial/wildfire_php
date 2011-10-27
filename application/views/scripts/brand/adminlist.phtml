@@ -1,0 +1,49 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2>New Brand</h2>
+<br/>
+  <p>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'brand','action'=>'adminadd'));?>">New Brand</a></span>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'brand','action'=>'adminlist'));?>">Brand List</a></span>
+  </p>
+  <br/>
+  <table width="800" id="brand-table">
+    <tr>
+        <th width="5%">Index</th>
+        <th width="20%">Logo</th>
+        <th width="10%">Name</th>
+        <th width="10%">Company</th>
+        <th>Description</th>
+        <th width="5%">Date</th>
+        <th width="5%">&nbsp;</th>
+    </tr>
+    <?php $count = 1; foreach($this->brands as $brand) : ?>
+    <tr style="<?php if($count%2 != 0){ echo 'background-color: #EEF9EB'; }?>">
+        <td><?php echo $count++;?></td>
+        <td><img src="<?php echo $this->url(array('controller'=>'brand','action'=>'getimage','id'=>$brand->id));?>" /></td>
+        <td><?php echo $this->escape($brand->name);?></td>
+        <td><?php echo $this->escape($brand->company);?></td>
+        <td><?php echo $this->escape($brand->description);?></td>
+        <td><?php echo $this->escape($brand->create_date);?></td>
+        <td align="left">
+            <a href="<?php echo $this->url(array('controller'=>'brand','action'=>'admindelete', 'id'=>$brand->id));?>" onclick="return deletebrand();">
+              Delete
+            </a>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+  </table>
+</div>
+
+<style type="text/css">
+<!--
+#brand-table td {
+    padding: 5px;
+}
+-->
+</style>
+<script type="text/javascript">
+function deletebrand() {
+    return confirm('确实要删除吗？');
+}
+</script>

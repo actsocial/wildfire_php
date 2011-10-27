@@ -1,0 +1,24 @@
+<div style="text-align:center;margin: 0 auto;">
+	<div style="padding-top:20px; ">
+	<h2><?php echo $this->translate('Client_Campaign_Name_'.$this->campaign_id).$this->translate('Client_Tag Cloud');?></h2>
+	<div align="center" >
+		<div style="width:850px; padding-right:20px;" align="right" >
+		<form id= 'form' name = 'form' action="<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientreport'));?>" method="post">
+			 <input style="color:#B4B4B4;" type="text" id="searchText" name="searchText" value="<?php echo $this->translate('Client_Tag_Cloud enter tag');?>" onclick="javascript:enterSearchText();"/> 
+			 <input type="submit" value="<?php echo $this->translate('Client_Tag_Cloud Search Reports');?>" /> 
+			<input type="hidden" id="campaign_id" name="campaign_id" value="<?php echo $this->campaign_id; ?>" />
+		</form>
+		</div>
+		<?php include('./tagcloud/tagcloud_'.$this->campaign_id.'.phtml');?>
+	</div>
+	<div>
+
+
+	</div>
+</div>
+<script type="text/javascript">
+function enterSearchText(){
+	$('#searchText').css({'color':'#000000'});
+	$('#searchText').val('');
+} 
+</script>

@@ -1,0 +1,55 @@
+<div class="category-list">
+	<div class="category">
+		<h2><?php echo $this->translate('Gift_list_gift_category')?></h2>
+		<ul>
+
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_all')?></a></li>	
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Digital', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_electronics')?></a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Makeup', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_cosmetic')?></a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Commodity', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_supplies')?></a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Other', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_others')?></a></li>
+			
+		</ul>
+	</div>
+	<div class="category">
+		<h2><?php echo $this->translate('Gift_list_gift_points')?></h2>
+		<ul>		
+
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'0', 'p2'=>'3000', 'page'=>'1'));?>">0~3000</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'3001', 'p2'=>'5000', 'page'=>'1'));?>">3001~5000</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'5001', 'p2'=>'8000', 'page'=>'1'));?>">5001~8000</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'8001', 'p2'=>'100000', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_above_8000')?></a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'mine', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_available_gifts')?></a></li>
+
+		</ul>
+	</div>
+	<a class="list-orders" href="<?php echo $this->url(array('controller'=>'gift','action'=>'listorder'));?>"><?php echo $this->translate('Gift_Place_Order');?></a>
+	
+</div>
+<div class="gift-description">
+	<h1><?php echo $this->product['name']?></h1>
+	<img alt="" src="<?php echo $this->baseUrl();?>/images/products/img1_<?php echo $this->product['id']?>.jpg"/>
+	<div class="product-info">
+		<ul>
+			<li><?php echo $this->translate('Gift_Description_Product_ID');?><?php echo $this->product['product_id']?></li>
+			<li><?php echo $this->translate('Gift_Description_Product_Point');?><span class="price"><?php echo $this->product['point']?></span></li>
+		</ul>
+		<div class="buttons-bar"><a href="#"  onclick="javascript:addToCart(<?php echo $this->product['id']?>);return false;" class="big-button"><?php echo $this->translate('Gift_Flow_Add_to_Cart');?></a></div>
+		<form id='addToCartForm' name='addToCartForm' action="<?php echo $this->url(array('controller'=>'gift','action'=>'addtocart'));?>" method="post">
+			<input type="hidden" id="product_id" name='product_id' value='<?php echo $this->product['id']?>'/>
+			<input type="hidden" id="product_name" name='product_name' value='<?php echo $this->product['name']?>'/>
+			<input type="hidden" id="product_point" name='product_point' value='<?php echo $this->product['point']?>'/>		
+		</form>
+		
+	</div>
+	<div class="product-description">
+		<?php echo $this->product['long_desc']?>
+	</div>
+</div>
+
+<script language="javascript">
+function addToCart(i)
+{	
+	document.forms['addToCartForm'].submit();  
+}
+</script>

@@ -1,0 +1,274 @@
+ <script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery.editable-1.3.3.js" ></script>
+<div style="width:800px;padding-top:20px;margin:0 auto">
+<form
+	action="<?php
+	echo $this->url ( array ('controller' => 'Consumer', 'action' => 'adminsearch' ) );
+	?>"
+	method="post">
+<table style="">
+	<tr><td colspan=2>查询用户:</td></tr>
+	<tr>
+		<td><?php
+		echo $this->form->search;
+		?></td>
+		<td><?php
+		echo $this->form->submit;
+		?>
+		
+		</td>
+	</tr>
+	<tr>
+	<td>
+	<p style="font-size:14px"><a href="<?php echo $this->url(array('controller'=>'consumer',
+	'action'=>'adminsearch','search'=>$this->search));?>">
+		返回查找</a>
+		<a href="<?php echo $this->url(array('controller'=>'phone',
+	'action'=>'adminadd','id'=>$this->profile->id));?>">
+		电话谈话</a><a href="<?php echo $this->url(array('controller'=>'qqconversation',
+	'action'=>'adminadd','uid'=>$this->profile->id));?>">
+		QQ谈话记录</a>
+<a href="<?php echo $this->url(array('controller'=>'report',
+	'action'=>'adminaddreport','uid'=>$this->profile->id));?>">
+		添加口碑报告</a>
+	</td>
+	</tr>
+</table>
+</form>
+<div id="accordion">
+	<h3><a href="#">基本信息</a></h3>
+	<div>
+	    <div style="float:right"><img src="<?php echo $this->baseUrl();?>/images/anonymous.jpeg"/></div>
+		<table>
+		<tr><td>用户名:</td><td><div id="name" class="editable3" title="双击修改"><?php echo $this->profile->name;?></div></td></tr>
+		<tr><td>实际姓名:</td><td><?php echo $this->profile->recipients_name;?></td></tr>
+		<tr><td>性别:</td><td><div id="gender" class="editable3" title="双击修改"><?php if($this->profile->gender=='male')echo '男';if($this->profile->gender=='female')echo '女';if($this->profile->gender!='male'&&$this->profile->gender!='female')echo '未定义';?></div>(男:male,女:female)</td></tr>
+		<tr><td>出生日期:</td><td><div id="birthdate" class="editable3"><?php echo $this->extra_profile->birthdate;?></div></td></tr>
+		<tr><td>学历:</td><td><div id="education" class="editable3"><?php echo $this->extra_profile->education;?></div></td></tr>
+		<tr><td>是否有孩子:</td><td><div id="have_children" class="editable3"><?php if ($this->extra_profile->have_children==""){ echo "未知";}elseif ($this->extra_profile->have_children=="0"){echo "无";}elseif ($this->extra_profile->have_children=="1"){echo "有";} ?></div></td></tr>
+		<tr><td>孩子的出生年份:</td><td><div id="children_birth_year" class="editable3"><?php if ($this->extra_profile->children_birth_year==""){echo "未知";} else {echo $this->extra_profile->children_birth_year;}?></div></td></tr>
+		<tr><td>月收入:</td><td><div id="income" class="editable3"><?php echo $this->extra_profile->income;?></div></td></tr>
+		<tr><td>邮箱:</td><td><?php echo $this->profile->email;?></td></tr>
+		<tr><td>收件人:</td><td><div id="recipients_name" class="editable3" title="双击修改"><?php echo ((strlen($this->profile->recipients_name)==0)?'无':$this->profile->recipients_name);?></div></td></tr>
+		<tr><td>省份:</td><td><div id="province" class="editable3" title="双击修改"><?php echo ((strlen($this->profile->province)==0)?'无':$this->profile->province);?></div></td></tr>
+		<tr><td>城市:</td><td><div id="city" class="editable3" title="双击修改"><?php echo ((strlen($this->profile->city)==0)?'无':$this->profile->city);?></div></td></tr>
+		<tr><td>登录电话(不可修改):</td><td><?php echo $this->profile->login_phone;?></td></tr>
+		<tr><td>地址:</td><td><div id="address1" class="editable3" title="双击修改"><?php echo ((strlen($this->profile->address1)==0)?'无':$this->profile->address1);?></div></td></tr>
+		<tr><td>电话:</td><td><div id="phone" class="editable3" title="双击修改"><?php echo ((strlen($this->profile->phone)==0)?'无':$this->profile->phone);?></div></td></tr>
+		<tr><td>密码:</td><td><?php echo $this->profile->password;?> |<a href="<?php echo $this->baseUrl();?>/consumer/profile/uid/<?php echo $this->profile->id;?>/resetpassword/1"><font color="red">重置密码</font></a></td></tr>
+		</table>
+	</div>
+	<h3><a href="#">活动/survey/mission</a></h3>
+	<div>
+	<?php if(count($this->campaigns)||count($this->surveysall)){?>
+       <table width="100%">
+       <tr align="left">
+       <th align="left">活动</th><th align="left">状态</th><th align="left">参加时间</th><th align="left">提交报告数</th>
+       </tr>
+         <?php 
+         foreach($this->campaigns as $val)
+         {
+         	if($val['ciid']&&$val['type']=="campaign"){
+         		echo "<tr><td>".$val['name']."</td><td>".(($val['state'])?'参加状态'.$val['state']:'邀请状态'.$val['cstate'])."</td><td>".$val['accept_date']."</td><td>".(isset($this->totalreports[$val['id']])?$this->totalreports[$val['id']]:0)."</td></tr>";
+         		//var_dump($val);die;
+         	}
+         }
+        
+         ?>
+         <th align="left">mission</th><th align="left">状态</th><th align="left">参加时间</th><th align="left">提交报告数</th>
+         </tr>
+         <?php 
+         foreach($this->campaigns as $val)
+         {
+         	if($val['ciid']&&$val['type']=="mission"){
+         		echo "<tr><td>".$val['name']."</td><td>".(($val['state'])?'参加状态'.$val['state']:'邀请状态'.$val['cstate'])."</td><td>".$val['accept_date']."</td><td>".(isset($this->totalreports[$val['id']])?$this->totalreports[$val['id']]:0)."</td></tr>";
+         		//var_dump($val);die;
+         	}
+         }
+        
+         ?>
+         <th align="left">Survey</th><th align="left">状态</th><th align="left">参加时间</th>
+         </tr>
+          <?php 
+         foreach($this->surveysall as $val)
+         {
+         		echo "<tr><td>".$val['name']."</td><td>".$val['state']."</td><td>".$val['date']."</td><td></td></tr>";
+         }
+        
+         ?>
+         <tr><td>Tags:<?php 
+			$arrayTag = explode(',',$this->profile->tags) ; 
+			if(count($arrayTag)){
+				foreach($arrayTag as $val){
+					if(trim($val) != ''){
+					   echo  $val . "</a><a href='javascript:deleteTag(\"$val\",\"{$this->profile->id}\")'><img src='". $this->baseUrl() ."/images/red_cross.gif'/></a>";
+					}
+				}
+			}
+		?></td></tr>
+         <tr align=right><td colspan=4><a href="<?php echo $this->baseUrl();?>/campaigninvitation/adminprepareinvitations">发送邀请</a></td></tr>
+       </table>
+        <?php 
+        	foreach ($this->campaigns as $val){
+        		$currentTime = date("Y-m-d H:i:s");
+        		if(($val['ciid']=='')&&($val['create_date']<$currentTime)&&($val['expire_date']>$currentTime)){
+        			
+        			echo "<span>".$val['name']."|<a href='".$this->baseUrl()."/consumer/profile/uid/".$this->profile->id."/campaign/".$val['id']."'><b>邀请</b></a></span><br/>";
+        		}
+        		
+        	}        
+        ?>
+     <?php }else{?>
+              没有参加任何活动
+     <?php }?>
+	</div>
+	<h3><a href="#">积分/兑换</a></h3>
+	<div>
+        <div>
+        <h3>积分信息</h3>
+        <p>总积分:<?php echo $this->totalPoints;?>,剩余积分：<?php echo $this->redeemPoints;?></p>
+        <p>给该会员增加&nbsp;&nbsp;<input type="" value="" id="score" size=5/>&nbsp;&nbsp;<a href="javascript:addReward('<?php echo $this->profile->id?>')">确定</a></p>
+        </div>
+        <div>
+        <h3>兑换记录</h3>
+        <?php if(count($this->redeem)){?>
+        <table width="100%">
+        <tr align="left"><th>No.	</th><th>奖品名称</th><th>兑换数量</th><th>积分</th><th>下单时间</th><th>订单状态</th><th>修改状态</th></tr>
+        <?php 
+        	foreach($this->redeem as $val){
+        		
+        		echo "<tr><td>".$val['pid']."</td><td>".$val['name']."</td><td>".$val['amount']."</td><td>".$val['point_amount']."</td><td>".$val['create_date']."</td><td>";
+        ?>		
+        		<?php if($val['pstate'] == 'UNAPPROVED'){?>
+				<?php echo $this->translate('Admin_Product_UNAPPROVED')?>
+			<?php } else {?>
+			<?php if($val['pstate'] == 'CANCEL'){?>
+				<?php echo $this->translate('Admin_Product_CANCEL')?>
+			<?php } else {?>
+				<select id='state_<?php echo $val['pid']; ?>' name='state_<?php echo $val['id']; ?>'>
+						<?php if($val['pstate'] == 'NEW'){?>
+						<OPTION VALUE="NEW" Selected><?php echo $this->translate('Admin_Product_NEW')?></OPTION>
+						<OPTION VALUE="START" ><?php echo $this->translate('Admin_Product_START')?></OPTION>
+						<OPTION VALUE="FINISHED" ><?php echo $this->translate('Admin_Product_FINISHED')?></OPTION>
+						<OPTION VALUE="UNAPPROVED" ><?php echo $this->translate('Admin_Product_UNAPPROVED')?></OPTION>
+						<?php }?>
+						<?php if($val['pstate'] == 'START'){?>
+						<OPTION VALUE="NEW" ><?php echo $this->translate('Admin_Product_NEW')?></OPTION>
+						<OPTION VALUE="START" Selected><?php echo $this->translate('Admin_Product_START')?></OPTION>
+						<OPTION VALUE="FINISHED" ><?php echo $this->translate('Admin_Product_FINISHED')?></OPTION>
+						<OPTION VALUE="UNAPPROVED" ><?php echo $this->translate('Admin_Product_UNAPPROVED')?></OPTION>
+						<?php }?>
+						<?php if($val['pstate'] == 'FINISHED'){?>
+						<OPTION VALUE="NEW" ><?php echo $this->translate('Admin_Product_NEW')?></OPTION>
+						<OPTION VALUE="START" ><?php echo $this->translate('Admin_Product_START')?></OPTION>
+						<OPTION VALUE="FINISHED" Selected><?php echo $this->translate('Admin_Product_FINISHED')?></OPTION>
+						<OPTION VALUE="UNAPPROVED" ><?php echo $this->translate('Admin_Product_UNAPPROVED')?></OPTION>
+						<?php }?>
+				</select>
+			<?php } }?>
+			</td><td><a href="javascript:changeOrderState('<?php echo $val['pid']; ?>')">修改</a></td></tr>
+			<?php }?>     
+        </table>
+        <?php }else{?>
+                              没有兑换记录
+        <?php }?>
+        </div>
+	</div>
+	<h3><a href="#">交流记录</a></h3>
+	<div id="conmmunication" style="margin-top:0px">
+	       <div style="background:url(<?php echo $this->baseURl()?>/images/button_profile.png) no-repeat;float:left;padding-top:10px;height:42px;width:120px;padding-left:50px;">
+		       <a class="thickbox" href="<?php echo $this->url(array('controller'=>'consumer','action'=>'ajaxreport','uid'=>$this->profile->id));?>"">
+		      	 <strong>口碑报告</strong>
+		       </a>
+	       </div>
+	       <div style="background:url(<?php echo $this->baseURl()?>/images/button_profile.png) no-repeat;float:left;padding-top:10px;height:42px;width:120px;padding-left:50px;">
+		       <a class="thickbox" href="<?php echo $this->url(array('controller'=>'consumer','action'=>'ajaxphoneconversation','uid'=>$this->profile->id));?>"">
+		      	 <strong>电话记录</strong>
+		       </a>
+	       </div>
+		   <div style="background:url(<?php echo $this->baseURl()?>/images/button_profile.png) no-repeat;float:left;padding-top:10px;height:42px;width:120px;padding-left:50px;">
+				<a class="thickbox" href="<?php echo $this->url(array('controller'=>'consumer',	'action'=>'ajaxqqconversation','uid'=>$this->profile->id));?>"">
+					<strong>qq 记录</strong>
+				</a>
+		    </div>
+       		<div style="background:url(<?php echo $this->baseURl()?>/images/button_profile.png) no-repeat;float:left;padding-top:10px;height:42px;width:120px;padding-left:50px;">
+		       	<a class="thickbox" href="<?php echo $this->url(array('controller'=>'consumer','action'=>'smshistory','uid'=>$this->profile->id));?>"">
+					<strong>短信记录</strong>
+				</a>
+			</div>
+       		<div style="background:url(<?php echo $this->baseURl()?>/images/button_profile.png) no-repeat;float:left;padding-top:10px;height:42px;width:120px;padding-left:50px;">
+		       	<a class="thickbox" href="<?php echo $this->url(array('controller'=>'consumer','action'=>'urlreport','uid'=>$this->profile->id));?>"">
+					<strong>链接报告</strong>
+				</a>
+			</div>
+	</div>
+</div>
+	
+</div>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery( "#accordion" ).accordion();
+	jQuery('.editable3').editable({
+				      type:'text',
+				      editBy:'dblclick',
+				      submit:'修改',
+				      onSubmit:end
+	      }); 
+
+});
+
+function end(content){
+	if(jQuery.trim(content.current)!=jQuery.trim(content.previous)){
+		jQuery.ajax({
+			   type: "POST",
+			   url: '<?php  echo $this->baseUrl();?>/consumer/ajaxedit/uid/<?php echo $this->profile->id;?>',
+			   data: "field="+jQuery(this).attr("id")+"&value="+content.current,
+			   success: function(msg){
+	                    alert("成功修改");
+			   }
+			 });
+	}
+}
+
+function addReward(uid){
+	var reward = jQuery('#score').attr('value');
+	//alert(reward);
+	if(jQuery.trim(reward)==''){
+		alert('请输入分值');
+	}else{
+		jQuery.ajax({
+			   type: "POST",
+			   url: '<?php  echo $this->baseUrl();?>/consumer/ajaxaddreward/uid/<?php echo $this->profile->id;?>',
+			   data: "score="+reward,
+			   success: function(msg){
+	                    alert(msg);
+			   }
+			 });
+	}
+}
+
+function changeOrderState(id){
+	if(jQuery('#state_'+id).val()){
+		jQuery.ajax({
+			   type: "POST",
+			   url: '<?php  echo $this->baseUrl();?>/consumer/ajaxchangeorderstate/uid/'+id,
+			   data: "state="+jQuery('#state_'+id).val(),
+			   success: function(msg){
+	              alert(msg);
+			   }
+			 });
+	}
+}
+
+function deleteTag(tag,id){
+	jQuery.ajax({
+		   type: "POST",
+		   url: "<?php echo $this->url(array('controller'=>'consumer','action'=>'adminaddtags'));?>",
+		   data: "type=delete&tags=" + tag + "&id=" + id,
+		   success: function(msg){
+					alert(msg);
+					window.location.reload( true );
+		   }
+	});
+}
+
+</script>

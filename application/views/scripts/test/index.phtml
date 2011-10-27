@@ -1,0 +1,168 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<title><?php echo $this->escape($this->title); ?></title>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="<?php echo $this->baseUrl();?>/css/home.css" />
+<link rel="stylesheet" type="text/css" media="screen"
+	href="<?php echo $this->baseUrl();?>/css/calendar-win2k-1.css" />
+<?php if (isset($this->includeCrystalCss) and $this->includeCrystalCss):?>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="http://app.indicate2.cn/css/fillout_wildfire.css" />
+<script type="text/javascript" src="http://app.indicate2.cn/js/all.js"></script>
+<?php endif;?>
+<!--<script type="text/javascript" media="screen"-->
+<!--	src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>-->
+<!--<link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />-->
+<!---->
+<!--<script type="text/javascript"-->
+<!--	src="<?php echo $this->baseUrl();?>/js/calendar.js"></script>-->
+<!--<script type="text/javascript"-->
+<!--	src="<?php echo $this->baseUrl();?>/js/calendar-en.js"></script>-->
+<!--<script type="text/javascript"-->
+<!--	src="<?php echo $this->baseUrl();?>/js/calendar-setup.js"></script>-->
+<!--[if lte IE 6]>
+  <link href="/public/css/ieonly.css"  rel="stylesheet" type="text/css" />
+  <![endif]-->
+  <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/ofc/json2.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/ofc/swfobject.js"></script>
+</head>
+
+
+<script type="text/javascript">
+swfobject.embedSWF("<?php echo $this->baseUrl();?>/open-flash-chart.swf", "mychart1", "1000", "200", "9.0.0", "expressInstall.swf", {"get-data":"getdata1"} );
+swfobject.embedSWF("<?php echo $this->baseUrl();?>/open-flash-chart.swf", "mychart2", "500", "200", "9.0.0", "expressInstall.swf", {"get-data":"getdata2"} );
+</script>
+
+<script type="text/javascript">
+
+function ofc_ready()
+{
+//    alert('ofc_ready');
+}
+function getdata1()
+{
+	return JSON.stringify(data1);
+}
+function getdata2()
+{
+	return JSON.stringify(data2);
+}
+function findSWF(movieName) {
+  if (navigator.appName.indexOf("Microsoft")!= -1) {
+    return window[movieName];
+  } else {
+    return document[movieName];
+  }
+}
+    
+var data1 = <?php echo $this->chart->toPrettyString(); ?>;
+var data2 = <?php echo $this->chart2->toPrettyString(); ?>;
+
+</script>
+
+<body id="page_bg">
+
+	<div class="header">
+		<div class="header-inner">
+			<a href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"
+			id="logo"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.gif" /></a>
+			<ul id="top-links">
+				<li><a
+					href="<?php echo $this->url(array('controller'=>'login','action'=>'logout'));?>"><?php echo $this->translate("Logout")?></a>
+				</li>
+			</ul>
+			<div style="clear: both;"></div>
+			<div class="navigator">
+			<ul id="top-menu">
+				<li <?php if ($this->activeTab == 'List Campaigns'):?> class="active" <?php endif?>>
+				<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminindex'));?>"><?php echo $this->translate('List_Campaigns');?></a>
+				</li>
+				<li <?php if ($this->activeTab=='Reports'):?> class="active"
+				<?php endif?>><a href="<?php echo $this->url(array('controller'=>'report','action'=>'adminindex'));?>"><?php echo $this->translate('Reply_Report');?></a>
+				</li>
+				<li <?php if ($this->activeTab == 'List Consumers'):?> class="active" <?php endif?>>
+				<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'adminindex', 'pest'=>'0'));?>"><?php echo $this->translate('List_Consumer');?></a>
+				</li>
+				<li <?php if ($this->activeTab == 'Redeem'):?> class="active" <?php endif?>>
+				<a href="<?php echo $this->url(array('controller'=>'point','action'=>'adminredeemlist'));?>"><?php echo $this->translate('Admin_Product_Redeem');?></a>
+				</li>
+				<li <?php if ($this->activeTab == 'Mails'):?> class="active" <?php endif?>>
+				<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminprepareinvitations'));?>"><?php echo $this->translate('Admin_Mail');?></a>
+				</li>
+                <li <?php if ($this->activeTab == 'Conversation'):?> class="active" <?php endif?>>
+                <a href="<?php echo $this->url(array('controller'=>'conversation','action'=>'adminindex'));?>"><?php echo $this->translate('Admin_Conversation');?></a>
+                </li>
+				<!-- <li><a href="#">history</a></li> -->
+			</ul>
+			<div id="language-selector"><a
+					href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>">中文</a>/
+				<a
+					href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>">English</a></div>
+			</div>
+		</div>
+	</div>
+	
+	<div style="clear: both;"></div>
+	<div id="container">
+<!--<p>Hello World</p>-->
+<!--<div id="my_chart"></div>-->
+
+<div style="padding-top:40px; padding-left:20px;">
+<table>
+	<tr>
+		<td width="60" valign="top">
+			<div>
+				<table cellpadding="5"  border="0" cellspacing="0" >
+						<tr ><td><a href="<?php echo $this->url(array('controller'=>'test','action'=>'index'));?>"><?php echo $this->translate('Campaign');?></a>
+					</td></tr>
+						<tr ><td><a href="<?php echo $this->url(array('controller'=>'test','action'=>'index'));?>"><?php echo $this->translate('Spraks');?></a>
+					</td></tr>
+						<tr ><td><a href="<?php echo $this->url(array('controller'=>'test','action'=>'index2'));?>"><?php echo $this->translate('Reports');?></a>
+					</td></tr>
+				</table>
+			</div>
+		</td>
+		<td width="1000" valign="top">
+			<div>
+				
+					<div id="mychart1"></div>
+					<table width="1000" >
+					<tr><td width="500" >
+						<div id="mychart2"></div>
+						</td>
+						<td width="500" >
+						<fieldset style="width:200px; border:1px solid #EEEEEE; padding:20px;">
+						<legend><?php echo $this->translate('Campaign Info');?></legend>
+						<dt><label>Gen0: 1472</label></dt>
+						<dt><label>Gen1: xxxx</label></dt>
+						<dt><label>Gen2: xxxx</label></dt>
+						</fieldset>
+						</td>
+					</tr>
+					</table>
+				
+			</div>
+		</td>
+	</tr>
+</table>
+</div>
+
+</div>
+	<div style="clear: both;"></div>
+		
+	<div id="footer"><div class="footer-inner">
+		<ul>
+			<li><a href="<?php echo $this->baseUrl();?>/site/privacypolicy"><?php echo $this->translate('Privacy_Policy');?></a></li>
+			<li><a href="<?php echo $this->baseUrl();?>/site/terms"><?php echo $this->translate('Terms');?>
+			&amp; <?php echo $this->translate('Conditions');?></a></li>
+			<li><a href="<?php echo $this->baseUrl();?>/site/contactus"><?php echo $this->translate('Contact_Us');?></a></li>
+		</ul>
+	</div></div>
+	
+	<div style="clear: both;"></div>
+	
+	
+</body>
+</html> 

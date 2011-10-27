@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+
+		<tu tuid='Tell_Us_More_About_Yourself'>
+			<tuv xml:lang="zh">
+				<seg>让我们更加了解你！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Tell Us More About Yourself!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Tell_Us_More_About_Yourself_Content'>
+			<tuv xml:lang="zh">
+				<seg>问卷调查让我们更加了解你。这样以便我们开展一些更加适合你和让你感兴趣的活动。完成问卷调查，让你更有可能获得一些非常有意思的活动邀请，这也是你迅速获得星星火积分的最简单的方式。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Polls are what let us know about you, and by knowing more about you, we can get a better idea of what campaigns best suit your interests and hobbies. 
+Completing polls also increases the likelyhood that you’ll be invited to future campaigns, and are a fast and easy way to earn Spark Points!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Thanks_For_Poll'>
+			<tuv xml:lang="zh">
+				<seg>谢谢！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Thank you!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Thanks_For_Poll_Content1'>
+			<tuv xml:lang="zh">
+				<seg>感谢你完成这个问卷调查，你将得到</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Thank you for finishing this poll, you will get</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Thanks_For_Poll_Content2'>
+			<tuv xml:lang="zh">
+				<seg>点积分。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>points from it.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Take_Me_Home'>
+			<tuv xml:lang="zh">
+				<seg>返回主页</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Take me home</seg>
+			</tuv>
+		</tu>
+		<tu tuid='More_Polls'>
+			<tuv xml:lang="zh">
+				<seg>更多问卷调查</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>More polls</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Participate_title'>
+			<tuv xml:lang="zh">
+				<seg>参与调查</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>fill poll</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

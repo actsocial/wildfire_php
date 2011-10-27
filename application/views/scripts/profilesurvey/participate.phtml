@@ -1,0 +1,39 @@
+
+<?php 
+if (isset($this->file)) {  // if static file exist
+    include($this->file);
+} else {
+    readfile("$this->filloutPage");
+}
+
+?>
+
+<?php if (isset($this->file)) { ?>
+<script language="JavaScript" type="text/javascript">
+  $('id').value = '';
+  $('submit').disabled='disabled';
+  var url = "<?php echo $this->url(array('controller'=>'common','action'=>'getaccesscode'));?>";
+  var params = 'surveyId='+ <?php echo $this->surveyId ;?>;
+  new Ajax.Request(
+      url,
+      {
+      method: 'get',
+      parameters: params,
+      onSuccess: function(msg) {
+          var accessCode = msg.responseText;
+          $('id').value = accessCode.substring(1,accessCode.length-1);
+          $('submit').disabled='';
+          }
+      }
+  );
+</script>
+<?php } ?>
+
+<!-- 
+<div class="content" style="background:#fff;">
+<div class="buttons-bar"><a href='<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'index'));?>'>Back</a>
+<div style="clear:both;"></div>
+
+</div>
+</div>
+ -->

@@ -1,0 +1,54 @@
+<div id="middle_bg">
+	<div id="logo_bg">
+		<img src="<?php echo $this->baseUrl();?>/images/logo.png" alt="logo" align="left" />
+		<a href="<?php echo $this->baseUrl();?>/index.php" class="logo logo_trebuchet">wildfire</a>
+		<div id="user4">
+			<form action="index.php" method="post">
+				<div class="search">
+					<input name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" type="text" size="20" value="search..."  onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" />
+				</div>
+				<input type="hidden" name="task"   value="search" />
+				<input type="hidden" name="option" value="com_search" />
+			</form>
+		</div><!-- user4 -->
+		<br clear="all" />
+	</div><!-- logo_bg -->
+	<div id="user3">
+		<div id="pillmenu">
+			<ul id="mainlevel-nav">
+				<li><a href="http://beta1.wildfire.asia/index.php?option=com_content&amp;view=frontpage&amp;Itemid=1&amp;lang=zh"><?php echo $this->translate('HOME');?></a></li>
+				<li><a href="http://beta1.wildfire.asia/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=53&amp;lang=zh"><?php echo $this->translate('ABOUT_US');?></a></li>
+				<li><a href="http://beta1.wildfire.asia/index.php?option=com_content&amp;view=article&amp;id=49&amp;Itemid=54&amp;lang=zh"><?php echo $this->translate('SPARKS');?></a></li>
+				<li><a href="http://beta1.wildfire.asia/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=56&amp;lang=zh"><?php echo $this->translate('GET_WOM');?></a></li>
+			</ul>
+		</div><!--pillmenu-->
+
+		<?php if ($this->currentUser): ?>
+		<div id="date">
+				<div class="login-form">
+				<?php echo $this->translate('Welcome');?>, <?php echo $this->currentUser->name?>	&nbsp;
+				<a href="<?php echo $this->url(array('controller'=>'login','action'=>'logout'));?>"><?php echo $this->translate('Logout');?></a>
+						</div>
+			</div>
+		<?php else:?>
+			<div id="date">
+				<div class="login-form">
+				<?php echo $this->form ;?>
+				<dd><input onclick="window.location.href='<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>'" type='button' value='注册' id='register'/></dd>
+				</div>
+			</div>
+		<?php endif;?>
+		<br clear="all" />
+	</div><!-- user3 -->
+	<div id="banner_bg">
+		<img src="<?php echo $this->baseUrl();?>/images/banner2.jpg" alt="team banner" align="left" />
+		<div id="newsflash">
+			<div id="jflanguageselection"></div><!--Joom!fish V2.0.2 ()-->
+		</div>
+	</div><!-- banner_bg -->
+	<?php if ($this->messages): ?>
+		<?php foreach ($this->messages as $msg): ?>
+		<?php echo $msg; ?> 
+		<?php endforeach?>
+	<?php endif?>
+</div>

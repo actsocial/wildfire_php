@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+    <header creationtoolversion="1.0.0" datatype="winres"
+        segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+        creationtool="XYZTool">
+    </header>
+    <body>
+        <tu tuid='Conversation_Plan'>
+            <tuv xml:lang="zh">
+                <seg>谈话计划</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Conversation Plan</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Type'>
+            <tuv xml:lang="zh">
+                <seg>类型</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Type</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Content'>
+            <tuv xml:lang="zh">
+                <seg>内容</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Content</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Old_Plans'>
+            <tuv xml:lang="zh">
+                <seg>以前的计划</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Other Old Plans</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Total_Consumers'>
+            <tuv xml:lang="zh">
+                <seg>总人数</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Total Consumers</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Undone_Consumers'>
+            <tuv xml:lang="zh">
+                <seg>未完成数</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Undone</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Call_Back'>
+            <tuv xml:lang="zh">
+                <seg>再拨数</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Call Back</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Time'>
+            <tuv xml:lang="zh">
+                <seg>计划时间</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Plan Time</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Condition_Input'>
+            <tuv xml:lang="zh">
+                <seg>请输入查询条件</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Please input where sentence</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Condition_SQL'>
+            <tuv xml:lang="zh">
+                <seg>查询条件</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Condition SQL</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Log'>
+            <tuv xml:lang="zh">
+                <seg>谈话记录</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Conversation Log</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Previous'>
+            <tuv xml:lang="zh">
+                <seg>查看前一个</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>previous</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Next'>
+            <tuv xml:lang="zh">
+                <seg>下一个</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>next</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Consumer_Info'>
+            <tuv xml:lang="zh">
+                <seg>用户信息</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Consumer Information</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Submitted'>
+            <tuv xml:lang="zh">
+                <seg>已提交 </seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Submitted </seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Reports'>
+            <tuv xml:lang="zh">
+                <seg> 报告</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg> reports.</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Participated'>
+            <tuv xml:lang="zh">
+                <seg>已参加 </seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Participated </seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Campaigns'>
+            <tuv xml:lang="zh">
+                <seg> 活动</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg> campaigns.</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Conversation_Old_Logs'>
+            <tuv xml:lang="zh">
+                <seg>以前的谈话记录</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Other Old Conversation logs</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Log_Edit_Time'>
+            <tuv xml:lang="zh">
+                <seg>记录时间</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Log Time</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Log_Note'>
+            <tuv xml:lang="zh">
+                <seg>要点</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Notes</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Log_Score'>
+            <tuv xml:lang="zh">
+                <seg>分数</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Score</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Log_Duration'>
+            <tuv xml:lang="zh">
+                <seg>时长(分钟)</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Duration(minutes)</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Log_Comments'>
+            <tuv xml:lang="zh">
+                <seg>评论</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Comments</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_Talktive'>
+            <tuv xml:lang="zh">
+                <seg>乐于交谈</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Talktive</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_Friendly'>
+            <tuv xml:lang="zh">
+                <seg>友好</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Friendly</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_Busy'>
+            <tuv xml:lang="zh">
+                <seg>繁忙，没有时间接电话</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Busy/in a hurry</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_Wildfire'>
+            <tuv xml:lang="zh">
+                <seg>不理解星星火</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Don't understand wf</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_Interested'>
+            <tuv xml:lang="zh">
+                <seg>不感兴趣</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Indifference</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_Attitude'>
+            <tuv xml:lang="zh">
+                <seg>态度恶劣</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Rude/bad attitude</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_WrongNumber'>
+            <tuv xml:lang="zh">
+                <seg>号码错误</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Wrong number</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_NoTime'>
+            <tuv xml:lang="zh">
+                <seg>没有时间登录</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Has no time checking wildfire</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_Coupon'>
+            <tuv xml:lang="zh">
+                <seg>已用优惠券</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Coupon used</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_Complain'>
+            <tuv xml:lang="zh">
+                <seg>回答问题/抱怨</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Ask question/complain</seg>
+            </tuv>
+        </tu>
+        <tu tuid='Note_NotHimself'>
+            <tuv xml:lang="zh">
+                <seg>不是本人</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Not himself</seg>
+            </tuv>
+        </tu>
+    </body>
+</tmx>

@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<meta name="keywords" content="word-of-mouth marketing" />
+<meta name="title" content="Sign Up" />
+<meta name="author" content="Wang Weiqi" />
+<meta name="description"
+	content="Wildfire XingXingHuo - Asias Word-of-Mouth Community" />
+<meta name="generator"
+	content="Joomla! 1.5 - Open Source Content Management" />
+<title><?php echo $this->translate('Login_Title');?></title>
+<link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet"
+	href="<?php echo $this->joomlahome;?>/modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css"
+	type="text/css" />
+<script type="text/javascript" media="screen"
+	src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>
+
+
+<link rel="stylesheet"
+	href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/general.css"
+	type="text/css" />
+<!--[if lte IE 6]>
+<link href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/ieonly.css"  rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+
+<body>
+
+	<div class="header"><div class="header-inner">
+		<div class="logo">
+			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.png" /></a>
+		</div>
+		<div class="login-panel">
+			<form action="<?php echo $this->url(array('controller'=>'login','action'=>'login'));?>" method="post">
+				<div class="user-info">
+					<span for="username" style="float:left;height:27px;line-height:27px;padding-left:5px;"><?php echo $this->translate("Common_Username")?></span>
+
+					<input type="text" name="username" id="username"/>
+					<span for="password" style="float:left;height:27px;line-height:27px;padding-left:5px;"><?php echo $this->translate("Common_Password")?></span>
+					<input type="password" name="password" id="password"/>
+				</div>
+				<input type="submit" name="login" value=<?php echo $this->translate("Common_login")?> />
+				<input type="button" name="help" value=<?php echo $this->translate("Common_help")?> />
+			</form>
+		</div>
+
+		<div class="navigator">
+			<ul id="mainlevel-nav"><li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=frontpage&amp;Itemid=1&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_home")?></a></li>
+			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=53&amp;lang=zh" class="mainlevel-nav" id="active_menu-nav"><?php echo $this->translate("Common_about_us")?></a></li>
+			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=49&amp;Itemid=54&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_about_Sparks")?></a></li>
+			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=56&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_hire_us")?></a></li></ul>
+			<div class="language-selector">
+			<div id="jflanguageselection">
+				<ul class="jflanguageselection"><li id="active_language"><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>"><span lang="zh" xml:lang="zh">中文&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li><li><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>" ><span lang="en" xml:lang="en">English</span></a></li></ul></div>		
+				<div id="jflanguageselection"></div>
+			</div>
+			   <div id="qq_online" style="position:absolute;top:75px;left:1100px">
+				<!-- WPA Button Begin -->
+				<iframe scrolling="no" frameborder="0" width="126" height="42" allowtransparency="true" src="https://id.b.qq.com/static/account/bizqq/wpa/wpa_a05.html?type=5&kfuin=4006008707&ws=http%3A%2F%2Fhome.xingxinghuo.cn&btn1=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D"></iframe>
+				<!-- WPA Button END -->
+			 </div>	
+		</div>
+
+		<div class="clear"></div>
+	</div></div>
+	<div class="container">
+	<div class="container-inner">
+		<div class="banner">
+			<img src="<?php echo $this->baseUrl();?>/images/text-banner1.jpg"/>
+		</div>
+		
+		<div class="contents-3-col">
+		<div class="article-box"><div class="article-box-inner">
+		<h1><?php echo $this->translate("Common_Please_login")?></h1>
+		<p ><?php echo $this->translate("Common_Please_login_Content")?></p>
+		</div></div>
+<form enctype="application/x-www-form-urlencoded" action="<?php echo $this->url(array('controller'=>'login',
+		'action'=>'login'));?>" method="post" target="_parent">
+		
+<div class="login_form">
+<br/>
+<table>
+	<tr><td><?php echo $this->form->email?></td><td>&nbsp;</td></tr>
+	<tr><td><?php echo $this->form->password?></td><td><a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>"><?php echo $this->translate("Common_Forget_Password")?></a>,<a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>">未激活账户?</a></td></tr>
+</table>
+
+  <div style="clear:both"></div>  <br/>
+</div>
+<div class="buttons-bar">
+<?php echo $this->form->login?>
+<input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>
+</div>
+<input type="hidden" name="url" id="url" value="<?php echo $this->url?>"></input>
+</form>
+			
+
+
+		</div>
+		<div class="clear"></div>
+	</div></div>
+
+	<div class="footer">
+	  <div class="footer-inner">
+		<div class="moduletable bottom_menu">
+	
+			<table width="100%" border="0" cellpadding="0" cellspacing="1">
+			<tr><td nowrap="nowrap"><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=51&amp;Itemid=58&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Contacts');?></a>
+			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=87&amp;Itemid=59&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Privacy_Policy');?></a>
+			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=60&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Terms_and_Conditions');?></a>
+			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=89&amp;Itemid=61&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Jobs');?></a>
+			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=90&amp;Itemid=62&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Investors');?></a></td>
+			</tr></table>		
+		</div>
+      </div>
+    </div>
+</body>
+</html>

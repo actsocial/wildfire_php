@@ -1,0 +1,99 @@
+﻿<div align="center" >
+	<br/>
+	<h2 ><?php echo $this->translate('Admin_Campaigns');?></h2>
+	<br/>
+	<table width="700">
+	<tr>
+	<th>No.</th>
+	<th><?php echo $this->translate('Admin_Campaigns_Name');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Create_Date');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Expired_Date');?></th>
+	<th>&nbsp;</th>
+	</tr>
+	<?php $count = 1; foreach($this->campaigns as $campaign) : ?>
+		<?php if($campaign->type != 'mission'){?>
+	<tr>
+	<td ><?php echo $this->escape($campaign->id);?></td>
+	<td><?php echo $this->escape($campaign->name);?></td>
+	<td><?php echo $this->escape($campaign->create_date);?></td>
+	<td><?php echo $this->escape($campaign->expire_date);?></td>
+	<td>
+	<a href="<?php echo $this->url(array('controller'=>'campaigninvitation', 'action'=>'adminlist', 'id'=>$campaign->id));?>">
+	<?php echo $this->translate('List_All_Campaign_Invitation');?></a>
+	<a href="<?php echo $this->url(array('controller'=>'campaignparticipation', 'action'=>'adminindex', 'id'=>$campaign->id));?>">
+	<?php echo $this->translate('List_All_Campaign_Participation');?>
+	</a>
+	<a href="<?php echo $this->url(array('controller'=>'campaign',
+	'action'=>'adminshow', 'id'=>$campaign->id));?>"><?php echo $this->translate('Admin_Campaign_Consumer_Set');?></a>
+	<a href="<?php echo $this->url(array('controller'=>'campaign',
+	'action'=>'adminsendpostcampaignsurveyindex', 'id'=>$campaign->id));?>"><?php echo $this->translate('Send_post_email');?></a>
+		<!--<a href="<?php echo $this->url(array('controller'=>'campaign',
+		'action'=>'adminedit', 'id'=>$campaign->id));?>"><?php echo $this->translate('Edit');?></a>
+		<a href="<?php echo $this->url(array('controller'=>'campaign',
+		'action'=>'admindelete', 'id'=>$campaign->id));?>"><?php echo $this->translate('Delete');?></a>
+		-->
+	<a class="thickbox" href="<?php echo $this->url(array('controller'=>'campaignparticipation', 'action'=>'adminexportdata', 'id'=>$campaign->id));?>&TB_iframe=true">
+		导出数据
+	</a>
+	<a target="_blank" href="/public/campaign/adminedit/id/<?php echo $campaign->id?>">修改</a>
+	</td>
+	</tr>
+	<?php }?>
+	<?php endforeach; ?>
+	
+	</table>
+	
+	<h2 >任务</h2>
+	<br/>
+	<table width="700">
+	<tr>
+	<th>No.</th>
+	<th><?php echo $this->translate('Admin_Campaigns_Name');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Create_Date');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Expired_Date');?></th>
+	<th>&nbsp;</th>
+	</tr>
+	<?php $count = 1; foreach($this->campaigns as $campaign) : ?>
+	<?php if($campaign->type == 'mission'){?>
+	<tr>
+	<td ><?php echo $this->escape($campaign->id);?></td>
+	<td><?php echo $this->escape($campaign->name);?></td>
+	<td><?php echo $this->escape($campaign->create_date);?></td>
+	<td><?php echo $this->escape($campaign->expire_date);?></td>
+	<td>
+	<a href="<?php echo $this->url(array('controller'=>'campaigninvitation', 'action'=>'adminlist', 'id'=>$campaign->id));?>">
+	<?php echo $this->translate('List_All_Campaign_Invitation');?></a>
+	<a href="<?php echo $this->url(array('controller'=>'campaignparticipation', 'action'=>'adminindex', 'id'=>$campaign->id));?>">
+	<?php echo $this->translate('List_All_Campaign_Participation');?>
+	</a>
+	<a href="<?php echo $this->url(array('controller'=>'campaign',
+	'action'=>'adminshow', 'id'=>$campaign->id));?>"><?php echo $this->translate('Admin_Campaign_Consumer_Set');?></a>
+	<a href="<?php echo $this->url(array('controller'=>'campaign',
+	'action'=>'adminsendpostcampaignsurveyindex', 'id'=>$campaign->id));?>"><?php echo $this->translate('Send_post_email');?></a>
+		<!--<a href="<?php echo $this->url(array('controller'=>'campaign',
+		'action'=>'adminedit', 'id'=>$campaign->id));?>"><?php echo $this->translate('Edit');?></a>
+		<a href="<?php echo $this->url(array('controller'=>'campaign',
+		'action'=>'admindelete', 'id'=>$campaign->id));?>"><?php echo $this->translate('Delete');?></a>
+		-->
+	<a class="thickbox" href="<?php echo $this->url(array('controller'=>'campaignparticipation', 'action'=>'adminexportdata', 'id'=>$campaign->id));?>&TB_iframe=true">
+		导出数据
+	</a>
+	<a target="_blank" href="/public/campaign/adminedit/id/<?php echo $campaign->id?>">修改</a>
+	</td>
+	</tr>
+	<?php }?>
+	<?php endforeach; ?>
+	
+	</table>
+	
+	<a class="button" href="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminadd'));?>"><?php echo $this->translate('Add_New_Campaign');?></a>
+
+</div>	
+	<div style="color: red">
+	<?php foreach ($this->messages as $msg): ?>
+	<?php echo $msg; ?>
+	<?php endforeach?>
+	</div>
+
+
+

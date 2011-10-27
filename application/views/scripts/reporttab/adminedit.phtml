@@ -1,0 +1,50 @@
+<form action="<?php echo $this->url(array ('controller' => 'reporttab','action' => 'adminupdate'));?>" method="post">
+<input name="id" value="<?php echo $this->reportTab->id ?> " type="hidden" />
+<table>
+  <tbody>
+    <tr>
+      <td>Campaign</td>
+     <td>
+       <select name="campaign_id">
+         <?php foreach($this->campaigns as $campaign) : ?>
+         <option value="<?php echo $campaign->id ?>" <?php if($this->reportTab->campaign_id == $campaign->id) { echo "selected="."selected";} ?>><?php echo $campaign->name ?></option>
+         <?php endforeach; ?>
+       </select>
+    </td>
+   </tr>
+   <tr>
+     <td>Name</td>
+     <td>
+       <input name="name" value="<?php echo $this->reportTab->name ?>" />    
+     </td>
+   </tr>
+   <tr>
+     <td>Description</td>
+     <td>
+       <textarea name="description"><?php echo $this->reportTab->description ?></textarea>
+    </td>
+   </tr>
+   <tr>
+     <td>Tags:</td>
+     <td>
+       <table>
+         <tbody>
+       <?php $count = 1; foreach($this->tags as $tag) : ?>
+         <?php if($count == 1) {?><tr><?php } ?>
+         <td><input type="checkbox" name="tags[]" value="<?php echo $tag->id ?>" <?php if(in_array($tag->id, $this->taggings)) { echo "checked='checked'";} ?>
+         /><?php echo $tag->name ?></span></td>
+         <?php if($count > 1 && $count%4==0) {?></tr><tr><?php } ?>
+         <?php $count += 1 ?>
+       <?php endforeach; ?>
+        </tbody>
+      </table>
+     </td>
+   </tr>
+   <tr>
+     <td>
+       <input type="submit" value="Save" />
+     </td>
+   </tr>
+  </tbody>
+</table>
+</form>

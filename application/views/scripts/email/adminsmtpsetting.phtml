@@ -1,0 +1,82 @@
+﻿<div  align="center">
+	<br>
+	<h2><?php echo $this->translate('Admin_SMTP_SETTING');?></h2>
+	<br>
+	
+	<br>
+	<div>
+		<form iname="form"
+		action="<?php echo $this->url(array('controller'=>'email','action'=>'adminsmtpsetting'));?>"
+		method="post">
+			<table>
+				<tr>
+				<td>1. Invitation SMTP Server:</td>
+				<td><select id='Invitation' name='Invitation'>
+							<OPTION VALUE="" <?php if($this->invitationSelected == null || $this->invitationSelected == ''){?>Selected<?php }?> ></OPTION>
+							<OPTION VALUE="select_1" <?php if($this->invitationSelected == 'select_1'){?>Selected<?php }?> ><?php echo $this->select1SMTPServer;?></OPTION>
+							<OPTION VALUE="select_2" <?php if($this->invitationSelected == 'select_2'){?>Selected<?php }?> ><?php echo $this->select2SMTPServer;?></OPTION>
+							<OPTION VALUE="select_3" <?php if($this->invitationSelected == 'select_3'){?>Selected<?php }?> ><?php echo $this->select3SMTPServer;?></OPTION>
+					</select>
+				</td>
+				</tr>
+				
+				<tr>
+				<td>2. Friend SMTP Server:</td>
+				<td><select id='Friend' name='Friend'>
+							<OPTION VALUE="" <?php if($this->friendSelected == null || $this->friendSelected == ''){?>Selected<?php }?> ></OPTION>
+							<OPTION VALUE="select_1" <?php if($this->friendSelected == 'select_1'){?>Selected<?php }?> ><?php echo $this->select1SMTPServer;?></OPTION>
+							<OPTION VALUE="select_2" <?php if($this->friendSelected == 'select_2'){?>Selected<?php }?> ><?php echo $this->select2SMTPServer;?></OPTION>
+							<OPTION VALUE="select_3" <?php if($this->friendSelected == 'select_3'){?>Selected<?php }?> ><?php echo $this->select3SMTPServer;?></OPTION>
+					</select>
+				</td>
+				</tr>
+				
+				<tr>
+				<td>3. Reply-Report SMTP Server:</td>
+				<td><select id='Report' name='Report'>
+							<OPTION VALUE="" <?php if($this->reportSelected == null || $this->reportSelected == ''){?>Selected<?php }?> ></OPTION>
+							<OPTION VALUE="select_1" <?php if($this->reportSelected == 'select_1'){?>Selected<?php }?> ><?php echo $this->select1SMTPServer;?></OPTION>
+							<OPTION VALUE="select_2" <?php if($this->reportSelected == 'select_2'){?>Selected<?php }?> ><?php echo $this->select2SMTPServer;?></OPTION>
+							<OPTION VALUE="select_3" <?php if($this->reportSelected == 'select_3'){?>Selected<?php }?> ><?php echo $this->select3SMTPServer;?></OPTION>
+					</select>
+				</td>
+				</tr>
+				<tr>
+				<td>4. Welcome-Campaign SMTP Server:</td>
+				<td><select id='Welcome' name='Welcome'>
+							<OPTION VALUE="" <?php if($this->welcomeSelected == null || $this->welcomeSelected == ''){?>Selected<?php }?> ></OPTION>
+							<OPTION VALUE="select_1" <?php if($this->welcomeSelected == 'select_1'){?>Selected<?php }?> ><?php echo $this->select1SMTPServer;?></OPTION>
+							<OPTION VALUE="select_2" <?php if($this->welcomeSelected == 'select_2'){?>Selected<?php }?> ><?php echo $this->select2SMTPServer;?></OPTION>
+							<OPTION VALUE="select_3" <?php if($this->welcomeSelected == 'select_3'){?>Selected<?php }?> ><?php echo $this->select3SMTPServer;?></OPTION>
+					</select>
+				</td>
+				</tr>
+				<tr>
+				<td>5. Post-Campaign SMTP Server:</td>
+				<td><select id='Post-Campaign' name='PostCampaign'>
+							<OPTION VALUE="" <?php if($this->postcampaignSelected == null || $this->postcampaignSelected == ''){?>Selected<?php }?> ></OPTION>
+							<OPTION VALUE="select_1" <?php if($this->postcampaignSelected == 'select_1'){?>Selected<?php }?> ><?php echo $this->select1SMTPServer;?></OPTION>
+							<OPTION VALUE="select_2" <?php if($this->postcampaignSelected == 'select_2'){?>Selected<?php }?> ><?php echo $this->select2SMTPServer;?></OPTION>
+							<OPTION VALUE="select_3" <?php if($this->postcampaignSelected == 'select_3'){?>Selected<?php }?> ><?php echo $this->select3SMTPServer;?></OPTION>
+					</select>
+				</td>
+				</tr>
+				<tr>
+				<td>6. Forget-Password SMTP Server:</td>
+				<td><select id='Forget-Password' name='ForgetPassword'>
+							<OPTION VALUE="" <?php if($this->forgetpasswordSelected == null || $this->forgetpasswordSelected == ''){?>Selected<?php }?> ></OPTION>
+							<OPTION VALUE="select_1" <?php if($this->forgetpasswordSelected == 'select_1'){?>Selected<?php }?> ><?php echo $this->select1SMTPServer;?></OPTION>
+							<OPTION VALUE="select_2" <?php if($this->forgetpasswordSelected == 'select_2'){?>Selected<?php }?> ><?php echo $this->select2SMTPServer;?></OPTION>
+							<OPTION VALUE="select_3" <?php if($this->forgetpasswordSelected == 'select_3'){?>Selected<?php }?> ><?php echo $this->select3SMTPServer;?></OPTION>
+					</select>
+				</td>
+				</tr>
+			</table>
+			<div class="buttons-bar" style="padding-top: 10px;">
+				<input type="submit" value="Submit">
+				<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminprepareinvitations'));?>">Back</a>	
+			</div>
+			
+		</form>
+	</div>
+</div>

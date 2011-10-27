@@ -1,0 +1,164 @@
+<?php
+    if ($this->jQuery()->isEnabled()) {
+        $this->jQuery()->addStylesheet($this->baseUrl() . '/css/smoothness/jquery-ui-1.7.2.custom.css')
+                       ->setLocalPath($this->baseUrl() . '/js/jquery-1.3.2.min.js')
+                       ->setUiLocalPath($this->baseUrl() . '/js/jquery-ui-1.7.2.custom.min.js');
+        echo $this->jQuery();
+    }
+?>
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2>New Mission</h2>
+<br/>
+  <p>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'mission','action'=>'adminadd'));?>">New Mission</a></span>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'mission','action'=>'adminlist'));?>">Mission List</a></span>
+  </p>
+<form id="addmission" name="addmission" enctype="multipart/form-data" action="<?php echo $this->url(array('controller'=>'mission','action'=>'adminadd'));?>" method="post">
+  <table class="missiontable" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td align="right"><b>Brand: </b></td>
+      <td>
+        <select id="brand" name="brand">
+        <?php foreach($this->brands as $brand) {?>
+            <option value="<?php echo $this->escape($brand->id);?>"><?php echo $this->escape($brand->name);?></option>
+        <?php } ?>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Title: </b></td>
+      <td>
+        <input name="title" type="text" size="25">
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Introduce: </b></td>
+      <td>
+        <textarea name="intro" rows="5" cols="49"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Type: </b></td>
+      <td>
+        <select size="1" id="type" name="type">
+            <option>Question</option>
+            <option>Shopping</option>
+            <option>Share</option>
+            <option selected>None</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Start Date: </b></td>
+      <td>
+        <input id="startdate" name="startdate" type="text" readonly="readonly"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>End Date: </b></td>
+      <td>
+        <input id="enddate" name="enddate" type="text" readonly="readonly"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Background: </b></td>
+      <td>
+        <input id="background" name="background" type="file" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table width="100%">
+          <?php for($i=1; $i<=3; $i++) { ?>
+          <tr>
+            <?php for($j=1; $j<=3; $j++) { ?>
+              <td>
+				preview
+              </td>
+            <?php } ?>
+          </tr>
+          <?php } ?>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2">
+        <input type="submit" value="Submit">
+      </td>
+    </tr>
+  </table>
+</form>
+<form id="block">
+  <div id="blockContent" >
+  	<select id="area_select" name="area" onchange="switchBlock();">
+		<option value="00">Row 0 Col 0</option>
+		<option value="01">Row 0 Col 1</option>
+		<option value="02">Row 0 Col 2</option>
+		<option value="10">Row 1 Col 0</option>
+		<option value="11">Row 1 Col 1</option>
+		<option value="12">Row 1 Col 2</option>
+		<option value="20">Row 2 Col 0</option>
+		<option value="21">Row 2 Col 1</option>
+		<option value="22">Row 2 Col 2</option>
+	</select>
+	<input id="radio_arrow" type="radio" name="type" value="arrow" onclick="hideFCK();" checked="checked"> Arrow
+	<input type="radio" name="type" value="html" onclick="showFCK();"> Html<br>
+	<select id="arrow_select" name="arrow">
+		<option value="1">Arrow 1</option>
+		<option value="2">Arrow 2</option>
+		<option value="3">Arrow 3</option>
+		<option value="4">Arrow 4</option>
+	</select>
+	<div id="fck" style="display:none;"><?php $this->oFCKeditor->create();?></div> 
+	<input type="button" value="save" onclick="saveBlock();" ></input>
+   </div>
+</form>
+
+
+
+
+<div><?php echo $this->error; ?></div>
+<style type="text/css">
+td {padding:4px;}
+</style>
+<script language="javascript">
+$j(document).ready(
+    function() {
+        $j('#startdate').datepicker({
+            dateFormat: 'yy-mm-dd'
+        });
+        $j('#enddate').datepicker({
+            dateFormat: 'yy-mm-dd'
+        });
+    }
+);
+
+
+function showFCK(){
+	$('fck').show();
+	$('arrow_select').hide();
+}
+
+function hideFCK(){
+	$('fck').hide();
+	$('arrow_select').show();
+}
+
+function switchBlock(){
+	alert($F('area_select'));	
+	//ajax get block info
+}
+
+function saveBlock(){
+	alert($F('area_select'));
+	if ($j('#radio_arrow').attr("checked")){
+		alert($F('arrow_select'));
+	}else{
+		// ajax post form 'block' and save in server end
+		// refesh preview after save will be good
+	}
+	
+}
+</script>
+</div>

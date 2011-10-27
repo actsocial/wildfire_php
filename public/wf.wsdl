@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:tns="http://home.xingxinghuo.cn/public/ws/ws/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="PointService"
+	targetNamespace="http://home.xingxinghuo.cn/public/ws/ws/wsdl">
+	<portType name="PointServicePort">
+		<operation name="decrypt">
+			<input message="tns:decryptRequest" />
+			<output message="tns:decryptResponse" />
+		</operation>
+		<operation name="verifyAccount">
+			<input message="tns:verifyAccountRequest" />
+			<output message="tns:verifyAccountResponse" />
+		</operation>
+		<operation name="exchange">
+			<input message="tns:exchangeRequest" />
+			<output message="tns:exchangeResponse" />
+		</operation>
+		<operation name="getCurrentPoint">
+			<input message="tns:getCurrentPointRequest" />
+			<output message="tns:getCurrentPointResponse" />
+		</operation>
+	</portType>
+	<binding name="PointServiceBinding" type="tns:PointServicePort">
+		<soap:binding style="rpc"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="decrypt">
+			<soap:operation
+				soapAction="http://home.xingxinghuo.cn/public/ws/ws/wsdl#decrypt" />
+			<input>
+				<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="verifyAccount">
+			<soap:operation
+				soapAction="http://home.xingxinghuo.cn/public/ws/ws/wsdl#verifyAccount" />
+			<input>
+				<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="exchange">
+			<soap:operation
+				soapAction="http://home.xingxinghuo.cn/public/ws/ws/wsdl#exchange" />
+			<input>
+				<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+		<operation name="getCurrentPoint">
+			<soap:operation
+				soapAction="http://home.xingxinghuo.cn/public/ws/ws/wsdl#getCurrentPoint" />
+			<input>
+				<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</input>
+			<output>
+				<soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+			</output>
+		</operation>
+	</binding>
+	<service name="PointServiceService">
+		<port name="PointServicePort" binding="tns:PointServiceBinding">
+			<soap:address location="http://home.xingxinghuo.cn/public/ws/ws/wsdl" />
+		</port>
+	</service>
+	<message name="decryptRequest">
+		<part name="site" type="xsd:string" />
+		<part name="userName" type="xsd:string" />
+		<part name="password" type="xsd:string" />
+		<part name="realName" type="xsd:string" />
+		<part name="auth" type="xsd:string" />
+	</message>
+	<message name="decryptResponse">
+		<part name="decryptReturn" type="xsd:string" />
+	</message>
+	<message name="verifyAccountRequest">
+		<part name="userName" type="xsd:string" />
+		<part name="password" type="xsd:string" />
+	</message>
+	<message name="verifyAccountResponse">
+		<part name="verifyAccountReturn" type="xsd:int" />
+	</message>
+	<message name="exchangeRequest">
+		<part name="userName" type="xsd:string" />
+		<part name="password" type="xsd:string" />
+		<part name="point" type="xsd:int" />
+	</message>
+	<message name="exchangeResponse">
+		<part name="exchangeReturn" type="xsd:string" />
+	</message>
+	<message name="getCurrentPointRequest">
+		<part name="userName" type="xsd:string" />
+		<part name="password" type="xsd:string" />
+	</message>
+	<message name="getCurrentPointResponse">
+		<part name="getCurrentPointReturn" type="xsd:int" />
+	</message>
+</definitions>

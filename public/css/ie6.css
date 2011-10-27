@@ -1,0 +1,60 @@
+body {
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+}
+input, textarea {
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+}
+.web-dialog {
+	/*background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale, src='images/web-dialog-bk.png');*/
+	background: url(../images/web-dialog-bk-ie6.gif) no-repeat left top;
+}
+.web-dialog .content-2column {
+	margin-left: 15px;
+}
+.web-dialog .content-2column .images-column {
+	margin-left: 4px;
+}
+.web-dialog .content-2column .main-column {
+	margin-left: 6px;
+}
+.web-dialog .content-2column .buttons-bar a {
+	margin-right: 5px;
+}
+
+.post-campaign-dialog {
+	/*background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale, src='images/web-dialog-bk.png');*/
+	background: url(../images/post-campaign-dialog-bk-ie6.gif) no-repeat left top;
+}
+.post-campaign-dialog .content-2column {
+	margin-left: 15px;
+}
+.post-campaign-dialog .content-2column .images-column {
+	margin-left: 4px;
+}
+.post-campaign-dialog .content-2column .main-column {
+	margin-left: 6px;
+}
+.post-campaign-dialog .content-2column .buttons-bar a {
+	margin-right: 5px;
+}
+
+.guide-button {
+	margin-top: -172px;
+	margin-left: 30px;
+	width: 615px;
+	height: 35px;
+}
+.guide-box {
+	margin:0;
+	padding-left:0;
+	background: url(../images/training_bk.gif) no-repeat 80px top;
+}
+.guide-box .guide-content {
+	margin-left: 80px;
+}
+.guide-box .guide-content ul,
+.guide-box .guide-content ol {
+	margin-left:0;
+}

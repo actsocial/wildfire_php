@@ -1,0 +1,60 @@
+﻿<div align="center" >
+
+<div class="operate">
+<a href='<?php echo $this->url(array('controller'=>'campaigninvitation',
+'action'=>'create', 'method'=>'post'));?>'><?php echo $this->translate('Add_Campaign_Invitation')?></a>
+</div>
+<fieldset>
+<br>
+<!--
+	<h2><?php echo $this->translate('Edit_Campaign')?></h2>
+	<?php echo $this->form ;?>
+-->
+<form id="campaign_name_value" method="post" enctype="multipart/form-data"  action="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminedit','id'=>"29"));?>">
+		<table style="font-size:14px;">
+						<tr> <td colspan="2" > <h4 align="center" style="color:red"><?php echo $this->translate('Add_New_Campaign')?></h4> </td> </tr>
+						<tr> <td><?php echo $this->form->name?></td> <td><?php echo $this->form->company?></td></tr>
+						<tr> <td><?php echo $this->form->campaigntype?></td>   <td><?php echo $this->form->i2_survey_id?></td> </tr>
+						<tr> <td><?php echo $this->form->pre_campaign_survey?></td> <td><?php echo $this->form->post_campaign_survey?></td></tr>
+						<tr> <td> <?php echo $this->form->start_date?> </td><td><?php echo $this->form->expire_date?></td></tr>
+						<tr> <td> <?php echo $this->form->total?>   </td> </tr>
+		</table>
+		<table style="font-size:14px;" >
+			<tr> <td colspan="2" > <h4 align="center" style="color:red">填写活动附属信息：</h4> </td> </tr>
+			<tr>
+				<td>
+					<table>
+						<tr> <td><?php echo $this->form->product_name?></td><td><?php echo $this->form->simple_description ?></td> </tr>
+						<tr> <td><?php echo $this->form->invitation_description ?></td>  <td><?php echo $this->form->invitation_description2 ?></td> </tr>
+						<tr> <td><?php echo $this->form->pre_campaign_intro ?></td>  <td><?php echo $this->form->pre_campaign_friends ?></td> </tr>
+						<tr> <td><?php echo $this->form->thanks_for_post_campaign_survey ?></td>  <td><?php echo $this->form->thanks_for_post_campaign_survey_content ?></td> </tr>
+						<tr> <td><?php echo $this->form->post_survey_notice ?></td>  <td><?php echo $this->form->pre_campaign_info ?></td> </tr>
+						<tr> <td><?php echo $this->form->pre_campaign_thankyou ?></td>  <td></td> </tr>
+					</table>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		<table>
+			<tr> <td colspan="2" align="center"> <h4 align="center" style="color:red">上传活动相关图片</h4> </td> </tr>
+			<tr> <td> <?php echo $this->form->photo_one?> </td> <td><?php echo $this->form->photo_two?> </td> </tr>
+			<tr> <td> <?php echo $this->form->photo_three?> </td> <td> <?php echo $this->form->photo_four?> </td> </tr>
+			<tr> <td> <?php echo $this->form->photo_five?> </td> <td> <?php echo $this->form->photo_six?> </td> </tr>
+		</table>
+		<table>
+			<tr> <td colspan="2" align="center"> <input type="submit" value="提交"> </td> </tr>
+		</table>
+			
+		</form>
+</fieldset>
+<ul class="blank">
+<li><a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'adminindex'));?>'><?php echo $this->translate('Back')?></a></li>
+</ul>
+</div>
+
+
+
+
+
+
+

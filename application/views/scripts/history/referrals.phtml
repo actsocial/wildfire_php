@@ -1,0 +1,51 @@
+<div class="article-box"><div class="article-box-inner">
+	<h1 style="margin-left: 0px;"><?php echo $this->translate("Your_Spark_History")?></h1>
+	<p><?php echo $this->translate("Your_Spark_History_Content")?></p>
+</div></div>
+<div class="content" style="background: #fff;padding:0; margin-bottom: 0; margin-top: 10px;" align="center">
+<ul class="tabbed-buttons">
+	<li><a href="<?php echo $this->baseUrl();?>/history/campaigns"><?php echo $this->translate("His_Campaigns")?></a></li>
+	<li><a href="<?php echo $this->baseUrl();?>/history/reports"><?php echo $this->translate("His_Reports")?></a></li>
+	<li class="active"><a href="<?php echo $this->baseUrl();?>/history/referrals"><?php echo $this->translate("His_Referrals")?></a></li>
+	<li><a href="<?php echo $this->baseUrl();?>/history/surveys"><?php echo $this->translate("His_Surveys")?></a></li>
+	<li><a href="<?php echo $this->baseUrl();?>/history/stuff"><?php echo $this->translate("His_Stuff")?></a></li>
+</ul>
+</div>
+<div style="clear: both;"></div>
+<div class="content" style="background: #fff; padding: 0; margin-bottom: 0; margin-top: 10px; padding-left: 25px;">
+	<font style="font-size:14px"><?php echo $this->translate("History_Referrals_Hints")?></font>
+</div>
+<div style="clear: both;"></div>
+<div class="content" style="background: #fff; padding: 0;" align="center">
+<div class="tabbed-content">
+
+	<table class="referrals-history">
+		<tr>
+
+			<th><?php echo $this->translate("His_Referrals_recipients")?></th>		
+			<th><?php echo $this->translate("His_Referrals_date")?></th>
+			<th><?php echo $this->translate("His_Referrals_Joined")?></th>
+		</tr>
+		<?php
+		 foreach ($this->paginator as $historySent):?>
+		<tr>
+
+			<td><?php echo $historySent['to']?></td>
+			<td><?php echo $historySent['date']?></td>
+			<?php if($historySent['receiver'] != null){?>
+				<td><?php echo $this->translate("His_Referrals_Yes")?></td>
+			<?php }else{?>
+				<td><div style="padding-left:65px;"><?php echo $this->translate("His_Referrals_No")?>					
+					<a href="<?php echo $this->url(array('controller'=>'invitation','action'=>'reinvite', 'resend_email'=>$historySent['to']));?>">
+					<?php echo $this->translate("His_Referrals_Resend")?>
+					</a>
+					</div>
+				</td>
+			<?php }?>
+		</tr>
+		<?php endforeach;?>
+	</table>
+	<div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?></div>
+</div>
+<div style="clear: both;"></div>
+</div>

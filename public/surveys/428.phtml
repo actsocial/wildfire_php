@@ -1,0 +1,1843 @@
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	// <![CDATA[
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie > 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length > MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+	// ]]>
+	-->
+	</script>
+<div class="main-container-outer" style="background: #fff;width:100%;">
+	<div id="container" style="background: #fff;">
+		<div id="header" class="header" style="display: none;">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			<div class="main-logo" id="main-logo">
+				<a href="http://www.ostrakon.org" target="_blank">
+				</a>
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div> <!-- header -->
+		<div id="nav" class="navigation" style="display:none;">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content" style="background:#fff;width:100%;">
+ 		
+
+<div id="content" style="width:100%;">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	mandatoryElements = new Array(); 
+// ]]>
+-->
+</script>
+<div class="fillout-container">
+<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
+<div class="mainOneContent">
+
+<div style="margin-top:10px;"></div>
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
+  <div id="mainzone-top-left">
+    <div id="mainzone-top-right"></div>
+  </div>
+</div>
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none;">
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"/></td>
+		<td bgcolor="#ffffff">
+			<div class="web-dialog-message">
+				<p id="web-dialog-message-text" class=""></p>
+			</div>
+			<div class="buttons" id="web-dialog-buttons">
+			</div>
+		</td>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"/></td>
+	</tr>
+</table>
+
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	var WebDialog = {
+		element : $('web-dialog'),
+		onok : function() {},
+		oncancel : function() {},
+		show : function() {
+			var width = document.body.clientWidth;
+			var height = document.body.offsetHeight;
+			var left = (width - this.element.offsetWidth) / 2;
+			var top = (height - this.element.offsetHeight) / 2;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+		},
+		alert : function(msg,agree,disagree,onok,oncancel) {
+			var buttons = ["OK","Cancel"];
+			var callbacks = [onok, oncancel];
+			this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+		},
+		ok : function() {
+			this.onok();
+		},
+		close : function() {
+			this.element.hide();
+			$('mask').hide();
+			this.oncancel();
+		},
+		showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions) {
+			// icon_type : "none", "alert", "question"
+			// msg_align : "left", "center", "right"
+			// width : -1 means auto
+			
+			var width = document.body.clientWidth;
+			var height = window.screen.availHeight;
+			var left = (width - window_width) / 2;
+			var top = (height - 300) / 2;
+			var pos = 0;
+			if (window.innerHeight) {
+		    	pos = window.pageYOffset
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
+		    	pos = document.documentElement.scrollTop
+		    } else if (document.body) {
+		    	pos = document.body.scrollTop;
+		    }
+		    top += pos;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+			$('mask').style.height = document.body.scrollHeight + "px";
+			
+			if (width != undefined) {
+				this.element.style.width = window_width + "px";
+			}
+			if (msg != undefined) {
+				$('web-dialog-message-text').innerHTML = msg;
+			}
+			if (icon_type != undefined && msg_align != undefined) {
+				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
+			} else if (icon_type == undefined && msg_align == undefined) {
+				$('web-dialog-message-text').className = "icon-none left";
+			} else if (icon_type == undefined) {
+				$('web-dialog-message-text').className = msg_align;
+			} else {
+				$('web-dialog-message-text').className = "icon-"+icon_type;
+			}
+			
+			$('web-dialog-buttons').innerHTML = "";
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
+					if (buttons[i]==undefined || callback_functions[i]==undefined) {
+						continue;
+					}
+					var e = document.createElement('a');
+					e.setAttribute('href', '#');
+					e.innerHTML = buttons[i];
+					e.onclick = callback_functions[i];
+					$('web-dialog-buttons').appendChild(e);
+				}
+			}
+			
+			
+			this.element.show();
+			$('mask').show();
+		}
+	}
+// ]]>
+-->
+</script>
+<div id="mainzone">
+<div id="mainzone-inner">
+
+
+<input type="hidden" name="id" value="" id="id" />
+<input type="hidden" name="theme" value="wildfire" id="theme" />
+
+<div class="page-bar-area">
+<span id="pageBar">Page:&nbsp;</span>
+<strong class="no-answer">No Answer</strong><img class="no-answer" src="/images/no_answer.gif" align="absmiddle"/>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+
+	
+	<div id="page_0">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1785" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						In how many occasions did you mention BugsLock, online or offline, during the last three months?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[9297].id" value="" id="answers[9297].id" />
+<input type="text" name="answers[9297].value" value="" id="question_9297" group="9297" class="input-text" />
+
+<span class="error-content" id="err_answers[9297].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1786" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How many times did you post a comment about BugsLock online (BBS/forum)?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9298].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9298].id" value="" id="answers[9298].id" />
+
+	<select group="9298" class="selection" id="question_9298" name="answers[9298].value" title="title"  size = "1" >
+	<option selected="selected" value="0">Please choose</option>
+<option value="7003" style=""  >0</option>
+<option value="7004" style=""  >1</option>
+<option value="7005" style=""  >2</option>
+<option value="7006" style=""  >3</option>
+<option value="7007" style=""  >4</option>
+<option value="7008" style=""  >5</option>
+<option value="7009" style=""  >6</option>
+<option value="7010" style=""  >7</option>
+<option value="7011" style=""  >8</option>
+<option value="7012" style=""  >9</option>
+<option value="7013" style=""  >10</option>
+<option value="7014" style=""  >more than 10</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1787" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						URL of your post or blog (if you still have it)?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[9299].id" value="" id="answers[9299].id" />
+<input type="text" name="answers[9299].value" value="" id="question_9299" group="9299" class="input-text" />
+
+<span class="error-content" id="err_answers[9299].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1788" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Did you make use of BugsLock during the campaign?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9300].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9300].id" value="" id="answers[9300].id" />
+<ul>
+	<li>
+			<input group="9300" type="radio" id="9300_0" name="answers[9300].value" value="7015"  class="selection question_radio_9300"  />		<label for="9300_0">Yes</label>
+	</li>
+	<li>
+			<input group="9300" type="radio" id="9300_1" name="answers[9300].value" value="7016"  class="selection question_radio_9300"  />		<label for="9300_1">No</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_9300  qc_0 radio" type="radio" name="answers[9300].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1517" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Why not?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[9301].id" value="" id="answers[9301].id" />
+<textarea name="answers[9301].value" id="question_9301" cols="40" group="9301" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[9301].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1790" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How many of your 15 coupons did you pass on to your friends?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9302].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9302].id" value="" id="answers[9302].id" />
+
+	<select group="9302" class="selection" id="question_9302" name="answers[9302].value" title="title"  size = "1" >
+	<option selected="selected" value="0">Please choose</option>
+<option value="7017" style=""  >0</option>
+<option value="7018" style=""  >1~5</option>
+<option value="7019" style=""  >6~10</option>
+<option value="7020" style=""  >11~14</option>
+<option value="7021" style=""  >15</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1807" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Did your friends purchase BugsLock?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9303].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9303].id" value="" id="answers[9303].id" />
+<ul>
+	<li>
+			<input group="9303" type="radio" id="9303_0" name="answers[9303].value" value="7077"  class="selection question_radio_9303"  />		<label for="9303_0">Yes</label>
+	</li>
+	<li>
+			<input group="9303" type="radio" id="9303_1" name="answers[9303].value" value="7078"  class="selection question_radio_9303"  />		<label for="9303_1">No</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_9303  qc_0 radio" type="radio" name="answers[9303].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1792" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=100% valign="top">
+					<div class="question-title">
+						How likely is it that you would recommend BugsLock to a friend or colleague?
+					</div>
+							<div class="elementInfoText " >
+							   
+							</div>
+				</td>
+			</tr>
+			 <tr>
+				<td width=100% valign="top" class="question-td twoColumnLayout" style="padding-left:15px;">
+<span class="error-content" id="err_answers[9304].value" ></span>
+<input type="hidden" name="answers[9304].id" value="" id="answers[9304].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">not at all likely</div>
+	<table class="rating-table">
+		<tr class="radio-line">
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[9304].value" value="0" id="9304_0" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9304].value" value="1" id="9304_1" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9304].value" value="2" id="9304_2" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9304].value" value="3" id="9304_3" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9304].value" value="4" id="9304_4" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9304].value" value="5" id="9304_5" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9304].value" value="6" id="9304_6" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9304].value" value="7" id="9304_7" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9304].value" value="8" id="9304_8" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9304].value" value="9" id="9304_9" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[9304].value" value="10" id="9304_10" group="9304" class="question_radio_9304 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+		</tr>
+	</table> <div class="right-label">extremely likely</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[9304].value" value="" id="answers[9304].value" class="q_9304 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1819" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Why?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[9305].id" value="" id="answers[9305].id" />
+<textarea name="answers[9305].value" id="question_9305" cols="40" group="9305" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[9305].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1808" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of BugsLock?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9306].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9306].id" value="" id="answers[9306].id" />
+<ul>
+	<li>
+			<input group="9306" type="radio" id="9306_0" name="answers[9306].value" value="7079"  class="selection question_radio_9306"  />		<label for="9306_0">very positive</label>
+	</li>
+	<li>
+			<input group="9306" type="radio" id="9306_1" name="answers[9306].value" value="7080"  class="selection question_radio_9306"  />		<label for="9306_1">somewhat positive</label>
+	</li>
+	<li>
+			<input group="9306" type="radio" id="9306_2" name="answers[9306].value" value="7081"  class="selection question_radio_9306"  />		<label for="9306_2">neutral</label>
+	</li>
+	<li>
+			<input group="9306" type="radio" id="9306_3" name="answers[9306].value" value="7082"  class="selection question_radio_9306"  />		<label for="9306_3">somewhat negative</label>
+	</li>
+	<li>
+			<input group="9306" type="radio" id="9306_4" name="answers[9306].value" value="7083"  class="selection question_radio_9306"  />		<label for="9306_4">negative</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_9306  qc_0 radio" type="radio" name="answers[9306].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1809" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of the effectiveness of BugsLock in repelling mosquitos and other bugs?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9307].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9307].id" value="" id="answers[9307].id" />
+<ul>
+	<li>
+			<input group="9307" type="radio" id="9307_0" name="answers[9307].value" value="7084"  class="selection question_radio_9307"  />		<label for="9307_0">very effective</label>
+	</li>
+	<li>
+			<input group="9307" type="radio" id="9307_1" name="answers[9307].value" value="7085"  class="selection question_radio_9307"  />		<label for="9307_1">somewhat effective</label>
+	</li>
+	<li>
+			<input group="9307" type="radio" id="9307_2" name="answers[9307].value" value="7086"  class="selection question_radio_9307"  />		<label for="9307_2">neutral</label>
+	</li>
+	<li>
+			<input group="9307" type="radio" id="9307_3" name="answers[9307].value" value="7087"  class="selection question_radio_9307"  />		<label for="9307_3">somewhat ineffective</label>
+	</li>
+	<li>
+			<input group="9307" type="radio" id="9307_4" name="answers[9307].value" value="7088"  class="selection question_radio_9307"  />		<label for="9307_4">ineffective</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_9307  qc_0 radio" type="radio" name="answers[9307].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1810" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of the quality of Bugslock?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9308].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9308].id" value="" id="answers[9308].id" />
+<ul>
+	<li>
+			<input group="9308" type="radio" id="9308_0" name="answers[9308].value" value="7089"  class="selection question_radio_9308"  />		<label for="9308_0">very positive</label>
+	</li>
+	<li>
+			<input group="9308" type="radio" id="9308_1" name="answers[9308].value" value="7090"  class="selection question_radio_9308"  />		<label for="9308_1">somewhat positive</label>
+	</li>
+	<li>
+			<input group="9308" type="radio" id="9308_2" name="answers[9308].value" value="7091"  class="selection question_radio_9308"  />		<label for="9308_2">neutral</label>
+	</li>
+	<li>
+			<input group="9308" type="radio" id="9308_3" name="answers[9308].value" value="7092"  class="selection question_radio_9308"  />		<label for="9308_3">somewhat negative</label>
+	</li>
+	<li>
+			<input group="9308" type="radio" id="9308_4" name="answers[9308].value" value="7093"  class="selection question_radio_9308"  />		<label for="9308_4">negative</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_9308  qc_0 radio" type="radio" name="answers[9308].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1811" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of the duration of BugsLock?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9309].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9309].id" value="" id="answers[9309].id" />
+<ul>
+	<li>
+			<input group="9309" type="radio" id="9309_0" name="answers[9309].value" value="7094"  class="selection question_radio_9309"  />		<label for="9309_0">It lasts a long time!</label>
+	</li>
+	<li>
+			<input group="9309" type="radio" id="9309_1" name="answers[9309].value" value="7095"  class="selection question_radio_9309"  />		<label for="9309_1">It lasts longer than expected.</label>
+	</li>
+	<li>
+			<input group="9309" type="radio" id="9309_2" name="answers[9309].value" value="7096"  class="selection question_radio_9309"  />		<label for="9309_2">It lasts for a reasonable amount of time.</label>
+	</li>
+	<li>
+			<input group="9309" type="radio" id="9309_3" name="answers[9309].value" value="7097"  class="selection question_radio_9309"  />		<label for="9309_3">It lasts too short.</label>
+	</li>
+	<li>
+			<input group="9309" type="radio" id="9309_4" name="answers[9309].value" value="7098"  class="selection question_radio_9309"  />		<label for="9309_4">It finishes too quickly!</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_9309  qc_0 radio" type="radio" name="answers[9309].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1812" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of the smell of BugsLock?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9310].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9310].id" value="" id="answers[9310].id" />
+<ul>
+	<li>
+			<input group="9310" type="radio" id="9310_0" name="answers[9310].value" value="7099"  class="selection question_radio_9310"  />		<label for="9310_0">Smells great!</label>
+	</li>
+	<li>
+			<input group="9310" type="radio" id="9310_1" name="answers[9310].value" value="7100"  class="selection question_radio_9310"  />		<label for="9310_1">Smells pretty good.</label>
+	</li>
+	<li>
+			<input group="9310" type="radio" id="9310_2" name="answers[9310].value" value="7101"  class="selection question_radio_9310"  />		<label for="9310_2">Smells ok.</label>
+	</li>
+	<li>
+			<input group="9310" type="radio" id="9310_3" name="answers[9310].value" value="7102"  class="selection question_radio_9310"  />		<label for="9310_3">Doesn't smell that good.</label>
+	</li>
+	<li>
+			<input group="9310" type="radio" id="9310_4" name="answers[9310].value" value="7103"  class="selection question_radio_9310"  />		<label for="9310_4">Smells bad!</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_9310  qc_0 radio" type="radio" name="answers[9310].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1817" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of the price of BugsLock?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9311].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9311].id" value="" id="answers[9311].id" />
+<ul>
+	<li>
+			<input group="9311" type="radio" id="9311_0" name="answers[9311].value" value="7119"  class="selection question_radio_9311"  />		<label for="9311_0">What a fantastic price!</label>
+	</li>
+	<li>
+			<input group="9311" type="radio" id="9311_1" name="answers[9311].value" value="7120"  class="selection question_radio_9311"  />		<label for="9311_1">It's a pretty good deal.</label>
+	</li>
+	<li>
+			<input group="9311" type="radio" id="9311_2" name="answers[9311].value" value="7121"  class="selection question_radio_9311"  />		<label for="9311_2">Its reasonably priced.</label>
+	</li>
+	<li>
+			<input group="9311" type="radio" id="9311_3" name="answers[9311].value" value="7122"  class="selection question_radio_9311"  />		<label for="9311_3">It's a bit too expensive.</label>
+	</li>
+	<li>
+			<input group="9311" type="radio" id="9311_4" name="answers[9311].value" value="7123"  class="selection question_radio_9311"  />		<label for="9311_4">It's way too expensive!</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_9311  qc_0 radio" type="radio" name="answers[9311].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1814" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of the Spark Kit's packaging?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9312].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9312].id" value="" id="answers[9312].id" />
+<ul>
+	<li>
+			<input group="9312" type="radio" id="9312_0" name="answers[9312].value" value="7109"  class="selection question_radio_9312"  />		<label for="9312_0">excellent</label>
+	</li>
+	<li>
+			<input group="9312" type="radio" id="9312_1" name="answers[9312].value" value="7110"  class="selection question_radio_9312"  />		<label for="9312_1">above average</label>
+	</li>
+	<li>
+			<input group="9312" type="radio" id="9312_2" name="answers[9312].value" value="7111"  class="selection question_radio_9312"  />		<label for="9312_2">average</label>
+	</li>
+	<li>
+			<input group="9312" type="radio" id="9312_3" name="answers[9312].value" value="7112"  class="selection question_radio_9312"  />		<label for="9312_3">below average</label>
+	</li>
+	<li>
+			<input group="9312" type="radio" id="9312_4" name="answers[9312].value" value="7113"  class="selection question_radio_9312"  />		<label for="9312_4">poor</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_9312  qc_0 radio" type="radio" name="answers[9312].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1801" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How many items, if any, did you purchase BugsLock during the past 3 months?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9313].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9313].id" value="" id="answers[9313].id" />
+
+	<select group="9313" class="selection" id="question_9313" name="answers[9313].value" title="title"  size = "1" >
+	<option selected="selected" value="0">Please choose</option>
+<option value="7059" style=""  >0</option>
+<option value="7060" style=""  >1</option>
+<option value="7061" style=""  >2</option>
+<option value="7062" style=""  >3</option>
+<option value="7063" style=""  >4</option>
+<option value="7064" style=""  >5</option>
+<option value="7065" style=""  >6</option>
+<option value="7066" style=""  >7</option>
+<option value="7067" style=""  >8</option>
+<option value="7068" style=""  >9</option>
+<option value="7069" style=""  >10</option>
+<option value="7070" style=""  >11~20</option>
+<option value="7071" style=""  >more than 20</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1802" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=100% valign="top">
+					<div class="question-title">
+						What's the liklihood that you purchase the Bugslock again in the future?
+					</div>
+							<div class="elementInfoText " >
+							   
+							</div>
+				</td>
+			</tr>
+			 <tr>
+				<td width=100% valign="top" class="question-td twoColumnLayout" style="padding-left:15px;">
+<span class="error-content" id="err_answers[9314].value" ></span>
+<input type="hidden" name="answers[9314].id" value="" id="answers[9314].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">not at all likely</div>
+	<table class="rating-table">
+		<tr class="radio-line">
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[9314].value" value="0" id="9314_0" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9314].value" value="1" id="9314_1" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9314].value" value="2" id="9314_2" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9314].value" value="3" id="9314_3" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9314].value" value="4" id="9314_4" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9314].value" value="5" id="9314_5" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9314].value" value="6" id="9314_6" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9314].value" value="7" id="9314_7" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9314].value" value="8" id="9314_8" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[9314].value" value="9" id="9314_9" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[9314].value" value="10" id="9314_10" group="9314" class="question_radio_9314 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+		</tr>
+	</table> <div class="right-label">extremely likely</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[9314].value" value="" id="answers[9314].value" class="q_9314 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1815" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What would be your main concern NOT to use BugsLock in the future?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[9315].id" value="" id="answers[9315].id" />
+<textarea name="answers[9315].value" id="question_9315" cols="40" group="9315" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[9315].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1804" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is, in your opinion, BugsLock's main advantage over other bug repellent products?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[9316].id" value="" id="answers[9316].id" />
+<textarea name="answers[9316].value" id="question_9316" cols="40" group="9316" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[9316].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1805" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What would you like to see in next season's BugsLock? (for example: new smells, new colors)
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[9317].id" value="" id="answers[9317].id" />
+<textarea name="answers[9317].value" id="question_9317" cols="40" group="9317" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[9317].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1816" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How do you enjoy Xingxinghuo Bugslock word-of-mouth campaign?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[9318].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[9318].id" value="" id="answers[9318].id" />
+<ul>
+	<li>
+			<input group="9318" type="radio" id="9318_0" name="answers[9318].value" value="7114"  class="selection question_radio_9318"  />		<label for="9318_0">I was so excited!!</label>
+	</li>
+	<li>
+			<input group="9318" type="radio" id="9318_1" name="answers[9318].value" value="7115"  class="selection question_radio_9318"  />		<label for="9318_1">It's a good campaign</label>
+	</li>
+	<li>
+			<input group="9318" type="radio" id="9318_2" name="answers[9318].value" value="7116"  class="selection question_radio_9318"  />		<label for="9318_2">So so</label>
+	</li>
+	<li>
+			<input group="9318" type="radio" id="9318_3" name="answers[9318].value" value="7117"  class="selection question_radio_9318"  />		<label for="9318_3">Not excited at all.</label>
+	</li>
+	<li>
+			<input group="9318" type="radio" id="9318_4" name="answers[9318].value" value="7118"  class="selection question_radio_9318"  />		<label for="9318_4">I hate this campaign</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_9318  qc_0 radio" type="radio" name="answers[9318].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+	
+
+
+</div> 
+<br/>
+<div style="clear:both"></div>
+</div> 
+</div> 
+
+<div id="mainzone-bottom-wrapper">
+	<div id="mainzone-bottom-left">
+		<div id="mainzone-bottom-right">&nbsp;</div>
+	</div>
+</div>
+<br/>
+<div class="fillout-submit">
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+</div>
+
+</form>
+</div> 
+<div class="clear"></div>
+<br/>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+  var pageNum=0;
+ 
+  var noPage0 = false;
+  var currentPage=0;
+  
+
+  function showPage(_pageIndex) {
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex == pageNum) {
+    	Element.hide("nextPageButton");
+    } else {
+    	Element.show("nextPageButton");
+    }
+    
+    if (_pageIndex <1 && noPage0) return ;
+  	var _pageElement = $("page_"+_pageIndex);
+  	var _currElement = $("page_"+currentPage);
+  	
+  	Element.hide(_currElement);
+  	Element.show(_pageElement);
+	
+	if($("pageNum" + _pageIndex) != undefined) {
+		$("pageNum" + _pageIndex).style.fontWeight = "bolder"; 
+		$("pageNum" + _pageIndex).style.textDecoration = "underline";
+	}
+    if($("pageNum" + currentPage) != undefined) {		
+  		$("pageNum" + currentPage).style.fontWeight = "normal"; 
+		$("pageNum" + currentPage).style.textDecoration = "none";
+	}
+	
+
+  	currentPage = _pageIndex;
+	
+	if(_pageIndex == pageNum) {
+		Element.show($('submit'));
+	} else if ( _pageIndex < pageNum) {
+		Element.hide($('submit'));
+	}
+  }
+  
+  function showNextPage(){
+  	showPage(currentPage+1);
+  }
+  
+  function showPrevPage(){
+  	showPage(currentPage-1);
+  }
+  
+  function initPages() {
+  	var i;
+
+  	for (i=0; i<=pageNum; i++) {
+  		Element.hide($("page_"+i));
+  	}
+  	
+ 
+  	var _pageBar = document.getElementById("pageBar");
+  	if (pageNum==0) {
+  		_pageBar.innerHTML = "";
+  	} else {
+	  	for (i=0; i<=pageNum; i++) {
+			var s ="";
+			if( i == 0 ) {
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
+			}
+
+			if (noPage0){
+	  		 if (i!=0){ 
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
+	  		  }
+	  		}else{
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
+	  		}
+	  		
+			if( i == pageNum ) {
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
+			}
+	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  	}		
+  	}
+  }
+  
+  initPages();
+  if (noPage0){
+  	showPage(1);
+  }else{
+  	showPage(0);
+  }
+// ]]>
+-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+    //do not include radio answers
+	if(typeof checkNoAnswer=="undefined") {
+		checkNoAnswer=function(index,checkbox) {
+			var question = $("question_" + index);
+			var checked = checkbox.checked;
+			if( checked) {
+				question.disabled="disabled";
+				checkbox.value=false;
+			} else {
+				question.disabled="";
+				checkbox.value=true;
+			}
+		};
+	};
+	
+		if(typeof checkRadioNoAnswer=="undefined") {
+		checkRadioNoAnswer = function(index,checkbox) {
+			var clazz = "question_radio_" +index;
+			var radios = document.getElementsByClassName(clazz).each(function(radio) {
+				var checked = checkbox.checked;
+			    if( checked) {
+					if(radio.checked="checked")radio.checked="";
+					radio.disabled="disabled";
+					checkbox.value=false;
+			    } else {
+					radio.disabled="";
+					checkbox.value=true;
+			    }
+			});
+		};
+	}
+	
+	if(typeof checkSubboxes=="undefined") {
+		checkSubboxes = function(qc_id) {
+			//get the question context checkbox's value
+			var qc_value = $("qc_checkbox_" + qc_id).checked;
+			//get the checkBoxed belongs to the above question context
+			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
+			for(var i = 0; i < checkBoxes.length;i++) {
+				var checkBox = checkBoxes[i];
+				//to reuse checkRadioNoAnswer and checkNoAnswer
+				checkBox.checked=qc_value;
+				var clazzName = checkBox.className;
+				var question_id = clazzName.split(" ")[0].split("_")[1];
+				if( clazzName.indexOf("radio") != -1) {
+					checkRadioNoAnswer(question_id,checkBox);
+				} else {
+					checkNoAnswer(question_id,checkBox);
+				}
+			}
+		}
+		
+	}
+// ]]>
+-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function loading() {
+		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
+		WebDialog.showMessageBox(html, "none", "center", 600);
+	}
+	
+	function checkMandatory() {
+	    var fillMandatory = true;
+	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+			if(elements.length > 1) {
+			  var filled = false;
+			  for(var i=0; i < elements.length; i++) {
+			  	var element = elements[i];
+				if(element.checked) {
+				  filled = true;
+				  break;
+				}
+			  }
+			  if(!filled) {
+			  	fillMandatory = false;
+			  	break;
+			  }
+			} else {
+			  var element = elements[0];
+			  if(element.hasClassName("selection")) {
+			  	if(element.value.strip() == '') {
+	    			fillMandatory =  false;
+	    			break;                                  
+	    		}
+			  } else if (element.hasClassName("input-text")) {
+			 	if(element.value == 0) {
+					fillMandatory = false;
+					break;
+				}
+			  }
+			}
+	    }
+	    if(!fillMandatory) {
+	    	var html = 'Mandatory questions must be filled out';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    }
+            return fillMandatory;
+	}
+	
+	function checkMandatoryOfSelectionQuestion() {
+	 var mandatory = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+
+
+	function checkAnswerSet() {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
+		    return true;
+		} else {
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			return false;
+		}
+	}
+	
+	function checkAnswersOfSelectionQuestions() {
+	 var filled = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+	
+	function checkAnswersOfRatingQuestions() {
+	    var filled = false;
+	    $$('input.rating').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;  
+										}
+	                                });
+
+		 return filled;
+	}
+	
+	function checkAnswersOfCommentQuestions() {
+	    var filled = false;
+	    $$('.input-text').each(function(element) {
+	                                    if(element.value.strip() != '') {
+	                                        filled = true;
+	                                    	throw $break;                                 
+	                                    }
+	                                });
+		 return filled;
+	}
+	
+	function locateErrorPage() {
+		var errorElements = $$('span.error-content') ;
+		var hasError = false;
+		var errorElementsPointer = 0;
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+			var html = errorElements[errorElementsPointer].innerHTML;
+			if (html != "") {
+				hasError = true;
+				break;
+			}
+		}
+		if( hasError ) {
+			var errorParentElement = errorElements[errorElementsPointer].up('div');
+			while (errorParentElement != undefined) {
+			var elementId = errorParentElement.id;
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
+				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
+				showPage(errorPageNum);
+				break;
+		}
+		errorParentElement = errorParentElement.up('div');
+		}
+		}
+	}
+	locateErrorPage();
+	
+	function showOtherValueInputInSelect(element) {
+	    var options = element.options;
+	    var selectedOption;
+	    for( var i = 0; i < options.length; i++) {
+	       if( options[i].selected) {
+	       	 selectedOption = options[i];
+	       }
+	    }
+	    var selectedOptionId = selectedOption.id;
+	    if( selectedOptionId.indexOf("other") != -1) {
+	    	$(element.id + "_other").show();
+	    } else {
+	        $(element.id + "_other").value = "";
+	    	$(element.id + "_other").hide();
+	    }
+	}
+	
+	function showOtherValueInputInRadio(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( value == 0 ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+	function showOtherValueInputInCheckBox(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( element.checked ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+// ]]>
+-->
+</script>
+</div>
+</div> 
+</div>
+
+<div class="footer" style="display:none;">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/c/methodName/c"  target="_blank">Help</a> | <a href="http://www.ostrakon.org"  target="_blank">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow" style="display:none;"></div>
+	<div style="clear: both"></div>
+	
+</div> 
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+
+
+	 Element.hide("q_1517");
+
+
+var myrules = {
+	   
+	   "input#9300_1": function(el){
+			el.onclick = function(){
+				if ($("9300_1").checked){
+						Element.show($("q_1517"));
+				}
+			}
+		}
+	,
+	   
+	   "input#9300_0": function(el){
+			el.onclick = function(){
+				if ($("9300_0").checked){
+						Element.hide($("q_1517"));
+				}
+			}
+		}
+}
+
+Behaviour.register(myrules);
+
+// ]]>
+-->
+</script>

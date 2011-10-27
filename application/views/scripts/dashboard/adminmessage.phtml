@@ -1,0 +1,59 @@
+﻿<div style="padding-bottom:30px;"></div>
+<div align="center">
+  <br/>
+  <h2 ><?php echo $this->translate('Client_Message_List');?></h2>
+  <br/>
+  <p>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminmessageadd'));?>"><?php echo $this->translate('Client_Message_Add');?></a></span>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminmessage'));?>"><?php echo $this->translate('Client_Message_List');?></a></span>
+  </p>
+  <br/>
+  <table width="800" id="message-table">
+    <tr>
+	    <th width="5%">Index</th>
+	    <th width="5%"><?php echo $this->translate('Client_Message_Type');?></th>
+	    <th width="15%"><?php echo $this->translate('Client_Message_Subject');?></th>
+	    <th><?php echo $this->translate('Client_Message_Content');?></th>
+	    <th width="5%"><?php echo $this->translate('Client_Message_Date');?></th>
+	    <th width="5%">&nbsp;</th>
+    </tr>
+    <?php $count = 1; foreach($this->paginator as $message) : ?>
+    <tr style="<?php if($count%2 != 0){ echo 'background-color: #EEF9EB'; }?>">
+	    <td><?php echo $count++;?></td>
+	    <td><?php echo $this->translate('Client_Message_Type '.$message->type);?></td>
+	    <td><?php echo $this->escape($message->subject);?></td>
+	    <td><?php echo $this->escape($message->content);?></td>
+	    <td><?php echo $this->escape($message->create_date);?></td>
+	    <td align="right">
+		    <a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminmessageview', 'id'=>$message->id));?>">
+		      Reply(<?php echo isset($this->replycount[$message->id]) ? $this->replycount[$message->id] : 0 ;?>)
+		    </a>
+		</td>
+		<td align="left">
+		    <a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminmessagedelete', 'id'=>$message->id));?>" onclick="return deleteMessage(<?php echo isset($this->replycount[$message->id]) ? $this->replycount[$message->id] : 0 ;?>);">
+		      Delete
+		    </a>
+	    </td>
+    </tr>
+    <?php endforeach; ?>
+  </table>
+  <div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?></div>
+</div>
+
+<style type="text/css">
+<!--
+#message-table td {
+    padding: 5px;
+}
+-->
+</style>
+<script type="text/javascript">
+function deleteMessage(num) {
+    if (num > 0) {
+    	return confirm('这个信息已经有回复, 你确认要删除吗？');
+    } else {
+    	return confirm('确实要删除吗？');
+    }
+
+}
+</script>

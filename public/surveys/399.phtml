@@ -1,0 +1,1772 @@
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	// <![CDATA[
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie > 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length > MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+	// ]]>
+	-->
+	</script>
+<div class="main-container-outer" style="background: #fff;width:100%;">
+	<div id="container" style="background: #fff;">
+		<div id="header" class="header" style="display: none;">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			<div class="main-logo" id="main-logo">
+				<a href="http://www.ostrakon.org" target="_blank">
+				</a>
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div> <!-- header -->
+		<div id="nav" class="navigation" style="display:none;">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content" style="background:#fff;width:100%;">
+ 		
+
+<div id="content" style="width:100%;">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	mandatoryElements = new Array(); 
+// ]]>
+-->
+</script>
+<div class="fillout-container">
+<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
+<div class="mainOneContent">
+
+<div style="margin-top:10px;"></div>
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
+  <div id="mainzone-top-left">
+    <div id="mainzone-top-right"></div>
+  </div>
+</div>
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none;">
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"/></td>
+		<td bgcolor="#ffffff">
+			<div class="web-dialog-message">
+				<p id="web-dialog-message-text" class=""></p>
+			</div>
+			<div class="buttons" id="web-dialog-buttons">
+			</div>
+		</td>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"/></td>
+	</tr>
+</table>
+
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	var WebDialog = {
+		element : $('web-dialog'),
+		onok : function() {},
+		oncancel : function() {},
+		show : function() {
+			var width = document.body.clientWidth;
+			var height = document.body.offsetHeight;
+			var left = (width - this.element.offsetWidth) / 2;
+			var top = (height - this.element.offsetHeight) / 2;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+		},
+		alert : function(msg,agree,disagree,onok,oncancel) {
+			var buttons = ["OK","Cancel"];
+			var callbacks = [onok, oncancel];
+			this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+		},
+		ok : function() {
+			this.onok();
+		},
+		close : function() {
+			this.element.hide();
+			$('mask').hide();
+			this.oncancel();
+		},
+		showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions) {
+			// icon_type : "none", "alert", "question"
+			// msg_align : "left", "center", "right"
+			// width : -1 means auto
+			
+			var width = document.body.clientWidth;
+			var height = window.screen.availHeight;
+			var left = (width - window_width) / 2;
+			var top = (height - 300) / 2;
+			var pos = 0;
+			if (window.innerHeight) {
+		    	pos = window.pageYOffset
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
+		    	pos = document.documentElement.scrollTop
+		    } else if (document.body) {
+		    	pos = document.body.scrollTop;
+		    }
+		    top += pos;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+			$('mask').style.height = document.body.scrollHeight + "px";
+			
+			if (width != undefined) {
+				this.element.style.width = window_width + "px";
+			}
+			if (msg != undefined) {
+				$('web-dialog-message-text').innerHTML = msg;
+			}
+			if (icon_type != undefined && msg_align != undefined) {
+				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
+			} else if (icon_type == undefined && msg_align == undefined) {
+				$('web-dialog-message-text').className = "icon-none left";
+			} else if (icon_type == undefined) {
+				$('web-dialog-message-text').className = msg_align;
+			} else {
+				$('web-dialog-message-text').className = "icon-"+icon_type;
+			}
+			
+			$('web-dialog-buttons').innerHTML = "";
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
+					if (buttons[i]==undefined || callback_functions[i]==undefined) {
+						continue;
+					}
+					var e = document.createElement('a');
+					e.setAttribute('href', '#');
+					e.innerHTML = buttons[i];
+					e.onclick = callback_functions[i];
+					$('web-dialog-buttons').appendChild(e);
+				}
+			}
+			
+			
+			this.element.show();
+			$('mask').show();
+		}
+	}
+// ]]>
+-->
+</script>
+<div id="mainzone">
+<div id="mainzone-inner">
+
+
+<input type="hidden" name="id" value="" id="id" />
+<input type="hidden" name="theme" value="wildfire" id="theme" />
+
+<div class="page-bar-area">
+<span id="pageBar">Page:&nbsp;</span>
+<strong class="no-answer">No Answer</strong><img class="no-answer" src="/images/no_answer.gif" align="absmiddle"/>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+
+	
+	<div id="page_0">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1573" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您一般每周看多长时间视频？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8327].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8327].id" value="" id="answers[8327].id" />
+<ul>
+	<li>
+			<input group="8327" type="radio" id="8327_0" name="answers[8327].value" value="5507"  class="selection question_radio_8327"  />		<label for="8327_0">少于5小时</label>
+	</li>
+	<li>
+			<input group="8327" type="radio" id="8327_1" name="answers[8327].value" value="5508"  class="selection question_radio_8327"  />		<label for="8327_1">5～10小时</label>
+	</li>
+	<li>
+			<input group="8327" type="radio" id="8327_2" name="answers[8327].value" value="5509"  class="selection question_radio_8327"  />		<label for="8327_2">10～15小时</label>
+	</li>
+	<li>
+			<input group="8327" type="radio" id="8327_3" name="answers[8327].value" value="5510"  class="selection question_radio_8327"  />		<label for="8327_3">15～20小时</label>
+	</li>
+	<li>
+			<input group="8327" type="radio" id="8327_4" name="answers[8327].value" value="5511"  class="selection question_radio_8327"  />		<label for="8327_4">20～30小时</label>
+	</li>
+	<li>
+			<input group="8327" type="radio" id="8327_5" name="answers[8327].value" value="5512"  class="selection question_radio_8327"  />		<label for="8327_5">多于30小时</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8327  qc_0 radio" type="radio" name="answers[8327].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1574" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						其中，您花费多长时间看在线视频？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8328].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8328].id" value="" id="answers[8328].id" />
+<ul>
+	<li>
+			<input group="8328" type="radio" id="8328_0" name="answers[8328].value" value="5513"  class="selection question_radio_8328"  />		<label for="8328_0">0%</label>
+	</li>
+	<li>
+			<input group="8328" type="radio" id="8328_1" name="answers[8328].value" value="5514"  class="selection question_radio_8328"  />		<label for="8328_1">10%</label>
+	</li>
+	<li>
+			<input group="8328" type="radio" id="8328_2" name="answers[8328].value" value="5515"  class="selection question_radio_8328"  />		<label for="8328_2">20%</label>
+	</li>
+	<li>
+			<input group="8328" type="radio" id="8328_3" name="answers[8328].value" value="5516"  class="selection question_radio_8328"  />		<label for="8328_3">30%</label>
+	</li>
+	<li>
+			<input group="8328" type="radio" id="8328_4" name="answers[8328].value" value="5517"  class="selection question_radio_8328"  />		<label for="8328_4">40%</label>
+	</li>
+	<li>
+			<input group="8328" type="radio" id="8328_5" name="answers[8328].value" value="5518"  class="selection question_radio_8328"  />		<label for="8328_5">50%</label>
+	</li>
+	<li>
+			<input group="8328" type="radio" id="8328_6" name="answers[8328].value" value="5519"  class="selection question_radio_8328"  />		<label for="8328_6">60%</label>
+	</li>
+	<li>
+			<input group="8328" type="radio" id="8328_7" name="answers[8328].value" value="5520"  class="selection question_radio_8328"  />		<label for="8328_7">70%</label>
+	</li>
+	<li>
+			<input group="8328" type="radio" id="8328_8" name="answers[8328].value" value="5521"  class="selection question_radio_8328"  />		<label for="8328_8">80%</label>
+	</li>
+	<li>
+			<input group="8328" type="radio" id="8328_9" name="answers[8328].value" value="5522"  class="selection question_radio_8328"  />		<label for="8328_9">90%</label>
+	</li>
+	<li>
+			<input group="8328" type="radio" id="8328_10" name="answers[8328].value" value="5523"  class="selection question_radio_8328"  />		<label for="8328_10">100%</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8328  qc_0 radio" type="radio" name="answers[8328].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1585" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您听说过哪些在线视频网站？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8329].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8329].id" value="" id="answers[8329].id" />
+
+
+
+
+<span id="hint_8329">
+</span>
+<ul>
+	<li>
+			<input group="8329" class="question_radio_8329 selection" type="checkbox" id="8329_0" name="answers[8329].value" value="5567" 	onclick=" "/>		<label for="8329_0">PPS</label>
+	</li>
+	<li>
+			<input group="8329" class="question_radio_8329 selection" type="checkbox" id="8329_1" name="answers[8329].value" value="5568" 	onclick=" "/>		<label for="8329_1">PPLive</label>
+	</li>
+	<li>
+			<input group="8329" class="question_radio_8329 selection" type="checkbox" id="8329_2" name="answers[8329].value" value="5569" 	onclick=" "/>		<label for="8329_2">迅雷看看</label>
+	</li>
+	<li>
+			<input group="8329" class="question_radio_8329 selection" type="checkbox" id="8329_3" name="answers[8329].value" value="5570" 	onclick=" "/>		<label for="8329_3">qqlive</label>
+	</li>
+	<li>
+			<input group="8329" class="question_radio_8329 selection" type="checkbox" id="8329_4" name="answers[8329].value" value="5571" 	onclick=" "/>		<label for="8329_4">UUSee</label>
+	</li>
+	<li>
+			<input group="8329" class="question_radio_8329 selection" type="checkbox" id="8329_5" name="answers[8329].value" value="5572" 	onclick=" "/>		<label for="8329_5">cctv</label>
+	</li>
+	<li>
+			<input group="8329" class="question_radio_8329 selection" type="checkbox" id="8329_6" name="answers[8329].value" value="5573" 	onclick=" "/>		<label for="8329_6">sopcast</label>
+	</li>
+		<li>
+			<input class="question_radio_8329" type="checkbox" id="8329_other"   value="0" onclick="showOtherValueInputInCheckBox(this)" />			<label for="8329_other">其他</label>
+			<input id="8329_other_input" type="text" name="answers[8329].otherValue" value="" style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1586" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您上一次在哪里看在线视频？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8330].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8330].id" value="" id="answers[8330].id" />
+<ul>
+	<li>
+			<input group="8330" type="radio" id="8330_0" name="answers[8330].value" value="5574"  class="selection question_radio_8330"  />		<label for="8330_0">PPS</label>
+	</li>
+	<li>
+			<input group="8330" type="radio" id="8330_1" name="answers[8330].value" value="5575"  class="selection question_radio_8330"  />		<label for="8330_1">PPLive</label>
+	</li>
+	<li>
+			<input group="8330" type="radio" id="8330_2" name="answers[8330].value" value="5576"  class="selection question_radio_8330"  />		<label for="8330_2">迅雷看看</label>
+	</li>
+	<li>
+			<input group="8330" type="radio" id="8330_3" name="answers[8330].value" value="5577"  class="selection question_radio_8330"  />		<label for="8330_3">qqlive</label>
+	</li>
+	<li>
+			<input group="8330" type="radio" id="8330_4" name="answers[8330].value" value="5578"  class="selection question_radio_8330"  />		<label for="8330_4">UUSee</label>
+	</li>
+	<li>
+			<input group="8330" type="radio" id="8330_5" name="answers[8330].value" value="5579"  class="selection question_radio_8330"  />		<label for="8330_5">cctv</label>
+	</li>
+	<li>
+			<input group="8330" type="radio" id="8330_6" name="answers[8330].value" value="5580"  class="selection question_radio_8330"  />		<label for="8330_6">sopcast</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8330  qc_0 radio" type="radio" name="answers[8330].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1578" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您选择这个网站的原因是
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[8331].id" value="" id="answers[8331].id" />
+<textarea name="answers[8331].value" id="question_8331" cols="40" group="8331" rows="5" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[8331].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1579" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=100% valign="top">
+					<div class="question-title">
+						有多大可能，您推荐这个网站给您的朋友？
+					</div>
+							<div class="elementInfoText " >
+							   
+							</div>
+				</td>
+			</tr>
+			 <tr>
+				<td width=100% valign="top" class="question-td twoColumnLayout" style="padding-left:15px;">
+<span class="error-content" id="err_answers[8332].value" ></span>
+<input type="hidden" name="answers[8332].id" value="" id="answers[8332].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">不会</div>
+	<table class="rating-table">
+		<tr class="radio-line">
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[8332].value" value="0" id="8332_0" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8332].value" value="1" id="8332_1" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8332].value" value="2" id="8332_2" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8332].value" value="3" id="8332_3" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8332].value" value="4" id="8332_4" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8332].value" value="5" id="8332_5" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8332].value" value="6" id="8332_6" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8332].value" value="7" id="8332_7" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8332].value" value="8" id="8332_8" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8332].value" value="9" id="8332_9" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[8332].value" value="10" id="8332_10" group="8332" class="question_radio_8332 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+		</tr>
+	</table> <div class="right-label">非常乐意</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[8332].value" value="" id="answers[8332].value" class="q_8332 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1580" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您是任何一家在线视频网站的注册会员吗？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8333].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8333].id" value="" id="answers[8333].id" />
+<ul>
+	<li>
+			<input group="8333" type="radio" id="8333_0" name="answers[8333].value" value="5538"  class="selection question_radio_8333"  />		<label for="8333_0">是</label>
+	</li>
+	<li>
+			<input group="8333" type="radio" id="8333_1" name="answers[8333].value" value="5539"  class="selection question_radio_8333"  />		<label for="8333_1">不是</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8333  qc_0 radio" type="radio" name="answers[8333].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1581" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您认为注册会员的好处是
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8334].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8334].id" value="" id="answers[8334].id" />
+
+
+
+
+<span id="hint_8334">
+</span>
+<ul>
+	<li>
+			<input group="8334" class="question_radio_8334 selection" type="checkbox" id="8334_0" name="answers[8334].value" value="5540" 	onclick=" "/>		<label for="8334_0">速度有保证</label>
+	</li>
+	<li>
+			<input group="8334" class="question_radio_8334 selection" type="checkbox" id="8334_1" name="answers[8334].value" value="5541" 	onclick=" "/>		<label for="8334_1">可以评论影视作品</label>
+	</li>
+	<li>
+			<input group="8334" class="question_radio_8334 selection" type="checkbox" id="8334_2" name="answers[8334].value" value="5542" 	onclick=" "/>		<label for="8334_2">可以收藏和分享喜爱的视频</label>
+	</li>
+	<li>
+			<input group="8334" class="question_radio_8334 selection" type="checkbox" id="8334_3" name="answers[8334].value" value="5543" 	onclick=" "/>		<label for="8334_3">功能更多</label>
+	</li>
+		<li>
+			<input class="question_radio_8334" type="checkbox" id="8334_other"   value="0" onclick="showOtherValueInputInCheckBox(this)" />			<label for="8334_other">其他</label>
+			<input id="8334_other_input" type="text" name="answers[8334].otherValue" value="" style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1582" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您有自己的房子或者公寓吗？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8335].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8335].id" value="" id="answers[8335].id" />
+<ul>
+	<li>
+			<input group="8335" type="radio" id="8335_0" name="answers[8335].value" value="5544"  class="selection question_radio_8335"  />		<label for="8335_0">有</label>
+	</li>
+	<li>
+			<input group="8335" type="radio" id="8335_1" name="answers[8335].value" value="5545"  class="selection question_radio_8335"  />		<label for="8335_1">没有</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8335  qc_0 radio" type="radio" name="answers[8335].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1526" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您看电影一般使用什么音频/视频设备?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8336].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8336].id" value="" id="answers[8336].id" />
+
+
+
+
+<span id="hint_8336">
+</span>
+<ul>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_0" name="answers[8336].value" value="5238" 	onclick=" "/>		<label for="8336_0">高清平板电视</label>
+	</li>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_1" name="answers[8336].value" value="5239" 	onclick=" "/>		<label for="8336_1">普通平板电视</label>
+	</li>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_2" name="answers[8336].value" value="5240" 	onclick=" "/>		<label for="8336_2">DVD播放器</label>
+	</li>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_3" name="answers[8336].value" value="5241" 	onclick=" "/>		<label for="8336_3">蓝光播放器</label>
+	</li>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_4" name="answers[8336].value" value="5242" 	onclick=" "/>		<label for="8336_4">环绕播放设备</label>
+	</li>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_5" name="answers[8336].value" value="5243" 	onclick=" "/>		<label for="8336_5">高质量立体播放设备</label>
+	</li>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_6" name="answers[8336].value" value="5244" 	onclick=" "/>		<label for="8336_6">室内投影仪</label>
+	</li>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_7" name="answers[8336].value" value="5245" 	onclick=" "/>		<label for="8336_7">便携式投影仪</label>
+	</li>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_8" name="answers[8336].value" value="5246" 	onclick=" "/>		<label for="8336_8">家庭影院</label>
+	</li>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_9" name="answers[8336].value" value="5247" 	onclick=" "/>		<label for="8336_9">个人电脑</label>
+	</li>
+	<li>
+			<input group="8336" class="question_radio_8336 selection" type="checkbox" id="8336_10" name="answers[8336].value" value="5248" 	onclick=" "/>		<label for="8336_10">笔记本</label>
+	</li>
+		<li>
+			<input class="question_radio_8336" type="checkbox" id="8336_other"   value="0" onclick="showOtherValueInputInCheckBox(this)" />			<label for="8336_other">其他</label>
+			<input id="8336_other_input" type="text" name="answers[8336].otherValue" value="" style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1583" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您拥有以下哪些音频/视频设备？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8337].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8337].id" value="" id="answers[8337].id" />
+
+
+
+
+<span id="hint_8337">
+</span>
+<ul>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_0" name="answers[8337].value" value="5546" 	onclick=" "/>		<label for="8337_0">高清平板电视</label>
+	</li>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_1" name="answers[8337].value" value="5547" 	onclick=" "/>		<label for="8337_1">普通平板电视</label>
+	</li>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_2" name="answers[8337].value" value="5548" 	onclick=" "/>		<label for="8337_2">DVD播放器</label>
+	</li>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_3" name="answers[8337].value" value="5549" 	onclick=" "/>		<label for="8337_3">蓝光播放器</label>
+	</li>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_4" name="answers[8337].value" value="5550" 	onclick=" "/>		<label for="8337_4">环绕播放设备</label>
+	</li>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_5" name="answers[8337].value" value="5551" 	onclick=" "/>		<label for="8337_5">高质量立体播放设备</label>
+	</li>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_6" name="answers[8337].value" value="5552" 	onclick=" "/>		<label for="8337_6">室内投影仪</label>
+	</li>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_7" name="answers[8337].value" value="5553" 	onclick=" "/>		<label for="8337_7">便携式投影仪</label>
+	</li>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_8" name="answers[8337].value" value="5554" 	onclick=" "/>		<label for="8337_8">家庭影院</label>
+	</li>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_9" name="answers[8337].value" value="5555" 	onclick=" "/>		<label for="8337_9">个人电脑</label>
+	</li>
+	<li>
+			<input group="8337" class="question_radio_8337 selection" type="checkbox" id="8337_10" name="answers[8337].value" value="5556" 	onclick=" "/>		<label for="8337_10">笔记本</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1587" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您每周会和家人,同学,朋友一起看/分享几次视频节目（电影/综艺节目/电视）？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8338].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8338].id" value="" id="answers[8338].id" />
+<ul>
+	<li>
+			<input group="8338" type="radio" id="8338_0" name="answers[8338].value" value="5581"  class="selection question_radio_8338"  />		<label for="8338_0">每周3次及以上</label>
+	</li>
+	<li>
+			<input group="8338" type="radio" id="8338_1" name="answers[8338].value" value="5582"  class="selection question_radio_8338"  />		<label for="8338_1">每周1～2次</label>
+	</li>
+	<li>
+			<input group="8338" type="radio" id="8338_2" name="answers[8338].value" value="5583"  class="selection question_radio_8338"  />		<label for="8338_2">偶尔，每周少于1次</label>
+	</li>
+	<li>
+			<input group="8338" type="radio" id="8338_3" name="answers[8338].value" value="5584"  class="selection question_radio_8338"  />		<label for="8338_3">几乎没有</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8338  qc_0 radio" type="radio" name="answers[8338].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1531" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						您一般用什么方式与朋友分享视频？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8339].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8339].id" value="" id="answers[8339].id" />
+
+
+
+
+<span id="hint_8339">
+</span>
+<ul>
+	<li>
+			<input group="8339" class="question_radio_8339 selection" type="checkbox" id="8339_0" name="answers[8339].value" value="5275" 	onclick=" "/>		<label for="8339_0">通过分享CD/DVD</label>
+	</li>
+	<li>
+			<input group="8339" class="question_radio_8339 selection" type="checkbox" id="8339_1" name="answers[8339].value" value="5276" 	onclick=" "/>		<label for="8339_1">硬盘拷贝</label>
+	</li>
+	<li>
+			<input group="8339" class="question_radio_8339 selection" type="checkbox" id="8339_2" name="answers[8339].value" value="5277" 	onclick=" "/>		<label for="8339_2">优盘拷贝</label>
+	</li>
+	<li>
+			<input group="8339" class="question_radio_8339 selection" type="checkbox" id="8339_3" name="answers[8339].value" value="5278" 	onclick=" "/>		<label for="8339_3">本地局域网</label>
+	</li>
+	<li>
+			<input group="8339" class="question_radio_8339 selection" type="checkbox" id="8339_4" name="answers[8339].value" value="5279" 	onclick=" "/>		<label for="8339_4">通过Internet</label>
+	</li>
+		<li>
+			<input class="question_radio_8339" type="checkbox" id="8339_other"   value="0" onclick="showOtherValueInputInCheckBox(this)" />			<label for="8339_other">其他</label>
+			<input id="8339_other_input" type="text" name="answers[8339].otherValue" value="" style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1584" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						以下哪些问题困扰你？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8340].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8340].id" value="" id="answers[8340].id" />
+
+
+
+
+<span id="hint_8340">
+</span>
+<ul>
+	<li>
+			<input group="8340" class="question_radio_8340 selection" type="checkbox" id="8340_0" name="answers[8340].value" value="5557" 	onclick=" "/>		<label for="8340_0">找不到下载资源/只能找到一部分</label>
+	</li>
+	<li>
+			<input group="8340" class="question_radio_8340 selection" type="checkbox" id="8340_1" name="answers[8340].value" value="5558" 	onclick=" "/>		<label for="8340_1">下载视频的速度非常慢/在线看视频时断时续</label>
+	</li>
+	<li>
+			<input group="8340" class="question_radio_8340 selection" type="checkbox" id="8340_2" name="answers[8340].value" value="5559" 	onclick=" "/>		<label for="8340_2">在市场很难买到高质量的DVD/蓝光光盘</label>
+	</li>
+	<li>
+			<input group="8340" class="question_radio_8340 selection" type="checkbox" id="8340_3" name="answers[8340].value" value="5560" 	onclick=" "/>		<label for="8340_3">房间小，没有空间收集DVD</label>
+	</li>
+	<li>
+			<input group="8340" class="question_radio_8340 selection" type="checkbox" id="8340_4" name="answers[8340].value" value="5561" 	onclick=" "/>		<label for="8340_4">音响效果不好</label>
+	</li>
+	<li>
+			<input group="8340" class="question_radio_8340 selection" type="checkbox" id="8340_5" name="answers[8340].value" value="5562" 	onclick=" "/>		<label for="8340_5">我想要一个蓝光播放器/高清播放器，但是价格太贵</label>
+	</li>
+	<li>
+			<input group="8340" class="question_radio_8340 selection" type="checkbox" id="8340_6" name="answers[8340].value" value="5563" 	onclick=" "/>		<label for="8340_6">中国地区不支持蓝光</label>
+	</li>
+	<li>
+			<input group="8340" class="question_radio_8340 selection" type="checkbox" id="8340_7" name="answers[8340].value" value="5564" 	onclick=" "/>		<label for="8340_7">磁盘时间长了内容损坏不能读取</label>
+	</li>
+	<li>
+			<input group="8340" class="question_radio_8340 selection" type="checkbox" id="8340_8" name="answers[8340].value" value="5565" 	onclick=" "/>		<label for="8340_8">在线视频网站不记得我上次看到哪集</label>
+	</li>
+	<li>
+			<input group="8340" class="question_radio_8340 selection" type="checkbox" id="8340_9" name="answers[8340].value" value="5566" 	onclick=" "/>		<label for="8340_9">没有版权（资源访问不存在）</label>
+	</li>
+		<li>
+			<input class="question_radio_8340" type="checkbox" id="8340_other"   value="0" onclick="showOtherValueInputInCheckBox(this)" />			<label for="8340_other">其他</label>
+			<input id="8340_other_input" type="text" name="answers[8340].otherValue" value="" style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+	
+
+
+</div> 
+<br/>
+<div style="clear:both"></div>
+</div> 
+</div> 
+
+<div id="mainzone-bottom-wrapper">
+	<div id="mainzone-bottom-left">
+		<div id="mainzone-bottom-right">&nbsp;</div>
+	</div>
+</div>
+<br/>
+<div class="fillout-submit">
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
+</div>
+
+</form>
+</div> 
+<div class="clear"></div>
+<br/>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+  var pageNum=0;
+ 
+  var noPage0 = false;
+  var currentPage=0;
+  
+
+  function showPage(_pageIndex) {
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex == pageNum) {
+    	Element.hide("nextPageButton");
+    } else {
+    	Element.show("nextPageButton");
+    }
+    
+    if (_pageIndex <1 && noPage0) return ;
+  	var _pageElement = $("page_"+_pageIndex);
+  	var _currElement = $("page_"+currentPage);
+  	
+  	Element.hide(_currElement);
+  	Element.show(_pageElement);
+	
+	if($("pageNum" + _pageIndex) != undefined) {
+		$("pageNum" + _pageIndex).style.fontWeight = "bolder"; 
+		$("pageNum" + _pageIndex).style.textDecoration = "underline";
+	}
+    if($("pageNum" + currentPage) != undefined) {		
+  		$("pageNum" + currentPage).style.fontWeight = "normal"; 
+		$("pageNum" + currentPage).style.textDecoration = "none";
+	}
+	
+
+  	currentPage = _pageIndex;
+	
+	if(_pageIndex == pageNum) {
+		Element.show($('submit'));
+	} else if ( _pageIndex < pageNum) {
+		Element.hide($('submit'));
+	}
+  }
+  
+  function showNextPage(){
+  	showPage(currentPage+1);
+  }
+  
+  function showPrevPage(){
+  	showPage(currentPage-1);
+  }
+  
+  function initPages() {
+  	var i;
+
+  	for (i=0; i<=pageNum; i++) {
+  		Element.hide($("page_"+i));
+  	}
+  	
+ 
+  	var _pageBar = document.getElementById("pageBar");
+  	if (pageNum==0) {
+  		_pageBar.innerHTML = "";
+  	} else {
+	  	for (i=0; i<=pageNum; i++) {
+			var s ="";
+			if( i == 0 ) {
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
+			}
+
+			if (noPage0){
+	  		 if (i!=0){ 
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
+	  		  }
+	  		}else{
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
+	  		}
+	  		
+			if( i == pageNum ) {
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
+			}
+	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  	}		
+  	}
+  }
+  
+  initPages();
+  if (noPage0){
+  	showPage(1);
+  }else{
+  	showPage(0);
+  }
+// ]]>
+-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+    //do not include radio answers
+	if(typeof checkNoAnswer=="undefined") {
+		checkNoAnswer=function(index,checkbox) {
+			var question = $("question_" + index);
+			var checked = checkbox.checked;
+			if( checked) {
+				question.disabled="disabled";
+				checkbox.value=false;
+			} else {
+				question.disabled="";
+				checkbox.value=true;
+			}
+		};
+	};
+	
+		if(typeof checkRadioNoAnswer=="undefined") {
+		checkRadioNoAnswer = function(index,checkbox) {
+			var clazz = "question_radio_" +index;
+			var radios = document.getElementsByClassName(clazz).each(function(radio) {
+				var checked = checkbox.checked;
+			    if( checked) {
+					if(radio.checked="checked")radio.checked="";
+					radio.disabled="disabled";
+					checkbox.value=false;
+			    } else {
+					radio.disabled="";
+					checkbox.value=true;
+			    }
+			});
+		};
+	}
+	
+	if(typeof checkSubboxes=="undefined") {
+		checkSubboxes = function(qc_id) {
+			//get the question context checkbox's value
+			var qc_value = $("qc_checkbox_" + qc_id).checked;
+			//get the checkBoxed belongs to the above question context
+			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
+			for(var i = 0; i < checkBoxes.length;i++) {
+				var checkBox = checkBoxes[i];
+				//to reuse checkRadioNoAnswer and checkNoAnswer
+				checkBox.checked=qc_value;
+				var clazzName = checkBox.className;
+				var question_id = clazzName.split(" ")[0].split("_")[1];
+				if( clazzName.indexOf("radio") != -1) {
+					checkRadioNoAnswer(question_id,checkBox);
+				} else {
+					checkNoAnswer(question_id,checkBox);
+				}
+			}
+		}
+		
+	}
+// ]]>
+-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function loading() {
+		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
+		WebDialog.showMessageBox(html, "none", "center", 600);
+	}
+	
+	function checkMandatory() {
+	    var fillMandatory = true;
+	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+			if(elements.length > 1) {
+			  var filled = false;
+			  for(var i=0; i < elements.length; i++) {
+			  	var element = elements[i];
+				if(element.checked) {
+				  filled = true;
+				  break;
+				}
+			  }
+			  if(!filled) {
+			  	fillMandatory = false;
+			  	break;
+			  }
+			} else {
+			  var element = elements[0];
+			  if(element.hasClassName("selection")) {
+			  	if(element.value.strip() == '') {
+	    			fillMandatory =  false;
+	    			break;                                  
+	    		}
+			  } else if (element.hasClassName("input-text")) {
+			 	if(element.value == 0) {
+					fillMandatory = false;
+					break;
+				}
+			  }
+			}
+	    }
+	    if(!fillMandatory) {
+	    	var html = 'Mandatory questions must be filled out';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    }
+            return fillMandatory;
+	}
+	
+	function checkMandatoryOfSelectionQuestion() {
+	 var mandatory = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+
+
+	function checkAnswerSet() {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
+		    return true;
+		} else {
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			return false;
+		}
+	}
+	
+	function checkAnswersOfSelectionQuestions() {
+	 var filled = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+	
+	function checkAnswersOfRatingQuestions() {
+	    var filled = false;
+	    $$('input.rating').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;  
+										}
+	                                });
+
+		 return filled;
+	}
+	
+	function checkAnswersOfCommentQuestions() {
+	    var filled = false;
+	    $$('.input-text').each(function(element) {
+	                                    if(element.value.strip() != '') {
+	                                        filled = true;
+	                                    	throw $break;                                 
+	                                    }
+	                                });
+		 return filled;
+	}
+	
+	function locateErrorPage() {
+		var errorElements = $$('span.error-content') ;
+		var hasError = false;
+		var errorElementsPointer = 0;
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+			var html = errorElements[errorElementsPointer].innerHTML;
+			if (html != "") {
+				hasError = true;
+				break;
+			}
+		}
+		if( hasError ) {
+			var errorParentElement = errorElements[errorElementsPointer].up('div');
+			while (errorParentElement != undefined) {
+			var elementId = errorParentElement.id;
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
+				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
+				showPage(errorPageNum);
+				break;
+		}
+		errorParentElement = errorParentElement.up('div');
+		}
+		}
+	}
+	locateErrorPage();
+	
+	function showOtherValueInputInSelect(element) {
+	    var options = element.options;
+	    var selectedOption;
+	    for( var i = 0; i < options.length; i++) {
+	       if( options[i].selected) {
+	       	 selectedOption = options[i];
+	       }
+	    }
+	    var selectedOptionId = selectedOption.id;
+	    if( selectedOptionId.indexOf("other") != -1) {
+	    	$(element.id + "_other").show();
+	    } else {
+	        $(element.id + "_other").value = "";
+	    	$(element.id + "_other").hide();
+	    }
+	}
+	
+	function showOtherValueInputInRadio(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( value == 0 ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+	function showOtherValueInputInCheckBox(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( element.checked ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+// ]]>
+-->
+</script>
+</div>
+</div> 
+</div>
+
+<div class="footer" style="display:none;">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/c/methodName/c"  target="_blank">Help</a> | <a href="http://www.ostrakon.org"  target="_blank">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow" style="display:none;"></div>
+	<div style="clear: both"></div>
+	
+</div> 
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+
+
+	 Element.hide("q_1581");
+
+
+var myrules = {
+	   
+	   "input#8328_4": function(el){
+			el.onclick = function(){
+				if ($("8328_4").checked){
+						Element.show($("q_1585"));
+						Element.show($("q_1586"));
+						Element.show($("q_1578"));
+						Element.show($("q_1579"));
+						Element.show($("q_1580"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8328_0": function(el){
+			el.onclick = function(){
+				if ($("8328_0").checked){
+						Element.hide($("q_1585"));
+						Element.hide($("q_1586"));
+						Element.hide($("q_1578"));
+						Element.hide($("q_1579"));
+						Element.hide($("q_1580"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8328_7": function(el){
+			el.onclick = function(){
+				if ($("8328_7").checked){
+						Element.show($("q_1585"));
+						Element.show($("q_1586"));
+						Element.show($("q_1578"));
+						Element.show($("q_1579"));
+						Element.show($("q_1580"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8328_3": function(el){
+			el.onclick = function(){
+				if ($("8328_3").checked){
+						Element.show($("q_1585"));
+						Element.show($("q_1586"));
+						Element.show($("q_1578"));
+						Element.show($("q_1579"));
+						Element.show($("q_1580"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8328_8": function(el){
+			el.onclick = function(){
+				if ($("8328_8").checked){
+						Element.show($("q_1585"));
+						Element.show($("q_1586"));
+						Element.show($("q_1578"));
+						Element.show($("q_1579"));
+						Element.show($("q_1580"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8328_6": function(el){
+			el.onclick = function(){
+				if ($("8328_6").checked){
+						Element.show($("q_1585"));
+						Element.show($("q_1586"));
+						Element.show($("q_1578"));
+						Element.show($("q_1579"));
+						Element.show($("q_1580"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8328_2": function(el){
+			el.onclick = function(){
+				if ($("8328_2").checked){
+						Element.show($("q_1585"));
+						Element.show($("q_1586"));
+						Element.show($("q_1578"));
+						Element.show($("q_1579"));
+						Element.show($("q_1580"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8333_1": function(el){
+			el.onclick = function(){
+				if ($("8333_1").checked){
+						Element.hide($("q_1581"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8328_5": function(el){
+			el.onclick = function(){
+				if ($("8328_5").checked){
+						Element.show($("q_1585"));
+						Element.show($("q_1586"));
+						Element.show($("q_1578"));
+						Element.show($("q_1579"));
+						Element.show($("q_1580"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8333_0": function(el){
+			el.onclick = function(){
+				if ($("8333_0").checked){
+						Element.show($("q_1581"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8328_9": function(el){
+			el.onclick = function(){
+				if ($("8328_9").checked){
+						Element.show($("q_1585"));
+						Element.show($("q_1586"));
+						Element.show($("q_1578"));
+						Element.show($("q_1579"));
+						Element.show($("q_1580"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8328_10": function(el){
+			el.onclick = function(){
+				if ($("8328_10").checked){
+						Element.show($("q_1585"));
+						Element.show($("q_1586"));
+						Element.show($("q_1578"));
+						Element.show($("q_1579"));
+						Element.show($("q_1580"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8328_1": function(el){
+			el.onclick = function(){
+				if ($("8328_1").checked){
+						Element.show($("q_1585"));
+						Element.show($("q_1586"));
+						Element.show($("q_1578"));
+						Element.show($("q_1579"));
+						Element.show($("q_1580"));
+				}
+			}
+		}
+}
+
+Behaviour.register(myrules);
+
+// ]]>
+-->
+</script>

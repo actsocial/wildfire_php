@@ -1,0 +1,46 @@
+﻿<link href="<?php echo $this->baseUrl();?>/uploadify/uploadify.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/uploadify/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/uploadify/swfobject.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/uploadify/jquery.uploadify.v2.1.4.min.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+  jQuery('#file_upload').uploadify({
+    'uploader'  : '<?php echo $this->baseUrl();?>/uploadify/uploadify.swf',
+    'script'    : '<?php echo $this->baseUrl();?>/uploadify/uploadify.php?param=<?php echo $this->reportId;?>_<?php echo $this->consumer;?>',
+    'cancelImg' : '<?php echo $this->baseUrl();?>/images/cancel.png',
+    'folder'    : '<?php echo $this->baseUrl();?>/uploads',
+    'auto'           : true,
+    'fileExt'        : '*.jpg;*.gif;*.png',
+    'fileDesc'       : 'Image Files (.JPG, .GIF, .PNG)',
+    'queueID'        : 'custom-queue',
+    'queueSizeLimit' : 3,
+    'simUploadLimit' : 3,
+    'removeCompleted': false,
+    'onAllComplete'  : function(event,data) {
+	    //jQuery('#status-message').text(data.filesUploaded + ' 文件上传成功, ' + data.errors + ' 错误.');
+      }
+
+  });
+});
+</script>
+
+<div class="article-box" style="height:120px;">
+	<div class="article-box-inner">
+		<h2>谢谢你参与本次任务</h2>
+		<p style="padding-top: 10px;"><?php echo $this->translate('Thanks_For_Report_Content1')?></p>
+		<br/>
+		<p>完成本活动还需要您提供(<font color="red"></font>):<br/>
+		<p> - 超市内Diageo产品摆放的照片</p>
+		
+		<div id = 'status-message' style="font-weight:bold"></div>
+		
+		<div id="custom-queue" class="uploadifyQueue"></div>
+		</p>
+		<input id="file_upload" name="Filedata" type="file" width="120" height="40"/>
+		<div class="buttons-bar" style="padding-top: 10px;">
+			<a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"><?php echo $this->translate('Take_Me_Home')?></a>
+		</div>
+	</div>
+</div>
+
+

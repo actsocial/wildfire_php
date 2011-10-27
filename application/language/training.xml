@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+		<tu tuid='Spark_Training_How_Does_Wildfire_Work'>
+			<tuv xml:lang="zh">
+				<seg>会员训练 - 星星火是如何运作的？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Training - How Does Wildfire Work?</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Spark_Training_Sample_Report'>
+			<tuv xml:lang="zh">
+				<seg>会员训练 - 示例报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Training - Sample Report</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='This_Introductory_Training_Will_Give_You'>
+			<tuv xml:lang="zh">
+				<seg>这项入门培训会告诉你星星火运作流程的所有基本知识--从加入星星火到签署了一项活动，再到提交报告。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>This introductory training will give you all the basics of how a Spark campaign works - from joining Wildfire, to signing up for a campaign, to submitting reports.</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-start">
+			<tuv xml:lang="zh">
+				<seg>
+					<![CDATA[
+					<h3>什么是星星火？</h3><p>星星火是中国第一家“口口相传”社区。星星火会员可以最先得到的那些新奇有趣产品，同时与他们的朋友、同事和家人进行“口口相传”谈论活动的产品。</p>
+<h3>什么是星星火活动？</h3><p>每个星星火活动开始后，我们将会根据你的兴趣给你免费的产品。在活动进行过程中（一般持续三个月），你与朋友自然的谈论我们的活动和产品，同时提交报告告诉我们你们的谈话内容。一个星星火活动是100%的“口口相传”活动，唯一不同的是你们不必购买产品，我们提供免费的产品给你们。</p>
+					]]>
+				</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>
+					<![CDATA[
+					<h3>What is Wildfire?</h3><p>Wildfire is China’s first natural word-of-mouth community. With Wildfire, consumers are the first to learn about exciting new products, and the first to spread authentic word of mouth with their friends, family, and co-workers.</p>
+<h3>What's a Spark Campaign?</h3><p>At the beginning of every Spark Campaign, you’ll receive a free product, based on your interests. During the campaign (lasting about three months) you form an opinion, talk to your friends as you normally would, and let us know what your friends had to say. A Spark Campaign is 100% natural word-of-mouth - the only difference is that instead of buying the product, we provide it to passionate consumers for free.</p>
+					]]>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-signup">
+			<tuv xml:lang="zh">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>星星火是如何运作的？</h3>
+					<h4>第一步：注册参加一个星星火活动</h4><p>
+					<ol>
+						<li>新的活动邀请将会出现在你的主页上。</li>
+						<li>你可以浏览这些活动，并决定是否要参加。</li>
+						<li>加入之前，你只需完成一份简短的活动问卷。</li>
+					</ol>
+					</p>
+					]]>
+				</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>How does Wildfire work?</h3>
+					<h4>Step 1: You Sign Up for a Wildfire Campaign</h4><p>
+					<ol>
+						<li>A new campaign invitation appears on your Spark Homepage.</li>
+						<li>You learn about the product and decide if you'd like to join.</li>
+						<li>To join, you complete a quick pre-campaign survey.</li>
+					</ol>
+					</p>
+					]]>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-get-product">
+			<tuv xml:lang="zh">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>星星火是如何运作的？</h3>
+					<h4>第二步：你会收到免费的产品</h4>
+					<p><ul>
+						<li>我们会根据你的兴趣，提供给你免费的产品。</li>
+						<li>大多数的活动会有一个包裹，包括给你朋友使用的优惠券和印有各种有意思产品的星星火用户手册。</li>
+						<li>在我们的网站，有你需要的关于活动的详细信息。</li>
+						<li>你通过使用产品，形成你对产品的好的或是不好的想法。</li>
+					</ul></p>
+					]]>
+				</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>How does Wildfire work?</h3>
+					<h4>Step 2: You Receive the Product for Free</h4>
+					<p><ul>
+						<li>We give you an exciting product, based on your interests.</li>
+						<li>Most campaigns include a mailed package, which have coupons for your friends and a printed Spark Guide with interesting product info.</li>
+						<li>Some campaigns have everything you need online.</li>
+						<li>You try the product and form an opinion, whether positive or negative.</li>
+					</ul></p>
+					]]>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-talk">
+			<tuv xml:lang="zh">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>星星火是如何运作的？</h3><h4>第三步：对产品进行"口口相传"</h4>
+					<ul>
+						<li>你和你认识的人真诚的交流你关于此产品的正面的或者负面的看法。</li>
+						<li>你需要告诉他们这些免费产品来自星星火，同时你不要去推销或是销售这些产品。</li>
+						<li>与你的朋友分享自己的对产品的看法，你会从中得到快乐。</li>
+					</ul>
+					]]>
+				</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>How does Wildfire work?</h3><h4>Step 3: You Spark Word-of-Mouth About the Product</h4>
+					<ul>
+						<li>You share your natural opinion, both positive and negative, with your friends.</li>
+						<li>You make sure they all know you got the product from Wildfire and that you’re not trying to promote, sell, or hype anything.</li>
+						<li>You have fun sharing with your friends, just like if you bought the product.</li>
+					</ul>
+					]]>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-report">
+			<tuv xml:lang="zh">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>星星火是如何运作的？</h3><h4>第四步：让我们了解</h4>
+					<ul>
+						<li>每次你进行了“口口相传”谈话，你需要回到<a href="http://www.xingxinghuo.cn" target="_blank">www.xingxinghuo.cn</a>。</li>
+						<li>你需要花费一两分钟的时间完成一份报告，关于交谈 发生的人物、地点、时间和内容。</li>
+						<li>我们会有专门的人员进行阅读并给予回馈。</li>
+						<li>你提交的报告越多，你就会获得越多的星星火积分。</li>
+					</ul>
+					]]>
+				</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>How does Wildfire work?</h3><h4>Step 4: You Let Us Know</h4>
+					<ul>
+						<li>Each time you create word-of-mouth, you return to <a href="http://www.xingxinghuo.cn" target="_blank">www.xingxinghuo.cn.</a></li>
+						<li>You take a moment to tell us what was said: who, what, when and where.</li>
+						<li>We read and respond to every report you send us.</li>
+						<li>The more detail you provide, the more Spark Points you’ll earn.</li>
+					</ul>
+					]]>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-reward">
+			<tuv xml:lang="zh">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>星星火是如何运作的？</h3>
+					<h4>积分奖励</h4>
+					<p>你参与的越多，你就会得到越多的奖励。奖励包括从我们的合作伙伴积分通兑换各种精美的奖品，以及未来将被邀请参加更高等级的活动。</p>
+					<p>参与任何一个问卷你将得到200星火积分，提交星火报告最多可以得到500星火积分。</p>
+					<p>你与多少人谈论过或是你们对产品的评价不好，这些都没有关系，你只要让我们知道你与朋友谈论了这个产品和谈话的内容。最关键的是必须保证是真实的，并且与活动产品相关的。</p>
+					]]>
+				</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>How does Wildfire work?</h3>
+					<h4>Rewards</h4>
+					<p>The more you contribute, the more rewards you receive, including valuable stuff from our partner Jifentong, and more invitations to exclusive and high-value campaigns.</p>
+					<p>You’ll get up to 200 points for every poll, and up to 500 points for every Spark Report.</p>
+					<p>It’s doesn’t matter how many people you’ve talk to or whether the feedback is good or bad - just let us know when you’ve mentioned a product, and what was said. The most important thing is staying honest, and staying in touch!</p>
+					]]>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-finish">
+			<tuv xml:lang="zh">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>星星火是如何运作的？</h3>
+					<h3>这就是全部！</h3>
+					<p>我们希望这个简短的演示能够帮助你回答一些关于星星火活动的问题。你肯定会发现参与星星火活动十分简单！</p>
+					<p>如果你还有问题，请你浏览我们的<a target='_blank' href="http://www.xingxinghuo.cn/index.php?option=com_content&view=article&id=91&Itemid=53&lang=zh">“常见问题”</a>。</p> <p>&nbsp;</p>
+					]]>
+				</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>
+					<![CDATA[
+					<p>&nbsp;</p>
+					<h3>How does Wildfire work?</h3>
+					<h3>That’s it! </h3>
+					<p>We hope this short slide show helped answer most of your questions about how a Spark Campaign works, and that you’ve seen how easy it is to participate!</p>
+					<p>If you have further questions, please see our <a target='_blank' href="http://www.xingxinghuo.cn/index.php?option=com_content&view=article&id=91&Itemid=53&lang=en">frequently asked questions</a>.</p> <p>&nbsp;</p>
+					]]>
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-start-label">
+			<tuv xml:lang="zh">
+				<seg>开始</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Start</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-signup-label">
+			<tuv xml:lang="zh">
+				<seg>1.注册</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>1.Sign-up</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-get-product-label">
+			<tuv xml:lang="zh">
+				<seg>2.获取产品</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>2.Get Product</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-talk-label">
+			<tuv xml:lang="zh">
+				<seg>3.谈论</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>3.Talk</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-report-label">
+			<tuv xml:lang="zh">
+				<seg>4.报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>4.Report</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-reward-label">
+			<tuv xml:lang="zh">
+				<seg>5.奖励</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>5.Reward</seg>
+			</tuv>
+		</tu>
+		<tu tuid="step-finish-label">
+			<tuv xml:lang="zh">
+				<seg>完成</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Finish</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Spark_Training'>
+			<tuv xml:lang="zh">
+				<seg>星火培训</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Training</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Depending_On_Your_Level_Of_Experience'>
+			<tuv xml:lang="zh">
+				<seg>根据你的经验，你可能需要阅读如下的一些教程。如果你是新会员，我们建议你在该教程的指引下了解一些基础信息并积累一些经验。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Depending on your level of experience, you may want to review some of the tutorials below. If you're new, we suggest you go in the order shown to build the foundation for a fun and rewarding experience.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Intro_To_Wildfire'>
+			<tuv xml:lang="zh">
+				<seg>星星火简介</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Intro to Wildfire</seg>
+			</tuv>
+		</tu>
+		<tu tuid='This_Short_Slideshow_Covers'>
+			<tuv xml:lang="zh">
+				<seg>欢迎！这部简短的幻灯片涵盖了作为一个会员的基础知识，包括诚实的重要性。请务必确保你在进行其它的操作之前花些时间看看它。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Welcome! This short slideshow covers the basics of being an Spark, including the importance of honesty. Make sure you know this stuff before you go any further.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='How_A_Spark_Campaign_Works'>
+			<tuv xml:lang="zh">
+				<seg>一项口碑活动是如何运作的</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>How a Spark Campaign Works</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Campaigns_Are_How_Sparks_Learn_About'>
+			<tuv xml:lang="zh">
+				<seg>活动是会员了解新奇产品和服务的最佳途径。作为会员，参加活动是最重要的环节，这份教程将会向你展示一项典型的口碑活动的基本要素。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaigns are how Sparks learn about new and exciting products and services. Participating in campaigns is the most important part of being an Spark, and this tutorial will show you the basics of a typical Spark Campaign.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='How_It_Works'>
+			<tuv xml:lang="zh">
+				<seg>它是如何运作的</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>How it works</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Follow_The_Walkthrough'>
+			<tuv xml:lang="zh">
+				<seg>请根据接着几张幻灯片的讲解来了解这是如何运作的。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Follow the walkthrough on the next few slides to learn more about how it works!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Lets_Get_Started'>
+			<tuv xml:lang="zh">
+				<seg>让我们立刻开始吧</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Let's Get Started</seg>
+			</tuv>
+		</tu>
+		<tu tuid='As_You_Contribute_To_Wildfire_Spark_Campaigns'>
+			<tuv xml:lang="zh">
+				<seg>只要你对星星火的活动做出了帮助，你将受到一份惊喜，诸如提早邀请你参加特别为你定制的独有的活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>As you contribute to Wildfire Spark Campaigns, you receive fun rewards as a thank you, such as early invites and invitations to more exclusive campaigns.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='One'>
+			<tuv xml:lang="zh">
+				<seg>壹</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>One</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Two'>
+			<tuv xml:lang="zh">
+				<seg>贰</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Two</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Three'>
+			<tuv xml:lang="zh">
+				<seg>叁</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Three</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Four'>
+			<tuv xml:lang="zh">
+				<seg>肆</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Four</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Five'>
+			<tuv xml:lang="zh">
+				<seg>伍</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Five</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Training'>
+			<tuv xml:lang="zh">
+				<seg>培训</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Training</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Campaigns'>
+			<tuv xml:lang="zh">
+				<seg>活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaigns</seg>
+			</tuv>
+		</tu>
+		<tu tuid='End'>
+			<tuv xml:lang="zh">
+				<seg>完</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>End</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Spark_Training_Intro_To_Wildfire'>
+			<tuv xml:lang="zh">
+				<seg>会员培训–星星火简介</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Training - Intro to Wildfire</seg>
+			</tuv>
+		</tu>
+		<tu tuid='This_Introductory_WOM_Will_Give_You'>
+			<tuv xml:lang="zh">
+				<seg>什么是口口相传？诚实为什么那么重要？ 这次培训将介绍给你口口相传营销模式和自然口口相传的重要性。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What is word-of-mouth? Why is it so important to be honest? This training will give you an introduction to word-of-mouth marketing, and the importance of natural word-of-mouth.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_Is_The_Wildfire'>
+			<tuv xml:lang="zh">
+				<seg>什么是星星火？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What is Wildfire?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_wildfire'>
+			<tuv xml:lang="zh">
+				<seg>欢迎来到星星火社区！在你开始之前，请你确保熟知以下几点基本要素：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Welcome to the Wildfire community! Before you get started, it’s important to make sure you know the most important basics of how to:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_wildfire_conten_1'>
+			<tuv xml:lang="zh">
+				<seg>传播诚实的口口相传，即使那是负面。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spread HONEST word-of-mouth, including the negative parts.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_wildfire_conten_2'>
+			<tuv xml:lang="zh">
+				<seg>为我们撰写报告。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Report your word-of-mouth back to us.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_wildfire_conten_3'>
+			<tuv xml:lang="zh">
+				<seg>  告诉你的朋友们，你是星星火的会员。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Let people you talk to know you’re a Spark.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Why_is_it_so_important_to_be_honest'>
+			<tuv xml:lang="zh">
+				<seg>为什么我一定要诚实汇报？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Why Should I Be Honest?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Why_is_it_so_important_to_be_honest_content'>
+			<tuv xml:lang="zh">
+				<seg>诚实是星星火会员首要的品质。为什么呢？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Honesty is the most important quality a Spark has. Why?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Why_is_it_so_important_to_be_honest_content_1'>
+			<tuv xml:lang="zh">
+				<seg>口口相传模式只能在可靠的环境下运行。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Word-of-mouth only works when it’s credible.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Why_is_it_so_important_to_be_honest_content_2'>
+			<tuv xml:lang="zh">
+				<seg>朋友之间从来不该说谎话。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Friends don’t lie to their friends!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Why_is_it_so_important_to_be_honest_content_3'>
+			<tuv xml:lang="zh">
+				<seg>即使是负面的口口相传，也有助于商家改良他们的商品或服务。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Negative word-of-mouth helps companies improve faster.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_are_not_saler'>
+			<tuv xml:lang="zh">
+				<seg>你是星星火会员，不是一名销售员！！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You’re a Spark. Not a salesperson!!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_are_not_saler_content_1'>
+			<tuv xml:lang="zh">
+				<seg>星星火会员不需要向朋友们“销售”任何产品。 </seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Sparks don’t need to “sell” products to their friends. </seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_are_not_saler_content_2'>
+			<tuv xml:lang="zh">
+				<seg>所以只需要向你的朋友们说出最真实的感受。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>So just tell your friends what you think, naturally.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_are_not_saler_content_3'>
+			<tuv xml:lang="zh">
+				<seg>你和你朋友们的观点是最重要的。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your opinion and that of your friends is what matters most.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_are_not_saler_content_4'>
+			<tuv xml:lang="zh">
+				<seg>所以你可以把观点当作娱乐，大声说出来，甚至写进博客或者即时通讯– 但是请不要“推销”任何东西。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>So have fun, jump, shout, blog, and IM – but don’t “sell” anything!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_have_influence'>
+			<tuv xml:lang="zh">
+				<seg>你具有很大的影响力！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You Have the Power of Influence!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_have_influence_content'>
+			<tuv xml:lang="zh">
+				<seg>星星火会员具有影响力。为什么呢？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Sparks have power. Why?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_have_influence_content_1'>
+			<tuv xml:lang="zh">
+				<seg>口口相传是最强大也最古老的营销模式。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Word-of-mouth is the strongest and oldest form of marketing.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_have_influence_content_2'>
+			<tuv xml:lang="zh">
+				<seg>对于一个产品的成功，消费者的观点是最重要的。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Consumer opinion is the biggest factor in a product’s success.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_have_influence_content_3'>
+			<tuv xml:lang="zh">
+				<seg>星星火会员报告能帮助企业认识到你的影响力。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Reports lets you make your power known to companies!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_sparks_report'>
+			<tuv xml:lang="zh">
+				<seg>什么是星星火会员报告？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What is a Spark Report?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_sparks_report_content_1'>
+			<tuv xml:lang="zh">
+				<seg>作为星星火社区的一员，每次你分享了你的观点，你都必须提交一份报告。这是对于你的交谈、电子邮件或者通讯的一份方便快捷的概要。并且是有很丰厚的回报的：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>As a part of the Wildfire community, you must submit a Spark Report each time you share your opinion. It’s a quick and easy summary of your conversation, email, or IM. And it’s very rewarding:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_sparks_report_content_2'>
+			<tuv xml:lang="zh">
+				<seg>你能获得更多参与活动的机会。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You get access to future Spark Campaigns.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_sparks_report_content_3'>
+			<tuv xml:lang="zh">
+				<seg>你能影响一个企业或一款品牌。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You influence big companies and brands.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_sparks_report_content_4'>
+			<tuv xml:lang="zh">
+				<seg>会员的观点：来自我们的感谢信，你可以使用它来税换奖励。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Points: a thank you from us, which you can redeem for rewards.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='We_hope_it_is_useful_for_you'>
+			<tuv xml:lang="zh">
+				<seg>我们希望这部简短的幻灯片回答了嫩对星星火运作的部分疑问，以及为什么诚实是那么的重要。如果你还想了了解更多疑问，请参见我们的</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>We hope this short slideshow helped answer some of your questions about how a Wildfire works, and why honesty is so important. If you have any more questions, please see our </seg>
+			</tuv>
+		</tu>
+		<tu tuid='FAQ TITLE'>
+			<tuv xml:lang="zh">
+				<seg>常见问题</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Frequently Asked Questions</seg>
+			</tuv>
+		</tu>
+		<tu tuid='FAQ TITLE_COMMENT'>
+			<tuv xml:lang="zh">
+				<seg><p>星星火是通过崭新的方式去了解新的产品并且进行口碑宣传，所以有很多问题是正常的。<br/>以下列举了一些比较普遍的问题，但是如果还有问题我们没有回答的，请随时<a href="/public/site/contactus">联系我们</a>。</p>
+</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><p>Wildfire is a groundbreaking way to learn about new products and spread word-of-mouth, so it’s natural to have many questions! The following are some of the most common, but if we haven’t answered your questions here, please feel free to <a href="/public/site/contactus">contact us</a>.</p></seg>
+			</tuv>
+		</tu>
+		<tu tuid='FAQ LINKS'>
+			<tuv xml:lang="zh">
+				<seg><h3><a href="#what-is-wildfire">什么是星星火？</a></h3> <h3><a href="#whats-word-of-mouth">什么是口口相传？</a></h3> <h3><a href="#what-do-sparks-do-exactly">星星火会员要做什么？</a></h3> <h3><a href="#is-there-a-cost-to-join">加入星星火会员是否需要花费？</a></h3> <h3><a href="#how-much-time-will-i-have">作为会员，大概要花费我多少时间？</a></h3> <h3><a href="#what-do-i-get-for-being-a-spark">成为星星火会员能得到什么？</a></h3> <h3><a href="#can-i-earn-cash-for-being-a-spark">成为星星火会员能赚钱么？</a></h3> <h3><a href="#is-wildfire-a-free-sample-site">星星火是不是一个免费试用样品的网站？</a></h3> <h3><a href="#if-i-join-wildfire">如果我加入星星火会员，是不是就有责任做任何事情？</a></h3> <h3><a href="#will-wildfire-tell-me">星星火是否会告诉我该说什么？</a></h3> <h3><a href="#does-wildfire-put-an-anonymous">在聊天室或者网站的评论是匿名的么？</a></h3> <h3><a href="#if-i-sign-up-for-wildfire">如果我加入星星火，会不会向我发垃圾邮件？</a></h3> <h3><a href="#what-do-you-do-with">我提供给你的信息，会怎么保存？</a></h3> <h3><a href="#what-should-i-do-when-i-join">当我加入的时候，我要怎么做？</a></h3> <h3><a href="#what-if-i-have-a-suggestion">如果我对星星火有建议怎么办？</a></h3> <h3><a href="#how-can-i-hire-wildfire">如何使用星星火的服务？</a></h3> <h3><a href="#what-is-disclosure">什么是“披露”？</a></h3> <h3><a href="#should-i-disclose-to-people">我应该告诉别人我是星星火的会员么？</a></h3> <h3><a href="#why-dont-i-see-any-wildfire">为什么我看不到我能加入的星星火活动？</a></h3> <h3><a href="#how-often-are-new-wildfire">星星火推出新的活动的频率是多少？</a></h3> <h3><a href="#when-will-i-get-new-wildfire">什么时候我会有星星火活动的机会？</a></h3> <h3><a href="#how-do-i-find-out-about">我怎么知道星星火活动的最新消息？</a></h3> <h3><a href="#why-cant-i-see-a-certain">在我的星火主页上，为什么我看不到某一个星星火活动的详细列表？</a></h3> <h3><a href="#after-i-sign-up">当我登记参加了某一个星星火活动，要过多久我才能收到星火活动的邮寄包裹？</a></h3> <h3><a href="#can-i-start-bzzing-before">在我收到星星火邮件之前，我能不能做点准备工作？</a></h3> <h3><a href="#what-if-i-do-not-receive">如果我没有收到星星火活动的包裹怎么办？</a></h3> <h3><a href="#what-if-i-try-a-product">如果我试用了某一个星星火活动产品，但我不喜欢这个产品怎么办？</a></h3> <h3><a href="#how-do-i-report-my-wom">如何来完成我的口碑报告？</a></h3> <h3><a href="#what-do-you-look-for-in-wom">在口碑报告中，你们注重的是什么？</a></h3> <h3><a href="#do-you-really-read-each-and-every-wom">你们真的会阅读每一份提交的口碑报告吗？</a></h3> <h3><a href="#why-didnt-i-get-all-the-credit">为什么有时候我提交的口碑报告没有拿到所有积分？</a></h3> <h3><a href="#what-if-i-still-disagree">如果我仍不赞同你们对于报告所给的积分，我该怎么办？</a></h3> <h3><a href="#what-is-pest">何谓“害群之马”？</a></h3> <h3><a href="#how-do-i-know-if-i-am-a-pest">我怎么知道自己是不是被当作“害群之马”？</a></h3></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><h3><a href="#what-is-wildfire">What is Wildfire?</a></h3> <h3><a href="#whats-word-of-mouth">What's Word-of-Mouth?</a></h3> <h3><a href="#what-do-sparks-do-exactly">What do Sparks do exactly?</a></h3> <h3><a href="#is-there-a-cost-to-join">Is there a cost to join?</a></h3> <h3><a href="#how-much-time-will-i-have">How much time will I have to devote to being a Spark?</a></h3> <h3><a href="#what-do-i-get-for-being-a-spark">What do I get for being a Spark?</a></h3> <h3><a href="#can-i-earn-cash-for-being-a-spark">Can I earn cash for being a Spark?</a></h3> <h3><a href="#is-wildfire-a-free-sample-site">Is Wildfire a free sample site?</a></h3> <h3><a href="#if-i-join-wildfire">If I join Wildfire, am I obligated to do anything?</a></h3> <h3><a href="#will-wildfire-tell-me">Will Wildfire tell me what to say?</a></h3> <h3><a href="#does-wildfire-put-an-anonymous">Does Wildfire put anonymous comments in chat rooms or review sites?</a></h3> <h3><a href="#if-i-sign-up-for-wildfire">If I sign up for Wildfire, will you spam me?</a></h3> <h3><a href="#what-do-you-do-with">What do you do with the information I provide to you?</a></h3> <h3><a href="#what-should-i-do-when-i-join">What should I do when I join?</a></h3> <h3><a href="#what-if-i-have-a-suggestion">What if I have a suggestion for Wildfire?</a></h3> <h3><a href="#how-can-i-hire-wildfire">How can I hire Wildfire?</a></h3> <h3><a href="#what-is-disclosure">What is disclosure?</a></h3> <h3><a href="#should-i-disclose-to-people">Should I disclose to people that I'm a Spark?</a></h3> <h3><a href="#why-dont-i-see-any-wildfire">Why don't I see any Wildfire Campaigns I can join?</a></h3> <h3><a href="#how-often-are-new-wildfire">How often are new Wildfire Campaigns launched?</a></h3> <h3><a href="#when-will-i-get-new-wildfire">When will I get new Wildfire Campaign choices?</a></h3> <h3><a href="#how-do-i-find-out-about">How do I find out about new Wildfire Campaigns?</a></h3> <h3><a href="#after-i-sign-up">After I sign up for a Wildfire Campaign, how long until I get my Spark Kit in the mail?</a></h3> <h3><a href="#why-cant-i-see-a-certain">Why can't I see a certain Wildfire Campaign listed as available on my Spark Homepage?</a></h3> <h3><a href="#can-i-start-bzzing-before">Can I start talking to my friends before I receive my Spark Kit?</a></h3> <h3><a href="#what-if-i-do-not-receive">What if I do not receive my Welcome Kit or Spark Kit?</a></h3> <h3><a href="#what-if-i-try-a-product">What if I try a product as part of a Wildfire Campaign and don't like it?</a></h3> <h3><a href="#how-do-i-report-my-wom">How do I report my Word-of-Mouth?</a></h3> <h3><a href="#what-do-you-look-for-in-wom">What do you look for in word-of-mouth reports?</a></h3> <h3><a href="#do-you-really-read-each-and-every-wom">Do you really read each and every word-of-mouth report?</a></h3> <h3><a href="#why-didnt-i-get-all-the-credit">Why didn't I get all the credit I think I deserved for a word-of-mouth report?</a></h3> <h3><a href="#what-if-i-still-disagree">What if I still disagree with the amount of credit I received for a report?</a></h3></seg>
+			</tuv>
+		</tu>
+		<tu tuid='FAQ CONTENTS'>
+			<tuv xml:lang="zh">
+				<seg><h3><a name="what-is-wildfire" title="what-is-wildfire">什么是星星火？</a></h3>
+<p>我们是一个凝聚了自愿加入口口相传的中国消费者网络。星星火的火焰蔓延到了各类产品和服务。</p>
+<h3><a name="whats-word-of-mouth" title="whats-word-of-mouth">什么是口口相传？</a></h3>
+<p>这正是我们每时每刻都在实现的理念。口口相传分享了众人对于一个产品或者某项服务最诚实的评价。</p>
+<h3><a name="what-do-sparks-do-exactly" title="what-do-sparks-do-exactly">星星火会员要做什么？</a></h3>
+<p>你能够了解一些新的事物，并且对全球许多领先企业产生影响。你通常可以免费试用样品或者体验服务，然后向你认识的朋友分享使用后的真实感受。接着你将这些谈话内容发送给我们，以帮助那些公司改进他们的产品。你的言论完全自由，不会受到任何约束，当然更不会有任何压力。</p>
+<h3><a name="is-there-a-cost-to-join" title="is-there-a-cost-to-join">加入星星火会员是否需要花费？</a></h3>
+<p>不，加入星星火是免费的。</p>
+<h3><a name="how-much-time-will-i-have" title="how-much-time-will-i-have">作为会员，大概要花费我多少时间？</a></h3>
+<p>成为星星火会员不会占用你很多宝贵时间。当然，你越积极参加活动（例如，你告诉我们想法），所得到得经验将更丰富（我们将会奖励那些有贡献的积极会员）。</p>
+<h3><a name="what-do-i-get-for-being-a-spark" title="what-do-i-get-for-being-a-spark">成为星星火会员能得到什么？</a></h3>
+<ul><li>有机会使得一些事物因你的观点而发生改变。</li> <li>有时候可以在公众之前接触一些产品和服务。</li> <li>你可以亲身体验一些广泛好评的产品和服务。</li> <li>其它的回报——名利双收（参加活动的特权以及丰厚奖励和其它惊喜）</li> 
+</ul>
+<h3><a name="can-i-earn-cash-for-being-a-spark" title="can-i-earn-cash-for-being-a-spark">成为星星火会员能赚钱么？</a></h3>
+<p>不可以。我们从不提供金钱作为奖励。这是因为所有的评论是真实且自愿的。但是你能够得到以下回报：</p> 
+<ul> <li>我们将为积极贡献的会员提供更高的地位——包括有机会参加更多的活动且享有更高优先权。</li> <li>更为劲暴的是一系列奖励和特别回馈。</li> </ul>
+<h3><a name="is-wildfire-a-free-sample-site" title="is-wildfire-a-free-sample-site">星星火是不是一个免费试用样品的网站？</a></h3>
+<p>不！ 尽管星星火会员经常能收到免费产品或者体验免费服务，但我们并不是一个免费试用样品的网站。我们每天提供消费者了解新产品和服务的机会，并且通过星星火的分享使得其他人能够聆听评论者得心声。</p>
+<h3><a name="if-i-join-wildfire" title="if-i-join-wildfire">如果我加入星星火会员，是不是就有责任做任何事情？</a></h3> 
+<p>完全不会，你只需要参加你有兴趣加入的评论活动——我们不会强迫你去参加活动。我们唯一要求你的就是当你作为我们活动的会员发表评论时，请遵守星星火的行为准则。</p>  
+<h3><a name="will-wildfire-tell-me" title="will-wildfire-tell-me">星星火是否会告诉我该说什么？</a></h3> 
+<p>不，我们希望会员能代表他们自己，并且分享积极的或者否定的观点。我们不会为你提供参考答案，我们只提供产品的信息以及一些建议和小贴士。你想说什么这完全取决于你自己，但是你要清楚，和你进行谈论的人了解你是一名星星火会员并且知道是星星火网站提供给你机会去试用这些产品或者服务。</p>  
+<h3><a name="does-wildfire-put-an-anonymous" title="does-wildfire-put-an-anonymous">在聊天室或者网站的评论是匿名的么？</a></h3>
+<p>不。所有星星火会员应该了解，匿名的、误导的网络营销有损可信度，我们只相信会员在已经加入或者有兴趣加入的网络团体和日常活动社团中和他们所认识的朋友所分享的观点。</p>  
+<h3><a name="if-i-sign-up-for-wildfire" title="if-i-sign-up-for-wildfire">如果我加入星星火，会不会向我发垃圾邮件？</a></h3> 
+<p>永远不会。我们非常反对发垃圾邮件。在没有得到会员的事先允许下，我们不会让任何人与会员联系。你只会通过邮件从星星火收到关于活动和其他与星星火有关的信息。</p>  
+<h3><a name="what-do-you-do-with" title="what-do-you-do-with">我提供给你的信息，会怎么保存？</a></h3> 
+<p>所有私人信息将会被严格保密，并且只用于帮助星星火：</p> 
+<ul> <li>找到适合你参加的活动</li> <li>为你和其他星星火会员提供更好的体验活动</li> <li>改进我们现有的或者将来的活动</li> </ul> 
+<p>更详尽的细节，请参见我们的保护隐私权之声明。</p>  
+<h3><a name="what-should-i-do-when-i-join" title="what-should-i-do-when-i-join">当我加入的时候，我要怎么做？</a></h3> 
+<p>在你选择好星星火用户名和密码后，你将被提示填写星星火会员信息档案。一旦你填写完毕并且确认了你的e-mail地址，你的信息档案将会被建立并且核对。接着，你可以浏览星星火主页，在那里你可以：</p> 
+<ul> <li>查询你最近可以参加的活动</li> <li>参加测试，使我们能找到适合你的活动</li> <li>通过新手指南和星星火训练营的信息更多得了解星星火</li> </ul>  
+<h3><a name="what-if-i-have-a-suggestion" title="what-if-i-have-a-suggestion">如果我对星星火有建议怎么办？</a></h3> 
+<p>我们乐于接受建议。我们会从你的观点和想法中学习，并且执行其中最好的一个。你可以使用会员专用表格或者发送 email到以下地址:<a href="mailto:info@wildfire.asia">info@wildfire.asia</a>向我们提供你的建议！</p>
+<h3><a name="how-can-i-hire-wildfire" title="how-can-i-hire-wildfire">如何使用星星火的服务？</a></h3> 
+<p>我们非常乐于和你讨论关于你未来的星星火口口相传活动。请发送email至<a href="mailto:sales@wildfire.asia">sales@wildfire.asia</a>，让我们知道如何能够帮助到你！</p>  
+<h3><a name="what-is-disclosure" title="what-is-disclosure">什么是“披露”？</a></h3>
+<p>“披露”是指当你成为一名星星火会员后，你必须真实公开你的身份。当你分享关于星星火提供的产品或者服务的观点时，你必须让所有人知道你是一名星星火会员，并且让其他人知道是星星火提供给你了这次体验产品和服务的机会。</p>  
+<h3><a name="should-i-disclose-to-people" title="should-i-disclose-to-people">我应该告诉别人我是星星火的会员么？</a></h3>
+<p>是的。我们强烈建议你向任何你分享评论的人公开你和星星火之间的关系。就像我们的行为准则所说的：</p> 
+<ul> <li>星星火会员应时刻告诉其他人，他们是口口相传活动的参与者。</li> <li>成为星星火会员是值得自豪的。当与别人谈论产品或服务时，你必须首先让他们知道你参加了星星火，并且星星火提供给你了体验新产品的机会。如果你对某样东西确实喜欢（或者不喜欢），你的这个公开、真实的观点是最有价值的。</li> </ul>  
+<h3><a name="why-dont-i-see-any-wildfire" title="why-dont-i-see-any-wildfire">为什么我看不到我能加入的星星火活动？</a></h3> 
+<p>这些活动目前可能并不适合你。有时候，一些特定的活动只对特定会员开放。例如：男性会员可能没有资格参加女性香水活动。如果你想了解更多信息，可以查看会员培训的“适任活动”栏。</p> 
+<p>有时，我们只是需要更多的了解你。检查你的信息档案或者星星火主页中是否有一些测试和调查没有完成。完成这些调查和测试并且完善你的信息档案，你将有资格参加新的活动。</p>  
+<h3><a name="how-often-are-new-wildfire" title="how-often-are-new-wildfire">星星火推出新的活动的频率是多少？</a></h3> 
+<p>始终都有。我们会努力尽量快速得开展活动。但是活动参与资格很快就被申请完，所以如果你对活动感兴趣，请提早申请。</p>  
+<h3><a name="when-will-i-get-new-wildfire" title="when-will-i-get-new-wildfire">什么时候我会有星星火活动的机会？</a></h3> 
+<p>我们会尽最大努力举行会员感兴趣的新活动，当然也包括你在内。对于未来的活动，我们并没有一个准备的日期可以提供给你，但是通过参与活动得到更高地位的会员可以提前得到大部分新活动的通知。</p>  
+<h3><a name="how-do-i-find-out-about" title="how-do-i-find-out-about">我怎么知道星星火活动的最新消息？</a></h3> 
+<p>有时我们会就新活动的信息发送 email邮件给你，但是你最好还是注册完毕之后经常关注星星火会员主页。星星火会员主页上罗列了所有你能够申请参加的新活动。</p>  
+<h3><a name="why-cant-i-see-a-certain" title="why-cant-i-see-a-certain">在我的星火主页上，为什么我看不到某一个星星火活动的详细列表？</a></h3> 
+<p>这意味着你可能暂时还没有资格参加这个活动或者这个活动已经满员了。有时活动只对满足条件的会员开放:例如年龄或者所在地等。</p>  
+<h3><a name=" after-i-sign-up " title=" after-i-sign-up ">当我登记参加了某一个星星火活动，要过多久我才能收到星火活动的邮寄包裹？</a></h3> 
+<p>在你报名参加后的14天内，你将通过邮件收到活动手册。如果14天之后仍然没有收到，你也已经及时检查了是否更新了你在会员档案上所提供的邮件地址（你可以检查会员记录上的地址更新情况）。如果你认为确实没有收到邮件，请发送邮件给我们。</p>  
+<h3><a name="can-i-start-bzzing-before" title="can-i-start-bzzing-before">在我收到星星火邮件之前，我能不能做点准备工作？</a></h3> 
+<p>是的，尽管我们认为你最好还是先试用这些产品。尽管如此，每一个活动开始，你都可以在活动主页上找到关于这个产品的足够信息，并可以据此开始发表你的评论。</p> 
+<h3><a name="what-if-i-do-not-receive" title="what-if-i-do-not-receive">如果我没有收到星星火活动的包裹怎么办？</a></h3> 
+<p>通知我们！有时物品可能会在发送过程中丢失。如果你在申请参加活动之后的两个礼拜依然没有收到包裹，请务必通知我们。</p>  
+<h3><a name="what-if-i-try-a-product" title="what-if-i-try-a-product">如果我试用了某一个星星火活动产品，但我不喜欢这个产品怎么办？</a></h3> 
+<p>星星火会员是自愿参加并且分享自己的观点。如果你不满意产品或者服务，你不会被强迫说谎，做出虚假评论。当然，参加活动反馈调查，分享你的活动观点也是非常重要的，这样顾客能够考虑到你的反馈信息。</p>  
+<h3><a name="how-do-i-report-my-wom" title="how-do-i-report-my-wom">如何来完成我的口碑报告？</a></h3> 
+<p>你可以通过在星星火活动主页的右上角单击口口相传键或者在你的会员主页上单击此键来完成某个特定的星星火活动的口口相传评论汇报。请记住尽量提供更多的细节信息。</p>  
+<h3><a name="what-do-you-look-for-in-wom" title="what-do-you-look-for-in-wom">在口碑报告中，你们注重的是什么？</a></h3> 
+<p>四样东西:诚实性、积极性、创造性和细节。</p> 
+<p>我们希望你可以用最大的热情来分享最真实的评论。一旦你真实详尽得描述了发生的事情，我们可以自认为在这件事情的处理方法上是正确的。引用一些直接的事例来润饰你的评论，还记得你在学校里必须要回答的5个W的问题吗？谁，做什么，哪里，什么时候和为什么？如果你的汇报回答了上述所有问题，那我们非常有可能会喜欢这个汇报并且因此感激你。</p>  
+<h3><a name="do-you-really-read-each-and-every-wom" title="do-you-really-read-each-and-every-wom">你们真的会阅读每一份提交的口碑报告吗？</a></h3> 
+<p>我们肯定会这样做——我们亲自阅读并回复每一份评论。毕竟星星火是建立在大家诚信交流的基础上的。如果发生不真实的双方交易，那么评论就毫无意义，不是吗？</p>  
+<h3><a name="why-didnt-i-get-all-the-credit" title="why-didnt-i-get-all-the-credit">为什么有时候我提交的口碑报告没有拿到所有积分？</a></h3> 
+<p>有时一份口口相传汇报并不能让我们完全了解发生了什么。因为我们并不在现场，所以我们非常需要详尽的细节描述。如果对于你的报告我们没有给予满分，我们会在回复中告诉你原因。请仔细阅读我们的回复，这样你可以知道以后的评论应该写些什么。</p>  
+<h3><a name="what-if-i-still-disagree" title="what-if-i-still-disagree">如果我仍不赞同你们对于报告所给的积分，我该怎么办？</a></h3> 
+<p>告诉我们。我们想要知道。如果你详细讲述你的评论并且使我们认为它是有意义的，我们很乐意给予你更高的分数。如果你还是认为我们错过了你报告中的某些细节，请使用会员专用表格。</p>  
+<h3><a name="what-is-pest" title="what-is-pest">何谓“害群之马”？</a></h3> 
+<p>害群之马指的是某些星星火会员想要利用星星火系统。他们建立不同的账号，制造虚假的汇报，贩卖产品或者制造一些卑鄙的骗局企图骗过我们的系统。最恶劣的是那些不诚实的会员会占据诚实的会员的名额。为了使我们团体中诚实的会员得到更好的环境，我们将会努力认证身份并且驱逐不道德的会员。</p>  
+<h3><a name="how-do-i-know-if-i-am-a-pest" title="how-do-i-know-if-i-am-a-pest">我怎么知道自己是不是被当作“害群之马”？</a></h3> 
+<p>非常简单，如果你是，你会从我们这里得到通知。但是只要你是诚实的，你不需要担心任何事情。</p></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><h3><a name="what-is-wildfire" title="what-is-wildfire">What is Wildfire?</a></h3> <p>We're a network of Chinese consumers who voluntarily participate in word-of-mouth programs for a variety of products and services. Basically, we're a community of passionate communicators.</p>  
+				<h3><a name="whats-word-of-mouth" title="whats-word-of-mouth">What's Word-of-Mouth?</a></h3>
+				<p>It's what we all do every day, all the time. It's the sharing of honest opinions about a product or service between two or more people.</p>  
+				<h3><a name="what-do-sparks-do-exactly" title="what-do-sparks-do-exactly">What do Sparks do exactly?</a></h3> 
+				<p>You get to learn about new stuff and influence some of the biggest companies in the world. You try products and services, usually for free, and share your honest opinions with people you know. Then you fill us in on those conversations to help companies improve their products. There's no obligation, no nonsense and no pressure.</p>  
+				<h3><a name="is-there-a-cost-to-join" title="is-there-a-cost-to-join">Is there a cost to join?</a></h3> 
+				<p>No, there's no cost to join Wildfire.</p>  
+				<h3><a name="how-much-time-will-i-have" title="how-much-time-will-i-have">How much time will I have to devote to being a Spark?</a></h3> 
+				<p>Being a Spark won't take up a lot of your valuable time. Still, the more effort you put into participating (for instance, letting us know about your word of mouth), the better your experience will be (we reward active and informative Sparks).</p>  
+				<h3><a name="what-do-i-get-for-being-a-spark" title="what-do-i-get-for-being-a-spark">What do I get for being a Spark?</a></h3> 
+				<ul> <li>The chance to have your opinions make a real difference</li> <li>Access to products and services, sometimes before the general public</li> <li>Complimentary products or access to services so you can experience them for yourself</li> <li>Exclusive rewards — both Status (privileged access to campaigns) and Stuff (rewards and other little surprises)</li> </ul>  
+				<h3><a name="can-i-earn-cash-for-being-a-spark" title="can-i-earn-cash-for-being-a-spark">Can I earn cash for being a Spark?</a></h3> 
+				<p>Nope. We never offer money as a thank you. That's because natural word-of-mouth is sincere and voluntary. But here's what you can earn:</p> <ul> <li>Improved Status, reserved for active and informative Sparks — including access to more campaigns and the ability to receive Early Invites to campaigns before other Sparks do.</li> <li>Cool Rewards, including a wide variety of special offers</li> </ul>  
+				<h3><a name="is-wildfire-a-free-sample-site" title="is-wildfire-a-free-sample-site">Is Wildfire a free sample site?</a></h3> 
+				<p>Nope! While Sparks often receive free products or access to services, we are not a free sample site. We give everyday consumers the chance to learn about new products and services and make their voices heard by sharing those opinions with others, including our clients.</p>  
+				<h3><a name="if-i-join-wildfire" title="if-i-join-wildfire">If I join Wildfire, am I obligated to do anything?</a></h3> 
+				<p>Not at all. You only join word-of-mouth programs that you want to actively participate in — we would never pressure you to participate. The only thing we ask is that you follow the Wildfire Code of Conduct when you spread the word as part of one of our programs.</p>  
+				<h3><a name="will-wildfire-tell-me" title="will-wildfire-tell-me">Will Wildfire tell me what to say?</a></h3> 
+				<p>No, we want Sparks to be themselves, to share both the positive and the negative. While we won't provide you with a script, we will provide you with info on the product and some suggestions and tips. What you say is totally up to you, though you should make sure the people you talk with understand that you're a Spark and that we provided you with a means to try the product or service.</p>  
+				<h3><a name="does-wildfire-put-an-anonymous" title="does-wildfire-put-an-anonymous">Does Wildfire put anonymous comments in chat rooms or review sites?</a></h3> 
+				<p>No. All Sparks should understand that anonymous and misleading online marketing damages credibility and respectability. We only believe in Sparks openly and honestly sharing their opinions with people they know, in offline and online communities they are associated with or interested in joining.</p>  
+				<h3><a name="if-i-sign-up-for-wildfire" title="if-i-sign-up-for-wildfire">If I sign up for Wildfire, will you spam me?</a></h3> 
+				<p>Never. We're absolutely against spam. We never let anyone contact our members without their advance consent. The only e-mails you'll receive from us will be about campaigns and other Wildfire-related information.</p>  
+				<h3><a name="what-do-you-do-with" title="what-do-you-do-with">What do you do with the information I provide to you?</a></h3> 
+				<p>All personal data are kept strictly confidential, and are only used as a way to help us:</p> 
+				<ul> <li>match you with the right programs</li> <li>create better experiences for you and other Sparks</li> <li>improve our current or future programs</li> <li>for more details, please refer to our Privacy Policy.</li> </ul>  
+				<h3><a name="what-should-i-do-when-i-join" title="what-should-i-do-when-i-join">What should I do when I join?</a></h3> 
+				<p>After you've selected a Wildfire username and password, you'll be prompted to set up your Spark profile. Once you do that and confirm your e-mail address, your account will be created and verified. Next, a good idea would be to visit your Spark Home page, where you can:</p> 
+				<ul> <li>check for new campaigns you can join</li> <li>take polls that help us match you with the right campaigns</li> <li>learn more about Wildfire via tutorials and info in the Spark Training Room</li> </ul>  
+				<h3><a name="what-if-i-have-a-suggestion" title="what-if-i-have-a-suggestion">What if I have a suggestion for Wildfire?</a></h3> 
+				<p>We love suggestions. We learn from your ideas and comments, and implement the best ones. To send us your suggestion, use the Spark Support form or e-mail <a href="mailto:info@wildfire.asia">info@wildfire.asia</a>. Thanks for helping us improve Wildfire!</p>  
+				<h3><a name="how-can-i-hire-wildfire" title="how-can-i-hire-wildfire"></a>How can I hire Wildfire?</h3> 
+				<p>We'd love to talk to you about your potential Wildfire word-of-mouth campaign. Please e-mail us at <a href="mailto:sales@wildfire.asia">sales@wildfire.asia</a> and let us know how we can help!</p>  
+				<h3><a name="what-is-disclosure" title="what-is-disclosure">What is disclosure?</a></h3> 
+				<p>Disclosure is about being completely open and honest about being a Spark. When you share your opinions about a Wildfire-related product or service, you should let everyone know that you're a Spark and that we provided you with a means to experience the product or service.</p>  
+				<h3><a name="should-i-disclose-to-people" title="should-i-disclose-to-people">Should I disclose to people that I'm a Spark?</a></h3> 
+				<p>Always. We strongly encourage you to share your relationship with Wildfire to everyone with whom you share word-of-mouth. Like our Code of Conduct says:</p> <ul> <li>Sparks always tell others they are part of a word-of-mouth campaign.</li> <li>Be proud to be a Spark. When telling others about a product or service, you must first let them know that you're involved with Wildfire and that we've supplied you with the opportunity to experience something new. If you genuinely like something (or even if you don't!), it's your open, honest opinion that counts most.</li> </ul>  
+				<h3><a name="why-dont-i-see-any-wildfire" title="why-dont-i-see-any-wildfire">Why don't I see any Wildfire Campaigns I can join?</a></h3> 
+				<p>There may not be any available for you at the moment. Sometimes certain campaigns are only open to certain Sparks. For example, men might not be eligible for a campaign for a woman's perfume. Visit Campaign Eligibility in Spark Training to learn more.</p> 
+				<p>Sometimes, we just need to know more about you. Check to see if you have any polls or surveys available in your Profile or on your Spark Homepage. Take any polls or surveys to complete your Profile and become eligible to sign up for new campaigns.</p>  
+				<h3><a name="how-often-are-new-wildfire" title="how-often-are-new-wildfire">How often are new Wildfire Campaigns launched?</a></h3> 
+				<p>All the time. We work hard to develop and launch campaigns as fast as possible. They often fill up quickly, so sign up sooner rather than later if you're interested.</p>  
+				<h3><a name="when-will-i-get-new-wildfire" title="when-will-i-get-new-wildfire">When will I get new Wildfire Campaign choices?</a></h3> 
+				<p>We try our best to frequently launch new campaigns that interest Sparks, including you. We don't have a calendar to show you of upcoming campaigns, but Sparks who've earned higher status through participation will get advance notice for most new campaigns.</p>  
+				<h3><a name="how-do-i-find-out-about" title="how-do-i-find-out-about">How do I find out about new Wildfire Campaigns?</a></h3> 
+				<p>Sometimes we e-mail about new campaigns, but your best bet is to login and check your Spark Homepage as often as you can. Any new campaigns that you're eligible for will be listed there.</p>  
+				<h3><a name="why-cant-i-see-a-certain" title="why-cant-i-see-a-certain">Why can't I see a certain Wildfire Campaign listed as available on my Spark Homepage?</a></h3> 
+				<p>It means you either aren't currently eligible to join the campaign or it's already full. Campaigns are often limited to Sparks who meet certain parameters, such as age or location.</p>  
+				<h3><a name="after-i-sign-up" title="after-i-sign-up">After I sign up for a Wildfire Campaign, how long until I get my Spark Kit in the mail?</a></h3> 
+				<p>You should expect to receive your Spark Kit in the mail about 14 days after you sign up for a campaign. If it's been longer than 14 days, and you've double-checked that the shipping address you have on file with us is up-to-date, you can check your Spark History for a status update. If you think your Spark Kit is lost, e-mail us.</p>  
+				<h3><a name="can-i-start-bzzing-before" title="can-i-start-bzzing-before">Can I start talking to my friends before I receive my Spark Kit?</a></h3> 
+				<p>Yes, though we think it's best to try the product first. Still, once a campaign starts you'll find enough information on the campaign homepage to start your word-of-mouth if you'd like.</p>  
+				<h3><a name="what-if-i-do-not-receive" title="what-if-i-do-not-receive">What if I do not receive my Welcome Kit or Spark Kit?</a></h3> 
+				<p>Tell us! Sometimes things get lost in the mail. If you don't get a Wildfire Welcome Kit or you don't receive your Spark Kit for a Wildfire Campaign within a couple of weeks of signing up, please let us know.</p>  
+				<h3><a name="what-if-i-try-a-product" title="what-if-i-try-a-product">What if I try a product as part of a Wildfire Campaign and don't like it?</a></h3> 
+				<p>Being a Spark is about voluntarily forming and sharing your own opinion. If you don't like the product or service, you're not obligated to go out and create word-of-mouth or submit reports. Still, it's important to take the Post-Campaign Survey to share your opinion so the client can consider your feedback.</p>  
+				<h3><a name="how-do-i-report-my-wom" title="how-do-i-report-my-wom">How do I report my Word-of-Mouth?</a></h3> 
+				<p>To report Word-of-mouth for a particular Wildfire Campaign, click the orange "Report Word-of-Mouth" button in the top right corner of its Wildfire Campaign homepage. You can also click the Report Word-of-Mouth button from your Spark Home page. Please remember to provide as many details as possible.</p>  
+				<h3><a name="what-do-you-look-for-in-wom" title="what-do-you-look-for-in-wom">What do you look for in word-of-mouth reports?</a></h3> 
+				<p>Four things: honesty, enthusiasm, creativity and details.</p> 
+				<p>We want you to share the most honest word-of-mouth possible, with as much passion you can. Once you do that, describe exactly what happened so we can imagine we were right there. To make your report shine, include some direct quotes. Remember when you had to answer the '5 W Questions' in grade school? Who, What, Where, When and Why? If your report answers all of those questions, there's a great chance we'll love it and show our appreciation accordingly.</p>  
+				<h3><a name="do-you-really-read-each-and-every-wom" title="do-you-really-read-each-and-every-wom">Do you really read each and every word-of-mouth report?</a></h3> 
+				<p>We sure do — we personally read and respond to every single one. After all, Wildfire is founded on the premise of honest communication between people. Word of mouth doesn't mean much if there's not a sincere two-way exchange, right?</p>  
+				<h3><a name="why-didnt-i-get-all-the-credit" title="why-didnt-i-get-all-the-credit">Why didn't I get all the credit I think I deserved for a word-of-mouth report?</a></h3> 
+				<p>Sometimes a word-of-mouth report doesn't allow us to fully understand what happened. Since we weren't there, we really need as many details as possible. If we don't grant you full points for your report, we'll tell you why in our response back to you. Read our responses carefully, as they'll help you understand what to include in your future reports.</p>  
+				<h3><a name="what-if-i-still-disagree" title="what-if-i-still-disagree">What if I still disagree with the amount of credit I received for a report?</a></h3> 
+				<p>Tell us. We want to know. If you make your case and it makes sense to us, we'll gladly grant you more points. If you still think we missed something in your report, please use the Spark Support form.</p>
+</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

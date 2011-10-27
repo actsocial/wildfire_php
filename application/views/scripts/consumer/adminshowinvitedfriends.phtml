@@ -1,0 +1,47 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+
+<br/>
+<h2><?php echo $this->translate('Admin_Show_Invite_Friends')?></h2>
+<br/>
+<p>Total Invitations:<?php echo $this->totalInvitations; ?>&nbsp; &nbsp;&nbsp; &nbsp;<br>
+Total Join us:<?php echo $this->totalJoin; ?></p>
+
+
+<br/>
+<table width="900">
+	<tr>
+	<th width="20">No.</th>
+	<th width="100"><?php echo $this->translate('Consumers_Name'); ?></th>
+	<th width="50"><?php echo $this->translate('Admin_Recipients_Name'); ?></th>
+	<th width="100"><?php echo $this->translate('Email'); ?></th>
+	<th width="50"><?php echo $this->translate('Admin_Total_Invitations'); ?></th>
+	<th width="50"><?php echo $this->translate('Admin_Total_Joins'); ?></th>
+	</tr>
+	
+	<?php $count = 1; foreach($this->invitations as $invitation) : ?>
+	
+	<tr<?php if ($count%2 == 10){ ?>  style="background-color: #EEF9EB "<?php }?> >
+	<td width="20"><?php echo $count++;?></td>
+	<td width="100"><a href="<?php echo $this->baseUrl().'/consumer/profile/uid/'.$invitation['id'];?>" target="_blank"><?php echo $invitation['name'];?></a></td>
+	<td width="50"><?php echo $invitation['recipients_name']; ?></td>
+	<td width="100"><?php echo $invitation['email'];?></td>
+	<td width="50"><?php echo $invitation['count(*)'];?>
+	</td>
+	<td width="50"><?php if(array_key_exists($invitation['id'],$this->joinedArray)){
+							echo $this->joinedArray[$invitation['id']];
+						}else{
+							echo 0;
+						}?>
+	</td>
+	</tr>
+	<?php endforeach; ?>
+</table>
+
+
+
+<ul>
+<li><a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'adminindex'));?>'><?php echo $this->translate('Back'); ?></a></li>
+</ul>
+</div>
+

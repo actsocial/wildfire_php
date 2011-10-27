@@ -1,0 +1,17 @@
+<h1 style = "margin-top: 0px; padding-top:0px; padding-bottom:0px; font-size:15px;"><?php echo $this->translate("Admin_Report"); ?>:</h1>
+<?php readfile("$this->answerset")?>
+<div style ="width: 500px;">
+<h1 style = "margin-top: 0px; padding-top:0px; padding-bottom:0px; font-size:15px;">
+<?php echo $this->adminname;?><?php echo $this->translate("Admin_Our_Response"); ?> (<?php if($this->reply != null){echo $this->reply->date;} ?>):</h1>
+<pre style="width:700px; word-wrap:break; white-space: -moz-pre-wrap;word-break: break-all; padding:0;
+ margin-top: 2px;
+ margin-bottom: 2px;
+ font-size: 12px;
+ float: left;
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */">
+<?php if($this->reply != null){echo $this->reply->content; }?></pre>
+</div>

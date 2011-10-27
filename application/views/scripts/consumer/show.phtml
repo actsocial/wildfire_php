@@ -1,0 +1,26 @@
+<div class="article-box"><div class="article-box-inner">
+<h2><?php echo $this->translate('YOUR PROFILE');?></h2>
+<p><?php echo $this->translate('YOUR PROFILE HINT');?></p>
+</div></div>
+
+<div class="article-box" style="background:#fff;padding-top:0;"><div class="article-box-inner" style="background:#fff;padding-top:0;">
+<h2><?php echo $this->translate('CONTACT INFORMATION');?></h2>
+<table class="profile">
+	
+	<tr><td><strong><?php echo $this->translate('CONTACT ACCOUNT_DATA');?></strong></td><td width="70%"></td></tr>
+	<tr><td><?php echo $this->translate('CONTACT INFORMATION_EMAIL');?></td><td><?php echo $this->consumer["email"]?></td></tr>
+	<tr><td><?php echo $this->translate('CONTACT INFORMATION_LOGIN_PHONE');?></td><td><?php echo $this->consumer["login_phone"]?></td></tr>
+	<tr><td><?php echo $this->translate('CONTACT INFORMATION_NAME');?></td><td><?php echo $this->consumer["name"]?></td></tr>
+
+	<tr><td><strong><?php echo $this->translate('CONTACT MAILING_ADDRESS');?></strong></td><td></td></tr>
+	<tr><td><?php echo $this->translate('CONTACT INFORMATION_RECIPIENTS_NAME');?></td><td><?php echo $this->consumer["recipients_name"]?></td></tr>
+	<tr><td><?php echo $this->translate('CONTACT INFORMATION_PHONE');?></td><td><?php echo $this->consumer["phone"]?></td></tr>
+	<tr><td><?php echo $this->translate('CONTACT CITY');?></td><td><?php echo $this->consumer["city"]?></td></tr>
+	<tr><td><?php echo $this->translate('CONTACT INFORMATION_ADDRESS1');?></td><td><?php echo $this->consumer["address1"]?></td></tr>
+	<tr><td><?php echo $this->translate('CONTACT POSTAL_CODE');?></td><td><?php echo $this->consumer["postalcode"]?></td></tr>
+</table>
+<div class="buttons-bar">
+<a class="big-button" href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>"/><?php echo $this->translate('EDIT PROFILE');?></a>
+<div style="clear:both;"></div>
+</div>
+</div></div>

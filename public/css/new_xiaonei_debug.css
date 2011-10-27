@@ -1,0 +1,10 @@
+@CHARSET "UTF-8";
+body {
+	font-family: "微软雅黑", "宋体", "Palatino Linotype";
+	font-size: 12px;
+	margin:0;
+	padding:0;
+}
+a img {
+	border: 0;
+}

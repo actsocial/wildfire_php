@@ -1,0 +1,110 @@
+<script type="text/javascript">
+swfobject.embedSWF("<?php echo $this->baseUrl();?>/open-flash-chart.swf", "mychart1", "800", "400", "9.0.0", "expressInstall.swf", {"get-data":"getdata1"} );
+</script>
+
+<script type="text/javascript">
+
+function ofc_ready()
+{
+//    alert('ofc_ready');
+}
+function getdata1()
+{
+	return JSON.stringify(data1);
+}
+function findSWF(movieName) {
+  if (navigator.appName.indexOf("Microsoft")!= -1) {
+    return window[movieName];
+  } else {
+    return document[movieName];
+  }
+}
+    
+var data1 = <?php echo $this->chart->toPrettyString(); ?>;
+
+$(document).ready(function() {
+	$("#G0_Reported").simpletip({ fixed: true, position: 'top', content: 'Number of WOM receivers directly reported by Sparks' }); 
+	$("#G0_Estimated").simpletip({ fixed: true, position: 'top', content: 'Number of WOM receivers directly reported by Sparks + historical estimate of receivers not reported' }); 
+	$("#G0_G1_Estimated").simpletip({ fixed: true, position: 'top', content: 'Number of estimated G0 + G1 receivers' }); 
+	$("#Ymax_change").simpletip({ fixed: true, position: 'top', content: 'Click and Set the Maximum Scale for Number of Receivers' }); 
+	$("#Xmax_change").simpletip({ fixed: true, position: 'bottom', content: 'Click and Set the Maximum Scale for Date' }); 
+} );
+
+function submitForm(){
+	$("#date_err").hide();
+	if(!checkDate()){
+		$("#date_err").show();
+		return;
+	}
+	var form = document.getElementById('form');
+	form.submit();
+}
+function showAndHide(i){
+	$('#'+i+'max_change').hide();
+	$('#'+i+'max_input').show();
+}
+function checkDate(){
+	var strDate = document.getElementById("x_max").value;
+	var a=/^(\d{1,4})(-|\/)(\d{1,2})\2(\d{1,2})$/;
+	if(strDate.match(a) == null){
+		return false; 
+	}
+	var startDate = "<?php echo $this->startDate?>";
+	startDate=startDate.replace(/\-/g, "\/");
+	strDate=strDate.replace(/\-/g, "\/");            
+    var startDate=new Date(startDate);
+    var strDate=new Date(strDate);
+    if(startDate >= strDate){
+        return false;
+    }
+    return true;
+}
+</script>
+
+<div align="center">
+	<div style="padding-top:30px;">
+	<h2><?php echo $this->translate('Client_Campaign_Name_'.$this->campaign_id).$this->translate('Client_Impressions');?></h2><br/>
+	<form id="form" name="form" action="<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientimpression', 'id'=>'7'));?>" method="post">
+		<table style="width:800px;" >
+			<tr>
+			<td style="width:150px"></td>
+			<td id ="G0_Reported" style="margin:0; font-size: 11px; text-align: left; color: #007DCD;" >— G0 Reported Recipients</td>
+			<td style="margin:0; font-size: 11px; text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;G0 = Spark</td></tr>
+			<tr>
+			<td style="width:150px"></td>
+			<td id ="G0_Estimated" style="margin:0; font-size: 11px; text-align: left; color: #81C909;">— G0 Estimated Recipients (min / max)</td>
+			<td style="margin:0; font-size: 11px; text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;G1 = Recipient of Spark Conversation</td></tr>
+			<tr>
+			<td style="width:150px; text-align: left; font-size: 11px;">
+			<a href='#' id="Ymax_change" onClick="javascript:showAndHide('Y')">Max Y Axis Field</a>
+			<div id="Ymax_input" style="display:none;">
+			Max Y:<input id="y_max" type="text" name="y_max" value="<?php echo $this->ymax; ?>" style="width:45px;" onblur = "javascript:submitForm();"/> 
+			</div>
+			</td>
+			<td id ="G0_G1_Estimated" style="margin:0; font-size: 11px; text-align: left; color: #FF0000;">— G0 + G1 Estimated Recipients (min / max)</td>
+			<td style="margin:0; font-size: 11px; text-align: left;">&nbsp;&nbsp;&nbsp;&nbsp;Note: Graph does not include impressions beyond G1</td></tr>
+		</table>
+		<div style="clear: both;"></div>
+		<table>
+			<tr>
+			<td width="800" valign="top">
+					<div>
+						<div id="mychart1"></div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+			<td style="margin:0; font-size: 11px; text-align: right; padding-right:20px;">
+			<a href='#' id="Xmax_change" onClick="javascript:showAndHide('X')">Max X Axis Field </a>
+			<div id="Xmax_input" style="display:none;">
+			Max X:<input id="x_max" type="text" name="x_max" value="<?php echo $this->xmax; ?>"  style="width:65px;" onblur = "javascript:submitForm();"/>
+			</div>
+			<div id='date_err' style="display:none;">Please input the right date.</div>
+			</td>
+			</tr>
+		</table>
+		<input type="hidden" id="campaign_id" name='campaign_id' value='<?php echo $this->campaign_id;?>' />
+	</form>
+	</div>
+</div>
+<div style="clear: both;"></div>

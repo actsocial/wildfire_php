@@ -1,0 +1,10 @@
+<div style="padding-bottom:40px;"></div>
+<div class="content" style="background-color:#fff;padding-top:0;">
+		<h1 style="margin-left: 0; padding-top:10px;"><?php echo $this->showMessage; ?></h1>
+		<p style="width:900px;"><?php echo $this->showsentList; ?></p>
+		<p><?php echo $this->showTotal; ?></p>
+		<br/>
+		<div class="buttons-bar">
+			<a class="button" target="_parent"  href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminprepareinvitations'));?>"><?php echo $this->translate('Back')?></a>
+		</div>
+</div>

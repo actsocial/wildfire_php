@@ -1,0 +1,24 @@
+<br/>
+qq谈话记录
+<?php 
+foreach ( $this->qqconversation as $qq ) :
+	?>
+	<br/>
+	用户名：<?php echo $qq['consumer_name'];?>
+	<br/>
+	用户账号：<?php echo $qq['consumer_qq'];?>
+	<br/>
+	媒体来源：<?php echo $qq['mediafrom'];?>
+	<br/>
+	谈话内容：<?php echo $qq['content'];?>
+	<br/>
+	评价：<?php echo $qq['evaluation'];?>
+	<br/>
+	日期：<?php echo $qq['time'];?>
+	<br/>
+	<?php 
+	       if($qq['image']!=''){
+	       	 echo "<a target='_blank' href='".$this->baseUrl()."/upload_images/conversation_images/$qq[image]'>" .$qq['image'] ."</a><br/>";
+	       }
+	?>
+	<?php endforeach;?>

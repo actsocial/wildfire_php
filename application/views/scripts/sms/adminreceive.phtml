@@ -1,0 +1,139 @@
+<div style="padding-bottom:40px;"></div>
+<div align='center'>
+<h2>SMS Receive List</h2>
+<table width="1000px">
+		<tr>
+			<th width="5%">Index</th>
+			<th width="7%">用户名</th>
+			<th width="10%">手机号</th>
+			<th width="45%">内容</th>
+			<th width="10%">时间</th>
+			<th width="10%">状态</th>
+			<th width="15%">To Report</th>
+		</tr>
+		
+		<tbody id='msgTable'>
+		<?php $i=1; foreach ($this->paginator as $message):?>
+			<tr <?php if ($i%2 != 0){ ?>  style="background-color: #EEF9EB "<?php }?>>
+				<td><?php echo $i++; ?></td>
+                <td><a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'profile','uid'=>$message['id']));?>" target="_blank"><?php if(isset($message['recipients_name'])) { echo $message['recipients_name']; } else { echo $message['name'];} ?></a></td>
+				<td><div id='phone_<?php echo $message['sms_id'];?>'><a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminreplydirectly','sms_id'=>$message['sms_id']));?>"><?php echo $message['source'] ?></a></div></td>
+				<td><div id='text_<?php echo $message['sms_id'];?>' align='left' style="width:350px;"><?php echo $message['text'] ?></div></td>
+				<td><?php echo $message['time'] ?></td>
+				<td>
+				<?php if($message['state'] == "Reported") {?>
+                <a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminreportagain','sms_id'=>$message['sms_id']));?>"><?php echo $message['state']; ?></a></td>
+                <?php } else {?>
+				<?php echo $message['state']==null?'':$message['state']; ?></td>
+				<?php }?>
+                <td>
+                <?php if($message['state'] != "Reported") foreach($this->campaigns as $campaign) {?>
+                <a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminreport','sms_id'=>$message['sms_id'],'cam_id'=>$campaign->id));?>"><?php echo $campaign->name;?></a>
+                <?php }?>
+                </td>
+			</tr>
+		<?php endforeach;?>
+		</tbody>
+</table>
+<div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?></div>
+</div>
+<?php if ($this->testEnv ==0):?>
+<script type="text/javascript">
+
+var interval = 5000;
+
+receive();
+
+function receive(){
+
+	var url = '<?php echo $this->url(array('controller'=>'sms','action'=>'adminajax'));?>';
+
+	new Ajax.Request(     
+		url,      
+		{     
+		method: 'get',      
+		onSuccess: displayMessage    
+		}
+	);
+}
+function displayMessage(originalRequest)
+{
+	eval('var message ='+ originalRequest.responseText.substring(originalRequest.responseText.indexOf('{'),originalRequest.responseText.indexOf('}')+1));
+//	alert(message['text']);
+
+	if (message['sys_id']>0){
+		var element = "			<tr><td>"+message['name']+"</td><td>"+message['source'] +"</td><td>"+message['text']+"</td><td>"+message['time']+"</td><td>"+message['err']+"</td></tr>";
+		$('msgTable').insert(
+		{
+					top:element
+		}
+		);
+		interval = 5000;
+	}else{
+		interval = interval*2;
+		
+	}
+	setTimeout("receive();",interval);
+	
+}
+</script>
+<?php endif;?>
+
+<script type="text/javascript">
+function copyText2ClipBoard(id)
+{
+	var text = '';
+	var phone = $('phone_'+id).innerHTML;
+    for (var i=id-3; i<=id+3; i++) {
+    	if (phone == $('phone_'+i).innerHTML) {
+    		text += $('text_'+i).innerHTML;
+        }
+    }
+//    alert(text);
+//    alert(phone);
+//    return false;
+	copyToClipBoard(text);
+}
+function copyToClipBoard(txt)
+{
+  if(window.clipboardData) 
+  {
+    window.clipboardData.clearData();
+    window.clipboardData.setData("Text", txt);
+  }
+  else if(navigator.userAgent.indexOf("Opera") != -1) 
+  {
+    window.location = txt;
+  } 
+  else if (window.netscape) 
+  {
+    try 
+    {
+      netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+    } 
+    catch (e) 
+    {
+      alert("您的firefox安全限制限制您进行剪贴板操作，请在地址栏中输入“about:config”将“signed.applets.codebase_principal_support”设置为“true”之后重试");
+      return false;
+    }
+    var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
+    if (!clip)
+      return false;
+    var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
+    if (!trans)
+      return false;
+    trans.addDataFlavor('text/unicode');
+    var str = new Object();
+    var len = new Object();
+    var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+    var copytext = txt;
+    str.data = copytext;
+    alert(copytext);
+    trans.setTransferData("text/unicode",str,copytext.length*2);
+    var clipid = Components.interfaces.nsIClipboard;
+    if (!clip)
+      return false;
+    clip.setData(trans,null,clipid.kGlobalClipboard);
+  }
+}
+</script>

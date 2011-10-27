@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+
+		<tu tuid='Account_Setting'>
+			<tuv xml:lang="zh">
+				<seg>账户设置</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Account Setting</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Active_Campaign'>
+			<tuv xml:lang="zh">
+				<seg>已参与的活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Active Campaign</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Campaign_Invitations'>
+			<tuv xml:lang="zh">
+				<seg>活动邀请</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaign Invitations</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Profiling_Surveys'>
+			<tuv xml:lang="zh">
+				<seg>档案调查</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Profiling Surveys</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Campaign_Names'>
+			<tuv xml:lang="zh">
+				<seg>活动名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaign Names</seg>
+			</tuv>
+		</tu>
+	
+	    <tu tuid='Invitation_Time'>
+			<tuv xml:lang="zh">
+				<seg>邀请时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invitation Time</seg>
+			</tuv>
+		</tu>
+	
+	    <tu tuid='State'>
+			<tuv xml:lang="zh">
+				<seg>状态</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>State</seg>
+			</tuv>
+		</tu>
+	
+	    <tu tuid='Operation'>
+			<tuv xml:lang="zh">
+				<seg>操作</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Operation</seg>
+			</tuv>
+		</tu>
+	
+	    <tu tuid='Accept'>
+			<tuv xml:lang="zh">
+				<seg>接受</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Accept</seg>
+			</tuv>
+		</tu>
+	
+	
+	</body>
+</tmx>

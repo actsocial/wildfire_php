@@ -1,0 +1,64 @@
+<br />
+<div align="center">
+<form
+	action="<?php
+	echo $this->url ( array ('controller' => 'Consumer', 'action' => 'adminsearch' ) );
+	?>"
+	method="post">
+<table>
+	查询用户:
+	<tr>
+		<td><?php
+		echo $this->form->search;
+		?></td>
+		<td><?php
+		echo $this->form->submit;
+		?></td>
+	</tr>
+</table>
+</form>
+<br/>
+<?php if ($this->tip == true){?>
+<br/>
+<strong>用户列表：</strong>
+<table border="1">
+<tr>
+<td align="left">id</td>
+<td align="left">用户名</td>
+<td align="left">email</td>
+<td align="left">电话号</td>
+<td align="left">城市</td>
+<td align="left">地址</td>
+<td align="left">收件人</td>
+<td align="left">操作</td>
+</tr>
+<?php $count = 1;
+foreach ( $this->consumers as $consumer ) :
+	?>
+	<tr>
+		<td align="left"><?php echo $consumer['id'];?></td>
+		<td align="left"><?php echo $consumer['name'];?></td>
+		<td align="left"><?php echo $consumer['email'];?></td>
+		<td align="left"><?php echo $consumer['phone'];?></td>
+		<td align="left"><?php echo $consumer['city'];?></td>
+		<td align="left"><?php echo $consumer['address1'];?></td>
+		<td align="left"><?php echo $consumer['recipients_name'];?></td>
+		<td><a href="<?php echo $this->baseUrl().'/consumer/profile/uid/'.$consumer['id'].'/search/'.$this->search;?>">
+		查看</a></td>
+	</tr>
+	<?php endforeach;?>
+</table>
+<?php }else if($this->isPost==true){?>
+<br/>
+<strong>未找到用户！</strong>
+<?php if(isset($this->inviteEmail)){?>
+   <table width="80%">
+   <tr><th width=10% align=left>编号</th><th width=40% align=left>标题</th><th width=20% align=left>内容</th><th width=20% align=left>时间</th></tr> 
+   <?php 
+   foreach($this->inviteEmail as $email){  	
+   	  echo "<tr><td>$email->id</td><td>$email->subject</td><td ><a class=\"thickbox\" href=".$this->url(array('controller'=>'consumer','action'=>'ajaxemailcontent','uid'=>$email->id)).">查看</a></td><td>$email->date</td></tr>";
+   }?>
+   </table>
+<?php }?>
+<?php }?>
+</div>

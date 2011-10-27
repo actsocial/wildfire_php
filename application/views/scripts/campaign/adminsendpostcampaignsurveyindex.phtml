@@ -1,0 +1,64 @@
+﻿<div align="center" >
+	<h1 style="padding-top: 20px;"><?php echo $this->translate("Send_post_campaign_email");?></h1>
+	<p><?php echo $this->translate("Send_post_campaign_email_Content1");?><?php echo $this->participate_amount;?><?php echo $this->translate("Send_post_campaign_email_Content2");?>
+	<a href='#' onclick = 'javascript:send()' >
+	<?php echo $this->translate('click here>> Change participation state!');?>
+	</a>
+	</p>
+	<input type="text" id="campaign_id" value=<?php echo $this->campaign_id;?> style="display:none;" >
+	<div id="notice" style="padding-left: 10px; display:none; font-size: 15px; color: red;" >Please wait...</div>
+	<div id="result" style ="width: 700px;" ></div>
+
+</div>	
+<div align="left" style="padding-left:200px;">	
+	<p>
+	<?php $count = 1; 
+	foreach($this->haveSentEmails as $haveSentEmail):?>
+		<div id='email_<?php echo $haveSentEmail['id'];?>'>
+			<?php 
+			echo $count++.'.  ';
+			echo $haveSentEmail['email'];?>
+			<img id='email_image_<?php echo $haveSentEmail['email'];?>' src="<?php echo $this->baseUrl();?>/images/action_check.gif" />
+		</div>
+	<?php endforeach;?>
+	<?php 
+	foreach($this->participates as $participate):?>
+		<div id='email_<?php echo $participate['id'];?>'>
+			<?php 
+			if(!array_key_exists($participate['email'],$this->haveSentEmailArray)){
+				echo $count++.'.  ';
+				echo $participate['email'];
+			}
+			?>
+			<img id='email_image_<?php echo $participate['email'];?>' src="<?php echo $this->baseUrl();?>/images/action_check.gif" style="display:none;"/>
+		</div>
+	<?php endforeach;?>
+	</p>
+	<p><?php if($this->sentcount != null) {echo 'Total:'.$this->sentcount;}?></p>
+</div>
+<script type="text/javascript">
+function send(){
+	$('notice').style.display = "";
+	var url = '<?php echo $this->url(array('controller'=>'campaign','action'=>'adminajax'));?>';
+	var pars = 'id='+$('campaign_id').value;
+	new Ajax.Request(    
+		url,
+		{
+		method: 'get',      
+		parameters: pars,    
+		onSuccess: update    
+		}
+	);
+}
+function update(originalRequest)
+{
+	$('notice').innerHTML = "It's finished!";
+	var idstr =  originalRequest.responseText;
+//	alert(idstr);
+	idstr = idstr.substring(1,idstr.length-2);
+	var idarray = idstr.split(',');
+	var i = 0;
+	for(; i< idarray.length; i++)
+	{$('email_image_'+idarray[i]).style.display = "";}
+}
+</script>

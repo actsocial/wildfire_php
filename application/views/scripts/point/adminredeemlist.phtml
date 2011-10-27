@@ -1,0 +1,149 @@
+<style>
+.redeemshow{
+	pointer:cursor;
+}
+.redeemshow td{
+	    padding:8px 0;
+}
+.redeemshow:hover td,.active td{
+    border-top:1px solid #000000;
+    border-bottom:1px solid #000000;
+    padding:8px 0;
+    color:#0967B0;
+    background:#E4ECF6;
+}
+</style>
+
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+
+	<h2><?php echo $this->translate("Admin_Product_Redeem") ?></h2>
+	<table width="960" cellspacing = 0 cellpadding = 0>
+	<tr>
+	<td>一共有<?php echo $this->total ;?>条订单，新订单<?php echo $this->newItems ;?>条,确认<?php echo $this->startItems ;?>条,发货<?php echo $this->finishedItems;?>条,审核未通过<?php echo $this->rejectItems;?>条</td>
+	</tr>
+	<tr>
+	<td>筛选：
+	<form action="<?php echo $this->url(array('controller'=>'point','action'=>'adminredeemlist'));?>"  method="post" enctype="application/x-www-form-urlencoded" id="filter_form">
+		<select name="filter_status" onchange="javascript:jQuery('#filter_form').submit()">
+		<OPTION VALUE="ALL" >ALL</OPTION>
+		<OPTION VALUE="NEW" <?php if($this->status['NEW'] == 1) echo "selected";?>><?php echo $this->translate('Admin_Product_NEW')?></OPTION>
+		<OPTION VALUE="START" <?php if($this->status['START'] == 1) echo "selected";?>><?php echo $this->translate('Admin_Product_START')?></OPTION>
+		<OPTION VALUE="FINISHED" <?php if($this->status['FINISHED'] == 1) echo "selected";?>><?php echo $this->translate('Admin_Product_FINISHED')?></OPTION>
+		<OPTION VALUE="UNAPPROVED" <?php if($this->status['UNAPPROVED'] == 1) echo "selected";?>><?php echo $this->translate('Admin_Product_UNAPPROVED')?></OPTION>
+		</select>
+	</form></td>
+	<td>
+	<?php if((($this->status['NEW'] == 1)&&$this->newItems)||(($this->status['START'] == 1)&&$this->startItems)||(($this->status['UNAPPROVED'] == 1)&&$this->rejectItems)||(($this->status['FINISHED'] == 1)&&$this->finishedItems)||($this->filter_state == 'ALL')){?>
+	<a href="<?php echo $this->url(array('controller'=>'point','action'=>'adminredeemexport'));?>/state/<?php echo $this->filter_state;?>">导出数据为CSV文件</a>
+	<?php }?>
+	</td>
+	</tr>
+	</table>
+	<br/>
+	<table width="960" cellspacing =0 cellpadding =0  style="border-collapse:collapse" >
+		<tr>
+		<th width="20">No.</th>
+		<th width="300"><?php echo $this->translate('Admin_Product_Consmuer_Info'); ?></th>
+		<th width="450"><?php echo $this->translate('Admin_Product_Info'); ?></th>
+		<th width="100"><?php echo $this->translate('Admin_Product_Redeem_Create_Date'); ?></th>
+		<th width="100"><?php echo $this->translate('Admin_Product_Redeem_handle_Date'); ?></th>
+		<th width="90"> 
+		<!--<a href="#" onclick = "javascript:setSelectedOrderState()">>><?php echo $this->translate('Admin_Product_Redeem_State'); ?></a>-->
+		<input type="button" value="<?php echo $this->translate('Admin_Product_Redeem_State'); ?>" onclick="setSelectedOrderState()" >
+		</th>
+		</tr>	
+		<?php $i = $this->NoInitValue ;
+			foreach ($this->paginator as $product): ?>
+		
+		<tr class="redeemshow"  <?php if ($product['state'] == 'UNAPPROVED' || $product['state'] == 'CANCEL'){ ?>  style="background-color: #FFEADA "<?php }
+		else{if($i % 2 == 0){?> style="background-color: #EEF9EB " <?php }}?> >
+		<td  width="20" onclick="changeStatus(this)" style="cursor:pointer;"><a href="javascript:void(null)"><?php echo $i++;?></a></td>
+		<td width="300" align="left"><?php echo $this->translate('Admin_Recipients_Name'); ?>: <?php echo $product['recipients_name']?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<?php echo $this->translate('Admin_Phone');?>: <?php echo $product['phone']?><br>
+		<?php echo $this->translate('Admin_Province');?>: <?php echo $product['province']?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<?php echo $this->translate('Admin_City');?>: <?php echo $product['city']?><br>
+		<?php echo $this->translate('Admin_Address1');?>: <?php echo $product['address1']?><br>
+		<?php echo $this->translate('Email'); ?>: <?php echo $product['email'];?><br>
+		</td>
+		<td width="450" align="left"><?php echo $this->translate('Admin_Product_Name'); ?>: <a href="<?php echo $product['url']?>" target="_blank" ><?php echo $product['name']?></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<?php echo $this->translate('Admin_Product_Point'); ?>: <?php echo $product['point'];?><br>
+		<?php echo $this->translate('Admin_Product_Amount'); ?>: <?php echo $product['amount']?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<?php echo $this->translate('Admin_Product_Category')?>: <?php echo $product['category']?><br>
+			<!--
+			URL:  <a href=<?php echo $product['url']?> target="_blank"><?php echo $product['url'];?></a>
+			-->
+		</td>
+		<td width="100"><?php echo $product['create_date'];?></td>
+		<td width="100"><?php echo $product['handle_date'];?></td>
+		<td width="90">
+			<?php if($product['state'] == 'UNAPPROVED'){?>
+				<?php echo $this->translate('Admin_Product_UNAPPROVED')?>
+			<?php } else {?>
+			<?php if($product['state'] == 'CANCEL'){?>
+				<?php echo $this->translate('Admin_Product_CANCEL')?>
+			<?php } else {?>
+				<select id='state_<?php echo $product['id']; ?>' name='state_<?php echo $product['id']; ?>' onchange = "javascript:saveSelectedOrderState('<?php echo $product['id']; ?>')">
+						<?php if($product['state'] == 'NEW'){?>
+						<OPTION VALUE="NEW" Selected><?php echo $this->translate('Admin_Product_NEW')?></OPTION>
+						<OPTION VALUE="START" ><?php echo $this->translate('Admin_Product_START')?></OPTION>
+						<OPTION VALUE="FINISHED" ><?php echo $this->translate('Admin_Product_FINISHED')?></OPTION>
+						<OPTION VALUE="UNAPPROVED" ><?php echo $this->translate('Admin_Product_UNAPPROVED')?></OPTION>
+						<?php }?>
+						<?php if($product['state'] == 'START'){?>
+						<OPTION VALUE="NEW" ><?php echo $this->translate('Admin_Product_NEW')?></OPTION>
+						<OPTION VALUE="START" Selected><?php echo $this->translate('Admin_Product_START')?></OPTION>
+						<OPTION VALUE="FINISHED" ><?php echo $this->translate('Admin_Product_FINISHED')?></OPTION>
+						<OPTION VALUE="UNAPPROVED" ><?php echo $this->translate('Admin_Product_UNAPPROVED')?></OPTION>
+						<?php }?>
+						<?php if($product['state'] == 'FINISHED'){?>
+						<OPTION VALUE="NEW" ><?php echo $this->translate('Admin_Product_NEW')?></OPTION>
+						<OPTION VALUE="START" ><?php echo $this->translate('Admin_Product_START')?></OPTION>
+						<OPTION VALUE="FINISHED" Selected><?php echo $this->translate('Admin_Product_FINISHED')?></OPTION>
+						<OPTION VALUE="UNAPPROVED" ><?php echo $this->translate('Admin_Product_UNAPPROVED')?></OPTION>
+						<?php }?>
+				</select>
+			<?php } }?>
+		</td>
+		<td width=90> 
+		<!--<a href="#" onclick = "javascript:setSelectedOrderState()"><?php echo $this->translate('Admin_Product_Redeem_State'); ?></a>-->
+		<input type="button" value="<?php echo $this->translate('Admin_Product_Redeem_State'); ?>" onclick="setSelectedOrderState()" >
+		</td>
+		</tr>
+		<?php endforeach; ?>
+	</table>
+	<div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action, "state" => $this->filter_state)); ?></div>
+
+</div>
+<script type="text/javascript">
+function changeStatus(obj){
+	jQuery(obj).parent().toggleClass('active');
+}
+var arrayOrderIds = new Array();　
+function saveSelectedOrderState(i){
+	arrayOrderIds.push(i);
+	//alert(i);
+}
+function setSelectedOrderState(){
+	var orderids = "";
+	for(i=0; i<arrayOrderIds.length; i++){
+		orderids += arrayOrderIds[i]+'@'+$('state_'+arrayOrderIds[i]).value+',';
+	}
+	var url = '<?php echo $this->url(array('controller'=>'point','action'=>'adminsetselectedorder'));?>';
+	var pars = 'type=orderState&orderids='+orderids;
+//	location.href= url + '?' + pars;
+	new Ajax.Request(
+		url,
+		{
+		method: 'post',
+		parameters: pars,
+		onSuccess: function(json) {
+				//alert(json);
+				window.location.reload();
+			}
+		}
+	);
+}
+
+
+</script>

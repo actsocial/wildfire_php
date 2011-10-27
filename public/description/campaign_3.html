@@ -1,0 +1,26 @@
+<div class="article-box"><div class="article-box-inner">
+<div class="campaign-images">
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/bugslock/cam_bugslock_01.gif"/>
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/bugslock/cam_bugslock_02.gif"/>
+</div>
+<div class="main-column campaign-content" style="width:510px;">
+	<div class="submit-report"><a onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>3));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>3));?>">提交报告</a></div>
+	<h1>BugsLock 驱蚊环用户活动</h1>
+	<h2>BugsLock -“100% 纯天然，并且是一个手环”</h2>
+	<p class="zh">欢迎参与 BugsLock 用户活动</p>
+	<p class="zh">几乎没有什么比蚊子更惹人厌了，尽管多数人并不知晓，有些事是更危险的。蚊子传播疾病，包括疟疾，登革热和乙型脑炎，而所有这些都是中国的地方性流行病。</p>
+	<p class="zh">戴上 BugsLock 驱蚊环是远离蚊虫和它们所携带的疾病最为方便和纯天然的方式。</p>
+</div>
+<div style="clear: both;"></div>
+</div></div>
+<div class="campaign-summary">
+	<div class="logo"><img src="<?php echo $this->baseUrl();?>/images/campaign/bugslock/cam_bugslock_logo_zh.jpg"/></div>
+	<div class="summary">
+		<ul>
+			<li>活动剩余时间: <strong><?php echo $this->dayCount?></strong> 天</li>
+			<li>已提交报告数: <strong><?php echo $this->reportCount?></strong> 份</li>
+			<li>获得星星火积分: <strong><?php echo $this->campaignPoint?></strong> 分</li>
+		</ul>
+	</div>
+<div style="clear: both;"></div>
+</div>

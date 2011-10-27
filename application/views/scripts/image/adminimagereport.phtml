@@ -1,0 +1,159 @@
+<div align="center">
+		<h1 style="padding-top:40px;"><?php echo $this->translate("Admin_Reports")?></h1>
+		<p>
+		</p>
+		<table class="survey-history" style ="width:1100px;">
+
+			<tr>
+				<th><?php echo $this->translate("His_No.")?></th>
+<!--				<th><?php echo $this->translate("Amin_Consumer_email")?></th>-->
+				<th><?php echo $this->translate("收件人")?></th>
+				<th><?php echo $this->translate("Image")?></th>
+				<th><?php echo $this->translate("His_Reports_date")?></th>
+				<th><a href="#" onclick = "javascript:setSelectedReportState()"> ><?php echo $this->translate("审核图片")?></a></th>
+				<th><a href="#" onclick = "javascript:setSelectedReportPoint()"> >评分并回邮件</a></th>
+				<th><?php echo $this->translate("邮件回复的内容")?></th>
+			</tr>
+			<?php $i = $this->NoInitValue ;
+				foreach ($this->paginator as $report):
+				$report_id = $report['id'];
+			?>
+			
+				<tr	>
+				<td><?php echo $i;?></td>
+<!--				<td><?php echo $report['email']?></td>-->
+				<td><?php echo $report['recipients_name']?></td>
+				<td width='100px;'>
+				<a href="<?php echo $this->url(array('controller'=>'image','action'=>'getimagebyimagereportid', 'id'=> $report_id));?>" title="<?php echo $this->translate('Uplaod_Photo_Url_Title')?>" class="thickbox"> 
+				<img width='<?php echo $report['thumb_width'];?>' height='<?php echo $report['thumb_height'];?>' src="<?php echo $this->url(array('controller'=>'image','action'=>'getimagebyimagereportid', 'id'=> $report_id));?>"/>
+				</a>
+				</td>
+				<td  width='150px;'><?php echo $report['create_date']?></td>
+				<td width='100px;'>
+					<select id='state_<?php echo $i; ?>' name='state_<?php echo $i; ?>' onchange = "javascript:saveSelectedReportState('<?php echo $i; ?>')" >	
+						<OPTION VALUE="NEW" <?php if(isset($report['state']) && $report['state'] == 'NEW'){?>Selected <?php }?> ><?php echo $this->translate("His_Reports_NEW")?></OPTION>
+						<OPTION VALUE="APPROVED" <?php if(isset($report['state']) && $report['state'] == 'APPROVED'){?>Selected <?php }?> ><?php echo $this->translate("His_Reports_APPROVED")?></OPTION>
+						<OPTION VALUE="UNAPPROVED" <?php if(isset($report['state']) && $report['state'] == 'UNAPPROVED'){?>Selected <?php }?> ><?php echo $this->translate("His_Reports_UNAPPROVED")?></OPTION>
+					</select>
+				</td>
+				<td>
+					<select id='grade_<?php echo $i; ?>' name='grade_<?php echo $i; ?>' onchange = "javascript:saveSelectedReportPoint('<?php echo $i; ?>')" >				
+						<OPTION VALUE="" <?php if($report['state'] == 'NEW' || ($report['state'] == 'UNAPPROVED' && isset($report['content'])) ){?> Selected<?php }?> >未选择</OPTION>
+						<OPTION VALUE="0" <?php if(isset($report['point_amount']) || $report['point_amount'] == '0' || isset($report['content'])){?>Selected <?php }?> >0</OPTION>
+						<OPTION VALUE="100" <?php if(isset($report['point_amount']) && $report['point_amount'] == '100'){?>Selected <?php }?> >100</OPTION>
+						<OPTION VALUE="200" <?php if(isset($report['point_amount']) && $report['point_amount'] == '200'){?>Selected <?php }?> >200</OPTION>
+						<OPTION VALUE="300" <?php if(isset($report['point_amount']) && $report['point_amount'] == '300'){?>Selected <?php }?> >300</OPTION>
+						<OPTION VALUE="400" <?php if(isset($report['point_amount']) && $report['point_amount'] == '400'){?>Selected <?php }?> >400</OPTION>
+						<OPTION VALUE="500" <?php if(isset($report['point_amount']) && $report['point_amount'] == '500'){?>Selected <?php }?> >500</OPTION>
+					</select>
+				</td>
+				<td width='450px;' >
+				<?php if($report['content'] !=null && $report['content'] != ''){?>
+					<?php echo $report['content']?>
+				<?php }else{?>
+					<input type="text" id="reply_text_<?php echo $i; ?>" value='' style="width:350px;border:1px;border-bottom-style:none;border-top-style:none;border-left-style:none;border-right-style:none;" >
+					<textarea id="reply_textarea_<?php echo $i; ?>" rows="3" cols="80" style="display:none;"></textarea>
+					<a id='reply_text_edit_<?php echo $i; ?>' style="display:none;" href='#' onclick='javascript:changetext(<?php echo $i; ?>)'>编辑</a>
+				<?php }?>
+				</td>
+				</tr>
+				<input type="text" id="report_id_<?php echo $i; ?>"  value=<?php echo $report['id']?> style="display:none;" />
+				<input type="text" id="consumer_id_<?php echo $i; ?>"  value=<?php echo $report['consumer_id']?> style="display:none;" />
+			<?php $i++;
+			endforeach;?>
+		</table>
+		<div id="notice" style="padding-left: 700px; display:none; font-size: 15px; color: red;" ></div>
+		 <?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?> 
+		<br>
+</div>
+
+<script type="text/javascript">
+var arrayReportIds = new Array();　
+function saveSelectedReportState(i){
+	// Remove Duplicates:
+	for(var j=0;j<arrayReportIds.length;j++){
+		if(arrayReportIds[j] == i){
+			return;
+		}
+	}
+	arrayReportIds.push(i);
+}
+var arrayReportPointsIds = new Array();
+function saveSelectedReportPoint(i){
+	$('reply_text_edit_'+i).style.display = "";
+	$('reply_text_'+i).style.display = "";
+	if($('grade_'+i).value != '' && $('grade_'+i).value != '0'){
+		$('reply_textarea_'+i).value = $('reply_text_'+i).value = '恭喜你！你分享的图片审核通过，你已获得'+$('grade_'+i).value+'星星火积分！ ';
+	}else{
+		$('reply_textarea_'+i).value = $('reply_text_'+i).value = '你提交的分享图片审核未通过，你可以登录星星火提交新的图片。';
+	}
+	// Remove Duplicates:
+	for(var j=0;j<arrayReportPointsIds.length;j++){
+		if(arrayReportPointsIds[j] == i){
+			return;
+		}
+	}
+	arrayReportPointsIds.push(i);
+}
+function changetext(i){
+	$('reply_text_'+i).style.display = "none";
+	$('reply_text_edit_'+i).style.display = "none";
+	$('reply_textarea_'+i).style.display = "";
+}
+function setSelectedReportState(){
+	if(arrayReportIds.length == 0){
+		return;
+	}
+	$('notice').style.display = "";
+	$('notice').innerHTML = '处理中，请等待...';
+	var reportids = "";
+	
+	for(i=0; i<arrayReportIds.length; i++){
+		reportids += $('report_id_'+arrayReportIds[i]).value+'@'+$('state_'+arrayReportIds[i]).value+',';
+	}
+//	alert(reportids);
+//	return;
+	var url = '<?php echo $this->url(array('controller'=>'image','action'=>'adminsaveimagereportstate'));?>';    	
+	var pars = 'type=reportState&reportids='+reportids;
+	new Ajax.Request(     
+		url,      
+		{     
+		method: 'post',      
+		parameters: pars,      
+		onSuccess: function(){
+		 	window.location.reload(); 
+			}    
+		}
+	);
+	
+}
+function setSelectedReportPoint(){
+	if(arrayReportPointsIds.length == 0){
+		return;
+	}
+	$('notice').style.display = "";
+	$('notice').innerHTML = '处理中，请等待...';
+	var reportids = "";
+	
+	for(i=0; i<arrayReportPointsIds.length; i++){
+		reportids += $('report_id_'+arrayReportPointsIds[i]).value+'@'+$('state_'+arrayReportPointsIds[i]).value+'@'
+		+$('consumer_id_'+arrayReportPointsIds[i]).value+'@'+$('reply_textarea_'+arrayReportPointsIds[i]).value+'@'
+		+$('grade_'+arrayReportPointsIds[i]).value+',';
+	}
+//	alert(reportids);
+//	return;
+	var url = '<?php echo $this->url(array('controller'=>'image','action'=>'adminsaveimagereportpoint'));?>';    	
+	var pars = 'type=reportPoint&reportids='+reportids;
+	new Ajax.Request(     
+		url,      
+		{     
+		method: 'post',      
+		parameters: pars,      
+		onSuccess: function(){
+		 	window.location.reload(); 
+			}    
+		}
+	);
+	
+}
+</script>

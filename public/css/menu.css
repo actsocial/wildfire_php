@@ -1,0 +1,235 @@
+.menuheader {
+	width: 100%;
+}
+.menuheader .header-inner {
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+.ddcolortabs{
+float:left;
+padding: 0;
+width: 80%;
+background: transparent;
+voice-family: "\"}\"";
+voice-family: inherit;
+}
+
+.ddcolortabs ul{
+font: normal 18px Arial, Verdana, sans-serif;
+margin:0;
+padding:0;
+list-style:none;
+}
+
+.ddcolortabs li{
+display:inline;
+margin:0 2px 0 0;
+padding:0;
+text-transform:uppercase;
+}
+
+
+.ddcolortabs a{
+float:left;
+color: white;
+background: #fff url(../images/menu/color_tabs_left.gif) no-repeat left top;
+margin:30px 2px 0 0;
+padding:0 0 1px 3px;
+text-decoration:none;
+letter-spacing: 1px;
+}
+
+.ddcolortabs a img{
+float:left;	
+}
+
+.ddcolortabs a span{
+float:left;
+display:block;
+padding: 0px 0px 0px 7px;
+
+}
+
+.ddcolortabs a span div{
+	vertical-align:middle;
+	float:left;
+	background: transparent url(../images/menu/color_tabs_right.gif) no-repeat right top;
+	padding-right:8px;
+	line-height:64px;
+}
+
+.ddcolortabs a span{
+float:none;
+}
+
+.ddcolortabs a:hover{
+background-color: #f26166;/*pink*/
+}
+
+.ddcolortabs a:hover span{
+background-color: #f26166;/*pink*/
+}
+
+.ddcolortabs .selected a, #ddcolortabs .selected a span{ /*currently selected tab*/
+background-color: #f26166;/*pink*/
+}
+
+.ddcolortabsline{
+clear: both;
+padding: 0;
+width: 100%;
+height: 8px;
+line-height: 8px;
+background: black;
+border-top: 1px solid #fff; /*Remove this to remove border between bar and tabs*/
+}
+
+/* ######### Style for Drop Down Menu ######### */
+
+.dropmenudiv_a{
+position:absolute;
+top: 0;
+border: 1px solid #336699; /*light blue*/
+border-top-width: 8px; /*Top border width. Should match height of .ddcolortabsline above*/
+border-bottom-width: 0;
+font:normal 12px Arial;
+line-height:18px;
+z-index:100;
+background-color: white;
+width: 200px;
+visibility: hidden;
+}
+
+
+.dropmenudiv_a a{
+width: auto;
+display: block;
+text-indent: 5px;
+border-top: 0 solid #336699; /*light green*/
+border-bottom: 1px solid #336699; /*light green*/
+padding: 2px 0;
+text-decoration: none;
+color: black;
+}
+
+* html .dropmenudiv_a a{ /*IE only hack*/
+width: 100%;
+}
+
+.dropmenudiv_a a:hover{ /*THEME CHANGE HERE*/
+background-color: #f26166; /*pink*/
+color: white;
+}
+
+/* login */
+.loginform{
+	width:420px;
+	}
+	
+div#topcorners {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#F5F5EF none repeat scroll 0 0;
+	height:10px;
+	margin:0 auto;
+	position:relative;
+}
+
+div#topcorners div.cleft {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(../images/menu/content_corner_sprite1_01.gif) no-repeat scroll 0 0;
+	height:10px;
+	left:-10px;
+	position:absolute;
+	top:0;
+	width:10px;
+}
+
+div#topcorners div.cright {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(../images/menu/content_corner_sprite1_01.gif) no-repeat scroll -12px 0;
+	height:10px;
+	position:absolute;
+	right:-10px;
+	top:0;
+	width:10px;
+}
+
+div#topcorners {
+	width:400px;
+}
+
+div#bottomcorners {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#F5F5EF none repeat scroll 0 0;
+	height:10px;
+	margin:0 auto;
+	position:relative;
+}
+
+div#bottomcorners div.cleft {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(../images/menu/content_corner_sprite1_01.gif) no-repeat scroll 0 -12px;
+	height:10px;
+	left:-10px;
+	position:absolute;
+	top:0;
+	width:10px;
+}
+
+div#bottomcorners div.cright {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:transparent url(../images/menu/content_corner_sprite1_01.gif) no-repeat scroll -12px -12px;
+	height:10px;
+	position:absolute;
+	right:-10px;
+	top:0;
+	width:10px;
+}
+
+div#bottomcorners {
+	width:400px;
+}
+
+div#content {
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	background:#F5F5EF none repeat scroll 0 0;
+	color:#515348;
+	font-size:18px 76%;
+	height:1%;
+	line-height:1.5em;
+}
+
+
+table.login {
+	margin:5px 0;
+}
+
+.mbottom025 {
+	margin-bottom:0.25em !important;
+}
+
+.mtop0 {
+	margin-top:0 !important;
+}
+
+table.login input.inputtext {
+	padding:3px;
+	color:#515348;
+	width:250px;
+}

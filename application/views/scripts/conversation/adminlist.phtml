@@ -1,0 +1,187 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center"><div>
+<h2><?php echo isset($this->callbackPageTitle)?$this->callbackPageTitle.$this->translate('Conversation_Log'):$this->translate('Conversation_Log'); ?></h2>
+<br>
+<div id="pageBar" style="width:800px;text-align:left;">
+<?php if($this->currentPage >1):?>
+<a href='<?php echo $this->url(array('controller'=>'conversation','action'=>'adminshowpre', 'telephoneLog_id' =>$this->telephoneLog_id, 'plan_id' => $this->plan_id));?>' ><?php echo $this->translate('Conversation_Previous'); ?></a>&nbsp;
+<?php endif;?>
+<label id='pageNum'><?php echo $this->currentPage;?>/<?php echo $this->totalPage;?></label>
+<?php if($this->currentPage < $this->totalPage):?>
+<a href='#' onclick='showNextPage();' title='nextPage'>提交并进入<?php echo $this->translate('Conversation_Next'); ?></a>
+<?php endif;?>
+<?php if($this->currentPage == $this->totalPage):?>
+<a href='#' onclick='showNextPage();' title='nextPage'>提交并结束</a>
+<?php endif;?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<?php if($this->currentCallbackPage >1):?>
+<a href='<?php echo $this->url(array('controller'=>'conversation','action'=>'adminshowprecallback', 'telephoneLog_id' =>$this->telephoneLog_id, 'plan_id' => $this->plan_id));?>' ><?php echo $this->translate('Conversation_Previous'); ?></a>&nbsp;
+<?php endif;?>
+Call back later(<?php echo $this->currentCallbackPage;?>/<?php echo $this->totalCallbackPage;?>)
+<?php if($this->currentCallbackPage == 0 && $this->totalCallbackPage >0):?>
+<a href='#' onclick='showCallback();' title='nextCallBack'>开始处理</a>&nbsp;
+<?php endif;?>
+<?php if($this->totalCallbackPage >1 && $this->currentCallbackPage < $this->totalCallbackPage && $this->currentCallbackPage >0):?>
+<a href='#' onclick='showNextCallback();' title='nextCallBack'>提交并进入<?php echo $this->translate('Conversation_Next'); ?></a>&nbsp;
+<?php endif;?>
+<?php if($this->totalCallbackPage >= 1 && $this->currentCallbackPage == $this->totalCallbackPage):?>
+<a href='#' onclick='finishCallback();' title='nextCallBack'>提交并结束</a>&nbsp;
+<?php endif;?>
+<label id='notice' style='display:none; font-size: 12px; color: red;' ></label>
+</div>
+
+<div id="page">
+    <form id="consumer" action = <?php echo $this->url(array('controller'=>'conversation','action'=>'adminshownext'));?> method="post">
+
+    <input type="hidden" id="callbackflag" name="callbackflag" value=""/>
+    <table width="800">
+    <tr>
+        <td width="40%" align='top'>
+            <table>
+                <tr><td><?php echo $this->translate('Consumer_Info'); ?></td></tr>
+                <tr><td><?php echo $this->translate('CONTACT INFORMATION_NAME'); ?><?php echo $this->consumerBaseInfo->name;?>(<?php echo $this->consumerBaseInfo->recipients_name;?>)</td></tr>
+                <tr><td><?php echo $this->translate('CONTACT GENDER'); ?><?php if($this->gender != ''){if($this->gender){echo 'Male';}else{echo 'Female';}}?>
+                <?php echo $this->translate('CONTACT BIRTHDAY'); ?><?php echo (isset($this->consumerExtraInfo)&&isset($this->consumerExtraInfo->birthdate))?$this->consumerExtraInfo->birthdate:"";?></td></tr>
+                <tr><td><?php echo $this->translate('CONTACT CITY'); ?><?php echo $this->consumerBaseInfo->province;?>,<?php echo $this->consumerBaseInfo->city;?></td></tr>
+                <tr><td><?php echo $this->translate('CONTACT INFORMATION_ADDRESS'); ?><?php echo $this->consumerBaseInfo->address1;?></td></tr>
+                <tr><td><?php echo $this->translate('CONTACT INFORMATION_PHONE'); ?><?php echo $this->consumerBaseInfo->phone;?></td></tr>
+                <tr><td><?php echo $this->translate('Last_Time_Login'); ?><?php echo isset($this->consumerLog)?$this->consumerLog->date:''; ?></td></tr>
+                <tr><td><?php echo $this->translate('Conversation_Submitted'); ?><font color='red'><?php echo $this->totalReport;?></font><?php echo $this->translate('Conversation_Reports'); ?></td></tr>
+                <tr><td><?php echo $this->translate('Conversation_Participated'); ?><font color='red'><?php echo count($this->totalCampaigns);?></font><?php echo $this->translate('Conversation_Campaigns'); ?></td></tr>
+                <tr><td><?php foreach($this->totalCampaigns as $campaign){echo $campaign['name'].",";}?></tr>
+            </table>
+        </td>
+        <td width="60%">
+            <table>
+                <tr>评价用户:
+                <?php $i=0; foreach($this->tags as $tag) {
+                    if ($i++%3 == 0) { echo '</tr><tr>'; } ?>
+                    <td>
+                    <input type="checkbox" name="note[]" value="<?php echo $tag['tag_id'] ?>" <?php if(count($this->selectedTagsArray)>0 && array_key_exists($tag['tag_id'], $this->selectedTagsArray)) {?> checked <?php }?>/>
+                    <label><?php echo $this->translate($tag['key']); ?></label>
+                    </td>
+                <?php } ?>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td><?php echo $this->translate('Log_Score'); ?>:
+                    <input type="radio" name="score" group="consumer_score" value="0" checked/><label>None</label>
+					<?php for ($j=1; $j<=10; $j++) { ?> 
+					<input type="radio" name="score" group="consumer_score" value="<?php echo $j?>" <?php if(isset($this->telephoneLog->score) && $j == $this->telephoneLog->score) {?> checked <?php }?>/><label><?php echo $j?></label>
+					<?php }?>
+                    </td>
+                </tr>
+                <tr>
+                    <td><?php echo $this->translate('Log_Duration'); ?>:&nbsp;<input type="text" name="duration" value="<?php echo (isset($this->telephoneLog->duration)&&$this->telephoneLog->duration != 0) ? $this->telephoneLog->duration : ''; ?>" size="4"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>待会再打：
+                    <input type="radio" name="busy" group="consumer_busy" value="0" <?php if(isset($this->telephoneLog->busy) && !$this->telephoneLog->busy) {?> checked <?php }?>/><label>No</label>
+                    <input type="radio" name="busy" group="consumer_busy" value="1" <?php if(isset($this->telephoneLog->busy) && $this->telephoneLog->busy) {?> checked <?php }?>/><label>Call back later</label>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+        <textarea rows="5" cols="80" id="comments" name="comments"><?php echo isset($this->telephoneLog->comments) ? $this->telephoneLog->comments : ''; ?></textarea>
+        </td>
+    </tr>
+    <tr>
+    <td><input type="hidden" id="telephonelog_id"	name='telephonelog_id' value='<?php echo $this->telephoneLog_id;?>' />
+		<input type="hidden" id="plan_id"	name='plan_id' value='<?php echo $this->plan_id;?>' />
+		<input type="hidden" id="consumer_id" name="consumer_id" value='<?php echo $this->consumerBaseInfo->id;?>'/>
+		<input type="hidden" id="callback_next" name="callback_next" value='' />
+    </td>
+    </tr><!--
+    <tr>
+        <td><input type="submit" id="" class="button" value="Submit" /></td>
+    </tr>
+    -->
+        <tr>
+    </table>
+    </form>
+    <hr />
+    <form onsubmit="submit_phone_report();return true;" id="phone_report" target="blank" method="post" action="<?php echo $this->url(array('controller'=>'conversation','action'=>'adminreport'));?>">
+     <select name="source">
+       	<option value="application" >Application</option>
+       	<option value="email" >Email</option>
+       	<option value="phone" >Phone</option>
+       	<option value="sms" >SMS</option>
+     </select>
+     <select name="campaign_id">
+       <?php foreach($this->campaigns as $campaign) {?>
+       	<option value="<?php echo $campaign->id ?>" ><?php echo $campaign->name ?></option>
+       <? } ?>
+     </select>
+      <textarea id="phone_comments" name="phone_comments" style="display:none;"></textarea>
+      <input type="hidden" id="telephonelog_id"	name='telephonelog_id' value='<?php echo $this->telephoneLog_id;?>' />
+		<input type="hidden" id="plan_id"	name='plan_id' value='<?php echo $this->plan_id;?>' />
+		<input type="hidden" id="consumer_id" name="consumer_id" value='<?php echo $this->consumerBaseInfo->id;?>'/>
+      <input type='submit' value="提交电话报告" />
+    </tr>
+    </form>
+    <h3 style='margin-left: 0px;'><?php echo $this->translate('Conversation_Old_Logs'); ?>:</h3>
+    <table width="800">
+        <tr>
+        <td width='5%'>Index</td>
+        <td width='10%'><?php echo $this->translate('Log_Edit_Time'); ?></td>
+        <td width='20%'><?php echo $this->translate('Log_Note'); ?></td>
+        <td width='5%'><?php echo $this->translate('Log_Score'); ?></td>
+        <td width='10%'><?php echo $this->translate('Log_Duration'); ?></td>
+        <td width='45%'><?php echo $this->translate('Log_Comments'); ?></td>
+        <td width='5%'>Plan ID</td>
+        </tr>
+        <?php if(isset($this->oldTelephoneLogs)):?>
+        <?php $count=1; foreach($this->oldTelephoneLogs as $telephoneLog):?>
+        <tr>
+        <td><?php echo $count++;?></td>
+        <td><?php echo $telephoneLog['edit_time'];?></td>
+        <td>
+         <?php if(count($this->oldTelephoneLogTagArray) > 0 && array_key_exists($telephoneLog['id'],$this->oldTelephoneLogTagArray)):?>
+         <?php foreach($this->oldTelephoneLogTagArray[$telephoneLog['id']] as $tag):?>
+         <?php echo $this->translate($tag['name']);?>
+         <?php endforeach;?>
+         <?php endif;?>
+        </td>
+        <td><?php echo $telephoneLog['score'];?></td>
+        <td><?php echo $telephoneLog['duration'];?></td>
+        <td><?php echo $telephoneLog['comments'];?></td>
+        <td><?php echo $telephoneLog['plan_id'];?></td>
+        </tr>
+        <?php endforeach;?>
+        <?php endif;?>
+    </table>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+  function submit_phone_report() {
+  	$('phone_comments').value = $('comments').value;
+  }
+  
+  function showNextPage() {
+	  $('callback_next').value = -1;
+	  document.getElementById('consumer').submit();
+  }
+
+  function showCallback() {
+    $('callback_next').value = 0;
+    document.getElementById('consumer').submit();
+  }
+  
+  function showNextCallback() {
+    $('callback_next').value = 1;
+    document.getElementById('consumer').submit();
+  }
+  function finishCallback(){
+  	$('callback_next').value = 2;
+    document.getElementById('consumer').submit();
+  }
+</script>
+</div></div>

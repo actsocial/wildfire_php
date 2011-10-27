@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+
+		<tu tuid='List_Consumer'>
+			<tuv xml:lang="zh">
+				<seg>用户</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Consumers</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='List_All_Campaign_Invitation'>
+			<tuv xml:lang="zh">
+				<seg>邀请</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invitations</seg>
+			</tuv>
+		</tu>
+		<tu tuid='List_All_Campaign_Participation'>
+			<tuv xml:lang="zh">
+				<seg>查看</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Show</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Reply_Report'>
+			<tuv xml:lang="zh">
+				<seg>报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reports</seg>
+			</tuv>
+		</tu>
+		<tu tuid='List_Campaigns'>
+			<tuv xml:lang="zh">
+				<seg>活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaigns</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Campaigns_Name'>
+			<tuv xml:lang="zh">
+				<seg>活动名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Name</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Company_Name'>
+			<tuv xml:lang="zh">
+				<seg>公司名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Company</seg>
+			</tuv>
+		</tu>
+	
+	    <tu tuid='Company_Type'>
+	    	<tuv xml:lang="zh">
+	    		<seg>活动类型</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>活动类型</seg>
+	    	</tuv>
+	    </tu>
+	
+		<tu tuid='Campaigns_expire_date'>
+	    	<tuv xml:lang="zh">
+	    		<seg>活动结束日期</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>活动结束日期</seg>
+	    	</tuv>
+	    </tu>
+	
+		<tu tuid='Campaigns_start_date'>
+	    	<tuv xml:lang="zh">
+	    		<seg>活动开始日期</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>活动开始日期</seg>
+	    	</tuv>
+	    </tu>
+		<tu tuid='pre_campaign_survey'>
+	    	<tuv xml:lang="zh">
+	    		<seg>活动前调查</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>活动前调查</seg>
+	    	</tuv>
+	    </tu>
+	    
+	   <tu tuid='post_campaign_survey'>
+	    	<tuv xml:lang="zh">
+	    		<seg>活动后调查</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>活动后调查</seg>
+	    	</tuv>
+	    </tu>
+	    
+	     <tu tuid='Campaign_i2_survey_id'>
+	    	<tuv xml:lang="zh">
+	    		<seg>活动报告</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>活动报告</seg>
+	    	</tuv>
+	    </tu>
+	    
+	   <tu tuid='Campaign_Total'>
+	    	<tuv xml:lang="zh">
+	    		<seg>最高参与人数</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>最高参与人数</seg>
+	    	</tuv>
+	    </tu>	  
+	      
+	     <tu tuid='Product_Name'>
+	    	<tuv xml:lang="zh">
+	    		<seg>产品名称</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>产品名称</seg>
+	    	</tuv>
+	    </tu>
+	      
+	     <tu tuid='Simple_Description'>
+	    	<tuv xml:lang="zh">
+	    		<seg>活动简单描述</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>活动简单描述</seg>
+	    	</tuv>
+	    </tu>
+	      
+	    <tu tuid='Invitation_Description'>
+	    	<tuv xml:lang="zh">
+	    		<seg>邀请描述</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>邀请描述</seg>
+	    	</tuv>
+	    </tu>
+	      
+	      <tu tuid='Invitation_Description2'>
+		      <tuv xml:lang='zh'>
+		      	<seg>
+		      		邀请详细描述
+		      	</seg>
+		      </tuv>
+		      <tuv xml:lang="en">
+	    		<seg>邀请详细描述</seg>
+	    	</tuv>
+	      </tu>
+	      
+	    <tu tuid='Pre_campaign_intro'>
+	    	<tuv xml:lang="zh">
+	    		<seg>问卷简介</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>问卷简介</seg>
+	    	</tuv>
+	    </tu>	      
+	      
+	    <tu tuid='Thanks_for_post_campaign_survey'>
+	    	<tuv xml:lang="zh">
+	    		<seg>调查后感谢语</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>调查后感谢语</seg>
+	    	</tuv>
+	    </tu>	 	
+	    
+	     <tu tuid='Thanks_for_post_campaign_survey_content'>
+	    	<tuv xml:lang="zh">
+	    		<seg>调查后详细感谢语</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>调查后详细感谢语</seg>
+	    	</tuv>
+	    </tu>	     
+	    
+	    <tu tuid='Campaign_post_survey_notice'>
+	    	<tuv xml:lang="zh">
+	    		<seg>调查后通知</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>调查后通知</seg>
+	    	</tuv>
+	    </tu>
+	    
+	    <tu tuid='Pre_Campaign_info'>
+	    	<tuv xml:lang="zh">
+	    		<seg>活动前信息</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>活动前信息</seg>
+	    	</tuv>
+	    </tu>
+	    
+	    <tu tuid='Pre_campaign_thankyou'>
+	    	<tuv xml:lang="zh">
+	    		<seg>活动前致谢</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>活动前致谢</seg>
+	    	</tuv>
+	    </tu>
+	    
+	    <tu tuid='Pre_campaign_friends'>
+	    	<tuv xml:lang="zh">
+	    		<seg>填写朋友</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>填写朋友</seg>
+	    	</tuv>
+	    </tu>
+	    
+	    <tu tuid='Product_Logo'>
+	    	<tuv xml:lang="zh">
+	    		<seg>品牌LOGO</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>品牌LOGO</seg>
+	    	</tuv>
+	    </tu>
+	      
+	    <tu tuid='Product_All'>
+	    	<tuv xml:lang="zh">
+	    		<seg>产品全貌</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>产品全貌</seg>
+	    	</tuv>
+	    </tu>
+	    
+	    <tu tuid='Product_Logo2'>
+	    	<tuv xml:lang="zh">
+	    		<seg>品牌LOGO2</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>品牌LOGO2</seg>
+	    	</tuv>
+	    </tu>
+	    
+	    <tu tuid='Product_All2'>
+	    	<tuv xml:lang="zh">
+	    		<seg>产品全貌2</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>产品全貌2</seg>
+	    	</tuv>
+	    </tu>
+	    
+	    <tu tuid='Product_Side'>
+	    	<tuv xml:lang="zh">
+	    		<seg>邀请图片</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>邀请图片</seg>
+	    	</tuv>
+	    </tu>
+	    
+	    <tu tuid='Product_Accept'>
+	    	<tuv xml:lang="zh">
+	    		<seg>接受图片</seg>
+	    	</tuv>
+	    	<tuv xml:lang="en">
+	    		<seg>接受图片</seg>
+	    	</tuv>
+	    </tu>
+	    
+		<tu tuid='Add_New_Campaign'>
+			<tuv xml:lang="zh">
+				<seg>新增活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Add new campaign</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Edit_Campaign'>
+			<tuv xml:lang="zh">
+				<seg>编辑活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Edit Campaign</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Submit_WOM_Report'>
+			<tuv xml:lang="zh">
+				<seg>提交口口相传报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit WOM report</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Compaign_Statistics'>
+			<tuv xml:lang="zh">
+				<seg> 状态：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Statistics :</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Days_Remaining_In_The_Campaign'>
+			<tuv xml:lang="zh">
+				<seg>该活动剩余时间：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Days Remaining in the Campaign:</seg>
+			</tuv>
+		</tu>
+		 <tu tuid='Reports_Submitted'>
+			<tuv xml:lang="zh">
+				<seg>提交报告数：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Reports Submitted:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Spark_Points_Earned'>
+			<tuv xml:lang="zh">
+				<seg>获得星星火积分：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Points Earned:</seg>
+			</tuv>
+		</tu>  
+	
+		<tu tuid='Day'>
+			<tuv xml:lang="zh">
+				<seg>天</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>days</seg>
+			</tuv>
+		</tu> 
+		
+		<tu tuid='Points'>
+			<tuv xml:lang="zh">
+				<seg>分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>points</seg>
+			</tuv>
+		</tu> 
+		
+		<tu tuid='Thank_you'>
+			<tuv xml:lang="zh">
+				<seg>谢谢！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Thank you</seg>
+			</tuv>
+		</tu> 
+		
+		<tu tuid='You_are_in'>
+			<tuv xml:lang="zh">
+				<seg>你已成功加入！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You’re in!</seg>
+			</tuv>
+		</tu> 
+		
+		<tu tuid='Pre_campaign_info'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快把“星星火礼包”寄给你。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You’ve completed the pre-campaign poll and can now visit your Spark Campaign home page. Please make sure you’ve filled in your profile address correctly so we can ship your Spark Kit to you right away!</seg>
+			</tuv>
+		</tu> 
+		
+		<tu tuid='Go_to_campaign'>
+			<tuv xml:lang="zh">
+				<seg>口碑活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Go to campaign</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='View_Spark_Guide'>
+			<tuv xml:lang="zh">
+				<seg>活动手册（PDF）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Guide (PDF)</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_for_joining_the'>
+			<tuv xml:lang="zh">
+				<seg>感谢加入</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Thanks for joining the </seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_for_participating_the'>
+			<tuv xml:lang="zh">
+				<seg>感谢参与</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Thanks for participating in the </seg>
+			</tuv>
+		</tu> 
+		 
+		<tu tuid='Post_campaign_intro'>
+			<tuv xml:lang="zh">
+				<seg>在结束活动之前，请你回答以下问题，你将得到200星星火积分。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please take a moment to give back to us by telling us how the campaign went. You'll also earn 200 Spark Points!</seg>
+			</tuv>
+		</tu>
+		
+		
+		<tu tuid='Back_to_home'>
+			<tuv xml:lang="zh">
+				<seg>返回</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Home</seg>
+			</tuv>
+		</tu>
+        <tu tuid='Uplaod_Photo'>
+            <tuv xml:lang="zh">
+                <seg>上传照片</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Upload</seg>
+            </tuv>
+        </tu>  
+        <tu tuid='Uplaod_Photo_Url_Title'>
+            <tuv xml:lang="zh">
+                <seg>点击查看大图</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Show big photo</seg>
+            </tuv>
+        </tu>
+	</body>
+</tmx>

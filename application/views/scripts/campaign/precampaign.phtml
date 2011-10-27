@@ -1,0 +1,43 @@
+<div class="article-box">
+	<div class="article-box-inner">
+	<h2><?php echo $this->translate("Thanks_for_joining_the")?><?php echo $this->name?> <?php echo $this->translate("Spark_campaign")?>! </h2>
+	<!--<p><?php echo $this->translate("Pre_campaign_intro_".$this->campaign_id)?></p>-->
+	<p> <?php echo $this->campaign["pre_campaign_intro"]?> </p>
+</div>
+</div>
+
+<?php 
+if(!$this->visiable){
+	echo '<div class="article-box">
+	<div class="article-box-inner"><font color="red">由于你已经参加或者拒绝了邀请<br/><b>无法填写调查前问卷</b></font></div></div>';
+}else{
+	if (isset($this->file)) {  // if static file exist
+	    include($this->file);
+	} else {
+	    readfile("$this->filloutPage");
+	}	
+}
+
+
+?>
+
+<?php if (isset($this->file)) { ?>
+<script language="JavaScript" type="text/javascript">
+  $('id').value = '';
+  $('submit').disabled='disabled';
+  var url = "<?php echo $this->url(array('controller'=>'common','action'=>'getaccesscode'));?>";
+  var params = 'surveyId='+ <?php echo $this->surveyId ;?>;
+  new Ajax.Request(
+      url,
+      {
+      method: 'get',
+      parameters: params,
+      onSuccess: function(msg) {
+          var accessCode = msg.responseText;
+          $('id').value = accessCode.substring(1,accessCode.length-1);
+          $('submit').disabled='';
+          }
+      }
+  );
+</script>
+<?php } ?>

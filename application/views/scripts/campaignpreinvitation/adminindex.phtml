@@ -1,0 +1,41 @@
+<div style="padding-left:180px;" >
+  <br/>
+  <h2 ><?php echo $this->translate('Admin_Campaigns');?></h2>
+  <br/>
+  <form action="<?php echo $this->url(array('controller'=>'campaignpreinvitation','action'=>'admincreate'))?>" method="post">
+  <p>
+   <label for="area">Area</label>
+   <br />
+   <select name="area">
+     <option value="hangzhou">Hangzhou</option>
+     <option value="nanjing">Nanjing</option>
+   </select>
+  </p>
+  <p>
+  <lable for="email">Email</label>
+  <br/>
+  <textarea name="email" cols="30" rows="10" ></textarea>
+  </p>
+  <input name="submit" type="submit" value="Submit" />
+  <a href="<?php echo $this->url(array('controller'=>'campaignpreinvitation','action'=>'adminimport'))?>">导入Excel</a>
+  </form>
+  <p>
+  <hr/>
+  </p>
+  
+  <div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?></div>
+  <form action="<?php echo $this->url(array('controller'=>'campaignpreinvitation','action'=>'adminsend'))?>" method="post" >
+  <ul>
+    <?php foreach($this->paginator as $campaignPreInvitation) { ?>
+      <li>
+        <input type="checkbox" name="ids[]" value="<?php echo $campaignPreInvitation['id'] ?>" />
+        <?php echo $campaignPreInvitation['state'] ?>
+        <?php echo $campaignPreInvitation['email'] ?>
+        <?php echo $campaignPreInvitation['date_used'] ?>
+      </li>
+    <?php }?>
+  </ul>
+   <input name="send" type="submit" value="Send" />
+  </form>
+  <div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?></div>
+</div>

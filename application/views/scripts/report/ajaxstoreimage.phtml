@@ -1,0 +1,21 @@
+﻿<?php if(isset($this->imageReport)) {?>
+var current_image_div = jQuery('div.uploading-image div.image')[0];
+var current_status_div = jQuery('div.uploading-image div.status')[0];
+
+var copy_of_current_image_div = jQuery(current_image_div).clone(true);
+var copy_of_current_status_div = jQuery(current_status_div).clone(true);
+
+jQuery(current_image_div).hide();
+jQuery(current_status_div).hide();
+
+var image = jQuery(document.createElement('img')).attr('id', "image_thumb_<?php echo $this->imageReport['id'];?>")
+                                .attr('width', "<?php if (isset($this->imageReport['thumb_width'])){ echo $this->imageReport['thumb_width']; }else{ echo 80;}?>")
+                                .attr('height', "<?php if (isset($this->imageReport['thumb_height'])){ echo $this->imageReport['thumb_height']; }else{ echo 80;}?>")
+                                .attr('src', "<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$this->imageReport['id']));?>");
+jQuery(copy_of_current_image_div).children("a.thickbox").html(image);
+jQuery('div.uploading-image').prepend(copy_of_current_status_div);
+jQuery('div.uploading-image').prepend(copy_of_current_image_div);
+<?php } else if(isset($this->error)) { ?>
+	jQuery('div#error').text("<?php echo $this->error ?>").show().fadeOut(5000);
+<?php } ?>
+

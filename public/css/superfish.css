@@ -1,0 +1,65 @@
+
+/*** ESSENTIAL STYLES ***/
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.sf-menu {
+	line-height:	1.0;
+	float: right;
+	list-style-type:none;
+	width: auto;
+	padding-top: 30px;
+	margin-bottom:	1em;
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+}
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+	background:		#F2D442;
+	outline:		0;
+}
+.sf-menu li a {
+	padding: 		.75em 1em;
+	text-decoration: none;
+	display:		block;
+	position:		relative;
+	color:			#04439C;
+}
+.sf-menu li ul {
+	position:		absolute;
+	top:			-999em;
+	width:			10em; /* left offset of submenus need to match (see below) */
+}
+.sf-menu li ul li {
+	width:			100%;
+	background:		#F8F8F6;
+}
+.sf-menu li ul li a {
+	padding: 		.5em 1em;
+	text-decoration: none;
+	display:		block;
+	position:		relative;
+	color:			#04439C;
+}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0;
+	top:			2.5em; /* match top ul list item height */
+	z-index:		99;
+}
+
+.sf-menu li a:visited { /* visited pseudo selector so IE6 applies text colour*/
+	color:			#04439C;
+}
+.sf-menu li ul li a:visited  { /* visited pseudo selector so IE6 applies text colour*/
+	color:			#04439C;
+}
+.sf-menu li.sfHover,
+.sf-menu li a:focus, .sf-menu li a:hover, .sf-menu li a:active {
+	background:		#F2D442;
+	outline:		0;
+}

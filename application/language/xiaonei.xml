@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+		<tu tuid='xiaonei_campaign_invitation_description2_2'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+					<p>你将得到：</p>
+					<ul>
+						<li>一张价值150元可购买任意图书的代金券</li>
+						<li>五张给你朋友使用的40%折扣优惠券</li>
+						<li>十五张给你朋友使用的20%折扣优惠券</li>
+					</ul>
+				]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='xiaonei_campaign_post_survey_notice_2'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[非常感谢你参加蓝泉书店星星火活动！]]></seg>
+			</tuv>
+		</tu>
+		
+		<!-- Thanks for post campaign survey -->
+		<!-- 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_1'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成“益等水果吧”星星火活动。</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_1'>
+			<tuv xml:lang="zh">
+				<seg>感谢参与结束活动问卷，你将获得200星火积分！</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_2'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成“蓝泉书店”星星火活动。</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_2'>
+			<tuv xml:lang="zh">
+				<seg>感谢参与结束活动问卷，你将获得200星火积分！</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_3'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成“BugsLock”星星火活动。</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_3'>
+			<tuv xml:lang="zh">
+				<seg>感谢参与结束活动问卷，你将获得200星火积分！</seg>
+			</tuv>
+		</tu>
+		-->
+	</body>
+</tmx>

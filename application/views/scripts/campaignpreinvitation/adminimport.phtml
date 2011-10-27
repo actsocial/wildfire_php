@@ -1,0 +1,22 @@
+<div style="padding-left:180px;" >
+  <br/>
+  <h2 ><?php echo $this->translate('Admin_Campaigns');?></h2>
+  <br/>
+  <form action="<?php echo $this->url(array('controller'=>'campaignpreinvitation','action'=>'adminimport'))?>" method="post" enctype="multipart/form-data">
+    <p>
+   <label for="area">Area</label>
+   <br />
+   <select name="area">
+     <option value="hangzhou">Hangzhou</option>
+     <option value="nanjing">Nanjing</option>
+   </select>
+  </p>
+  <p>
+  <lable for="file">File</label>
+  <br/>
+  <input type="file" name="file" />
+  </p>
+  <input name="submit" type="submit" value="Submit" />
+  <a href="<?php echo $this->url(array('controller'=>'campaignpreinvitation','action'=>'adminindex'))?>">返回添加</a>
+  </form>
+</div>

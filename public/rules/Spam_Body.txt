@@ -1,0 +1,1880 @@
+﻿########################### Body ################################################
+
+body CN_BODY_1			/掘藏/
+score CN_BODY_1			5.00
+
+body CN_BODY_2			/大师/
+score CN_BODY_2			2.00
+
+body CN_BODY_3			/淘宝/
+score CN_BODY_3			3.00
+
+body CN_BODY_4			/一键(?:搜索|登陆)/
+describe CN_BODY_4		Body contains "一键,搜索,登陆"
+score CN_BODY_4			5.50
+
+body CN_BODY_5			/同学录/
+score CN_BODY_5			3.00
+
+body CN_BODY_6			/医药/
+score CN_BODY_6			4.00
+
+body CN_BODY_7			/虚拟主机/
+score CN_BODY_7			3.50
+
+body CN_BODY_8			/(?:美容|护肤)/
+score CN_BODY_8			5.00
+
+body CN_BODY_9			/富翁/
+score CN_BODY_9			3.00
+
+body CN_BODY_10			/(?:电影|影视|院线|大片|影院|影片)/
+score CN_BODY_10		2.00
+
+body CN_BODY_11			/(?:经典|精彩|成人)/
+describe CN_BODY_11		Body contains "经典,精彩,成人"
+score CN_BODY_11		1.50
+
+body CN_BODY_12			/自考小抄/
+score CN_BODY_12		25.00
+
+body CN_BODY_13			/(?:百部|千部)/
+score CN_BODY_13		2.00
+
+body CN_BODY_14			/邮址库/
+score CN_BODY_14		8.00
+
+body CN_BODY_15			/(?:乱伦|虐待|肛交)/
+score CN_BODY_15		15.00
+
+body CN_BODY_16			/旅游/
+score CN_BODY_16		2.00
+
+body CN_BODY_17			/白领社区/
+score CN_BODY_17		7.00
+
+body CN_BODY_18			/(?:站点|下载)/
+score CN_BODY_18		1.00
+
+body CN_BODY_19			/(?:售价|仅售|只需).{0,10}(?:元|人民币)/
+score CN_BODY_19		2.00
+
+body CN_BODY_20			/(?:元|万).{0,4}至.{0,10}(?:元|万)/
+score CN_BODY_20		2.00
+
+body CN_BODY_21			/(?:美女|少女|少妇|女优|女友|美眉|表姐)/
+score CN_BODY_21		3.00
+
+body CN_BODY_22			/(?:光临|惠顾)/
+score CN_BODY_22		1.50
+
+body CN_BODY_23			/(?:详|详情|详细信息|详细内容|详细资料|详细目录|更多内容|更多)(?:查阅|：|见|进入|登|访|可|你|您|都|请登录)/
+describe CN_BODY_23		Body contains "详情请见某网站链接"
+score CN_BODY_23		2.00
+
+body CN_BODY_24			/(?:点击|按).{0,30}(?:下面|这里|连接|链接|进入|广告|看看|下载)/
+describe CN_BODY_24		Body contains "点击这里"
+score CN_BODY_24		2.00
+
+body CN_BODY_25			/(?:去|进|览|登|访|临|看|阅).{0,30}(?:网|站点|主页|页面)/
+describe CN_BODY_25		Body contains "光临某网"
+score CN_BODY_25		2.00
+
+body CN_BODY_26			/(?:网址|一切).{0,50}(?-i:http|www|(.{8,30}(?:com|net|tv|cn)))/
+describe CN_BODY_26		Body contains "一切都在某网"
+score CN_BODY_26		2.00
+
+body CN_BODY_27			/百宝箱/
+score CN_BODY_27		3.00
+
+body CN_BODY_28			/(?:这是|此).{0,40}(?:商业|商务|广告|宣传|善意|群发).{0,2}(电子)?(?:邮件|信件|信函)/
+describe CN_BODY_28		Body contains "这是一封善意的邮件"
+score CN_BODY_28		7.00
+
+body CN_BODY_29			/有效/
+score CN_BODY_29		0.50
+
+body CN_BODY_30			/(?:打扰|打搅|不便|困扰|没用|误发|不是|重复).{0,40}(?:歉|谅|对不起|涵)/
+describe CN_BODY_30		Body contains "如果打扰，请见谅"
+score CN_BODY_30		1.00
+
+body CN_BODY_31			/(?:歉|谅).{0,10}(?:打扰|打搅)/
+describe CN_BODY_31		Body contains "抱歉，打扰了"
+score CN_BODY_31		2.00
+
+body CN_BODY_32			/贵公司/
+score CN_BODY_32		0.50
+
+body CN_BODY_33			/伴侣/
+score CN_BODY_33		1.00
+
+body CN_BODY_34			/(.{0,30}(?:歉|谅|对不起|涵)){2}/
+describe CN_BODY_34		Body contains "连续两次道歉"
+score CN_BODY_34		3.00
+
+body CN_BODY_35			/建筑/
+score CN_BODY_35		0.50
+
+body CN_BODY_36			/冒昧打扰/
+score CN_BODY_36		3.00
+
+body CN_BODY_37			/免费试/
+score CN_BODY_37		3.00
+
+body CN_BODY_38			/交友(?:中心|网站|服务)/
+describe CN_BODY_38		Body contains "交友中心,交友网站,交友服务"
+score CN_BODY_38		25.00
+
+body CN_BODY_39			/(?:欢迎|快来|请进)/
+score CN_BODY_39		1.50
+
+body CN_BODY_40			/((?:欢迎|请|详|可).{0,10})(?:((?:您|你).{0,2})|((?:来|致)(?:电|信|函|人))|电话|在线){0,1}(?:.{0,2}询|洽谈|联|我们)/
+describe CN_BODY_40		Body contains "欢迎您来电来人联系"
+score CN_BODY_40		3.00
+
+body CN_BODY_41			/(?:((?:来|致)(?:电|信|函|人))|电话|在线|兴趣).{0,30}(?:.{0,2}询|洽谈|联|我们索)/
+describe CN_BODY_41		Body contains "来电查询"
+score CN_BODY_41		3.00
+
+body CN_BODY_42			/详情请电/
+score CN_BODY_42		2.00
+
+body CN_BODY_43			/(?:性技巧|性高潮|性爱|性天堂|一夜情|勃起)/
+describe CN_BODY_43		Body contains "性技巧,性高潮,性爱,性天堂,一夜情,勃起"
+score CN_BODY_43		25.00
+
+body CN_BODY_44			/如.{0,24}(?:打|不|没|无).{0,24}(?:请|繁劳|可以).{0,8}(?-i:remove|删)/
+describe CN_BODY_44		Body contains "如有打扰，请删除"
+score CN_BODY_44		4.00
+
+body CN_BODY_45			/(?:随|顺){0,6}删/
+describe CN_BODY_45		Body contains "随手删除"
+score CN_BODY_45		3.00
+
+body CN_BODY_46			/(?:亲爱|尊敬)的(?:客户|企业|朋友|用户|先生|女士|网友|[a-zA-Z])/
+describe CN_BODY_46		Body contains "非常正式地称呼不确定的人"
+score CN_BODY_46		2.00
+
+body CN_BODY_47			/(免费.{0,50}){3,}/
+describe CN_BODY_47		Body contains "免费（至少3处）"
+score CN_BODY_47		2.00
+
+body CN_BODY_48			/联.{0,2}系.{0,2}人.{0,2}(：){0,1}.{0,4}(?:生|先生|小姐|女士)/
+describe CN_BODY_48		Body "联系人不确定"
+score CN_BODY_48		2.00
+
+body CN_BODY_49			/请加入/
+score CN_BODY_49		1.00
+
+body CN_BODY_50			/(?:快|请|高速|免费).{0,4}下载/
+describe CN_BODY_50		Body "包含下载的劝说"
+score CN_BODY_50		2.00
+
+body CN_BODY_51			/((?:最|绝对).{2,8}){2,}/
+describe CN_BODY_51		Body contains "多个最"
+score CN_BODY_51		1.00
+
+body CN_BODY_52			/化妆/
+score CN_BODY_52		2.00
+
+body CN_BODY_53			/(?:妇科|卵巢|囊肿)/
+score CN_BODY_53		6.00
+
+body CN_BODY_54			/(?:丰乳|肥臀|女性魅力)/
+score CN_BODY_54		6.00
+
+body CN_BODY_55			/窃听/
+score CN_BODY_55		2.00
+
+body CN_BODY_56			/：http:/
+describe CN_BODY_56		Body contains "：http:"
+score CN_BODY_56		0.50
+
+body CN_BODY_57			/验证/
+score CN_BODY_57		0.50
+
+body CN_BODY_58			/实力/
+score CN_BODY_58		0.50
+
+body CN_BODY_59			/安利/
+score CN_BODY_59		2.00
+
+body CN_BODY_60			/下载中心/
+score CN_BODY_60		3.00
+
+body CN_BODY_61			/(?:减肥|瘦身)/
+score CN_BODY_61		4.00
+
+body CN_BODY_62			/课程(?:背景|内容)/
+score CN_BODY_62		8.00
+
+body CN_BODY_63			/(?:阴道|精液)/
+score CN_BODY_63		7.00
+
+body CN_BODY_64			/订房网/
+score CN_BODY_64		7.00
+
+body CN_BODY_65			/点钞机/
+score CN_BODY_65		3.00
+
+body CN_BODY_66			/亿邮件/
+score CN_BODY_66		5.00
+
+body CN_BODY_67			/(?:扑克|麻将)/
+describe CN_BODY_67		Body contains "扑克,麻将"
+score CN_BODY_67		4.00
+
+body CN_BODY_68			/避税/
+score CN_BODY_68		2.50
+
+body CN_BODY_69			/好利通/
+score CN_BODY_69		5.00
+
+body CN_BODY_70			/壮阳/
+score CN_BODY_70		3.00
+
+body CN_BODY_71			/(?:情趣|调情|SM)用品/
+score CN_BODY_71		25.00
+
+body CN_BODY_72			/(?:技巧|秘诀)/
+score CN_BODY_72		3.00
+
+body CN_BODY_73			/(?:癌症|风湿|乙肝|患者)/
+score CN_BODY_73		8.00
+
+body CN_BODY_74			/您的/
+score CN_BODY_74		0.50
+
+body CN_BODY_75			/诚征/
+score CN_BODY_75		2.00
+
+body CN_BODY_76			/税务代理/
+score CN_BODY_76		25.00
+
+body CN_BODY_77			/信息长期/
+score CN_BODY_77		3.50
+
+body CN_BODY_78			/热线/
+score CN_BODY_78		0.50
+
+body CN_BODY_79			/销售/
+score CN_BODY_79		0.50
+
+body CN_BODY_80			/睡眠/
+score CN_BODY_80		3.00
+
+body CN_BODY_81			/(?:短信|彩信)/
+score CN_BODY_81		2.00
+
+body CN_BODY_82			/(?:美术|书法|摄影|音乐|文学)网/
+score CN_BODY_82		5.00
+
+body CN_BODY_83			/慈善/
+score CN_BODY_83		3.50
+
+body CN_BODY_84			/海外(?:实习|课程)/
+score CN_BODY_84		10.00
+
+body CN_BODY_85			/(?:医学|处女膜|手术)/
+score CN_BODY_85		7.00
+
+body CN_BODY_86			/(?:性感|性趣)/
+score CN_BODY_86		3.00
+
+body CN_BODY_87			/(?:禅悟|养生)/
+score CN_BODY_87		3.50
+
+body CN_BODY_88			/(?:健身|健美)/
+score CN_BODY_88		4.00
+
+body CN_BODY_89			/(?:研修|训练|研讨|精修)/
+score CN_BODY_89		2.00
+
+body CN_BODY_90			/(?:避孕|按摩|文胸|丰胸)/
+score CN_BODY_90		6.00
+
+body CN_BODY_91			/(?:丝袜|内裤|内衣)/
+score CN_BODY_91		6.00
+
+body CN_BODY_92			/(?:失眠|贫血)/
+score CN_BODY_92		4.00
+	
+body CN_BODY_93			/(?:养颜|痴呆|顽症|绝症)/
+score CN_BODY_93		6.00
+
+body CN_BODY_94			/(?:群发软件|QQ群发|群发业务|传真群发)/
+score CN_BODY_94		5.00
+
+body CN_BODY_95			/SOHO建站/
+score CN_BODY_95		5.00
+
+body CN_BODY_96			/网赚/
+score CN_BODY_96		2.00
+
+body CN_BODY_97			/性虐/
+score CN_BODY_97		4.00
+
+body CN_BODY_98			/(?:剧场|剧情)/
+score CN_BODY_98		3.00
+
+body CN_BODY_99			/(?:写作|相册)网/
+score CN_BODY_99		4.00
+
+body CN_BODY_100		/淘偶/
+score CN_BODY_100		3.00
+
+body CN_BODY_101		/雕塑/
+score CN_BODY_101		2.00
+
+body CN_BODY_102		/集中营/
+score CN_BODY_102		4.00
+
+body CN_BODY_103		/绝对是真/
+score CN_BODY_103		2.00
+
+body CN_BODY_104		/(?:张晓彤|傅勇国)/
+score CN_BODY_104		3.00
+
+body CN_BODY_105		/(?:录井|测井|钻井|采油)/
+score CN_BODY_105		4.00
+
+body CN_BODY_106		/标杆(?:管理|学习)/
+score CN_BODY_106		3.00
+
+body CN_BODY_107		/肥胖/
+score CN_BODY_107		4.00
+
+body CN_BODY_108		/网络警/
+score CN_BODY_108		4.00
+
+body CN_BODY_109		/(?:钢琴|电子琴)/
+score CN_BODY_109		2.50
+
+body CN_BODY_110		/俱乐部/
+score CN_BODY_110		3.00
+
+body CN_BODY_111		/侨鑫/
+score CN_BODY_111		3.00
+
+body CN_BODY_112		/喷水/
+score CN_BODY_112		3.00
+
+body CN_BODY_113		/(?:青春痘|粉刺|痤疮|痘印|痘疤)/
+score CN_BODY_113		8.00
+
+body CN_BODY_114		/墨芳斋/
+score CN_BODY_114		5.00
+
+body CN_BODY_115		/五金网/
+score CN_BODY_115		5.00
+
+body CN_BODY_116		/书斋/
+score CN_BODY_116		3.00
+
+body CN_BODY_117		/肉蒲/
+score CN_BODY_117		5.00
+
+body CN_BODY_118		/流氓/
+score CN_BODY_118		5.00
+
+body CN_BODY_119		/赚钱/
+score CN_BODY_119		3.00
+
+body CN_BODY_120		/财富/
+score CN_BODY_120		2.00
+
+body CN_BODY_121		/节税/
+score CN_BODY_121		1.00
+
+body CN_BODY_122		/展览/
+score CN_BODY_122		1.00
+
+body CN_BODY_123		/策划/
+score CN_BODY_123		0.50
+
+body CN_BODY_124		/(?:销魂|逍遥)/
+score CN_BODY_124		3.00
+
+body CN_BODY_125		/书讯/
+score CN_BODY_125		1.50
+
+body CN_BODY_126		/博客/
+score CN_BODY_126		2.50
+
+body CN_BODY_127		/礼仪/
+score CN_BODY_127		2.00
+
+body CN_BODY_128		/宝贝/
+score CN_BODY_128		2.00
+
+body CN_BODY_129		/夫妻/
+score CN_BODY_129		2.00
+
+body CN_BODY_130		/咖啡/
+score CN_BODY_130		1.00
+
+body CN_BODY_131		/婚姻/
+score CN_BODY_131		3.00
+
+body CN_BODY_132		/九评/
+score CN_BODY_132		3.00
+
+body CN_BODY_133		/才博/
+score CN_BODY_133		1.50
+
+body CN_BODY_134		/(?:色情|情色|激情)/
+score CN_BODY_134		2.50
+
+body CN_BODY_135		/水晶/
+score CN_BODY_135		2.00
+
+body CN_BODY_136		/门诊/
+score CN_BODY_136		3.00
+
+body CN_BODY_137		/梦露/
+score CN_BODY_137		3.00
+
+body CN_BODY_138		/性福/
+score CN_BODY_138		3.00
+
+body CN_BODY_139		/六红喜/
+score CN_BODY_139		3.00
+
+body CN_BODY_140		/保健/
+score CN_BODY_140		2.00
+
+body CN_BODY_141		/哮喘/
+score CN_BODY_141		4.00
+
+body CN_BODY_142		/器官/
+score CN_BODY_142		4.00
+
+body CN_BODY_143		/唐伯虎/
+score CN_BODY_143		5.00
+
+body CN_BODY_144		/(?:买家|调查)网/
+score CN_BODY_144		4.00
+
+body CN_BODY_145		/馒头/
+score CN_BODY_145		4.00
+
+body CN_BODY_146		/血案/
+score CN_BODY_146		4.00
+
+body CN_BODY_147		/秘书网/
+score CN_BODY_147		10.00
+
+body CN_BODY_148		/(?:医师|护师|药师)/
+score CN_BODY_148		3.00
+
+body CN_BODY_149		/宝典/
+score CN_BODY_149		2.00
+
+body CN_BODY_150		/烧钱/
+score CN_BODY_150		5.00
+
+body CN_BODY_151		/伊甸园/
+score CN_BODY_151		5.00
+
+body CN_BODY_152		/妓院/
+score CN_BODY_152		25.00
+
+body CN_BODY_153		/(?:沐浴|桑拿)/
+score CN_BODY_153		10.00
+
+body CN_BODY_154		/臀部/
+score CN_BODY_154		5.00
+
+body CN_BODY_155		/吐血/
+score CN_BODY_155		5.00
+
+body CN_BODY_156		/秘方/
+score CN_BODY_156		2.00
+
+body CN_BODY_157		/旅行/
+score CN_BODY_157		1.50
+
+body CN_BODY_158		/艾滋/
+score CN_BODY_158		4.00
+
+body CN_BODY_159		/灯饰/
+score CN_BODY_159		2.00
+
+body CN_BODY_160		/参菊/
+score CN_BODY_160		3.00
+
+body CN_BODY_161		/怪兽/
+score CN_BODY_161		5.00
+
+body CN_BODY_162		/烫金/
+score CN_BODY_162		3.00
+
+body CN_BODY_163		/众腾辉/
+score CN_BODY_163		5.00
+
+body CN_BODY_164		/血腥/
+score CN_BODY_164		5.00
+
+body CN_BODY_165		/骚扰/
+score CN_BODY_165		5.00
+
+body CN_BODY_166		/气雾/
+score CN_BODY_166		2.00
+
+body CN_BODY_167		/瘦驴/
+score CN_BODY_167		5.00
+
+body CN_BODY_168		/唐僧/
+score CN_BODY_168		5.00
+
+body CN_BODY_169		/处女红/
+score CN_BODY_169		25.00
+
+body CN_BODY_170		/征婚/
+score CN_BODY_170		10.00
+
+body CN_BODY_171		/爱情/
+score CN_BODY_171		3.00
+
+body CN_BODY_172		/天曦/
+score CN_BODY_172		2.00
+
+body CN_BODY_173		/图书/
+score CN_BODY_173		2.00
+
+body CN_BODY_174		/毛主席/
+score CN_BODY_174		5.00
+
+body CN_BODY_175		/鲜花/
+score CN_BODY_175		3.00
+
+body CN_BODY_176		/蛋糕/
+score CN_BODY_176		4.00
+
+body CN_BODY_177		/图库/
+score CN_BODY_177		2.50
+
+body CN_BODY_178		/红娘/
+score CN_BODY_178		3.00
+
+body CN_BODY_179		/发福/
+score CN_BODY_179		2.00
+
+body CN_BODY_180		/(回收.{0,50}){3,}/
+describe CN_BODY_180		Body contains "回收（至少3处)"
+score CN_BODY_180		3.00
+
+body CN_BODY_181		/(退党.{0,50}){3,}/
+describe CN_BODY_181		Body contains "退党（至少3处)"
+score CN_BODY_181		10.00
+
+body CN_BODY_182		/爱侣/
+score CN_BODY_182		2.00
+
+body CN_BODY_183		/画苑/
+score CN_BODY_183		3.00
+
+body CN_BODY_184		/(证.{0,50}){4,}/
+describe CN_BODY_184		Body contains "证（至少4处)"
+score CN_BODY_184		3.00
+
+body CN_BODY_185		/先验票/
+score CN_BODY_185		3.00
+
+body CN_BODY_186		/(?:你的|您的)人生/
+score CN_BODY_186		4.00
+
+body CN_BODY_187		/(?:白领|工薪|上班|游戏|动漫)族/
+score CN_BODY_187		7.00
+
+body CN_BODY_188		/开车(?:听广播|学会话|学句子)/
+score CN_BODY_188		25.00
+
+body CN_BODY_189		/杰马逊/
+score CN_BODY_189		5.00
+
+body CN_BODY_190		/桃花运/
+score CN_BODY_190		5.00
+
+body CN_BODY_191		/导航/
+score CN_BODY_191		2.00
+
+body CN_BODY_192		/(?:培训|课程|大师)证书/
+score CN_BODY_192		5.00
+
+body CN_BODY_193		/生产大师/
+score CN_BODY_193		25.00
+
+body CN_BODY_194		/订房服务/
+score CN_BODY_194		5.00
+
+body CN_BODY_195		/预订中心/
+score CN_BODY_195		5.00
+
+body CN_BODY_196		/www.deyi365.com/
+score CN_BODY_196		8.00
+
+body CN_BODY_197		/69779807/
+score CN_BODY_197		6.00
+
+body CN_BODY_198		/0571-88253919/
+score CN_BODY_198		8.00
+
+body CN_BODY_199		/一搜科技/
+score CN_BODY_199		6.00
+
+body CN_BODY_200		/杭州龙威/
+score CN_BODY_200		6.00
+
+body CN_BODY_201		/朗涛企业策划/
+score CN_BODY_201		25.00
+
+body CN_BODY_202		/空运专家/
+score CN_BODY_202		10.00
+
+body CN_BODY_203		/科特软件/
+score CN_BODY_203		10.00
+
+body CN_BODY_204		/科特邮件/
+score CN_BODY_204		10.00
+
+body CN_BODY_205		/逸能网络/
+score CN_BODY_205		25.00
+
+body CN_BODY_206		/域名专卖/
+score CN_BODY_206		25.00
+
+body CN_BODY_207		/423846621/
+score CN_BODY_207		10.00
+
+body CN_BODY_208		/13777876961/
+score CN_BODY_208		25.00
+
+body CN_BODY_209		/江泽民/
+score CN_BODY_209		10.00
+
+body CN_BODY_210		/宋祖英/
+score CN_BODY_210		10.00
+
+body CN_BODY_211		/水景网/
+score CN_BODY_211		25.00
+
+body CN_BODY_212		/网站制作/
+score CN_BODY_212		2.00
+
+body CN_BODY_213		/红颜知己/
+score CN_BODY_213		25.00
+
+body CN_BODY_214		/追踪器/
+score CN_BODY_214		10.00
+
+body CN_BODY_215		/东极岛/
+score CN_BODY_215		10.00
+
+body CN_BODY_216		/飞思卡尔/
+score CN_BODY_216		10.00
+
+body CN_BODY_217		/皮肤病/
+score CN_BODY_217		10.00
+
+body CN_BODY_218		/艺术库/
+score CN_BODY_218		10.00
+
+body CN_BODY_219		/偷拍/
+score CN_BODY_219		5.00
+
+body CN_BODY_220		/老哥的/
+score CN_BODY_220		5.00
+
+body CN_BODY_221		/13682685695/
+score CN_BODY_221		25.00
+
+body CN_BODY_222		/科信众方/
+score CN_BODY_222		25.00
+
+body CN_BODY_223		/电视网/
+score CN_BODY_223		5.00
+
+body CN_BODY_224		/裸体/
+score CN_BODY_224		5.00
+
+body CN_BODY_225		/彩票代购/
+score CN_BODY_225		25.00
+
+body CN_BODY_226		/中奖通知/
+score CN_BODY_226		10.00
+
+body CN_BODY_227		/租赁/
+score CN_BODY_227		1.50
+
+body CN_BODY_228		/自动兑奖/
+score CN_BODY_228		10.00
+
+body CN_BODY_229		/彩票销售/
+score CN_BODY_229		25.00
+
+body CN_BODY_230		/其它服务/
+score CN_BODY_230		2.50
+
+body CN_BODY_231		/航空网/
+score CN_BODY_231		5.00
+
+body CN_BODY_232		/余世维/
+score CN_BODY_232		5.00
+
+body CN_BODY_233		/曾仕强/
+score CN_BODY_233		5.00
+
+body CN_BODY_234		/庆佳丰/
+score CN_BODY_234		7.00
+
+body CN_BODY_235		/分享生命/
+score CN_BODY_235		10.00
+
+body CN_BODY_236		/颈椎病/
+score CN_BODY_236		25.00
+
+body CN_BODY_237		/神经衰弱/
+score CN_BODY_237		25.00
+
+body CN_BODY_238		/冠军王道/
+score CN_BODY_238		25.00
+
+body CN_BODY_239		/午夜剧院/
+score CN_BODY_239		25.00
+
+body CN_BODY_240		/网络电视机/
+score CN_BODY_240		25.00
+
+body CN_BODY_241		/宏博实业/
+score CN_BODY_241		25.00
+
+body CN_BODY_242		/人力快车/
+score CN_BODY_242		25.00
+
+body CN_BODY_243		/湘辣社区/
+score CN_BODY_243		25.00
+
+body CN_BODY_244		/有效辞工/
+score CN_BODY_244		25.00
+
+body CN_BODY_245		/查厂验厂/
+score CN_BODY_245		5.00
+
+body CN_BODY_246		/窃听器/
+score CN_BODY_246		25.00
+
+body CN_BODY_247		/或担心/
+score CN_BODY_247		1.50
+
+body CN_BODY_248		/跟踪器/
+score CN_BODY_248		25.00
+
+body CN_BODY_249		/会员/
+score CN_BODY_249		1.50
+
+body CN_BODY_250		/拦截器/
+score CN_BODY_250		10.00
+
+body CN_BODY_251		/51zhuojin.com/
+score CN_BODY_251		25.00
+
+body CN_BODY_252		/13826522963/
+score CN_BODY_252		25.00
+
+body CN_BODY_253		/托尼网络/
+score CN_BODY_253		25.00
+
+body CN_BODY_254		/伦理片/
+score CN_BODY_254		25.00
+
+body CN_BODY_255		/正达科技/
+score CN_BODY_255		25.00
+
+body CN_BODY_256		/古装苑/
+score CN_BODY_256		25.00
+
+body CN_BODY_257		/佳誉财税/
+score CN_BODY_257		25.00
+
+body CN_BODY_258		/打扰/
+score CN_BODY_258		1.50
+
+body CN_BODY_259		/早泄/
+score CN_BODY_259		5.00
+
+body CN_BODY_260		/阳痿/
+score CN_BODY_260		25.00
+
+body CN_BODY_261		/前列腺/
+score CN_BODY_261		25.00
+
+body CN_BODY_262		/阴茎/
+score CN_BODY_262		25.00
+
+body CN_BODY_263		/离岸贸易/
+score CN_BODY_263		25.00
+
+body CN_BODY_264		/同居时代/
+score CN_BODY_264		25.00
+
+body CN_BODY_265		/3082821/
+score CN_BODY_265		25.00
+
+body CN_BODY_266		/诡异/
+score CN_BODY_266		5.00
+
+body CN_BODY_267		/特异功能/
+score CN_BODY_267		25.00
+
+body CN_BODY_268		/餐饮指南/
+score CN_BODY_268		25.00
+
+body CN_BODY_269		/永兴代理/
+score CN_BODY_269		25.00
+
+body CN_BODY_270		/财税代理/
+score CN_BODY_270		25.00
+
+body CN_BODY_271		/爱情公寓/
+score CN_BODY_271		25.00
+
+body CN_BODY_272		/代理/
+score CN_BODY_272		2.00
+
+body CN_BODY_273		/终身/
+score CN_BODY_273		1.50
+
+body CN_BODY_274		/(?:心血管|排毒)/
+score CN_BODY_274		6.00
+
+body CN_BODY_275		/安眠药/
+score CN_BODY_275		10.00
+
+body CN_BODY_276		/贸易/
+score CN_BODY_276		1.00
+
+body CN_BODY_277		/盛航鑫电子/
+score CN_BODY_277		25.00
+
+body CN_BODY_278		/手机充值/
+score CN_BODY_278		5.00
+
+body CN_BODY_279		/翻译集团/
+score CN_BODY_279		25.00
+
+body CN_BODY_280		/特价翻译/
+score CN_BODY_280		25.00
+
+body CN_BODY_281		/零花钱/
+score CN_BODY_281		6.00
+
+body CN_BODY_282		/心狠手辣/
+score CN_BODY_282		25.00
+
+body CN_BODY_283		/好自为之/
+score CN_BODY_283		5.00
+
+body CN_BODY_284		/监控手段/
+score CN_BODY_284		25.00
+
+body CN_BODY_285		/骗术/
+score CN_BODY_285		3.00
+
+body CN_BODY_286		/游戏人间/
+score CN_BODY_286		25.00
+
+body CN_BODY_287		/美仕意品/
+score CN_BODY_287		25.00
+
+body CN_BODY_288		/礼品网站/
+score CN_BODY_288		25.00
+
+body CN_BODY_289		/中国尚网/
+score CN_BODY_289		25.00
+
+body CN_BODY_290		/牛股苑/
+score CN_BODY_290		25.00
+
+body CN_BODY_291		/亚龙网/
+score CN_BODY_291		25.00
+
+body CN_BODY_292		/舞娘/
+score CN_BODY_292		5.00
+
+body CN_BODY_293		/可用/
+score CN_BODY_293		0.50
+
+body CN_BODY_294		/鑫达莱/
+score CN_BODY_294		6.00
+
+body CN_BODY_295		/13858846060/
+score CN_BODY_295		25.00
+
+body CN_BODY_296		/防辐射眼镜/
+score CN_BODY_296		25.00
+
+body CN_BODY_297		/女人兴奋/
+score CN_BODY_297		25.00
+
+body CN_BODY_298		/男人刺激/
+score CN_BODY_298		25.00
+
+body CN_BODY_299		/鹊桥会/
+score CN_BODY_299		25.00
+
+body CN_BODY_300		/点击/
+score CN_BODY_300		1.00
+
+body CN_BODY_301		/商业墙/
+score CN_BODY_301		6.00
+
+body CN_BODY_302		/搜屋网/
+score CN_BODY_302		25.00
+
+body CN_BODY_303		/精彩消息/
+score CN_BODY_303		7.00
+
+body CN_BODY_304		/圈地运动/
+score CN_BODY_304		7.00
+
+body CN_BODY_305		/民主自由/
+score CN_BODY_305		7.00
+
+body CN_BODY_306		/代理记帐/
+score CN_BODY_306		4.00
+
+body CN_BODY_307		/飞万达/
+score CN_BODY_307		4.00
+
+body CN_BODY_308		/VOIP套餐/
+score CN_BODY_308		7.00
+
+body CN_BODY_309		/迷魂药/
+score CN_BODY_309		15.00
+
+body CN_BODY_310		/开锁工具/
+score CN_BODY_310		15.00
+
+body CN_BODY_311		/包月电话/
+score CN_BODY_311		4.00
+
+body CN_BODY_312		/任务中国/
+score CN_BODY_313		15.00
+
+body CN_BODY_313		/基茵壹号/
+score CN_BODY_313		15.00
+
+body CN_BODY_314		/三九药业/
+score CN_BODY_314		15.00
+
+body CN_BODY_315		/反雷达/
+score CN_BODY_315		15.00
+
+body CN_BODY_316		/电子眼/
+score CN_BODY_316		15.00
+
+body CN_BODY_317		/群发器/
+score CN_BODY_317		15.00
+
+body CN_BODY_318		/搜索器/
+score CN_BODY_318		15.00
+
+body CN_BODY_319		/我爱夏天/
+score CN_BODY_319		15.00
+
+body CN_BODY_320		/易下网/
+score CN_BODY_320		25.00
+
+body CN_BODY_321		/比分网/
+score CN_BODY_321		25.00
+
+body CN_BODY_322		/足资园/
+score CN_BODY_322		25.00
+
+body CN_BODY_323		/卡式领带/
+score CN_BODY_323		25.00
+
+body CN_BODY_324		/易讯网/
+score CN_BODY_324		25.00
+
+body CN_BODY_325		/特价网/
+score CN_BODY_325		25.00
+
+body CN_BODY_326		/买卖金桥/
+score CN_BODY_326		25.00
+
+body CN_BODY_327		/华乐印业/
+score CN_BODY_327		25.00
+
+body CN_BODY_328		/短裙/
+score CN_BODY_328		25.00
+
+body CN_BODY_329		/低胸/
+score CN_BODY_329		25.00
+
+body CN_BODY_330		/策划师/
+score CN_BODY_330		25.00
+
+body CN_BODY_331		/易雅/
+score CN_BODY_331		25.00
+
+body CN_BODY_332		/商务网/
+score CN_BODY_332		25.00
+
+body CN_BODY_333		/淘宝推荐/
+score CN_BODY_333		25.00
+
+body CN_BODY_334		/接班人/
+score CN_BODY_334		25.00
+
+body CN_BODY_335		/风骚的人/
+score CN_BODY_335		25.00
+
+body CN_BODY_336		/风骚的美人/
+score CN_BODY_336		25.00
+
+body CN_BODY_337		/风骚的/
+score CN_BODY_337		25.00
+
+body CN_BODY_338		/你的智商/
+score CN_BODY_338		25.00
+
+body CN_BODY_339		/调味品/
+score CN_BODY_339		8.00
+
+body CN_BODY_340		/火锅调料/
+score CN_BODY_340		25.00
+
+body CN_BODY_341		/万能调料/
+score CN_BODY_341		25.00
+
+body CN_BODY_342		/杨澜/
+score CN_BODY_342		5.00
+
+body CN_BODY_343		/周杰伦/
+score CN_BODY_343		5.00
+
+body CN_BODY_344		/动点商贸/
+score CN_BODY_344		25.00
+
+body CN_BODY_345		/赏金/
+score CN_BODY_345		5.00
+
+body CN_BODY_346		/威客中国/
+score CN_BODY_346		25.00
+
+body CN_BODY_347		/国际货运/
+score CN_BODY_347		25.00
+
+body CN_BODY_348		/白眉大侠/
+score CN_BODY_348		25.00
+
+body CN_BODY_349		/(?:退党|退团|退队)/
+score CN_BODY_349		7.00
+
+body CN_BODY_350		/成人用品/
+score CN_BODY_350		25.00
+
+body CN_BODY_351		/绿豆娃/
+score CN_BODY_351		25.00
+
+body CN_BODY_352		/文秘俱乐部/
+score CN_BODY_352		25.00
+
+body CN_BODY_353		/迪士尼/
+score CN_BODY_353		25.00
+
+body CN_BODY_354		/搜搜吧/
+score CN_BODY_354		25.00
+
+body CN_BODY_355		/圣诞山/
+score CN_BODY_355		25.00
+
+body CN_BODY_356		/天天有/
+score CN_BODY_356		5.00
+
+body CN_BODY_357		/看大片/
+score CN_BODY_357		25.00
+
+body CN_BODY_358		/漂亮性感/
+score CN_BODY_358		25.00
+
+body CN_BODY_359		/BBS网址/
+score CN_BODY_359		25.00
+
+body CN_BODY_360		/水论坛/
+score CN_BODY_360		25.00
+
+body CN_BODY_361		/江南建筑/
+score CN_BODY_361		25.00
+
+body CN_BODY_362		/迷奷药/
+score CN_BODY_362		25.00
+
+body CN_BODY_363		/处女杀手/
+score CN_BODY_363		25.00
+
+body CN_BODY_364		/兼职网管/
+score CN_BODY_364		25.00
+
+body CN_BODY_365		/专职网管/
+score CN_BODY_365		25.00
+
+body CN_BODY_366		/咨询信箱/
+score CN_BODY_366		25.00
+
+body CN_BODY_367		/月历展/
+score CN_BODY_367		25.00
+
+body CN_BODY_368		/链接联盟/
+score CN_BODY_368		25.00
+
+body CN_BODY_369		/订刊热线/
+score CN_BODY_369		25.00
+
+body CN_BODY_370		/商界大亨/
+score CN_BODY_370		25.00
+
+body CN_BODY_371		/政界高官/
+score CN_BODY_371		25.00
+
+body CN_BODY_372		/旅游事业/
+score CN_BODY_372		25.00
+
+body CN_BODY_373		/旅游业务/
+score CN_BODY_373		25.00
+
+body CN_BODY_374		/搬运工/
+score CN_BODY_374		25.00
+
+body CN_BODY_375		/英语特快/
+score CN_BODY_375		25.00
+
+body CN_BODY_376		/优质客户/
+score CN_BODY_376		25.00
+
+body CN_BODY_377		/电脑辐射/
+score CN_BODY_377		25.00
+
+body CN_BODY_378		/蛋蛋/
+score CN_BODY_378		25.00
+
+body CN_BODY_379		/成功人士/
+score CN_BODY_379		25.00
+
+body CN_BODY_380		/阿芸的网站/
+score CN_BODY_380		25.00
+
+body CN_BODY_381		/巴黎时尚/
+score CN_BODY_381		25.00
+
+body CN_BODY_382		/翅片管/
+score CN_BODY_382		25.00
+
+body CN_BODY_383		/网友交流/
+score CN_BODY_383		25.00
+
+body CN_BODY_384		/蓝之星/
+score CN_BODY_384		10.00
+
+body CN_BODY_385		/网络游戏/
+score CN_BODY_385		5.00
+
+body CN_BODY_386		/传奇世界/
+score CN_BODY_386		7.00
+
+body CN_BODY_387		/财富分红/
+score CN_BODY_387		25.00
+
+body CN_BODY_388		/中国水网/
+score CN_BODY_388		25.00
+
+body CN_BODY_389		/水站联盟/
+score CN_BODY_389		25.00
+
+body CN_BODY_390		/网址大全/
+score CN_BODY_390		25.00
+
+body CN_BODY_391		/月净赚/
+score CN_BODY_391		25.00
+
+body CN_BODY_392		/年净赚/
+score CN_BODY_392		25.00
+
+body CN_BODY_393		/彩票网/
+score CN_BODY_393		25.00
+
+body CN_BODY_394		/通信套餐/
+score CN_BODY_394		25.00
+
+body CN_BODY_395		/担心，可/
+score CN_BODY_395		3.50
+
+body CN_BODY_396		/性交姿势/
+score CN_BODY_396		25.00
+
+body CN_BODY_397		/真人表演/
+score CN_BODY_397		7.50
+
+body CN_BODY_398		/联锋达/
+score CN_BODY_398		7.50
+
+body CN_BODY_399		/实业有限公司/
+score CN_BODY_399		2.00
+
+body CN_BODY_400		/性教育/
+score CN_BODY_400		8.00
+
+body CN_BODY_401		/抚摸/
+score CN_BODY_401		5.00
+
+body CN_BODY_402		/性福频道/
+score CN_BODY_402		25.00
+
+body CN_BODY_403		/极品美女/
+score CN_BODY_403		25.00
+
+body CN_BODY_404		/敬请/
+score CN_BODY_404		1.50
+
+body CN_BODY_405		/网赚高手/
+score CN_BODY_405		25.00
+
+body CN_BODY_406		/网上挣钱/
+score CN_BODY_406		25.00
+
+body CN_BODY_407		/网络证婚/
+score CN_BODY_407		25.00
+
+body CN_BODY_408		/我的博客/
+score CN_BODY_408		25.00
+
+body CN_BODY_409		/我公司/
+score CN_BODY_409		0.50
+
+body CN_BODY_410		/我博客/
+score CN_BODY_410		25.00
+
+body CN_BODY_411		/床第高手/
+score CN_BODY_411               25.00
+
+body CN_BODY_412		/游戏狂阁/
+score CN_BODY_412               25.00
+
+body CN_BODY_413		/恒讯达e计划/
+score CN_BODY_413               25.00
+
+body CN_BODY_414		/太空总署/
+score CN_BODY_414               25.00
+
+body CN_BODY_415		/太空梭/
+score CN_BODY_415               25.00
+
+body CN_BODY_416		/薪资设计/
+score CN_BODY_416               25.00
+
+body CN_BODY_417		/家居生活/
+score CN_BODY_417               25.00
+
+body CN_BODY_418		/验证后付款/
+score CN_BODY_418		25.00
+
+body CN_BODY_419		/如需退信请发/
+score CN_BODY_419               25.00
+
+body CN_BODY_420		/野山参/
+score CN_BODY_420               25.00
+
+body CN_BODY_421		/稳赚的事业/
+score CN_BODY_421               25.00
+
+body CN_BODY_422		/0_0_1论坛/
+score CN_BODY_422		25.00
+
+body CN_BODY_423		/蒙迪欧乐园/
+score CN_BODY_423		25.00
+
+body CN_BODY_424		/自助公寓/
+score CN_BODY_424		25.00
+
+body CN_BODY_425		/短租公寓/
+score CN_BODY_425		25.00
+
+body CN_BODY_426		/骑着马/
+score CN_BODY_426		25.00
+
+body CN_BODY_427		/驱蚊/
+score CN_BODY_427		8.00
+
+body CN_BODY_428		/化妆品有限公司/
+score CN_BODY_428		25.00
+
+body CN_BODY_429		/化妆品公司/
+score CN_BODY_429		25.00
+
+body CN_BODY_430		/黄叶美酒/
+score CN_BODY_430		25.00
+
+body CN_BODY_431		/劳务网/
+score CN_BODY_431		25.00
+
+body CN_BODY_432		/白癜风/
+score CN_BODY_432		25.00
+
+body CN_BODY_433		/沾不粘/
+score CN_BODY_433		25.00
+
+body CN_BODY_434		/牛肉丸/
+score CN_BODY_434		25.00
+
+body CN_BODY_435		/诚信/
+score CN_BODY_435		1.00
+
+body CN_BODY_436		/羊肉火锅/
+score CN_BODY_436		25.00
+
+body CN_BODY_437		/四川火锅/
+score CN_BODY_437		25.00
+
+body CN_BODY_438		/鲜鱼火锅/
+score CN_BODY_438		25.00
+
+body CN_BODY_439		/野味火锅/
+score CN_BODY_439		25.00
+
+body CN_BODY_440		/什锦火锅/
+score CN_BODY_440		25.00
+
+body CN_BODY_441		/海鲜火锅/
+score CN_BODY_441		25.00
+
+body CN_BODY_442		/全国各地/
+score CN_BODY_442		1.50
+
+body CN_BODY_443		/江南火锅/
+score CN_BODY_443		25.00
+
+body CN_BODY_444		/东北火锅/
+score CN_BODY_444		25.00
+
+body CN_BODY_445		/蒙式火锅/
+score CN_BODY_445		25.00
+
+body CN_BODY_446		/泰式火锅/
+score CN_BODY_446		25.00
+
+body CN_BODY_447		/日式火锅/
+score CN_BODY_447		25.00
+
+body CN_BODY_448		/伙伴/
+score CN_BODY_448		1.00
+
+body CN_BODY_449		/餐饮/
+score CN_BODY_449		2.00
+	
+body CN_BODY_450		/司在/
+score CN_BODY_450		0.50
+
+body CN_BODY_451		/浩森票务/
+score CN_BODY_451		25.00
+
+body CN_BODY_452		/明嘉豪贸易/
+score CN_BODY_452		25.00
+
+body CN_BODY_453		/房地产网/
+score CN_BODY_453		25.00
+
+body CN_BODY_454		/大闸蟹/
+score CN_BODY_454		10.00
+
+body CN_BODY_455		/精仿名表/
+score CN_BODY_455		25.00
+
+body CN_BODY_456		/87554419/
+score CN_BODY_456		25.00
+
+body CN_BODY_457		/654818319/
+score CN_BODY_457		25.00
+
+body CN_BODY_458		/82162475/
+score CN_BODY_458		25.00
+
+body CN_BODY_459		/13622274560/
+score CN_BODY_459		25.00
+
+body CN_BODY_460		/62807556/
+score CN_BODY_460		25.00
+
+body CN_BODY_461		/13798057506/
+score CN_BODY_461		25.00
+
+body CN_BODY_462		/的网站/
+score CN_BODY_462		2.00
+
+body CN_BODY_463		/同楼网/
+score CN_BODY_463		25.00
+
+body CN_BODY_464		/同楼交友/
+score CN_BODY_464		25.00
+
+body CN_BODY_465		/同楼拼车/
+score CN_BODY_465		25.00
+
+body CN_BODY_466		/同楼聚会/
+score CN_BODY_466		25.00
+
+body CN_BODY_467		/同楼拼饭/
+score CN_BODY_467		25.00
+
+body CN_BODY_468		/同楼活动/
+score CN_BODY_468		25.00
+
+body CN_BODY_469		/同楼觅爱/
+score CN_BODY_469		25.00
+
+body CN_BODY_470		/点点通/
+score CN_BODY_470		25.00
+
+body CN_BODY_471		/福寿连连/
+score CN_BODY_471		25.00
+
+body CN_BODY_472		/博思嘉业/
+score CN_BODY_472		25.00
+
+body CN_BODY_473		/我爱培训网/
+score CN_BODY_473		25.00
+
+body CN_BODY_474		/离婚网/
+score CN_BODY_474		25.00
+
+body CN_BODY_492		/一次，必/
+score CN_BODY_492		1.50
+
+body CN_BODY_493		/各类/
+score CN_BODY_493		0.30
+
+body CN_BODY_509		/赠送/
+score CN_BODY_509		0.50
+
+body CN_BODY_510		/均可/
+score CN_BODY_510		0.50
+
+body CN_BODY_511		/自由易邮址/
+score CN_BODY_511		25.00
+
+body CN_BODY_512		/优惠代办/
+score CN_BODY_512		13.00
+
+body CN_BODY_513		/窝窝传媒/
+score CN_BODY_513		25.00
+
+body CN_BODY_514		/超级网络电话/
+score CN_BODY_514		25.00
+
+body CN_BODY_515		/摩力游/
+score CN_BODY_515		25.00
+
+body CN_BODY_516		/阴阳神课/
+score CN_BODY_516		25.00
+
+body CN_BODY_517		/阴阳气局/
+score CN_BODY_517		25.00
+
+body CN_BODY_518		/算命之法/
+score CN_BODY_518		25.00
+
+body CN_BODY_519		/承接各地/
+score CN_BODY_519		25.00
+
+body CN_BODY_520		/色色科技/
+score CN_BODY_520		25.00
+
+body CN_BODY_521		/友姆网/
+score CN_BODY_521		25.00
+
+body CN_BODY_522		/麻纺织/
+score CN_BODY_522		25.00
+
+body CN_BODY_523		/天禄网/
+score CN_BODY_523		25.00
+
+body CN_BODY_524		/移民新政策/
+score CN_BODY_524		25.00
+
+body CN_BODY_525		/代理开票/
+score CN_BODY_525		25.00
+
+body CN_BODY_526		/开票业务/
+score CN_BODY_526		25.00
+
+body CN_BODY_527		/花边绣品/
+score CN_BODY_527		25.00
+
+body CN_BODY_528		/熏蒸证书/
+score CN_BODY_528		25.00
+
+body CN_BODY_529		/企业顾问/
+score CN_BODY_529		10.00
+
+body CN_BODY_530		/商业联合会/
+score CN_BODY_530		25.00
+
+body CN_BODY_531		/培训部/
+score CN_BODY_531		10.00
+
+body CN_BODY_654		/税率/
+score CN_BODY_654		1.00
+
+body CN_BODY_655		/学员/
+score CN_BODY_656		2.50
+
+body CN_BODY_656		/兴隆/
+score CN_BODY_656		1.50
+
+body CN_BODY_657		/午餐/
+score CN_BODY_657		3.00
+
+body CN_BODY_658		/艾思泰科/
+score CN_BODY_658		25.00
+
+body CN_BODY_659		/企业管理/
+score CN_BODY_659		3.50
+
+body CN_BODY_660		/设有/
+score CN_BODY_660		0.50
+
+body CN_BODY_661		/本着/
+score CN_BODY_661		0.50
+
+body CN_BODY_662		/的核心/
+score CN_BODY_662		1.00
+
+body CN_BODY_663		/翻译公司/
+score CN_BODY_663		15.00
+
+body CN_BODY_664		/讲师/
+score CN_BODY_664		2.50
+
+body CN_BODY_760		/进出口/
+score CN_BODY_760		1.50
+
+body CN_BODY_761		/成立多年/
+score CN_BODY_761		2.50
+
+body CN_BODY_762		/公司有/
+score CN_BODY_762		0.50
+
+body CN_BODY_763		/高效/
+score CN_BODY_763		1.00
+
+body CN_BODY_764		/慧聚中国/
+score CN_BODY_764		25.00
+
+body CN_BODY_765		/玉兰油/
+score CN_BODY_765		25.00
+
+body CN_BODY_766		/瑞士军刀/
+score CN_BODY_766		25.00
+
+body CN_BODY_767		/得得网/
+score CN_BODY_767		25.00
+
+body CN_BODY_768		/郑州通慧/
+score CN_BODY_768		25.00
+
+body CN_BODY_769		/比基尼/
+score CN_BODY_769		25.00
+
+body CN_BODY_770		/步骤/
+score CN_BODY_770		1.00
+
+body CN_BODY_771		/代开发票/
+score CN_BODY_771		25.00
+
+body CN_BODY_772		/向外代开/
+score CN_BODY_772		25.00
+
+body CN_BODY_773		/对外代开/
+score CN_BODY_773		25.00
+
+body CN_BODY_774		/优惠代开/
+score CN_BODY_774		25.00
+
+body CN_BODY_775		/绝对真票/
+score CN_BODY_775		25.00
+
+body CN_BODY_776		/优惠外开/
+score CN_BODY_776		25.00
+
+body CN_BODY_777		/是真票/
+score CN_BODY_777		25.00
+
+body CN_BODY_778		/发票代开/
+score CN_BODY_778		25.00
+
+body CN_BODY_779		/百拿网/
+score CN_BODY_779		25.00
+
+body CN_BODY_780		/老同学/
+score CN_BODY_780		3.00
+
+body CN_BODY_781		/老朋友/
+score CN_BODY_781		3.00
+
+body CN_BODY_782		/我的网站/
+score CN_BODY_782		5.00
+
+body CN_BODY_814		/玉米酷/
+score CN_BODY_814		25.00
+
+body CN_BODY_815		/信誉/
+score CN_BODY_815		2.00
+
+body CN_BODY_816		/坚持以“/
+score CN_BODY_816		2.00
+
+body CN_BODY_817		/供应/
+score CN_BODY_817		0.50
+
+body CN_BODY_818		/朋友/
+score CN_BODY_818		1.00
+
+body CN_BODY_819		/实战/
+score CN_BODY_819		3.00
+
+body CN_BODY_820		/填写/
+score CN_BODY_820		1.50
+
+body CN_BODY_821		/管理的/
+score CN_BODY_821		1.50
+
+body CN_BODY_822		/授课/
+score CN_BODY_822		3.00
+
+body CN_BODY_823		/真正做到/
+score CN_BODY_823		2.00
+
+body CN_BODY_824		/联 系/
+score CN_BODY_824		2.00
+
+body CN_BODY_825		/善意/
+score CN_BODY_825		0.50
+
+body CN_BODY_826		/如果您/
+score CN_BODY_826		1.50
+
+body CN_BODY_827		/财源/
+score CN_BODY_827		3.00
+
+body CN_BODY_828		/绩效/
+score CN_BODY_828		0.50
+
+body CN_BODY_829		/这个网站/
+score CN_BODY_829		1.50
+
+body CN_BODY_830		/物流/
+score CN_BODY_830		0.50
+
+body CN_BODY_831		/前景调查/
+score CN_BODY_831		4.00
+
+body CN_BODY_832		/动画片/
+score CN_BODY_832		5.00
+
+body CN_BODY_833		/影视广告/
+score CN_BODY_833		5.00
+
+body CN_BODY_834		/丝路/
+score CN_BODY_834		3.00
+
+body CN_BODY_835		/发票代理/
+score CN_BODY_835		15.00
+
+body CN_BODY_836		/携手共创/
+score CN_BODY_836		15.00
+
+body CN_BODY_837		/共创未来/
+score CN_BODY_837		15.00
+
+body CN_BODY_838		/51696915.cn/
+score CN_BODY_838		25.00
+
+body CN_BODY_839		/核心管理/
+score CN_BODY_839		5.00
+
+body CN_BODY_840		/举办时间/
+score CN_BODY_840		2.00
+
+body CN_BODY_841		/举办地点/
+score CN_BODY_841		2.00
+
+body CN_BODY_842		/供应链管理/
+score CN_BODY_842		25.00
+
+body CN_BODY_843		/管理咨询公司/
+score CN_BODY_843		25.00
+
+body CN_BODY_844		/管理咨询有限公司/
+score CN_BODY_844		25.00
+
+body CN_BODY_9994		/供应链/
+score CN_BODY_9994		5.00
+
+body CN_BODY_9995		/实惠/
+score CN_BODY_9995		3.00
+
+body CN_BODY_9996		/火锅/
+score CN_BODY_9996		5.00
+
+body CN_BODY_9997		/化妆品/
+score CN_BODY_9997		8.00
+
+body CN_BODY_9998		/性交/
+score CN_BODY_9998		2.00
+
+body CN_BODY_9999		/净赚/
+score CN_BODY_9999		1.50
+
+####################### English Body ################################
+
+body EN_BODY_001		/Temorary Login/
+score EN_BODY_001		25.00
+
+body EN_BODY_002		/Temp Password ID/
+score EN_BODY_002		25.00
+
+body EN_BODY_003		/Account Number/
+score EN_BODY_003		25.00
+
+body EN_BODY_004		/Your Login ID/
+score EN_BODY_004		25.00
+
+body EN_BODY_005		/happycards2008.com/
+score EN_BODY_005		25.00
+
+body EN_BODY_006		/uhavepostcard.com/
+score EN_BODY_006		25.00
+
+# ****************************** CN_BODY *********************************
+
+body CH_BODY_001		/減肥/
+score CH_BODY_001 		4.00
+
+body CH_BODY_002		/免費/
+score CH_BODY_002		3.00
+
+body CH_BODY_003	 	/貸款/
+score CH_BODY_003 		3.00
+
+body CH_BODY_004		/減重/
+score CH_BODY_004 		3.00
+
+body CH_BODY_005		/購物/
+score CH_BODY_005		2.500
+
+body CH_BODY_006		/肌膚/
+score CH_BODY_006		4.00
+
+body CH_BODY_007		/資金/
+score CH_BODY_007		2.00
+
+body CH_BODY_008		/低價/
+score CH_BODY_008		2.500
+
+body CH_BODY_009		/開課/
+score CH_BODY_009		4.00
+
+body CH_BODY_010		/利率/
+score CH_BODY_10		1.500
+
+body CH_BODY_011		/信貸/
+score CH_BODY_011		4.00
+
+body CH_BODY_012		/行銷/
+score CH_BODY_012		3.00
+
+body CH_BODY_013		/贊助/
+score CH_BODY_13		3.00
+
+body CH_BODY_014		/俱樂部/
+score CH_BODY_014		4.00
+
+body CH_BODY_015		/饗宴/
+score CH_BODY_015		4.00
+
+body CH_BODY_016		/訂閱/
+score CH_BODY_016		4.00
+
+body CH_BODY_017		/業績/
+score CH_BODY_017		3.00
+
+body CH_BODY_018		/業務/
+score CH_BODY_018		3.00
+
+body CH_BODY_019		/商務/
+score CH_BODY_E_019		2.00
+
+body CH_BODY_020		/會員/
+score CH_BODY_020		3.00
+
+body CH_BODY_021		/(?:女傭|監護工|護士)/
+score CH_BODY_021		5.00
+
+body CH_BODY_022		/歡迎/
+score CH_BODY_022		1.00
+
+body CH_BODY_023		/光臨/
+score CH_BODY_023		2.00
+
+body CH_BODY_024		/討論區/
+score CH_BODY_024		4.00
+
+body CH_BODY_025		/倉儲/
+score CH_BODY_025		4.00
+
+body CH_BODY_026		/女優/
+score CH_BODY_026		25.00
+
+body CH_BODY_027		/禿頭/
+score CH_BODY_027		25.00
+
+body CH_BODY_028		/夢想/
+score CH_BODY_028		25.00
+
+body CH_BODY_029		/康復/
+score CH_BODY_029		25.00
+
+body CH_BODY_030		/特訓/
+score CH_BODY_030		25.00
+
+body CH_BODY_030		/投影機/
+score CH_BODY_030		5.00
+
+body CH_BODY_031		/美帶子/
+score CH_BODY_031		25.00
+
+body CH_BODY_032		/授課方式/
+score CH_BODY_032		25.00
+
+body CH_BODY_033		/演唱會/
+score CH_BODY_033		25.00
+
+body CH_BODY_034		/張田記/
+score CH_BODY_034		25.00
+
+body CH_BODY_035		/高回報/
+score CH_BODY_035		25.00
+
+body CH_BODY_036		/網站推廣/
+score CH_BODY_036		25.00
+
+body CH_BODY_037		/黃人凡/
+score CH_BODY_037		25.00
+
+body CH_BODY_038		/修煉/
+score CH_BODY_038		25.00
+
+body WINDOWOPEN 		/window\.open\(/i
+describe WINDOWOPEN 		javascript: Windows.Open
+score WINDOWOPEN 		8.00

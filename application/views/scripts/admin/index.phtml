@@ -1,0 +1,28 @@
+﻿<div  align="center">
+<br>
+<h2><?php echo $this->translate('Administrator_Login');?></h2>
+<br>
+		<div class="loginform">
+			<div id="topcorners"><div class="cleft"></div><div class="cright"></div></div>
+			<div id="content">
+				<form action="<?php echo $this->url(array('controller'=>'admin','action'=>'login'));?>" method="post">
+				<?php echo $this->form->url?>
+						<table style="margin-left: auto; margin-right: auto;" class="login">
+							<tbody><tr>
+								<td><p class="mtop0 mbottom025"><strong><?php echo $this->form->email?></strong></p></td>
+							</tr>
+							<tr>
+								<td><p class="mtop0 mbottom025"><strong><?php echo $this->form->password?></strong></p></td>
+							</tr>
+							<tr>
+								<td style="padding-top: 10px;"><?php echo $this->form->login?></td>
+							</tr>
+						</tbody>
+						</table>
+						
+					</form>
+			</div>
+			<div id="bottomcorners"><div class="cleft"></div><div class="cright"></div></div>
+		</div>
+</div>
+

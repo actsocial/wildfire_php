@@ -1,0 +1,372 @@
+<div align="center" style="padding-top:40px;">
+<h2><?php echo $this->translate('Client_Campaign_Name_'.$this->campaign_id).$this->translate('Client_WOW Report');?></h2><br/>
+
+<div id="report_tabs" style="display:none;">
+    <ul>
+        <li><a href="#report_board" onclick='tag_filter("")'><span>全部</span></a></li>
+        <?php foreach($this->tagMap as $name => $ids) { ?>
+        <li><a href="#report_board" onclick='tag_filter("<?php echo $ids;?>")'><span><?php echo $name;?></span></a></li>
+        <?php } ?>
+    </ul>
+</div>
+<div id="report_board">
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="report_table">
+    <thead>
+        <tr>
+            <th style="width: 64px"><?php echo $this->translate('Client_Drip Reaction');?></th>
+            <th style="width: 51px"><?php echo $this->translate('Client_Drip Reach');?></th>
+            <th style="width: 60px"><?php echo $this->translate('Client_Drip Date');?></th>
+            <th style="width: 50px"><?php echo $this->translate('Client_Drip Source');?></th>
+            <th style="width: 50px"><?php echo $this->translate('Client_Drip Contact');?></th>
+            <th style="width: 500px"><?php echo $this->translate('Client_Drip Narrative');?></th>
+            <th>TAGS</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+</div>
+
+<!-- report detail dialog -->
+<div id="drip-dialog" style="display: none;">
+    <div id="drip-dialog-content" class="message"></div>
+    <div id="drip-dialog-line" style="display: none; padding-top: 5px; padding-bottom: 5px;"><hr/></div>
+    <div id="drip-dialog-reply" style="display: none;"></div>
+</div>
+
+<!-- consumer detail dialog -->
+<div id="consumer-dialog">
+<div id="consumer-dialog-main" style="display:none;z-index:9;">
+<form id="consumer_dialog_form" name="consumer_dialog_form" action="<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientsavecomment'));?>" method="post">
+<table>
+<tr><td width="30%">
+    <div id="consumer-dialog-content">
+    <div style="padding-left:15px;"><img id="consumer-dialog-photo" src="<?php echo $this->baseUrl();?>/images/no_photo_no_gender.jpg" /></div>
+    <div id="consumer-dialog-name"></div>
+    <div id="consumer-dialog-location"></div>
+    <div id="consumer-dialog-addr"></div>
+    </div>
+</td>
+<td width="70%">
+<div style="padding-bottom:5px;">您有什么想告诉我：</div>
+<table>
+  <tr>
+    <td>主题：</td>
+    <td>
+      <input type="text" id="consumer-dialog-subject" name="subject" value="" style="width:200px;"/>
+      <input type="hidden" id="consumer-dialog-id" name="report_id" value="0" />
+    </td>
+  </tr>
+  <tr>
+    <td>内容：</td>
+    <td><textarea id="consumer-dialog-comment" rows="3" name="content" style="width:200px;"></textarea></td>
+  </tr>
+</table>
+</td></tr>
+</table>
+</form>
+</div>
+</div>
+</div>
+
+<style type="text/css">
+<!--
+
+#report_tabs {
+    width: 850px;
+    border: none;
+    display: none;
+}
+
+#report_board {
+    width: 850px;
+    border: none;
+    display: none;
+}
+
+#report_table {
+    border:1px solid #4297D7;
+    display: none;
+}
+
+#report_table th {
+    font-size: 10px;
+}
+
+#report_table tr.odd {
+    background-color: #f1f1f1;
+}
+
+
+#drip-dialog-content,#drip-dialog-reply {
+    font-size: 13px;
+    line-height: 20px;
+}
+
+#drip-dialog-reply strong,.content strong {
+    color:#5a83d6;
+}
+
+#report_board .reaction {
+    width: 100%;
+    color: #555;
+    height: 50px;
+    line-width: 100%;
+    line-height: 50px;
+    text-align: center;
+    padding-left: 2px;
+    background: url(<?php echo $this->baseUrl();?>/images/message_points.gif) no-repeat left center;
+}
+
+#report_board .reach {
+    width: 100%;
+    height: 40px;
+    padding-left: 15px;
+    padding-top: 10px;
+    float: left;
+    text-align: left;
+    line-width: 50px;
+    line-height: 40px;
+    font-size: 10px;
+    color: #5a83d6;
+    background: url(<?php echo $this->baseUrl();?>/images/message_people.gif) no-repeat left center;
+}
+
+#report_board .date {
+    width: 65px;
+    height: 40px;
+    color: #5a83d6;
+    padding-left: 5px;
+    float: left;
+    text-align: left;
+    line-height: 18px;
+    font-size: 10px;
+    padding-top: 7px;
+    padding-bottom: 10px;
+    background: url(<?php echo $this->baseUrl();?>/images/message_date.gif) no-repeat left center;
+//    font: 10px Verdana,Arial;
+}
+
+#report_board .source {
+    color: #5a83d6;
+    font-size: 11px;
+    text-align: center;
+}
+
+#report_board .content {
+    width: 495px;
+    height: 40px;
+    padding-top: 5px;
+    overflow: hidden;
+    float: left;
+    text-align: left;
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 10px;
+    color: #555;
+    cursor: pointer;
+}
+
+
+#report_board .dataTables_info {
+    float:none;
+}
+
+#report_board .dataTables_paginate {
+    float:none;
+    padding: 5px 0;
+    text-align:center;
+}
+
+#report_board .paging_full_numbers {
+    width: 80% !important;
+}
+
+#report_board .dataTables_length {
+    display: none;
+}
+
+#report_board .dataTables_filter {
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+-->
+</style>
+
+<script type="text/javascript" charset="utf-8">
+
+//dataTables data in JS
+var aDataSet = new Array();
+<?php foreach($this->reportMap as $row) {
+    if (count($row) < 5) {
+        continue;
+    }
+?>
+    aDataSet.push(["<div class='reaction'><?php echo $row['SCORE']==''?'n/a':$row['SCORE'];?></div>",
+                   "<div class='reach'><?php echo $row['FRIENDS']==''?'n/a':$row['FRIENDS'];?></div>",
+                   "<div class='date'><?php echo $row['REPORT_TIME'];?></div>",
+                   "<div class='source'><?php echo $this->translate('Client_Drip Source '.$row['REPORT_SOURCE']);?></div>",
+                   "<div align='center' style='cursor:pointer;' onclick='consumer_detail(<?php echo $row['REPORT_ID'];?>)'><img src='<?php echo $this->baseUrl();?>/images/dashboard_report_contactme.png' /></div>",
+                   "<div class='content' id='content_<?php echo $row['REPORT_ID'];?>' onclick='report_detail(<?php echo $row['REPORT_ID'];?>)'><strong><?php echo $row['CONSUMER_NAME'];?></strong>: <?php echo $this->escape($row['COMMENTS']);?></div>",
+                   "<?php echo $row['TAG_IDS'];?>"]);
+<?php } ?>
+
+//dataTables data in JS
+$(document).ready(function() {
+    //1.jQuery UI Tabs
+    $("#report_tabs").tabs();
+    $("#report_tabs").show();
+    
+    //2.dataTables
+    oTable = $('#report_table').dataTable({
+        "bJQueryUI": true,
+        "bFilter": true,
+        "sPaginationType": "full_numbers",
+        "aaData": aDataSet,
+        "aaSorting": [[2,'desc']],
+        "aoColumns": [
+                      { "sType":"html" },
+                      { "sType":"html" },
+                      { "sType":"html" },
+                      { "sType":"html" },
+                      { "sType":"html", "bSortable":false },
+                      { "sType":"html", "bSortable":false },
+                      { "bVisible":false }],
+        "oLanguage": {
+            "sSearch": "在谈话内容中查询:",
+            "sLengthMenu": "每页显示 _MENU_ 条数据",
+            "sZeroRecords": "没有找到符合条件的数据",
+            "sInfo": "当前显示 _START_ 到 _END_ 条，共 _TOTAL_ 条数据",
+            "sInfoFiltered": "(从总数 _MAX_ 条数据中查找)",
+            "oPaginate" : {
+                "sFirst" : "第一页",
+                "sPrevious" : "前一页",
+                "sNext" : "后一页",
+                "sLast" : "最后一页"
+            }
+        }
+        
+    });
+    $("#report_board").show();
+    $("#report_table").show();
+
+    //search button click event
+    $("#search_button").click( function() {
+        /* Filter on the column (the index) of this element */
+        //alert($("#search_text").val());
+        oTable.fnFilter( $("#search_text").val(), 5 ); //content column index
+    });
+
+    // high light all selectd rows
+//    $('#report_table tr').click( function() {
+//        if ( $(this).hasClass('row_selected') )
+//            $(this).removeClass('row_selected');
+//        else
+//            $(this).addClass('row_selected');
+//    });
+    
+    // high light current selectd rows
+    $("#report_table tbody").click(function(event) {
+        $(oTable.fnSettings().aoData).each(function (){
+            $(this.nTr).removeClass('row_selected');
+        });
+        $(event.target.parentNode.parentNode).addClass('row_selected');
+    });
+
+    //report list dialog
+    $("#drip-dialog").dialog({
+        width:600, 
+        height:250,
+        autoOpen:false, 
+        title:"<?php echo $this->translate('Client_Report Detail');?>", 
+        close: function(event,ui) {
+                $("#drip-dialog-line").hide();
+                $("#drip-dialog-reply").hide();
+            }
+    });
+
+    //consumer dialog
+    $("#consumer-dialog").dialog({
+        title:"用户信息",
+        autoOpen:false,
+        width:450,
+        height:250,
+        resizable: 'false',
+        buttons:{"确认":function(){ $(this).dialog("close"); }},
+        close: function(event,ui) {
+            val = $("#consumer-dialog-comment").attr("value");
+            if (val != '') {
+                //document.consumer_dialog_form.submit();
+                $("#consumer_dialog_form").submit();
+            }
+        }
+    });
+    
+    //ajax to save comment
+    $('#consumer_dialog_form').ajaxForm(
+        function() {
+            alert("提交成功!");
+        }
+    );
+    //
+    var searchText = '<?php echo $this->searchText;?>';
+    if(searchText != ''){
+    	$('#search_text').val(searchText);
+        oTable.fnFilter( $("#search_text").val(), 5 ); //content column index
+    }
+} );
+
+function report_detail(id) {
+    $("#drip-dialog-content").html($("#content_" + id).html());
+    //get reply from ajax
+    $.ajax({
+        type:"POST",
+        url: "<?php echo $this->url(array('controller'=>'dashboard','action'=>'getreply'));?>",
+        data:"report_id="+id,
+        dataType:'json',
+        success: function(json) {
+            if (json != null && json.content != null && json.content != '') {
+                var oldContent = "<strong><?php echo $this->translate('Client_Wildfire Reply');?></strong>: ";
+                $("#drip-dialog-reply").html(oldContent + json.content);
+                $("#drip-dialog-line").show();
+                $("#drip-dialog-reply").show();
+            }
+        }
+    });
+    //open dialog
+    $("#drip-dialog").dialog("open");
+    $("#drip-dialog").dialog('moveToTop');
+}
+
+function consumer_detail(reportId) {
+    $("#consumer-dialog-main").show();
+    $("#consumer-dialog-id").val(reportId);
+    //get reply from ajax
+    $.ajax({
+        type:"POST",
+        url: "<?php echo $this->url(array('controller'=>'dashboard','action'=>'getconsumer'));?>",
+        data:"report_id="+reportId,
+        dataType:'json',
+        success: function(json) {
+            //alert($("#consumer-dialog-photo").attr("src"));
+            //alert(json.id);
+            if (json.gender == "female" || json.gender == "male") {
+                $("#consumer-dialog-photo").attr("src","<?php echo $this->baseUrl();?>/images/no_photo_" + json.gender + ".jpg");
+            }
+            $("#consumer-dialog-location").html(json.province + "-" + json.city);
+            $("#consumer-dialog-addr").html(json.address);
+        }
+    });
+    $("#consumer-dialog").dialog("open");
+    $("#consumer-dialog").dialog('moveToTop');
+}
+
+function tag_filter(ids) {
+    oTable.fnFilter(ids, 6, false); //tagIds column index
+}
+
+</script>
+
+
+

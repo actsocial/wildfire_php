@@ -1,0 +1,60 @@
+<div style="padding-bottom:40px;"></div>
+<div class="content" style="background-color:#fff;padding-top:0;">
+	<form id='form' name='form' action="<?php echo $this->url(array('controller'=>'gift','action'=>'admintest'));?>" method="post">
+		<div id="product_id_<?php echo $this->product['id']; ?>" >
+			<p>
+			名称：<input id="name" name="name" value="<?php echo $this->product['name']?>" style="overflow-x: visible; width: 200px;">
+			简述：<input id="description" name="description" value="<?php echo $this->product['description']?>" style="overflow-x: visible; width: 60px;">
+			产品ID：<input id="product_id" name="product_id" value="<?php echo $this->product['product_id']?>" style="overflow-x: visible; width: 60px;">
+			</p>
+			<p>
+			积分：<input id="point" name="point" value="<?php echo $this->product['point']?>" style="overflow-x: visible; width: 60px;">
+			库存：<input id="state" name="state" value="<?php echo $this->product['state']?>" style="overflow-x: visible; width: 60px;">
+			货源：<input id="source" name="source" value="<?php echo $this->product['source']?>" style="overflow-x: visible; width: 60px;">			
+			种类：<input id="category" name="category" value="<?php echo $this->product['category']?>" style="overflow-x: visible; width: 60px;">
+			子类：<input id="subcategory" name="subcategory" value="<?php echo $this->product['subcategory']?>" style="overflow-x: visible; width: 60px;">
+			</p>
+			<p>
+			地址：<input id="url" name="url" value="<?php echo $this->product['url']?>" style="overflow-x: visible; width: 500px;">&nbsp;<a href="<?php echo $this->product['url']?>">点击链接</a>
+			</p>
+			<div class="clear"></div>
+			
+			<p>描述：</p>
+			<div id='long_desc' name='long_desc' style="padding: 20px; padding-top:0px; margin-left: 20px; width:770px;">
+			<?php $this->oFCKeditor->create();?>
+			</div>
+			
+			<input type="hidden" id="id" name='id' value='<?php echo $this->product['id'];?>' />
+			<input type="hidden" id="long_desc_content" name="long_desc_content" value="" />
+			<div id="notice" style="padding-left: 10px; display:none; font-size: 15px; color: red;" ></div>
+			
+			<div class="buttons-bar" style="padding-top: 10px;">
+			<input type="submit" value=<?php echo $this->translate('保存并预览');?> />
+			<!--<a style="width:165px;" href='#' onclick = 'javascript:save()'><?php echo $this->translate('保存并预览');?></a>
+			-->
+			<a style="width:165px;" href="<?php echo $this->url(array('controller'=>'gift','action'=>'adminlistgifts')); ?>"> <?php echo $this->translate('返回');?></a>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+function save(){
+//	$('notice').style.display = "";
+//	$('notice').innerHTML = "Please wait...";
+//	alert($('long_desc').value);
+//	var url = '<?php echo $this->url(array('controller'=>'gift','action'=>'admineditgift'));?>';  
+//	var pars = Form.serialize($('form'));  
+//	alert(pars);
+//	new Ajax.Request(     
+//		url,      
+//		{     
+//		method: 'post',      
+//		parameters: pars,      
+//		onSuccess: function(){
+//				$('notice').innerHTML = "The product info has been saved.";
+//			}    
+//		}
+//	);
+}
+</script>

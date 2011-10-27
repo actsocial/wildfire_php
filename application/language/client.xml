@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+        <tu tuid="Client_Kraft_Tab_Impression">
+            <tuv xml:lang="zh">
+                <seg>口碑印象</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Impressions</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Kraft_Tab_Report_Drip">
+            <tuv xml:lang="zh">
+                <seg>报告展示</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Report Drip</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Kraft_Tab_Cloud_Tag">
+            <tuv xml:lang="zh">
+                <seg>标签云</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Tag Cloud</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Kraft_Tab_Report_Category">
+            <tuv xml:lang="zh">
+                <seg>分类报告</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Report Category</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Kraft_Tab_Report_Static">
+            <tuv xml:lang="zh">
+                <seg>反映强度</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Reaction</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Kraft_Tab_Report_Message">
+            <tuv xml:lang="zh">
+                <seg>消息中心</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Message</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Login">
+            <tuv xml:lang="zh">
+                <seg>客户登录</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Client Login</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Change_Campaigns">
+            <tuv xml:lang="zh">
+                <seg>更换活动</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Campaigns</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Campaign_Name_13">
+            <tuv xml:lang="zh">
+                <seg>百利甜酒</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Rexona Deodrant</seg>
+            </tuv>
+        </tu>
+         <tu tuid="Client_Campaign_Name_10">
+            <tuv xml:lang="zh">
+                <seg>舒耐抑汗香体</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Rexona Deodrant</seg>
+            </tuv>
+        </tu>
+         <tu tuid="Client_Campaign_Name_9">
+            <tuv xml:lang="zh">
+                <seg>金宝汤"浓汤真肉"</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Campbells</seg>
+            </tuv>
+        </tu>
+       <tu tuid="Client_Campaign_Name_8">
+            <tuv xml:lang="zh">
+                <seg>力士洗护发产品</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>LUX Hair</seg>
+            </tuv>
+        </tu>
+       <tu tuid="Client_Campaign_Name_7">
+            <tuv xml:lang="zh">
+                <seg>金宝汤"浓汤真肉"</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Campbells</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Campaign_Name_6">
+            <tuv xml:lang="zh">
+                <seg>卡夫优冠早餐饼</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Kraft</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Campaign_Name_5">
+            <tuv xml:lang="zh">
+                <seg>普瑞来净手消毒液</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>PURELL</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Campaign_Name_4">
+            <tuv xml:lang="zh">
+                <seg>普瑞来净手消毒液</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>PURELL</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Campaign_Name_3">
+            <tuv xml:lang="zh">
+                <seg>Bugslock驱蚊环</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Bugslock</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Campaign_Name_2">
+            <tuv xml:lang="zh">
+                <seg>蓝泉书店</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Blue Fountain</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Campaign_Name_1">
+            <tuv xml:lang="zh">
+                <seg>益等果汁吧</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Eden Juice Bar</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Impressions">
+            <tuv xml:lang="zh">
+                <seg>活动口碑印象</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg> WOM Receivers</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_WOW Report">
+            <tuv xml:lang="zh">
+                <seg>活动口碑报告</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg> WOM Report</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Spraks Comments">
+            <tuv xml:lang="zh">
+                <seg>活动会员评价</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg> Sparks Reaction</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Tag Cloud">
+            <tuv xml:lang="zh">
+                <seg>活动标签云</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg> Tag Cloud</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Report Positive">
+            <tuv xml:lang="zh">
+                <seg>积极的</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Positive</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Report Negative">
+            <tuv xml:lang="zh">
+                <seg>消极的</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Negative</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Report No opinion">
+            <tuv xml:lang="zh">
+                <seg>不作评价</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>No opinion</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Drip Reaction">
+            <tuv xml:lang="zh">
+                <seg>评价</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Reaction</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Drip Reach">
+            <tuv xml:lang="zh">
+                <seg>谈论数</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Reach</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Drip Date">
+            <tuv xml:lang="zh">
+                <seg>时间</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Date</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Drip Source">
+            <tuv xml:lang="zh">
+                <seg>来源</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Source</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Drip Contact">
+            <tuv xml:lang="zh">
+                <seg>联系我</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Contact Me</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Drip Source email">
+            <tuv xml:lang="zh">
+                <seg>邮件</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Email</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Drip Source sms">
+            <tuv xml:lang="zh">
+                <seg>短信</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>SMS</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Drip Source application">
+            <tuv xml:lang="zh">
+                <seg>社区</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Community</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Drip Source phone">
+            <tuv xml:lang="zh">
+                <seg>电话</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Telephone</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Drip Narrative">
+            <tuv xml:lang="zh">
+                <seg>谈话内容</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Narrative</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Tip Reaction">
+            <tuv xml:lang="zh">
+                <seg>谈话中，人们总体的反映</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Reaction from the people sparks talked to.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Tip Reach">
+            <tuv xml:lang="zh">
+                <seg>和多少人谈论过？</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>How many people did sparks talk to?</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Wildfire Reply">
+            <tuv xml:lang="zh">
+                <seg>星星火回复</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Wildfire Reply</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Report Detail">
+            <tuv xml:lang="zh">
+                <seg>口碑报告</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Report Detail</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Tag_Cloud enter tag">
+            <tuv xml:lang="zh">
+                <seg>输入标签...</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Enter a tag...</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Tag_Cloud Search Reports">
+            <tuv xml:lang="zh">
+                <seg>查找报告</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Search Reports</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message InBox">
+            <tuv xml:lang="zh">
+                <seg>收件箱</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>In Box</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message InBox NoMessage">
+            <tuv xml:lang="zh">
+                <seg>您没有任何信息。</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>You don't have message yet.</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_List">
+            <tuv xml:lang="zh">
+                <seg>消息列表</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Message List</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Reply_List">
+            <tuv xml:lang="zh">
+                <seg>回复列表</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Reply List</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Add">
+            <tuv xml:lang="zh">
+                <seg>新消息</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Add New Message</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_From_Type">
+            <tuv xml:lang="zh">
+                <seg>来自</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>From</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_From_Type Spark">
+            <tuv xml:lang="zh">
+                <seg>会员</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Spark</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_From_Type Wildfire">
+            <tuv xml:lang="zh">
+                <seg>星星火</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Wildfire</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_From_ID">
+            <tuv xml:lang="zh">
+                <seg>发信人</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Sender</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_To_Type">
+            <tuv xml:lang="zh">
+                <seg>发给</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>From</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_To_ID">
+            <tuv xml:lang="zh">
+                <seg>收信人</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Receiver</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Subject">
+            <tuv xml:lang="zh">
+                <seg>标题</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Subject</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Type">
+            <tuv xml:lang="zh">
+                <seg>类型</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Type</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Type Question">
+            <tuv xml:lang="zh">
+                <seg>提问</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Question</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Type Suggestion">
+            <tuv xml:lang="zh">
+                <seg>建议</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Suggestion</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Type Report">
+            <tuv xml:lang="zh">
+                <seg>客户提问</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Client Question</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Content">
+            <tuv xml:lang="zh">
+                <seg>内容</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Content</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Date">
+            <tuv xml:lang="zh">
+                <seg>日期</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Date</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Creator">
+            <tuv xml:lang="zh">
+                <seg>创建者</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Creator</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Reply">
+            <tuv xml:lang="zh">
+                <seg>增加新回复</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Add New Reply</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Reply_Prefix">
+            <tuv xml:lang="zh">
+                <seg>回复: </seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Reply: </seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Expand_All">
+            <tuv xml:lang="zh">
+                <seg>全部展开</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Expand All</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Collapse_All">
+            <tuv xml:lang="zh">
+                <seg>全部收缩</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Collapse All</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Expand_All_Reply">
+            <tuv xml:lang="zh">
+                <seg>展开回复</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Expand All Reply</seg>
+            </tuv>
+        </tu>
+        <tu tuid="Client_Message_Collapse_All_Reply">
+            <tuv xml:lang="zh">
+                <seg>收缩回复</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>Collapse All Reply</seg>
+            </tuv>
+        </tu>
+	</body>
+</tmx>

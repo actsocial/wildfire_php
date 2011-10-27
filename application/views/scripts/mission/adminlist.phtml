@@ -1,0 +1,51 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2>New Mission</h2>
+<br/>
+  <p>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'mission','action'=>'adminadd'));?>">New Mission</a></span>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'mission','action'=>'adminlist'));?>">Mission List</a></span>
+  </p>
+  <br/>
+  <table width="800" id="mission-table">
+    <tr>
+        <th width="5%">Index</th>
+        <th width="10%">Type</th>
+        <th width="10%">Brand</th>
+        <th width="15%">Title</th>
+        <th>Description</th>
+        <th width="5%">Start Date</th>
+        <th width="5%">End Date</th>
+        <th width="5%">&nbsp;</th>
+    </tr>
+    <?php $count = 1; foreach($this->missions as $mission) : ?>
+    <tr style="<?php if($count%2 != 0){ echo 'background-color: #EEF9EB'; }?>">
+        <td><?php echo $count++;?></td>
+        <td><img src="<?php echo $this->baseUrl();?>/images/mission/type_<?php echo strtolower($mission->type);?>.png" /></td>
+        <td><img src="<?php echo $this->url(array('controller'=>'brand','action'=>'getimage','id'=>$mission->brand_id));?>" /></td>
+        <td><?php echo $this->escape($mission->title);?></td>
+        <td><?php echo $this->escape($mission->intro);?></td>
+        <td><?php echo $this->escape($mission->start_date);?></td>
+        <td><?php echo $this->escape($mission->end_date);?></td>
+        <td align="left">
+            <a href="<?php echo $this->url(array('controller'=>'mission','action'=>'admindelete', 'id'=>$mission->id));?>" onclick="return deletemission();">
+              Delete
+            </a>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+  </table>
+</div>
+
+<style type="text/css">
+<!--
+#mission-table td {
+    padding: 5px;
+}
+-->
+</style>
+<script type="text/javascript">
+function deletemission() {
+    return confirm('确实要删除吗？');
+}
+</script>

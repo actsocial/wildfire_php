@@ -1,0 +1,6 @@
+<td><?php echo $this->escape($this->campaign->name);?></td>
+<td><?php echo $this->escape($this->campaignInvitation['create_date']);?></td>
+<td id='state_<?php echo $this->campaignInvitation['id']?>'><?php echo $this->escape($this->campaignInvitation['state']);?></td>
+<td>
+<input onclick='acceptInvitation(<?php echo $this->campaignInvitation['id']?>);' type='button' value='接受' id='accept' <?php if($this->campaignInvitation['state']=='ACCEPTED'){ echo 'disabled';}?>>
+</td>

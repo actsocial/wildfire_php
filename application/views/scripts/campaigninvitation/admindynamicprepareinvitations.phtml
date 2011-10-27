@@ -1,0 +1,120 @@
+<div style="padding-bottom:40px;"></div>
+<div class="content" style="background-color:#fff;padding-top:0;">
+	<p align="right"> >><a href="<?php echo $this->url(array('controller'=>'admin','action'=>'showsmtpsetting'));?>"><?php echo $this->translate('Admin_SMTP_SETTING')?></a></p>
+    <p><a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'));?>">List templates</a>|<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplate'));?>">Add templates</a></p>
+	<h1><?php echo $this->translate("Admin_Send_emails");?>(From: <?php echo $this->emailServer;?>)</h1>
+	<form id='form' action="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'admindynamicsendinvitations'));?>" method="post">
+		
+		<?php echo $this->translate("Admin_EmailCategory");?>
+		<?php echo $this->mailForm->emailCategory; ?>
+		<div style="clear: both; "></div>
+		
+		<?php echo $this->translate("INVITATION_MAIL_RECIPIENT");?><?php echo $this->translate('Email_Address_Notice');?>
+		<?php echo $this->mailForm->emailList; ?>
+		<div style="clear: both; "></div>
+		<?php echo $this->translate("INVITATION_MAIL_TEMPLATE");?><br/>
+		<select name='emailTemplate'>
+		<?php 
+		   foreach ($this->emailTemplates as $email){
+		   	   echo "<option value='$email[id]'>$email[subject]</option>";
+		   }
+		?>
+		</select><br/><br/>
+		<!--<?php echo $this->translate("INVITATION_MAIL_SUBJECT");?>
+		<?php echo $this->mailForm->subject; ?>
+		<div style="clear: both; "></div>
+		
+		<?php echo $this->translate("INVITATION_MAIL_CONTENT_ADMIN");?><?php echo $this->translate('Email_Content_Notice');?> &nbsp;&nbsp;&nbsp;
+		<a href="#" onclick="javascript:showmessage();">text</a>/<a href="#" onclick="javascript:showhtmlmessage();">html</a>
+		<?php echo $this->mailForm->message; ?>
+		<div style="clear: both; "></div>
+		
+		<div id='htmlMessage' style="padding: 20px; padding-top:0px; margin-left: 20px; width:770px; display:none;">
+		<?php $this->oFCKeditor->create();?>
+		</div>-->
+		<div style="clear: both; "></div>
+		
+		<div id='campaignId_title'><?php echo $this->translate("Admin_Select_CAMPAIGN");?></div>
+		<?php echo $this->mailForm->campaignId; ?>
+		<div style="clear: both; "></div>
+		
+		<div id='code_source_title'><?php echo $this->translate("Code_source: (like 'SIGNUP')");?></div>
+		<?php echo $this->mailForm->code_source; ?>
+		<div style="clear: both; "></div>
+		<input type="hidden" id="startDate" name="startDate" value="<?php echo $this->startDate;?>" />
+		
+		
+		<div style="clear: both; "></div>
+		<div id="testDiv">email</div>
+		<?php echo $this->mailForm->submit; ?>
+	</form>
+</div>
+
+<script type="text/javascript">
+function showhtmlmessage(){
+	$('htmlMessage').style.display = "";
+	$('message').style.display = "none";
+	$('message').value = "";
+}
+function showmessage(){
+	$('message').style.display = "";
+	$('htmlMessage').style.display = "none";
+	$('htmlMessage').value = "";
+}
+function ChangeOption(Interface){
+	var inter = $(Interface).value;
+	switch(inter){
+		case 'Invite non-sparks to join campaign':
+			$('campaignId').style.display = "";
+			$('campaignId_title').style.display = "";
+			$('code_source').style.display = "";
+			$('code_source_title').style.display = "";	
+			break;
+		case 'Invite sparks to join campaign':
+			$('campaignId').style.display = "";
+			$('campaignId_title').style.display = "";
+			$('code_source').style.display = "none";
+			$('code_source_title').style.display = "none";
+			break;
+		case 'Send mail to sparks':
+			$('campaignId').style.display = "none";
+			$('campaignId_title').style.display = "none";
+			$('code_source').style.display = "none";
+			$('code_source_title').style.display = "none";
+			break;
+			
+	}
+//	alert($(Interface).value);
+}
+function datetable()
+{
+	var list = new Array();
+	var strtable="";
+	list = populate();
+	for(var i=0;i<list.length;i++)
+	{
+		strtable = strtable+"<tr>";
+		for(var j=0;j<list[i].length;j++)
+		{
+			strtable = strtable+"<td>"+list[i][j]+"</td>";
+		}
+		strtable = strtable+"</tr>";
+	}
+	strtable = "<table border=1>"+strtable+"</table>";
+	jQuery("#testDiv").html(strtable);
+}
+function populate(){
+	var text = jQuery("#emailList").val();
+	var data = new Array();
+	var rows =  text.split("\n");
+	for (var i=0;i<rows.length-1;i++){
+		row = rows[i];
+		var cells = row.split("\t");
+		for (var j=0;j<cells.length;j++){
+			var cell = cells[j];
+		}
+		data.push(cells);
+	}
+	return data;
+}
+</script>

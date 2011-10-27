@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence"
+		adminlang="en-us" srclang="de-de" o-tmf="abc" creationtool="XYZTool">
+	</header>
+	<body>
+		<tu tuid='Invitation_Email_subject'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你的朋友 ?EMAIL?，邀请你加入星星火社区]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Invitation to Wildfire from ?EMAIL?]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Invitation_Email_body'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你的朋友 ?USERNAME?，邀请你加入星星火社区！
+
+你的朋友 ?USERNAME? 给你留言:
+
+"?MESSAGE?"
+
+成为星星火社区的一员，你将会被邀请参加其他各种非常棒的口碑活动。在这些活动中你可以：
+
+  - 根据你的兴趣可以得到最新的产品和服务 
+  - 你可以任意的使用我们提供的产品
+  - 与朋友谈论你的体验
+  - 让我们了解你们的需要
+
+星星火为你提供最自然的、真实的口碑！同时我们将保护你的个人隐私，不会公开你的个人信息。
+
+请打开如下地址进行注册：
+http://home.xingxinghuo.cn/public/register/register/a/?AUTHCODE?
+
+期待你加入我们！
+
+星星火——中国口碑社区
+
+----------------------------------------------
+
+如果有任何问题请联系我们：
+400-600-8707
+yangyang@wildfire.asia
+
+
+
+?USERNAME? has invited you to join the Wildfire word-of-mouth community. 
+
+?USERNAME? has the following message for you:
+
+"?MESSAGE?"
+
+As a Wildfire Member, you'll also be invited to other natural word-of-mouth campaigns where you can:
+
+  - Receive free products and services, selected for your interests
+  - Use them as you normally would
+  - Talk about them as you normally would
+  - Let us know what your friends have to say
+
+Wildfire is all about natural, authentic word-of-mouth - no pyramid schemes or spamming. And don't worry, we respect you privacy and won't share your personal information or spam you.
+
+Just click the following link to join: 
+http://home.xingxinghuo.cn/public/register/register/a/?AUTHCODE?
+
+We hope to see you soon!
+
+- Your friends at Wildfire.
+
+----------------------------------------------
+Contact us if you have any questions:
+400-600-8707
+yangyang@wildfire.asia]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[?USERNAME? has invited you to join the Wildfire word-of-mouth community. 
+
+?USERNAME? has the following message for you:
+
+"?MESSAGE?"
+
+As a Wildfire Member, you'll also be invited to other natural word-of-mouth campaigns where you can:
+
+  - Receive free products and services, selected for your interests
+  - Use them as you normally would
+  - Talk about them as you normally would
+  - Let us know what your friends have to say
+
+Wildfire is all about natural, authentic word-of-mouth - no pyramid schemes or spamming. And don't worry, we respect you privacy and won't share your personal information or spam you.
+
+Just click the following link to join: 
+http://home.xingxinghuo.cn/public/register/register/a/?AUTHCODE?
+
+We hope to see you soon!
+
+- Your friends at Wildfire.
+
+----------------------------------------------
+Contact us if you have any questions:
+400-600-8707
+yangyang@wildfire.asia
+
+
+
+
+你的朋友 ?USERNAME?，邀请你加入星星火社区！
+
+你的朋友 ?USERNAME? 给你留言:
+
+"?MESSAGE?"
+
+成为星星火社区的一员，你将会被邀请参加其他各种非常棒的口碑活动。在这些活动中你可以：
+
+  - 根据你的兴趣可以得到最新的产品和服务 
+  - 你可以任意的使用我们提供的产品
+  - 与朋友谈论你的体验
+  - 让我们了解你们的需要
+
+星星火为你提供最自然的、真实的口碑！同时我们将保护你的个人隐私，不会公开你的个人信息。
+
+请打开如下地址进行注册：
+http://home.xingxinghuo.cn/public/register/register/a/?AUTHCODE?
+
+期待你加入我们！
+
+星星火——中国口碑社区
+
+----------------------------------------------
+
+如果有任何问题请联系我们：
+400-600-8707
+yangyang@wildfire.asia]]></seg>
+			</tuv>
+		</tu>
+		
+		
+		<tu tuid='Reset_Your_Wildfire_Password_subject'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[重置星星火账号密码]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Reset Your Wildfire Password]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Reset_Your_Wildfire_Password_body'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[请你在24小时内点击下面的链接，修改你的星星火账号密码:
+
+?RESETPASSWORDLINK? 
+
+如果你错误的接收到该邮件，请忽略它或与我们联系。
+
+谢谢!
+
+----------------------------------------------
+如果你有任何问题请联系：
+电话：400-600-8707
+邮箱：home@wildfire.asia
+QQ：852666147]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[To reset the password for your Wildfire account, please click 
+the following link and enter your new password within 24 hours:
+
+?RESETPASSWORDLINK? 
+
+Believe you received this e-mail in error? Please ignore it, or 
+contact us.
+
+Thank you!
+
+
+星星火 Wildfire
+www.xingxinghuo.cn
+----------------------------------------------
+Contact us if you have any questions:
+400-600-8707
+yangyang@wildfire.asia]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='ENABLE_ACCOUNT_subject'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[激活你的星星火账户]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='ENABLE_ACCOUNT_body'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[请你在24小时内点击下面的链接，激活你的账户:
+
+?ENABLEACCOUNTLINK? 
+
+如果你错误的接收到该邮件，请忽略它或与我们联系。
+
+谢谢!
+
+----------------------------------------------
+如果你有任何问题请联系：
+电话：400-600-8707
+邮箱：home@wildfire.asia
+QQ：852666147]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+
+
+星星火 Wildfire
+www.xingxinghuo.cn
+----------------------------------------------
+Contact us if you have any questions:
+400-600-8707
+yangyang@wildfire.asia]]></seg>
+			</tuv>
+		</tu>		
+		
+		<tu tuid='Admin_Reply_WOM_Report_Subject'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你提交星星火活动报告的回复]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[WOM Spark Report Response]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Reply_WOM_Report_Body_zh'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+你的交谈内容：
+
+?YOURSTORY?
+
+我们给你的回复：
+
+?MYRESPONSE?
+
+
+
+你的朋友 Alice
+星星火
+
+
+----------------------------------------------------------------------------------
+有新的口碑报告要提交了吗？快来这里提交赢取更多积分吧！
+http://home.xingxinghuo.cn/public/home
+
+参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
+Wildfire 星星火社区 
+http://www.xingxinghuo.cn
+
+如果有任何问题，欢迎随时联系我们！
+400-600-8707
+yangyang@wildfire.asia]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+你的交谈内容：
+
+?YOURSTORY?
+
+我们给你的回复：
+
+?MYRESPONSE?
+
+
+
+你的朋友 Alice
+星星火
+
+
+----------------------------------------------------------------------------------
+有新的口碑报告要提交了吗？快来这里提交赢取更多积分吧！
+http://home.xingxinghuo.cn/public/home
+
+参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
+Wildfire 星星火社区 
+http://www.xingxinghuo.cn
+
+如果有任何问题，欢迎随时联系我们！
+400-600-8707
+yangyang@wildfire.asia]]></seg>
+			</tuv>
+		</tu>
+
+
+<tu tuid='Admin_Reply_WOM_Report_Body_en'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Your Story:
+
+?YOURSTORY?
+
+Our Response:
+
+?MYRESPONSE?
+
+Sincerely,
+Yangyang
+
+----------------------------------------------------------------------------------------------------------------------
+If you’ve recently talked to your friends about the product, you can submit a Spark Report here and earn more points!
+http://home.xingxinghuo.cn/public/home
+
+Contact us if you have any questions:
+400-600-8707
+yangyang@wildfire.asia
+
+星星火 Wildfire
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Your Story:
+
+?YOURSTORY?
+
+Our Response:
+
+?MYRESPONSE?
+
+Sincerely,
+Yangyang
+
+----------------------------------------------------------------------------------------------------------------------
+If you’ve recently talked to your friends about the product, you can submit a Spark Report here and earn more points!
+http://home.xingxinghuo.cn/public/home
+
+Contact us if you have any questions:
+400-600-8707
+yangyang@wildfire.asia
+
+星星火 Wildfire
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+		</tu>
+		
+		
+		
+		<tu tuid='Admin_Reply_WOM_URLReport_Subject_zh'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你提交星星火分享网址的回复]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[你提交星星火分享网址的回复]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Reply_WOM_URLReport_Subject_en'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[WOM Spark URL Response]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[WOM Spark URL Response]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Reply_WOM_URLReport_Body_zh'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+你提交的链接：
+
+?YOURSTORY?
+
+我们给你的回复：
+
+?MYRESPONSE?
+
+
+
+你的朋友 杨杨
+星星火
+
+----------------------------------------------------------------------------------
+参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
+Wildfire 星星火社区 
+http://www.xingxinghuo.cn
+
+如果有任何问题，欢迎随时联系我们！
+400-600-8707
+yangyang@wildfire.asia]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+你提交的链接：
+
+?YOURSTORY?
+
+我们给你的回复：
+
+?MYRESPONSE?
+
+
+
+你的朋友 杨杨
+星星火
+
+----------------------------------------------------------------------------------
+参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
+Wildfire 星星火社区 
+http://www.xingxinghuo.cn
+
+如果有任何问题，欢迎随时联系我们！
+400-600-8707
+yangyang@wildfire.asia]]></seg>
+			</tuv>
+		</tu>
+
+
+<tu tuid='Admin_Reply_WOM_URLReport_Body_en'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Your URL:
+
+?YOURSTORY?
+
+Our Response:
+
+?MYRESPONSE?
+
+Sincerely,
+Yangyang
+
+----------------------------------------------------------------------------------------------------------------------
+Contact us if you have any questions:
+400-600-8707
+yangyang@wildfire.asia
+
+星星火 Wildfire
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Your URL:
+
+?YOURSTORY?
+
+Our Response:
+
+?MYRESPONSE?
+
+Sincerely,
+Yangyang
+
+----------------------------------------------------------------------------------------------------------------------
+Contact us if you have any questions:
+400-600-8707
+yangyang@wildfire.asia
+
+星星火 Wildfire
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+		</tu>
+		
+		
+		
+		
+		<tu tuid='Admin_Reply_WOM_IMAGEReport_Subject_zh'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你提交星星火分享图片的回复]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[你提交星星火分享图片的回复]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Reply_WOM_IMAGEReport_Subject_en'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[WOM Spark Image Response]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[WOM Spark Image Response]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Reply_WOM_IMAGEReport_Body_zh'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+你好，?CAMPAIGN?活动的分享图片回复：
+
+?MYRESPONSE?
+
+
+你的朋友 杨杨
+星星火
+
+----------------------------------------------------------------------------------
+参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
+Wildfire 星星火社区 
+http://www.xingxinghuo.cn
+
+如果有任何问题，欢迎随时联系我们！
+400-600-8707
+yangyang@wildfire.asia]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[亲爱的?USERNAME?，
+
+你好，?CAMPAIGN?活动的分享图片回复：
+
+?MYRESPONSE?
+
+
+你的朋友 杨杨
+星星火
+
+----------------------------------------------------------------------------------
+参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
+Wildfire 星星火社区 
+http://www.xingxinghuo.cn
+
+如果有任何问题，欢迎随时联系我们！
+400-600-8707
+yangyang@wildfire.asia]]></seg>
+			</tuv>
+		</tu>
+
+
+<tu tuid='Admin_Reply_WOM_IMAGEReport_Body_en'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+?MYRESPONSE?
+
+Sincerely,
+Yangyang
+
+----------------------------------------------------------------------------------------------------------------------
+Contact us if you have any questions:
+400-600-8707
+yangyang@wildfire.asia
+
+星星火 Wildfire
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+?MYRESPONSE?
+
+Sincerely,
+Yangyang
+
+----------------------------------------------------------------------------------------------------------------------
+Contact us if you have any questions:
+400-600-8707
+yangyang@wildfire.asia
+
+星星火 Wildfire
+www.xingxinghuo.cn]]></seg>
+			</tuv>
+		</tu>
+		
+		
+		
+		
+	</body>
+</tmx>

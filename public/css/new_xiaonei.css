@@ -1,0 +1,545 @@
+.container {
+	width: 790px;
+	background:url(../images/new_xiaonei/main_bk_repeat.gif) repeat-y left top;
+	float: left;
+	font-family: "Microsoft YaHei", "simsun", "Palatino Linotype";
+}
+.container input,
+.container textarea,
+.container select {
+	font-family: "Microsoft YaHei", "simsun", "Palatino Linotype";
+	font-size: 12px;
+	color: #333;
+}
+.header {
+	width: 790px;
+	height: 85px;
+	background: url(../images/new_xiaonei/top_bar_bk.gif) no-repeat left top;
+	float: left;
+}
+.header .logo {
+	float: left;
+	padding-top: 30px;
+	height: 37px;
+	padding-left: 20px;
+}
+.header ul {
+	float: left;
+	margin:0;
+	padding:0;
+	padding-top: 35px;
+	padding-left: 20px;
+	list-style-type: none;
+}
+.header ul li {
+	float: left;
+}
+.header ul li a {
+	display: block;
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 10px;
+	font-size: 14px;
+	color: #999;
+	text-decoration: none;
+}
+.header ul li.selected a {
+	background:url(../images/new_xiaonei/top_bar_active.gif) no-repeat center bottom;
+	color: #333;
+	font-weight: bold;
+}
+.header .personal-info {
+	float: right;
+	width: 300px;
+	padding-right: 20px;
+	padding-top: 20px;
+}
+.header .personal-info img {
+	float: right;
+	clear: right;
+}
+.header .personal-info .points {
+	float: right;
+	width: 240px;
+	padding-right: 10px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	text-align: right;
+	font-size: 14px;
+	color: #666;
+}
+.header .personal-info .points strong {
+	color: #f00;
+}
+.header .personal-info .status {
+	float: right;
+	width: 240px;
+	padding-right: 10px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	text-align: right;
+}
+.header .personal-info .status a {
+	color:#005eac;
+	text-decoration:none;
+}
+.content {
+	width: 790px;
+	min-height: 300px;
+	float:left;
+	background:url(../images/new_xiaonei/main_bk.gif) no-repeat left top;
+}
+.content .campaigns {
+	width: 441px;
+	padding-left: 19px;
+	float: left;
+}
+.content .campaigns .campaign {
+	width: 441px;
+	float: left;
+	background: #eee;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	background: url(../images/new_xiaonei/campaign_bottom.gif) no-repeat left bottom;
+	padding-bottom: 11px;
+}
+.content .campaigns .campaign h1 {
+	margin:0;
+	padding:0;
+	float: left;
+	width: 441px;
+}
+.content .campaigns .campaign ul {
+	margin:0;
+	padding:8px 0;
+	width: 441px;
+	float: left;
+	list-style-type: none;
+	background: url(../images/new_xiaonei/campaign_bk.gif) repeat-y left top;
+}
+.content .campaigns .campaign ul li {
+	height: 26px;
+	float: left;
+	clear: left;
+	line-height: 26px;
+	width: 411px;
+	padding-left: 30px;
+	background: url(../images/new_xiaonei/arrow.gif) no-repeat 20px center;
+}
+.content .campaigns .campaign ul li a {
+	color: #005eac;
+	text-decoration: none;
+	font-size: 14px;
+}
+.content .campaigns .campaign ul li a:hover {
+	color: #f00;
+}
+.content .notices {
+	float: right;
+	width: 290px;
+	padding-right: 20px;
+	margin-top: 23px;
+}
+.content .notices .notice {
+	width: 290px;
+	margin-bottom: 15px;
+	float: left;
+	border: 0;
+	padding: 0;
+	background: none;
+}
+.content .notices .notice img {
+	float: left;
+	width: 50px;
+	height: 50px;
+	padding-right: 10px;
+	padding-top: 4px;
+}
+.content .notices .notice .notice-content {
+	float: left;
+	width: 230px;
+	color: #666;
+}
+.content .notices .notice .notice-content h2 {
+	float: left;
+	width: 230px;
+	font-size: 12px;
+	margin:0;
+	padding:0;
+	color: #005eac;
+}
+.content .notices .notice .notice-content p {
+	float: left;
+	width: 230px;
+	font-size: 12px;
+	margin:0;
+	padding:0;
+	color: #666;
+	line-height: 18px;
+}
+.content .notices .notice .notice-content ul {
+	margin:0;
+	padding:3px 0;
+	list-style-type:none;
+	float: left;
+}
+.content .notices .notice .notice-content ul li {
+	padding: 1px 0 1px 10px;
+	background: url(../images/new_xiaonei/arrow.gif) no-repeat 2px 7px;
+}
+.content .notices .notice .notice-content a {
+	color: #005eac;
+	text-decoration:none;
+	background: url(../images/new_xiaonei/a.gif) no-repeat left center;
+	padding: 1px 5px 1px 20px;
+}
+.content .notices .notice p a:hover {
+	text-decoration: underline;
+}
+.footer {
+	width: 790px;
+	height:59px;
+	float: left;
+	background:url(../images/new_xiaonei/footer_bk.gif) no-repeat left top;
+}
+.content h1.bind-account-title {
+	font-size: 14px;
+	color: #333;
+	margin:0;
+	margin: 30px;
+}
+.content .create-account-panel {
+	float: left;
+	width: 347px;
+	height: 197px;
+	margin-left: 29px;
+	background: url(../images/new_xiaonei/bind_account_box.gif) no-repeat left top;
+}
+.content .create-account-panel h1 {
+	font-size: 14px;
+	color: #005EAC;
+	height: 36px;
+	line-height: 36px;
+	width: 327px;
+	padding-left: 20px;
+	margin:0;
+}
+.content .create-account-panel p {
+	color: #666;
+	font-size: 12px;
+	margin:0;
+	width: 297px;
+	padding-left: 30px;
+	padding-right: 20px;
+	line-height: 18px;
+	background: url(../images/new_xiaonei/arrow.gif) no-repeat 21px 6px;
+}
+.content .create-account-panel fieldset {
+	width: 287px;
+	padding: 10px 30px;
+	margin:0;
+	border: 0;
+}
+.content .create-account-panel fieldset dl,
+.content .create-account-panel fieldset dd,
+.content .create-account-panel fieldset dt {
+	margin:0;
+	padding:0;
+}
+.content .create-account-panel fieldset dt {
+	float: left;
+	clear: left;
+	width: 60px;
+	height: 30px;
+	line-height: 30px;
+	color: #005EAC;
+}
+.content .create-account-panel fieldset dd {
+	float: left;
+	width: 200px;
+	height: 26px;
+	padding-top: 4px;
+}
+.content .create-account-panel fieldset dd input {
+	width: 160px;
+}
+.content .create-account-panel fieldset dd input.button {
+	width: auto;
+	height: 24px;
+	font-size: 12px;
+	padding: 3px 15px;
+	border: 1px solid #0e1f5b;
+	background: #005eac;
+	color: #fff;
+	line-height: 24px;
+	cursor: pointer;
+	text-align: center;
+}
+.content .create-account-panel .bind-account-next-button {
+	display: block;
+	width: 69px;
+	height: 36px;
+	line-height: 36px;
+	background: url(../images/new_xiaonei/bind_account_next_btn.gif) no-repeat left top;
+	text-align:center;
+	font-size: 14px;
+	font-weight:bold;
+	color: #fff;
+	text-decoration:none;
+	margin-left: 140px;
+	margin-top: 35px;
+}
+.xiaonei_questionnaire {
+	float: left;
+	width: 770px;
+	padding-left: 10px;
+}
+.xiaonei_questionnaire .questionnaire-header {
+	background: url(../images/new_xiaonei/dotted_line.gif) repeat-x left bottom;
+	padding-bottom: 5px;
+	margin-bottom: 25px;
+	width: 740px;
+	margin-left: 8px;
+}
+.xiaonei_questionnaire .questionnaire-header h1 {
+	background: url(../images/new_xiaonei/report_title_bg_32x32.png) no-repeat left top;
+	padding-left: 36px;
+	font-size: 16px;
+	line-height: 32px;
+	height: 32px;
+	color: #333;
+}
+.xiaonei_questionnaire ul {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+.xiaonei_questionnaire .core-question-area {
+	margin-bottom: 10px;
+	padding: 0 3px;
+	float: left;
+	clear: left;
+	min-height: 50px;
+}
+.xiaonei_questionnaire .core-question-area .core-question-title-wrapper {
+	width: 380px;
+	float: left;
+	clear: left;
+}
+.xiaonei_questionnaire .core-question-area .core-question-title-wrapper h2 {
+	font-size: 14px;
+	color: #005eac;
+	margin:0;
+	background: url(../images/new_xiaonei/question_symbol.png) no-repeat 1px 2px;
+	padding-left: 20px;
+	width: 350px;
+}
+.xiaonei_questionnaire .core-question-area .core-question-title-wrapper h2 a {
+	color: #4AB4EF;
+	text-decoration: none;
+	font-size: 12px;
+}
+.xiaonei_questionnaire .core-question-area .core-question-title-wrapper h2 a:hover {
+	text-decoration: underline;
+}
+.xiaonei_questionnaire .core-question-area .core-question-title-wrapper .core-question-title-lower {
+	margin-top: 3px;
+	padding-left: 20px;
+	line-height: 18px;
+	width: 350px;
+	color: #666;
+}
+.xiaonei_questionnaire .core-question-area .core-question-content-wrapper {
+	width: 380px;
+	float: left;
+}
+.xiaonei_questionnaire .core-question-area .core-question-content-wrapper .textbox {
+	width: 360px;
+	background: url(../images/new_xiaonei/fieldbg.gif) repeat-x left top ;
+	border: 1px solid #c3c3c3;
+}
+.xiaonei_questionnaire .core-question-area .core-column-one {
+	width: 760px;
+}
+.xiaonei_questionnaire .core-question-area .core-column-one h2 {
+	width: 740px;
+}
+.xiaonei_questionnaire .core-question-area .core-column-one .core-question-title-lower {
+	width: 740px;
+}
+.xiaonei_questionnaire .core-question-area .core-column-one .textbox {
+	width: 720px;
+	margin-top: 3px;
+	margin-left: 20px;
+	background: url(../images/new_xiaonei/fieldbg.gif) repeat-x left top ;
+	border: 1px solid #c3c3c3;
+}
+.xiaonei_questionnaire .core-header {
+	margin-bottom: 10px;
+	padding: 0 3px;
+	float: left;
+	clear: left;
+	min-height: 50px;
+}
+.xiaonei_questionnaire .core-header h2 {
+	font-size: 14px;
+	color: #005eac;
+	margin:0;
+	padding-left: 20px;
+	width: 350px;
+}
+.xiaonei_questionnaire .core-rating-question {
+	float: left;
+	padding-left: 20px;
+}
+.xiaonei_questionnaire .core-rating-question .left-label {
+	float: left;
+	margin-top: 10px;
+	
+}
+.xiaonei_questionnaire .core-rating-question .rating-table {
+	float: left;
+	margin: 0 5px;
+}
+.xiaonei_questionnaire .core-rating-question .rating-table td {
+	text-align: center;
+}
+.xiaonei_questionnaire .core-rating-question .background-color-ffffff {
+	background: #fff;
+}
+.xiaonei_questionnaire .core-rating-question .right-label {
+	float: left;
+	margin-top: 10px;
+}
+.xiaonei_questionnaire .fillout-submit {
+	float: left;
+	clear: left;
+	width: 760px;
+	text-align:center;
+}
+.xiaonei_questionnaire #nextPageButton {
+	display:none;
+}
+.xiaonei_questionnaire .fillout-submit #submit {
+	width: 69px;
+	height: 36px;
+	line-height: 36px;
+	background: url(../images/new_xiaonei/bind_account_next_btn.gif) no-repeat left top;
+	text-align:center;
+	font-size: 14px;
+	font-weight:bold;
+	color: #fff;
+	border: 0;
+}
+.message-box {
+	float: left;
+	width: 560px;
+	padding-left: 180px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	background: url(../images/info-80x80.gif) no-repeat 80px 90px;
+}
+.message-box h1 {
+	font-size: 16px;
+	color: #005eac;
+	margin:0;
+	width: 560px;
+}
+.message-box p {
+	font-size: 14px;
+	width: 560px;
+}
+.message-box .buttons-bar {
+	width: 560px;
+}
+.message-box .buttons-bar .button {
+	width: 69px;
+	height: 36px;
+	line-height: 36px;
+	background: url(../images/new_xiaonei/bind_account_next_btn.gif) no-repeat left top;
+	text-align:center;
+	font-size: 14px;
+	font-weight:bold;
+	color: #fff;
+	border: 0;
+	display:block;
+	text-decoration: none;
+}
+.join-successful {
+	background: url(../images/new_xiaonei/checkmark_128x128.png) no-repeat 60px top ;
+	height: 128px;
+	padding-left: 200px;
+	width: 570px;
+	margin-top: 40px;
+	float: left;
+}
+.join-successful h1 {
+	font-size: 16px;
+	margin:0;
+	margin-top: 20px;
+}
+.edit-address {
+	width: 570px;
+	padding-left: 60px;
+	padding-top: 30px;
+}
+.edit-address h1 {
+	font-size: 16px;
+	margin:0;
+}
+.edit-address fieldset {
+	border: 1px solid #ddd;
+}
+.edit-address fieldset div {
+	float: left;
+	clear: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 550px;
+}
+.edit-address fieldset label {
+	width: 60px;
+	padding-right: 5px;
+	padding-left: 15px;
+	display: block;
+	float: left;
+	text-align:right;
+}
+.edit-address fieldset label#city_label {
+	padding-left: 0px;
+}
+.edit-address fieldset input,
+.edit-address fieldset select {
+	width: 205px;
+	float: left;
+	display: block;
+}
+.edit-address fieldset .province-and-city select,
+.edit-address fieldset .province-and-city input {
+	width: 70px;
+}
+.edit-address fieldset .address input {
+	width: 400px;
+}
+.edit-address fieldset .buttons-bar {
+	text-align: center;
+	padding-left: 80px;
+}
+.edit-address fieldset .buttons-bar .button {
+	width: 69px;
+	height: 36px;
+	line-height: 36px;
+	background: url(../images/new_xiaonei/bind_account_next_btn.gif) no-repeat left top;
+	text-align:center;
+	font-size: 14px;
+	font-weight:bold;
+	color: #fff;
+	border: 0;
+	display:block;
+	text-decoration: none;
+	float: none;
+}

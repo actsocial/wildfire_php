@@ -1,0 +1,76 @@
+<div class="article-box" style="margin-bottom: 15px;"><div class="article-box-inner">
+<h1><?php echo $this->translate('Gift_gift_list_top_head')?></h1>
+<p><?php echo $this->translate('Gift_gift_list_top_notice');?></p>
+</div></div>
+<div class="category-list">
+	<?php if ($this->consumer!=null):?>
+	<div class="category">
+		<h2><?php echo $this->translate("Rewards_Ready_to_Redeem")?></h2>
+		<ul class="points">
+			<li><?php echo $this->amountPoints;?></li>
+		</ul>
+	</div>
+	<?php endif;?>
+	<div class="category">
+		<h2><?php echo $this->translate('Gift_list_gift_category')?></h2>
+		<ul>
+
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_all')?></a></li>	
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Digital', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_electronics')?></a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Makeup', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_cosmetic')?></a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Commodity', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_supplies')?></a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Other', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_others')?></a></li>
+			
+		</ul>
+	</div>
+	<div class="category">
+		<h2><?php echo $this->translate('Gift_list_gift_points')?></h2>
+		<ul>		
+
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'0', 'p2'=>'3000', 'page'=>'1'));?>">0~3000</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'3001', 'p2'=>'5000', 'page'=>'1'));?>">3001~5000</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'5001', 'p2'=>'8000', 'page'=>'1'));?>">5001~8000</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'8001', 'p2'=>'100000', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_above_8000')?></a></li>
+			<?php if($this->amountPoints >= 1400):?>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'mine', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_available_gifts')?></a></li>
+			<?php endif;?>
+		</ul>
+	</div>
+
+	<a class="list-orders" href="<?php echo $this->url(array('controller'=>'gift','action'=>'listorder'));?>"><?php echo $this->translate('Gift_Place_Order');?></a>
+
+</div>
+<div class="gift-list">
+<?php foreach($this->products as $product):?>
+	<div class="gift">
+		<a href="<?php echo $this->url(array('controller'=>'gift','action'=>'description','id'=>$product['id']));?>" class="image"><img src="<?php echo $this->baseUrl();?>/images/products/img1_<?php echo $product['id']?>.jpg" /></a>
+		
+		<div class="price"><?php echo $product['point']?>&nbsp;<?php echo $this->translate('Gift_points')?></div>
+		<div class="controllers"><a href="#" onclick="javascript:addToCart(<?php echo $product['id']?>);return false;"><?php echo $this->translate('Add to Cart');?></a><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'description','id'=>$product['id']));?>"><?php echo $this->translate('Gift_list_show_details')?></a></div>
+
+		
+		<a href="<?php echo $this->url(array('controller'=>'gift','action'=>'description','id'=>$product['id']));?>" class="name"><?php echo $product['name']?></a>
+		<div class="description"><?php echo $product['description']?></div>
+		
+		<input type="hidden" id="product_name_<?php echo $product['id']?>"  value="<?php echo $product['name']?>"/>
+		<input type="hidden" id="product_point_<?php echo $product['id']?>" value="<?php echo $product['point']?>"/>
+	</div>
+<?php endforeach; ?>
+<div class="clear"></div>
+</div>
+<div class="pagebar" ><?= $this->paginationControl($this->products, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action,'t'=>$this->t, 'p1'=>$this->p1, 'p2'=>$this->p2)); ?></div>
+<form id='addToCartForm' name='addToCartForm' action="<?php echo $this->url(array('controller'=>'gift','action'=>'addtocart'));?>" method="post">
+	<input type="hidden" id="product_id" name='product_id'/>
+	<input type="hidden" id="product_name" name='product_name'/>
+	<input type="hidden" id="product_point" name='product_point'/>
+</form>
+
+<script language="javascript">
+function addToCart(i)
+{	
+	document.addToCartForm.product_id.value = i;
+	document.addToCartForm.product_name.value = $F('product_name_'+i);
+	document.addToCartForm.product_point.value = $F('product_point_'+i);
+	document.forms['addToCartForm'].submit();  
+}
+</script>

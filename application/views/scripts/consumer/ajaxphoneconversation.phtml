@@ -1,0 +1,41 @@
+<br/>
+电话谈话记录
+<?php 
+foreach ( $this->phoneconversation as $phone ) :
+	?>
+	<br/>
+	用户名：<?php echo $phone['consumer_name'];?>
+	<br/>
+	电话号码：<?php echo $phone['consumer_phone'];?>
+	<br/>
+	谈话内容：<?php echo $phone['content'];?>
+	<br/>
+	评价：<?php echo $phone['evaluation'];?>
+	<br/>
+	电话时间:<?php echo $phone['duration'];?>
+	<br/>
+	日期<?php echo $phone['time'];?>
+	<br/>
+	<?php 
+	       if($phone['image']!=''){
+	       	 echo "<a target='_blank' href='".$this->baseUrl()."/upload_images/conversation_images/$phone[image]'>" .$phone['image'] ."</a><br/>";
+	       }
+	?>
+	<?php endforeach;?>
+	
+	<hr/>
+	电话日志记录
+	<?php 
+foreach ( $this->telephonelog as $telephone ) :
+	?>
+	<br/>
+	电话评分:<?php echo $telephone['score'];?>
+	<br/>
+	日志内容：<?php echo $telephone['comments'];?>
+	<br/>
+	电话时间:<?php echo $telephone['duration'];?>
+	<br/>
+	日期：<?php echo $telephone['edit_time'];?>
+	<br/>
+
+	<?php endforeach;?>

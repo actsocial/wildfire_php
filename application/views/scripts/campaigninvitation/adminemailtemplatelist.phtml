@@ -1,0 +1,23 @@
+<?php if(!$this->action){?>
+
+<div style="padding-bottom:40px;"></div>
+<div class="content" style="background-color:#fff;padding-top:0;">
+<p><a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'));?>">List templates</a>|<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplate'));?>">Add templates</a></p>
+
+<table style="width:900px">
+<tr><th width="20%" align='left'>ID</th><th width="20%" align='left'>Campaign</th><th align='left' width='40%'> Subject</th><th align='left'>Action</th></tr>
+
+<?php 
+if (count($this->emailTemplates)){
+	foreach ($this->emailTemplates as $email){
+		echo "<tr><td>$email[id]</td><td>$email[name]</td><td><a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'))."/id/$email[id]/do/view'  class='thickbox'>$email[subject]</a></td><td><a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'))."/id/$email[id]/do/delete'>Delete</a>|<a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplate'))."/id/$email[id]'>Edit</a></td>";
+	}
+}?>
+</table>
+</div>
+</div>
+<?php }else{?>
+
+<?php echo $this->emailTemplate->message;?>
+
+<?php }?>

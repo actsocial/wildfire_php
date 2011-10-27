@@ -1,0 +1,40 @@
+<textarea id="data" onchange="datatable();"></textarea>
+
+<input id="copy" type="button" value="paste" onclick="datatable();" />
+<div id="testDiv">ssss</div>
+<input id="copy" type="button" value="SendSms" onclick="datatable();" />
+<script>
+function datatable()
+{
+	var list = new Array();
+	var strtable="";
+	list = populate();
+	for(var i=0;i<list.length;i++)
+	{
+		strtable = strtable+"<tr>";
+		for(var j=0;j<list[i].length;j++)
+		{
+			strtable = strtable+"<td>"+list[i][j]+"</td>";
+		}
+		strtable = strtable+"</tr>";
+	}
+	strtable = "<table border=1>"+strtable+"</table>";
+	alert(strtable);
+	jQuery("#testDiv").html(strtable);
+}
+function populate(){
+	var text = jQuery("#data").val();
+	var data = new Array();
+	var rows =  text.split("\n");
+	for (var i=0;i<rows.length-1;i++){
+		row = rows[i];
+		var cells = row.split("\t");
+		for (var j=0;j<cells.length;j++){
+			var cell = cells[j];
+		}
+		data.push(cells);
+	}
+	alert(data[2][2]);
+	return data;
+}
+</script>

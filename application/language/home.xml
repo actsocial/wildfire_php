@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+
+		<tu tuid='Welcome'>
+			<tuv xml:lang="zh">
+				<seg>欢迎你</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Welcome</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_Your_Info_Completeness'>
+			<tuv xml:lang="zh">
+				<seg>你的资料完整度：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your info completeness:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='how_does_it_work'>
+			<tuv xml:lang="zh">
+				<seg>如何开始？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>how does it work ?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_head_content_1'>
+			<tuv xml:lang="zh">
+				<seg>这是你的星星火主页，告诉我们你与朋友谈话或是参与问卷，你就可以获得积分。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>This is your Spark home page, where you earn points for telling us the word on the street, and for taking polls.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_head_content_2_1'>
+			<tuv xml:lang="zh">
+				<seg>你如果想了解更多内容，可以查看下面的问号提示，或是点击</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Roll-over the question marks to learn more, or click training above to </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_head_content_2_2'>
+			<tuv xml:lang="zh">
+				<seg>星星火是如何运作的？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>see how it all works!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_head_content_2_3'>
+			<tuv xml:lang="zh">
+				<seg>（更加详细的介绍）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>(underline on rollover only)</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Your_Spark_Points'>
+			<tuv xml:lang="zh">
+				<seg>你的星星火积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your Spark Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Level'>
+			<tuv xml:lang="zh">
+				<seg>等级</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Level</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_Status_Header'>
+			<tuv xml:lang="zh">
+				<seg>什么是星星火积分？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What are Spark Points?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_Status_Content_1'>
+			<tuv xml:lang="zh">
+				<seg>积分是对星星火会员积极参与活动的一种奖励。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Points are a “thank you” for being an active member.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_Status_Content_2'>
+			<tuv xml:lang="zh">
+				<seg>当你提交星火报告或是完成问卷后，你将得到星火积分：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Everytime you submit a Spark Report or complete a Poll, you’ll earn Spark Points: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_Status_Content_3'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[一个问卷 = 100 - 200 积分 <br>
+一份报告 = 最多500 积分]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Each poll = 100 - 200 Points<br> 
+Each Report = Up to 500 Points]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_Status_Content_4'>
+			<tuv xml:lang="zh">
+				<seg>积分可以被兑换成手机充值卡、数码产品、航空里程等令人惊喜的奖品。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Points can be traded for items such as electronics, travel tickets, cell phone credit,  and lots of other stuff.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_is_Status_Content_5'>
+			<tuv xml:lang="zh">
+				<seg>总积分高的成员，将最先被邀请参加未来的星星火活动！（别担心，兑换积分不会影响你的总积分。）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Members with the most Total Points Earned are the first to get invited to new Spark Campaigns! (Don’t worry, trading won’t reduce your Total Points Earned.)</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_Spark_Points_Earned'>
+			<tuv xml:lang="zh">
+				<seg>星星火总积分：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Points Earned:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Spark_Points_Earned_Content_1'>
+			<tuv xml:lang="zh">
+				<seg>(离等级</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>(reach level </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Spark_Points_Earned_Content_2'>
+			<tuv xml:lang="zh">
+				<seg>还差</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> at </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Spark_Points_Earned_Content_3'>
+			<tuv xml:lang="zh">
+				<seg>分)</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>points)</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Rewards_at_Next_Level'>
+			<tuv xml:lang="zh">
+				<seg>下一等级奖励：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Rewards at Next Level:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Ledian'>
+			<tuv xml:lang="zh">
+				<seg>乐点</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Ledian</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Rewards_Ready_to_Redeem'>
+			<tuv xml:lang="zh">
+				<seg>可用兑换积分：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Not Yet Redeemed:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Told_a_friend?_Submit_a_Spark_Report!'>
+			<tuv xml:lang="zh">
+				<seg>已和你的朋友谈论过？那就来提交报告吧！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Told a friend? Submit a Spark Report!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='What’s_a_Spark_Report?'>
+			<tuv xml:lang="zh">
+				<seg>什么是星星火报告？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What’s a Spark Report?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What’s_a_Spark_Report?_Content_1'>
+			<tuv xml:lang="zh">
+				<seg>我们根据你的兴趣提供给你喜欢的产品，同时我们也希望听到你和朋友间关于产品的谈论。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Wildfire works by giving you products that you love (based on your interests) and by listening to what your friends have to say.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What’s_a_Spark_Report?_Content_2'>
+			<tuv xml:lang="zh">
+				<seg>当你与朋友谈论我们给你的产品时，请花几分钟来填写活动报告来记录下你们的谈话。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>When you mention a product you received from Wildfire to a friend, take a second to submit a Spark Report!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What’s_a_Spark_Report?_Content_3'>
+			<tuv xml:lang="zh">
+				<seg>人们总是到处谈论产品，所以希望你每次谈论起星星火的活动时，都能提交报告来告诉我们。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>People talk about products all the time, so we don’t expect you to tell us EVERY time you mention a product from Wildfire.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What’s_a_Spark_Report?_Content_4'>
+			<tuv xml:lang="zh">
+				<seg>你提交的报告越多，你将获得越多的积分，同时你将会收到更多其它有意思的活动产品。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>However, the more you report, the more points you’ll earn. With more points, you’ll be invited to receive more products!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Spark_Report'>
+			<tuv xml:lang="zh">
+				<seg>活动报告 </seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Report </seg>
+			</tuv>
+		</tu>
+		<tu tuid='Bonus_Report'>
+			<tuv xml:lang="zh">
+				<seg>额外活动报告 </seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Bonus Report</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Quick_Polls:_Tell_Us_About_Yourself!'>
+			<tuv xml:lang="zh">
+				<seg>快速问卷: 让我们认识你！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Quick Polls: Tell Us About Yourself!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_are_Quick_Polls?'>
+			<tuv xml:lang="zh">
+				<seg>什么是快速问卷？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What are Quick Polls?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_are_Quick_Polls?_Content_1'>
+			<tuv xml:lang="zh">
+				<seg>我们根据你的兴趣，提供给你喜欢的产品。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Wildfire works by giving you products that you love, based on your interests.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_are_Quick_Polls?_Content_2'>
+			<tuv xml:lang="zh">
+				<seg>我们如何了解你的兴趣？ 就是通过你提交的快速问卷。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>How do you tell us what your interests are? By completing quick polls, of course!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_are_Quick_Polls?_Content_3'>
+			<tuv xml:lang="zh">
+				<seg>无论你喜欢时尚、运动、户外或是数码设备，我们都会有免费的产品给你。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Whether, it’s fashion, sports, computers, or the outdoors, we’ll have free products for you.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='What_are_Quick_Polls?_Content_4'>
+			<tuv xml:lang="zh">
+				<seg>另外，完成问卷也会使你获得积分。拥有高的积分，你将会被邀请参加活动并收到价值更高的活动产品。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>By the way, completing polls also earns you points. With more points, you’ll be invited to get higher value products! </seg>
+			</tuv>
+		</tu>
+		<tu tuid='points'>
+			<tuv xml:lang="zh">
+				<seg>分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='earned'>
+			<tuv xml:lang="zh">
+				<seg>获得</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>earned</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Redeem_Points'>
+			<tuv xml:lang="zh">
+				<seg>兑换积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Redeem Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_joined_a_campaign1'>
+			<tuv xml:lang="zh">
+				<seg>恭喜你加入</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Congratulations on joining the </seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_joined_a_campaign2'>
+			<tuv xml:lang="zh">
+				<seg> 口碑活动！请确定你的</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Spark Campaign! To receive your Spark Kit, be sure your</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_joined_a_campaign3'>
+			<tuv xml:lang="zh">
+				<seg>正确以收到你的星星火礼包。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> is correct.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Shipping_information'>
+			<tuv xml:lang="zh">
+				<seg>联系地址</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>  shipping information</seg>
+			</tuv>
+		</tu>
+		
+		
+		<tu tuid='You’ve_Been_Invited_To_Complete_Three_New_Polls'>
+			<tuv xml:lang="zh">
+				<seg>你已经被邀请参与新投票</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You’ve been invited to complete new polls</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Earns_Your_Spark_Points'>
+			<tuv xml:lang="zh">
+				<seg>赢取你的会员积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>earns your Spark Points</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Completing_Polls'>
+			<tuv xml:lang="zh">
+				<seg>参与投票</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>completing polls</seg>
+			</tuv>
+		</tu>
+	
+	    
+	
+	
+		<tu tuid='We’ve_Responded_To_Your_Spark_Report'>
+			<tuv xml:lang="zh">
+				<seg>我们已经答复你的会员报告。感谢你让我们知道你的朋友是如何评价</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>We’ve responded to your Spark report. Thank you for letting us know what your friends think about</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='You’ve_Earned'>
+			<tuv xml:lang="zh">
+				<seg>。你已经赢得</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>. You’ve earned</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Spark_Points'>
+			<tuv xml:lang="zh">
+				<seg>点会员积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Points</seg>
+			</tuv>
+		</tu>
+	
+		
+		<tu tuid='Congratulations_You_Successfully_Referred'>
+			<tuv xml:lang="zh">
+				<seg>恭喜，你已成功邀请了</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Congratulations, you successfully referred</seg>
+			</tuv>
+		</tu>
+		
+		
+		<tu tuid='Friends_To_Wildfire_You’ve_Earned'>
+			<tuv xml:lang="zh">
+				<seg>位朋友加入星星火。你已经赢得了 </seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>friends to Wildfire. You’ve earned </seg>
+			</tuv>
+		</tu>
+		
+		
+		<tu tuid='Spark_Points'>
+			<tuv xml:lang="zh">
+				<seg> 点会员积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Spark Points!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='You_Have'>
+			<tuv xml:lang="zh">
+				<seg> 你还有</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> You have</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Invitations'>
+			<tuv xml:lang="zh">
+				<seg>项邀请</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>invitations</seg>
+			</tuv>
+		</tu>
+		
+		
+		<tu tuid='Remaining'>
+			<tuv xml:lang="zh">
+				<seg>未确认。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>remaining.</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Your_Spark_Status'>
+			<tuv xml:lang="zh">
+				<seg>你的会员状态</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your Spark Status</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='You have submitted a total of 0 Spark Reports over'>
+			<tuv xml:lang="zh">
+				<seg>你已经提交了一项总额为0的星星火报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>remaining.</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='To_Can_Redeem_Your_Spark_Points'>
+			<tuv xml:lang="zh">
+				<seg>为了能够随时税换你的积分，请积极参与我们的活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>To can redeem your Spark Points at any time you are active in a campaign.</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Spark_Campaigns'>
+			<tuv xml:lang="zh">
+				<seg>会员活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Campaigns</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Remaining'>
+			<tuv xml:lang="zh">
+				<seg>可以使用。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>remaining.</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Your_Spark_Status'>
+			<tuv xml:lang="zh">
+				<seg>你的星星火状态</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your Spark Status</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Your_Spark_Status_Content0'>
+			<tuv xml:lang="zh">
+				<seg>你当前还没参与任何星火活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have not submitted any reports or participated in any campaigns yet.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Your_Spark_Status_Content1'>
+			<tuv xml:lang="zh">
+				<seg>你已经提交了</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have submitted a total of</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Your_Spark_Status_Content2'>
+			<tuv xml:lang="zh">
+				<seg>份星星火报告，参加了</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Reports over</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Your_Spark_Status_Content3'>
+			<tuv xml:lang="zh">
+				<seg>个星星火活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Campaigns.</seg>
+			</tuv>
+		</tu>   
+		
+		<tu tuid='Your_Spark_Status_Content4'>
+			<tuv xml:lang="zh">
+				<seg>当你在参与星星火活动时，可以兑换你的星星火积分。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>To can redeem your Spark Points at any time you are active in a campaign.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Spark_Points'>
+			<tuv xml:lang="zh">
+				<seg>点星星火积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Points</seg>
+			</tuv>
+		</tu> 
+		
+		<tu tuid='Spark_Campaigns_Content1'>
+			<tuv xml:lang="zh">
+				<seg>你已经提交了</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have submitted</seg>
+			</tuv>
+		</tu> 
+		
+		<tu tuid='Spark_Campaigns_Content2'>
+			<tuv xml:lang="zh">
+				<seg>份报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>reports</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Spark_Campaigns_Content3'>
+			<tuv xml:lang="zh">
+				<seg>你已经获得</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have earned</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Spark_Campaigns_Content4'>
+			<tuv xml:lang="zh">
+				<seg>点星星火积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Points</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Submit_A_Spark_Report'>
+			<tuv xml:lang="zh">
+				<seg>提交报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit a Spark Report</seg>
+			</tuv>
+		</tu>
+		
+
+		<tu tuid='Click_here'>
+			<tuv xml:lang="zh">
+				<seg>点击这里 </seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Click here </seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='to_join_the'>
+			<tuv xml:lang="zh">
+				<seg>来参与</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>to join the </seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Spark_campaign'>
+			<tuv xml:lang="zh">
+				<seg>口碑活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Campaign </seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Rookie_intruction'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+				欢迎你加入了我们的"口口相传"社区！通常新用户2-3周之后才会收到第一个活动邀请，在这段时间里，你何尝不来
+			<a href="/training">训练区</a>看看
+			<a href="/training/howitworks">星星火是怎样运作的</a>?
+			
+				]]> </seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+			Congratulations on joining China's word-of-mouth community! It usually takes 2-3 weeks before you get your first campaign invitation, so in the mean time, why not 
+			<a href="/public/training/howitworks">learn how it works</a> with 
+			<a href="/public/training">Wildfire Training</a>?
+				]]></seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Submit_Report'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+				提交<br/>报告
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit Report</seg>
+			</tuv>
+		</tu>
+		
+		
+		
+		<tu tuid='My_Spark_Campaigns'>
+			<tuv xml:lang="zh">
+				<seg>我的活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>My Spark Campaigns</seg>
+			</tuv>
+		</tu>
+		<tu tuid='My_Points'>
+			<tuv xml:lang="zh">
+				<seg>我的积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>My Points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Earned'>
+			<tuv xml:lang="zh">
+				<seg>分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Earned</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='My_Polls'>
+			<tuv xml:lang="zh">
+				<seg>参与问卷</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>My Polls</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='You_Completed'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You've Completed</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Polls'>
+			<tuv xml:lang="zh">
+				<seg>个问卷</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Polls</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Completing_polls_lets_us'>
+			<tuv xml:lang="zh">
+				<seg>完成问卷以便我们了解你，同时将给你带来更好活动的邀请和更多的积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Completing polls lets us know what kinds of campaigns to offer you in the future!</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Take_Polls'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+				参与<br/>问卷
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Take Polls</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Friend_Invitations'>
+			<tuv xml:lang="zh">
+				<seg>邀请朋友</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Friend Invitations</seg>
+			</tuv>
+		</tu>
+	 
+		<tu tuid='You_Invited'>
+			<tuv xml:lang="zh">
+				<seg>你已经成功邀请了</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You're Invited</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='You_Are_Invited_1'>
+			<tuv xml:lang="zh">
+				<seg>你已被邀请参加</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You’re invited to join </seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='You_Are_Invited_2'>
+			<tuv xml:lang="zh">
+				<seg>口碑活动！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Spark Campaign! </seg>
+			</tuv>
+		</tu>
+				
+		<tu tuid='You_Are_Joined'>
+			<tuv xml:lang="zh">
+				<seg>你已加入</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You're Joined！</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='friends'>
+			<tuv xml:lang="zh">
+				<seg>个朋友加入</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>friends</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Wildfire_relies_on_word-of-mouth'>
+			<tuv xml:lang="zh">
+				<seg>星星火社区通过“口口相传”来壮大，成功邀请朋友后你将获得积分，快请邀请你的朋友加入吧！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Wildfire relies on word-of-mouth to grow, so be sure to invite your friends to join in the fun.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Invite_Friends'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+				邀请<br/>朋友
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invite Friends</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Spark_Training'>
+			<tuv xml:lang="zh">
+				<seg>星星火培训</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Training</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Educate_Yourself'>
+			<tuv xml:lang="zh">
+				<seg>通过培训让你迅速了解星星火</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Educate Yourself</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Need_refreshing_on_how'>
+			<tuv xml:lang="zh">
+				<seg>如果想了解星星火是如何运作的或是想了解“口口相传”营销模式，你可以在这里得到你想要的。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Need refreshing on how Wildfire works or want to learn more about WOM? You can do it all here.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Train'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+				参加<br/>培训
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Train</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='My_Spark_Points'>
+			<tuv xml:lang="zh">
+				<seg>我的星星火积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>My Spark Points</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='More_Points_Better_Campaign'>
+			<tuv xml:lang="zh">
+				<seg>更多的积分  = 更好的活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>More Points = More Exclusive Campaigns</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='More_Points_gets_you_invited'>
+			<tuv xml:lang="zh">
+				<seg>拥有更多的积分，将使得你获得参与更好更有意思活动的机会。另外，你可以把积分兑换为精美的奖品！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>More Points gets you invited to better Spark Campaigns. You can also trade them for rewards!</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Trade'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+				兑换<br/>奖品
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Trade</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Total'>
+			<tuv xml:lang="zh">
+				<seg>分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Total</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='My_Points'>
+			<tuv xml:lang="zh">
+				<seg>我的积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>My Points</seg>
+			</tuv>
+		</tu>	
+		
+		<tu tuid='Home_Post_Campaign_Survey'>
+			<tuv xml:lang="zh">
+				<seg>活动结束问卷</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Post-Campaign Survey</seg>
+			</tuv>
+		</tu>	
+		
+		<tu tuid='Home_Post_Campaign_Survey_end'>
+			<tuv xml:lang="zh">
+				<seg>活动后问卷</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Post-Campaign Survey</seg>
+			</tuv>
+		</tu>	
+		
+		<tu tuid='Home_Finish_Survey'>
+			<tuv xml:lang="zh">
+				<seg>填写问卷</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Next</seg>
+			</tuv>
+		</tu>	
+		
+		<tu tuid='Click_here_and_submit'>
+			<tuv xml:lang="zh">
+				<seg>点击提交</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit </seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Click_here_and_submit_more'>
+			<tuv xml:lang="zh">
+				<seg>点击提交更多报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit More Report</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Submit_successfully_and_pedding'>
+			<tuv xml:lang="zh">
+				<seg>提交成功，未评阅</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Pending</seg>
+			</tuv>
+		</tu>
+		<tu tuid='This_Spark_Campaign_is_Full'>
+			<tuv xml:lang="zh">
+				<seg>暂时没有可供您参加的星星活动！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>All campaigns are currently full!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='This_Spark_Campaign_is_Full_Content'>
+			<tuv xml:lang="zh">
+				<seg>但是，大部分的会员都会在加入星星火几周内收到活动邀请！请记得完成在你首页上出现的问卷，让我们更了解你，我们会及时通知你参加你感兴趣的活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>However, most new members are invited to a campaign within two weeks of joining. Be sure to tell us about yourself (by answering polls) so we know which campaigns to invite you to!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Home_Submit_URL_Report'>
+			<tuv xml:lang="zh">
+				<seg>分享网址</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit URL</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_URL_Report_Submit'>
+			<tuv xml:lang="zh">
+				<seg>提交</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_URL_Report_Approved'>
+			<tuv xml:lang="zh">
+				<seg>审核通过，获得300积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>It's approved, and you've earned 300 points</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_URL_Report_Wait_For'>
+			<tuv xml:lang="zh">
+				<seg>你已提交成功，请等待审核</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit successfully, pending...</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_URL_Report_Introduction'>
+			<tuv xml:lang="zh">
+				<seg>如果你在论坛或博客上谈起过该活动，请提交网址给我们</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>If you have talked with friends on bbs or blog, please submit the URL and you may earn 300 points.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Home_URL_Report_Introduction2'>
+			<tuv xml:lang="zh">
+				<seg>审核通过后，可以获得300积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>If the URL is approved, you will earn 300 points</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

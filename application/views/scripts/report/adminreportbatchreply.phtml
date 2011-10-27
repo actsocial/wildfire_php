@@ -1,0 +1,440 @@
+<div style="padding-bottom: 40px;"></div>
+<fieldset
+	style="width: 900px; margin: 0 auto; border: 1px solid #CCCCCC;">
+<div style="padding: 10px;">
+<h1 style="margin-left: 0px;">Reply WOM report for "<?php
+echo $this->campaign_name;
+?>" Campaign!</h1>
+<p>Your answer:</p>
+<p><iframe style="height:700px;width: 600px;" src="<?php echo $this->url;?>"></iframe></p>
+<?php 
+if(count($this->reportImages)){
+
+	foreach ($this->reportImages as $key => $img){
+		if($img->name != ''){
+		   echo "<a href='".$this->baseUrl ().'/upload_images/report_images/'.$img->name."' class='thickbox'>图片".$key.'</a><br/>';			
+		}
+	}
+		
+}
+?>
+<p>Consumer Personal Info:</p>
+<p><?php
+echo $this->translate ( 'CONTACT INFORMATION_NAME' );
+?><?php
+
+echo $this->consumer ['name'];
+?>&nbsp;&nbsp;&nbsp;&nbsp;
+ <?php
+	echo $this->translate ( 'CONTACT INFORMATION_RECIPIENTS_NAME' );
+	?><?php
+
+	echo $this->consumer ['recipients_name'];
+	?>&nbsp;&nbsp;&nbsp;&nbsp;
+ <?php
+	echo $this->translate ( 'CONTACT INFORMATION_PHONE' );
+	?><?php
+
+	echo $this->consumer ['phone'];
+	?>
+ <br>
+ <?php
+	echo $this->translate ( 'Admin_Province' );
+	?>：<?php
+	echo $this->consumer ['province'];
+	?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <?php
+	echo $this->translate ( 'CONTACT CITY' );
+	?><?php
+
+	echo $this->consumer ['city'];
+	?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <?php
+	echo $this->translate ( 'CONTACT INFORMATION_ADDRESS1' );
+	?><?php
+
+	echo $this->consumer ['address1'];
+	?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <?php
+	echo $this->translate ( 'CONTACT GENDER' );
+	?><?php
+
+	echo $this->consumer ['gender'];
+	?>
+ </p>
+</div>
+</fieldset>
+<div style="clear: both"></div>
+
+<div class="content" style="background-color: #fff; padding-top: 0;">
+
+<h2></h2>
+
+<form id='form' name='form'
+	action="<?php
+	echo $this->url ( array ('controller' => 'report', 'action' => 'adminreportbatchreplysend' ) );
+	?>"
+	method="post">
+<table class="survey-history" style="width: 900px;">
+			    <?php
+					if ($this->reportSource == 'application' || $this->reportSource == 'phone' || $this->reportSource == 'email' ) :
+								?>	
+					<div class="invite-emails-subject">		
+						<?php
+								echo $this->mailForm->email;
+								?> 
+					</div>
+
+	<div class="invite-emails-subject">
+						<?php
+								echo $this->mailForm->subject;
+								?> 
+					</div>
+
+	<div class="invite-emails-content">
+						<?php
+								echo $this->mailForm->message;
+								?>	
+					</div>
+				
+							
+							<?php endif;
+							?>
+				<?php
+				if ($this->reportSource == 'sms') :
+					?>
+					<div class="invite-emails-subject">		
+						<?php
+					        echo $this->mailForm->email;
+					?> 
+					</div>
+	<div class="invite-emails-content">
+						<?php
+					        echo $this->mailForm->message;
+					?>	
+					</div>
+				
+				
+				<?php endif;
+				?>
+				
+				<?php
+				if ($this->status != 'SENT') :
+					?>
+				<div class="invite-emails-subject">
+					<?php
+					echo $this->mailForm->grade;
+					?>
+				</div>
+				
+				
+				<?php endif;
+				?>
+				
+				<div style="clear: both"></div>
+	<div>
+                <?php
+																$i = 1;
+																$temp = '';
+																foreach ( $this->tags as $tag ) :
+																	if ($tag ['sort'] != $temp) {
+																		$temp = $tag ['sort'];
+																		echo '<br/>';
+																		echo $this->translate ( 'Report_Tag_Type_' . $tag ['sort'] );
+																	}
+																	?>
+                <input type="checkbox" name="note[]"
+		value="<?php
+																	echo $tag ['id']?>"
+		<?php
+																	if (count ( $this->selectedTagsArray ) > 0 && array_key_exists ( $tag ['id'], $this->selectedTagsArray )) {
+																		?>
+		checked <?php
+																	}
+																	?> /> <label style="width: 300px;"><?php
+																	echo $this->translate ( 'Report_Tag_' . $tag ['name'] );
+																	?></label>
+                <?php
+																endforeach
+																;
+																?>
+                </div>
+	<input type="hidden" id="campaign_id" name='campaign_id'
+		value='<?php
+		echo $this->campaign_id;
+		?>' />
+	<input type="hidden" id="consumer_id" name='consumer_id'
+		value='<?php
+		echo $this->consumer ['id'];
+		?>' />
+	<input type="hidden" id="report_id" name='report_id'
+		value='<?php
+		echo $this->report_id;
+		?>' />
+	<input type="hidden" id="batch_id" name='batch_id'
+		value='<?php
+		echo $this->batchId;
+		?>' />
+	<input type="hidden" id="report_source" name='report_source'
+		value='<?php
+		echo $this->reportSource;
+		?>' />
+	<input type="hidden" id="usetime" name='usetime'
+		value='<?php if($this->usetime!=null){ echo $this->usetime;}else{echo 0;}?>' />
+
+	<div id="notice"
+		style="padding-left: 10px; display: none; font-size: 15px; color: red;"></div>
+	<div style="clear: both"></div>
+	<div class="buttons-bar" style="padding-top: 10px;">
+					<?php if ($this->status != 'SENT') {?>
+						<a style="width: 165px;" href='#' onclick='javascript:save()'>
+							<?php	echo $this->translate ( 'Save_Not_Send' );?>
+						</a> 
+						<a style="width: 165px;" onclick='javascript:save()'" href="<?php echo $this->url ( array ('controller' => 'report', 'action' => 'admincreatebatch', 'id' => $this->campaign_id, 'batch_id' => $this->batchId ) );	?>">
+							<?php echo $this->translate ( 'Back' );	?>
+						</a>
+						<?php	echo $this->mailForm->submit;	?>
+					<?php
+					} else {
+						?>
+						<a style="width: 165px;" href='#' onclick='javascript:save()'>
+						<?php	echo $this->translate ( 'Save_Not_Send' );?></a> 
+						<a style="width: 165px;" onclick='javascript:save()' href="<?php echo $this->url ( array ('controller' => 'report', 'action' => 'admincreatebatch', 'id' => $this->campaign_id, 'batch_id' => $this->batchId ) );?>">
+						<?php echo $this->translate ( 'Back' );
+						?></a>
+					<?php
+					}
+					?>
+				</div>
+	<div style="clear: both"></div>
+</table>
+</form>
+
+</div>
+<fieldset
+	style="width: 900px; margin: 0 auto; border: 1px solid #CCCCCC;">
+<div style="padding: 10px;">
+<h1 style='margin-left: 0px;'>Old reports for this campaign:</h1>
+
+<?php
+if (count ( $this->oldreports ) == 0) {
+	echo "No other reports right now.";
+}
+$i = 0;
+foreach ( $this->oldreports as $report ) :
+	?>
+<p>Report <?php
+	echo ++ $i;
+	?>--Your answer(<?php
+	echo $report ['create_date']?>):</p>
+
+<p id="report_<?php
+	echo $report ['id']?>"><img
+	src="<?php
+	echo $this->baseUrl ();
+	?>/images/loading.gif"
+	style="height: 150px; width: 150px;" /> <script type="text/javascript">
+	var t=setTimeout("fetchreport<?php
+	echo $report ['id']?>()",<?php
+	echo ($i * 5000 + 2000);
+	?>);
+		function fetchreport<?php
+	echo $report ['id']?>(){
+			jQuery.ajax({
+				  url: "<?php
+	echo $this->url ( array ('controller' => 'site', 'action' => 'remoteurl' ) );
+	?>",
+				  data: {url: "<?php
+	echo $report ['url']?>"},
+				  dataType:'text',
+				  success: function(data) {
+				    jQuery("#report_<?php
+	echo $report ['id']?>").html(data);
+				  }
+				});
+		}
+	</script></p>
+
+<p>Report <?php
+	echo $i;
+	?>--<FONT
+	style='FONT-SIZE: 14px; COLOR: #cc0000'><?php
+	echo $report ['adminname'];
+	?></font> 
+response(<?php
+	echo $report ['replydate'];
+	?>):</p>
+<p><?php
+	echo $report ['replycontent'];
+	?><br>
+Tag: <FONT style='FONT-SIZE: 14px; COLOR: #cc0000'><?php
+	echo $report ['tag'];
+	?></font></p>
+<br>
+<br>
+<?php
+endforeach
+;
+?>
+</div>
+<div style="padding: 10px;">
+<h1 style='margin-left: 0px;'>Old reports for other campaigns:</h1>
+<?php
+if (count ( $this->otheroldreports ) == 0) {
+	echo "No other reports right now.";
+}
+foreach ( $this->otheroldreports as $report ) :
+	?>
+<p>Report <?php
+	echo ++ $i;
+	?>--Your answer(<?php
+	echo $report ['create_date']?>):</p>
+<p id="report_<?php
+	echo $report ['id']?>"><!-- 
+<iframe name="content_frame" marginwidth=0 marginheight=0 width=100% height=500 src="<?php
+	echo $report ['url']?>" frameborder=0>
+</iframe> --> <img
+	src="<?php
+	echo $this->baseUrl ();
+	?>/images/loading.gif"
+	style="height: 150px; width: 150px;" /> <script type="text/javascript">
+		var t=setTimeout("fetchreport<?php
+	echo $report ['id']?>()",<?php
+	echo ($i * 5000 + 5000);
+	?>);
+		function fetchreport<?php
+	echo $report ['id']?>(){
+			jQuery.ajax({
+				  url: "<?php
+	echo $this->url ( array ('controller' => 'site', 'action' => 'remoteurl' ) );
+	?>",
+				  data: {url: "<?php
+	echo $report ['url']?>"},
+				  dataType:'text',
+				  success: function(data) {
+				    jQuery("#report_<?php
+	echo $report ['id']?>").html(data);
+				  }
+				});
+		}
+	</script></p>
+<p>Report <?php
+	echo $i;
+	?>--<FONT
+	style='FONT-SIZE: 14px; COLOR: #cc0000'><?php
+	echo $report ['adminname'];
+	?></font> 
+response(<?php
+	echo $report ['replydate'];
+	?>):</p>
+<p><?php
+	echo $report ['replycontent'];
+	?><br>
+Tag: <FONT style='FONT-SIZE: 14px; COLOR: #cc0000'><?php
+	echo $report ['tag'];
+	?></font></p>
+<br>
+<br>
+<?php
+endforeach
+;
+?>
+</div>
+</fieldset>
+
+
+<script type="text/javascript">
+var lasttime;
+var leftsecond;
+var totalTime=<?php if($this->usetime!=null){ echo $this->usetime;}else{echo 0;}?>;
+var counter;
+var absent;
+jQuery(document).ready(function () {
+	var myDate =new Date();
+	last_record = parseInt(myDate.getTime()/1000);
+	counter=1;
+});
+
+// auto invokation configured in ReplyReportForm
+// also invoked in save
+function cal(){
+var myDate =new Date();
+currentTime = parseInt(myDate.getTime()/1000);
+// assume com-dev is reading reports before the first type
+if(counter==1) 
+	{
+		totalTime +=currentTime-last_record;
+		counter++;
+	}
+else{
+		if((currentTime-last_record)>10)
+		{
+			if(absent==0)
+			{
+				totalTime+=10;
+				absent=1;
+			}
+			last_record=currentTime;
+		}else
+		{
+			totalTime+=(currentTime-last_record);
+			last_record=currentTime;
+			absent=0;
+		}
+ 	}
+}
+
+var form = document.getElementById('form');
+var reply_status = 'NEW';
+form.onsubmit = function() {
+	  $('submit').disabled='disabled';
+	  $('notice').style.display = "";
+	  $('notice').innerHTML = 'Sending, please wait...';
+	  reply_status = 'SENDING'
+}
+
+
+function save(){
+	var report_status = "<?php
+	echo $this->status;
+	?>";
+	var elements = document.getElementsByName("note[]");
+	var tag_status = false;
+	for(var i =0; i<elements.length; i++){
+		if(elements[i].checked ){
+			tag_status = true;
+		}
+	}
+	if($('report_source').value == 'sms'){
+		if($('message').value.length > 70){
+			$('notice').style.display = "";
+			$('notice').innerHTML = "The sms should be less than 70 characters.";
+			return;
+		}
+	}
+	cal();
+	document.getElementById("usetime").value=totalTime;
+	
+	$('notice').style.display = "";
+	$('notice').innerHTML = "Please wait...";
+	var url = '<?php
+	echo $this->url ( array ('controller' => 'report', 'action' => 'adminsavereply' ) );
+	?>';  
+	var pars = Form.serialize($('form')); 
+	//alert(pars);
+
+	new Ajax.Request(
+				url,      
+				{     
+				method: 'post',      
+				parameters: pars,     
+				onSuccess: function(){
+						$('notice').innerHTML = "It has been saved at "+new Date();
+					}    
+				});  
+}
+
+setInterval("save()", 45000);
+
+
+</script>

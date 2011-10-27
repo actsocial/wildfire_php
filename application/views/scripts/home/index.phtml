@@ -1,0 +1,781 @@
+<div id="fillout-dialog">
+<div class="content"></div>
+</div>
+<div id="check-alert-dialog"><p class="content"></p></div>
+<?php if (isset($this->recentInvitation)&&$this->recentInvitation):?>
+<?php if($this->recentInvitation['type'] == 'mission'){?>
+<div id="web-dialog" class="web-dialog" style="display:none;">
+	<div class="content-2column">
+		<div class="images-column"><img
+			src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" /> <img
+			src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
+		</div>
+		<div class="main-column">
+			<h2><?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->recentInvitation['name'];?><?php echo $this->translate('You_Are_Invited_2')?></h2>
+			<a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
+			<p><?php echo $this->recentInvitation['invitation_description']?></p>
+			<p><?php echo $this->recentInvitation['invitation_description2']?></p>
+		</div>
+		<div class="buttons-bar">
+			<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Accept');?></a>
+			
+		</div>
+	</div>
+</div>
+
+<?php }else{?>
+<div id="web-dialog" class="web-dialog" style="display:none;">
+	<div class="content-2column">
+		<div class="images-column"><img
+			src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" /> <img
+			src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
+		</div>
+		<div class="main-column">
+			<h2><?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->translate('Campaign_name_'.$this->recentInvitation['campaign_id']);?><?php echo $this->translate('You_Are_Invited_2')?></h2>
+			<a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
+			<p><?php echo $this->translate("Campaign_invitation_description_".$this->recentInvitation['campaign_id'])?></p>
+			<?php echo $this->translate("Campaign_invitation_description2_".$this->recentInvitation['campaign_id'])?>
+		</div>
+		<div class="buttons-bar">
+			<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'precampaign', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Accept');?></a>
+			<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'prereject', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Reject');?></a>
+		</div>
+	</div>
+</div>
+<?php }?>
+<?php endif?>
+
+<?php if(isset($this->postCampaignNotification)&&$this->postCampaignNotification):?>
+<div id="web-dialog2" class="post-campaign-dialog" style="display: none;">
+	<div class="content-2column">
+		<div class="images-column">
+		<img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->postCampaignNotification['campaign_id']);?>_01.jpg" /> 
+		</div>
+		<div class="main-column">
+			<h2><?php echo $this->postCampaignNotification['name']?> <?php echo $this->translate('Home_Post_Campaign_Survey_end')?></h2>
+			<a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
+			<!--<?php echo $this->translate('Campaign_post_survey_notice_'.$this->postCampaignNotification['campaign_id'])?>-->
+			</br>
+			<?php echo$this->postCampaignNotification['post_survey_notice']?>
+		</div>
+		<div class="buttons-bar">
+			<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'postcampaign', 'id'=>$this->postCampaignNotification['campaign_id']));?>" class="button"><?php echo $this->translate('Home_Finish_Survey')?></a>
+		</div>
+	</div>
+</div>
+<?php endif?>
+
+<?php if (count($this->allInvitations)+count($this->activeCampaigns)==0):?>
+<div id="no-campaign" class="post-campaign-dialog" style="display:none;">
+	<div class="content-2column">
+		<div class="images-column">
+		<img src="<?php echo $this->baseUrl();?>/images/no-campaign.png" /> 
+		</div>
+		<div class="main-column">
+			<h2><?php echo $this->translate('This_Spark_Campaign_is_Full')?></h2>
+			<a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
+			<p><?php echo $this->translate('This_Spark_Campaign_is_Full_Content')?></p>
+		</div>
+
+	</div>
+</div>
+<?php endif?>
+
+<div class="mask" id="mask" style="display:none;"></div>
+
+<div class="article-box" style="margin-bottom: 15px;"><div class="article-box-inner">
+	<h1 style="float:left;"><?php echo $this->translate("Welcome")?>, <?php echo $this->currentUser['name']?>!</h1>
+	
+	<div class="yourinfo">
+		<span><?php echo $this->translate("Home_Your_Info_Completeness")?></span>
+		<?php if ($this->consumerextrainfo<40): ?>
+		<div class="progressbar-red">
+		<?php endif;?>
+		<?php if ($this->consumerextrainfo>=40 && $this->consumerextrainfo<70): ?>
+		<div class="progressbar-yel">
+		<?php endif;?>
+		<?php if ($this->consumerextrainfo>=70 && $this->consumerextrainfo<90): ?>
+		<div class="progressbar-grey">
+		<?php endif;?>
+		<?php if ($this->consumerextrainfo>=90): ?>
+		<div class="progressbar-blu">
+		<?php endif;?>
+		<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" class="progressbar"><div style="width:<?php echo $this->consumerextrainfo ?>px"></div></a></div>
+		<span><a href='<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>'><?php echo $this->consumerextrainfo ?>%</a></span>
+	</div>
+	
+	<div class="clear"></div>
+	<?php if ($this->consumer!=null){ ?>
+	<h2 style="float:left;"><?php echo $this->translate("Rank")?>:<a href="#"><?php  echo $this->consumer[0]['rname']; ?></a></h2><br/><?php }?>
+	<p style="margin: 10px 0 5px 0;"><?php echo $this->translate("Home_head_content_1")?></p>
+	<p style="margin: 0 0 5px 0;"><?php echo $this->translate("Home_head_content_2_1")?>
+	<a href="<?php echo $this->url(array('controller'=>'training',	'action'=>'howitworks','id'=>'0'));?>"><?php echo $this->translate("Home_head_content_2_2")?></a>
+	</p>
+	<?php if(count($this->badges)){?>	     
+	<p> <h2>你获得的徽章：</h2>
+   <?php
+	foreach($this->badges as $badge){
+	
+	echo "<a class='thickbox' style='margin-right:5px' href='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg'><img src='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg' width=30 height = 30 style='border:1px solid #ccc'></a>";
+	
+	}
+	?>  
+	</p>
+	<?php }?>
+	<div class="clear"></div>
+</div></div>
+<div class="spark-status">
+	<h2><?php echo $this->translate("Your_Spark_Points")?></h2>
+	<img onmouseover="showtip(2);" onmouseout="hidetip(2);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+	<div class="tip-wrapper">
+		<div id="tip2" class="tip-box" style="display:none; ">
+			<div class="top"></div>
+			<div class="middle">
+			<h2><?php echo $this->translate("What_is_Status_Header")?></h2>
+			<p><?php echo $this->translate("What_is_Status_Content_1")?></p>
+			<p><?php echo $this->translate("What_is_Status_Content_2")?></p>
+			<p><?php echo $this->translate("What_is_Status_Content_3")?></p>
+			<p><?php echo $this->translate("What_is_Status_Content_4")?></p>
+			<p><?php echo $this->translate("What_is_Status_Content_5")?></p>
+			</div>
+			<div class="bottom"></div>
+		</div>
+	</div>
+	<div class="spark-status-box">
+		<h3><?php echo $this->translate("Home_Spark_Points_Earned")?></h3>
+		<div class="spark-status-content">
+			<h4><?php echo $this->totalPoints; ?></h4>
+			<p><?php echo $this->translate("Spark_Points_Earned_Content_1")?>two<?php echo $this->translate("Spark_Points_Earned_Content_2")?>20<?php echo $this->translate("Spark_Points_Earned_Content_3")?></p>
+		</div>
+		<h3><?php echo $this->translate("Rewards_Ready_to_Redeem")?></h3>
+		<div class="spark-status-content">
+			<h4><?php echo $this->redeemPoints; ?></h4>
+		</div>
+		<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'point',	'action'=>'show'));?>" style=""><?php echo $this->translate("Redeem_Points")?></a></div>
+		<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'history',	'action'=>'stuff'));?>" style="">查看积分</a></div>
+
+	</div>
+</div>
+
+<div class="spark-report">
+	<?php if (count($this->activeCampaigns)+count($this->allInvitations)>0):?>
+	<h2><?php echo $this->translate("Told_a_friend?_Submit_a_Spark_Report!")?></h2>
+	<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+	<div class="tip-wrapper">
+		<div id="tip1" class="tip-box" style="display:none;">
+				<h2><?php echo $this->translate("What’s_a_Spark_Report?")?></h2>
+				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_1")?></p>
+				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_2")?></p>
+				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_3")?></p>
+				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_4")?></p>
+		</div>
+	</div>
+	<div class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<ul class="tab">
+				<?php $i = 1; foreach ($this->allInvitations as $invitation):?>
+				<li <?php if ($i==1):?>class="active"<?php endif;?> id="campaign_<?php echo $i;?>" onclick="showUlTab(<?php echo $i?>);	return false;">
+					<a href="#"><?php echo $invitation['name']?></a>
+				</li>
+				<?php $i++?>
+				<?php endforeach;?>
+				
+				
+				<?php 
+				foreach ($this->activeCampaigns as $activeCampaign):?>
+				<li <?php if ($i==1):?>class="active"<?php endif;?> id="campaign_<?php echo $i;?>" onclick="showUlTab(<?php echo $i?>);	return false;">
+					<a href="#"><?php echo $activeCampaign['name']?></a>
+				</li>
+				<?php $i++?>
+				<?php endforeach;?>
+				
+				<?php if ($i<=2):?>
+					<li class="blank"><a href="#" onclick="return false;" style="cursor:default;">&nbsp;</a></li>
+				<?php endif;?>
+				<?php if ($i<=3):?>
+					<li class="blank"><a href="#" onclick="return false;" style="cursor:default;">&nbsp;</a></li>
+				<?php endif;?>
+			</ul>
+			<?php $i=1; foreach ($this->allInvitations as $invitation):?>
+			
+			<div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:none;"<?php endif;?>>
+			<?php $i++;?>
+			<ul>
+			<?php if($invitation['type'] == 'mission'){?>
+			<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"/></a>
+			<?php }else{?>
+			<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"/></a>
+			<?php }?>
+			</ul>
+			</div>
+			<?php endforeach?>
+			<?php $j = $i;foreach ($this->activeCampaigns as $activeCampaign):?>			
+			<div class="ul-wrapper" id="ul_tab_<?php echo $j?>"<?php if ($j>1):?> style="display:none;"<?php endif;?>>
+			<?php if($activeCampaign['type'] == 'campaign'){?>
+			<div class="report-area">
+				<div class="report-panel">
+					<div class="uploading-image" style="display:none;">					
+					      <?php foreach($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']] as $imageReport) { ?>
+					      <?php $is_first = ($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']][0]['id'] == $imageReport['id'])?>
+                          <div style="text-align:center;<?php if(!$is_first) {echo 'display:none;';}?>" class="image" >
+                            <a onclick="move_up(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_up.png" /></a>
+                            <a href="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>" title="<?php echo $this->translate('Uplaod_Photo_Url_Title')?>" class="thickbox"> 
+                             <img id="image_thumb_<?php echo $imageReport['id'];?>" width='<?php if (isset($imageReport['thumb_width'])){ echo $imageReport['thumb_width']; }else{ echo 80;}?>' height='<?php if (isset($imageReport['thumb_height'])){ echo $imageReport['thumb_height']; }else{ echo 80;}?>' src="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>"/>
+                            </a>
+                            <a onclick="move_down(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_down.png" /></a>
+                          </div>
+						  <div class="status" style="<?php if(!$is_first) {echo 'display:none';}?>">
+						  <?php if($imageReport['state'] == 'APPROVED' && isset($imageReport['point_amount'])) { ?>
+							图片已审核, 您已获得<strong><?php echo $imageReport['point_amount'] ?></strong>分
+						  <?php } else if($imageReport['state'] == 'NEW') { ?>
+							图片需要审核, 请等待
+						  <?php } else if($imageReport['state'] == 'UNAPPROVED') { ?>
+						  	图片审核未通过
+						  <?php }?>
+						  </div>
+                          <?php }?>
+						<div class="intro-text">是你的星星火主页，告诉我们你与朋友谈话或是你的</div>
+						<div class="link-buttons">
+						  <a href="#" id="uploadFile_<?php echo $activeCampaign['campaign_id'];?>"><?php echo $this->translate('Uplaod_Photo')?></a>
+						  <div id="error" style="color:red;"></div>
+						</div>
+					    
+					</div>
+					<div class="submit-url submit-url-done" style="display:none;">
+						<div class="status"><?php echo $this->translate("Home_Submit_URL_Report")?></div>
+						<div class="input-url">
+				        <input id="url_<?php echo $activeCampaign['campaign_id'];?>" type="text" name="url" class="text-box" value=""/>
+				        
+
+
+						<?php //if($activeCampaign['url'] == null || $activeCampaign['url'] == ''){?>
+						<input id = "url_report_submit_<?php echo $activeCampaign['campaign_id'];?>" type="button" value="<?php echo $this->translate("Home_URL_Report_Submit")?>" class="button" onclick="submitURL(<?php echo $activeCampaign['campaign_id'];?>);"/>
+						<?php //}?>
+				        <?php 
+				            $i = 0;
+				            foreach ($this->urlreport as $url){
+				            	if($i == 2){
+				            	   break;	
+				            	}
+				            	if($url['campaign_id'] == $activeCampaign['campaign_id']){
+				            		if($url['state'] == 'APPROVED'){
+				            			$state = '审核成功';
+				            		}elseif($url['state'] == 'NEW'){
+				            			$state = '等待审核';
+				            		}else{
+				            			$state = '审核失败';
+				            		}
+				            		echo '<i>'.$url['url'].'</i>'.$state.'<br/>';
+				            	}	
+				            	$i++;			            	
+				            }				        
+				        ?>
+						</div>
+
+						<div class="intro-text">
+							<ul>
+							<!--  
+							<?php if($activeCampaign['url_state'] != null && $activeCampaign['url_state'] == 'APPROVED'){?>
+								<img src="<?php echo $this->baseUrl();?>/images/action_check.gif" align="absmiddle"/>&nbsp;<?php echo $this->translate("Home_URL_Report_Approved")?>
+							<?php }else{?>
+								<?php if($activeCampaign['url_state'] != null && $activeCampaign['url_state'] == 'NEW'){?>
+									<li><?php echo $this->translate("Home_URL_Report_Wait_For")?></li>
+								<?php }else{?>
+									<li id='url_report_notice_<?php echo $activeCampaign['campaign_id'];?>'><?php echo $this->translate("Home_URL_Report_Introduction")?></li>
+								<?php }?>
+								<li><?php echo $this->translate("Home_URL_Report_Introduction2")?></li>
+							<?php }?>
+							-->
+							<li id='url_report_notice_<?php echo $activeCampaign['campaign_id'];?>'></li>							
+							</ul>
+						</div>
+					</div>
+			<ul class="submit-report">
+				<?php $reportCount=1?>
+				<?php foreach ($this->allCampaignReports as $report):?>
+					<?php if ($report['campaign_id']==$activeCampaign['campaign_id'] && $reportCount<=3):?>
+						<div class="li-wrapper">
+						<li><?php echo $this->translate("Spark_Report")?>#<?php echo $reportCount?> (0-500 <?php echo $this->translate("points")?>)
+							<?php if(array_key_exists($report['id'], $this->approvedCampaignReportPoint)) {?>
+							<img src="<?php echo $this->baseUrl();?>/images/action_check.gif" align="absmiddle"/>
+							<?php echo $this->translate('earned');?> <?php echo $this->approvedCampaignReportPoint[$report['id']]?> <?php echo $this->translate("points")?>
+							<?php } else{?>
+							<?php echo $this->translate("Submit_successfully_and_pedding")?>
+							<?php }?>
+						</li>
+						</div>
+						<?php $reportCount++?>
+					<?php endif;?>
+				<?php endforeach;?>
+				<?php if ($reportCount == 1):?>
+				<div class="li-wrapper">
+				<li>
+					<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#1</a> (0-500 <?php echo $this->translate("points")?>)
+					
+				</li>
+				</div>
+				<div class="li-wrapper">
+				<li>
+					<?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)
+					
+				</li>
+				</div>
+				<div class="li-wrapper">
+				<li>
+					<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
+
+				</li>
+				</div>
+				<?php endif;?>
+				
+				<?php if ($reportCount ==2):?>
+				<div class="li-wrapper">
+				<li>
+					<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)</a>
+				</li>
+				</div>
+				<div class="li-wrapper">
+				<li>
+					<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
+
+				</li>
+				</div>
+				<?php endif;?>
+				
+				<?php if ($reportCount ==3):?>
+				<div class="li-wrapper">
+				<li>
+					<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)</a>
+				</li>
+				</div>
+				<?php endif;?>
+				
+				<?php if ($reportCount <=3){?>
+				<div class="li-wrapper">
+				<li>								
+					<?php echo $this->translate("Bonus_Report")?> (0-500 <?php echo $this->translate("points")?>)
+				</li>
+				</div>
+				<?php }else{?>
+				<div class="li-wrapper">
+				<li>						
+				<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;">
+					<? echo $this->translate('Click_here_and_submit_more'); ?> (0-500 <?php echo $this->translate("points")?>)
+				</a>
+				</li>
+				</div>
+				<?php }?>
+				</ul>
+				</div> <?php //report-panel ?>
+				<div class="report-task-bar">
+					<a href="#" onclick="showReportPanel(0);return false;" class="button-submit-report"><img src="<?php echo $this->baseUrl();?>/images/tab_button_report_blue.png"/></a>
+					<!-- <a href="#" onclick="showReportPanel(1);return false;" class="button-upload-image" ><img src="<?php echo $this->baseUrl();?>/images/tab_button_photo_grey.png"/></a> -->
+					<a href="#" onclick="showReportPanel(2);return false;" class="button-submit-url"><img src="<?php echo $this->baseUrl();?>/images/tab_button_url_grey.png"/></a>
+				</div> <?php //report-task-bar ?>
+				</div> <?php //report-area ?>
+			
+			<?php }else{?>
+			  该任务已经完成
+			<?php }?>
+			<?php $j++;?>
+			</div>
+			<?php endforeach?>
+			
+			
+		</div>
+	</div>
+	<?php endif;?>
+	
+	<h2><?php echo $this->translate("Quick_Polls:_Tell_Us_About_Yourself!")?></h2>
+	<img  onmouseover="showtip(3);" onmouseout="hidetip(3);"  class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+	<div class="tip-wrapper">
+		<div id="tip3" class="tip-box" style="display:none;">
+			<h2><?php echo $this->translate("What_are_Quick_Polls?")?></h2>
+			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_1")?></p>
+			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_2")?></p>
+			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_3")?></p>
+			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_4")?></p>
+		</div>
+	</div>
+	<div class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<div class="ul-wrapper">
+			<ul class="updates">
+			<?php foreach ($this->surveys as $survey) : ?>
+			    <?php if(($survey['public'] == 1)||($survey['consumer_id'])){?>
+				<?php $flag="new"?>
+				<?php foreach ($this->completedPolls as $completedPoll):?>
+					<?php if ($completedPoll["poll_id"]==$survey["id"]):?>
+						<?php $flag="completed"?>
+					<?php endif;?>
+				<?php endforeach;?>
+				<?php if ($flag=="new") :?>
+				<li>
+					<?php if ($this->lang=='en'):?> 
+						<a href="<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'participate', 'id'=>$survey['id']));?>">
+							 <?php echo $survey->english_name;?> 
+						</a>
+					<?php else:?>
+						<a href="<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'participate', 'id'=>$survey['id']));?>">
+							 <?php echo $survey['name'];?> 
+						</a>
+					<?php endif;?>			 
+				( <?php echo $survey['points']?> <?php echo $this->translate("points")?> )
+				</li>
+				<?php endif;?>	
+				<?php }?>
+			<?php endforeach; ?>
+			
+			<?php foreach ($this->surveys as $survey) : ?>	
+			    <?php if(($survey['public'] == 1)||($survey['consumer_id'])){?>
+				<?php $flag="new"?>
+				<?php foreach ($this->completedPolls as $completedPoll):?>
+					<?php if ($completedPoll["poll_id"]==$survey["id"]):?>
+						<?php $flag="completed"?>
+					<?php endif;?>
+				<?php endforeach;?>
+				<?php if ($flag=="completed") :?>
+				<li>
+					<?php if ($this->lang=='en'):?> <?php echo $survey['english_name'];?> <?php else:?> <?php echo $survey['name'];?> <?php endif?> ( <?php echo $survey['points']?> <?php echo $this->translate("points")?> ) <img src="<?php echo $this->baseUrl();?>/images/action_check.gif" align="absmiddle"/> <?php echo $this->translate("earned")?> <?php echo $survey['points']?> <?php echo $this->translate("points")?>
+				</li>
+				<?php endif;?>
+				<?php }?>
+			<?php endforeach; ?>
+			</ul>
+			</div>
+		</div>
+	</div>
+	<!--<?php if(count($this->activeMissions) || count($this->publicMissions)){?>
+	<h2>完成任务，获得礼物和积分奖励！</h2>
+	<div class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<div class="ul-wrapper">
+			<ul class="updates">
+			    <?php foreach ($this->activeMissions as $mission) : ?>
+			    <li>			    
+			    <?php echo '<a href="'.$this->url(array('controller'=>'mission','action'=>'description', 'id'=>$mission['id'])).'">'.$mission['name'].'</a>'?>			    
+			    </li>		    
+			    <?php endforeach;?>
+			    <?php foreach ($this->publicMissions as $mission) : ?>
+			    <li>			    
+			    <?php echo '<a href="'.$this->url(array('controller'=>'mission','action'=>'description', 'id'=>$mission['id'])).'">'.$mission['name'].'</a>'?>			    
+			    </li>		    
+			    <?php endforeach;?>
+			</ul>
+			</div>
+		 </div>
+	  </div>
+	<?php }?>
+	
+	-->
+	
+
+</div>
+<script language="javascript">
+
+var campaign_id;
+function showtip(id){
+	var tip = $("tip"+id);
+	Element.show(tip);
+}
+
+function hidetip(id){
+	var tip = $("tip"+id);
+	Element.hide(tip);
+}
+
+function hideAllUlTabs(){
+	var count =  <?php echo count($this->activeCampaigns)+count($this->allInvitations)?>;
+	for (var i=1;i<=count;i++){
+		Element.hide("ul_tab_"+i);
+		$('campaign_'+i).removeClassName('active');
+	}
+}
+
+function showUlTab(id){
+	hideAllUlTabs();
+	var tab = $("ul_tab_"+id);
+	Element.show(tab);
+	$('campaign_'+id).addClassName('active');
+
+}
+
+function submitURL(campaignId){
+	campaign_id = campaignId;
+	var url = '<?php echo $this->url(array('controller'=>'report','action'=>'ajaxstoreurl'));?>';
+	var pars = 'campaignId='+campaignId+'&url='+base64encode($('url_'+campaignId).value);
+//alert(pars);
+//return;
+	new Ajax.Request(    
+		url,
+		{
+		method: 'get',      
+		parameters: pars,    
+		onSuccess: updateURL    
+		}
+	);
+}
+var base64EncodeChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+var base64DecodeChars = new Array(
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+    -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 62, -1, -1, -1, 63,
+    52, 53, 54, 55, 56, 57, 58, 59, 60, 61, -1, -1, -1, -1, -1, -1,
+    -1,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14,
+    15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, -1, -1, -1, -1, -1,
+    -1, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40,
+    41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, -1, -1, -1, -1, -1);
+function base64encode(str) {
+    var out, i, len;
+    var c1, c2, c3;
+
+    len = str.length;
+    i = 0;
+    out = "";
+    while(i < len) {
+    c1 = str.charCodeAt(i++) & 0xff;
+    if(i == len)
+    {
+        out += base64EncodeChars.charAt(c1 >> 2);
+        out += base64EncodeChars.charAt((c1 & 0x3) << 4);
+        out += "==";
+        break;
+    }
+    c2 = str.charCodeAt(i++);
+    if(i == len)
+    {
+        out += base64EncodeChars.charAt(c1 >> 2);
+        out += base64EncodeChars.charAt(((c1 & 0x3)<< 4) | ((c2 & 0xF0) >> 4));
+        out += base64EncodeChars.charAt((c2 & 0xF) << 2);
+        out += "=";
+        break;
+    }
+    c3 = str.charCodeAt(i++);
+    out += base64EncodeChars.charAt(c1 >> 2);
+    out += base64EncodeChars.charAt(((c1 & 0x3)<< 4) | ((c2 & 0xF0) >> 4));
+    out += base64EncodeChars.charAt(((c2 & 0xF) << 2) | ((c3 & 0xC0) >>6));
+    out += base64EncodeChars.charAt(c3 & 0x3F);
+    }
+    return out;
+}
+function updateURL(originalRequest){
+	if(originalRequest.responseText){
+		$('url_report_notice_'+campaign_id).innerHTML = '<?php echo $this->translate("Home_URL_Report_Wait_For")?>';
+		$('url_report_submit_'+campaign_id).style.display = "none";
+	}
+}
+
+var getWidth = function() {
+	var w = window;
+	var d = document;
+	var dd = d.documentElement;
+	var width;
+	
+	if (w.innerWidth)
+		width = w.innerWidth;
+	else if (dd && dd.clientWidth)
+		width = dd.clientWidth;
+	else if(d.body)
+		width = d.body.clientWidth;
+	
+	return width;
+}
+var getHeight = function() {
+	var w = window;
+	var d = document;
+	var dd = d.documentElement;
+	var height;
+	
+	if (w.innerHeight) 
+		height = w.innerHeight;
+	else if (dd && dd.clientHeight)
+		height = dd.clientHeight;  
+	else if (d.body)
+		height = d.body.clientHeight;
+	
+	return height;
+}
+var WebDialog = {
+	count:0,
+	showpointer:1,
+	list:{},
+	element : $('web-dialog'),
+	onok : function() {},
+	oncancel : function() {},
+	show : function() {
+		var width = document.body.clientWidth;
+		width = getWidth();
+		var height = document.body.offsetHeight;
+		height = getHeight();
+		var left = (width - this.element.offsetWidth) / 2;
+		var top = (height - this.element.offsetHeight) / 2;
+		if (top < 200) {
+			top = 200;
+		}
+		this.element.style.left = left + "px";
+		this.element.style.top = top + "px";
+	},
+	alert : function(msg,agree,disagree,onok,oncancel) {
+		var buttons = ["OK","Cancel"];
+		var callbacks = [onok, oncancel];
+		this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+	},
+	ok : function() {
+		this.onok();
+	},
+	close : function() {
+					
+		Element.hide(this.list[this.showpointer]);
+		this.showpointer++;
+		if (this.count<this.showpointer){	
+			$('mask').hide();
+		}else{
+			Element.show(this.list[this.showpointer]);
+		}
+		this.oncancel();
+	},
+	showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions,elem) {
+		// icon_type : "none", "alert", "question"
+		// msg_align : "left", "center", "right"
+		// width : -1 means auto
+		if (elem!=null){
+			this.element = $(elem);
+		}
+		this.count++;
+		this.list[this.count] = this.element;
+		var width = getWidth();
+		var height = getHeight();
+		var left = (width - window_width) / 2;
+		var top = (height - 250) / 2;
+		var pos = 0;
+		if (window.innerHeight) {
+	    	pos = window.pageYOffset
+	    } else if (document.documentElement && document.documentElement.scrollTop) {
+	    	pos = document.documentElement.scrollTop
+	    } else if (document.body) {
+	    	pos = document.body.scrollTop;
+	    }
+	    top += pos;
+		/*
+		if (top < 200) {
+			top = 200;
+		}
+		*/
+		this.element.style.left = left + "px";
+		this.element.style.top = top + "px";
+		if (this.count==1){
+			this.element.show();
+		}
+		$('mask').style.width = width + "px";
+		$('mask').style.height = height + "px";
+		$('mask').show();
+	}
+}
+
+
+var html = "aaa";
+var buttons = ['aaa','bbb'];
+var callbacks = [function(){},function(){}];
+<?php if ($this->popup==true):?>
+	<?php if(isset($this->postCampaignNotification)&&$this->postCampaignNotification):?>
+		WebDialog.showMessageBox(html, "left", "center", 610, buttons, callbacks,'web-dialog2');
+	<?php endif;?>
+	
+	<?php if (isset($this->recentInvitation)&&$this->recentInvitation):?>
+		WebDialog.showMessageBox(html, "left", "center", 610, buttons, callbacks,'web-dialog');
+	<?php endif;?>
+
+	<?php if (count($this->allInvitations)+count($this->activeCampaigns)==0):?>
+	WebDialog.showMessageBox(html, "left", "center", 610, buttons, callbacks,'no-campaign');
+	<?php endif?>
+<?php endif;?>	
+
+
+jQuery(document).ready(function(){
+jQuery('#fillout-dialog').dialog({dialogClass: 'ui-fillout-dialog', bgiframe: true, autoOpen: false, resizable: false, modal: true, width: 680, height: 600, title: '<?php echo $this->translate("Submit_WOM_Report")?>' });
+jQuery('#check-alert-dialog').dialog({title:'<?php echo $this->translate("Submit_you_report_error")?>', bgiframe: true, autoOpen: false, resizable: false, modal: true, buttons: {
+		'<?php echo $this->translate("Submit_you_report_confirm")?>': function() {
+			jQuery(this).dialog('close');
+		}
+	}
+});
+
+<?php foreach ($this->activeCampaigns as $activeCampaign):?>
+var button_<?php echo $activeCampaign['campaign_id'];?> = jQuery("#uploadFile_<?php echo $activeCampaign['campaign_id'];?>"), interval;
+//var image_thumb_<?php echo $activeCampaign['campaign_id'];?> = jQuery("#image_thumb_<?php echo $activeCampaign['campaign_id'];?>"), interval;
+new AjaxUpload(button_<?php echo $activeCampaign['campaign_id'];?>,{
+    //action: 'upload-test.php', // I disabled uploads in this example for security reasons
+    action: '<?php echo $this->url(array('controller'=>'report','action'=>'ajaxstoreimage'));?>', 
+    //name: 'myfile',
+    data: {
+        campaign_id : <?php echo $activeCampaign['campaign_id'];?>
+    },
+    //responseType: 'json',
+    onSubmit : function(file, ext){
+        if (! (ext && /^(jpg|png|jpeg|gif)$/.test(ext))){
+            // extension is not allowed
+           jQuery('div#error').text("请上传正确的图片").show().fadeOut(5000);
+           // cancel upload
+           return false;
+        }
+    
+        // change button text, when user selects file           
+        button_<?php echo $activeCampaign['campaign_id'];?>.text('正在上传中');
+        
+        // If you want to allow uploading only 1 file at time,
+        // you can disable upload button
+        this.disable();
+    },
+    onComplete: function(file, response){
+        button_<?php echo $activeCampaign['campaign_id'];?>.text("<?php echo $this->translate('Uplaod_Photo')?>");
+        // enable upload button
+        this.enable();
+        eval(response);
+    }
+});
+<?php endforeach;?>
+
+});
+
+var filloutDialogOpen = function(url) {
+jQuery("#fillout-dialog .content").load(url,function(){
+});
+jQuery("#fillout-dialog").dialog('open');
+}
+var currentReportPanel = 0;
+var showReportPanel = function(panelId) {
+var panels = new Array('.submit-report','.uploading-image','.submit-url');
+var buttons = new Array('.button-submit-report img','.button-upload-image img','.button-submit-url img');
+var buttonsGrey = new Array('tab_button_report_grey.png','tab_button_photo_grey.png','tab_button_url_grey.png');
+var buttonsBlue = new Array('tab_button_report_blue.png','tab_button_photo_blue.png','tab_button_url_blue.png');
+jQuery(panels[currentReportPanel]).hide();
+jQuery(buttons[currentReportPanel]).attr("src","<?php echo $this->baseUrl();?>/images/"+buttonsGrey[currentReportPanel]);
+jQuery(buttons[panelId]).attr("src","<?php echo $this->baseUrl();?>/images/"+buttonsBlue[panelId]);
+jQuery(panels[panelId]).show('slide');
+currentReportPanel = panelId;
+}
+
+function move_down(e) {
+  var parent = jQuery(jQuery(e).parent());
+  if(parent.next().next().attr('class')) {
+      parent.hide();
+      parent.next().hide();
+  	  parent.next().next().show();	
+      parent.next().next().next().show();	
+  } else {
+  	jQuery('div#error').text("已经是最后一个了").show().fadeOut(5000);
+  }
+}
+
+function move_up(e) {
+  var parent = jQuery(jQuery(e).parent());
+  if(parent.prev().prev().attr('class')) {
+    parent.hide();
+    parent.next().hide();
+  	parent.prev().show();	
+    parent.prev().prev().show();
+  } else {
+  	jQuery('div#error').text("已经是第一个了").show().fadeOut(5000);
+  }
+}
+</script>

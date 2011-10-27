@@ -1,0 +1,27 @@
+<div class="article-box"><div class="article-box-inner">
+<div class="campaign-images">
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/purell/cam_purell_01.gif"/>
+	<img src="<?php echo $this->baseUrl();?>/images/campaign/purell/cam_purell_02.gif"/>
+</div>
+<div class="main-column campaign-content" style="width:510px;">
+	<div class="submit-report"><a onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>5));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>5));?>" class="standard-report-button-en">Submit Report</a></div>
+	<h1>PURELL Hand Sanitizer Spark Campaign</h1>
+	<h2>"Pure Hands - PURELL"</h2>
+	<p>Welcome to the PURELL Spark Campaign!</p>
+	<p>Made with a unique formula of alcohol, moisturizers, and Vitamin E, PURELL kills up to 99.99% of germs in less than 15 seconds. With germs everywhere, PURELL is an effective way to keep you and your family healthy and safe, anytime, anyplace. </p>
+	<p>PURELL is the #1 doctor-recommended hand sanitizer in the United States, is relied upon by hospitals in Shanghai and Beijing. As Wildfire member, you’re among the first to experience PURELL in China!</p>
+</div>
+<div style="clear: both;"></div>
+</div></div>
+<div class="campaign-summary campaign-purell">
+	<div class="logo"><img src="<?php echo $this->baseUrl();?>/images/campaign/purell/cam_purell_logo.jpg"/></div>
+	<div class="summary summary-en">
+		<ul>
+			<li>Days Remaining: <strong><?php echo $this->dayCount?></strong></li>
+			<li>Reports Submitted: <strong><?php echo $this->reportCount?></strong></li>
+			<li>Spark Points Earned: <strong><?php echo $this->campaignPoint?></strong></li>
+		</ul>
+		<a href="<?php echo $this->baseUrl();?>/download/campaign_4.pdf" class="standard-bandbook-button" target="_blank">Spark Guide (PDF)</a>
+	</div>
+<div style="clear: both;"></div>
+</div>

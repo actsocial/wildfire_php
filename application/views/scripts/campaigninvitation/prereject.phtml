@@ -1,0 +1,14 @@
+<div class="article-box" >
+	<div class="article-box-inner">
+	<h1><?php echo $this->translate('Reject_confirm1')?><?php echo $this->campaign_name;?><?php echo $this->translate('Reject_confirm2') ?></h1>
+	</div>
+	<div style="clear: both; "></div>
+</div>
+<div class="edit-profile">	
+	<div class="buttons-bar"><a class="button"
+		href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'reject', 'id'=>$this->compaign_id));?>"><?php echo $this->translate('Reject');?></a>
+	<a class="button"
+		href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><?php echo $this->translate('Rejcet_Go_back');?></a>
+	</div>
+</div>
+

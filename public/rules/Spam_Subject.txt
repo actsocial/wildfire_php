@@ -1,0 +1,7436 @@
+﻿####################### Subject ################################
+
+header CN_SUBJECT_1		Subject =~ /文物/
+score CN_SUBJECT_1		1.500
+
+header CN_SUBJECT_2		Subject =~ /佛教/
+score CN_SUBJECT_2		25.00
+
+header CN_SUBJECT_3		Subject =~ /淘宝/
+score CN_SUBJECT_3		3.00
+
+header CN_SUBJECT_4		Subject =~ /同学录/
+score CN_SUBJECT_4		25.00
+
+header CN_SUBJECT_5		Subject =~ /启导英语/
+score CN_SUBJECT_5		25.00
+
+header CN_SUBJECT_6		Subject =~ /印刷加工/
+score CN_SUBJECT_6		15.00
+
+header CN_SUBJECT_7		Subject =~ /风险防范/
+score CN_SUBJECT_7		25.00
+
+header CN_SUBJECT_8		Subject =~ /新概念英语/
+score CN_SUBJECT_8		25.00
+
+header CN_SUBJECT_9		Subject =~ /虚拟/
+score CN_SUBJECT_9		2.660
+
+header CN_SUBJECT_10		Subject =~ /(?:医药|美容)/
+score CN_SUBJECT_10		5.00
+
+header CN_SUBJECT_11		Subject =~ /在线(?:收看|收听|视听)/
+score CN_SUBJECT_11		3.00
+
+header CN_SUBJECT_12		Subject =~ /(?:卖淫|嫖娼)/
+score CN_SUBJECT_12		25.00
+
+header CN_SUBJECT_13		Subject =~ /写真/
+score CN_SUBJECT_13		3.00
+
+header CN_SUBJECT_14		Subject =~ /平安车险/
+score CN_SUBJECT_14		25.00
+
+header CN_SUBJECT_15		Subject =~ /车险产品/
+score CN_SUBJECT_15		25.00
+
+header CN_SUBJECT_16		Subject =~ /钱庄/
+score CN_SUBJECT_16		4.500
+
+header CN_SUBJECT_17		Subject =~ /企业/
+score CN_SUBJECT_17		0.660
+
+header CN_SUBJECT_18		Subject =~ /交换(?:连接|链接)/
+score CN_SUBJECT_18		4.00
+
+header CN_SUBJECT_19		Subject =~ /房屋(?:中介|交易)/
+score CN_SUBJECT_19		6.00
+
+header CN_SUBJECT_20		Subject =~ /(?:疾病|治疗|医院|名医)/
+score CN_SUBJECT_20		6.00
+
+header CN_SUBJECT_21		Subject =~ /(?:周易|奇书)/
+score CN_SUBJECT_21		4.00
+
+header CN_SUBJECT_22		Subject =~ /(?:电影|影视|院线)/
+score CN_SUBJECT_22		5.00
+
+header CN_SUBJECT_23		Subject =~ /(?:色情|情色)/
+score CN_SUBJECT_23		4.00
+
+header CN_SUBJECT_24		Subject =~ /(?:百部|千部)/
+score CN_SUBJECT_24		2.00
+
+header CN_SUBJECT_25		Subject =~ /提供发票/
+score CN_SUBJECT_25		25.00
+
+header CN_SUBJECT_26		Subject =~ /(?:大片|影院|影片)/
+score CN_SUBJECT_26		5.00
+
+header CN_SUBJECT_27		Subject =~ /实业/
+score CN_SUBJECT_27		1.00
+
+header CN_SUBJECT_28		Subject =~ /(?:你|您)好/
+score CN_SUBJECT_28		1.50
+
+header CN_SUBJECT_29		Subject =~ /欢迎/
+score CN_SUBJECT_29		1.50
+
+header CN_SUBJECT_30		Subject =~ /各地发票/
+score CN_SUBJECT_30		25.0
+
+header CN_SUBJECT_31		Subject =~ /(?:最|绝对)/
+score CN_SUBJECT_31		2.00
+
+header CN_SUBJECT_32		Subject =~ /考察团/
+score CN_SUBJECT_32		4.00
+
+header CN_SUBJECT_33		Subject =~ /注册/
+score CN_SUBJECT_33		2.00
+
+header CN_SUBJECT_34		Subject =~ /成人片/
+score CN_SUBJECT_34		25.00
+
+header CN_SUBJECT_35		Subject =~ /(?:成人|激情)/
+score CN_SUBJECT_35		3.00
+
+header CN_SUBJECT_36		Subject =~ /(?:范冰冰|赵薇|林心如|刘嘉玲)/
+score CN_SUBJECT_36		25.0
+
+header CN_SUBJECT_37		Subject =~ /各种/
+score CN_SUBJECT_37		2.00
+
+header CN_SUBJECT_38		Subject =~ /经验/
+score CN_SUBJECT_38		2.00
+
+header CN_SUBJECT_39		Subject =~ /财务往来/
+score CN_SUBJECT_39		25.0
+
+header CN_SUBJECT_40		Subject =~ /(?:美女|少女|少妇|女优|女友|美眉|表姐)/
+score CN_SUBJECT_40		15.0
+
+header CN_SUBJECT_41		Subject =~ /邮址库/
+score CN_SUBJECT_41		25.0
+
+header CN_SUBJECT_42		Subject =~ /特价网/
+score CN_SUBJECT_42		25.0
+
+header CN_SUBJECT_43		Subject =~ /成本/
+score CN_SUBJECT_43		0.70
+
+header CN_SUBJECT_44		Subject =~ /((?:-|\+|=|,|\.|;|:).{1,4}){2,}/
+describe CN_SUBJECT_44		Subject 用"-+等做间隔"进行伪装
+score CN_SUBJECT_44		0.50
+
+header CN_SUBJECT_45		Subject =~ /诚(?:征|寻|聘|招|荐|心|意)/
+score CN_SUBJECT_45		2.00
+
+header CN_SUBJECT_46		Subject =~ /(?:实务|学历|研究生|讲习)班/
+score CN_SUBJECT_46		10.0
+
+header CN_SUBJECT_47		Subject =~ /((?:挣|赚|省|收).{0,10}钱)|(钱.{0,10}(挣|赚))/
+describe CN_SUBJECT_47		Subject contains "赚钱"
+score CN_SUBJECT_47		6.00
+
+header CN_SUBJECT_48		Subject =~ /安利/
+score CN_SUBJECT_48		2.50
+
+header	CN_SUBJECT_49		Subject =~ /(?:[0-9]|\xA3[\xB0-\xB9]|一|二|三|四|五|六|七|八|九|十|百|千|万|壹|贰|叁|肆|伍|陆|柒|捌|玖|拾|佰|仟)((美){0,1}(元|圆))/
+describe CN_SUBJECT_49		Subject contains "数字化的钱"
+score CN_SUBJECT_49		4.00
+
+header CN_SUBJECT_50		Subject =~ /((?:打|[0-9]|\xA3[\xB0-\xB9]|一|二|三|四|五|六|七|八|九|壹|贰|叁|肆|伍|陆|柒|捌|玖)折)|(折扣)/
+describe CN_SUBJECT_50		Subject contains "几折或折扣"
+score CN_SUBJECT_50		4.50
+
+header CN_SUBJECT_51		Subject =~ /(?:推荐|首选|请(使){0,1}用|佳选)/
+describe CN_SUBJECT_51		Subject contains "推荐、首选、请使用"
+score CN_SUBJECT_51		1.70
+
+header CN_SUBJECT_52		Subject =~ /(?:((?:佳|礼)品)|((?:好|有)礼)|奖品)/
+describe CN_SUBJECT_52		Subject contains "佳品、礼品、好礼、有礼、奖品"
+score CN_SUBJECT_52		3.00
+
+header CN_SUBJECT_53		Subject =~ /(?:提供|(?:帮|助)(?:你|您))/
+describe CN_SUBJECT_53		Subject contains "提供、帮你、助你"
+score CN_SUBJECT_53		1.50
+
+header CN_SUBJECT_54		Subject =~ /^专业/
+describe CN_SUBJECT_54		Subject 以"专业"开头
+score CN_SUBJECT_54		4.50
+
+header CN_SUBJECT_55		Subject =~ /专业/
+score CN_SUBJECT_55		2.00
+
+header CN_SUBJECT_56		Subject =~ /(?:!|！){1,}/
+describe CN_SUBJECT_56		Subject contains "惊叹号"
+score CN_SUBJECT_56		1.50
+
+header CN_SUBJECT_57		Subject =~ /\xA1[\xEE-\xF5]/
+describe CN_SUBJECT_57		Subject contains "特殊全角符号"
+score CN_SUBJECT_57		3.00
+
+header CN_SUBJECT_58		Subject =~ /(性.{0,2}(?:爱|趣|享受|福|用品|高潮|技巧|行为|生活|之都|感|乐|伴侣|虐|之窗))/
+describe CN_SUBJECT_58		Subject contains "关于性的话题"
+score CN_SUBJECT_58		5.00
+
+header CN_SUBJECT_59		Subject =~ /(?:床上|上床|做爱|自慰)/
+score CN_SUBJECT_59		7.00
+
+header CN_SUBJECT_60		Subject =~ /房事/
+score CN_SUBJECT_60		4.00
+
+header CN_SUBJECT_61		Subject =~ /点击/
+score CN_SUBJECT_61		1.50
+
+header CN_SUBJECT_62		Subject =~ /交友网/
+score CN_SUBJECT_62		25.0
+
+header CN_SUBJECT_63		Subject =~ /(?:(恭(?:喜|禧|贺|祝))|祝贺)/
+describe CN_SUBJECT_63		Subject contains "恭喜、恭贺、恭祝等"
+score CN_SUBJECT_63		1.50
+
+header CN_SUBJECT_64		Subject =~ /商务/
+score CN_SUBJECT_64		0.50
+
+header CN_SUBJECT_65		Subject =~ /付款/
+score CN_SUBJECT_65		0.80
+
+header CN_SUBJECT_66		Subject =~ /诚邀/
+score CN_SUBJECT_66		1.00
+
+header CN_SUBJECT_67		Subject =~ /(?:商机|机会|机遇)/
+score CN_SUBJECT_67		4.00
+
+header CN_SUBJECT_68		Subject =~ /(?:发财|致富|爆富)/
+score CN_SUBJECT_68		25.00
+
+header CN_SUBJECT_69		Subject =~ /(?:网络|电子)(?:营销|商务)/
+score CN_SUBJECT_69		6.00
+
+header CN_SUBJECT_70		Subject =~ /阳宅风水/
+score CN_SUBJECT_70		25.00
+
+header CN_SUBJECT_71		Subject =~ /(?:(注册.{1,30}公司)|(公司注册))/
+describe CN_SUBJECT_71		Subject contains "注册公司"
+score CN_SUBJECT_71		3.00
+
+header CN_SUBJECT_72		Subject =~ /代客群发/
+score CN_SUBJECT_72		25.00
+
+header CN_SUBJECT_73		Subject =~ /(?:机|火车)票/
+score CN_SUBJECT_73		3.00
+
+header CN_SUBJECT_74		Subject =~ /(?:进|出)口/
+score CN_SUBJECT_74		1.30
+
+header CN_SUBJECT_75		Subject =~ /烧饼/
+score CN_SUBJECT_75		3.00
+
+header CN_SUBJECT_76		Subject =~ /贸易政策/
+score CN_SUBJECT_76		10.0
+
+header CN_SUBJECT_77		Subject =~ /求购信息/
+score CN_SUBJECT_77		7.00
+
+header CN_SUBJECT_78		Subject =~ /降低技巧/
+score CN_SUBJECT_78		5.00
+
+header CN_SUBJECT_79		Subject =~ /最新“/
+score CN_SUBJECT_79		1.50
+
+header CN_SUBJECT_80		Subject =~ /优质客户/
+score CN_SUBJECT_80		25.0
+
+header CN_SUBJECT_81		Subject =~ /(?:名牌|精品)/
+score CN_SUBJECT_81		1.20
+
+header CN_SUBJECT_82		Subject =~ /企业推广/
+score CN_SUBJECT_82		5.00
+
+header CN_SUBJECT_83		Subject =~ /名校招生/
+score CN_SUBJECT_83		25.0
+
+header CN_SUBJECT_84		Subject =~ /项目/
+score CN_SUBJECT_84		0.60
+
+header CN_SUBJECT_85		Subject =~ /专利/
+score CN_SUBJECT_85		1.00
+
+header CN_SUBJECT_86		Subject =~ /宗教/
+score CN_SUBJECT_86		3.50
+
+header CN_SUBJECT_87		Subject =~ /加盟/
+score CN_SUBJECT_87		1.00
+
+header CN_SUBJECT_88		Subject =~ /转让/
+score CN_SUBJECT_88		2.00
+
+header CN_SUBJECT_89		Subject =~ /广告/
+score CN_SUBJECT_89		1.00
+
+header CN_SUBJECT_90		Subject =~ /年利/
+score CN_SUBJECT_90		1.500
+
+header CN_SUBJECT_91		Subject =~ /专卖/
+score CN_SUBJECT_91		1.00
+
+header CN_SUBJECT_92		Subject =~ /营养/
+score CN_SUBJECT_92		3.00
+
+header CN_SUBJECT_93		Subject =~ /软件网/
+score CN_SUBJECT_93		2.500
+
+header CN_SUBJECT_94		Subject =~ /联系/
+score CN_SUBJECT_94		1.200
+
+header CN_SUBJECT_95		Subject =~ /(?:短信|彩信)/
+score CN_SUBJECT_95		2.00
+
+header CN_SUBJECT_96		Subject =~ /邮件(?:列表|地址)/
+score CN_SUBJECT_96		1.300
+
+header CN_SUBJECT_97		Subject =~ /私照/
+score CN_SUBJECT_97		4.00
+
+header CN_SUBJECT_98		Subject =~ /卤味/
+score CN_SUBJECT_98		4.00
+
+header CN_SUBJECT_99		Subject =~ /护肤/
+score CN_SUBJECT_99		3.50
+
+header CN_SUBJECT_100		Subject =~ /玫瑰/
+score CN_SUBJECT_100		3.50
+
+header CN_SUBJECT_101		Subject =~ /(?:足彩|彩票|体彩)/
+score CN_SUBJECT_101		6.00
+
+header CN_SUBJECT_102		Subject =~ /注册机/
+score CN_SUBJECT_102		6.50
+
+header CN_SUBJECT_103		Subject =~ /烧腊/
+score CN_SUBJECT_103		4.00
+
+header CN_SUBJECT_104		Subject =~ /海量/
+score CN_SUBJECT_104		2.00
+
+header CN_SUBJECT_105		Subject =~ /营销战术/
+score CN_SUBJECT_105		15.00
+
+header CN_SUBJECT_106		Subject =~ /采购/
+score CN_SUBJECT_106		1.00
+
+header CN_SUBJECT_107		Subject =~ /办证/
+score CN_SUBJECT_107		3.00
+
+header CN_SUBJECT_108		Subject =~ /宠物/
+score CN_SUBJECT_108		3.00
+
+header CN_SUBJECT_109		Subject =~ /(?:性感|性趣)/
+score CN_SUBJECT_109		2.00
+
+header CN_SUBJECT_110		Subject =~ /(?:癌症|风湿|乙肝|患者)/
+score CN_SUBJECT_110		8.00
+
+header CN_SUBJECT_111		Subject =~ /胃口/
+score CN_SUBJECT_111		3.00
+
+header CN_SUBJECT_112		Subject =~ /偷拍/
+score CN_SUBJECT_112		5.00
+
+header CN_SUBJECT_113		Subject =~ /肺片/
+score CN_SUBJECT_113		4.00
+
+header CN_SUBJECT_114		Subject =~ /富翁/
+score CN_SUBJECT_114		3.00
+
+header CN_SUBJECT_115		Subject =~ /(?:斑主|斑竹)/
+score CN_SUBJECT_115		4.00
+
+header CN_SUBJECT_116		Subject =~ /站长/
+score CN_SUBJECT_116		1.50
+
+header CN_SUBJECT_117		Subject =~ /(?:插头|插座)/
+score CN_SUBJECT_117		2.00
+
+header CN_SUBJECT_118		Subject =~ /(?:老板|明星)/
+score CN_SUBJECT_118		1.50
+
+header CN_SUBJECT_119		Subject =~ /薪酬/
+score CN_SUBJECT_119		3.50
+
+header CN_SUBJECT_120		Subject =~ /校友/
+score CN_SUBJECT_120		4.00
+
+header CN_SUBJECT_121		Subject =~ /低价/
+score CN_SUBJECT_121		2.00
+
+header CN_SUBJECT_122		Subject =~ /旅游/
+score CN_SUBJECT_122		2.50
+
+header CN_SUBJECT_123		Subject =~ /化妆/
+score CN_SUBJECT_123		15.00
+
+header CN_SUBJECT_124		Subject =~ /(?:妇科|卵巢|囊肿)/
+score CN_SUBJECT_124		25.00
+
+header CN_SUBJECT_125		Subject =~ /(?:减肥|瘦身)/
+score CN_SUBJECT_125		25.00
+
+header CN_SUBJECT_126		Subject =~ /(?:中药|泡脚)/
+score CN_SUBJECT_126		25.00
+
+header CN_SUBJECT_127		Subject =~ /艺校/
+score CN_SUBJECT_127		4.00
+
+header CN_SUBJECT_128		Subject =~ /证书/
+score CN_SUBJECT_128		4.00
+
+header CN_SUBJECT_129		Subject =~ /绝密/
+score CN_SUBJECT_129		5.00
+
+header CN_SUBJECT_130		Subject =~ /移民/
+score CN_SUBJECT_130		7.00
+
+header CN_SUBJECT_131		Subject =~ /鹊桥/
+score CN_SUBJECT_131		7.00
+
+header CN_SUBJECT_132		Subject =~ /网购物/
+score CN_SUBJECT_132		10.00
+
+header CN_SUBJECT_133		Subject =~ /酒店/
+score CN_SUBJECT_133		2.50
+
+header CN_SUBJECT_134		Subject =~ /生产/
+score CN_SUBJECT_134		1.5
+
+header CN_SUBJECT_135		Subject =~ /奉献/
+score CN_SUBJECT_135		2.00
+
+header CN_SUBJECT_136		Subject =~ /订房网/
+score CN_SUBJCT_136		25.00
+
+header CN_SUBJECT_137		Subject =~ /宣传员/
+score CN_SUBJECT_137		4.00
+
+header CN_SUBJECT_138		Subject =~ /赢家/
+score CN_SUBJECT_138		1.60
+
+header CN_SUBJECT_139		Subject =~ /供应/
+score CN_SUBJECT_139		0.50
+
+header CN_SUBJECT_140		Subject =~ /伪钞/
+score CN_SUBJECT_140		3.00
+
+header CN_SUBJECT_141		Subject =~ /(?:钢琴|电子琴)/
+score CN_SUBJECT_141		2.00
+
+header CN_SUBJECT_142		Subject =~ /初恋/
+score CN_SUBJECT_142		3.00
+
+header CN_SUBJECT_143		Subject =~ /母亲/
+score CN_SUBJECT_143		3.00
+
+header CN_SUBJECT_144		Subject =~ /代发/
+score CN_SUBJECT_144		1.00
+
+header CN_SUBJECT_145		Subject =~ /网友世界/
+score CN_SUBJECT_145		25.00
+
+header CN_SUBJECT_146		Subject =~ /绝技/
+score CN_SUBJECT_146		3.00
+
+header CN_SUBJECT_147		Subject =~ /奶粉/
+score CN_SUBJECT_147		25.00
+
+header CN_SUBJECT_148		Subject =~ /群发(?:大师|软件)/
+score CN_SUBJECT_148		10.00
+
+header CN_SUBJECT_149		Subject =~ /物流网/
+score CN_SUBJECT_149		3.00
+
+header CN_SUBJECT_150		Subject =~ /你的朋友/
+score CN_SUBJECT_150		8.00
+
+header CN_SUBJECT_151		Subject =~ /您的朋友/
+score CN_SUBJECT_151		8.00
+
+header CN_SUBJECT_152		Subject =~ /对外代/
+score CN_SUBJECT_152		2.00
+
+header CN_SUBJECT_153		Subject =~ /降低/
+score CN_SUBJECT_153		1.00
+
+header CN_SUBJECT_154		Subject =~ /傻瓜/
+score CN_SUBJECT_154		3.320
+
+header CN_SUBJECT_155		Subject =~ /慈善/
+score CN_SUBJECT_155		3.320
+
+header CN_SUBJECT_156		Subject =~ /(?:三八节|妇女)/
+score CN_SUBJECT_156		3.50
+
+header CN_SUBJECT_157		Subject =~ /节省/
+score CN_SUBJECT_157		1.20
+
+header CN_SUBJECT_158		Subject =~ /(?:神秘|奥秘)/
+score CN_SUBJECT_158		1.64
+
+header CN_SUBJECT_159		Subject =~ /枪手/
+score CN_SUBJECT_159		2.44
+
+header CN_SUBJECT_160		Subject =~ /负责人/
+score CN_SUBJECT_160		1.26
+
+header CN_SUBJECT_161		Subject =~ /红包/
+score CN_SUBJECT_161		2.50
+
+header CN_SUBJECT_162		Subject =~ /婚友/
+score CN_SUBJECT_162		5.00
+
+header CN_SUBJECT_163		Subject =~ /家具/
+score CN_SUBJECT_163		2.30
+
+header CN_SUBJECT_164		Subject =~ /出售/
+score CN_SUBJECT_164		1.50
+
+header CN_SUBJECT_165		Subject =~ /技能提升/
+score CN_SUBJECT_165		10.00
+
+header CN_SUBJECT_166		Subject =~ /壮阳/
+score CN_SUBJECT_166		5.00
+
+header CN_SUBJECT_167		Subject =~ /(?:情趣|调情|SM)用品/
+score CN_SUBJECT_167		5.00
+
+header CN_SUBJECT_168		Subject =~ /网络警/
+score CN_SUBJECT_168		4.00
+
+header CN_SUBJECT_169		Subject =~ /ZIPPO/
+score CN_SUBJECT_169		3.00
+
+header CN_SUBJECT_170		Subject =~ /游戏狂阁/
+score CN_SUBJECT_170		25.00
+
+header CN_SUBJECT_171		Subject =~ /永久的家/
+score CN_SUBJECT_171		4.00
+
+header CN_SUBJECT_172		Subject =~ /批发/
+score CN_SUBJECT_172		2.50
+
+header CN_SUBJECT_173		Subject =~ /(?:犯人|口交)/
+score CN_SUBJECT_173		4.00
+
+header CN_SUBJECT_174		Subject =~ /训练营/
+score CN_SUBJECT_174		7.00
+
+header CN_SUBJECT_175		Subject =~ /训练/
+score CN_SUBJECT_175		2.00
+
+header CN_SUBJECT_176		Subject =~ /传情/
+score CN_SUBJECT_176		2.50
+
+header CN_SUBJECT_177		Subject =~ /财富/
+score CN_SUBJECT_177		2.00
+
+header CN_SUBJECT_178		Subject =~ /偶像/
+score CN_SUBJECT_178		2.655
+
+header CN_SUBJECT_179		Subject =~ /炒菜/
+score CN_SUBJECT_179		5.00
+
+header CN_SUBJECT_180		Subject =~ /(?:医学|处女)/
+score CN_SUBJECT_180		5.00
+
+header CN_SUBJECT_181		Subject =~ /(?:野战|军品)/
+score CN_SUBJECT_181		3.00
+
+header CN_SUBJECT_182		Subject =~ /客栈/
+score CN_SUBJECT_182		4.00
+
+header CN_SUBJECT_183		Subject =~ /雕像/
+score CN_SUBJECT_183		4.00
+
+header CN_SUBJECT_184		Subject =~ /集中营/
+score CN_SUBJECT_184		5.00
+
+header CN_SUBJECT_185		Subject =~ /身材/
+score CN_SUBJECT_185		2.00
+
+header CN_SUBJECT_186		Subject =~ /发 票/
+score CN_SUBJECT_186		8.00
+
+header CN_SUBJECT_187		Subject =~ /淘偶/
+score CN_SUBJECT_187		3.50
+
+header CN_SUBJECT_188		Subject =~ /设备/
+score CN_SUBJECT_188		1.00
+
+header CN_SUBJECT_189		Subject =~ /管理与/
+score CN_SUBJECT_189		3.00
+
+header CN_SUBJECT_190		Subject =~ /高效/
+score CN_SUBJECT_190		1.20
+
+header CN_SUBJECT_191		Subject =~ /爱情战场/
+score CN_SUBJECT_191		25.00
+
+header CN_SUBJECT_192		Subject =~ /(?:张晓彤|傅勇国)/
+score CN_SUBJECT_192		8.00
+
+header CN_SUBJECT_193		Subject =~ /(?:录井|测井|钻井|采油)/
+score CN_SUBJECT_193		10.00
+
+header CN_SUBJECT_194		Subject =~ /标杆管理/
+score CN_SUBJECT_194		25.00
+
+header CN_SUBJECT_195		Subject =~ /标杆学习/
+score CN_SUBJECT_195		25.00
+
+header CN_SUBJECT_196		Subject =~ /搞搞震/
+score CN_SUBJECT_196		25.00
+
+header CN_SUBJECT_197		Subject =~ /代 开/
+score CN_SUBJECT_197		5.00
+
+header CN_SUBJECT_198		Subject =~ /俱乐部/
+score CN_SUBJECT_198		5.00
+
+header CN_SUBJECT_199		Subject =~ /骨灰/
+score CN_SUBJECT_199		25.00
+
+header CN_SUBJECT_200		Subject =~ /吐血/
+score CN_SUBJECT_200		15.00
+
+header CN_SUBJECT_201		Subject =~ /流感/
+score CN_SUBJECT_201		7.00
+
+header CN_SUBJECT_202		Subject =~ /肌肤/
+score CN_SUBJECT_202		10.00
+
+header CN_SUBJECT_203		Subject =~ /牛仔/
+score CN_SUBJECT_203		5.00
+
+header CN_SUBJECT_204		Subject =~ /海运/
+score CN_SUBJECT_204		2.00
+
+header CN_SUBJECT_205		Subject =~ /爱情/
+score CN_SUBJECT_205		3.00
+
+header CN_SUBJECT_206		Subject =~ /手术/
+score CN_SUBJECT_206		5.00
+
+header CN_SUBJECT_207		Subject =~ /侦探/
+score CN_SUBJECT_207		5.00
+
+header CN_SUBJECT_208		Subject =~ /的家/
+score CN_SUBJECT_208		2.00
+
+header CN_SUBJECT_209		Subject =~ /管理提升/
+score CN_SUBJECT_209		25.0
+
+header CN_SUBJECT_210		Subject =~ /SOHO/
+score CN_SUBJECT_210		1.00
+
+header CN_SUBJECT_211		Subject =~ /美人/
+score CN_SUBJECT_211		3.00
+
+header CN_SUBJECT_212		Subject =~ /斗金/
+score CN_SUBJECT_212		3.00
+
+header CN_SUBJECT_213		Subject =~ /喜讯/
+score CN_SUBJECT_213		1.30
+
+header CN_SUBJECT_214		Subject =~ /脱光/
+score CN_SUBJECT_214		10.0
+
+header CN_SUBJECT_215		Subject =~ /(?:禅悟|养生)/
+score CN_SUBJECT_215		3.50
+
+header CN_SUBJECT_216		Subject =~ /获取/
+score CN_SUBJECT_216		1.50
+
+header CN_SUBJECT_217		Subject =~ /香港公司/
+score CN_SUBJECT_217		1.50
+
+header CN_SUBJECT_218		Subject =~ /(?:家教|娃娃|保姆|幼儿|儿童|女童|孩子)/
+score CN_SUBJECT_218		5.00
+
+header CN_SUBJECT_219		Subject =~ /百万/
+score CN_SUBJECT_219		2.00
+
+header CN_SUBJECT_220		Subject =~ /金刚经/
+score CN_SUBJECT_220		5.00
+
+header CN_SUBJECT_221		Subject =~ /(?:剧场|剧情)/
+score CN_SUBJECT_221		3.00
+
+header CN_SUBJECT_222		Subject =~ /商管理/
+score CN_SUBJECT_222		1.50
+
+header CN_SUBJECT_223		Subject =~ /(?:空姐|姐姐)/
+score CN_SUBJECT_223		5.00
+
+header CN_SUBJECT_224		Subject =~ /婚介/
+score CN_SUBJECT_224		5.00
+
+header CN_SUBJECT_225		Subject =~ /指令/
+score CN_SUBJECT_225		2.00
+
+header CN_SUBJECT_226		Subject =~ /窃听/
+score CN_SUBJECT_226		5.00
+
+header CN_SUBJECT_227		Subject =~ /图 铃/
+score CN_SUBJECT_227		2.50
+
+header CN_SUBJECT_228		Subject =~ /技能实战/
+score CN_SUBJECT_228		25.0
+
+header CN_SUBJECT_229		Subject =~ /名录/
+score CN_SUBJECT_229		2.50
+
+header CN_SUBJECT_230		Subject =~ /侨鑫/
+score CN_SUBJECT_230		4.00
+
+header CN_SUBJECT_231		Subject =~ /优 惠/
+score CN_SUBJECT_231		5.00
+
+header CN_SUBJECT_232		Subject =~ /税票/
+score CN_SUBJECT_232		1.50
+
+header CN_SUBJECT_233		Subject =~ /喷水/
+score CN_SUBJECT_233		3.50
+
+header CN_SUBJECT_234		Subject =~ /农具/
+score CN_SUBJECT_234		3.50
+
+header CN_SUBJECT_235		Subject =~ /精品/
+score CN_SUBJECT_235		1.50
+
+header CN_SUBJECT_236		Subject =~ /印刷机轴/
+score CN_SUBJECT_236		25.00
+
+header CN_SUBJECT_237		Subject =~ /老乡/
+score CN_SUBJECT_237		3.50
+
+header CN_SUBJECT_238		Subject =~ /(?:青春痘|粉刺|痤疮|痘印|痘疤)/
+score CN_SUBJECT_238		25.00
+
+header CN_SUBJECT_239		Subject =~ /(?:熏衣草|油菜)/
+score CN_SUBJECT_239		5.00
+
+header CN_SUBJECT_240		Subject =~ /油画/
+score CN_SUBJECT_240		3.00
+
+header CN_SUBJECT_241		Subject =~ /老哥的/
+score CN_SUBJECT_241		6.00
+
+header CN_SUBJECT_242		Subject =~ /人才网/
+score CN_SUBJECT_242		2.50
+
+header CN_SUBJECT_243		Subject =~ /饰品/
+score CN_SUBJECT_243		3.00
+
+header CN_SUBJECT_244		Subject =~ /宝藏/
+score CN_SUBJECT_244		2.30	
+
+header CN_SUBJECT_245		Subject =~ /特惠/
+score CN_SUBJECT_245		2.20
+
+header CN_SUBJECT_246		Subject =~ /增大/
+score CN_SUBJECT_246		1.20
+
+header CN_SUBJECT_247		Subject =~ /公寓/
+score CN_SUBJECT_247		2.00
+
+header CN_SUBJECT_248		Subject =~ /书斋/
+score CN_SUBJECT_248		2.50
+
+header CN_SUBJECT_249		Subject =~ /邮址/
+score CN_SUBJECT_249		1.20
+
+header CN_SUBJECT_250		Subject =~ /讲座/
+score CN_SUBJECT_250		1.50
+
+header CN_SUBJECT_251		Subject =~ /与您/
+score CN_SUBJECT_251		1.00
+
+header CN_SUBJECT_252		Subject =~ /情侣/
+score CN_SUBJECT_252		1.50
+
+header CN_SUBJECT_253		Subject =~ /食品/
+score CN_SUBJECT_253		2.00
+
+header CN_SUBJECT_254		Subject =~ /汽车用品/
+score CN_SUBJECT_254		20.00
+
+header CN_SUBJECT_255		Subject =~ /人力/
+score CN_SUBJECT_255		1.00
+
+header CN_SUBJECT_256		Subject =~ /工艺品/
+score CN_SUBJECT_256		5.00
+
+header CN_SUBJECT_257		Subject =~ /器材/
+score CN_SUBJECT_257		1.50
+
+header CN_SUBJECT_258		Subject =~ /防身/
+score CN_SUBJECT_258		3.20
+
+header CN_SUBJECT_259		Subject =~ /节税/
+score CN_SUBJECT_259		1.50
+
+header CN_SUBJECT_260		Subject =~ /主讲/
+score CN_SUBJECT_260		1.50
+
+header CN_SUBJECT_261		Subject =~ /展览会/
+score CN_SUBJECT_261		4.00
+
+header CN_SUBJECT_262		Subject =~ /人人/
+score CN_SUBJECT_262		2.00
+
+header CN_SUBJECT_263		Subject =~ /(?:暗恋|热恋|痴恋|苦恋|失恋)/
+score CN_SUBJECT_263		5.00
+
+header CN_SUBJECT_264		Subject =~ /策划/
+score CN_SUBJECT_264		0.50
+
+header CN_SUBJECT_265		Subject =~ /美丽/
+score CN_SUBJECT_265		1.50
+
+header CN_SUBJECT_266		Subject =~ /(?:销魂|逍遥)/
+score CN_SUBJECT_266		4.00
+
+header CN_SUBJECT_267		Subject =~ /(?:名师|授课)/
+score CN_SUBJECT_267		5.00
+
+header CN_SUBJECT_268		Subject =~ /书讯/
+score CN_SUBJECT_268		3.00
+
+header CN_SUBJECT_269		Subject =~ /实业有限公司/
+score CN_SUBJECT_269		4.00
+
+header CN_SUBJECT_270		Subject =~ /礼仪/
+score CN_SUBJECT_270		1.50
+
+header CN_SUBJECT_271		Subject =~ /自助/
+score CN_SUBJECT_271		1.50
+
+header CN_SUBJECT_272		Subject =~ /宝贝/
+score CN_SUBJECT_272		4.00
+
+header CN_SUBJECT_273		Subject =~ /咖啡/
+score CN_SUBJECT_273		2.00
+
+header CN_SUBJECT_274		Subject =~ /婚姻/
+score CN_SUBJECT_274		5.00
+
+header CN_SUBJECT_275		Subject =~ /追悔/
+score CN_SUBJECT_275		3.00
+
+header CN_SUBJECT_276		Subject =~ /我公司/
+score CN_SUBJECT_276		1.14
+
+header CN_SUBJECT_277		Subject =~ /门诊/
+score CN_SUBJECT_277		4.00
+
+header CN_SUBJECT_278		Subject =~ /水晶/
+score CN_SUBJECT_278		3.00
+
+header CN_SUBJECT_279		Subject =~ /教授/
+score CN_SUBJECT_279		1.50
+
+header CN_SUBJECT_280		Subject =~ /视频分享/
+score CN_SUBJECT_280		6.00
+
+header CN_SUBJECT_281		Subject =~ /黄帝/
+score CN_SUBJECT_281		4.00
+
+header CN_SUBJECT_282		Subject =~ /性福/
+score CN_SUBJECT_282		4.00
+
+header CN_SUBJECT_283		Subject =~ /保健/
+score CN_SUBJECT_283		3.00
+
+header CN_SUBJECT_284		Subject =~ /互利/
+score CN_SUBJECT_284		2.00
+
+header CN_SUBJECT_285		Subject =~ /摄像机/
+score CN_SUBJECT_285		3.00
+
+header CN_SUBJECT_286		Subject =~ /互惠/
+score CN_SUBJECT_286		2.00
+
+header CN_SUBJECT_287		Subject =~ /旅行/
+score CN_SUBJECT_287		1.50
+
+header CN_SUBJECT_288		Subject =~ /品牌/
+score CN_SUBJECT_288		0.53
+
+header CN_SUBJECT_289		Subject =~ /高手/
+score CN_SUBJECT_289		3.00
+
+header CN_SUBJECT_290		Subject =~ /面子/
+score CN_SUBJECT_290		1.30
+
+header CN_SUBJECT_291		Subject =~ /博弈/
+score CN_SUBJECT_291		1.50
+
+header CN_SUBJECT_292		Subject =~ /特训班/
+score CN_SUBJECT_292		6.00
+
+header CN_SUBJECT_293		Subject =~ /收购/
+score CN_SUBJECT_293		0.60
+
+header CN_SUBJECT_294		Subject =~ /摄影/
+score CN_SUBJECT_294		2.00
+
+header CN_SUBJECT_295		Subject =~ /预订/
+score CN_SUBJECT_295		1.50
+
+header CN_SUBJECT_296		Subject =~ /都适合/
+score CN_SUBJECT_296		1.00
+
+header CN_SUBJECT_297		Subject =~ /生意/
+score CN_SUBJECT_297		1.00
+
+header CN_SUBJECT_298		Subject =~ /机场/
+score CN_SUBJECT_298		1.54
+
+header CN_SUBJECT_299		Subject =~ /交警/
+score CN_SUBJECT_299		4.00
+
+header CN_SUBJECT_300		Subject =~ /双赢/
+score CN_SUBJECT_300		1.50
+
+header CN_SUBJECT_301		Subject =~ /制衣/
+score CN_SUBJECT_301		3.50
+
+header CN_SUBJECT_302		Subject =~ /课堂/
+score CN_SUBJECT_302		2.50
+
+header CN_SUBJECT_303		Subject =~ /事宜/
+score CN_SUBJECT_303		1.00
+
+header CN_SUBJECT_304		Subject =~ /资料！/
+score CN_SUBJECT_304		1.00
+
+header CN_SUBJECT_305		Subject =~ /甩卖/
+score CN_SUBJECT_305		5.00
+
+header CN_SUBJECT_306		Subject =~ /哮喘/
+score CN_SUBJECT_306		25.00
+
+header CN_SUBJECT_307		Subject =~ /根治/
+score CN_SUBJECT_307		2.50
+
+header CN_SUBJECT_308		Subject =~ /捷径/
+score CN_SUBJECT_308		1.50
+
+header CN_SUBJECT_309		Subject =~ /报价/
+score CN_SUBJECT_309		3.00
+
+header CN_SUBJECT_310		Subject =~ /海外(?:实习|课程|课堂)/
+score CN_SUBJECT_310		25.00
+
+header CN_SUBJECT_311		Subject =~ /论文/
+score CN_SUBJECT_311		1.50
+
+header CN_SUBJECT_312		Subject =~ /嘹望/
+score CN_SUBJECT_312		1.50
+
+header CN_SUBJECT_313		Subject =~ /皮肤/
+score CN_SUBJECT_313		4.00
+
+header CN_SUBJECT_314		Subject =~ /器官/
+score CN_SUBJECT_314		4.00
+
+header CN_SUBJECT_315		Subject =~ /家长/
+score CN_SUBJECT_315		2.00
+
+header CN_SUBJECT_316		Subject =~ /(?:买家|调查)网/
+score CN_SUBJECT_316		5.00
+
+header CN_SUBJECT_317		Subject =~ /唐伯虎/
+score CN_SUBJECT_317		5.00
+
+header CN_SUBJECT_318		Subject =~ /万花筒/
+score CN_SUBJECT_318		4.00
+
+header CN_SUBJECT_319		Subject =~ /相恋/
+score CN_SUBJECT_319		3.00
+
+header CN_SUBJECT_320		Subject =~ /烧砖/
+score CN_SUBJECT_320		4.00
+
+header CN_SUBJECT_321		Subject =~ /票~!!!/
+score CN_SUBJECT_321		5.50
+
+header CN_SUBJECT_322		Subject =~ /瑜珈/
+score CN_SUBJECT_322		5.00
+
+header CN_SUBJECT_323		Subject =~ /享受/
+score CN_SUBJECT_323		1.80
+
+header CN_SUBJECT_324		Subject =~ /馒头/
+score CN_SUBJECT_324		4.00
+
+header CN_SUBJECT_325		Subject =~ /为您/
+score CN_SUBJECT_325		1.50
+
+header CN_SUBJECT_326		Subject =~ /只需/
+score CN_SUBJECT_326		1.00
+
+header CN_SUBJECT_327		Subject =~ /监控/
+score CN_SUBJECT_327		2.50
+
+header CN_SUBJECT_328		Subject =~ /血案/
+score CN_SUBJECT_328		4.00
+
+header CN_SUBJECT_329		Subject =~ /芙蓉/
+score CN_SUBJECT_329		4.00
+
+header CN_SUBJECT_330		Subject =~ /智能/
+score CN_SUBJECT_330		0.50
+
+header CN_SUBJECT_331		Subject =~ /乐酷/
+score CN_SUBJECT_331		1.50
+
+header CN_SUBJECT_332		Subject =~ /业务洽谈/
+score CN_SUBJECT_332		5.00
+
+header CN_SUBJECT_333		Subject =~ /火辣/
+score CN_SUBJECT_333		3.00
+
+header CN_SUBJECT_334		Subject =~ /维修/
+score CN_SUBJECT_334		0.78
+
+header CN_SUBJECT_335		Subject =~ /浪漫/
+score CN_SUBJECT_335		3.00
+
+header CN_SUBJECT_336		Subject =~ /植树/
+score CN_SUBJECT_336		1.50
+
+header CN_SUBJECT_337		Subject =~ /(?:邮址|邮件)群发/
+score CN_SUBJECT_337		4.00
+
+header CN_SUBJECT_338		Subject =~ /还好/
+score CN_SUBJECT_338		1.50
+
+header CN_SUBJECT_339		Subject =~ /心声/
+score CN_SUBJECT_339		1.50
+
+header CN_SUBJECT_340		Subject =~ /体系/
+score CN_SUBJECT_340		1.00
+
+header CN_SUBJECT_341		Subject =~ /有最新/
+score CN_SUBJECT_341		1.50
+
+header CN_SUBJECT_342		Subject =~ /(?:花样|年华)/
+score CN_SUBJECT_342		3.00
+
+header CN_SUBJECT_343		Subject =~ /(?:医师|药师|护理)/
+score CN_SUBJECT_343		5.00
+
+header CN_SUBJECT_344		Subject =~ /投资宝典/
+score CN_SUBJECT_344		20.00
+
+header CN_SUBJECT_345		Subject =~ /年薪/
+score CN_SUBJECT_345		2.00
+
+header CN_SUBJECT_346		Subject =~ /在线/
+score CN_SUBJECT_346		1.20
+
+header CN_SUBJECT_347		Subject =~ /解除烦恼/
+score CN_SUBJECT_347		25.00
+
+header CN_SUBJECT_348		Subject =~ /万事通/
+score CN_SUBJECT_348		3.00
+
+header CN_SUBJECT_349		Subject =~ /(?:采暖|地暖|供暖)/
+score CN_SUBJECT_349		4.00
+
+header CN_SUBJECT_350		Subject =~ /贵妃/
+score CN_SUBJECT_350		5.00
+
+header CN_SUBJECT_351		Subject =~ /烧钱/
+score CN_SUBJECT_351		4.00
+
+header CN_SUBJECT_352		Subject =~ /会员/
+score CN_SUBJECT_352		1.00
+
+header CN_SUBJECT_353		Subject =~ /梦想/
+score CN_SUBJECT_353		1.50
+
+header CN_SUBJECT_354		Subject =~ /知心/
+score CN_SUBJECT_354		2.00
+
+header CN_SUBJECT_355		Subject =~ /杂志/
+score CN_SUBJECT_355		1.50
+
+header CN_SUBJECT_356		Subject =~ /与您对话/
+score CN_SUBJECT_356		3.00
+
+header CN_SUBJECT_357		Subject =~ /泪流/
+score CN_SUBJECT_357		3.50
+
+header CN_SUBJECT_358		Subject =~ /可代/
+score CN_SUBJECT_358		1.00
+
+header CN_SUBJECT_359		Subject =~ /抗拒/
+score CN_SUBJECT_359		1.50
+
+header CN_SUBJECT_360		Subject =~ /魅力口才/
+score CN_SUBJECT_360		25.00
+
+header CN_SUBJECT_361		Subject =~ /商场/
+score CN_SUBJECT_361		0.66
+
+header CN_SUBJECT_362		Subject =~ /礼物/
+score CN_SUBJECT_362		2.00
+
+header CN_SUBJECT_363		Subject =~ /信息!/
+score CN_SUBJECT_363		1.43
+
+header CN_SUBJECT_364		Subject =~ /香膳/
+score CN_SUBJECT_364		4.00
+
+header CN_SUBJECT_365		Subject =~ /游泳圈/
+score CN_SUBJECT_365		25.00
+
+header CN_SUBJECT_366		Subject =~ /强盗/
+score CN_SUBJECT_366		3.00
+
+header CN_SUBJECT_367		Subject =~ /夫妻/
+score CN_SUBJECT_367		3.50
+
+header CN_SUBJECT_368		Subject =~ /承接/
+score CN_SUBJECT_368		2.00
+
+header CN_SUBJECT_369		Subject =~ /智慧/
+score CN_SUBJECT_369		2.00
+
+header CN_SUBJECT_370		Subject =~ /入门/
+score CN_SUBJECT_370		2.00
+
+header CN_SUBJECT_371		Subject =~ /环保/
+score CN_SUBJECT_371		1.58
+
+header CN_SUBJECT_372		Subject =~ /网城/
+score CN_SUBJECT_372		2.00
+
+header CN_SUBJECT_373		Subject =~ /全新/
+score CN_SUBJECT_373		0.78
+
+header CN_SUBJECT_374		Subject =~ /妓院/
+score CN_SUBJECT_374		8.00
+
+header CN_SUBJECT_375		Subject =~ /(?:沐浴|桑拿)/
+score CN_SUBJECT_375		8.00
+
+header CN_SUBJECT_376		Subject =~ /买卖/
+score CN_SUBJECT_376		1.50
+
+header CN_SUBJECT_377		Subject =~ /女孩/
+score CN_SUBJECT_377		2.50
+
+header CN_SUBJECT_378		Subject =~ /生活/
+score CN_SUBJECT_378		1.50
+
+header CN_SUBJECT_379		Subject =~ /新年快乐/
+score CN_SUBJECT_379		1.70
+
+header CN_SUBJECT_380		Subject =~ /赠送/
+score CN_SUBJECT_380		1.70
+
+header CN_SUBJECT_381		Subject =~ /良机/
+score CN_SUBJECT_381		1.50
+
+header CN_SUBJECT_382		Subject =~ /教材/
+score CN_SUBJECT_382		2.50
+
+header CN_SUBJECT_383		Subject =~ /成功的/
+score CN_SUBJECT_383		1.76
+
+header CN_SUBJECT_384		Subject =~ /琉璃/
+score CN_SUBJECT_384		2.50
+
+header CN_SUBJECT_385		Subject =~ /促销/
+score CN_SUBJECT_385		0.69
+
+header CN_SUBJECT_386		Subject =~ /热情/
+score CN_SUBJECT_386		1.70
+
+header CN_SUBJECT_387		Subject =~ /(?:奇真|异宝)/
+score CN_SUBJECT_387		3.00
+
+header CN_SUBJECT_388		Subject =~ /透视/
+score CN_SUBJECT_388		3.00
+
+header CN_SUBJECT_389		Subject =~ /颈腰/
+score CN_SUBJECT_389		25.00
+
+header CN_SUBJECT_390		Subject =~ /咨询/
+score CN_SUBJECT_390		1.00
+
+header CN_SUBJECT_391		Subject =~ /情缘/
+score CN_SUBJECT_391		1.50
+
+header CN_SUBJECT_392		Subject =~ /保证/
+score CN_SUBJECT_392		2.00
+
+header CN_SUBJECT_393		Subject =~ /为贵/
+score CN_SUBJECT_393		1.95
+
+header CN_SUBJECT_394		Subject =~ /帮手/
+score CN_SUBJECT_394		3.00
+
+header CN_SUBJECT_395		Subject =~ /指南/
+score CN_SUBJECT_395		1.50
+
+header CN_SUBJECT_396		Subject =~ /漂流/
+score CN_SUBJECT_396		1.500
+
+header CN_SUBJECT_397		Subject =~ /航线/
+score CN_SUBJECT_397		2.00
+
+header CN_SUBJECT_398		Subject =~ /动漫/
+score CN_SUBJECT_398		4.00
+
+header CN_SUBJECT_399		Subject =~ /福音/
+score CN_SUBJECT_399		2.500
+
+header CN_SUBJECT_400		Subject =~ /公主/
+score CN_SUBJECT_400		3.00
+
+header CN_SUBJECT_401		Subject =~ /怀孕/
+score CN_SUBJECT_401		8.00
+
+header CN_SUBJECT_402		Subject =~ /惊世/
+score CN_SUBJECT_402		4.00
+
+header CN_SUBJECT_403		Subject =~ /美艳/
+score CN_SUBJECT_403		6.00
+
+header CN_SUBJECT_404		Subject =~ /拼图/
+score CN_SUBJECT_404		4.50
+
+header CN_SUBJECT_405		Subject =~ /梦露时尚/
+score CN_SUBJECT_405		25.00
+
+header CN_SUBJECT_406		Subject =~ /腿痛/
+score CN_SUBJECT_406		25.00
+
+header CN_SUBJECT_407		Subject =~ /开课/
+score CN_SUBJECT_407		2.50
+
+header CN_SUBJECT_408		Subject =~ /血液/
+score CN_SUBJECT_408		2.50
+
+header CN_SUBJECT_409		Subject =~ /脂肪/
+score CN_SUBJECT_409		3.50
+
+header CN_SUBJECT_410		Subject =~ /细胞/
+score CN_SUBJECT_410		7.50
+
+header CN_SUBJECT_411		Subject =~ /超酷/
+score CN_SUBJECT_411		2.00
+
+header CN_SUBJECT_412		Subject =~ /气雾/
+score CN_SUBJECT_412		2.50
+
+header CN_SUBJECT_413		Subject =~ /报关/
+score CN_SUBJECT_413		1.00
+
+header CN_SUBJECT_414		Subject =~ /上门/
+score CN_SUBJECT_414		2.00
+
+header CN_SUBJECT_415		Subject =~ /搜Q/
+score CN_SUBJECT_415		3.00
+
+header CN_SUBJECT_416		Subject =~ /翻身/
+score CN_SUBJECT_416		2.50
+
+header CN_SUBJECT_417		Subject =~ /富豪/
+score CN_SUBJECT_417		4.50
+	
+header CN_SUBJECT_418		Subject =~ /阴阳/
+score CN_SUBJECT_418		3.50
+
+header CN_SUBJECT_419		Subject =~ /(?:刀片|牙刷)/
+score CN_SUBJECT_419		3.00
+
+header CN_SUBJECT_420		Subject =~ /湿度/
+score CN_SUBJECT_420		2.00
+
+header CN_SUBJECT_421		Subject =~ /色狼/
+score CN_SUBJECT_421		4.00
+
+header CN_SUBJECT_422		Subject =~ /香醇/
+score CN_SUBJECT_422		3.00
+
+header CN_SUBJECT_423		Subject =~ /防腐/
+score CN_SUBJECT_423		2.00
+
+header CN_SUBJECT_424		Subject =~ /采购商机/
+score CN_SUBJECT_424		25.00
+
+header CN_SUBJECT_425		Subject =~ /哇靠/
+score CN_SUBJECT_425		4.00
+
+header CN_SUBJECT_426		Subject =~ /火暴/
+score CN_SUBJECT_426		3.00
+
+header CN_SUBJECT_427		Subject =~ /构建/
+score CN_SUBJECT_427		0.70
+
+header CN_SUBJECT_428		Subject =~ /商海/
+score CN_SUBJECT_428		2.50
+
+header CN_SUBJECT_429		Subject =~ /农夫/
+score CN_SUBJECT_429		3.00
+
+header CN_SUBJECT_430		Subject =~ /Q币/
+score CN_SUBJECT_430		3.00
+
+header CN_SUBJECT_431		Subject =~ /古玩/
+score CN_SUBJECT_431		3.00
+
+header CN_SUBJECT_432		Subject =~ /阴茎/
+score CN_SUBJECT_432		25.00
+
+header CN_SUBJECT_433		Subject =~ /拍卖/
+score CN_SUBJECT_433		2.00
+
+header CN_SUBJECT_434		Subject =~ /换取/
+score CN_SUBJECT_434		2.00
+
+header CN_SUBJECT_435		Subject =~ /音像/
+score CN_SUBJECT_435		2.00
+
+header CN_SUBJECT_436		Subject =~ /瘦驴/
+score CN_SUBJECT_436		4.00
+
+header CN_SUBJECT_437		Subject =~ /疯狂/
+score CN_SUBJECT_437		3.00
+
+header CN_SUBJECT_438		Subject =~ /惹火/
+score CN_SUBJECT_438		14.00
+
+header CN_SUBJECT_439		Subject =~ /(?:暴笑|笑话)/
+score CN_SUBJECT_439		10.00
+
+header CN_SUBJECT_440		Subject =~ /请上网/
+score CN_SUBJECT_440		4.00
+
+header CN_SUBJECT_441		Subject =~ /上网站/
+score CN_SUBJECT_441		1.50
+
+header CN_SUBJECT_442		Subject =~ /唐僧/
+score CN_SUBJECT_442		25.00
+
+header CN_SUBJECT_443		Subject =~ /征婚/
+score CN_SUBJECT_443		25.00
+
+header CN_SUBJECT_444		Subject =~ /瓷像/
+score CN_SUBJECT_444		4.00
+
+header CN_SUBJECT_445		Subject =~ /图书/
+score CN_SUBJECT_445		3.00
+
+header CN_SUBJECT_446		Subject =~ /网赚/
+score CN_SUBJECT_446		4.00
+
+header CN_SUBJECT_447		Subject =~ /VALtzUM/
+score CN_SUBJECT_447		25.00
+
+header CN_SUBJECT_448		Subject =~ /资讯/
+score CN_SUBJECT_448		1.00
+
+header CN_SUBJECT_449		Subject =~ /内心/
+score CN_SUBJECT_449		4.00
+
+header CN_SUBJECT_450		Subject =~ /放弃/
+score CN_SUBJECT_450		1.50
+
+header CN_SUBJECT_451		Subject =~ /必备/
+score CN_SUBJECT_451		1.28
+
+header CN_SUBJECT_452		Subject =~ /应对策略/
+score CN_SUBJECT_452		10.00
+
+header CN_SUBJECT_453		Subject =~ /联盟/
+score CN_SUBJECT_453		2.00
+
+header CN_SUBJECT_454		Subject =~ /特优惠/
+score CN_SUBJECT_454		4.00
+
+header CN_SUBJECT_455		Subject =~ /优惠代开/
+score CN_SUBJECT_455		25.00
+
+header CN_SUBJECT_456		Subject =~ /玻璃/
+score CN_SUBJECT_456		1.50
+
+header CN_SUBJECT_457		Subject =~ /纤维/
+score CN_SUBJECT_457		1.50
+
+header CN_SUBJECT_458		Subject =~ /水泥/
+score CN_SUBJECT_458		1.50
+
+header CN_SUBJECT_459		Subject =~ /装饰/
+score CN_SUBJECT_459		1.50
+
+header CN_SUBJECT_460		Subject =~ /防.范/
+score CN_SUBJECT_460		3.50
+
+header CN_SUBJECT_461		Subject =~ /捉奸/
+score CN_SUBJECT_461		4.50
+
+header CN_SUBJECT_462		Subject =~ /智囊/
+score CN_SUBJECT_462		2.50
+
+header CN_SUBJECT_463		Subject =~ /白痴/
+score CN_SUBJECT_463		5.50
+
+header CN_SUBJECT_464		Subject =~ /邀请函/
+score CN_SUBJECT_464		5.00
+
+header CN_SUBJECT_465		Subject =~ /退休/
+score CN_SUBJECT_465		1.50
+
+header CN_SUBJECT_466		Subject =~ /伴侣/
+score CN_SUBJECT_466		3.50
+
+header CN_SUBJECT_467		Subject =~ /艳遇/
+score CN_SUBJECT_467		3.50
+
+header CN_SUBJECT_468		Subject =~ /竞争情报/
+score CN_SUBJECT_468		10.00
+
+header CN_SUBJECT_469		Subject =~ /捕捉/
+score CN_SUBJECT_469		2.00
+
+header CN_SUBJECT_470		Subject =~ /丹溪女/
+score CN_SUBJECT_470		5.00
+
+header CN_SUBJECT_471		Subject =~ /(?:找到您|找到你)/
+score CN_SUBJECT_471		4.00
+
+header CN_SUBJECT_472		Subject =~ /(?:您的密码|你的密码)/
+score CN_SUBJECT_472		5.00
+
+header CN_SUBJECT_473		Subject =~ /密码/
+score CN_SUBJECT_473		2.00
+
+header CN_SUBJECT_474		Subject =~ /工具大全/
+score CN_SUBJECT_474		6.00
+
+header CN_SUBJECT_475		Subject =~ /信息大全/
+score CN_SUBJECT_475		4.00
+
+header CN_SUBJECT_476		Subject =~ /管理工具/
+score CN_SUBJECT_476		4.00
+
+header CN_SUBJECT_477		Subject =~ /导航站/
+score CN_SUBJECT_477		4.00
+
+header CN_SUBJECT_478		Subject =~ /导航/
+score CN_SUBJECT_478		2.00
+
+header CN_SUBJECT_479		Subject =~ /稽查/
+score CN_SUBJECT_479		1.500
+
+header CN_SUBJECT_480		Subject =~ /蟑螂/
+score CN_SUBJECT_480		10.00
+
+header CN_SUBJECT_481		Subject =~ /美食/
+score CN_SUBJECT_481		5.00
+
+header CN_SUBJECT_482		Subject =~ /竞争对手/
+score CN_SUBJECT_482		5.00
+
+header CN_SUBJECT_483		Subject =~ /天堂/
+score CN_SUBJECT_483		4.00
+
+header CN_SUBJECT_484		Subject =~ /的最佳/
+score CN_SUBJECT_484		2.00
+
+header CN_SUBJECT_485		Subject =~ /禽兽/
+score CN_SUBJECT_485		10.00
+
+header CN_SUBJECT_486		Subject =~ /魔盒/
+score CN_SUBJECT_486		4.00
+
+header CN_SUBJECT_487		Subject =~ /收益/
+score CN_SUBJECT_487		1.50
+
+header CN_SUBJECT_488		Subject =~ /仿真/
+score CN_SUBJECT_488		1.50
+
+header CN_SUBJECT_489		Subject =~ /赢取大奖/
+score CN_SUBJECT_489		3.00
+
+header CN_SUBJECT_490		Subject =~ /空运专家/
+score CN_SUBJECT_490		5.00
+
+header CN_SUBJECT_491		Subject =~ /出口/
+score CN_SUBJECT_491		1.00
+
+header CN_SUBJECT_492		Subject =~ /就能/
+score CN_SUBJECT_492		1.00
+
+header CN_SUBJECT_493		Subject =~ /情人节/
+score CN_SUBJECT_493		25.00
+
+header CN_SUBJECT_494		Subject =~ /休闲中心/
+score CN_SUBJECT_494		25.00
+
+header CN_SUBJECT_495		Subject =~ /唐古拉/
+score CN_SUBJECT_495		25.00
+
+header CN_SUBJECT_496		Subject =~ /群发器/
+score CN_SUBJECT_496		25.00
+
+header CN_SUBJECT_497		Subject =~ /成年人/
+score CN_SUBJECT_497		25.00
+
+header CN_SUBJECT_498		Subject =~ /民主自由/
+score CN_SUBJECT_498		25.00
+
+header CN_SUBJECT_499		Subject =~ /背过沙/
+score CN_SUBJECT_499		25.00
+
+header CN_SUBJECT_500		Subject =~ /文件！/
+score CN_SUBJECT_500		1.50
+
+header CN_SUBJECT_501		Subject =~ /税点/
+score CN_SUBJECT_501		1.50
+
+header CN_SUBJECT_502		Subject =~ /你好，/
+score CN_SUBJECT_502		2.00
+
+header CN_SUBJECT_503		Subject =~ /艾滋/
+score CN_SUBJECT_503		6.00
+
+header CN_SUBJECT_504		Subject =~ /灯饰/
+score CN_SUBJECT_504		2.50
+
+header CN_SUBJECT_505		Subject =~ /搞定/
+score CN_SUBJECT_505		2.00
+
+header CN_SUBJECT_506		Subject =~ /觉醒/
+score CN_SUBJECT_506		2.00
+
+header CN_SUBJECT_507		Subject =~ /网站建设/
+score CN_SUBJECT_507		2.81
+
+header CN_SUBJECT_508		Subject =~ /海关风险/
+score CN_SUBJECT_508		10.00
+
+header CN_SUBJECT_509		Subject =~ /关务税/
+score CN_SUBJECT_509		5.00
+
+header CN_SUBJECT_510		Subject =~ /视窗/
+score CN_SUBJECT_510		1.50
+
+header CN_SUBJECT_511		Subject =~ /象牙/
+score CN_SUBJECT_511		2.50
+
+header CN_SUBJECT_512		Subject =~ /叫卖/
+score CN_SUBJECT_512		3.00
+
+header CN_SUBJECT_513		Subject =~ /参菊/
+score CN_SUBJECT_513		4.00
+
+header CN_SUBJECT_514		Subject =~ /网后付款/
+score CN_SUBJECT_514		7.00
+
+header CN_SUBJECT_515		Subject =~ /证件集团/
+score CN_SUBJECT_515		25.00
+
+header CN_SUBJECT_516		Subject =~ /动态/
+score CN_SUBJECT_516		1.00
+
+header CN_SUBJECT_517		Subject =~ /指纹/
+score CN_SUBJECT_517		2.50
+
+header CN_SUBJECT_518		Subject =~ /论坛/
+score CN_SUBJECT_518		1.00
+
+header CN_SUBJECT_519		Subject =~ /最佳方法/
+score CN_SUBJECT_519		1.50
+
+header CN_SUBJECT_520		Subject =~ /兼职赚钱/
+score CN_SUBJECT_520		25.00
+
+header CN_SUBJECT_521		Subject =~ /大话/
+score CN_SUBJECT_521		1.50
+
+header CN_SUBJECT_522		Subject =~ /主义/
+score CN_SUBJECT_522		2.00
+
+header CN_SUBJECT_523		Subject =~ /政治/
+score CN_SUBJECT_523		2.00
+
+header CN_SUBJECT_524		Subject =~ /叛逆/
+score CN_SUBJECT_524		4.00
+
+header CN_SUBJECT_525		Subject =~ /狂野/
+score CN_SUBJECT_525		4.00
+
+header CN_SUBJECT_526		Subject =~ /印务/
+score CN_SUBJECT_526		2.00
+
+header CN_SUBJECT_527		Subject =~ /电动/
+score CN_SUBJECT_527		1.00
+
+header CN_SUBJECT_528		Subject =~ /全套费用/
+score CN_SUBJECT_528		1.512
+
+header CN_SUBJECT_529		Subject =~ /导弹/
+score CN_SUBJECT_529		5.00
+
+header CN_SUBJECT_530		Subject =~ /生命/
+score CN_SUBJECT_530		2.500
+
+header CN_SUBJECT_531		Subject =~ /机密/
+score CN_SUBJECT_531		2.00
+
+header CN_SUBJECT_532		Subject =~ /安防/
+score CN_SUBJECT_532		1.78
+
+header CN_SUBJECT_533		Subject =~ /人生/
+score CN_SUBJECT_533		1.50
+
+header CN_SUBJECT_534		Subject =~ /发烧/
+score CN_SUBJECT_534		3.50
+
+header CN_SUBJECT_535		Subject =~ /黄瓜/
+score CN_SUBJECT_535		6.00
+
+header CN_SUBJECT_536		Subject =~ /鼻血/
+score CN_SUBJECT_536		6.00
+
+header CN_SUBJECT_537		Subject =~ /中层/
+score CN_SUBJECT_537		1.00
+
+header CN_SUBJECT_538		Subject =~ /文,秘/
+score CN_SUBJECT_538		6.00
+
+header CN_SUBJECT_539		Subject =~ /，您/
+score CN_SUBJECT_539		1.00
+
+header CN_SUBJECT_540		Subject =~ /月赚/
+score CN_SUBJECT_540		4.00
+
+header CN_SUBJECT_541		Subject =~ /橡树谷/
+score CN_SUBJECT_541		3.00
+
+header CN_SUBJECT_542		Subject =~ /桃花/
+score CN_SUBJECT_542		4.00
+
+header CN_SUBJECT_543		Subject =~ /婴/
+score CN_SUBJECT_543		3.00
+
+header CN_SUBJECT_544		Subject =~ /代考/
+score CN_SUBJECT_544		3.00
+
+header CN_SUBJECT_545		Subject =~ /收藏/
+score CN_SUBJECT_545		3.00
+
+header CN_SUBJECT_546		Subject =~ /居家/
+score CN_SUBJECT_546		2.00
+
+header CN_SUBJECT_547		Subject =~ /纺织/
+score CN_SUBJECT_547		3.00
+
+header CN_SUBJECT_548		Subject =~ /索取/
+score CN_SUBJECT_548		2.00
+
+header CN_SUBJECT_549		Subject =~ /防盗/
+score CN_SUBJECT_549		2.00
+
+header CN_SUBJECT_550		Subject =~ /卫士/
+score CN_SUBJECT_550		2.00
+
+header CN_SUBJECT_551		Subject =~ /风险/
+score CN_SUBJECT_551		2.00
+
+header CN_SUBJECT_552		Subject =~ /监听/
+score CN_SUBJECT_552		3.00
+
+header CN_SUBJECT_553		Subject =~ /无铅/
+score CN_SUBJECT_553		1.72
+
+header CN_SUBJECT_554		Subject =~ /终身/
+score CN_SUBJECT_554		1.66
+
+header CN_SUBJECT_555		Subject =~ /情话/
+score CN_SUBJECT_555		3.00
+
+header CN_SUBJECT_556		Subject =~ /情感/
+score CN_SUBJECT_556		3.00
+
+header CN_SUBJECT_557		Subject =~ /实务/
+score CN_SUBJECT_557		1.00
+
+header CN_SUBJECT_558		Subject =~ /万能/
+score CN_SUBJECT_558		2.00
+
+header CN_SUBJECT_559		Subject =~ /信通/
+score CN_SUBJECT_559		1.500
+
+header CN_SUBJECT_560		Subject =~ /幽默/
+score CN_SUBJECT_560		3.00
+
+header CN_SUBJECT_561		Subject =~ /诚信/
+score CN_SUBJECT_561		1.00
+
+header CN_SUBJECT_562		Subject =~ /甲宅/
+score CN_SUBJECT_562		3.00
+
+header CN_SUBJECT_563		Subject =~ /家庭旅馆/
+score CN_SUBJECT_563		25.00
+
+header CN_SUBJECT_564		Subject =~ /深圳梦/
+score CN_SUBJECT_564		4.00
+
+header CN_SUBJECT_565		Subject =~ /画苑/
+score CN_SUBJECT_565		3.00
+
+header CN_SUBJECT_566		Subject =~ /二手投影机/
+score CN_SUBJECT_566		6.00
+
+header CN_SUBJECT_567		Subject =~ /太阳能/
+score CN_SUBJECT_567		10.00
+
+header CN_SUBJECT_568		Subject =~ /禅解/
+score CN_SUBJECT_568		5.00
+
+header CN_SUBJECT_569		Subject =~ /虫害/
+score CN_SUBJECT_569		5.00
+
+header CN_SUBJECT_570		Subject =~ /快感/
+score CN_SUBJECT_570		3.00
+
+header CN_SUBJECT_571		Subject =~ /铝氧/
+score CN_SUBJECT_571		4.00
+
+header CN_SUBJECT_572		Subject =~ /吗！/
+score CN_SUBJECT_572		1.50
+
+header CN_SUBJECT_573		Subject =~ /得易搜/
+score CN_SUBJECT_573		25.00
+
+header CN_SUBJECT_574		Subject =~ /群发广告/
+score CN_SUBJECT_574		25.00
+
+header CN_SUBJECT_575		Subject =~ /赢大奖/
+score CN_SUBJECT_575		5.00
+
+header CN_SUBJECT_576		Subject =~ /女秘书/
+score CN_SUBJECT_576		5.00
+
+header CN_SUBJECT_577		Subject =~ /学费/
+score CN_SUBJECT_577		3.00
+
+header CN_SUBJECT_578		Subject =~ /发动机/
+score CN_SUBJECT_578		3.00
+
+header CN_SUBJECT_579		Subject =~ /省油/
+score CN_SUBJECT_579		3.00
+
+header CN_SUBJECT_580		Subject =~ /网站制作/
+score CN_SUBJECT_580		4.00
+
+header CN_SUBJECT_581		Subject =~ /解决方案/
+score CN_SUBJECT_581		1.500
+
+header CN_SUBJECT_582		Subject =~ /通电话/
+score CN_SUBJECT_582		3.00
+
+header CN_SUBJECT_583		Subject =~ /有效评估/
+score CN_SUBJECT_583		5.00
+
+header CN_SUBJECT_584		Subject =~ /轻松/
+score CN_SUBJECT_584		2.00
+
+header CN_SUBJECT_585		Subject =~ /核心课程/
+score CN_SUBJECT_585		25.0
+
+header CN_SUBJECT_586		Subject =~ /性百分/
+score CN_SUBJECT_586		8.50
+
+header CN_SUBJECT_587		Subject =~ /技=能/
+score CN_SUBJECT_587		6.00
+
+header CN_SUBJECT_588		Subject =~ /成=本/
+score CN_SUBJECT_588		6.00
+
+header CN_SUBJECT_589		Subject =~ /查收/
+score CN_SUBJECT_589		0.50
+
+header CN_SUBJECT_590		Subject =~ /八卦/
+score CN_SUBJECT_590		3.00
+
+header CN_SUBJECT_591		Subject =~ /CEO/
+score CN_SUBJECT_591		0.50
+
+header CN_SUBJECT_592		Subject =~ /翻译公司/
+score CN_SUBJECT_592		25.00
+
+header CN_SUBJECT_593		Subject =~ /伊人风采/
+score CN_SUBJECT_593		7.00
+
+header CN_SUBJECT_594		Subject =~ /伊人/
+score CN_SUBJECT_594		2.00
+
+header CN_SUBJECT_595		Subject =~ /惊人内幕/
+score CN_SUBJECT_595		25.00
+
+header CN_SUBJECT_596		Subject =~ /惊人/
+score CN_SUBJECT_596		2.00
+
+header CN_SUBJECT_597		Subject =~ /发电/
+score CN_SUBJECT_597		0.50
+
+header CN_SUBJECT_598		Subject =~ /万丰/
+score CN_SUBJECT_598		2.50
+
+header CN_SUBJECT_599		Subject =~ /方=式/
+score CN_SUBJECT_599		6.00
+
+header CN_SUBJECT_600		Subject =~ /国-际/
+score CN_SUBJECT_600		6.00
+
+header CN_SUBJECT_601		Subject =~ /商-务/
+score CN_SUBJECT_601		6.00
+
+header CN_SUBJECT_602		Subject =~ /谈-判/
+score CN_SUBJECT_602		6.00
+
+header CN_SUBJECT_603		Subject =~ /直销/
+score CN_SUBJECT_603		0.72
+
+header CN_SUBJECT_604		Subject =~ /手机创业/
+score CN_SUBJECT_604		25.00
+
+header CN_SUBJECT_605		Subject =~ /油精/
+score CN_SUBJECT_605		4.50
+
+header CN_SUBJECT_606		Subject =~ /样品/
+score CN_SUBJECT_606		0.60
+
+header CN_SUBJECT_607		Subject =~ /小秘/
+score CN_SUBJECT_607		3.50
+
+header CN_SUBJECT_608		Subject =~ /鲜花/
+score CN_SUBJECT_608		3.00
+
+header CN_SUBJECT_609		Subject =~ /关爱/
+score CN_SUBJECT_609		1.500
+
+header CN_SUBJECT_610		Subject =~ /裸聊/
+score CN_SUBJECT_610		7.00
+
+header CN_SUBJECT_611		Subject =~ /蛋糕/
+score CN_SUBJECT_611		3.00
+
+header CN_SUBJECT_612		Subject =~ /洗澡/
+score CN_SUBJECT_612		4.00
+
+header CN_SUBJECT_613		Subject =~ /法官/
+score CN_SUBJECT_613		3.00
+
+header CN_SUBJECT_614		Subject =~ /贫困/
+score CN_SUBJECT_614		4.00
+
+header CN_SUBJECT_615		Subject =~ /(?:奇闻|杂谈)/
+score CN_SUBJECT_615		4.00
+
+header CN_SUBJECT_616		Subject =~ /、与/
+score CN_SUBJECT_616		2.00
+
+header CN_SUBJECT_617		Subject =~ /(?:视频免费|学习资源)/
+score CN_SUBJECT_617		8.00
+
+header CN_SUBJECT_618		Subject =~ /QQ/
+score CN_SUBJECT_618		1.50
+
+header CN_SUBJECT_619		Subject =~ /尸体/
+score CN_SUBJECT_619		6.00
+
+header CN_SUBJECT_620		Subject =~ /管理人/
+score CN_SUBJECT_620		1.50
+
+header CN_SUBJECT_621		Subject =~ /运用/
+score CN_SUBJECT_621		1.00
+
+header CN_SUBJECT_622		Subject =~ /餐具/
+score CN_SUBJECT_622		3.00
+
+header CN_SUBJECT_623		Subject =~ /改变你/
+score CN_SUBJECT_623		1.78
+
+header CN_SUBJECT_624		Subject =~ /调味/
+score CN_SUBJECT_624		3.00
+
+header CN_SUBJECT_625		Subject =~ /大师/
+score CN_SUBJECT_625		3.00
+
+header CN_SUBJECT_626		Subject =~ /源票/
+score CN_SUBJECT_626		4.00
+
+header CN_SUBJECT_627		Subject =~ /大甩卖/
+score CN_SUBJECT_627		4.00
+
+header CN_SUBJECT_628		Subject =~ /务！/
+score CN_SUBJECT_628		1.62
+
+header CN_SUBJECT_629		Subject =~ /美白/
+score CN_SUBJECT_629		6.00
+
+header CN_SUBJECT_630		Subject =~ /独家/
+score CN_SUBJECT_630		1.60
+
+header CN_SUBJECT_631		Subject =~ /遇到你/
+score CN_SUBJECT_631		5.00
+
+header CN_SUBJECT_632		Subject =~ /遇到您/
+score CN_SUBJECT_632		5.00
+
+header CN_SUBJECT_633		Subject =~ /发财/
+score CN_SUBJECT_633		3.00
+
+header CN_SUBJECT_634		Subject =~ /(?:亲爱|尊敬)的(?:客户|企业|朋友|用户|先生|女士|妈妈|网友|[a-zA-Z])/
+describe CN_SUBJECT_634		Subject contains "非常正式地称呼不确定的人"
+score CN_SUBJECT_634		3.00
+
+header CN_SUBJECT_635		Subject =~ /大篷车/
+score CN_SUBJECT_635		25.00
+
+header CN_SUBJECT_636		Subject =~ /进销存/
+score CN_SUBJECT_636		2.00
+
+header CN_SUBJECT_637		Subject =~ /域名投资/
+score CN_SUBJECT_637		4.00
+
+header CN_SUBJECT_638		Subject =~ /域名/
+score CN_SUBJECT_638		1.50
+
+header CN_SUBJECT_639		Subject =~ /调逗/
+score CN_SUBJECT_639		5.00
+
+header CN_SUBJECT_640		Subject =~ /男人/
+score CN_SUBJECT_640		5.00
+
+header CN_SUBJECT_641		Subject =~ /梦中/
+score CN_SUBJECT_641		4.00
+
+header CN_SUBJECT_642		Subject =~ /必读/
+score CN_SUBJECT_642		3.00
+
+header CN_SUBJECT_643		Subject =~ /振奋/
+score CN_SUBJECT_643		2.500
+
+header CN_SUBJECT_644		Subject =~ /消息！/
+score CN_SUBJECT_644		2.00
+
+header CN_SUBJECT_645		Subject =~ /不是梦/
+score CN_SUBJECT_645		5.00
+
+header CN_SUBJECT_646		Subject =~ /啤酒/
+score CN_SUBJECT_646		4.00
+
+header CN_SUBJECT_647		Subject =~ /牛B/
+score CN_SUBJECT_647		5.00
+
+header CN_SUBJECT_648		Subject =~ /畜牧/
+score CN_SUBJECT_648		6.00
+
+header CN_SUBJECT_649		Subject =~ /兽医/
+score CN_SUBJECT_649		6.00
+
+header CN_SUBJECT_650		Subject =~ /猪业/
+score CN_SUBJECT_650		6.00
+
+header CN_SUBJECT_651		Subject =~ /养(?:猪|鸡|鸟|狗|猫)/
+score CN_SUBJECT_651		5.00
+
+header CN_SUBJECT_652		Subject =~ /(?:猪|鸡|鸟|狗|猫)/
+score CN_SUBJECT_652		2.00
+
+header CN_SUBJECT_653		Subject =~ /管理及/
+score CN_SUBJECT_653		2.00
+
+header CN_SUBJECT_654		Subject =~ /合`同/
+score CN_SUBJECT_654		8.00
+
+header CN_SUBJECT_655		Subject =~ /技~巧/
+score CN_SUBJECT_655		8.00
+
+header CN_SUBJECT_656		Subject =~ /加~班/
+score CN_SUBJECT_656		8.00
+
+header CN_SUBJECT_657		Subject =~ /休~假/
+score CN_SUBJECT_657		8.00
+
+header CN_SUBJECT_658		Subject =~ /红颜知己/
+score CN_SUBJECT_658		8.00
+
+header CN_SUBJECT_659		Subject =~ /红颜/
+score CN_SUBJECT_659		3.00
+
+header CN_SUBJECT_660		Subject =~ /廊坊印刷/
+score CN_SUBJECT_660		8.00
+
+header CN_SUBJECT_661		Subject =~ /廊坊/
+score CN_SUBJECT_661		3.00
+
+header CN_SUBJECT_662		Subject =~ /梦想家/
+score CN_SUBJECT_662		4.00
+
+header CN_SUBJECT_663		Subject =~ /拿大奖/
+score CN_SUBJECT_663		5.00
+
+header CN_SUBJECT_664		Subject =~ /东极岛/
+score CN_SUBJECT_664		7.00
+
+header CN_SUBJECT_665		Subject =~ /飞思卡尔/
+score CN_SUBJECT_665		8.00
+
+header CN_SUBJECT_666		Subject =~ /(?:您要的|你要的)/
+score CN_SUBJECT_666		2.00
+
+header CN_SUBJECT_667		Subject =~ /打造/
+score CN_SUBJECT_667		0.54
+	
+header CN_SUBJECT_668		Subject =~ /客房/
+score CN_SUBJECT_668		2.500
+
+header CN_SUBJECT_669		Subject =~ /技-巧/
+score CN_SUBJECT_669		7.00
+
+header CN_SUBJECT_670		Subject =~ /艺术库/
+score CN_SUBJECT_670		7.00
+
+header CN_SUBJECT_671		Subject =~ /打勾123/
+score CN_SUBJECT_671		8.00
+
+header CN_SUBJECT_672		Subject =~ /八荣八耻/
+score CN_SUBJECT_672		25.00
+
+header CN_SUBJECT_673		Subject =~ /网上家园/
+score CN_SUBJECT_673		25.00
+
+header CN_SUBJECT_674		Subject =~ /网络家园/
+score CN_SUBJECT_674		25.00
+
+header CN_SUBJECT_675		Subject =~ /捉虫/
+score CN_SUBJECT_675		10.00
+
+header CN_SUBJECT_676		Subject =~ /再生塑料/
+score CN_SUBJECT_676		20.00
+
+header CN_SUBJECT_677		Subject =~ /网诚/
+score CN_SUBJECT_677		3.00
+
+header CN_SUBJECT_678		Subject =~ /控制器/
+score CN_SUBJECT_678		1.50
+
+header CN_SUBJECT_679		Subject =~ /东西卖/
+score CN_SUBJECT_679		5.00
+
+header CN_SUBJECT_680		Subject =~ /鸿运/
+score CN_SUBJECT_680		3.00
+
+header CN_SUBJECT_681		Subject =~ /同盟/
+score CN_SUBJECT_681		1.50
+
+header CN_SUBJECT_682		Subject =~ /图库/
+score CN_SUBJECT_682		3.00
+
+header CN_SUBJECT_683		Subject =~ /操盘/
+score CN_SUBJECT_683		3.00
+
+header CN_SUBJECT_684		Subject =~ /房产/
+score CN_SUBJECT_684		2.50
+
+header CN_SUBJECT_685		Subject =~ /发 财/
+score CN_SUBJECT_685		6.50
+
+header CN_SUBJECT_686		Subject =~ /公关/
+score CN_SUBJECT_686		2.00
+
+header CN_SUBJECT_687		Subject =~ /低点/
+score CN_SUBJECT_687		1.50
+
+header CN_SUBJECT_688		Subject =~ /阅读/
+score CN_SUBJECT_688		3.00
+
+header CN_SUBJECT_689		Subject =~ /体重/
+score CN_SUBJECT_689		3.00
+
+header CN_SUBJECT_690		Subject =~ /收获/
+score CN_SUBJECT_690		2.00
+
+header CN_SUBJECT_691		Subject =~ /正规/
+score CN_SUBJECT_691		1.500
+
+header CN_SUBJECT_692		Subject =~ /大姐/
+score CN_SUBJECT_692		2.50
+
+header CN_SUBJECT_693		Subject =~ /爱心/
+score CN_SUBJECT_693		2.00
+
+header CN_SUBJECT_694		Subject =~ /隐形/
+score CN_SUBJECT_694		3.00
+
+header CN_SUBJECT_695		Subject =~ /午睡/
+score CN_SUBJECT_695		3.00
+
+header CN_SUBJECT_696		Subject =~ /纺织品/
+score CN_SUBJECT_696		3.50
+
+header CN_SUBJECT_697		Subject =~ /机遇/
+score CN_SUBJECT_697		1.50
+
+header CN_SUBJECT_698		Subject =~ /卓越/
+score CN_SUBJECT_698		1.50
+
+header CN_SUBJECT_699		Subject =~ /红娘/
+score CN_SUBJECT_699		4.50
+
+header CN_SUBJECT_700		Subject =~ /禁片/
+score CN_SUBJECT_700		4.50
+
+header CN_SUBJECT_701		Subject =~ /管理软件/
+score CN_SUBJECT_701		4.50
+
+header CN_SUBJECT_702		Subject =~ /车上/
+score CN_SUBJECT_702		2.00
+
+header CN_SUBJECT_703		Subject =~ /善恶/
+score CN_SUBJECT_703		4.00
+
+header CN_SUBJECT_704		Subject =~ /净化/
+score CN_SUBJECT_704		2.00
+
+header CN_SUBJECT_705		Subject =~ /商城/
+score CN_SUBJECT_705		2.00
+
+header CN_SUBJECT_706		Subject =~ /助手/
+score CN_SUBJECT_706		3.00
+
+header CN_SUBJECT_707		Subject =~ /卫生/
+score CN_SUBJECT_707		4.00
+
+header CN_SUBJECT_708		Subject =~ /女装/
+score CN_SUBJECT_708		4.00
+
+header CN_SUBJECT_709		Subject =~ /可莱特/
+score CN_SUBJECT_709		8.00
+
+header CN_SUBJECT_710		Subject =~ /感应/
+score CN_SUBJECT_710		4.00
+
+header CN_SUBJECT_711		Subject =~ /在车上/
+score CN_SUBJECT_711		6.00
+
+header CN_SUBJECT_712		Subject =~ /买买/
+score CN_SUBJECT_712		5.00
+
+header CN_SUBJECT_713		Subject =~ /休闲/
+score CN_SUBJECT_713		2.00
+
+header CN_SUBJECT_714		Subject =~ /真爱/
+score CN_SUBJECT_714		3.00
+
+header CN_SUBJECT_715		Subject =~ /分钱/
+score CN_SUBJECT_715		4.00
+
+header CN_SUBJECT_716		Subject =~ /真爱/
+score CN_SUBJECT_716		3.00
+
+header CN_SUBJECT_717		Subject =~ /兴隆/
+score CN_SUBJECT_717		1.50
+
+header CN_SUBJECT_718		Subject =~ /你好吗/
+score CN_SUBJECT_718		3.00
+
+header CN_SUBJECT_719		Subject =~ /您好吗/
+score CN_SUBJECT_719		3.00
+
+header CN_SUBJECT_720		Subject =~ /精品软件/
+score CN_SUBJECT_720		8.00
+
+header CN_SUBJECT_721		Subject =~ /整站出售/
+score CN_SUBJECT_721		8.00
+
+header CN_SUBJECT_722		Subject =~ /网站出售/
+score CN_SUBJECT_722		8.00
+
+header CN_SUBJECT_723		Subject =~ /网易客服/
+score CN_SUBJECT_723		7.00
+
+header CN_SUBJECT_724		Subject =~ /友情链接/
+score CN_SUBJECT_724		7.00
+
+header CN_SUBJECT_725		Subject =~ /聊天/
+score CN_SUBJECT_725		8.00
+
+header CN_SUBJECT_726		Subject =~ /深圳户口/
+score CN_SUBJECT_726		25.00
+
+header CN_SUBJECT_727		Subject =~ /世界杯/
+score CN_SUBJECT_727		5.00
+
+header CN_SUBJECT_728		Subject =~ /听音乐/
+score CN_SUBJECT_728		8.00
+
+header CN_SUBJECT_729		Subject =~ /上海户口/
+score CN_SUBJECT_729		25.00
+
+header CN_SUBJECT_730		Subject =~ /快捷/
+score CN_SUBJECT_730		2.00
+
+header CN_SUBJECT_731		Subject =~ /美的网页/
+score CN_SUBJECT_731		5.00
+
+header CN_SUBJECT_732		Subject =~ /你的手/
+score CN_SUBJECT_732		5.00
+
+header CN_SUBJECT_733		Subject =~ /您的手/
+score CN_SUBJECT_733		5.00
+
+header CN_SUBJECT_734		Subject =~ /总裁班/
+score CN_SUBJECT_734		5.00
+
+header CN_SUBJECT_735		Subject =~ /开幕/
+score CN_SUBJECT_735		4.00
+
+header CN_SUBJECT_736		Subject =~ /沟通/
+score CN_SUBJECT_736		0.50
+
+header CN_SUBJECT_737		Subject =~ /天仙配/
+score CN_SUBJECT_737		10.00
+
+header CN_SUBJECT_738		Subject =~ /夜色/
+score CN_SUBJECT_738		4.00
+
+header CN_SUBJECT_739		Subject =~ /建网/
+score CN_SUBJECT_739		1.50
+
+header CN_SUBJECT_740		Subject =~ /住宅/
+score CN_SUBJECT_740		1.500
+
+header CN_SUBJECT_741		Subject =~ /人员，会/
+score CN_SUBJECT_741		2.50
+
+header CN_SUBJECT_742		Subject =~ /偷心/
+score CN_SUBJECT_742		6.00
+
+header CN_SUBJECT_743		Subject =~ /手机/
+score CN_SUBJECT_743		1.500
+
+header CN_SUBJECT_744		Subject =~ /姐妹/
+score CN_SUBJECT_744		4.00
+
+header CN_SUBJECT_745		Subject =~ /吊运机/
+score CN_SUBJECT_745		5.00
+
+header CN_SUBJECT_746		Subject =~ /自觉学习/
+score CN_SUBJECT_746		6.00
+
+header CN_SUBJECT_747		Subject =~ /霓虹灯/
+score CN_SUBJECT_747		6.00
+
+header CN_SUBJECT_748		Subject =~ /发软/
+score CN_SUBJECT_748		1.50
+
+header CN_SUBJECT_749		Subject =~ /理财/
+score CN_SUBJECT_749		3.00
+
+header CN_SUBJECT_750		Subject =~ /好帮手/
+score CN_SUBJECT_750		3.00
+
+header CN_SUBJECT_751		Subject =~ /焊接/
+score CN_SUBJECT_751		2.00
+
+header CN_SUBJECT_752		Subject =~ /征稿征展/
+score CN_SUBJECT_752		15.00
+
+header CN_SUBJECT_753		Subject =~ /技 巧/
+score CN_SUBJECT_753		4.00
+
+header CN_SUBJECT_754		Subject =~ /裸体/
+score CN_SUBJECT_754		25.00
+
+header CN_SUBJECT_755		Subject =~ /房价/
+score CN_SUBJECT_755		5.00
+
+header CN_SUBJECT_756		Subject =~ /开-讲/
+score CN_SUBJECT_756		4.00
+
+header CN_SUBJECT_757		Subject =~ /优-秀/
+score CN_SUBJECT_757		4.00
+
+header CN_SUBJECT_758		Subject =~ /^合作/
+score CN_SUBJECT_758		3.00
+
+header CN_SUBJECT_759		Subject =~ /税务合作/
+score CN_SUBJECT_759		8.00
+
+header CN_SUBJECT_760		Subject =~ /寻求合作/
+score CN_SUBJECT_760		6.00
+
+header CN_SUBJECT_761		Subject =~ /业务合作/
+score CN_SUBJECT_761		6.00
+
+header CN_SUBJECT_762		Subject =~ /寻找合作/
+score CN_SUBJECT_762		8.00
+
+header CN_SUBJECT_763		Subject =~ /财政合作/
+score CN_SUBJECT_763		8.00
+
+header CN_SUBJECT_764		Subject =~ /合作/
+score CN_SUBJECT_764		1.00
+
+header CN_SUBJECT_765		Subject =~ /资源招聘/
+score CN_SUBJECT_765		3.00
+
+header CN_SUBJECT_766		Subject =~ /书籍/
+score CN_SUBJECT_766		2.00
+
+header CN_SUBJECT_767		Subject =~ /风铃/
+score CN_SUBJECT_767		3.00
+
+header CN_SUBJECT_768		Subject =~ /袜业/
+score CN_SUBJECT_768		4.00
+
+header CN_SUBJECT_769		Subject =~ /搜索王/
+score CN_SUBJECT_769		25.00
+
+header CN_SUBJECT_770		Subject =~ /协恒/
+score CN_SUBJECT_770		1.50
+
+header CN_SUBJECT_771		Subject =~ /暴发户/
+score CN_SUBJECT_771		5.00
+
+header CN_SUBJECT_772		Subject =~ /和作/
+score CN_SUBJECT_772		1.30
+
+header CN_SUBJECT_773		Subject =~ /垂钓/
+score CN_SUBJECT_773		3.50
+
+header CN_SUBJECT_774		Subject =~ /梦幻/
+score CN_SUBJECT_774		3.00
+
+header CN_SUBJECT_775		Subject =~ /翅膀/
+score CN_SUBJECT_775		3.00
+
+header CN_SUBJECT_776		Subject =~ /恋爱/
+score CN_SUBJECT_776		4.00
+
+header CN_SUBJECT_777		Subject =~ /首席/
+score CN_SUBJECT_777		1.50
+
+header CN_SUBJECT_778		Subject =~ /月薪/
+score CN_SUBJECT_778		2.50
+
+header CN_SUBJECT_779		Subject =~ /眷恋/
+score CN_SUBJECT_779		2.50
+
+header CN_SUBJECT_780		Subject =~ /密籍/
+score CN_SUBJECT_780		5.00
+
+header CN_SUBJECT_781		Subject =~ /闲聊/
+score CN_SUBJECT_781		5.00
+
+header CN_SUBJECT_782		Subject =~ /回收/
+score CN_SUBJECT_782		2.00
+
+header CN_SUBJECT_783		Subject =~ /永兴/
+score CN_SUBJECT_783		1.50
+
+header CN_SUBJECT_784		Subject =~ /爱^情/
+score CN_SUBJECT_784		20.0
+
+header CN_SUBJECT_785		Subject =~ /^好消息/
+describe CN_SUBJECT_785		Subject 以"好消息"开头
+score CN_SUBJECT_785		4.00
+
+header CN_SUBJECT_786		Subject =~ /好消息/
+score CN_SUBJECT_786		2.00
+
+header CN_SUBJECT_787		Subject =~ /中人网/
+score CN_SUBJECT_787		5.00
+
+header CN_SUBJECT_788		Subject =~ /肝素钠/
+score CN_SUBJECT_788		25.00
+
+header CN_SUBJECT_789		Subject =~ /软骨素/
+score CN_SUBJECT_789		25.00
+
+header CN_SUBJECT_790		Subject =~ /冠军王道/
+score CN_SUBJECT_790		6.00
+
+header CN_SUBJECT_791		Subject =~ /葵园/
+score CN_SUBJECT_791		4.00
+
+header CN_SUBJECT_792		Subject =~ /中国电子/
+score CN_SUBJECT_792		2.00
+
+header CN_SUBJECT_793		Subject =~ /余世维/
+score CN_SUBJECT_793		25.00
+
+header CN_SUBJECT_794		Subject =~ /您在/
+score CN_SUBJECT_794		1.00
+
+header CN_SUBJECT_795		Subject =~ /曾仕强/
+score CN_SUBJECT_795		25.00
+
+header CN_SUBJECT_796		Subject =~ /财税服务/
+score CN_SUBJECT_796		8.00
+
+header CN_SUBJECT_797		Subject =~ /税务合作/
+score CN_SUBJECT_797		8.00
+
+header CN_SUBJECT_798		Subject =~ /庆佳丰/
+score CN_SUBJECT_798		6.00
+
+header CN_SUBJECT_799		Subject =~ /直投/
+score CN_SUBJECT_799		1.48
+
+header CN_SUBJECT_800		Subject =~ /航空网/
+score CN_SUBJECT_800		6.00
+
+header CN_SUBJECT_801		Subject =~ /午夜剧院/
+score CN_SUBJECT_801		25.00
+
+header CN_SUBJECT_802		Subject =~ /剧院/
+score CN_SUBJECT_802		4.00
+
+header CN_SUBJECT_803		Subject =~ /坐下来/
+score CN_SUBJECT_803		8.00
+
+header CN_SUBJECT_804		Subject =~ /歇会吧/
+score CN_SUBJECT_804		8.00
+
+header CN_SUBJECT_805		Subject =~ /往来财务/
+score CN_SUBJECT_805		25.00
+
+header CN_SUBJECT_806		Subject =~ /好书有礼/
+score CN_SUBJECT_806		7.00
+
+header CN_SUBJECT_807		Subject =~ /无上/
+score CN_SUBJECT_807		1.500
+
+header CN_SUBJECT_808		Subject =~ /，信誉/
+score CN_SUBJECT_808		4.00
+
+header CN_SUBJECT_809		Subject =~ /邮件主题/
+score CN_SUBJECT_809		0.500
+
+header CN_SUBJECT_810		Subject =~ /哪些病/
+score CN_SUBJECT_810		25.00
+
+header CN_SUBJECT_811		Subject =~ /订阅/
+score CN_SUBJECT_811		2.00
+
+header CN_SUBJECT_812		Subject =~ /你有电脑/
+score CN_SUBJECT_812		2.00
+
+header CN_SUBJECT_813		Subject =~ /到迪/
+score CN_SUBJECT_813		1.50
+
+header CN_SUBJECT_814		Subject =~ /，能上网/
+score CN_SUBJECT_814		3.50
+
+header CN_SUBJECT_815		Subject =~ /电脑，能/
+score CN_SUBJECT_815		3.50
+
+header CN_SUBJECT_816		Subject =~ /音响/
+score CN_SUBJECT_816		3.00
+
+header CN_SUBJECT_817		Subject =~ /新春/
+score CN_SUBJECT_817		1.50
+
+header CN_SUBJECT_818		Subject =~ /错过/
+score CN_SUBJECT_818		3.00
+
+header CN_SUBJECT_819		Subject =~ /女朋友/
+score CN_SUBJECT_819		25.00
+
+header CN_SUBJECT_820		Subject =~ /只要你有/
+score CN_SUBJECT_820		4.00
+
+header CN_SUBJECT_821		Subject =~ /夺宝/
+score CN_SUBJECT_821		3.00
+
+header CN_SUBJECT_822		Subject =~ /18岁/
+score CN_SUBJECT_822		3.00
+
+header CN_SUBJECT_823		Subject =~ /与薪/
+score CN_SUBJECT_823		1.50
+
+header CN_SUBJECT_824		Subject =~ /女性/
+score CN_SUBJECT_824		2.00
+
+header CN_SUBJECT_825		Subject =~ /给你的/
+score CN_SUBJECT_825		1.50
+
+header CN_SUBJECT_826		Subject =~ /尽在/
+score CN_SUBJECT_826		1.50
+
+header CN_SUBJECT_827		Subject =~ /自动兑奖/
+score CN_SUBJECT_827		7.00
+
+header CN_SUBJECT_828		Subject =~ /远方的(?:你|您)/
+score CN_SUBJECT_828		5.00
+
+header CN_SUBJECT_829		Subject =~ /业务合办/
+score CN_SUBJECT_829		7.00
+
+header CN_SUBJECT_830		Subject =~ /代理业务/
+score CN_SUBJECT_830		5.00
+
+header CN_SUBJECT_831		Subject =~ /业务联系/
+score CN_SUBJECT_831		6.00
+
+header CN_SUBJECT_832		Subject =~ /招聘工商/
+score CN_SUBJECT_832		8.00
+
+header CN_SUBJECT_833		Subject =~ /电话销售/
+score CN_SUBJECT_833		8.00
+
+header CN_SUBJECT_834		Subject =~ /至酷网/
+score CN_SUBJECT_834		7.00
+
+header CN_SUBJECT_835		Subject =~ /当当网/
+score CN_SUBJECT_835		10.00
+
+header CN_SUBJECT_836		Subject =~ /优质/
+score CN_SUBJECT_836		1.500
+
+header CN_SUBJECT_837		Subject =~ /帅哥/
+score CN_SUBJECT_837		4.00
+
+header CN_SUBJECT_838		Subject =~ /(?:你|您)的生活/
+score CN_SUBJECT_838		6.00
+
+header CN_SUBJECT_839		Subject =~ /宏博实业/
+score CN_SUBJECT_839		7.00
+
+header CN_SUBJECT_840		Subject =~ /办证刻章/
+score CN_SUBJECT_840		25.00
+
+header CN_SUBJECT_841		Subject =~ /美加墨/
+score CN_SUBJECT_841		7.00
+
+header CN_SUBJECT_842		Subject =~ /南北拉丁/
+score CN_SUBJECT_842		7.00
+
+header CN_SUBJECT_843		Subject =~ /顾问/
+score CN_SUBJECT_843		2.00
+
+header CN_SUBJECT_844		Subject =~ /天地青/
+score CN_SUBJECT_844		25.00
+
+header CN_SUBJECT_845		Subject =~ /人力快车/
+score CN_SUBJECT_845		25.00
+
+header CN_SUBJECT_846		Subject =~ /百姓网/
+score CN_SUBJECT_846		25.00
+
+header CN_SUBJECT_847		Subject =~ /湘辣/
+score CN_SUBJECT_847		25.00
+
+header CN_SUBJECT_848		Subject =~ /合理避税/
+score CN_SUBJECT_848		25.00
+
+header CN_SUBJECT_849		Subject =~ /(?:为你|为您)避税/
+score CN_SUBJECT_849		25.00
+
+header CN_SUBJECT_850		Subject =~ /避税方法/
+score CN_SUBJECT_850		25.00
+
+header CN_SUBJECT_851		Subject =~ /参菊液/
+score CN_SUBJECT_851		25.00
+
+header CN_SUBJECT_852		Subject =~ /沟通艺术/
+score CN_SUBJECT_852		25.00
+
+header CN_SUBJECT_853		Subject =~ /跑业务/
+score CN_SUBJECT_853		25.00
+
+header CN_SUBJECT_854		Subject =~ /即时通/
+score CN_SUBJECT_854		25.00
+
+header CN_SUBJECT_855		Subject =~ /顶九网/
+score CN_SUBJECT_855		25.00
+
+header CN_SUBJECT_856		Subject =~ /笑容/
+score CN_SUBJECT_856		4.00
+
+header CN_SUBJECT_857		Subject =~ /催情/
+score CN_SUBJECT_857		25.00
+
+header CN_SUBJECT_858		Subject =~ /温馨的家/
+score CN_SUBJECT_858		5.00
+
+header CN_SUBJECT_859		Subject =~ /卫浴/
+score CN_SUBJECT_859		7.00
+
+header CN_SUBJECT_860		Subject =~ /百货/
+score CN_SUBJECT_860		2.00
+
+header CN_SUBJECT_861		Subject =~ /超市/
+score CN_SUBJECT_861		2.00
+
+header CN_SUBJECT_862		Subject =~ /柔性生产/
+score CN_SUBJECT_862		25.00
+
+header CN_SUBJECT_863		Subject =~ /有效辞工/
+score CN_SUBJECT_863		25.00
+
+header CN_SUBJECT_864		Subject =~ /查厂验厂/
+score CN_SUBJECT_864		25.00
+
+header CN_SUBJECT_865		Subject =~ /法宝/
+score CN_SUBJECT_865		4.00
+
+header CN_SUBJECT_866		Subject =~ /仓储管理/
+score CN_SUBJECT_866		6.00
+
+header CN_SUBJECT_867		Subject =~ /感情/
+score CN_SUBJECT_867		4.00
+
+header CN_SUBJECT_868		Subject =~ /郎咸平/
+score CN_SUBJECT_868		25.00
+
+header CN_SUBJECT_869		Subject =~ /郎 咸 平/
+score CN_SUBJECT_869		25.00
+
+header CN_SUBJECT_870		Subject =~ /欲死/
+score CN_SUBJECT_870		25.00
+
+header CN_SUBJECT_871		Subject =~ /(?:与您|与你)分享/
+score CN_SUBJECT_871		25.00
+
+header CN_SUBJECT_872		Subject =~ /网站(?:改版|开发)/
+score CN_SUBJECT_872		25.00
+
+header CN_SUBJECT_875		Subject =~ /加班费/
+score CN_SUBJECT_875		25.00
+
+header CN_SUBJECT_876		Subject =~ /准备好了/
+score CN_SUBJECT_876		2.00
+
+header CN_SUBJECT_877		Subject =~ /经销/
+score CN_SUBJECT_877		0.50
+
+header CN_SUBJECT_879		Subject =~ /智商隆/
+score CN_SUBJECT_879		6.00
+
+header CN_SUBJECT_880		Subject =~ /老同学/
+score CN_SUBJECT_880		5.00
+
+header CN_SUBJECT_881		Subject =~ /直通车/
+score CN_SUBJECT_881		6.00
+
+header CN_SUBJECT_882		Subject =~ /》《/
+describe CN_SUBJECT_882		Subject contains "》《"
+score CN_SUBJECT_882		2.50
+
+header CN_SUBJECT_883		Subject =~ /广交会/
+score CN_SUBJECT_883		1.50
+
+header CN_SUBJECT_884		Subject =~ /住店/
+score CN_SUBJECT_884		7.00
+
+header CN_SUBJECT_885		Subject =~ /伦理/
+score CN_SUBJECT_885		7.00
+
+header CN_SUBJECT_886		Subject =~ /父亲节/
+score CN_SUBJECT_886		4.00
+
+header CN_SUBJECT_887		Subject =~ /顶尖/
+score CN_SUBJECT_887		1.50
+
+header CN_SUBJECT_888		Subject =~ /交易/
+score CN_SUBJECT_888		1.00
+
+header CN_SUBJECT_889		Subject =~ /精油/
+score CN_SUBJECT_889		25.00
+
+header CN_SUBJECT_890		Subject =~ /伙计/
+score CN_SUBJECT_890		5.00
+
+header CN_SUBJECT_891		Subject =~ /亿富码/
+score CN_SUBJECT_891		25.00
+
+header CN_SUBJECT_892		Subject =~ /商傲/
+score CN_SUBJECT_892		8.00
+
+header CN_SUBJECT_893		Subject =~ /我是谁/
+score CN_SUBJECT_893		25.00
+
+header CN_SUBJECT_894		Subject =~ /写作网/
+score CN_SUBJECT_894		25.00
+
+header CN_SUBJECT_895		Subject =~ /交欢/
+score CN_SUBJECT_895		3.00
+
+header CN_SUBJECT_896		Subject =~ /洽谈会/
+score CN_SUBJECT_896		3.00
+
+header CN_SUBJECT_897		Subject =~ /联合国/
+score CN_SUBJECT_897		25.00
+
+header CN_SUBJECT_898		Subject =~ /各类/
+score CN_SUBJECT_898		1.00
+
+header CN_SUBJECT_899		Subject =~ /古装苑/
+score CN_SUBJECT_899		25.00
+
+header CN_SUBJECT_900		Subject =~ /张清华/
+score CN_SUBJECT_900		5.00
+
+header CN_SUBJECT_901		Subject =~ /调戏/
+score CN_SUBJECT_901		7.00
+
+header CN_SUBJECT_902		Subject =~ /财务经理/
+score CN_SUBJECT_902		8.00
+
+header CN_SUBJECT_903		Subject =~ /建深/
+score CN_SUBJECT_903		1.50
+
+header CN_SUBJECT_904		Subject =~ /主机/
+score CN_SUBJECT_904		1.50
+
+header CN_SUBJECT_905		Subject =~ /求助/
+score CN_SUBJECT_905		3.00
+
+header CN_SUBJECT_906		Subject =~ /技.巧/
+score CN_SUBJECT_906		25.00
+
+header CN_SUBJECT_907		Subject =~ /职业经理/
+score CN_SUBJECT_907		25.00
+
+header CN_SUBJECT_908		Subject =~ /供数码/
+score CN_SUBJECT_908		2.50
+
+header CN_SUBJECT_909		Subject =~ /参加调查/
+score CN_SUBJECT_909		25.00
+
+header CN_SUBJECT_910		Subject =~ /早泄/
+score CN_SUBJECT_910		25.00
+
+header CN_SUBJECT_911		Subject =~ /点击/
+score CN_SUBJECT_911		2.00
+
+header CN_SUBJECT_912		Subject =~ /阳痿/
+score CN_SUBJECT_912		25.00
+
+header CN_SUBJECT_913		Subject =~ /向您/
+score CN_SUBJECT_913		1.50
+
+header CN_SUBJECT_914		Subject =~ /前列腺/
+score CN_SUBJECT_914		25.00
+
+header CN_SUBJECT_915		Subject =~ /阴茎/
+score CN_SUBJECT_915		25.00
+
+header CN_SUBJECT_916		Subject =~ /解忧/
+score CN_SUBJECT_916		5.00
+
+header CN_SUBJECT_917		Subject =~ /关务操作/
+score CN_SUBJECT_917		5.00
+
+header CN_SUBJECT_918		Subject =~ /性知识/
+score CN_SUBJECT_918		25.00
+
+header CN_SUBJECT_919		Subject =~ /男根/
+score CN_SUBJECT_919		4.00
+
+header CN_SUBJECT_920		Subject =~ /离岸贸易/
+score CN_SUBJECT_920		25.00
+
+header CN_SUBJECT_921		Subject =~ /同居/
+score CN_SUBJECT_921		7.00
+
+header CN_SUBJECT_922		Subject =~ /成衣/
+score CN_SUBJECT_922		4.00
+
+header CN_SUBJECT_923		Subject =~ /摄像机电池/
+score CN_SUBJECT_923		25.00
+
+header CN_SUBJECT_924		Subject =~ /笔记本电池/
+score CN_SUBJECT_924		25.00
+
+header CN_SUBJECT_925		Subject =~ /黎规坤/
+score CN_SUBJECT_925		25.00
+
+header CN_SUBJECT_926		Subject =~ /通关/
+score CN_SUBJECT_926		3.00
+
+header CN_SUBJECT_927		Subject =~ /诡异/
+score CN_SUBJECT_927		25.00
+
+header CN_SUBJECT_928		Subject =~ /特异/
+score CN_SUBJECT_928		25.00
+
+header CN_SUBJECT_929		Subject =~ /功能/
+score CN_SUBJECT_929		2.00
+
+header CN_SUBJECT_930		Subject =~ /催眠/
+score CN_SUBJECT_930		25.00
+
+header CN_SUBJECT_931		Subject =~ /金元宝/
+score CN_SUBJECT_931		25.00
+
+header CN_SUBJECT_932		Subject =~ /利器/
+score CN_SUBJECT_932		3.00
+
+header CN_SUBJECT_933		Subject =~ /缘聚/
+score CN_SUBJECT_933		3.00
+
+header CN_SUBJECT_934		Subject =~ /记得我/
+score CN_SUBJECT_934		6.00
+
+header CN_SUBJECT_935		Subject =~ /记的我/
+score CN_SUBJECT_935		6.00
+
+header CN_SUBJECT_936		Subject =~ /自由呼/
+score CN_SUBJECT_936		8.00
+
+header CN_SUBJECT_937		Subject =~ /试试/
+score CN_SUBJECT_937		1.50
+
+header CN_SUBJECT_938		Subject =~ /学城网/
+score CN_SUBJECT_938		25.00
+
+header CN_SUBJECT_939		Subject =~ /网警/
+score CN_SUBJECT_939		25.00
+
+header CN_SUBJECT_940		Subject =~ /治癌/
+score CN_SUBJECT_940		25.00
+
+header CN_SUBJECT_941		Subject =~ /针孔/
+score CN_SUBJECT_941		6.00
+
+header CN_SUBJECT_942		Subject =~ /病友/
+score CN_SUBJECT_942		25.00
+
+header CN_SUBJECT_943		Subject =~ /求职直送/
+score CN_SUBJECT_943		25.00
+
+header CN_SUBJECT_944		Subject =~ /财税专家/
+score CN_SUBJECT_944		25.00
+
+header CN_SUBJECT_945		Subject =~ /养成/
+score CN_SUBJECT_945		3.00
+
+header CN_SUBJECT_946		Subject =~ /塑造/
+score CN_SUBJECT_946		3.00
+
+header CN_SUBJECT_947		Subject =~ /武器/
+score CN_SUBJECT_947		3.00
+
+header CN_SUBJECT_948		Subject =~ /培训班/
+score CN_SUBJECT_948		25.00
+
+header CN_SUBJECT_949		Subject =~ /业务相商/
+score CN_SUBJECT_949		25.00
+
+header CN_SUBJECT_950		Subject =~ /(?:您成功|你成功)/
+score CN_SUBJECT_950		25.00
+
+header CN_SUBJECT_951		Subject =~ /(?:蛋形|心形)/
+score CN_SUBJECT_951		25.00
+
+header CN_SUBJECT_952		Subject =~ /(?:您合作|你合作)/
+score CN_SUBJECT_952		5.00
+
+header CN_SUBJECT_953		Subject =~ /任职/
+score CN_SUBJECT_953		1.20
+
+header CN_SUBJECT_954		Subject =~ /财税代理/
+score CN_SUBJECT_954		25.00
+
+header CN_SUBJECT_955		Subject =~ /业务代理/
+score CN_SUBJECT_955		25.00
+
+header CN_SUBJECT_956		Subject =~ /贵公司/
+score CN_SUBJECT_956		0.57
+
+header CN_SUBJECT_957		Subject =~ /囊括/
+score CN_SUBJECT_957		1.36
+
+header CN_SUBJECT_958		Subject =~ /永兴代理/
+score CN_SUBJECT_958		25.00
+
+header CN_SUBJECT_959		Subject =~ /业务合办/
+score CN_SUBJECT_959		25.00
+
+header CN_SUBJECT_960		Subject =~ /代办业务/
+score CN_SUBJECT_960		25.00
+
+header CN_SUBJECT_961		Subject =~ /恒达/
+score CN_SUBJECT_961		0.50
+
+header CN_SUBJECT_962		Subject =~ /(?:省钱|省心)/
+score CN_SUBJECT_962		5.00
+
+header CN_SUBJECT_963		Subject =~ /(?:陶艺|花艺)/
+score CN_SUBJECT_963		6.00
+
+header CN_SUBJECT_964		Subject =~ /(?:爱你|想你)/
+score CN_SUBJECT_964		8.00
+
+header CN_SUBJECT_965		Subject =~ /各类发票/
+score CN_SUBJECT_965		25.00
+
+header CN_SUBJECT_966		Subject =~ /业务/
+score CN_SUBJECT_966		2.00
+
+header CN_SUBJECT_967		Subject =~ /代理报关/
+score CN_SUBJECT_967		7.00
+
+header CN_SUBJECT_968		Subject =~ /创业系统/
+score CN_SUBJECT_968		25.00
+
+header CN_SUBJECT_969		Subject =~ /洽谈/
+score CN_SUBJECT_969		2.00
+
+header CN_SUBJECT_970		Subject =~ /财税/
+score CN_SUBJECT_970		4.00
+
+header CN_SUBJECT_971		Subject =~ /找朋友/
+score CN_SUBJECT_971		8.00
+
+header CN_SUBJECT_972		Subject =~ /开锁/
+score CN_SUBJECT_972		4.00
+
+header CN_SUBJECT_973		Subject =~ /，不看/
+score CN_SUBJECT_973		0.50
+
+header CN_SUBJECT_974		Subject =~ /蓝海战略/
+score CN_SUBJECT_974		25.00
+
+header CN_SUBJECT_975		Subject =~ /欺诈风险/
+score CN_SUBJECT_975		25.00
+
+header CN_SUBJECT_976		Subject =~ /大哥大/
+score CN_SUBJECT_976		25.00
+
+header CN_SUBJECT_977		Subject =~ /好利来/
+score CN_SUBJECT_977		25.00
+
+header CN_SUBJECT_978		Subject =~ /劳力士/
+score CN_SUBJECT_978		25.00
+
+header CN_SUBJECT_979		Subject =~ /票据/
+score CN_SUBJECT_979		3.50
+
+header CN_SUBJECT_980		Subject =~ /机会/
+score CN_SUBJECT_980		1.00
+
+header CN_SUBJECT_981		Subject =~ /能源/
+score CN_SUBJECT_981		5.00
+
+header CN_SUBJECT_982		Subject =~ /代·开/
+score CN_SUBJECT_982		25.00
+
+header CN_SUBJECT_983		Subject =~ /领导力/
+score CN_SUBJECT_983		25.00
+
+header CN_SUBJECT_984		Subject =~ /分享/
+score CN_SUBJECT_984		1.50
+
+header CN_SUBJECT_985		Subject =~ /贺卡/
+score CN_SUBJECT_985		2.00
+
+header CN_SUBJECT_986		Subject =~ /13189176226/
+score CN_SUBJECT_986		25.00
+
+header CN_SUBJECT_987		Subject =~ /薪≈酬/
+score CN_SUBJECT_987		25.00
+
+header CN_SUBJECT_988		Subject =~ /露营/
+score CN_SUBJECT_988		25.00
+
+header CN_SUBJECT_989		Subject =~ /泰山涧/
+score CN_SUBJECT_989		25.00
+
+header CN_SUBJECT_990		Subject =~ /精仿/
+score CN_SUBJECT_990		4.50
+
+header CN_SUBJECT_991		Subject =~ /表情/
+score CN_SUBJECT_991		4.00
+
+header CN_SUBJECT_992		Subject =~ /贴花/
+score CN_SUBJECT_992		4.00
+
+header CN_SUBJECT_993		Subject =~ /福田/
+score CN_SUBJECT_993		1.36
+
+header CN_SUBJECT_994		Subject =~ /的起点/
+score CN_SUBJECT_994		1.36
+
+header CN_SUBJECT_995		Subject =~ /尊敬的/
+score CN_SUBJECT_995		3.50
+
+header CN_SUBJECT_996		Subject =~ /建设高/
+score CN_SUBJECT_996		3.50
+
+header CN_SUBJECT_997		Subject =~ /(?:网站|主页)空间/
+score CN_SUBJECT_997		3.50
+
+header CN_SUBJECT_998		Subject =~ /酒吧/
+score CN_SUBJECT_998		7.50
+
+header CN_SUBJECT_999		Subject =~ /麻疹/
+score CN_SUBJECT_999		25.00
+
+header CN_SUBJECT_1000		Subject =~ /安眠药/
+score CN_SUBJECT_1000		25.00
+
+header CN_SUBJECT_1001		Subject =~ /盛航鑫/
+score CN_SUBJECT_1001		25.00
+
+header CN_SUBJECT_1002		Subject =~ /泳装/
+score CN_SUBJECT_1002		25.00
+
+header CN_SUBJECT_1003		Subject =~ /智商/
+score CN_SUBJECT_1003		5.00
+
+header CN_SUBJECT_1004		Subject =~ /超低价/
+score CN_SUBJECT_1004		5.00
+
+header CN_SUBJECT_1005		Subject =~ /手机充值/
+score CN_SUBJECT_1005		8.00
+
+header CN_SUBJECT_1006		Subject =~ /跳-槽/
+score CN_SUBJECT_1006		25.00
+
+header CN_SUBJECT_1007		Subject =~ /风-险/
+score CN_SUBJECT_1007		25.00
+
+header CN_SUBJECT_1008		Subject =~ /商务网/
+score CN_SUBJECT_1008		25.00
+
+header CN_SUBJECT_1009		Subject =~ /转让叉车/
+score CN_SUBJECT_1009		25.00
+
+header CN_SUBJECT_1010		Subject =~ /小钱/
+score CN_SUBJECT_1010		8.00
+
+header CN_SUBJECT_1011		Subject =~ /偷情/
+score CN_SUBJECT_1011		25.00
+
+header CN_SUBJECT_1012		Subject =~ /隐私/
+score CN_SUBJECT_1012		6.00
+
+header CN_SUBJECT_1013		Subject =~ /(?:告诉你|告诉您)/
+score CN_SUBJECT_1013		3.00
+
+header CN_SUBJECT_1014		Subject =~ /(?:找得书|找的书)/
+score CN_SUBJECT_1014		8.00
+
+header CN_SUBJECT_1015		Subject =~ /总监班/
+score CN_SUBJECT_1015		25.00
+
+header CN_SUBJECT_1016		Subject =~ /找工作/
+score CN_SUBJECT_1016		4.00
+
+header CN_SUBJECT_1017		Subject =~ /骗术/
+score CN_SUBJECT_1017		5.00
+
+header CN_SUBJECT_1018		Subject =~ /防忽网/
+score CN_SUBJECT_1018		25.00
+
+header CN_SUBJECT_1019		Subject =~ /受骗/
+score CN_SUBJECT_1019		5.00
+
+header CN_SUBJECT_1020		Subject =~ /阴影/
+score CN_SUBJECT_1020		5.00
+
+header CN_SUBJECT_1021		Subject =~ /mm小屋/
+score CN_SUBJECT_1021		25.00
+
+header CN_SUBJECT_1022		Subject =~ /别哭/
+score CN_SUBJECT_1022		5.00
+
+header CN_SUBJECT_1023		Subject =~ /新书/
+score CN_SUBJECT_1023		2.00
+
+header CN_SUBJECT_1024		Subject =~ /最权威/
+score CN_SUBJECT_1024		5.00
+
+header CN_SUBJECT_1025		Subject =~ /时尚吗/
+score CN_SUBJECT_1025		5.00
+
+header CN_SUBJECT_1026		Subject =~ /门票/
+score CN_SUBJECT_1026		4.00
+
+header CN_SUBJECT_1027		Subject =~ /请保密/
+score CN_SUBJECT_1027		4.00
+
+header CN_SUBJECT_1028		Subject =~ /中国尚网/
+score CN_SUBJECT_1028		25.00
+
+header CN_SUBJECT_1029		Subject =~ /钓鱼/
+score CN_SUBJECT_1029		5.00
+
+header CN_SUBJECT_1030		Subject =~ /您好：/
+score CN_SUBJECT_1030		4.50
+
+header CN_SUBJECT_1031		Subject =~ /你好：/
+score CN_SUBJECT_1031		4.50
+
+header CN_SUBJECT_1032		Subject =~ /聚会/
+score CN_SUBJECT_1032		3.00
+
+header CN_SUBJECT_1033		Subject =~ /只要1角/
+score CN_SUBJECT_1033		25.00
+
+header CN_SUBJECT_1034		Subject =~ /牛股苑/
+score CN_SUBJECT_1034		25.00
+
+header CN_SUBJECT_1035		Subject =~ /特训/
+score CN_SUBJECT_1035		3.00
+
+header CN_SUBJECT_1036		Subject =~ /听客吧/
+score CN_SUBJECT_1036		4.00
+
+header CN_SUBJECT_1037		Subject =~ /舞娘/
+score CN_SUBJECT_1037		7.00
+
+header CN_SUBJECT_1038		Subject =~ /贼/
+score CN_SUBJECT_1038		3.00
+
+header CN_SUBJECT_1039		Subject =~ /二手办公/
+score CN_SUBJECT_1039		6.00
+
+header CN_SUBJECT_1040		Subject =~ /问卷调查/
+score CN_SUBJECT_1040		3.00
+
+header CN_SUBJECT_1041		Subject =~ /近视/
+score CN_SUBJECT_1041		2.00
+
+header CN_SUBJECT_1042		Subject =~ /华荣实业/
+score CN_SUBJECT_1042		7.00
+
+header CN_SUBJECT_1043		Subject =~ /好东东/
+score CN_SUBJECT_1043		10.00
+
+header CN_SUBJECT_1044		Subject =~ /出出气/
+score CN_SUBJECT_1044		6.00
+
+header CN_SUBJECT_1045		Subject =~ /亚龙网/
+score CN_SUBJECT_1045		6.00
+
+header CN_SUBJECT_1046		Subject =~ /(?:您面前|你面前)/
+score CN_SUBJECT_1046		3.500
+
+header CN_SUBJECT_1047		Subject =~ /肿瘤/
+score CN_SUBJECT_1047		25.00
+
+header CN_SUBJECT_1048		Subject =~ /教学之窗/
+score CN_SUBJECT_1048		25.00
+
+header CN_SUBJECT_1049		Subject =~ /油封/
+score CN_SUBJECT_1049		6.00
+
+header CN_SUBJECT_1050		Subject =~ /发 。票/
+score CN_SUBJECT_1050		25.00
+
+header CN_SUBJECT_1051		Subject =~ /防辐射眼镜/
+score CN_SUBJECT_1051		25.00
+
+header CN_SUBJECT_1052		Subject =~ /大腿/
+score CN_SUBJECT_1052		25.00
+
+header CN_SUBJECT_1053		Subject =~ /小腹/
+score CN_SUBJECT_1053		25.00
+
+header CN_SUBJECT_1054		Subject =~ /珍珠/
+score CN_SUBJECT_1054		6.00
+
+header CN_SUBJECT_1055		Subject =~ /奶茶/
+score CN_SUBJECT_1055		25.00
+
+header CN_SUBJECT_1056		Subject =~ /退休金/
+score CN_SUBJECT_1056		25.00
+
+header CN_SUBJECT_1057		Subject =~ /茄子/
+score CN_SUBJECT_1057		5.00
+
+header CN_SUBJECT_1058		Subject =~ /堆金机/
+score CN_SUBJECT_1058		25.00
+
+header CN_SUBJECT_1059		Subject =~ /不准哭/
+score CN_SUBJECT_1059		25.00
+
+header CN_SUBJECT_1060		Subject =~ /少林寺/
+score CN_SUBJECT_1060		25.00
+
+header CN_SUBJECT_1061		Subject =~ /锅炉/
+score CN_SUBJECT_1061		25.00
+
+header CN_SUBJECT_1062		Subject =~ /网络(?:电话|电视)/
+score CN_SUBJECT_1062		15.00
+
+header CN_SUBJECT_1063		Subject =~ /(?:您一生|你一生)/
+score CN_SUBJECT_1063		15.00
+
+header CN_SUBJECT_1064		Subject =~ /搜屋/
+score CN_SUBJECT_1064		7.00
+
+header CN_SUBJECT_1065		Subject =~ /超猛/
+score CN_SUBJECT_1065		6.00
+
+header CN_SUBJECT_1066		Subject =~ /看房/
+score CN_SUBJECT_1066		4.00
+
+header CN_SUBJECT_1067		Subject =~ /商业墙/
+score CN_SUBJECT_1067		25.00
+
+header CN_SUBJECT_1068		Subject =~ /购物门/
+score CN_SUBJECT_1068		25.00
+
+header CN_SUBJECT_1069		Subject =~ /甩脂机/
+score CN_SUBJECT_1069		25.00
+
+header CN_SUBJECT_1070		Subject =~ /健康之门/
+score CN_SUBJECT_1070		25.00
+
+header CN_SUBJECT_1071		Subject =~ /精彩文章/
+score CN_SUBJECT_1071		25.00
+
+header CN_SUBJECT_1072		Subject =~ /你不精彩/
+score CN_SUBJECT_1072		25.00
+
+header CN_SUBJECT_1073		Subject =~ /人品问题/
+score CN_SUBJECT_1073		25.00
+
+header CN_SUBJECT_1074		Subject =~ /礼品到了/
+score CN_SUBJECT_1074		25.00
+
+header CN_SUBJECT_1075		Subject =~ /模具展/
+score CN_SUBJECT_1075		3.00
+
+header CN_SUBJECT_1076		Subject =~ /协同OA/
+score CN_SUBJECT_1076		25.00
+
+header CN_SUBJECT_1077		Subject =~ /女士/
+score CN_SUBJECT_1077		5.00
+
+header CN_SUBJECT_1078		Subject =~ /至酷/
+score CN_SUBJECT_1078		6.00
+
+header CN_SUBJECT_1079		Subject =~ /开回家/
+score CN_SUBJECT_1079		8.00
+
+header CN_SUBJECT_1080		Subject =~ /热招中/
+score CN_SUBJECT_1080		6.00
+
+header CN_SUBJECT_1081		Subject =~ /暴富/
+score CN_SUBJECT_1081		6.00
+
+header CN_SUBJECT_1082		Subject =~ /反对票/
+score CN_SUBJECT_1082		6.00
+
+header CN_SUBJECT_1083		Subject =~ /理事国/
+score CN_SUBJECT_1083		8.00
+
+header CN_SUBJECT_1084		Subject =~ /杀了你/
+score CN_SUBJECT_1084		8.00
+
+header CN_SUBJECT_1085		Subject =~ /她的生日/
+score CN_SUBJECT_1085		8.00
+
+header CN_SUBJECT_1086		Subject =~ /活跃度/
+score CN_SUBJECT_1086		8.00
+
+header CN_SUBJECT_1087		Subject =~ /圈地运动/
+score CN_SUBJECT_1087		8.00
+
+header CN_SUBJECT_1088		Subject =~ /(?:你的命运|您的命运)/
+score CN_SUBJECT_1088		10.00
+
+header CN_SUBJECT_1089		Subject =~ /易格斯/
+score CN_SUBJECT_1089		10.00
+
+header CN_SUBJECT_1090		Subject =~ /包月电话/
+score CN_SUBJECT_1090		10.00
+
+header CN_SUBJECT_1091		Subject =~ /迷魂药/
+score CN_SUBJECT_1091		10.00
+
+header CN_SUBJECT_1092		Subject =~ /卫星测速/
+score CN_SUBJECT_1092		10.00
+
+header CN_SUBJECT_1093		Subject =~ /祛痘/
+score CN_SUBJECT_1093		10.00
+
+header CN_SUBJECT_1094		Subject =~ /爱夏天/
+score CN_SUBJECT_1094		10.00
+
+header CN_SUBJECT_1095		Subject =~ /代理记帐/
+score CN_SUBJECT_1095		10.00
+
+header CN_SUBJECT_1096		Subject =~ /飞万达/
+score CN_SUBJECT_1096		10.00
+
+header CN_SUBJECT_1097		Subject =~ /电子眼/
+score CN_SUBJECT_1097		10.00
+
+header CN_SUBJECT_1098		Subject =~ /(?:牛郎|织女)/
+score CN_SUBJECT_1098		25.00
+
+header CN_SUBJECT_1099		Subject =~ /河南天迈/
+score CN_SUBJECT_1099		10.00
+
+header CN_SUBJECT_1100		Subject =~ /加=班/
+score CN_SUBJECT_1100		10.00
+
+header CN_SUBJECT_1101		Subject =~ /制=度/
+score CN_SUBJECT_1101		10.00
+
+header CN_SUBJECT_1102		Subject =~ /蔬菜/
+score CN_SUBJECT_1102		5.00
+
+header CN_SUBJECT_1103		Subject =~ /早爽/
+score CN_SUBJECT_1103		10.00
+
+header CN_SUBJECT_1104		Subject =~ /网络新时代/
+score CN_SUBJECT_1104		10.00
+
+header CN_SUBJECT_1105		Subject =~ /波友/
+score CN_SUBJECT_1105		10.00
+
+header CN_SUBJECT_1106		Subject =~ /珍藏/
+score CN_SUBJECT_1106		3.00
+
+header CN_SUBJECT_1107		Subject =~ /比分网/
+score CN_SUBJECT_1107		10.00
+
+header CN_SUBJECT_1108		Subject =~ /智能建站/
+score CN_SUBJECT_1108		10.00
+
+header CN_SUBJECT_1109		Subject =~ /建站系统/
+score CN_SUBJECT_1109		10.00
+
+header CN_SUBJECT_1110		Subject =~ /豆腐/
+score CN_SUBJECT_1110		10.00
+
+header CN_SUBJECT_1111		Subject =~ /英语网校/
+score CN_SUBJECT_1111		10.00
+
+header CN_SUBJECT_1112		Subject =~ /威纶/
+score CN_SUBJECT_1112		5.00
+
+header CN_SUBJECT_1113		Subject =~ /电脑问答/
+score CN_SUBJECT_1113		10.00
+
+header CN_SUBJECT_1114		Subject =~ /找的网站/
+score CN_SUBJECT_1114		10.00
+
+header CN_SUBJECT_1115		Subject =~ /唐粮枫/
+score CN_SUBJECT_1115		10.00
+
+header CN_SUBJECT_1116		Subject =~ /同_居/
+score CN_SUBJECT_1116		10.00
+
+header CN_SUBJECT_1117		Subject =~ /领带/
+score CN_SUBJECT_1117		10.00
+
+header CN_SUBJECT_1118		Subject =~ /商赢/
+score CN_SUBJECT_1118		6.00
+
+header CN_SUBJECT_1119		Subject =~ /刻录/
+score CN_SUBJECT_1119		3.00
+
+header CN_SUBJECT_1120		Subject =~ /华乐印业/
+score CN_SUBJECT_1120		25.00
+
+header CN_SUBJECT_1121		Subject =~ /(?:耻辱|愤怒)/
+score CN_SUBJECT_1121		6.00
+
+header CN_SUBJECT_1122		Subject =~ /(?:售票中心|民航售票)/
+score CN_SUBJECT_1122		8.00
+
+header CN_SUBJECT_1123		Subject =~ /诗歌/
+score CN_SUBJECT_1123		5.00
+
+header CN_SUBJECT_1124		Subject =~ /(?:税务策划|策划培训)/
+score CN_SUBJECT_1124		25.00
+
+header CN_SUBJECT_1125		Subject =~ /(?:密码破译|破译密码)/
+score CN_SUBJECT_1125		25.00
+
+header CN_SUBJECT_1126		Subject =~ /短裙/
+score CN_SUBJECT_1126		8.00
+
+header CN_SUBJECT_1127		Subject =~ /低胸/
+score CN_SUBJECT_1127		8.00
+
+header CN_SUBJECT_1128		Subject =~ /又打搅您/
+score CN_SUBJECT_1128		25.00
+
+header CN_SUBJECT_1129		Subject =~ /汽车理念/
+score CN_SUBJECT_1129		25.00
+
+header CN_SUBJECT_1130		Subject =~ /羽丰/
+score CN_SUBJECT_1130		5.00
+
+header CN_SUBJECT_1131		Subject =~ /轴承/
+score CN_SUBJECT_1131		4.00
+
+header CN_SUBJECT_1132		Subject =~ /易雅/
+score CN_SUBJECT_1132		5.00
+
+header CN_SUBJECT_1133		Subject =~ /画展/
+score CN_SUBJECT_1133		6.00
+
+header CN_SUBJECT_1134		Subject =~ /女包/
+score CN_SUBJECT_1134		6.00
+
+header CN_SUBJECT_1135		Subject =~ /商学院/
+score CN_SUBJECT_1135		25.00
+
+header CN_SUBJECT_1136		Subject =~ /诱惑你/
+score CN_SUBJECT_1136		25.00
+
+header CN_SUBJECT_1137		Subject =~ /地坪漆/
+score CN_SUBJECT_1137		25.00
+
+header CN_SUBJECT_1138		Subject =~ /优惠空运/
+score CN_SUBJECT_1138		25.00
+
+header CN_SUBJECT_1139		Subject =~ /里程快速/
+score CN_SUBJECT_1139		25.00
+
+header CN_SUBJECT_1140		Subject =~ /净水机/
+score CN_SUBJECT_1140		25.00
+
+header CN_SUBJECT_1141		Subject =~ /唉声叹气/
+score CN_SUBJECT_1141		25.00
+
+header CN_SUBJECT_1142		Subject =~ /第一调料/
+score CN_SUBJECT_1142		25.00
+
+header CN_SUBJECT_1143		Subject =~ /调料/
+score CN_SUBJECT_1143		6.00
+
+header CN_SUBJECT_1144		Subject =~ /化装品/
+score CN_SUBJECT_1144		25.00
+
+header CN_SUBJECT_1145		Subject =~ /牛为可/
+score CN_SUBJECT_1145		25.00
+
+header CN_SUBJECT_1146		Subject =~ /沧海为水/
+score CN_SUBJECT_1146		25.00
+
+header CN_SUBJECT_1147		Subject =~ /传说/
+score CN_SUBJECT_1147		4.00
+
+header CN_SUBJECT_1148		Subject =~ /QQ轿车/
+score CN_SUBJECT_1148		25.00
+
+header CN_SUBJECT_1149		Subject =~ /猛男/
+score CN_SUBJECT_1149		25.00
+
+header CN_SUBJECT_1150		Subject =~ /太阳光/
+score CN_SUBJECT_1150		25.00
+
+header CN_SUBJECT_1151		Subject =~ /比武招商/
+score CN_SUBJECT_1151		25.00
+
+header CN_SUBJECT_1152		Subject =~ /改变人生/
+score CN_SUBJECT_1152		25.00
+
+header CN_SUBJECT_1153		Subject =~ /动点商贸/
+score CN_SUBJECT_1153		25.00
+
+header CN_SUBJECT_1154		Subject =~ /喝酒/
+score CN_SUBJECT_1154		7.00
+
+header CN_SUBJECT_1155		Subject =~ /猫友/
+score CN_SUBJECT_1155		25.00
+
+header CN_SUBJECT_1156		Subject =~ /赏金/
+score CN_SUBJECT_1156		5.00
+
+header CN_SUBJECT_1157		Subject =~ /外国语/
+score CN_SUBJECT_1157		6.00
+
+header CN_SUBJECT_1158		Subject =~ /几首歌/
+score CN_SUBJECT_1158		25.00
+
+header CN_SUBJECT_1159		Subject =~ /粗放的/
+score CN_SUBJECT_1159		5.00
+
+header CN_SUBJECT_1160		Subject =~ /快觉醒/
+score CN_SUBJECT_1160		7.00
+
+header CN_SUBJECT_1161		Subject =~ /威客网/
+score CN_SUBJECT_1161		25.00
+
+header CN_SUBJECT_1162		Subject =~ /投影机灯泡/
+score CN_SUBJECT_1162		25.00
+
+header CN_SUBJECT_1163		Subject =~ /投影机维修/
+score CN_SUBJECT_1163		25.00
+
+header CN_SUBJECT_1164		Subject =~ /雷达/
+score CN_SUBJECT_1164		25.00
+
+header CN_SUBJECT_1165		Subject =~ /(?:阿扁|倒扁)/
+score CN_SUBJECT_1165		25.00
+
+header CN_SUBJECT_1166		Subject =~ /提醒器/
+score CN_SUBJECT_1166		25.00
+
+header CN_SUBJECT_1167		Subject =~ /国际货运/
+score CN_SUBJECT_1167		4.00
+
+header CN_SUBJECT_1168		Subject =~ /亦可社区/
+score CN_SUBJECT_1168		25.00
+
+header CN_SUBJECT_1169		Subject =~ /租房联盟/
+score CN_SUBJECT_1169		25.00
+
+header CN_SUBJECT_1170		Subject =~ /购票有礼/
+score CN_SUBJECT_1170		25.00
+
+header CN_SUBJECT_1171		Subject =~ /杨澜/
+score CN_SUBJECT_1171		25.00
+
+header CN_SUBJECT_1172		Subject =~ /周杰伦/
+score CN_SUBJECT_1172		25.00
+
+header CN_SUBJECT_1173		Subject =~ /邮.件/
+score CN_SUBJECT_1173		25.00
+
+header CN_SUBJECT_1174		Subject =~ /地.址/
+score CN_SUBJECT_1174		25.00
+
+header CN_SUBJECT_1175		Subject =~ /人.体/
+score CN_SUBJECT_1175		25.00
+
+header CN_SUBJECT_1176		Subject =~ /群.发/
+score CN_SUBJECT_1176		25.00
+
+header CN_SUBJECT_1177		Subject =~ /核。销。/
+score CN_SUBJECT_1177		25.00
+
+header CN_SUBJECT_1178		Subject =~ /宪法/
+score CN_SUBJECT_1178		25.00
+
+header CN_SUBJECT_1179		Subject =~ /迪士尼/
+score CN_SUBJECT_1179		25.00
+
+header CN_SUBJECT_1180		Subject =~ /直线轴承/
+score CN_SUBJECT_1180		25.00
+
+header CN_SUBJECT_1181		Subject =~ /单向轴承/
+score CN_SUBJECT_1181		25.00
+
+header CN_SUBJECT_1182		Subject =~ /印刷/
+score CN_SUBJECT_1182		4.00
+
+header CN_SUBJECT_1183		Subject =~ /科特勒/
+score CN_SUBJECT_1183		25.00
+
+header CN_SUBJECT_1184		Subject =~ /旺地/
+score CN_SUBJECT_1184		6.00
+
+header CN_SUBJECT_1185		Subject =~ /赢周刊/
+score CN_SUBJECT_1185		25.00
+
+header CN_SUBJECT_1186		Subject =~ /箱包/
+score CN_SUBJECT_1186		25.00
+
+header CN_SUBJECT_1187		Subject =~ /皮革/
+score CN_SUBJECT_1187		25.00
+
+header CN_SUBJECT_1188		Subject =~ /通情借口/
+score CN_SUBJECT_1188		25.00
+
+header CN_SUBJECT_1189		Subject =~ /传统文化/
+score CN_SUBJECT_1189		25.00
+
+header CN_SUBJECT_1190		Subject =~ /音像特区/
+score CN_SUBJECT_1190		25.00
+
+header CN_SUBJECT_1191		Subject =~ /文秘俱乐部/
+score CN_SUBJECT_1191		25.00
+
+header CN_SUBJECT_1192		Subject =~ /搜搜吧/
+score CN_SUBJECT_1192		25.00
+
+header CN_SUBJECT_1193		Subject =~ /上班族/
+score CN_SUBJECT_1193		25.00
+
+header CN_SUBJECT_1194		Subject =~ /天天有/
+score CN_SUBJECT_1194		5.00
+
+header CN_SUBJECT_1195		Subject =~ /看大片/
+score CN_SUBJECT_1195		25.00
+
+header CN_SUBJECT_1196		Subject =~ /三人行/
+score CN_SUBJECT_1196		25.00
+
+header CN_SUBJECT_1197		Subject =~ /姜太公/
+score CN_SUBJECT_1197		25.00
+
+header CN_SUBJECT_1198		Subject =~ /首富/
+score CN_SUBJECT_1198		6.00
+
+header CN_SUBJECT_1199		Subject =~ /春茶/
+score CN_SUBJECT_1199		25.00
+
+header CN_SUBJECT_1200		Subject =~ /悲歌/
+score CN_SUBJECT_1200		5.00
+
+header CN_SUBJECT_1201		Subject =~ /未婚/
+score CN_SUBJECT_1201		25.00
+
+header CN_SUBJECT_1202		Subject =~ /狗狗/
+score CN_SUBJECT_1202		25.00
+
+header CN_SUBJECT_1203		Subject =~ /猪猪/
+score CN_SUBJECT_1203		25.00
+
+header CN_SUBJECT_1204		Subject =~ /了解客戶/
+score CN_SUBJECT_1204		25.00
+
+header CN_SUBJECT_1205		Subject =~ /伺服时代/
+score CN_SUBJECT_1205		25.00
+
+header CN_SUBJECT_1206		Subject =~ /网站快车/
+score CN_SUBJECT_1206		25.00
+
+header CN_SUBJECT_1207		Subject =~ /快发短信/
+score CN_SUBJECT_1207		25.00
+
+header CN_SUBJECT_1208		Subject =~ /自然美/
+score CN_SUBJECT_1208		25.00
+
+header CN_SUBJECT_1209		Subject =~ /纯水机/
+score CN_SUBJECT_1209		25.00
+
+header CN_SUBJECT_1210		Subject =~ /网络招聘/
+score CN_SUBJECT_1210		3.00
+
+header CN_SUBJECT_1211		Subject =~ /送的月饼/
+score CN_SUBJECT_1211		25.00
+
+header CN_SUBJECT_1212		Subject =~ /月饼/
+score CN_SUBJECT_1212		25.00
+
+header CN_SUBJECT_1213		Subject =~ /看下下/
+score CN_SUBJECT_1213		25.00
+
+header CN_SUBJECT_1214		Subject =~ /航空有限公司/
+score CN_SUBJECT_1214		25.00
+
+header CN_SUBJECT_1215		Subject =~ /世纪航空/
+score CN_SUBJECT_1215		25.00
+
+header CN_SUBJECT_1216		Subject =~ /圣诞山/
+score CN_SUBJECT_1216		25.00
+
+header CN_SUBJECT_1217		Subject =~ /网络用户/
+score CN_SUBJECT_1217		25.00
+
+header CN_SUBJECT_1218		Subject =~ /mm小屋/
+score CN_SUBJECT_1218		25.00
+
+header CN_SUBJECT_1219		Subject =~ /脑筋/
+score CN_SUBJECT_1219		25.00
+
+header CN_SUBJECT_1220		Subject =~ /急转弯/
+score CN_SUBJECT_1220		25.00
+
+header CN_SUBJECT_1221		Subject =~ /防盜器/
+score CN_SUBJECT_1221		25.00
+
+header CN_SUBJECT_1222		Subject =~ /省油器/
+score CN_SUBJECT_1222		25.00
+
+header CN_SUBJECT_1223		Subject =~ /酒店预定/
+score CN_SUBJECT_1223		25.00
+
+header CN_SUBJECT_1224		Subject =~ /机票预定/
+score CN_SUBJECT_1224		25.00
+
+header CN_SUBJECT_1225		Subject =~ /你的理想/
+score CN_SUBJECT_1225		25.00
+
+header CN_SUBJECT_1226		Subject =~ /您的理想/
+score CN_SUBJECT_1226		25.00
+
+header CN_SUBJECT_1227		Subject =~ /最新运价/
+score CN_SUBJECT_1227		25.00
+
+header CN_SUBJECT_1228		Subject =~ /优势运价/
+score CN_SUBJECT_1228		25.00
+
+header CN_SUBJECT_1229		Subject =~ /您的加入/
+score CN_SUBJECT_1229		25.00
+
+header CN_SUBJECT_1230		Subject =~ /你的加入/
+score CN_SUBJECT_1230		25.00
+
+header CN_SUBJECT_1231		Subject =~ /同名/
+score CN_SUBJECT_1231		4.00
+
+header CN_SUBJECT_1232		Subject =~ /同姓/
+score CN_SUBJECT_1232		4.00
+
+header CN_SUBJECT_1233		Subject =~ /退∷党/
+score CN_SUBJECT_1233		25.00
+
+header CN_SUBJECT_1234		Subject =~ /党∷团/
+score CN_SUBJECT_1234		25.00
+
+header CN_SUBJECT_1235		Subject =~ /突破英语/
+score CN_SUBJECT_1235		25.00
+
+header CN_SUBJECT_1236		Subject =~ /英语听说/
+score CN_SUBJECT_1236		25.00
+
+header CN_SUBJECT_1237		Subject =~ /大丈夫/
+score CN_SUBJECT_1237		25.00
+
+header CN_SUBJECT_1238		Subject =~ /江南建筑/
+score CN_SUBJECT_1238		25.00
+
+header CN_SUBJECT_1239		Subject =~ /安全套/
+score CN_SUBJECT_1239		25.00
+
+header CN_SUBJECT_1240		Subject =~ /避孕/
+score CN_SUBJECT_1240		25.00
+
+header CN_SUBJECT_1241		Subject =~ /南美海运/
+score CN_SUBJECT_1241		25.00
+
+header CN_SUBJECT_1242		Subject =~ /买易通/
+score CN_SUBJECT_1242		25.00
+
+header CN_SUBJECT_1243		Subject =~ /活在別人/
+score CN_SUBJECT_1243		25.00
+
+header CN_SUBJECT_1244		Subject =~ /高效授权/
+score CN_SUBJECT_1244		25.00
+
+header CN_SUBJECT_1245		Subject =~ /手机的朋友/
+score CN_SUBJECT_1245		25.00
+
+header CN_SUBJECT_1246		Subject =~ /网络办公/
+score CN_SUBJECT_1246		4.00
+
+header CN_SUBJECT_1247		Subject =~ /票*据/
+score CN_SUBJECT_1247		25.00
+
+header CN_SUBJECT_1248		Subject =~ /链接联盟/
+score CN_SUBJECT_1248		25.00
+
+header CN_SUBJECT_1249		Subject =~ /月历展/
+score CN_SUBJECT_1249		25.00
+
+header CN_SUBJECT_1250		Subject =~ /之家/
+score CN_SUBJECT_1250		3.00
+
+header CN_SUBJECT_1251		Subject =~ /游泳/
+score CN_SUBJECT_1251		5.00
+
+header CN_SUBJECT_1252		Subject =~ /迷奷/
+score CN_SUBJECT_1252		25.00
+
+header CN_SUBJECT_1253		Subject =~ /强奸/
+score CN_SUBJECT_1253		25.00
+
+header CN_SUBJECT_1254		Subject =~ /放松/
+score CN_SUBJECT_1254		2.00
+
+header CN_SUBJECT_1255		Subject =~ /爱犬/
+score CN_SUBJECT_1255		25.00
+
+header CN_SUBJECT_1256		Subject =~ /马仔/
+score CN_SUBJECT_1256		25.00
+
+header CN_SUBJECT_1257		Subject =~ /豪宅/
+score CN_SUBJECT_1257		6.00
+
+header CN_SUBJECT_1258		Subject =~ /算命/
+score CN_SUBJECT_1258		7.00
+
+header CN_SUBJECT_1259		Subject =~ /嫩白/
+score CN_SUBJECT_1259		8.00
+
+header CN_SUBJECT_1260		Subject =~ /自助培训/
+score CN_SUBJECT_1260		25.00
+
+header CN_SUBJECT_1261		Subject =~ /保钓/
+score CN_SUBJECT_1261		25.00
+
+header CN_SUBJECT_1262		Subject =~ /知识大赛/
+score CN_SUBJECT_1262		25.00
+
+header CN_SUBJECT_1263		Subject =~ /电话录音/
+score CN_SUBJECT_1263		25.00
+
+header CN_SUBJECT_1264		Subject =~ /录音系统/
+score CN_SUBJECT_1264		25.00
+
+header CN_SUBJECT_1265		Subject =~ /搬运工/
+score CN_SUBJECT_1265		25.00
+
+header CN_SUBJECT_1266		Subject =~ /血汗/
+score CN_SUBJECT_1266		25.00
+
+header CN_SUBJECT_1267		Subject =~ /妓女/
+score CN_SUBJECT_1267		25.00
+
+header CN_SUBJECT_1268		Subject =~ /欲火/
+score CN_SUBJECT_1268		25.00
+
+header CN_SUBJECT_1269		Subject =~ /焚身/
+score CN_SUBJECT_1269		25.00
+
+header CN_SUBJECT_1270		Subject =~ /炮筒/
+score CN_SUBJECT_1270		25.00
+
+header CN_SUBJECT_1271		Subject =~ /圣诞卡/
+score CN_SUBJECT_1271		25.00
+
+header CN_SUBJECT_1272		Subject =~ /英语特快/
+score CN_SUBJECT_1272		25.00
+
+header CN_SUBJECT_1273		Subject =~ /电脑辐射/
+score CN_SUBJECT_1273		25.00
+
+header CN_SUBJECT_1274		Subject =~ /人体/
+score CN_SUBJECT_1274		25.00
+
+header CN_SUBJECT_1275		Subject =~ /蛋蛋/
+score CN_SUBJECT_1275		25.00
+
+header CN_SUBJECT_1276		Subject =~ /零距离/
+score CN_SUBJECT_1276		25.00
+
+header CN_SUBJECT_1277		Subject =~ /成功人士/
+score CN_SUBJECT_1277		25.00
+
+header CN_SUBJECT_1278		Subject =~ /比比鱼/
+score CN_SUBJECT_1278		25.00
+
+header CN_SUBJECT_1279		Subject =~ /照片/
+score CN_SUBJECT_1279		2.00
+
+header CN_SUBJECT_1280		Subject =~ /财.务/
+score CN_SUBJECT_1280		25.00
+
+header CN_SUBJECT_1281		Subject =~ /业.务/
+score CN_SUBJECT_1281		25.00
+
+header CN_SUBJECT_1282		Subject =~ /代.开/
+score CN_SUBJECT_1282		25.00
+
+header CN_SUBJECT_1283		Subject =~ /翅片管/
+score CN_SUBJECT_1283		25.00
+
+header CN_SUBJECT_1284		Subject =~ /月息800/
+score CN_SUBJECT_1284		25.00
+
+header CN_SUBJECT_1285		Subject =~ /沉浮/
+score CN_SUBJECT_1285		4.00
+
+header CN_SUBJECT_1286		Subject =~ /蓝之星/
+score CN_SUBJECT_1286		25.00
+
+header CN_SUBJECT_1287		Subject =~ /劳动争议/
+score CN_SUBJECT_1287		25.00
+
+header CN_SUBJECT_1288		Subject =~ /传奇世界/
+score CN_SUBJECT_1288		25.00
+
+header CN_SUBJECT_1289		Subject =~ /网络游戏/
+score CN_SUBJECT_1289		25.00
+
+header CN_SUBJECT_1290		Subject =~ /解解乏/
+score CN_SUBJECT_1290		25.00
+
+header CN_SUBJECT_1291		Subject =~ /模特/
+score CN_SUBJECT_1291		25.00
+
+header CN_SUBJECT_1292		Subject =~ /演员/
+score CN_SUBJECT_1292		25.00
+
+header CN_SUBJECT_1293		Subject =~ /送大奖/
+score CN_SUBJECT_1293		6.00
+
+header CN_SUBJECT_1294		Subject =~ /财富分红/
+score CN_SUBJECT_1294		25.00
+
+header CN_SUBJECT_1295		Subject =~ /听过的事/
+score CN_SUBJECT_1295		25.00
+
+header CN_SUBJECT_1296		Subject =~ /论坛资料/
+score CN_SUBJECT_1296		25.00
+
+header CN_SUBJECT_1297		Subject =~ /孟买展会/
+score CN_SUBJECT_1297		25.00
+
+header CN_SUBJECT_1298		Subject =~ /芝麻/
+score CN_SUBJECT_1298		25.00
+
+header CN_SUBJECT_1299		Subject =~ /开门/
+score CN_SUBJECT_1299		25.00
+
+header CN_SUBJECT_1300		Subject =~ /馅饼/
+score CN_SUBJECT_1300		25.00
+
+header CN_SUBJECT_1301		Subject =~ /贝塔斯曼/
+score CN_SUBJECT_1301		25.00
+
+header CN_SUBJECT_1302		Subject =~ /书友会/
+score CN_SUBJECT_1302		25.00
+
+header CN_SUBJECT_1303		Subject =~ /慰问金/
+score CN_SUBJECT_1303		25.00
+
+header CN_SUBJECT_1304		Subject =~ /社团/
+score CN_SUBJECT_1304		4.00
+
+header CN_SUBJECT_1305		Subject =~ /联合会/
+score CN_SUBJECT_1305		5.00
+
+header CN_SUBJECT_1306		Subject =~ /网址大全/
+score CN_SUBJECT_1306		25.00
+
+header CN_SUBJECT_1307		Subject =~ /边赚钱/
+score CN_SUBJECT_1307		25.00
+
+header CN_SUBJECT_1308		Subject =~ /已婚/
+score CN_SUBJECT_1308		25.00
+
+header CN_SUBJECT_1309		Subject =~ /屏蔽器/
+score CN_SUBJECT_1309		25.00
+
+header CN_SUBJECT_1310		Subject =~ /惊嚗/
+score CN_SUBJECT_1310		7.00
+
+header CN_SUBJECT_1311		Subject =~ /智能汽车/
+score CN_SUBJECT_1311		25.00
+
+header CN_SUBJECT_1312		Subject =~ /汽车防撞/
+score CN_SUBJECT_1312		25.00
+
+header CN_SUBJECT_1313		Subject =~ /通信套餐/
+score CN_SUBJECT_1313		25.00
+
+header CN_SUBJECT_1314		Subject =~ /七彩谷/
+score CN_SUBJECT_1314		25.00
+
+header CN_SUBJECT_1315		Subject =~ /想你了/
+score CN_SUBJECT_1315		25.00
+
+header CN_SUBJECT_1316		Subject =~ /想您了/
+score CN_SUBJECT_1316		25.00
+
+header CN_SUBJECT_1317		Subject =~ /月净赚/
+score CN_SUBJECT_1317		25.00
+
+header CN_SUBJECT_1318		Subject =~ /年净赚/
+score CN_SUBJECT_1318		25.00
+
+header CN_SUBJECT_1319		Subject =~ /七彩谷/
+score CN_SUBJECT_1319		25.00
+
+header CN_SUBJECT_1320		Subject =~ /音乐游戏/
+score CN_SUBJECT_1320		25.00
+
+header CN_SUBJECT_1321		Subject =~ /手淫/
+score CN_SUBJECT_1321		25.00
+
+header CN_SUBJECT_1322		Subject =~ /抚摸/
+score CN_SUBJECT_1322		25.00
+
+header CN_SUBJECT_1323		Subject =~ /就是我/
+score CN_SUBJECT_1323		25.00
+
+header CN_SUBJECT_1324		Subject =~ /员工欺诈/
+score CN_SUBJECT_1324		25.00
+
+header CN_SUBJECT_1325		Subject =~ /性交姿势/
+score CN_SUBJECT_1325		25.00
+
+header CN_SUBJECT_1326		Subject =~ /真人表演/
+score CN_SUBJECT_1326		25.00
+
+header CN_SUBJECT_1327		Subject =~ /环保耗材/
+score CN_SUBJECT_1327		25.00
+
+header CN_SUBJECT_1328		Subject =~ /安全发票/
+score CN_SUBJECT_1328		25.00
+
+header CN_SUBJECT_1329		Subject =~ /联锋达/
+score CN_SUBJECT_1329		25.00
+
+header CN_SUBJECT_1330		Subject =~ /性教育/
+score CN_SUBJECT_1330		25.00
+
+header CN_SUBJECT_1331		Subject =~ /美女图片/
+score CN_SUBJECT_1331		25.00
+
+header CN_SUBJECT_1332		Subject =~ /转印专家/
+score CN_SUBJECT_1332		25.00
+
+header CN_SUBJECT_1333		Subject =~ /套房/
+score CN_SUBJECT_1333		6.00
+
+header CN_SUBJECT_1334		Subject =~ /同行版/
+score CN_SUBJECT_1334		5.00
+
+header CN_SUBJECT_1335		Subject =~ /网络证婚/
+score CN_SUBJECT_1335		25.00
+
+header CN_SUBJECT_1336		Subject =~ /我的博客/
+score CN_SUBJECT_1336		25.00
+
+header CN_SUBJECT_1337		Subject =~ /我博客/
+score CN_SUBJECT_1337		25.00
+
+header CN_SUBJECT_1338		Subject =~ /和服/
+score CN_SUBJECT_1338		5.00
+
+header CN_SUBJECT_1339		Subject =~ /熟女/
+score CN_SUBJECT_1339		25.00
+
+header CN_SUBJECT_1340		Subject =~ /床第/
+score CN_SUBJECT_1340		25.00
+
+header CN_SUBJECT_1341		Subject =~ /性类视频/ 
+score CN_SUBJECT_1341		25.00
+
+header CN_SUBJECT_1342		Subject =~ /居住证/ 
+score CN_SUBJECT_1342		5.00
+
+header CN_SUBJECT_1343		Subject =~ /自动门/ 
+score CN_SUBJECT_1343		6.00
+
+header CN_SUBJECT_1344		Subject =~ /咨询免费/ 
+score CN_SUBJECT_1344		25.00
+
+header CN_SUBJECT_1345		Subject =~ /免费咨询/ 
+score CN_SUBJECT_1345		25.00
+
+header CN_SUBJECT_1346		Subject =~ /通话免费/ 
+score CN_SUBJECT_1346		25.00
+
+header CN_SUBJECT_1347		Subject =~ /免费通话/ 
+score CN_SUBJECT_1347		25.00
+
+header CN_SUBJECT_1348		Subject =~ /企业权威/ 
+score CN_SUBJECT_1348		25.00
+
+header CN_SUBJECT_1349		Subject =~ /权威信用/ 
+score CN_SUBJECT_1349		25.00
+
+header CN_SUBJECT_1350		Subject =~ /信用认证/ 
+score CN_SUBJECT_1350		25.00
+
+header CN_SUBJECT_1351		Subject =~ /時尚英文/ 
+score CN_SUBJECT_1351		25.00
+
+header CN_SUBJECT_1352		Subject =~ /Web版ERP/ 
+score CN_SUBJECT_1352		25.00
+
+header CN_SUBJECT_1353		Subject =~ /在做什么/ 
+score CN_SUBJECT_1353		25.00
+
+header CN_SUBJECT_1354		Subject =~ /名星/ 
+score CN_SUBJECT_1354		4.00
+
+header CN_SUBJECT_1355		Subject =~ /暴光/ 
+score CN_SUBJECT_1355		3.00
+
+header CN_SUBJECT_1356		Subject =~ /下载吧/ 
+score CN_SUBJECT_1356		25.00
+
+header CN_SUBJECT_1357		Subject =~ /苹果/ 
+score CN_SUBJECT_1357		5.00
+
+header CN_SUBJECT_1358		Subject =~ /背单词/ 
+score CN_SUBJECT_1358		25.00
+
+header CN_SUBJECT_1359		Subject =~ /国际电子展/ 
+score CN_SUBJECT_1359		15.00
+
+header CN_SUBJECT_1360		Subject =~ /娱乐天地/ 
+score CN_SUBJECT_1360		25.00
+
+header CN_SUBJECT_1361		Subject =~ /部门考核/ 
+score CN_SUBJECT_1361		10.00
+
+header CN_SUBJECT_1362		Subject =~ /本好书/ 
+score CN_SUBJECT_1362		25.00
+
+header CN_SUBJECT_1363		Subject =~ /元租房/ 
+score CN_SUBJECT_1363		25.00
+
+header CN_SUBJECT_1364		Subject =~ /元买房/ 
+score CN_SUBJECT_1364		25.00
+
+header CN_SUBJECT_1365		Subject =~ /跳`槽/ 
+score CN_SUBJECT_1365		25.00
+
+header CN_SUBJECT_1366		Subject =~ /跳槽/ 
+score CN_SUBJECT_1366		4.00
+
+header CN_SUBJECT_1367		Subject =~ /人才中心/
+score CN_SUBJECT_1367		25.00
+
+header CN_SUBJECT_1368		Subject =~ /万岁/
+score CN_SUBJECT_1368		25.00
+
+header CN_SUBJECT_1369		Subject =~ /不见不散/
+score CN_SUBJECT_1369		25.00
+
+header CN_SUBJECT_1370		Subject =~ /素人/
+score CN_SUBJECT_1370		25.00
+
+header CN_SUBJECT_1371		Subject =~ /人妻/
+score CN_SUBJECT_1371		25.00
+
+header CN_SUBJECT_1372		Subject =~ /北-京/
+score CN_SUBJECT_1372		25.00
+
+header CN_SUBJECT_1373		Subject =~ /衔-接/
+score CN_SUBJECT_1373		25.00
+
+header CN_SUBJECT_1374		Subject =~ /执-行/
+score CN_SUBJECT_1374		25.00
+
+header CN_SUBJECT_1375		Subject =~ /深-圳/
+score CN_SUBJECT_1375		25.00
+
+header CN_SUBJECT_1376		Subject =~ /上-海/
+score CN_SUBJECT_1376		25.00
+
+header CN_SUBJECT_1377		Subject =~ /回 信/
+score CN_SUBJECT_1377		3.00
+
+header CN_SUBJECT_1378		Subject =~ /免费调查/
+score CN_SUBJECT_1378		25.00
+
+header CN_SUBJECT_1379		Subject =~ /调查问卷/
+score CN_SUBJECT_1379		25.00
+
+header CN_SUBJECT_1380		Subject =~ /王牌迎战/
+score CN_SUBJECT_1380		25.00
+
+header CN_SUBJECT_1381		Subject =~ /空卡贷款/
+score CN_SUBJECT_1381		25.00
+
+header CN_SUBJECT_1382		Subject =~ /小说网/
+score CN_SUBJECT_1382		25.00
+
+header CN_SUBJECT_1383		Subject =~ /桶金/
+score CN_SUBJECT_1383		25.00
+
+header CN_SUBJECT_1384		Subject =~ /忘我/
+score CN_SUBJECT_1384		25.00
+
+header CN_SUBJECT_1385		Subject =~ /文化协会/
+score CN_SUBJECT_1385		25.00
+
+header CN_SUBJECT_1386		Subject =~ /忘我/
+score CN_SUBJECT_1386		25.00
+
+header CN_SUBJECT_1387		Subject =~ /身姿/
+score CN_SUBJECT_1387		25.00
+
+header CN_SUBJECT_1388		Subject =~ /双乳/
+score CN_SUBJECT_1388		25.00
+
+header CN_SUBJECT_1389		Subject =~ /身段/
+score CN_SUBJECT_1389		25.00
+
+header CN_SUBJECT_1390		Subject =~ /丰满/
+score CN_SUBJECT_1390		25.00
+
+header CN_SUBJECT_1391		Subject =~ /开 课/
+score CN_SUBJECT_1391		25.00
+
+header CN_SUBJECT_1392		Subject =~ /制-衣/
+score CN_SUBJECT_1392		25.00
+
+header CN_SUBJECT_1393		Subject =~ /论剑/
+score CN_SUBJECT_1393		25.00
+
+header CN_SUBJECT_1394		Subject =~ /外商信息/
+score CN_SUBJECT_1394		25.00
+
+header CN_SUBJECT_1395		Subject =~ /二奶/
+score CN_SUBJECT_1395		25.00
+
+header CN_SUBJECT_1396		Subject =~ /发泄果/
+score CN_SUBJECT_1396		25.00
+
+header CN_SUBJECT_1397		Subject =~ /歌手/
+score CN_SUBJECT_1397		25.00
+
+header CN_SUBJECT_1398		Subject =~ /同.居/
+score CN_SUBJECT_1398		25.00
+
+header CN_SUBJECT_1399		Subject =~ /同~居/
+score CN_SUBJECT_1399		25.00
+
+header CN_SUBJECT_1400		Subject =~ /尚衣阁/
+score CN_SUBJECT_1400		25.00
+
+header CN_SUBJECT_1401		Subject =~ /圣女/
+score CN_SUBJECT_1401		25.00
+
+header CN_SUBJECT_1402		Subject =~ /购衣/
+score CN_SUBJECT_1402		5.00
+
+header CN_SUBJECT_1403		Subject =~ /求职路/
+score CN_SUBJECT_1403		25.00
+
+header CN_SUBJECT_1404		Subject =~ /香薰/
+score CN_SUBJECT_1404		25.00
+
+header CN_SUBJECT_1405		Subject =~ /免费有奖/
+score CN_SUBJECT_1405		25.00
+
+header CN_SUBJECT_1406		Subject =~ /有奖注册/
+score CN_SUBJECT_1406		25.00
+
+header CN_SUBJECT_1407		Subject =~ /短信中心/
+score CN_SUBJECT_1407		25.00
+
+header CN_SUBJECT_1408		Subject =~ /信息港/
+score CN_SUBJECT_1408		25.00
+
+header CN_SUBJECT_1409		Subject =~ /网络直播/
+score CN_SUBJECT_1409		25.00
+
+header CN_SUBJECT_1410		Subject =~ /欲罢不能/
+score CN_SUBJECT_1410		25.00
+
+header CN_SUBJECT_1411		Subject =~ /交个朋友/
+score CN_SUBJECT_1411		25.00
+
+header CN_SUBJECT_1412		Subject =~ /人偷拍/
+score CN_SUBJECT_1412		25.00
+
+header CN_SUBJECT_1413		Subject =~ /论文征稿/
+score CN_SUBJECT_1413		25.00
+
+header CN_SUBJECT_1414		Subject =~ /恒拓伟业/
+score CN_SUBJECT_1414		25.00
+
+header CN_SUBJECT_1415		Subject =~ /发。票/
+score CN_SUBJECT_1415		25.00
+
+header CN_SUBJECT_1416		Subject =~ /税。务/
+score CN_SUBJECT_1416		25.00
+
+header CN_SUBJECT_1417		Subject =~ /代。开/
+score CN_SUBJECT_1417		25.00
+
+header CN_SUBJECT_1418		Subject =~ /花粉/
+score CN_SUBJECT_1418		25.00
+
+header CN_SUBJECT_1419		Subject =~ /好友圈/
+score CN_SUBJECT_1419		25.00
+
+header CN_SUBJECT_1420		Subject =~ /好搜索/
+score CN_SUBJECT_1420		25.00
+
+header CN_SUBJECT_1421		Subject =~ /听评书/
+score CN_SUBJECT_1421		25.00
+
+header CN_SUBJECT_1422		Subject =~ /听笑话/
+score CN_SUBJECT_1422		25.00
+
+header CN_SUBJECT_1423		Subject =~ /听小品/
+score CN_SUBJECT_1423		25.00
+
+header CN_SUBJECT_1424		Subject =~ /获奖金/
+score CN_SUBJECT_1424		25.00
+
+header CN_SUBJECT_1425		Subject =~ /中国声网/
+score CN_SUBJECT_1425		25.00
+
+header CN_SUBJECT_1426		Subject =~ /用工风险/
+score CN_SUBJECT_1426		25.00
+
+header CN_SUBJECT_1427		Subject =~ /常感冒/
+score CN_SUBJECT_1427		25.00
+
+header CN_SUBJECT_1428		Subject =~ /特训营/
+score CN_SUBJECT_1428		25.00
+
+header CN_SUBJECT_1429		Subject =~ /何智丽/
+score CN_SUBJECT_1429		25.00
+
+header CN_SUBJECT_1430		Subject =~ /女婴/
+score CN_SUBJECT_1430		25.00
+
+header CN_SUBJECT_1431		Subject =~ /宜家自助/
+score CN_SUBJECT_1431		25.00
+
+header CN_SUBJECT_1432		Subject =~ /时尚住宿/
+score CN_SUBJECT_1432		25.00
+
+header CN_SUBJECT_1433		Subject =~ /自助公寓/
+score CN_SUBJECT_1433		25.00
+
+header CN_SUBJECT_1434		Subject =~ /服装/
+score CN_SUBJECT_1434		4.00
+
+header CN_SUBJECT_1435		Subject =~ /鞋帽/
+score CN_SUBJECT_1435		15.00
+
+header CN_SUBJECT_1436		Subject =~ /等你回来/
+score CN_SUBJECT_1436		7.00
+
+header CN_SUBJECT_1437		Subject =~ /驱蚊/
+score CN_SUBJECT_1437		25.00
+
+header CN_SUBJECT_1438		Subject =~ /笑一笑/
+score CN_SUBJECT_1438		25.00
+
+header CN_SUBJECT_1439		Subject =~ /(?:您的一生|你的一生)/
+score CN_SUBJECT_1439		15.00
+
+header CN_SUBJECT_1440		Subject =~ /特价机票/
+score CN_SUBJECT_1440		25.00
+
+header CN_SUBJECT_1441		Subject =~ /传奇私服/
+score CN_SUBJECT_1441		25.00
+
+header CN_SUBJECT_1442		Subject =~ /域名转让/
+score CN_SUBJECT_1442		25.00
+
+header CN_SUBJECT_1443		Subject =~ /转让域名/
+score CN_SUBJECT_1443		25.00
+
+header CN_SUBJECT_1444		Subject =~ /性生理/
+score CN_SUBJECT_1444		25.00
+
+header CN_SUBJECT_1445		Subject =~ /笑得歪/
+score CN_SUBJECT_1445		25.00
+
+header CN_SUBJECT_1446		Subject =~ /美金属于你/
+score CN_SUBJECT_1446		25.00
+
+header CN_SUBJECT_147		Subject =~ /法瑞儿/
+score CN_SUBJECT_1447		25.00
+
+header CN_SUBJECT_1448		Subject =~ /时尚杂志/
+score CN_SUBJECT_1448		25.00
+
+header CN_SUBJECT_1449		Subject =~ /日开课/
+score CN_SUBJECT_1449		25.00
+
+header CN_SUBJECT_1450		Subject =~ /月开课/
+score CN_SUBJECT_1450		25.00
+
+header CN_SUBJECT_1451		Subject =~ /礼品博览/
+score CN_SUBJECT_1451		25.00
+
+header CN_SUBJECT_1452		Subject =~ /宾致网/
+score CN_SUBJECT_1452		25.00
+
+header CN_SUBJECT_1453		Subject =~ /北林何辉/
+score CN_SUBJECT_1453		25.00
+
+header CN_SUBJECT_1454		Subject =~ /白癜风/
+score CN_SUBJECT_1454		25.00
+
+header CN_SUBJECT_1455		Subject =~ /特价快讯/
+score CN_SUBJECT_1455		25.00
+
+header CN_SUBJECT_1456		Subject =~ /乐欢天/
+score CN_SUBJECT_1456		25.00
+
+header CN_SUBJECT_1457		Subject =~ /集训营/
+score CN_SUBJECT_1457		25.00
+
+header CN_SUBJECT_1458		Subject =~ /低价出让/
+score CN_SUBJECT_1458		25.00
+
+header CN_SUBJECT_1459		Subject =~ /沾不粘/
+score CN_SUBJECT_1459		25.00
+
+header CN_SUBJECT_1460		Subject =~ /汽车软胶/
+score CN_SUBJECT_1460		25.00
+
+header CN_SUBJECT_1461		Subject =~ /防滑垫/
+score CN_SUBJECT_1461		25.00
+
+header CN_SUBJECT_1462		Subject =~ /调味品/
+score CN_SUBJECT_1462		25.00
+
+header CN_SUBJECT_1463		Subject =~ /财务合作/
+score CN_SUBJECT_1463		25.00
+
+header CN_SUBJECT_1464		Subject =~ /信息指南/
+score CN_SUBJECT_1464		25.00
+
+header CN_SUBJECT_1465		Subject =~ /明星的问候/
+score CN_SUBJECT_1465		25.00
+
+header CN_SUBJECT_1466		Subject =~ /感人动画/
+score CN_SUBJECT_1466		25.00
+
+header CN_SUBJECT_1467		Subject =~ /民建党/
+score CN_SUBJECT_1467		25.00
+
+header CN_SUBJECT_1468		Subject =~ /接受报名/
+score CN_SUBJECT_1468		25.00
+
+header CN_SUBJECT_1469		Subject =~ /艾尔设计/
+score CN_SUBJECT_1469		25.00
+
+header CN_SUBJECT_1470		Subject =~ /信用卡贷款/
+score CN_SUBJECT_1470		25.00
+
+header CN_SUBJECT_1471		Subject =~ /培训课程/
+score CN_SUBJECT_1471		25.00
+
+header CN_SUBJECT_1472		Subject =~ /绝 密/
+score CN_SUBJECT_1472		25.00
+
+header CN_SUBJECT_1473		Subject =~ /建网站/
+score CN_SUBJECT_1473		25.00
+
+header CN_SUBJECT_1474		Subject =~ /火爆招商/
+score CN_SUBJECT_1474		25.00
+
+header CN_SUBJECT_1475		Subject =~ /学历认证/
+score CN_SUBJECT_1475		25.00
+
+header CN_SUBJECT_1476		Subject =~ /文凭学历/
+score CN_SUBJECT_1476		25.00
+
+header CN_SUBJECT_1477		Subject =~ /设计大师/
+score CN_SUBJECT_1477		25.00
+
+header CN_SUBJECT_1478		Subject =~ /海量图书/
+score CN_SUBJECT_1478		25.00
+
+header CN_SUBJECT_1479		Subject =~ /软件网/
+score CN_SUBJECT_1479		25.00
+
+header CN_SUBJECT_1480		Subject =~ /生态水景/
+score CN_SUBJECT_1480		25.00
+
+header CN_SUBJECT_1481		Subject =~ /妇女节/
+score CN_SUBJECT_1481		25.00
+
+header CN_SUBJECT_1482		Subject =~ /宣传网/
+score CN_SUBJECT_1482		25.00
+
+header CN_SUBJECT_1483		Subject =~ /近视眼/
+score CN_SUBJECT_1483		25.00
+
+header CN_SUBJECT_1484		Subject =~ /品牌表/
+score CN_SUBJECT_1484		25.00
+
+header CN_SUBJECT_1485		Subject =~ /无敌建网/
+score CN_SUBJECT_1485		25.00
+
+header CN_SUBJECT_1486		Subject =~ /美白护肤/
+score CN_SUBJECT_1486		25.00
+
+header CN_SUBJECT_1487		Subject =~ /内 幕/
+score CN_SUBJECT_1487		25.00
+
+header CN_SUBJECT_1488		Subject =~ /你有钱/
+score CN_SUBJECT_1488		25.00
+
+header CN_SUBJECT_1489		Subject =~ /窝窝传媒/
+score CN_SUBJECT_1489		25.00
+
+header CN_SUBJECT_1490		Subject =~ /工作无忧/
+score CN_SUBJECT_1490		25.00
+
+header CN_SUBJECT_1491		Subject =~ /销-售/
+score CN_SUBJECT_1491		25.00
+
+header CN_SUBJECT_1492		Subject =~ /有奖调查/
+score CN_SUBJECT_1492		25.00
+
+header CN_SUBJECT_1493		Subject =~ /手机邮箱/
+score CN_SUBJECT_1493		25.00
+
+header CN_SUBJECT_1494		Subject =~ /精彩电影/
+score CN_SUBJECT_1494		25.00
+
+header CN_SUBJECT_1495		Subject =~ /还是你吗/
+score CN_SUBJECT_1495		25.00
+
+header CN_SUBJECT_1496		Subject =~ /还是您吗/
+score CN_SUBJECT_1496		25.00
+
+header CN_SUBJECT_1497		Subject =~ /友姆网/
+score CN_SUBJECT_1497		25.00
+
+header CN_SUBJECT_1498		Subject =~ /精准找客户/
+score CN_SUBJECT_1498		25.00
+
+header CN_SUBJECT_1499		Subject =~ /佩丁大学/
+score CN_SUBJECT_1499		25.00
+
+header CN_SUBJECT_1500		Subject =~ /美衣会/
+score CN_SUBJECT_1500		25.00
+
+header CN_SUBJECT_1501		Subject =~ /扑克/
+score CN_SUBJECT_1501		25.00
+
+header CN_SUBJECT_1502		Subject =~ /麻将/
+score CN_SUBJECT_1502		25.00
+
+header CN_SUBJECT_1503		Subject =~ /无厘头/
+score CN_SUBJECT_1503		25.00
+
+header CN_SUBJECT_1504		Subject =~ /书画展/
+score CN_SUBJECT_1504		25.00
+
+header CN_SUBJECT_1505		Subject =~ /逛街/
+score CN_SUBJECT_1505		25.00
+
+header CN_SUBJECT_1506		Subject =~ /太极拳/
+score CN_SUBJECT_1506		25.00
+
+header CN_SUBJECT_1507		Subject =~ /郑州通慧/
+score CN_SUBJECT_1507		25.00
+
+header CN_SUBJECT_1508		Subject =~ /玉兰油/
+score CN_SUBJECT_1508		25.00
+
+header CN_SUBJECT_1509		Subject =~ /中国缘/
+score CN_SUBJECT_1509		25.00
+
+header CN_SUBJECT_1510		Subject =~ /电视手机/
+score CN_SUBJECT_1510		25.00
+
+header CN_SUBJECT_1511		Subject =~ /比基尼/
+score CN_SUBJECT_1511		25.00
+
+header CN_SUBJECT_1512		Subject =~ /易游人/
+score CN_SUBJECT_1512		25.00
+
+header CN_SUBJECT_1513		Subject =~ /炒股/
+score CN_SUBJECT_1513		25.00
+
+header CN_SUBJECT_1514		Subject =~ /高级文秘/
+score CN_SUBJECT_1514		25.00
+
+header CN_SUBJECT_1515		Subject =~ /瑞士军刀/
+score CN_SUBJECT_1515		25.00
+
+header CN_SUBJECT_1516		Subject =~ /精仿名表/
+score CN_SUBJECT_1516		25.00
+
+header CN_SUBJECT_1517		Subject =~ /研讨班/
+score CN_SUBJECT_1517		25.00
+
+header CN_SUBJECT_1518		Subject =~ /研修班/
+score CN_SUBJECT_1518		25.00
+
+header CN_SUBJECT_1519		Subject =~ /精修班/
+score CN_SUBJECT_1519		25.00
+
+header CN_SUBJECT_1520		Subject =~ /阿土伯/
+score CN_SUBJECT_1520		25.00
+
+header CN_SUBJECT_1521		Subject =~ /创原翻译/
+score CN_SUBJECT_1521		25.00
+
+header CN_SUBJECT_1522		Subject =~ /众品网/
+score CN_SUBJECT_1522		25.00
+
+header CN_SUBJECT_1523		Subject =~ /美国之音/
+score CN_SUBJECT_1523		25.00
+
+header CN_SUBJECT_1524		Subject =~ /车用冰箱/
+score CN_SUBJECT_1524		25.00
+
+header CN_SUBJECT_1525		Subject =~ /车载冰箱/
+score CN_SUBJECT_1525		25.00
+
+header CN_SUBJECT_1526		Subject =~ /诚信代理/
+score CN_SUBJECT_1526		25.00
+
+header CN_SUBJECT_1527		Subject =~ /无码DVD/
+score CN_SUBJECT_1527		25.00
+
+header CN_SUBJECT_1528		Subject =~ /非法跳槽/
+score CN_SUBJECT_1528		25.00
+
+header CN_SUBJECT_1529		Subject =~ /灰指甲/
+score CN_SUBJECT_1529		25.00
+
+header CN_SUBJECT_1530		Subject =~ /手足病/
+score CN_SUBJECT_1530		25.00
+
+header CN_SUBJECT_1531		Subject =~ /针灸/
+score CN_SUBJECT_1531		25.00
+
+header CN_SUBJECT_1532		Subject =~ /商用家具/
+score CN_SUBJECT_1532		25.00
+
+header CN_SUBJECT_1533		Subject =~ /双人行/
+score CN_SUBJECT_1533		25.00
+
+header CN_SUBJECT_1534		Subject =~ /加速器/
+score CN_SUBJECT_1534		8.00
+
+header CN_SUBJECT_1535		Subject =~ /小贴士/
+score CN_SUBJECT_1535		25.00
+
+header CN_SUBJECT_1536		Subject =~ /夏季养生/
+score CN_SUBJECT_1536		25.00
+
+header CN_SUBJECT_1537		Subject =~ /充气床/
+score CN_SUBJECT_1537		25.00
+
+header CN_SUBJECT_1538		Subject =~ /帐篷/
+score CN_SUBJECT_1538		25.00
+
+header CN_SUBJECT_1539		Subject =~ /睡袋/
+score CN_SUBJECT_1539		25.00
+
+header CN_SUBJECT_1540		Subject =~ /充气船/
+score CN_SUBJECT_1540		25.00
+
+header CN_SUBJECT_1541		Subject =~ /潜水用品/
+score CN_SUBJECT_1541		25.00
+
+header CN_SUBJECT_1542		Subject =~ /熏蒸/
+score CN_SUBJECT_1542		25.00
+
+header CN_SUBJECT_1543		Subject =~ /消毒/
+score CN_SUBJECT_1543		5.00
+
+header CN_SUBJECT_1544		Subject =~ /香奈儿/
+score CN_SUBJECT_1544		25.00
+
+header CN_SUBJECT_1545		Subject =~ /润泽/
+score CN_SUBJECT_1545		10.00
+
+header CN_SUBJECT_1546		Subject =~ /保湿/
+score CN_SUBJECT_1546		25.00
+
+header CN_SUBJECT_1547		Subject =~ /培训师/
+score CN_SUBJECT_1547		25.00
+
+header CN_SUBJECT_1548		Subject =~ /最新课程/
+score CN_SUBJECT_1548		25.00
+
+header CN_SUBJECT_1549		Subject =~ /中国歌曲/
+score CN_SUBJECT_1549		25.00
+
+header CN_SUBJECT_1550		Subject =~ /歌曲排行/
+score CN_SUBJECT_1550		25.00
+
+header CN_SUBJECT_1551		Subject =~ /吴 建 国/
+score CN_SUBJECT_1551		25.00
+
+header CN_SUBJECT_1552		Subject =~ /吴建国/
+score CN_SUBJECT_1552		25.00
+
+header CN_SUBJECT_1553		Subject =~ /我咒你/
+score CN_SUBJECT_1553		25.00
+
+header CN_SUBJECT_1554		Subject =~ /死光/
+score CN_SUBJECT_1554		25.00
+
+header CN_SUBJECT_1555		Subject =~ /透明锅/
+score CN_SUBJECT_1555		25.00
+
+header CN_SUBJECT_1556		Subject =~ /考试大纲/
+score CN_SUBJECT_1556		25.00
+
+header CN_SUBJECT_1557		Subject =~ /秋装/
+score CN_SUBJECT_1557		25.00
+
+header CN_SUBJECT_1558		Subject =~ /低价发票/
+score CN_SUBJECT_1558		25.00
+
+header CN_SUBJECT_1559		Subject =~ /排毒/
+score CN_SUBJECT_1559		25.00
+
+header CN_SUBJECT_1560		Subject =~ /打折机票/
+score CN_SUBJECT_1560		25.00
+
+header CN_SUBJECT_1561		Subject =~ /百货街/
+score CN_SUBJECT_1561		25.00
+
+header CN_SUBJECT_1562		Subject =~ /足球/
+score CN_SUBJECT_1562		25.00
+
+header CN_SUBJECT_1563		Subject =~ /锦标赛/
+score CN_SUBJECT_1563		25.00
+
+header CN_SUBJECT_1564		Subject =~ /代开合作/
+score CN_SUBJECT_1564		25.00
+
+header CN_SUBJECT_1565		Subject =~ /当场目击/
+score CN_SUBJECT_1565		25.00
+
+header CN_SUBJECT_1566		Subject =~ /一条龙服务/
+score CN_SUBJECT_1566		25.00
+
+header CN_SUBJECT_1567		Subject =~ /ic热卖/
+score CN_SUBJECT_1567		25.00
+
+header CN_SUBJECT_1568		Subject =~ /欢颜/
+score CN_SUBJECT_1568		10.00
+
+header CN_SUBJECT_1569		Subject =~ /了解华为/
+score CN_SUBJECT_1569		25.00
+
+header CN_SUBJECT_1570		Subject =~ /成功的背后/
+score CN_SUBJECT_1570		25.00
+
+header CN_SUBJECT_1571		Subject =~ /任意打/
+score CN_SUBJECT_1571		25.00
+
+header CN_SUBJECT_1572		Subject =~ /猫扑网/
+score CN_SUBJECT_1572		25.00
+
+header CN_SUBJECT_1573		Subject =~ /订立技巧/
+score CN_SUBJECT_1573		25.00
+
+header CN_SUBJECT_1574		Subject =~ /试衣/
+score CN_SUBJECT_1574		25.00
+
+header CN_SUBJECT_1575		Subject =~ /文笔商贸/
+score CN_SUBJECT_1575		25.00
+
+header CN_SUBJECT_1576		Subject =~ /自尊/
+score CN_SUBJECT_1576		5.00
+
+header CN_SUBJECT_1577		Subject =~ /自爱/
+score CN_SUBJECT_1577		5.00
+
+header CN_SUBJECT_1578		Subject =~ /自强/
+score CN_SUBJECT_1578		5.00
+
+header CN_SUBJECT_1579		Subject =~ /管理难题/
+score CN_SUBJECT_1579		25.00
+
+header CN_SUBJECT_1580		Subject =~ /单峰驼/
+score CN_SUBJECT_1580		25.00
+
+header CN_SUBJECT_1581		Subject =~ /驼峰/
+score CN_SUBJECT_1581		25.00
+
+header CN_SUBJECT_1582		Subject =~ /黑车/
+score CN_SUBJECT_1582		25.00
+
+header CN_SUBJECT_1583		Subject =~ /低价出售/
+score CN_SUBJECT_1583		25.00
+
+header CN_SUBJECT_1584		Subject =~ /人人必备/
+score CN_SUBJECT_1584		25.00
+
+header CN_SUBJECT_1585		Subject =~ /樟脑/
+score CN_SUBJECT_1585		25.00
+
+header CN_SUBJECT_1586		Subject =~ /软膏/
+score CN_SUBJECT_1586		25.00
+
+header CN_SUBJECT_1587		Subject =~ /发票代开/
+score CN_SUBJECT_1587		25.00
+
+header CN_SUBJECT_1588		Subject =~ /代开发票/
+score CN_SUBJECT_1588		25.00
+
+header CN_SUBJECT_1589		Subject =~ /夫妇/
+score CN_SUBJECT_1589		25.00
+
+header CN_SUBJECT_1590		Subject =~ /白领社区/
+score CN_SUBJECT_1590		25.00
+
+header CN_SUBJECT_1591		Subject =~ /同楼网/
+score CN_SUBJECT_1591		25.00
+
+header CN_SUBJECT_1592		Subject =~ /自考小抄/
+score CN_SUBJECT_1592		25.00
+
+header CN_SUBJECT_1593		Subject =~ /纳米涂料/
+score CN_SUBJECT_1593		25.00
+
+header CN_SUBJECT_1594		Subject =~ /人脉网络/
+score CN_SUBJECT_1594		25.00
+
+header CN_SUBJECT_1595		Subject =~ /长期供应/
+score CN_SUBJECT_1595		25.00
+
+header CN_SUBJECT_1596		Subject =~ /拉链/
+score CN_SUBJECT_1596		25.00
+
+header CN_SUBJECT_1597		Subject =~ /秘籍/
+score CN_SUBJECT_1597		20.00
+
+header CN_SUBJECT_1598		Subject =~ /二手车/
+score CN_SUBJECT_1598		25.00
+
+header CN_SUBJECT_1599		Subject =~ /重点班/
+score CN_SUBJECT_1599		25.00
+
+header CN_SUBJECT_1600		Subject =~ /劳动合同法/
+score CN_SUBJECT_1600		25.00
+
+header CN_SUBJECT_1601		Subject =~ /清单/
+score CN_SUBJECT_1601		2.00
+
+header CN_SUBJECT_1602		Subject =~ /阿帕奇/
+score CN_SUBJECT_1602		25.00
+
+header CN_SUBJECT_1603		Subject =~ /企业黄页/
+score CN_SUBJECT_1603		25.00
+
+header CN_SUBJECT_1604		Subject =~ /比客网/
+score CN_SUBJECT_1604		25.00
+
+header CN_SUBJECT_1605		Subject =~ /衣饰馆/
+score CN_SUBJECT_1605		25.00
+
+header CN_SUBJECT_1606		Subject =~ /跟您交谈/
+score CN_SUBJECT_1606		25.00
+
+header CN_SUBJECT_1607		Subject =~ /跟你交谈/
+score CN_SUBJECT_1607		25.00
+
+header CN_SUBJECT_1608		Subject =~ /全国开班/
+score CN_SUBJECT_1608		25.00
+
+header CN_SUBJECT_1609		Subject =~ /表演队/
+score CN_SUBJECT_1609		25.00
+
+header CN_SUBJECT_1611		Subject =~ /生活馆/
+score CN_SUBJECT_1611		25.00
+
+header CN_SUBJECT_1612		Subject =~ /知己/
+score CN_SUBJECT_1612		25.00
+
+header CN_SUBJECT_1613		Subject =~ /人脸识别/
+score CN_SUBJECT_1613		25.00
+
+header CN_SUBJECT_1614		Subject =~ /高尔夫/
+score CN_SUBJECT_1614		25.00
+
+header CN_SUBJECT_1615		Subject =~ /练习场/
+score CN_SUBJECT_1615		25.00
+
+header CN_SUBJECT_1616		Subject =~ /姑娘/
+score CN_SUBJECT_1616		25.00
+
+header CN_SUBJECT_1617		Subject =~ /吃的煤/
+score CN_SUBJECT_1617		25.00
+
+header CN_SUBJECT_1618		Subject =~ /军犬/
+score CN_SUBJECT_1618		25.00
+
+header CN_SUBJECT_1619		Subject =~ /好狗/
+score CN_SUBJECT_1619		25.00
+
+header CN_SUBJECT_1620		Subject =~ /下辈子/
+score CN_SUBJECT_1620		25.00
+
+header CN_SUBJECT_1621		Subject =~ /喷血/
+score CN_SUBJECT_1621		25.00
+
+header CN_SUBJECT_1622		Subject =~ /面膜/
+score CN_SUBJECT_1622		25.00
+
+header CN_SUBJECT_1623		Subject =~ /营销软件/
+score CN_SUBJECT_1623		25.00
+
+header CN_SUBJECT_1624		Subject =~ /高价急求/
+score CN_SUBJECT_1624		25.00
+
+header CN_SUBJECT_1625		Subject =~ /跑腿快递/
+score CN_SUBJECT_1625		25.00
+
+header CN_SUBJECT_1626		Subject =~ /泰谷咖啡/
+score CN_SUBJECT_1626		25.00
+
+header CN_SUBJECT_1627		Subject =~ /伤心的人/
+score CN_SUBJECT_1627		25.00
+
+header CN_SUBJECT_1628		Subject =~ /情欲交织/
+score CN_SUBJECT_1628		25.00
+
+header CN_SUBJECT_1629		Subject =~ /心理测评/
+score CN_SUBJECT_1629		25.00
+
+header CN_SUBJECT_1630		Subject =~ /心理评测/
+score CN_SUBJECT_1630		25.00
+
+header CN_SUBJECT_1631		Subject =~ /公开课/
+score CN_SUBJECT_1631		25.00
+
+header CN_SUBJECT_1632		Subject =~ /胎教/
+score CN_SUBJECT_1632		25.00
+
+header CN_SUBJECT_1633		Subject =~ /犹太人/
+score CN_SUBJECT_1633		25.00
+
+header CN_SUBJECT_1634		Subject =~ /皮带/
+score CN_SUBJECT_1634		25.00
+
+header CN_SUBJECT_1635		Subject =~ /八项修炼/
+score CN_SUBJECT_1635		25.00
+
+header CN_SUBJECT_1636		Subject =~ /优 秀 的/
+score CN_SUBJECT_1636		25.00
+
+header CN_SUBJECT_1637		Subject =~ /网易贺卡/
+score CN_SUBJECT_1637		25.00
+
+header CN_SUBJECT_1638		Subject =~ /麻纺织/
+score CN_SUBJECT_1638		25.00
+
+header CN_SUBJECT_1639		Subject =~ /天禄网/
+score CN_SUBJECT_1639		25.00
+
+header CN_SUBJECT_1640		Subject =~ /订立技巧/
+score CN_SUBJECT_1640		25.00
+
+header CN_SUBJECT_1641		Subject =~ /应对技巧/
+score CN_SUBJECT_1641		25.00
+
+header CN_SUBJECT_1642		Subject =~ /操作技巧/
+score CN_SUBJECT_1642		25.00
+
+header CN_SUBJECT_1643		Subject =~ /高收入者/
+score CN_SUBJECT_1643		25.00
+
+header CN_SUBJECT_1644		Subject =~ /中收入者/
+score CN_SUBJECT_1644		25.00
+
+header CN_SUBJECT_1645		Subject =~ /低收入者/
+score CN_SUBJECT_1645		25.00
+
+header CN_SUBJECT_1646		Subject =~ /可乐圈/
+score CN_SUBJECT_1646		25.00
+
+header CN_SUBJECT_1647		Subject =~ /青岛啤酒/
+score CN_SUBJECT_1647		25.00
+
+header CN_SUBJECT_1648		Subject =~ /分钟建立/
+score CN_SUBJECT_1648		25.00
+
+header CN_SUBJECT_1649		Subject =~ /非法跳槽/
+score CN_SUBJECT_1649		25.00
+
+header CN_SUBJECT_1650		Subject =~ /柔肌/
+score CN_SUBJECT_1650		25.00
+
+header CN_SUBJECT_1651		Subject =~ /天使加密/
+score CN_SUBJECT_1651		25.00
+
+header CN_SUBJECT_1652		Subject =~ /合法避税/
+score CN_SUBJECT_1652		25.00
+
+header CN_SUBJECT_1653		Subject =~ /课程邀请/
+score CN_SUBJECT_1653		25.00
+
+header CN_SUBJECT_1654		Subject =~ /移民新政策/
+score CN_SUBJECT_1654		25.00
+
+header CN_SUBJECT_1655		Subject =~ /项目招商/
+score CN_SUBJECT_1655		25.00
+
+header CN_SUBJECT_1656		Subject =~ /世易网/
+score CN_SUBJECT_1656		25.00
+
+header CN_SUBJECT_1657		Subject =~ /采招网/
+score CN_SUBJECT_1657		25.00
+
+header CN_SUBJECT_1658		Subject =~ /灵感叮/
+score CN_SUBJECT_1658		25.00
+
+header CN_SUBJECT_1659		Subject =~ /无聊高手/
+score CN_SUBJECT_1659		25.00
+
+header CN_SUBJECT_1660		Subject =~ /粥稀稀/
+score CN_SUBJECT_1660		25.00
+
+header CN_SUBJECT_1661		Subject =~ /蟑螂保险/
+score CN_SUBJECT_1661		25.00
+
+header CN_SUBJECT_1662		Subject =~ /日本MM/
+score CN_SUBJECT_1662		25.00
+
+header CN_SUBJECT_1663		Subject =~ /韩国服饰/
+score CN_SUBJECT_1663		25.00
+
+header CN_SUBJECT_1664		Subject =~ /薪酬战略/
+score CN_SUBJECT_1664		25.00
+
+header CN_SUBJECT_1665		Subject =~ /赢在中国/
+score CN_SUBJECT_1665		25.00
+
+header CN_SUBJECT_1666		Subject =~ /我交友/
+score CN_SUBJECT_1666		25.00
+
+header CN_SUBJECT_1667		Subject =~ /承接：/
+score CN_SUBJECT_1667		25.00
+
+header CN_SUBJECT_1668		Subject =~ /免费电影/
+score CN_SUBJECT_1668		25.00
+
+header CN_SUBJECT_1669		Subject =~ /音响展/
+score CN_SUBJECT_1669		25.00
+
+header CN_SUBJECT_1670		Subject =~ /^代办/
+score CN_SUBJECT_1670		5.00
+
+header CN_SUBJECT_1671		Subject =~ /歌友会/
+score CN_SUBJECT_1671		25.00
+
+header CN_SUBJECT_1672		Subject =~ /地产网/
+score CN_SUBJECT_1672		25.00
+
+header CN_SUBJECT_1673		Subject =~ /韩剧/
+score CN_SUBJECT_1673		25.00
+
+header CN_SUBJECT_1674		Subject =~ /国人交友/
+score CN_SUBJECT_1674		25.00
+
+header CN_SUBJECT_1675		Subject =~ /粉丝/
+score CN_SUBJECT_1675		25.00
+
+header CN_SUBJECT_1676		Subject =~ /大闸蟹/
+score CN_SUBJECT_1676		25.00
+
+header CN_SUBJECT_1677		Subject =~ /课程推荐/
+score CN_SUBJECT_1677		25.00
+
+header CN_SUBJECT_1678		Subject =~ /推荐课程/
+score CN_SUBJECT_1678		25.00
+
+header CN_SUBJECT_1679		Subject =~ /美酒/
+score CN_SUBJECT_1679		25.00
+
+header CN_SUBJECT_1680		Subject =~ /雪茄/
+score CN_SUBJECT_1680		25.00
+
+header CN_SUBJECT_1681		Subject =~ /蔡依琳/
+score CN_SUBJECT_1681		25.00
+
+header CN_SUBJECT_1682		Subject =~ /口语会刊/
+score CN_SUBJECT_1682		25.00
+
+header CN_SUBJECT_1683		Subject =~ /罗曼蒂克/
+score CN_SUBJECT_1683		25.00
+
+header CN_SUBJECT_1684		Subject =~ /大医周刊/
+score CN_SUBJECT_1684		25.00
+
+header CN_SUBJECT_1685		Subject =~ /你照片/
+score CN_SUBJECT_1685		25.00
+
+header CN_SUBJECT_1686		Subject =~ /大海的胸怀/
+score CN_SUBJECT_1686		25.00
+
+header CN_SUBJECT_1687		Subject =~ /选股软件/
+score CN_SUBJECT_1687		25.00
+
+header CN_SUBJECT_1688		Subject =~ /业务票J据/
+score CN_SUBJECT_1688		25.00
+
+header CN_SUBJECT_1689		Subject =~ /印管通/
+score CN_SUBJECT_1689		25.00
+
+header CN_SUBJECT_1690		Subject =~ /嘉达礼品/
+score CN_SUBJECT_1690		25.00
+
+header CN_SUBJECT_1691		Subject =~ /慧源培训/
+score CN_SUBJECT_1691		25.00
+
+header CN_SUBJECT_1692		Subject =~ /培训工作室/
+score CN_SUBJECT_1692		25.00
+
+header CN_SUBJECT_1693		Subject =~ /鞋套机/
+score CN_SUBJECT_1693		25.00
+
+header CN_SUBJECT_1694		Subject =~ /福禄克/
+score CN_SUBJECT_1694		25.00
+
+header CN_SUBJECT_1695		Subject =~ /我操你/
+score CN_SUBJECT_1695		25.00
+
+header CN_SUBJECT_1696		Subject =~ /华人交友/
+score CN_SUBJECT_1696		25.00
+
+header CN_SUBJECT_1697		Subject =~ /锐旗培训/
+score CN_SUBJECT_1697		25.00
+
+header CN_SUBJECT_1698		Subject =~ /班级信息/
+score CN_SUBJECT_1698		25.00
+
+header CN_SUBJECT_1699		Subject =~ /鲜花直销/
+score CN_SUBJECT_1699		25.00
+
+header CN_SUBJECT_1700		Subject =~ /CEO观察/
+score CN_SUBJECT_1700		25.00
+
+header CN_SUBJECT_1701		Subject =~ /百拿网/
+score CN_SUBJECT_1701		25.00
+
+header CN_SUBJECT_1702		Subject =~ /我忘了你/
+score CN_SUBJECT_1702		25.00
+
+header CN_SUBJECT_1703		Subject =~ /爱车生活/
+score CN_SUBJECT_1703		25.00
+
+header CN_SUBJECT_1704		Subject =~ /大小便/
+score CN_SUBJECT_1704		25.00
+
+header CN_SUBJECT_1705		Subject =~ /DISC讲师/
+score CN_SUBJECT_1705		25.00
+
+header CN_SUBJECT_1706		Subject =~ /在线座谈/
+score CN_SUBJECT_1706		25.00
+
+header CN_SUBJECT_1707		Subject =~ /项目灵感/
+score CN_SUBJECT_1707		25.00
+
+header CN_SUBJECT_1708		Subject =~ /实战专家/
+score CN_SUBJECT_1708		25.00
+
+header CN_SUBJECT_1709		Subject =~ /幸福人/
+score CN_SUBJECT_1709		25.00
+
+header CN_SUBJECT_1710		Subject =~ /网站外包/
+score CN_SUBJECT_1710		25.00
+
+header CN_SUBJECT_1711		Subject =~ /沟通技巧/
+score CN_SUBJECT_1711		25.00
+
+header CN_SUBJECT_1712		Subject =~ /乐乐吧/
+score CN_SUBJECT_1712		25.00
+
+header CN_SUBJECT_1713		Subject =~ /岭南商道/
+score CN_SUBJECT_1713		25.00
+
+header CN_SUBJECT_1714		Subject =~ /红包送/
+score CN_SUBJECT_1714		25.00
+
+header CN_SUBJECT_1715		Subject =~ /送红包/
+score CN_SUBJECT_1715		25.00
+
+header CN_SUBJECT_1716		Subject =~ /童年游戏/
+score CN_SUBJECT_1716		25.00
+
+header CN_SUBJECT_1717		Subject =~ /精准营销/
+score CN_SUBJECT_1717		25.00
+
+header CN_SUBJECT_178		Subject =~ /谈判专家/
+score CN_SUBJECT_1718		25.00
+
+header CN_SUBJECT_1719		Subject =~ /乖乖/
+score CN_SUBJECT_1719		25.00
+
+header CN_SUBJECT_1720		Subject =~ /博时资讯/
+score CN_SUBJECT_1720		25.00
+
+header CN_SUBJECT_1721		Subject =~ /会计之声/
+score CN_SUBJECT_1721		25.00
+
+header CN_SUBJECT_1722		Subject =~ /真空泡/
+score CN_SUBJECT_1722		25.00
+
+header CN_SUBJECT_1723		Subject =~ /你的礼物/
+score CN_SUBJECT_1723		25.00
+
+header CN_SUBJECT_1724		Subject =~ /车仆网/
+score CN_SUBJECT_1724		25.00
+
+header CN_SUBJECT_1725		Subject =~ /白领世界/
+score CN_SUBJECT_1725		25.00
+
+header CN_SUBJECT_1726		Subject =~ /特别圣诞/
+score CN_SUBJECT_1726		25.00
+
+header CN_SUBJECT_1727		Subject =~ /特别课程/
+score CN_SUBJECT_1727		25.00
+
+header CN_SUBJECT_1728		Subject =~ /私奔为爱/
+score CN_SUBJECT_1728		25.00
+
+header CN_SUBJECT_1729		Subject =~ /营养健康/
+score CN_SUBJECT_1729		25.00
+
+header CN_SUBJECT_1730		Subject =~ /女人味/
+score CN_SUBJECT_1730		25.00
+
+header CN_SUBJECT_1731		Subject =~ /福寿连连/
+score CN_SUBJECT_1731		25.00
+
+header CN_SUBJECT_1732		Subject =~ /在家创业/
+score CN_SUBJECT_1732		25.00
+
+header CN_SUBJECT_1733		Subject =~ /电话充值/
+score CN_SUBJECT_1733		25.00
+
+header CN_SUBJECT_1734		Subject =~ /充值免费/
+score CN_SUBJECT_1734		25.00
+
+header CN_SUBJECT_1735		Subject =~ /发.票/
+score CN_SUBJECT_1735		25.00
+
+header CN_SUBJECT_1736		Subject =~ /龙讯网/
+score CN_SUBJECT_1736		25.00
+
+header CN_SUBJECT_1737		Subject =~ /佳购网/
+score CN_SUBJECT_1737		25.00
+
+header CN_SUBJECT_1738		Subject =~ /华陌网/
+score CN_SUBJECT_1738		25.00
+
+header CN_SUBJECT_1739		Subject =~ /购房者/
+score CN_SUBJECT_1739		25.00
+
+header CN_SUBJECT_1740		Subject =~ /太子乐/
+score CN_SUBJECT_1740		25.00
+
+header CN_SUBJECT_1741		Subject =~ /娃娃/
+score CN_SUBJECT_1741		10.00
+
+header CN_SUBJECT_1742		Subject =~ /PP秀/
+score CN_SUBJECT_1742		25.00
+
+header CN_SUBJECT_1743		Subject =~ /中国聘网/
+score CN_SUBJECT_1743		25.00
+
+header CN_SUBJECT_1744		Subject =~ /点点通/
+score CN_SUBJECT_1744		25.00
+
+header CN_SUBJECT_1745		Subject =~ /华陌网/
+score CN_SUBJECT_1745		25.00
+
+header CN_SUBJECT_1746		Subject =~ /娃娃秀/
+score CN_SUBJECT_1746		25.00
+
+header CN_SUBJECT_1747		Subject =~ /名表专卖/
+score CN_SUBJECT_1747		25.00
+
+header CN_SUBJECT_1748		Subject =~ /卖名片/
+score CN_SUBJECT_1748		25.00
+
+header CN_SUBJECT_1749		Subject =~ /旅行社/
+score CN_SUBJECT_1749		25.00
+
+header CN_SUBJECT_1750		Subject =~ /代理票务/
+score CN_SUBJECT_1750		25.00
+
+header CN_SUBJECT_1751		Subject =~ /无码光碟/
+score CN_SUBJECT_1751		25.00
+
+header CN_SUBJECT_1752		Subject =~ /有码光碟/
+score CN_SUBJECT_1752		25.00
+
+header CN_SUBJECT_1753		Subject =~ /闹钟/
+score CN_SUBJECT_1753		25.00
+
+header CN_SUBJECT_1754		Subject =~ /移民商务/
+score CN_SUBJECT_1754		25.00
+
+header CN_SUBJECT_1755		Subject =~ /商务考察/
+score CN_SUBJECT_1755		25.00
+
+header CN_SUBJECT_1756		Subject =~ /创业良机/
+score CN_SUBJECT_1756		25.00
+
+header CN_SUBJECT_1757		Subject =~ /资本运作/
+score CN_SUBJECT_1757		25.00
+
+header CN_SUBJECT_1758		Subject =~ /代办税票/
+score CN_SUBJECT_1758		25.00
+
+header CN_SUBJECT_1759		Subject =~ /婚恋/
+score CN_SUBJECT_1759		25.00
+
+header CN_SUBJECT_1760		Subject =~ /桃乐丝/
+score CN_SUBJECT_1760		25.00
+
+header CN_SUBJECT_1761		Subject =~ /杰凯策划/
+score CN_SUBJECT_1761		25.00
+
+header CN_SUBJECT_1762		Subject =~ /套牌车/
+score CN_SUBJECT_1762		25.00
+
+header CN_SUBJECT_1763		Subject =~ /债务网/
+score CN_SUBJECT_1763		25.00
+
+header CN_SUBJECT_1764		Subject =~ /脸庞/
+score CN_SUBJECT_1764		15.00
+
+header CN_SUBJECT_1765		Subject =~ /功夫世界/
+score CN_SUBJECT_1765		25.00
+
+header CN_SUBJECT_1766		Subject =~ /400电话/
+score CN_SUBJECT_1766		10.00
+
+header CN_SUBJECT_1767		Subject =~ /麦当劳/
+score CN_SUBJECT_1767		20.00
+
+header CN_SUBJECT_1768		Subject =~ /肯德基/
+score CN_SUBJECT_1768		20.00
+
+header CN_SUBJECT_1769		Subject =~ /优惠券/
+score CN_SUBJECT_1769		10.00
+
+header CN_SUBJECT_1770		Subject =~ /玉米酷/
+score CN_SUBJECT_1770		25.00
+
+header CN_SUBJECT_1771		Subject =~ /贴心礼券/
+score CN_SUBJECT_1771		25.00
+
+header CN_SUBJECT_1772		Subject =~ /MOTO一族/
+score CN_SUBJECT_1772		25.00
+
+header CN_SUBJECT_1773		Subject =~ /存储宝箱/
+score CN_SUBJECT_1773		25.00
+
+header CN_SUBJECT_1774		Subject =~ /约稿函/
+score CN_SUBJECT_1774		25.00
+
+header CN_SUBJECT_1775		Subject =~ /免费索取/
+score CN_SUBJECT_1775		25.00
+
+header CN_SUBJECT_1776		Subject =~ /供应各种/
+score CN_SUBJECT_1776		25.00
+
+header CN_SUBJECT_1777		Subject =~ /太阳镜/
+score CN_SUBJECT_1777		25.00
+
+header CN_SUBJECT_1778		Subject =~ /育儿必看/
+score CN_SUBJECT_1778		25.00
+
+header CN_SUBJECT_1779		Subject =~ /全新上市/
+score CN_SUBJECT_1779		10.00
+
+header CN_SUBJECT_1780		Subject =~ /合作愉快/
+score CN_SUBJECT_1780		10.00
+
+header CN_SUBJECT_1781		Subject =~ /源代码/
+score CN_SUBJECT_1781		10.00
+
+header CN_SUBJECT_1782		Subject =~ /合作愉快/
+score CN_SUBJECT_1782		10.00
+
+header CN_SUBJECT_1783		Subject =~ /网上书店/
+score CN_SUBJECT_1783		10.00
+
+header CN_SUBJECT_1784		Subject =~ /阿咪网/
+score CN_SUBJECT_1784		25.00
+
+header CN_SUBJECT_1785		Subject =~ /学生书店/
+score CN_SUBJECT_1785		10.00
+
+header CN_SUBJECT_1786		Subject =~ /生意联系/
+score CN_SUBJECT_1786		10.00
+
+header CN_SUBJECT_1787		Subject =~ /若比邻/
+score CN_SUBJECT_1787		25.00
+
+header CN_SUBJECT_1788		Subject =~ /外教英语/
+score CN_SUBJECT_1788		25.00
+
+header CN_SUBJECT_1789		Subject =~ /免费体验/
+score CN_SUBJECT_1789		25.00
+
+header CN_SUBJECT_1790		Subject =~ /绩效考核/
+score CN_SUBJECT_1790		10.00
+
+header CN_SUBJECT_1791		Subject =~ /绩效管理/
+score CN_SUBJECT_1791		10.00
+
+header CN_SUBJECT_1792		Subject =~ /练口语/
+score CN_SUBJECT_1792		25.00
+
+header CN_SUBJECT_1793		Subject =~ /控制生产/
+score CN_SUBJECT_1793		5.00
+
+header CN_SUBJECT_1794		Subject =~ /生产成本/
+score CN_SUBJECT_1794		5.00
+
+header CN_SUBJECT_1795		Subject =~ /车间难点/
+score CN_SUBJECT_1795		8.00
+
+header CN_SUBJECT_1796		Subject =~ /难点问题/
+score CN_SUBJECT_1796		5.00
+
+header CN_SUBJECT_1797		Subject =~ /共享车间/
+score CN_SUBJECT_1797		25.00
+
+header CN_SUBJECT_1798		Subject =~ /车间管理/
+score CN_SUBJECT_1798		8.00
+
+header CN_SUBJECT_1799		Subject =~ /鼠虫防治/
+score CN_SUBJECT_1799		25.00
+
+header CN_SUBJECT_1800		Subject =~ /灭鼠/
+score CN_SUBJECT_1800		5.00
+
+header CN_SUBJECT_1801		Subject =~ /杀蟑螂/
+score CN_SUBJECT_1801		5.00
+
+header CN_SUBJECT_1802		Subject =~ /白药/
+score CN_SUBJECT_1802		10.00
+
+header CN_SUBJECT_1803		Subject =~ /创可贴/
+score CN_SUBJECT_1803		25.00
+
+header CN_SUBJECT_1804		Subject =~ /邦迪/
+score CN_SUBJECT_1804		5.00
+
+header CN_SUBJECT_1805		Subject =~ /诚邀参展/
+score CN_SUBJECT_1805		10.00
+
+header CN_SUBJECT_1806		Subject =~ /建站/
+score CN_SUBJECT_1806		3.00
+
+header CN_SUBJECT_1807		Subject =~ /前景调查/
+score CN_SUBJECT_1807		5.00
+
+header CN_SUBJECT_1808		Subject =~ /丝路/
+score CN_SUBJECT_1808		5.00
+
+header CN_SUBJECT_1809		Subject =~ /A片/
+score CN_SUBJECT_1809		10.00
+
+header CN_SUBJECT_1810		Subject =~ /毛片/
+score CN_SUBJECT_1810		10.00
+
+header CN_SUBJECT_1811		Subject =~ /求购/
+score CN_SUBJECT_1811		1.50
+
+header CN_SUBJECT_1812		Subject =~ /新时代/
+score CN_SUBJECT_1812		3.00
+
+header CN_SUBJECT_1813		Subject =~ /网校/
+score CN_SUBJECT_1813		3.00
+
+header CN_SUBJECT_1814		Subject =~ /群发/
+score CN_SUBJECT_1814		3.00
+
+header CN_SUBJECT_1815		Subject =~ /特价/
+score CN_SUBJECT_1815		1.50
+
+header CN_SUBJECT_1816		Subject =~ /考核与激励/
+score CN_SUBJECT_1816		10.00
+
+header CN_SUBJECT_1817		Subject =~ /本期总量/
+score CN_SUBJECT_1817		5.00
+
+header CN_SUBJECT_1818		Subject =~ /得醇可口/
+score CN_SUBJECT_1818		25.00
+
+header CN_SUBJECT_1819		Subject =~ /机械展览/
+score CN_SUBJECT_1819		25.00
+
+header CN_SUBJECT_1820		Subject =~ /社会调查/
+score CN_SUBJECT_1820		25.00
+
+header CN_SUBJECT_1821		Subject =~ /搜集内容/
+score CN_SUBJECT_1821		10.00
+
+header CN_SUBJECT_1822		Subject =~ /情报分析/
+score CN_SUBJECT_1822		10.00
+
+header CN_SUBJECT_1823		Subject =~ /情报搜集/
+score CN_SUBJECT_1823		10.00
+
+header CN_SUBJECT_1824		Subject =~ /育儿视频/
+score CN_SUBJECT_1824		25.00
+
+header CN_SUBJECT_1825		Subject =~ /洋垃圾/
+score CN_SUBJECT_1825		25.00
+
+header CN_SUBJECT_1826		Subject =~ /亿邮件/
+score CN_SUBJECT_1826		25.00
+
+header CN_SUBJECT_1827		Subject =~ /营销群发/
+score CN_SUBJECT_1827		25.00
+
+header CN_SUBJECT_1828		Subject =~ /心-理/
+score CN_SUBJECT_1828		25.00
+
+header CN_SUBJECT_1829		Subject =~ /心 理/
+score CN_SUBJECT_1829		10.00
+
+header CN_SUBJECT_1830		Subject =~ /咨-询/
+score CN_SUBJECT_1830		25.00
+
+header CN_SUBJECT_1831		Subject =~ /咨 询/
+score CN_SUBJECT_1831		5.00
+
+header CN_SUBJECT_1832		Subject =~ /管-理/
+score CN_SUBJECT_1832		10.00
+
+header CN_SUBJECT_1833		Subject =~ /管 理/
+score CN_SUBJECT_1833		5.00
+
+header CN_SUBJECT_1834		Subject =~ /企-业/
+score CN_SUBJECT_1834		10.00
+
+header CN_SUBJECT_1835		Subject =~ /企 业/
+score CN_SUBJECT_1835		5.00
+
+header CN_SUBJECT_1836		Subject =~ /涉-外/
+score CN_SUBJECT_1836		10.00
+
+header CN_SUBJECT_1837		Subject =~ /涉 外/
+score CN_SUBJECT_1837		5.00
+
+header CN_SUBJECT_1838		Subject =~ /税-收/
+score CN_SUBJECT_1838		10.00
+
+header CN_SUBJECT_1839		Subject =~ /税 收/
+score CN_SUBJECT_1839		5.00
+
+header CN_SUBJECT_1840		Subject =~ /筹-划/
+score CN_SUBJECT_1840		10.00
+
+header CN_SUBJECT_1841		Subject =~ /筹 划/
+score CN_SUBJECT_1841		5.00
+
+header CN_SUBJECT_1842		Subject =~ /夏令营/
+score CN_SUBJECT_1842		15.00
+
+header CN_SUBJECT_1843		Subject =~ /经典课程/
+score CN_SUBJECT_1843		25.00
+
+header CN_SUBJECT_1844		Subject =~ /艺术品/
+score CN_SUBJECT_1844		10.00
+
+header CN_SUBJECT_1845		Subject =~ /IT外包/
+score CN_SUBJECT_1845		25.00
+
+header CN_SUBJECT_1846		Subject =~ /外包服务/
+score CN_SUBJECT_1846		5.00
+
+header CN_SUBJECT_1847		Subject =~ /智能建筑/
+score CN_SUBJECT_1847		25.00
+
+header CN_SUBJECT_1848		Subject =~ /建筑展/
+score CN_SUBJECT_1848		25.00
+
+header CN_SUBJECT_1849		Subject =~ /修-炼/
+score CN_SUBJECT_1849		25.00
+
+header CN_SUBJECT_1850		Subject =~ /修 炼/
+score CN_SUBJECT_1850		25.00
+
+header CN_SUBJECT_1851		Subject =~ /修炼/
+score CN_SUBJECT_1851		10.00
+
+header CN_SUBJECT_1852		Subject =~ /本期总量为.{0,8}份/
+describe CN_SUBJECT_1852	Subject "本期总量为XXXX份"
+score CN_SUBJECT_1852		25.00
+
+header CN_SUBJECT_1853		Subject =~ /人工的/
+score CN_SUBJECT_1853		10.00
+
+header CN_SUBJECT_1854		Subject =~ /牛仔裤/
+score CN_SUBJECT_1854		25.00
+
+header CN_SUBJECT_1855		Subject =~ /玩 命 干/
+score CN_SUBJECT_1855		25.00
+
+header CN_SUBJECT_1856		Subject =~ /喀嚓网/
+score CN_SUBJECT_1856		25.00
+
+header CN_SUBJECT_1857		Subject =~ /钨钴合金/
+score CN_SUBJECT_1857		25.00
+
+header CN_SUBJECT_1858		Subject =~ /贸易通/
+score CN_SUBJECT_1858		10.00
+
+header CN_SUBJECT_1859		Subject =~ /白皮书/
+score CN_SUBJECT_1859		10.00
+
+header CN_SUBJECT_1860		Subject =~ /敏捷性/
+score CN_SUBJECT_1860		10.00
+
+header CN_SUBJECT_1861		Subject =~ /免联考/
+score CN_SUBJECT_1861		25.00
+
+header CN_SUBJECT_1862		Subject =~ /在职MBA/
+score CN_SUBJECT_1862		10.00
+
+header CN_SUBJECT_1863		Subject =~ /好.东东/
+score CN_SUBJECT_1863		25.00
+
+header CN_SUBJECT_1864		Subject =~ /数据营销/
+score CN_SUBJECT_1864		25.00
+
+header CN_SUBJECT_1865		Subject =~ /欧锦赛/
+score CN_SUBJECT_1865		25.00
+
+header CN_SUBJECT_1866		Subject =~ /裸照/
+score CN_SUBJECT_1866		25.00
+
+header CN_SUBJECT_1867		Subject =~ /爆米花/
+score CN_SUBJECT_1867		25.00
+
+header CN_SUBJECT_1868		Subject =~ /五星级秘书/
+score CN_SUBJECT_1868		25.00
+
+header CN_SUBJECT_1869		Subject =~ /助理提升/
+score CN_SUBJECT_1869		25.00
+
+header CN_SUBJECT_1870		Subject =~ /薪资设计/
+score CN_SUBJECT_1870		25.00
+
+header CN_SUBJECT_1871		Subject =~ /财务思维/
+score CN_SUBJECT_1871		25.00
+
+header CN_SUBJECT_1872		Subject =~ /超值奖励/
+score CN_SUBJECT_1872		25.00
+
+header CN_SUBJECT_1873		Subject =~ /网上调查/
+score CN_SUBJECT_1873		25.00
+
+header CN_SUBJECT_1874		Subject =~ /在线吗/
+score CN_SUBJECT_1874		25.00
+
+header CN_SUBJECT_1875		Subject =~ /企业·/
+score CN_SUBJECT_1875		25.00
+
+header CN_SUBJECT_1876		Subject =~ /·成本/
+score CN_SUBJECT_1876		25.00
+
+header CN_SUBJECT_1877		Subject =~ /经营·/
+score CN_SUBJECT_1877		25.00
+
+header CN_SUBJECT_1878		Subject =~ /·绩效/
+score CN_SUBJECT_1878		25.00
+
+header CN_SUBJECT_1879		Subject =~ /Re:决策者/
+score CN_SUBJECT_1879		25.00
+
+header CN_SUBJECT_1880		Subject =~ /决策者/
+score CN_SUBJECT_1880		15.00
+
+header CN_SUBJECT_1881		Subject =~ /现金券/
+score CN_SUBJECT_1881		25.00
+
+header CN_SUBJECT_1882		Subject =~ /企业形象/
+score CN_SUBJECT_1882		5.00
+
+header CN_SUBJECT_1883		Subject =~ /影友/
+score CN_SUBJECT_1883		10.00
+
+header CN_SUBJECT_1884		Subject =~ /公开信/
+score CN_SUBJECT_1884		10.00
+
+header CN_SUBJECT_1885		Subject =~ /管理师/
+score CN_SUBJECT_1885		5.00
+
+header CN_SUBJECT_1886		Subject =~ /现代*/
+score CN_SUBJECT_1886		25.00
+
+header CN_SUBJECT_1887		Subject =~ /位阅读/
+score CN_SUBJECT_1887		25.00
+
+header CN_SUBJECT_1888		Subject =~ /绩V效/
+score CN_SUBJECT_1888		25.00
+
+header CN_SUBJECT_1889		Subject =~ /产地证/
+score CN_SUBJECT_1889		5.00
+
+header CN_SUBJECT_1890		Subject =~ /研-讨/
+score CN_SUBJECT_1890		10.00
+
+header CN_SUBJECT_1891		Subject =~ /大眼阅世/
+score CN_SUBJECT_1891		25.00
+
+header CN_SUBJECT_1892		Subject =~ /购物券/
+score CN_SUBJECT_1892		10.00
+
+header CN_SUBJECT_1893		Subject =~ /系统绩效/
+score CN_SUBJECT_1893		15.00
+
+header CN_SUBJECT_1894		Subject =~ /绩效战略/
+score CN_SUBJECT_1894		15.00
+
+header CN_SUBJECT_1895		Subject =~ /心跳加速/
+score CN_SUBJECT_1895		25.00
+
+header CN_SUBJECT_1896		Subject =~ /高级讲师/
+score CN_SUBJECT_1896		25.00
+
+header CN_SUBJECT_1897		Subject =~ /任你选/
+score CN_SUBJECT_1897		10.00
+
+header CN_SUBJECT_1898		Subject =~ /加 我 QQ/
+score CN_SUBJECT_1898		25.00
+
+header CN_SUBJECT_1899		Subject =~ /上网即批/
+score CN_SUBJECT_1899		10.00
+
+header CN_SUBJECT_1900		Subject =~ /批量发送/
+score CN_SUBJECT_1900		5.00
+
+header CN_SUBJECT_1901		Subject =~ /注塑缺陷/
+score CN_SUBJECT_1901		5.00
+
+header CN_SUBJECT_1902		Subject =~ /最近动向/
+score CN_SUBJECT_1902		5.00
+
+header CN_SUBJECT_1903		Subject =~ /密切观注/
+score CN_SUBJECT_1903		5.00
+
+header CN_SUBJECT_1904		Subject =~ /对症下药/
+score CN_SUBJECT_1904		25.00
+
+header CN_SUBJECT_1905		Subject =~ /集团电话/
+score CN_SUBJECT_1905		10.00
+
+header CN_SUBJECT_1906		Subject =~ /申瓯多/
+score CN_SUBJECT_1906		25.00
+
+header CN_SUBJECT_1907		Subject =~ /恋 爱/
+score CN_SUBJECT_1907		25.00
+
+header CN_SUBJECT_1908		Subject =~ /客 户/
+score CN_SUBJECT_1908		5.00
+
+header CN_SUBJECT_1909		Subject =~ /海外市场/
+score CN_SUBJECT_1909		5.00
+
+header CN_SUBJECT_1910		Subject =~ /趋势解析/
+score CN_SUBJECT_1910		10.00
+
+header CN_SUBJECT_1911		Subject =~ /电视播客/
+score CN_SUBJECT_1911		25.00
+
+header CN_SUBJECT_1912		Subject =~ /一场硬仗/
+score CN_SUBJECT_1912		10.00
+
+header CN_SUBJECT_1913		Subject =~ /政策解读/
+score CN_SUBJECT_1913		10.00
+
+header CN_SUBJECT_1914		Subject =~ /海外营销/
+score CN_SUBJECT_1914		10.00
+
+header CN_SUBJECT_1915		Subject =~ /信用卡套现/
+score CN_SUBJECT_1915		25.00
+
+header CN_SUBJECT_1916		Subject =~ /医保卡套现/
+score CN_SUBJECT_1916		25.00
+
+header CN_SUBJECT_1917		Subject =~ /上网即可/
+score CN_SUBJECT_1917		10.00
+
+header CN_SUBJECT_1918		Subject =~ /批量发传真/
+score CN_SUBJECT_1918		10.00
+
+header CN_SUBJECT_1919		Subject =~ /印刷画册/
+score CN_SUBJECT_1919		10.00
+
+header CN_SUBJECT_1920		Subject =~ /规避策略/
+score CN_SUBJECT_1920		25.00
+
+header CN_SUBJECT_1921		Subject =~ /用工风险/
+score CN_SUBJECT_1921		25.00
+
+header CN_SUBJECT_1922		Subject =~ /销售精英/
+score CN_SUBJECT_1922		15.00
+
+header CN_SUBJECT_1923		Subject =~ /开A票/
+score CN_SUBJECT_1923		25.00
+
+header CN_SUBJECT_1924		Subject =~ /普W通商品票/
+score CN_SUBJECT_1924		25.00
+
+header CN_SUBJECT_1925		Subject =~ /降低§/
+score CN_SUBJECT_1925		25.00
+
+header CN_SUBJECT_1926		Subject =~ /§采购/
+score CN_SUBJECT_1926		25.00
+
+header CN_SUBJECT_1927		Subject =~ /数字学/
+score CN_SUBJECT_1927		25.00
+
+header CN_SUBJECT_1928		Subject =~ /财务管理/
+score CN_SUBJECT_1928		10.00
+
+header CN_SUBJECT_1929		Subject =~ /你终于/
+score CN_SUBJECT_1929		10.00
+
+header CN_SUBJECT_1930		Subject =~ /您终于/
+score CN_SUBJECT_1930		10.00
+
+header CN_SUBJECT_1931		Subject =~ /的动力/
+score CN_SUBJECT_1931		10.00
+
+header CN_SUBJECT_1932		Subject =~ /的潜力/
+score CN_SUBJECT_1932		10.00
+
+header CN_SUBJECT_1933		Subject =~ /热血沸腾/
+score CN_SUBJECT_1933		25.00
+
+header CN_SUBJECT_1934		Subject =~ /建*筑/
+score CN_SUBJECT_1934		25.00
+
+header CN_SUBJECT_1935		Subject =~ /发*票/
+score CN_SUBJECT_1935		25.00
+
+header CN_SUBJECT_1936		Subject =~ /销售∝团队/
+score CN_SUBJECT_1936		25.00
+
+header CN_SUBJECT_1937		Subject =~ /专A业/
+score CN_SUBJECT_1937		5.00
+
+header CN_SUBJECT_1938		Subject =~ /网A站/
+score CN_SUBJECT_1938		5.00
+
+header CN_SUBJECT_1939		Subject =~ /建A设/
+score CN_SUBJECT_1939		5.00
+
+header CN_SUBJECT_1940		Subject =~ /企业名录/
+score CN_SUBJECT_1940		25.00
+
+header CN_SUBJECT_1941		Subject =~ /名录大全/
+score CN_SUBJECT_1941		25.00
+
+header CN_SUBJECT_1942		Subject =~ /发·票/
+score CN_SUBJECT_1942		25.00
+
+header CN_SUBJECT_1943		Subject =~ /MBA招生/
+score CN_SUBJECT_1943		25.00
+
+header CN_SUBJECT_1944		Subject =~ /旺商通/
+score CN_SUBJECT_1944		25.00
+
+header CN_SUBJECT_1945		Subject =~ /靓号抢注/
+score CN_SUBJECT_1945		25.00
+
+header CN_SUBJECT_1946		Subject =~ /火热招商/
+score CN_SUBJECT_1946		25.00
+
+header CN_SUBJECT_1947		Subject =~ /照片共享/
+score CN_SUBJECT_1947		5.00
+
+header CN_SUBJECT_1948		Subject =~ /高峰会议/
+score CN_SUBJECT_1948		10.00
+
+header CN_SUBJECT_1949		Subject =~ /EI检索/
+score CN_SUBJECT_1949		10.00
+
+header CN_SUBJECT_1950		Subject =~ /商贸界/
+score CN_SUBJECT_1950		10.00
+
+header CN_SUBJECT_1951		Subject =~ /睡裙/
+score CN_SUBJECT_1951		25.00
+
+header CN_SUBJECT_1952		Subject =~ /睡衣/
+score CN_SUBJECT_1952		25.00
+
+header CN_SUBJECT_1953		Subject =~ /睡服/
+score CN_SUBJECT_1953		25.00
+
+header CN_SUBJECT_1954		Subject =~ /制作技巧/
+score CN_SUBJECT_1954		10.00
+
+header CN_SUBJECT_1955		Subject =~ /制表技巧/
+score CN_SUBJECT_1955		10.00
+
+header CN_SUBJECT_1956		Subject =~ /图表制作/
+score CN_SUBJECT_1956		10.00
+
+header CN_SUBJECT_1957		Subject =~ /关税的规避/
+score CN_SUBJECT_1957		25.00
+
+header CN_SUBJECT_1958		Subject =~ /执行官认证/
+score CN_SUBJECT_1958		25.00
+
+header CN_SUBJECT_1959		Subject =~ /美国ACI/
+score CN_SUBJECT_1959		25.00
+
+header CN_SUBJECT_1960		Subject =~ /骇人听闻/
+score CN_SUBJECT_1960		25.00
+
+header CN_SUBJECT_1961		Subject =~ /OL新款/
+score CN_SUBJECT_1961		25.00
+
+header CN_SUBJECT_1962		Subject =~ /新款夏装/
+score CN_SUBJECT_1962		25.00
+
+header CN_SUBJECT_1963		Subject =~ /明德丝印/
+score CN_SUBJECT_1963		25.00
+
+header CN_SUBJECT_1964		Subject =~ /莞尔一笑/
+score CN_SUBJECT_1964		25.00
+
+header CN_SUBJECT_1965		Subject =~ /多维分析/
+score CN_SUBJECT_1965		25.00
+
+header CN_SUBJECT_1966		Subject =~ /数据的分级/
+score CN_SUBJECT_1966		25.00
+
+header CN_SUBJECT_1967		Subject =~ /境内运用/
+score CN_SUBJECT_1967		25.00
+
+header CN_SUBJECT_1968		Subject =~ /反避税/
+score CN_SUBJECT_1968		25.00
+
+header CN_SUBJECT_1969		Subject =~ /心仪的对象/
+score CN_SUBJECT_1969		25.00
+
+header CN_SUBJECT_1970		Subject =~ /设备管理/
+score CN_SUBJECT_1970		5.00
+
+header CN_SUBJECT_1971		Subject =~ /保税物流/
+score CN_SUBJECT_1971		5.00
+
+header CN_SUBJECT_1972		Subject =~ /人和网/
+score CN_SUBJECT_1972		25.0
+
+header CN_SUBJECT_1973		Subject =~ /小帖士/
+score CN_SUBJECT_1973		25.0
+
+header CN_SUBJECT_1974		Subject =~ /发展实战/
+score CN_SUBJECT_1974		25.0
+
+header CN_SUBJECT_1975		Subject =~ /专业秘书/
+score CN_SUBJECT_1975		25.0
+
+header CN_SUBJECT_1976		Subject =~ /核心管理/
+score CN_SUBJECT_1976		25.0
+
+header CN_SUBJECT_1977		Subject =~ /优化销售/
+score CN_SUBJECT_1977		25.0
+
+header CN_SUBJECT_9918		Subject =~ /供应链/
+score CN_SUBJECT_9918		5.00
+
+header CN_SUBJECT_9919		Subject =~ /核心/
+score CN_SUBJECT_9919		3.00
+
+header CN_SUBJECT_9920		Subject =~ /人事部/
+score CN_SUBJECT_9920		5.00
+
+header CN_SUBJECT_9921		Subject =~ /福娃/
+score CN_SUBJECT_9921		5.00
+
+header CN_SUBJECT_9922		Subject =~ /实战/
+score CN_SUBJECT_9922		3.00
+
+header CN_SUBJECT_9923		Subject =~ /提升/
+score CN_SUBJECT_9923		3.00
+
+header CN_SUBJECT_9924		Subject =~ /消暑/
+score CN_SUBJECT_9924		5.00
+
+header CN_SUBJECT_9925		Subject =~ /新款/
+score CN_SUBJECT_9925		2.00
+
+header CN_SUBJECT_9926		Subject =~ /秘诀/
+score CN_SUBJECT_9926		3.00
+
+header CN_SUBJECT_9927		Subject =~ /信托/
+score CN_SUBJECT_9927		3.00
+
+header CN_SUBJECT_9928		Subject =~ /技巧/
+score CN_SUBJECT_9928		3.00
+
+header CN_SUBJECT_9929		Subject =~ /时尚/
+score CN_SUBJECT_9929		3.00
+
+header CN_SUBJECT_9930		Subject =~ /征展/
+score CN_SUBJECT_9930		3.00
+
+header CN_SUBJECT_9931		Subject =~ /征稿/
+score CN_SUBJECT_9931		3.00
+
+header CN_SUBJECT_9932		Subject =~ /邀请/
+score CN_SUBJECT_9932		3.00
+
+header CN_SUBJECT_9933		Subject =~ /沙龙/
+score CN_SUBJECT_9933		3.00
+
+header CN_SUBJECT_9934		Subject =~ /精彩/
+score CN_SUBJECT_9934		3.00
+
+header CN_SUBJECT_9935		Subject =~ /火热/
+score CN_SUBJECT_9935		5.00
+
+header CN_SUBJECT_9936		Subject =~ /招商/
+score CN_SUBJECT_9936		5.00
+
+header CN_SUBJECT_9937		Subject =~ /抢注/
+score CN_SUBJECT_9937		5.00
+
+header CN_SUBJECT_9938		Subject =~ /靓号/
+score CN_SUBJECT_9938		6.00
+
+header CN_SUBJECT_9839		Subject =~ /沸腾/
+score CN_SUBJECT_9839		3.00
+
+header CN_SUBJECT_9840		Subject =~ /潜力/
+score CN_SUBJECT_9840		3.00
+
+header CN_SUBJECT_9841		Subject =~ /动力/
+score CN_SUBJECT_9841		3.00
+
+header CN_SUBJECT_9842		Subject =~ /热血/
+score CN_SUBJECT_9842		5.00
+
+header CN_SUBJECT_9843		Subject =~ /创业/
+score CN_SUBJECT_9843		5.00
+
+header CN_SUBJECT_9844		Subject =~ /画册/
+score CN_SUBJECT_9844		5.00
+
+header CN_SUBJECT_9845		Subject =~ /精英/
+score CN_SUBJECT_9845		5.00
+
+header CN_SUBJECT_9846		Subject =~ /套现/
+score CN_SUBJECT_9846		5.00
+
+header CN_SUBJECT_9847		Subject =~ /海外/
+score CN_SUBJECT_9847		2.00
+
+header CN_SUBJECT_9848		Subject =~ /政策/
+score CN_SUBJECT_9848		2.00
+
+header CN_SUBJECT_9849		Subject =~ /贸易/
+score CN_SUBJECT_9849		2.00
+
+header CN_SUBJECT_9850		Subject =~ /硬仗/
+score CN_SUBJECT_9850		5.00
+
+header CN_SUBJECT_9851		Subject =~ /海外/
+score CN_SUBJECT_9851		3.00
+
+header CN_SUBJECT_9852		Subject =~ /市场/
+score CN_SUBJECT_9852		2.00
+
+header CN_SUBJECT_9853		Subject =~ /播客/
+score CN_SUBJECT_9853		5.00
+
+header CN_SUBJECT_9854		Subject =~ /电话/
+score CN_SUBJECT_9854		2.00
+
+header CN_SUBJECT_9855		Subject =~ /肥胖/
+score CN_SUBJECT_9855		5.00
+
+header CN_SUBJECT_9856		Subject =~ /集团/
+score CN_SUBJECT_9856		2.00
+
+header CN_SUBJECT_9857		Subject =~ /技能/
+score CN_SUBJECT_9857		5.00
+
+header CN_SUBJECT_9858		Subject =~ /你的/
+score CN_SUBJECT_9858		3.00
+
+header CN_SUBJECT_9859		Subject =~ /您的/
+score CN_SUBJECT_9859		3.00
+
+header CN_SUBJECT_9860		Subject =~ /下药/
+score CN_SUBJECT_9860		10.00
+
+header CN_SUBJECT_9861		Subject =~ /烦恼/
+score CN_SUBJECT_9861		5.00
+
+header CN_SUBJECT_9862		Subject =~ /心跳/
+score CN_SUBJECT_9862		5.00
+
+header CN_SUBJECT_9863		Subject =~ /魅力/
+score CN_SUBJECT_9863		5.00
+
+header CN_SUBJECT_9864		Subject =~ /口才/
+score CN_SUBJECT_9864		5.00
+
+header CN_SUBJECT_9865		Subject =~ /讲师/
+score CN_SUBJECT_9865		5.00
+
+header CN_SUBJECT_9866		Subject =~ /购物/
+score CN_SUBJECT_9866		3.00
+
+header CN_SUBJECT_9867		Subject =~ /缺陷/
+score CN_SUBJECT_9867		5.00
+
+header CN_SUBJECT_9868		Subject =~ /观注/
+score CN_SUBJECT_9868		5.00
+
+header CN_SUBJECT_9869		Subject =~ /大眼/
+score CN_SUBJECT_9869		5.00
+
+header CN_SUBJECT_9870		Subject =~ /大眼/
+score CN_SUBJECT_9870		5.00
+
+header CN_SUBJECT_9871		Subject =~ /赢取/
+score CN_SUBJECT_9871		5.00
+
+header CN_SUBJECT_9872		Subject =~ /形象/
+score CN_SUBJECT_9872		2.00
+
+header CN_SUBJECT_9873		Subject =~ /推广/
+score CN_SUBJECT_9873		2.00
+
+header CN_SUBJECT_9874		Subject =~ /生 产/
+score CN_SUBJECT_9874		5.00
+
+header CN_SUBJECT_9875		Subject =~ /计 划/
+score CN_SUBJECT_9875		5.00
+
+header CN_SUBJECT_9876		Subject =~ /物 料/
+score CN_SUBJECT_9876		5.00
+
+header CN_SUBJECT_9877		Subject =~ /控 制/
+score CN_SUBJECT_9877		5.00
+
+header CN_SUBJECT_9878		Subject =~ /奖励/
+score CN_SUBJECT_9878		2.00
+
+header CN_SUBJECT_9879		Subject =~ /思维/
+score CN_SUBJECT_9879		5.00
+
+header CN_SUBJECT_9880		Subject =~ /完美/
+score CN_SUBJECT_9880		5.00
+
+header CN_SUBJECT_9881		Subject =~ /薪资/
+score CN_SUBJECT_9881		5.00
+
+header CN_SUBJECT_9882		Subject =~ /天 赚/
+score CN_SUBJECT_9882		25.00
+
+header CN_SUBJECT_9883		Subject =~ /天赚/
+score CN_SUBJECT_9883		10.00
+
+header CN_SUBJECT_9884		Subject =~ /策略/
+score CN_SUBJECT_9884		2.00
+
+header CN_SUBJECT_9885		Subject =~ /玩 命/
+score CN_SUBJECT_9885		10.00
+
+header CN_SUBJECT_9886		Subject =~ /战术/
+score CN_SUBJECT_9886		2.00
+
+header CN_SUBJECT_9887		Subject =~ /营销/
+score CN_SUBJECT_9887		2.00
+
+header CN_SUBJECT_9888		Subject =~ /人工/
+score CN_SUBJECT_9888		3.00
+
+header CN_SUBJECT_9889		Subject =~ /关务/
+score CN_SUBJECT_9889		2.00
+
+header CN_SUBJECT_9890		Subject =~ /海关/
+score CN_SUBJECT_9890		1.00
+
+header CN_SUBJECT_9891		Subject =~ /家庭/
+score CN_SUBJECT_9891		3.00
+
+header CN_SUBJECT_9892		Subject =~ /旅馆/
+score CN_SUBJECT_9892		3.00
+
+header CN_SUBJECT_9893		Subject =~ /揭密/
+score CN_SUBJECT_9893		4.00
+
+header CN_SUBJECT_9894		Subject =~ /展览/
+score CN_SUBJECT_9894		2.00
+
+header CN_SUBJECT_9895		Subject =~ /研修/
+score CN_SUBJECT_9895		5.00
+
+header CN_SUBJECT_9896		Subject =~ /精修/
+score CN_SUBJECT_9896		5.00
+
+header CN_SUBJECT_9897		Subject =~ /研讨/
+score CN_SUBJECT_9897		5.00
+
+header CN_SUBJECT_9898		Subject =~ /经典/
+score CN_SUBJECT_9898		5.00
+
+header CN_SUBJECT_9899		Subject =~ /课程/
+score CN_SUBJECT_9899		5.00
+
+header CN_SUBJECT_9900		Subject =~ /哪玩/
+score CN_SUBJECT_9900		5.00
+
+header CN_SUBJECT_9901		Subject =~ /电子展/
+score CN_SUBJECT_9901		5.00
+
+header CN_SUBJECT_9902		Subject =~ /育儿/
+score CN_SUBJECT_9902		4.00
+
+header CN_SUBJECT_9903		Subject =~ /情报/
+score CN_SUBJECT_9903		3.00
+
+header CN_SUBJECT_9904		Subject =~ /搜集/
+score CN_SUBJECT_9904		3.00
+
+header CN_SUBJECT_9905		Subject =~ /对手/
+score CN_SUBJECT_9905		3.00
+
+header CN_SUBJECT_9906		Subject =~ /社会/
+score CN_SUBJECT_9906		3.00
+
+header CN_SUBJECT_9907		Subject =~ /激励/
+score CN_SUBJECT_9907		3.00
+
+header CN_SUBJECT_9908		Subject =~ /出色的/
+score CN_SUBJECT_9908		5.00
+
+header CN_SUBJECT_9909		Subject =~ /动画/
+score CN_SUBJECT_9909		4.00
+
+header CN_SUBJECT_9910		Subject =~ /命运/
+score CN_SUBJECT_9910		5.00
+
+header CN_SUBJECT_9911		Subject =~ /健康/
+score CN_SUBJECT_9911		5.00
+
+header CN_SUBJECT_9912		Subject =~ /人品/
+score CN_SUBJECT_9912		4.00
+
+header CN_SUBJECT_9913		Subject =~ /好书/
+score CN_SUBJECT_9913		3.00
+
+header CN_SUBJECT_9914		Subject =~ /发票/
+score CN_SUBJECT_9914		3.00
+
+header CN_SUBJECT_9915		Subject =~ /交友/
+score CN_SUBJECT_9915		7.50
+
+header CN_SUBJECT_9916		Subject =~ /考核/
+score CN_SUBJECT_9916		3.00
+
+header CN_SUBJECT_9917		Subject =~ /外教/
+score CN_SUBJECT_9917		5.00
+
+header CN_SUBJECT_9918		Subject =~ /绩效/
+score CN_SUBJECT_9918		5.00
+
+header CN_SUBJECT_9919		Subject =~ /口语/
+score CN_SUBJECT_9919		8.00
+
+header CN_SUBJECT_9920		Subject =~ /(?:兼职|兼差)/
+score CN_SUBJECT_9920		10.00
+
+header CN_SUBJECT_9921		Subject =~ /票务/
+score CN_SUBJECT_9921		7.00
+
+header CN_SUBJECT_9922		Subject =~ /营养/
+score CN_SUBJECT_9922		7.00
+
+header CN_SUBJECT_9923		Subject =~ /私奔/
+score CN_SUBJECT_9923		7.00
+
+header CN_SUBJECT_9924		Subject =~ /之声/
+score CN_SUBJECT_9924		5.00
+
+header CN_SUBJECT_9925		Subject =~ /宝典/
+score CN_SUBJECT_9925		5.00
+
+header CN_SUBJECT_9926		Subject =~ /(?:团险|意外险|寿险|车险|保险)/
+score CN_SUBJECT_9926		6.00
+
+header CN_SUBJECT_9927		Subject =~ /(?:彩铃|图铃|铃声|铃音)/
+score CN_SUBJECT_9927		5.00
+
+header CN_SUBJECT_9928		Subject =~ /汽车/
+score CN_SUBJECT_9928		3.00
+
+header CN_SUBJECT_9929		Subject =~ /培训/
+score CN_SUBJECT_9929		2.00
+
+header CN_SUBJECT_9930		Subject =~ /避税/
+score CN_SUBJECT_9930		5.00
+
+header CN_SUBJECT_9931		Subject =~ /破解/
+score CN_SUBJECT_9931		5.00
+
+header CN_SUBJECT_9932		Subject =~ /情人/
+score CN_SUBJECT_9932		7.00
+
+header CN_SUBJECT_9933		Subject =~ /\=+/
+score CN_SUBJECT_9933		10.00
+
+header CN_SUBJECT_9934		Subject =~ /\~+/
+score CN_SUBJECT_9934		10.00
+
+header CN_SUBJECT_9937		Subject =~ /\*+/
+score CN_SUBJECT_9937		10.00
+
+header CN_SUBJECT_9938		Subject =~ /黄页/
+score CN_SUBJECT_9938		6.00
+
+header CN_SUBJECT_9939		Subject =~ /代理/
+score CN_SUBJECT_9939		2.00
+
+header CN_SUBJECT_9940		Subject =~ /社区/
+score CN_SUBJECT_9940		5.00
+
+header CN_SUBJECT_9941		Subject =~ /风水/
+score CN_SUBJECT_9941		7.00
+
+header CN_SUBJECT_9942		Subject =~ /招生/
+score CN_SUBJECT_9942		7.00
+
+header CN_SUBJECT_9943		Subject =~ /财务/
+score CN_SUBJECT_9943		2.00
+
+header CN_SUBJECT_9944		Subject =~ /叉车/
+score CN_SUBJECT_9944		8.00
+
+header CN_SUBJECT_9945		Subject =~ /高级/
+score CN_SUBJECT_9945		3.00
+
+header CN_SUBJECT_9946		Subject =~ /军刀/
+score CN_SUBJECT_9946		7.00
+
+header CN_SUBJECT_9947		Subject =~ /名表/
+score CN_SUBJECT_9947		4.00
+
+header CN_SUBJECT_9948		Subject =~ /无敌/
+score CN_SUBJECT_9948		7.00
+
+header CN_SUBJECT_9949		Subject =~ /明星的/
+score CN_SUBJECT_9949		6.00
+
+header CN_SUBJECT_9950		Subject =~ /代开/
+score CN_SUBJECT_9950		4.00
+
+header CN_SUBJECT_9951		Subject =~ /发泄/
+score CN_SUBJECT_9951		25.00
+
+header CN_SUBJECT_9952		Subject =~ /外商/
+score CN_SUBJECT_9952		2.00
+
+header CN_SUBJECT_9953		Subject =~ /协会/
+score CN_SUBJECT_9953		3.00
+
+header CN_SUBJECT_9954		Subject =~ /文化/
+score CN_SUBJECT_9954		2.00
+
+header CN_SUBJECT_9955		Subject =~ /小说/
+score CN_SUBJECT_9955		4.00
+
+header CN_SUBJECT_9956		Subject =~ /王牌/
+score CN_SUBJECT_9956		2.50
+
+header CN_SUBJECT_9957		Subject =~ /迎战/
+score CN_SUBJECT_9957		2.50
+
+header CN_SUBJECT_9958		Subject =~ /贷款/
+score CN_SUBJECT_9958		5.00
+
+header CN_SUBJECT_9959		Subject =~ /效率/
+score CN_SUBJECT_9959		3.00
+
+header CN_SUBJECT_9960		Subject =~ /发布/
+score CN_SUBJECT_9960		1.50
+
+header CN_SUBJECT_9961		Subject =~ /调查/
+score CN_SUBJECT_9961		2.50
+
+header CN_SUBJECT_9962		Subject =~ /娱乐/ 
+score CN_SUBJECT_9962		3.00
+
+header CN_SUBJECT_9963		Subject =~ /翻译/ 
+score CN_SUBJECT_9963		2.00
+
+header CN_SUBJECT_9964		Subject =~ /時尚/ 
+score CN_SUBJECT_9964		5.00
+
+header CN_SUBJECT_9965		Subject =~ /免费/ 
+score CN_SUBJECT_9965		3.00
+
+header CN_SUBJECT_9966		Subject =~ /朋友/ 
+score CN_SUBJECT_9966		3.00
+
+header CN_SUBJECT_9967		Subject =~ /音乐/
+score CN_SUBJECT_9967		3.00
+
+header CN_SUBJECT_9968		Subject =~ /户口/
+score CN_SUBJECT_9968		3.00
+
+header CN_SUBJECT_9969		Subject =~ /视频/
+score CN_SUBJECT_9969		5.00
+
+header CN_SUBJECT_9970		Subject =~ /博客/
+score CN_SUBJECT_9970		5.00
+
+header CN_SUBJECT_9971		Subject =~ /姿势/
+score CN_SUBJECT_9971		3.00
+
+header CN_SUBJECT_9972		Subject =~ /图片/
+score CN_SUBJECT_9972		1.00
+
+header CN_SUBJECT_9973		Subject =~ /证婚/
+score CN_SUBJECT_9973		5.00
+
+header CN_SUBJECT_9974		Subject =~ /教育/
+score CN_SUBJECT_9974		3.00
+
+header CN_SUBJECT_9975		Subject =~ /性交/
+score CN_SUBJECT_9975		3.00
+
+header CN_SUBJECT_9976		Subject =~ /净赚/
+score CN_SUBJECT_9976		4.00
+
+header CN_SUBJECT_9977		Subject =~ /展会/
+score CN_SUBJECT_9977		2.00
+
+header CN_SUBJECT_9978		Subject =~ /网址/
+score CN_SUBJECT_9978		3.00
+
+header CN_SUBJECT_9979		Subject =~ /大全/
+score CN_SUBJECT_9979		2.50
+
+header CN_SUBJECT_9980		Subject =~ /客户/
+score CN_SUBJECT_9980		1.00
+
+header CN_SUBJECT_9981		Subject =~ /网友/
+score CN_SUBJECT_9981		4.00
+
+header CN_SUBJECT_9982		Subject =~ /游戏/
+score CN_SUBJECT_9982		2.00
+
+header CN_SUBJECT_9983		Subject =~ /家园/
+score CN_SUBJECT_9983		3.00
+
+header CN_SUBJECT_9984		Subject =~ /投影机/
+score CN_SUBJECT_9984		5.00
+
+header CN_SUBJECT_9985		Subject =~ /威客/
+score CN_SUBJECT_9985		5.00
+
+header CN_SUBJECT_9986		Subject =~ /商机/
+score CN_SUBJECT_9986		1.50
+
+header CN_SUBJECT_9987		Subject =~ /搜索/
+score CN_SUBJECT_9987		2.00
+
+header CN_SUBJECT_9988		Subject =~ /卓博人才网/
+score CN_SUBJECT_9988		-20.00
+
+header CN_SUBJECT_9989		Subject =~ /应聘/
+score CN_SUBJECT_9989		-20.00
+
+header CN_SUBJECT_9990		Subject =~ /自动回复/
+score CN_SUBJECT_9990		-20.00
+
+header CN_SUBJECT_9994		Subject =~ /已读:/
+score CN_SUBJECT_9994		-5.00
+
+header CN_SUBJECT_9995		Subject =~ /转发:/
+score CN_SUBJECT_9995		-5.00
+
+header CN_SUBJECT_9996		Subject =~ /回复：/
+score CN_SUBJECT_9996		-5.00
+
+header CN_SUBJECT_20000		Subject =~ /※/
+score CN_SUBJECT_20000		25.00
+
+header CN_SUBJECT_20001		Subject =~ /◎/
+score CN_SUBJECT_20001		25.00
+
+header CN_SUBJECT_20002		Subject =~ /收获.{0,5}元/
+describe CN_SUBJECT_20002	Subject "收获 XXXXX 元"
+score CN_SUBJECT_20002		25.00
+
+header CN_SUBJECT_20003		Subject =~ /赢取.{0,5}元/
+describe CN_SUBJECT_20003	Subject "赢取 XXXXX 元"
+score CN_SUBJECT_20003		25.00
+
+header CN_SUBJECT_20004		Subject =~ /每桶.{0,5}美元/
+describe CN_SUBJECT_20004	Subject "每桶 XXXXX 美元"
+score CN_SUBJECT_20004		25.00
+
+header CN_SUBJECT_20005		Subject =~ /财.{0,2}务/
+describe CN_SUBJECT_20005	Subject "财 XX 务"
+score CN_SUBJECT_20005		25.00
+
+header CN_SUBJECT_20006		Subject =~ /交.{0,2}友/
+describe CN_SUBJECT_20006	Subject "交 XX 友"
+score CN_SUBJECT_20006		25.00
+
+header CN_SUBJECT_20007		Subject =~ /社.{0,2}区/
+describe CN_SUBJECT_20007	Subject "社 XX 区"
+score CN_SUBJECT_20007		25.00
+
+header CN_SUBJECT_20008		Subject =~ /离.{0,2}岸/
+describe CN_SUBJECT_20008	Subject "离 XX 岸"
+score CN_SUBJECT_20008		25.00
+
+header CN_SUBJECT_20009		Subject =~ /贸.{0,2}易/
+describe CN_SUBJECT_20009	Subject "贸 XX 易"
+score CN_SUBJECT_20009		25.00
+
+header CN_SUBJECT_20010		Subject =~ /票.{0,2}据/
+describe CN_SUBJECT_20010	Subject "票 XX 据"
+score CN_SUBJECT_20010		25.00
+
+header CN_SUBJECT_20011		Subject =~ /第.{0,8}位朋友/
+describe CN_SUBJECT_20011	Subject "第 XXXXXXXX 位朋友"
+score CN_SUBJECT_20011		25.00
+
+header CN_SUBJECT_20012		Subject =~ /投.{0,5}票/
+describe CN_SUBJECT_20012	Subject "投 XXXXX 票"
+score CN_SUBJECT_20012		25.00
+
+header CN_SUBJECT_20013		Subject =~ /行.{0,3}政/
+describe CN_SUBJECT_20013	Subject "行 XXX 政"
+score CN_SUBJECT_20013		5.00
+
+header CN_SUBJECT_20014		Subject =~ /提高.{0,3}销售/
+describe CN_SUBJECT_20014	Subject "提高 XXX 销售"
+score CN_SUBJECT_20014		5.00
+
+header CN_SUBJECT_20015		Subject =~ /销售.{0,3}效率/
+describe CN_SUBJECT_20015	Subject "销售 XXX 效率"
+score CN_SUBJECT_20015		10.00
+
+####################### English Subject ################################
+
+header EN_SUBJECT_001		Subject =~ /Re: your/
+score EN_SUBJECT_001		10.00
+
+header EN_SUBJECT_002		Subject =~ /Re: test/
+score EN_SUBJECT_002		10.00
+
+header EN_SUBJECT_003		Subject =~ /AD=/
+score EN_SUBJECT_003		10.00
+
+header EN_SUBJECT_004		Subject =~ /AD:/
+score EN_SUBJECT_004		4.00
+
+header EN_SUBJECT_006		Subject =~ /^AD/
+score EN_SUBJECT_006		2.00
+
+header EN_SUBJECT_007		Subject =~ /Google/
+score EN_SUBJECT_007		8.00
+
+header EN_SUBJECT_008		Subject =~ /google/
+score EN_SUBJECT_008		8.00
+
+header EN_SUBJECT_009		Subject =~ /^test/
+score EN_SUBJECT_009		8.00
+
+header EN_SUBJECT_010		Subject =~ /VIAGjRA/
+score EN_SUBJECT_010		20.00
+
+header EN_SUBJECT_011		Subject =~ /VIjAGRA/
+score EN_SUBJECT_011		20.00
+
+header EN_SUBJECT_012		Subject =~ /VIeAGRA/
+score EN_SUBJECT_012		20.00
+
+header EN_SUBJECT_013		Subject =~ /VjlAGRA/
+score EN_SUBJECT_013		20.00
+
+header EN_SUBJECT_014		Subject =~ /VlcAGRA/
+score EN_SUBJECT_014		20.00
+
+header EN_SUBJECT_015		Subject =~ /VnIAGRnA/
+score EN_SUBJECT_015		20.00
+
+header EN_SUBJECT_016		Subject =~ /VxIAGRxA/
+score EN_SUBJECT_016		20.00
+
+header EN_SUBJECT_017		Subject =~ /RExFlNANCE/
+score EN_SUBJECT_017		20.00
+
+header EN_SUBJECT_018		Subject =~ /Subject:/
+score EN_SUBJECT_018		2.00
+
+header EN_SUBJECT_019		Subject =~ /Re: V/
+score EN_SUBJECT_019		3.00
+
+header EN_SUBJECT_020		Subject =~ /Re: on/
+score EN_SUBJECT_020		3.00
+
+header EN_SUBJECT_021		Subject =~ /VjIAGRA/
+score EN_SUBJECT_021		20.00
+
+header EN_SUBJECT_022		Subject =~ /VljAGGRA/
+score EN_SUBJECT_022		20.00
+
+header EN_SUBJECT_023		Subject =~ /VlzAGRA/
+score EN_SUBJECT_023		20.00
+
+header EN_SUBJECT_024		Subject =~ /RjOLEX/
+score EN_SUBJECT_024		20.00
+
+header EN_SUBJECT_025		Subject =~ /VljIAGRA/
+score EN_SUBJECT_025		20.00
+
+header EN_SUBJECT_026		Subject =~ /Re: .{0,8}Vijagra/
+score EN_SUBJECT_026		20.00
+
+header EN_SUBJECT_027		Subject =~ /Re: .{0,8}ROjLEX/
+score EN_SUBJECT_027		20.00
+
+header EN_SUBJECT_028		Subject =~ /Re: .{0,8}VIAjAGRA/
+score EN_SUBJECT_028		20.00
+
+header EN_SUBJECT_029		Subject =~ /hands/
+score EN_SUBJECT_029		10.00
+
+header EN_SUBJECT_030		Subject =~ /rooms/
+score EN_SUBJECT_030		20.00
+
+header EN_SUBJECT_031		Subject =~ /games/
+score EN_SUBJECT_031		20.00
+
+header EN_SUBJECT_032		Subject =~ /password/
+score EN_SUBJECT_032		20.00
+
+header EN_SUBJECT_033		Subject =~ /quotation/
+score EN_SUBJECT_033		10.00
+
+header EN_SUBJECT_034		Subject =~ /^Re: new/
+score EN_SUBJECT_034		20.00
+
+header EN_SUBJECT_035		Subject =~ /History/
+score EN_SUBJECT_035		20.00
+
+header EN_SUBJECT_036		Subject =~ /Re: .{0,8}REjPLICA/
+score EN_SUBJECT_036		20.00
+
+header EN_SUBJECT_037		Subject =~ /Re: .{0,8}Vjiagra/
+score EN_SUBJECT_037		20.00
+
+header EN_SUBJECT_038		Subject =~ /Re: .{0,8}CREjDIT/
+score EN_SUBJECT_038		20.00
+
+header EN_SUBJECT_039		Subject =~ /Re: .{0,8}Vjjagra/
+score EN_SUBJECT_039		20.00
+
+header EN_SUBJECT_040		Subject =~ /Re: .{0,8}test/
+score EN_SUBJECT_040		20.00
+
+header EN_SUBJECT_041		Subject =~ /said./
+score EN_SUBJECT_041		20.00
+
+header EN_SUBJECT_042		Subject =~ /Re: .{0,8}news/
+score EN_SUBJECT_042		20.00
+
+header EN_SUBJECT_043		Subject =~ /FW:shell/
+score EN_SUBJECT_043		20.00
+
+header EN_SUBJECT_044		Subject =~ /SEXUALLY-EXPLICIT/
+score EN_SUBJECT_044		20.00
+
+header EN_SUBJECT_045		Subject =~ /jackpot/
+score EN_SUBJECT_045		20.00
+
+header EN_SUBJECT_046		Subject =~ /typing/
+score EN_SUBJECT_046		20.00
+
+header EN_SUBJECT_047		Subject =~ /skill/
+score EN_SUBJECT_047		20.00
+
+header EN_SUBJECT_048		Subject =~ /girlfriend/
+score EN_SUBJECT_048		20.00
+
+header EN_SUBJECT_049		Subject =~ /Christmas/
+score EN_SUBJECT_049		20.00
+
+header EN_SUBJECT_050		Subject =~ /sleep/
+score EN_SUBJECT_050		20.00
+
+header EN_SUBJECT_051		Subject =~ /.{0,8}wrote:/
+score EN_SUBJECT_051		20.00
+
+header EN_SUBJECT_052		Subject =~ /^fwd:/
+score EN_SUBJECT_052		20.00
+
+header EN_SUBJECT_053		Subject =~ /EQSE News/
+score EN_SUBJECT_053		20.00
+
+header EN_SUBJECT_054		Subject =~ /IQ test/
+score EN_SUBJECT_054		20.00
+
+header EN_SUBJECT_055		Subject =~ /^It ready/
+score EN_SUBJECT_055		 20.00
+
+header EN_SUBJECT_056		Subject =~ /Checked by 263/
+score EN_SUBJECT_056		0.00
+
+header EN_SUBJECT_057		Subject =~ /^Happy NW/
+score EN_SUBJECT_057		20.00
+
+header EN_SUBJECT_058		Subject =~ /to flip/
+score EN_SUBJECT_058		20.00
+
+header EN_SUBJECT_059		Subject =~ /kproximity/
+score EN_SUBJECT_059		20.00
+
+header EN_SUBJECT_060		Subject =~ /^copy/
+score EN_SUBJECT_061		20.00
+
+header EN_SUBJECT_062		Subject =~ /Blackwells/
+score EN_SUBJECT_062		20.00
+
+header EN_SUBJECT_063		Subject =~ /^play/
+score EN_SUBJECT_063		20.00
+
+header EN_SUBJECT_064		Subject =~ /drink/
+score EN_SUBJECT_064		20.00
+
+header EN_SUBJECT_065		Subject =~ /My enable/
+score EN_SUBJECT_065		20.00
+
+header EN_SUBJECT_066		Subject =~ /fcoping/
+score EN_SUBJECT_066		20.00
+
+header EN_SUBJECT_067		Subject =~ /a quite/
+score EN_SUBJECT_067		20.00
+
+header EN_SUBJECT_068		Subject =~ /cecological/
+score EN_SUBJECT_068		20.00
+
+header EN_SUBJECT_069		Subject =~ /biography/
+score EN_SUBJECT_069		20.00
+
+header EN_SUBJECT_070		Subject =~ /xtelling/
+score EN_SUBJECT_070		20.00
+
+header EN_SUBJECT_071		Subject =~ /ptissue/
+score EN_SUBJECT_071		20.00
+
+header EN_SUBJECT_072		Subject =~ /trivial/
+score EN_SUBJECT_072		20.00
+
+header EN_SUBJECT_073		Subject =~ /do bone/
+score EN_SUBJECT_073		20.00
+
+header EN_SUBJECT_074		Subject =~ /edonor/
+score EN_SUBJECT_074		20.00
+
+header EN_SUBJECT_075		Subject =~ /shape/
+score EN_SUBJECT_075		20.00
+
+header EN_SUBJECT_076		Subject =~ /occasional/
+score EN_SUBJECT_076		20.00
+
+header EN_SUBJECT_077		Subject =~ /reduction/
+score EN_SUBJECT_077		20.00
+
+header EN_SUBJECT_078		Subject =~ /ferry/
+score EN_SUBJECT_078		20.00
+
+header EN_SUBJECT_079		Subject =~ /defend/
+score EN_SUBJECT_079		20.00
+
+header EN_SUBJECT_080		Subject =~ /norman/
+score EN_SUBJECT_080		20.00
+
+header EN_SUBJECT_081		Subject =~ /Re: hi!/
+score EN_SUBJECT_081		20.00
+
+header EN_SUBJECT_082		Subject =~ /Go label/
+score EN_SUBJECT_082		20.00
+
+header EN_SUBJECT_083		Subject =~ /romantic/
+score EN_SUBJECT_083		20.00
+
+header EN_SUBJECT_084		Subject =~ /In shirt/
+score EN_SUBJECT_084		20.00
+
+header EN_SUBJECT_085		Subject =~ /ogrind/
+score EN_SUBJECT_085		20.00
+
+header EN_SUBJECT_086		Subject =~ /spacecraft/
+score EN_SUBJECT_086		20.00
+
+header EN_SUBJECT_087		Subject =~ /xspec/
+score EN_SUBJECT_087		20.00
+
+header EN_SUBJECT_088		Subject =~ /industrial/
+score EN_SUBJECT_088		20.00
+
+header EN_SUBJECT_089		Subject =~ /yincidence/
+score EN_SUBJECT_089		20.00
+
+header EN_SUBJECT_090		Subject =~ /brider/
+score EN_SUBJECT_090		20.00
+
+header EN_SUBJECT_091		Subject =~ /jarcade/
+score EN_SUBJECT_091		20.00
+
+header EN_SUBJECT_092		Subject =~ /^to/
+score EN_SUBJECT_092		3.00
+
+header EN_SUBJECT_093		Subject =~ /^My/
+score EN_SUBJECT_093		3.00
+
+header EN_SUBJECT_094		Subject =~ /snavy/
+score EN_SUBJECT_094		20.00
+
+header EN_SUBJECT_095		Subject =~ /^do/
+score EN_SUBJECT_095		3.00
+
+header EN_SUBJECT_096		Subject =~ /commerce/
+score EN_SUBJECT_096		4.00
+
+header EN_SUBJECT_097		Subject =~ /cafterwards/
+score EN_SUBJECT_097		20.00
+
+header EN_SUBJECT_098		Subject =~ /obsolete/
+score EN_SUBJECT_098		20.00
+
+header EN_SUBJECT_099		Subject =~ /brother/
+score EN_SUBJECT_099		20.00
+
+header EN_SUBJECT_100		Subject =~ /shower/
+score EN_SUBJECT_100		20.00
+
+header EN_SUBJECT_101		Subject =~ /torture/
+score EN_SUBJECT_101		20.00
+
+header EN_SUBJECT_102		Subject =~ /chassle/
+score EN_SUBJECT_102		20.00
+
+header EN_SUBJECT_103		Subject =~ /federation/
+score EN_SUBJECT_103		20.00
+
+header EN_SUBJECT_104		Subject =~ /guess/
+score EN_SUBJECT_104		20.00
+
+header EN_SUBJECT_105		Subject =~ /bomb/
+score EN_SUBJECT_105		20.00
+
+header EN_SUBJECT_106		Subject =~ /sheep/
+score EN_SUBJECT_106		20.00
+
+header EN_SUBJECT_107		Subject =~ /stainless/
+score EN_SUBJECT_107		20.00
+
+header EN_SUBJECT_108		Subject =~ /xgently/
+score EN_SUBJECT_108		20.00
+
+header EN_SUBJECT_109		Subject =~ /drefugee/
+score EN_SUBJECT_109		20.00
+
+header EN_SUBJECT_110		Subject =~ /women/
+score EN_SUBJECT_110		20.00
+
+header EN_SUBJECT_111		Subject =~ /^You've received a greeting card/
+score EN_SUBJECT_111		25.00
+
+header EN_SUBJECT_112		Subject =~ /^You've received a greeting ecard/
+score EN_SUBJECT_112		25.00
+
+header EN_SUBJECT_113		Subject =~ /^You've received an card/
+score EN_SUBJECT_113		25.00
+
+header EN_SUBJECT_114		Subject =~ /^You've received an ecard/
+score EN_SUBJECT_114		25.00
+
+header EN_SUBJECT_115		Subject =~ /^You've received a postcard from a/
+score EN_SUBJECT_115		25.00
+
+header EN_SUBJECT_116		Subject =~ /^sent you a postcard from/
+score EN_SUBJECT_116		25.00
+
+header EN_SUBJECT_117		Subject =~ /^sent you an card from/
+score EN_SUBJECT_117		25.00
+
+header EN_SUBJECT_118		Subject =~ /^sent you an ecard from/
+score EN_SUBJECT_118		25.00
+
+header EN_SUBJECT_119		Subject =~ /^Friend sent you an ecard/
+score EN_SUBJECT_119		25.00
+
+header EN_SUBJECT_120		Subject =~ /^Neighbour sent you a greeting card/
+score EN_SUBJECT_120		25.00
+
+header EN_SUBJECT_121		Subject =~ /^Class mate sent you a greeting ecard/
+score EN_SUBJECT_121		25.00
+
+header EN_SUBJECT_122		Subject =~ /Holiday card/
+score EN_SUBJECT_122		25.00
+
+header EN_SUBJECT_123		Subject =~ /Holiday ecard/
+score EN_SUBJECT_123		25.00
+
+header EN_SUBJECT_124		Subject =~ /Holiday e-card/
+score EN_SUBJECT_124		25.00
+
+header EN_SUBJECT_125		Subject =~ /Greeting postcard/
+score EN_SUBJECT_125		25.00
+
+header EN_SUBJECT_126		Subject =~ /Funny card/
+score EN_SUBJECT_126		25.00
+
+header EN_SUBJECT_127		Subject =~ /Funny ecard/
+score EN_SUBJECT_127		25.00
+
+header EN_SUBJECT_128		Subject =~ /Funny e-card/
+score EN_SUBJECT_128		25.00
+
+header EN_SUBJECT_129		Subject =~ /Love card/
+score EN_SUBJECT_129		25.00
+
+header EN_SUBJECT_130		Subject =~ /Love ecard/
+score EN_SUBJECT_130		25.00
+
+header EN_SUBJECT_131		Subject =~ /Love e-card/
+score EN_SUBJECT_131		25.00
+
+header EN_SUBJECT_132		Subject =~ /Love postcard/
+score EN_SUBJECT_132		25.00
+
+header EN_SUBJECT_133		Subject =~ /Birthday card/
+score EN_SUBJECT_133		25.00
+
+header EN_SUBJECT_134		Subject =~ /Movie-quality ecard/
+score EN_SUBJECT_134		25.00
+
+header EN_SUBJECT_135		Subject =~ /Animated card/
+score EN_SUBJECT_135		25.00
+
+header EN_SUBJECT_136		Subject =~ /Animated ecard/
+score EN_SUBJECT_136		25.00
+
+header EN_SUBJECT_137		Subject =~ /Animated e-card/
+score EN_SUBJECT_137		25.00
+
+header EN_SUBJECT_138		Subject =~ /Birthday ecard/
+score EN_SUBJECT_138		25.00
+
+header EN_SUBJECT_139		Subject =~ /Birthday e-card/
+score EN_SUBJECT_139		25.00
+
+header EN_SUBJECT_140		Subject =~ /birthday ecard/
+score EN_SUBJECT_140		25.00
+
+header EN_SUBJECT_141		Subject =~ /birthday e-card/
+score EN_SUBJECT_141		25.00
+
+header EN_SUBJECT_142		Subject =~ /birthday card/
+score EN_SUBJECT_142		25.00
+
+header EN_SUBJECT_143		Subject =~ /birthday postcard/
+score EN_SUBJECT_143		25.00
+
+header EN_SUBJECT_144		Subject =~ /funny card/
+score EN_SUBJECT_144		25.00
+
+header EN_SUBJECT_145		Subject =~ /funny ecard/
+score EN_SUBJECT_145		25.00
+
+header EN_SUBJECT_146		Subject =~ /funny e-card/
+score EN_SUBJECT_146		25.00
+
+header EN_SUBJECT_147		Subject =~ /movie-quality card/
+score EN_SUBJECT_147		25.00
+
+header EN_SUBJECT_148		Subject =~ /movie-quality ecard/
+score EN_SUBJECT_148		25.00
+
+header EN_SUBJECT_149		Subject =~ /animated card/
+score EN_SUBJECT_149		25.00
+
+header EN_SUBJECT_150		Subject =~ /animated ecard/
+score EN_SUBJECT_150		25.00
+
+header EN_SUBJECT_151		Subject =~ /animated e-card/
+score EN_SUBJECT_151		25.00
+
+header EN_SUBJECT_152		Subject =~ /musical card/
+score EN_SUBJECT_152		25.00
+
+header EN_SUBJECT_153		Subject =~ /musical ecard/
+score EN_SUBJECT_153		25.00
+
+header EN_SUBJECT_154		Subject =~ /musical e-card/
+score EN_SUBJECT_154		25.00
+
+header EN_SUBJECT_155		Subject =~ /Thank you postcard/
+score EN_SUBJECT_155		25.00
+
+header EN_SUBJECT_156		Subject =~ /thank you postcard/
+score EN_SUBJECT_156		25.00
+
+header EN_SUBJECT_157		Subject =~ /Thank you card/
+score EN_SUBJECT_157		25.00
+
+header EN_SUBJECT_158		Subject =~ /thank you card/
+score EN_SUBJECT_158		25.00
+
+header EN_SUBJECT_159		Subject =~ /thank you ecard/
+score EN_SUBJECT_159		25.00
+
+header EN_SUBJECT_160		Subject =~ /thank you e-card/
+score EN_SUBJECT_160		25.00
+
+header EN_SUBJECT_161		Subject =~ /Musical card/
+score EN_SUBJECT_161		25.00
+
+header EN_SUBJECT_162		Subject =~ /Musical ecard/
+score EN_SUBJECT_162		25.00
+
+header EN_SUBJECT_163		Subject =~ /Musical e-card/
+score EN_SUBJECT_163		25.00
+
+header EN_SUBJECT_164		Subject =~ /Musical postcard/
+score EN_SUBJECT_164		25.00
+
+header EN_SUBJECT_165		Subject =~ /movie-quality e-card/
+score EN_SUBJECT_165		25.00
+
+header EN_SUBJECT_166		Subject =~ /Login Information/
+score EN_SUBJECT_166		25.00
+
+header EN_SUBJECT_167		Subject =~ /User Verification/
+score EN_SUBJECT_167		25.00
+
+header EN_SUBJECT_168		Subject =~ /Secure Registration/
+score EN_SUBJECT_168		25.00
+
+header EN_SUBJECT_169		Subject =~ /Happy Labor Day/
+score EN_SUBJECT_169		25.00
+
+header EN_SUBJECT_170		Subject =~ /Special Card/
+score EN_SUBJECT_170		25.00
+
+header EN_SUBJECT_171		Subject =~ /^We have a ecard/
+score EN_SUBJECT_171		25.00
+
+header EN_SUBJECT_172		Subject =~ /^we have a ecard/
+score EN_SUBJECT_172		25.00
+
+header EN_SUBJECT_173		Subject =~ /^Here's your ecard/
+score EN_SUBJECT_173		25.00
+
+header EN_SUBJECT_174		Subject =~ /^You've got a greeting/
+score EN_SUBJECT_174		25.00
+
+header EN_SUBJECT_175		Subject =~ /^Did you open your ecard/
+score EN_SUBJECT_175		25.00
+
+header EN_SUBJECT_176		Subject =~ /^Your ecard greeting/
+score EN_SUBJECT_176		25.00
+
+header EN_SUBJECT_177		Subject =~ /^This is hilarious/
+score EN_SUBJECT_177		25.00
+
+header EN_SUBJECT_178		Subject =~ /^Check out this greeting/
+score EN_SUBJECT_178		25.00
+
+header EN_SUBJECT_179		Subject =~ /^You have an ecard/
+score EN_SUBJECT_179		25.00
+
+header EN_SUBJECT_180		Subject =~ /^you have an ecard/
+score EN_SUBJECT_180		25.00
+
+header EN_SUBJECT_181		Subject =~ /^Dream/
+score EN_SUBJECT_181		12.00
+
+header EN_SUBJECT_182		Subject =~ /Heavenly Love/
+score EN_SUBJECT_182		25.00
+
+header EN_SUBJECT_183		Subject =~ /Call me now/
+score EN_SUBJECT_183		10.00
+
+header EN_SUBJECT_184		Subject =~ /^remember me/
+score EN_SUBJECT_184		15.00
+
+header EN_SUBJECT_986		Subject =~ /be happy!/
+score EN_SUBJECT_986		25.00
+
+header EN_SUBJECT_987		Subject =~ /Greeting card/
+score EN_SUBJECT_987		10.00
+
+header EN_SUBJECT_988		Subject =~ /Greeting ecard/
+score EN_SUBJECT_988		10.00
+
+header EN_SUBJECT_989		Subject =~ /Greeting e-card/
+score EN_SUBJECT_989		10.00
+
+header EN_SUBJECT_990		Subject =~ /you an card/
+score EN_SUBJECT_990		10.00
+
+header EN_SUBJECT_991		Subject =~ /you a postcard/
+score EN_SUBJECT_991		10.00
+
+header EN_SUBJECT_992		Subject =~ /greeting card/
+score EN_SUBJECT_992		10.00
+
+header EN_SUBJECT_993		Subject =~ /greeting ecard/
+score EN_SUBJECT_993		10.00
+
+header EN_SUBJECT_994		Subject =~ /Sosat/
+score EN_SUBJECT_994		20.00
+
+header EN_SUBJECT_995		Subject =~ /^Hi/
+score EN_SUBJECT_995		5.00
+
+header EN_SUBJECT_996		Subject =~ /.{0,10}advice/
+score EN_SUBJECT_996		5.00
+
+header EN_SUBJECT_997		Subject =~ /Re: .{0,8}C/
+score EN_SUBJECT_997		3.00
+
+header EN_SUBJECT_998		Subject =~ /Re: .{0,8}V/
+score EN_SUBJECT_998		3.00
+
+header EN_SUBJECT_999		Subject =~ /Re: .{0,8}R/
+score EN_SUBJECT_999		3.00
+
+header EN_SUBJECT_1000		Subject =~ /^FW:/
+score EN_SUBJECT_1000		-2.00
+
+header EN_SUBJECT_1001		Subject =~ /^Fw:/
+score EN_SUBJECT_1001		-2.00
+
+header EN_SUBJECT_1002		Subject =~ /^Re:/
+score EN_SUBJECT_1002		-2.00
+
+header EN_SUBJECT_1003		Subject =~ /^RE:/
+score EN_SUBJECT_1003		-2.00
+
+header EN_SUBJECT_1004		Subject =~ /51job.com/
+score EN_SUBJECT_1004		-20.00
+
+header EN_SUBJECT_1005		Subject =~ /Mobile Phones/
+score EN_SUBJECT_1005		-25.00
+
+header EN_SUBJECT_1006		Subject =~ /^TO :/
+score EN_SUBJECT_1006		3.00
+
+# ****************************** CH_SUBJECT ********************************
+
+header CH_SUBJECT_001		Subject =~ /求愛/
+score CH_SUBJECT_001		25.00
+
+header CH_SUBJECT_002		Subject =~ /創業/
+score CH_SUBJECT_002		25.00
+
+header CH_SUBJECT_003		Subject =~ /理財/
+score CH_SUBJECT_003		4.00
+
+header CH_SUBJECT_004		Subject =~ /獎金/
+score CH_SUBJECT_004		4.200
+
+header CH_SUBJECT_005		Subject =~ /免費/
+score CH_SUBJECT_005		5.00
+
+header CH_SUBJECT_006		Subject =~ /債務/
+score CH_SUBJECT_006		4.00
+
+header CH_SUBJECT_007		Subject =~ /諮詢/
+score CH_SUBJECT_007		2.500
+
+header CH_SUBJECT_008		Subject =~ /美麗/
+score CH_SUBJECT_008		25.00
+
+header CH_SUBJECT_009		Subject =~ /戲院/
+score CH_SUBJECT_009		25.00
+
+header CH_SUBJECT_010		Subject =~ /開課/
+score CH_SUBJECT_010		25.00
+
+header CH_SUBJECT_011		Subject =~ /從此/
+score CH_SUBJECT_011		2.00
+
+header CH_SUBJECT_012		Subject =~ /低價/
+score CH_SUBJECT_012		4.00
+
+header CH_SUBJECT_013		Subject =~ /腦袋/
+score CH_SUBJECT_013		25.00
+
+header CH_SUBJECT_014		Subject =~ /親愛/
+score CH_SUBJECT_014		25.00
+
+header CH_SUBJECT_015		Subject =~ /機會/
+score CH_SUBJECT_015		3.00
+
+header CH_SUBJECT_016		Subject =~ /翻譯/
+score CH_SUBJECT_016		6.00
+
+header CH_SUBJECT_017		Subject =~ /對象/
+score CH_SUBJECT_017		2.00
+
+header CH_SUBJECT_018		Subject =~ /習慣/
+score CH_SUBJECT_018		3.00
+
+header CH_SUBJECT_019		Subject =~ /課程/
+score CH_SUBJECT_019		5.00
+
+header CH_SUBJECT_020		Subject =~ /兼職/
+score CH_SUBJECT_020		25.00
+
+header CH_SUBJECT_021		Subject =~ /(?:女傭|幫傭|監護工)/
+score CH_SUBJECT_021		25.00
+
+header CH_SUBJECT_022		Subject =~ /焦點/
+score CH_SUBJECT_022		4.00
+
+header CH_SUBJECT_023		Subject =~ /音樂/
+score CH_SUBJECT_023		6.00
+
+header CH_SUBJECT_024		Subject =~ /寵物/
+score CH_SUBJECT_024		25.00
+
+header CH_SUBJECT_025		Subject =~ /吃虧/
+score CH_SUBJECT_025		25.00
+
+header CH_SUBJECT_026		Subject =~ /設計/
+score CH_SUBJECT_026		3.00
+
+header CH_SUBJECT_027		Subject =~ /招財/
+score CH_SUBJECT_027		6.00
+
+header CH_SUBJECT_028		Subject =~ /牽手/
+score CH_SUBJECT_028		6.00
+
+header CH_SUBJECT_029		Subject =~ /觀音/
+score CH_SUBJECT_029		25.00
+
+header CH_SUBJECT_030		Subject =~ /(?:專業|訓練)/
+score CH_SUBJECT_030		5.00
+
+header CH_SUBJECT_031		Subject =~ /困擾/
+score CH_SUBJECT_031		4.00
+
+header CH_SUBJECT_032		Subject =~ /缺錢/
+score CH_SUBJECT_032		6.00
+
+header CH_SUBJECT_033		Subject =~ /開店/
+score CH_SUBJECT_033		6.00
+
+header CH_SUBJECT_034		Subject =~ /醜人/
+score CH_SUBJECT_034		6.00
+
+header CH_SUBJECT_035		Subject =~ /(?:母親|媽咪)/
+score CH_SUBJECT_035		25.00
+
+header CH_SUBJECT_036		Subject =~ /珠寶/
+score CH_SUBJECT_036		25.00
+
+header CH_SUBJECT_037		Subject =~ /醫生/
+score CH_SUBJECT_037		25.00
+
+header CH_SUBJECT_038		Subject =~ /機票/
+score CH_SUBJECT_038		4.00
+
+header CH_SUBJECT_039		Subject =~ /節省/
+score CH_SUBJECT_039		3.00
+
+header CH_SUBJECT_040		Subject =~ /電費/
+score CH_SUBJECT_040		6.00
+
+header CH_SUBJECT_041		Subject =~ /負擔/
+score CH_SUBJECT_041		3.00
+
+header CH_SUBJECT_042		Subject =~ /愛人/
+score CH_SUBJECT_042		25.00
+
+header CH_SUBJECT_043		Subject =~ /時間/
+score CH_SUBJECT_043		4.00
+
+header CH_SUBJECT_044		Subject =~ /網路/
+score CH_SUBJECT_044		6.00
+
+header CH_SUBJECT_045		Subject =~ /甜蜜/
+score CH_SUBJECT_045		25.00
+
+header CH_SUBJECT_046		Subject =~ /體系/
+score CH_SUBJECT_046		4.00
+
+header CH_SUBJECT_047		Subject =~ /(?:房貸|信貸)/
+score CH_SUBJECT_047		25.00
+
+header CH_SUBJECT_048		Subject =~ /結婚/
+score CH_SUBJECT_048		25.00
+
+header CH_SUBJECT_049		Subject =~ /名錄/
+score CH_SUBJECT_049		4.00
+
+header CH_SUBJECT_050		Subject =~ /培養/
+score CH_SUBJECT_050		4.00
+
+header CH_SUBJECT_051		Subject =~ /１８歲/
+score CH_SUBJECT_051		25.00
+
+header CH_SUBJECT_052		Subject =~ /蟲害/
+score CH_SUBJECT_052		25.00
+
+header CH_SUBJECT_053		Subject =~ /歡迎/
+score CH_SUBJECT_053		1.00
+
+header CH_SUBJECT_054		Subject =~ /光臨/
+score CH_SUBJECT_054		2.00
+
+header CH_SUBJECT_055		Subject =~ /討論區/
+score CH_SUBJECT_055		25.00
+
+header CH_SUBJECT_056		Subject =~ /徽章/
+score CH_SUBJECT_056		25.00
+
+header CH_SUBJECT_057		Subject =~ /錦旗/
+score CH_SUBJECT_057		25.00
+
+header CH_SUBJECT_058		Subject =~ /劉玉玲/
+score CH_SUBJECT_058		25.00
+
+header CH_SUBJECT_059		Subject =~ /黃瓜/
+score CH_SUBJECT_059		25.00
+
+header CH_SUBJECT_060		Subject =~ /養眼/
+score CH_SUBJECT_060		25.00
+
+header CH_SUBJECT_061		Subject =~ /神鵰/
+score CH_SUBJECT_061		25.00
+
+header CH_SUBJECT_062		Subject =~ /俠侶/
+score CH_SUBJECT_062		25.00
+
+header CH_SUBJECT_063		Subject =~ /養生/
+score CH_SUBJECT_063		25.00
+
+header CH_SUBJECT_064		Subject =~ /觀光/
+score CH_SUBJECT_064		25.00
+
+header CH_SUBJECT_065		Subject =~ /聖地/
+score CH_SUBJECT_065		25.00
+
+header CH_SUBJECT_066		Subject =~ /電燈/
+score CH_SUBJECT_066		25.00
+
+header CH_SUBJECT_067		Subject =~ /指紋/
+score CH_SUBJECT_067		25.00
+
+header CH_SUBJECT_068		Subject =~ /大獎/
+score CH_SUBJECT_068		25.00
+
+header CH_SUBJECT_069		Subject =~ /藥品/
+score CH_SUBJECT_069		25.00
+
+header CH_SUBJECT_070		Subject =~ /化妝品/
+score CH_SUBJECT_070		25.00
+
+header CH_SUBJECT_071		Subject =~ /媽媽/
+score CH_SUBJECT_071		25.00
+
+header CH_SUBJECT_072		Subject =~ /爆紅/
+score CH_SUBJECT_072		25.00
+
+header CH_SUBJECT_073		Subject =~ /購物/
+score CH_SUBJECT_073		7.00
+
+header CH_SUBJECT_074		Subject =~ /可愛/
+score CH_SUBJECT_074		7.00
+
+header CH_SUBJECT_075		Subject =~ /顯神通/
+score CH_SUBJECT_075		25.00
+
+header CH_SUBJECT_076		Subject =~ /餅家/
+score CH_SUBJECT_076		25.00
+
+header CH_SUBJECT_077		Subject =~ /人類/
+score CH_SUBJECT_077		25.00
+
+header CH_SUBJECT_078		Subject =~ /淨白/
+score CH_SUBJECT_078		25.00
+
+header CH_SUBJECT_079		Subject =~ /兒童/
+score CH_SUBJECT_079		25.00
+
+header CH_SUBJECT_080		Subject =~ /動畫/
+score CH_SUBJECT_080		25.00
+
+header CH_SUBJECT_081		Subject =~ /好禮/
+score CH_SUBJECT_081		25.00
+
+header CH_SUBJECT_082		Subject =~ /女優/
+score CH_SUBJECT_082		25.00
+
+header CH_SUBJECT_083		Subject =~ /禿頭/
+score CH_SUBJECT_083		25.00
+
+header CH_SUBJECT_084		Subject =~ /夢想/
+score CH_SUBJECT_084		25.00
+
+header CH_SUBJECT_085		Subject =~ /康復/
+score CH_SUBJECT_085		25.00
+
+header CH_SUBJECT_086		Subject =~ /特訓/
+score CH_SUBJECT_086		25.00
+
+header CH_SUBJECT_087		Subject =~ /投影機/
+score CH_SUBJECT_087		25.00
+
+header CH_SUBJECT_088		Subject =~ /美帶子/
+score CH_SUBJECT_088		25.00
+
+header CH_SUBJECT_089		Subject =~ /血汗錢/
+score CH_SUBJECT_089		25.00
+
+header CH_SUBJECT_090		Subject =~ /電子狗/
+score CH_SUBJECT_090		25.00
+
+header CH_SUBJECT_091		Subject =~ /騎馬/
+score CH_SUBJECT_091		25.00
+
+header CH_SUBJECT_092		Subject =~ /演唱會/
+score CH_SUBJECT_092		25.00
+
+header CH_SUBJECT_093		Subject =~ /三級片/
+score CH_SUBJECT_093		25.00
+
+header CH_SUBJECT_094		Subject =~ /補品/
+score CH_SUBJECT_094		25.00
+
+header CH_SUBJECT_095		Subject =~ /張田記/
+score CH_SUBJECT_095		25.00
+
+header CH_SUBJECT_096		Subject =~ /聯合新聞網/
+score CH_SUBJECT_096		25.00
+
+header CH_SUBJECT_097		Subject =~ /成人無碼/
+score CH_SUBJECT_097		25.00
+
+header CH_SUBJECT_098		Subject =~ /研討會/
+score CH_SUBJECT_098		10.00
+
+header CH_SUBJECT_099		Subject =~ /业.{0,2}務/
+describe CH_SUBJECT_099		Subject "业XX務"
+score CH_SUBJECT_099		25.00
+
+header CH_SUBJECT_100		Subject =~ /赢.{0,2}利/
+describe CH_SUBJECT_100		Subject "赢XX利"
+score CH_SUBJECT_100		25.00

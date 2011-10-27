@@ -1,0 +1,77 @@
+
+
+<div style="padding-bottom:40px;"></div>
+<div class="content" style="background-color:#fff;padding-top:0;">
+<p><a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'));?>">List templates</a>|<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplate'));?>">Add templates</a></p>
+<?php if(!$this->submitted){?>
+<form id='form' action="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplate'));?><?php if($this->admintemplateId) echo '/id/'.$this->admintemplateId;?>" method="post">
+    <div id='campaignId_title'><?php echo $this->translate("Admin_Select_CAMPAIGN");?></div><br/>
+    <select name="campaign" >
+    <?php 
+    	foreach ($this->campaigns as $key=>$val){
+    		echo "<option value='$key'>$val</option>";
+    	}
+    ?>
+    </select>
+   <br/><br/>
+    <?php echo $this->translate("INVITATION_MAIL_SUBJECT");?>
+    <?php echo $this->form->subject; ?><br/>
+    <?php echo $this->translate("INVITATION_MAIL_CONTENT_ADMIN");?><?php echo $this->translate('Email_Content_Notice');?> &nbsp;&nbsp;&nbsp;
+		<a href="#" onclick="javascript:showmessage();">text</a>/<a href="#" onclick="javascript:showhtmlmessage();">html</a>
+	<?php echo $this->form->message; ?>
+	<div style="clear: both; "></div>
+	<div id='htmlMessage' style="padding: 20px; padding-top:0px; margin-left: 20px; width:770px; display:none;">
+		<?php $this->oFCKeditor->create();?>
+	</div>	
+		<div style="clear: both; "></div>
+		
+		<?php echo $this->form->submit; ?>
+</form>
+
+<script type="text/javascript">
+function showhtmlmessage(){
+	$('htmlMessage').style.display = "";
+	$('message').style.display = "none";
+	$('message').value = "";
+}
+function showmessage(){
+	$('message').style.display = "";
+	$('htmlMessage').style.display = "none";
+	$('htmlMessage').value = "";
+}
+function ChangeOption(Interface){
+	var inter = $(Interface).value;
+	switch(inter){
+		case 'Invite non-sparks to join campaign':
+			$('campaignId').style.display = "";
+			$('campaignId_title').style.display = "";
+			$('code_source').style.display = "";
+			$('code_source_title').style.display = "";	
+			break;
+		case 'Invite sparks to join campaign':
+			$('campaignId').style.display = "";
+			$('campaignId_title').style.display = "";
+			$('code_source').style.display = "none";
+			$('code_source_title').style.display = "none";
+			break;
+		case 'Send mail to sparks':
+			$('campaignId').style.display = "none";
+			$('campaignId_title').style.display = "none";
+			$('code_source').style.display = "none";
+			$('code_source_title').style.display = "none";
+			break;
+			
+	}
+//	alert($(Interface).value);
+}
+</script>
+</div>
+<?php }else{?>
+
+成功创建邮件模板，继续<a href ="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplate'));?>">添加</a>
+<?php }?>
+</div>
+
+
+
+

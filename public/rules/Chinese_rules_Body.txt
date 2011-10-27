@@ -1,0 +1,614 @@
+﻿# SpamAssassin rules file: Chinese body tests
+
+body CN_BODY_2	/有限公司/
+describe CN_BODY_2	Body contains "有限公司"
+score CN_BODY_2	0.001
+
+body CN_BODY_3	/发票/
+describe CN_BODY_3	Body contains "发票"
+score CN_BODY_3	0.055
+
+body CN_BODY_4	/广告/
+describe CN_BODY_4	Body contains "广告"
+score CN_BODY_4	0.001
+
+body CN_BODY_5	/销售/
+describe CN_BODY_5	Body contains "销售"
+score CN_BODY_5	0.287
+
+body CN_BODY_7	/运输/
+describe CN_BODY_7	Body contains "运输"
+score CN_BODY_7	0.036
+
+body CN_BODY_8	/优惠/
+describe CN_BODY_8	Body contains "优惠"
+score CN_BODY_8	0.001
+
+body CN_BODY_9	/建筑/
+describe CN_BODY_9	Body contains "建筑"
+score CN_BODY_9	0.001
+
+body CN_BODY_11	/商品/
+describe CN_BODY_11	Body contains "商品"
+score CN_BODY_11	0.383
+
+body CN_BODY_14	/代开/
+describe CN_BODY_14	Body contains "代开"
+score CN_BODY_14	1.655
+
+body CN_BODY_16	/联系人/
+describe CN_BODY_16	Body contains "联系人"
+score CN_BODY_16	0.281
+
+body CN_BODY_21	/实业/
+describe CN_BODY_21	Body contains "实业"
+score CN_BODY_21	0.034
+
+body CN_BODY_26	/贵公司/
+describe CN_BODY_26	Body contains "贵公司"
+score CN_BODY_26	2.160
+
+body CN_BODY_33	/地税/
+describe CN_BODY_33	Body contains "地税"
+score CN_BODY_33	0.099
+
+body CN_BODY_34	/进项/
+describe CN_BODY_34	Body contains "进项"
+score CN_BODY_34	0.074
+
+body CN_BODY_36	/付款/
+describe CN_BODY_36	Body contains "付款"
+score CN_BODY_36	0.832
+
+body CN_BODY_40	/安装/
+describe CN_BODY_40	Body contains "安装"
+score CN_BODY_40	0.001
+
+body CN_BODY_45	/验证/
+describe CN_BODY_45	Body contains "验证"
+score CN_BODY_45	0.001
+
+body CN_BODY_46	/来电/
+describe CN_BODY_46	Body contains "来电"
+score CN_BODY_46	0.003
+
+body CN_BODY_49	/点数/
+describe CN_BODY_49	Body contains "点数"
+score CN_BODY_49	0.380
+
+body CN_BODY_51	/大小/
+describe CN_BODY_51	Body contains "大小"
+score CN_BODY_51	0.016
+
+body CN_BODY_52	/海关/
+describe CN_BODY_52	Body contains "海关"
+score CN_BODY_52	0.189
+
+body CN_BODY_61	/雄厚/
+describe CN_BODY_61	Body contains "雄厚"
+score CN_BODY_61	0.005
+
+body CN_BODY_69	/经理\//
+describe CN_BODY_69	Body contains "经理\/"
+score CN_BODY_69	0.102
+
+body CN_BODY_77	/详情/
+describe CN_BODY_77	Body contains "详情"
+score CN_BODY_77	0.480
+
+body CN_BODY_79	/缴款/
+describe CN_BODY_79	Body contains "缴款"
+score CN_BODY_79	2.513
+
+body CN_BODY_81	/我司/
+describe CN_BODY_81	Body contains "我司"
+score CN_BODY_81	2.400
+
+body CN_BODY_85	/租赁/
+describe CN_BODY_85	Body contains "租赁"
+score CN_BODY_85	0.410
+
+body CN_BODY_89	/\(经理/
+describe CN_BODY_89	Body contains "\(经理"
+score CN_BODY_89	1.669
+
+body CN_BODY_91	/查询/
+describe CN_BODY_91	Body contains "查询"
+score CN_BODY_91	0.001
+
+body CN_BODY_96	/长期有效/
+describe CN_BODY_96	Body contains "长期有效"
+score CN_BODY_96	0.005
+
+body CN_BODY_97	/完成不了/
+describe CN_BODY_97	Body contains "完成不了"
+score CN_BODY_97	0.004
+
+body CN_BODY_98	/税务/
+describe CN_BODY_98	Body contains "税务"
+score CN_BODY_98	0.001
+
+body CN_BODY_99	/贵司/
+describe CN_BODY_99	Body contains "贵司"
+score CN_BODY_99	2.700
+
+body CN_BODY_103	/信息长期/
+describe CN_BODY_103	Body contains "信息长期"
+score CN_BODY_103	2.420
+
+body CN_BODY_105	/不了每月/
+describe CN_BODY_105	Body contains "不了每月"
+score CN_BODY_105	2.441
+
+body CN_BODY_106	/真伪/
+describe CN_BODY_106	Body contains "真伪"
+score CN_BODY_106	0.013
+
+body CN_BODY_112	/额度/
+describe CN_BODY_112	Body contains "额度"
+score CN_BODY_112	0.080
+
+body CN_BODY_116	/打扰/
+describe CN_BODY_116	Body contains "打扰"
+score CN_BODY_116	0.059
+
+body CN_BODY_124	/抵扣/
+describe CN_BODY_124	Body contains "抵扣"
+score CN_BODY_124	2.121
+
+body CN_BODY_126	/每月有/
+describe CN_BODY_126	Body contains "每月有"
+score CN_BODY_126	0.020
+
+body CN_BODY_129	/深圳/
+describe CN_BODY_129	Body contains "深圳"
+score CN_BODY_129	0.001
+
+body CN_BODY_130	/与贵/
+describe CN_BODY_130	Body contains "与贵"
+score CN_BODY_130	0.001
+
+body CN_BODY_134	/绝对是真/
+describe CN_BODY_134	Body contains "绝对是真"
+score CN_BODY_134	0.175
+
+body CN_BODY_135	/联系电话/
+describe CN_BODY_135	Body contains "联系电话"
+score CN_BODY_135	0.001
+
+body CN_BODY_137	/票！/
+describe CN_BODY_137	Body contains "票！"
+score CN_BODY_137	0.209
+
+body CN_BODY_146	/其它服务/
+describe CN_BODY_146	Body contains "其它服务"
+score CN_BODY_146	2.580
+
+body CN_BODY_151	/商讨/
+describe CN_BODY_151	Body contains "商讨"
+score CN_BODY_151	0.018
+
+body CN_BODY_154	/餐饮/
+describe CN_BODY_154	Body contains "餐饮"
+score CN_BODY_154	0.034
+
+body CN_BODY_155	/请电/
+describe CN_BODY_155	Body contains "请电"
+score CN_BODY_155	0.038
+
+body CN_BODY_164	/国税/
+describe CN_BODY_164	Body contains "国税"
+score CN_BODY_164	0.064
+
+body CN_BODY_167	/票据/
+describe CN_BODY_167	Body contains "票据"
+score CN_BODY_167	0.027
+
+body CN_BODY_180	/合作！/
+describe CN_BODY_180	Body contains "合作！"
+score CN_BODY_180	0.905
+
+body CN_BODY_183	/可以根据/
+describe CN_BODY_183	Body contains "可以根据"
+score CN_BODY_183	0.329
+
+body CN_BODY_186	/）您/
+describe CN_BODY_186	Body contains "）您"
+score CN_BODY_186	0.790
+
+body CN_BODY_191	/服务业/
+describe CN_BODY_191	Body contains "服务业"
+score CN_BODY_191	0.036
+
+body CN_BODY_197	/本公司/
+describe CN_BODY_197	Body contains "本公司"
+score CN_BODY_197	0.313
+
+body CN_BODY_201	/税率/
+describe CN_BODY_201	Body contains "税率"
+score CN_BODY_201	0.029
+
+body CN_BODY_224	/传真/
+describe CN_BODY_224	Body contains "传真"
+score CN_BODY_224	0.105
+
+body CN_BODY_225	/顺祝/
+describe CN_BODY_225	Body contains "顺祝"
+score CN_BODY_225	1.117
+
+body CN_BODY_228	/尊敬的/
+describe CN_BODY_228	Body contains "尊敬的"
+score CN_BODY_228	0.202
+
+body CN_BODY_229	/洽商/
+describe CN_BODY_229	Body contains "洽商"
+score CN_BODY_229	0.396
+
+body CN_BODY_230	/或担心/
+describe CN_BODY_230	Body contains "或担心"
+score CN_BODY_230	0.039
+
+body CN_BODY_240	/好：/
+describe CN_BODY_240	Body contains "好："
+score CN_BODY_240	0.340
+
+body CN_BODY_249	/有效，如/
+describe CN_BODY_249	Body contains "有效，如"
+score CN_BODY_249	0.077
+
+body CN_BODY_260	/、其它/
+describe CN_BODY_260	Body contains "、其它"
+score CN_BODY_260	0.010
+
+body CN_BODY_263	/，如须/
+describe CN_BODY_263	Body contains "，如须"
+score CN_BODY_263	0.001
+
+body CN_BODY_265	/现完成/
+describe CN_BODY_265	Body contains "现完成"
+score CN_BODY_265	0.020
+
+body CN_BODY_267	/合作一次/
+describe CN_BODY_267	Body contains "合作一次"
+score CN_BODY_267	0.069
+
+body CN_BODY_269	/担心，可/
+describe CN_BODY_269	Body contains "担心，可"
+score CN_BODY_269	0.002
+
+body CN_BODY_271	/彼此合作/
+describe CN_BODY_271	Body contains "彼此合作"
+score CN_BODY_271	0.028
+
+body CN_BODY_272	/全国各地/
+describe CN_BODY_272	Body contains "全国各地"
+score CN_BODY_272	0.009
+
+body CN_BODY_274	/较多现/
+describe CN_BODY_274	Body contains "较多现"
+score CN_BODY_274	0.136
+
+body CN_BODY_276	/ 人：/
+describe CN_BODY_276	Body contains " 人："
+score CN_BODY_276	0.035
+
+body CN_BODY_287	/或到/
+describe CN_BODY_287	Body contains "或到"
+score CN_BODY_287	0.002
+
+body CN_BODY_293	/东莞/
+describe CN_BODY_293	Body contains "东莞"
+score CN_BODY_293	0.147
+
+body CN_BODY_302	/洽谈/
+describe CN_BODY_302	Body contains "洽谈"
+score CN_BODY_302	0.803
+
+body CN_BODY_308	/或我/
+describe CN_BODY_308	Body contains "或我"
+score CN_BODY_308	0.005
+
+body CN_BODY_318	/互惠/
+describe CN_BODY_318	Body contains "互惠"
+score CN_BODY_318	0.001
+
+body CN_BODY_350	/互利/
+describe CN_BODY_350	Body contains "互利"
+score CN_BODY_350	0.003
+
+body CN_BODY_358	/或合作/
+describe CN_BODY_358	Body contains "或合作"
+score CN_BODY_358	0.001
+
+body CN_BODY_359	/会与/
+describe CN_BODY_359	Body contains "会与"
+score CN_BODY_359	0.011
+
+body CN_BODY_368	/，必成/
+describe CN_BODY_368	Body contains "，必成"
+score CN_BODY_368	0.001
+
+body CN_BODY_369	/一次，必/
+describe CN_BODY_369	Body contains "一次，必"
+score CN_BODY_369	0.494
+
+body CN_BODY_373	/多年一直/
+describe CN_BODY_373	Body contains "多年一直"
+score CN_BODY_373	0.002
+
+body CN_BODY_376	/成立多年/
+describe CN_BODY_376	Body contains "成立多年"
+score CN_BODY_376	0.123
+
+body CN_BODY_389	/6%左右/
+describe CN_BODY_389	Body contains "6%左右"
+score CN_BODY_389	0.001
+
+body CN_BODY_390	/司合作/
+describe CN_BODY_390	Body contains "司合作"
+score CN_BODY_390	0.353
+
+body CN_BODY_407	/兴隆/
+describe CN_BODY_407	Body contains "兴隆"
+score CN_BODY_407	1.195
+
+body CN_BODY_431	/开票/
+describe CN_BODY_431	Body contains "开票"
+score CN_BODY_431	0.460
+
+body CN_BODY_456	/坚持以“/
+describe CN_BODY_456	Body contains "坚持以“"
+score CN_BODY_456	0.012
+
+body CN_BODY_463	/、服务/
+describe CN_BODY_463	Body contains "、服务"
+score CN_BODY_463	0.316
+
+body CN_BODY_476	/可上网/
+describe CN_BODY_476	Body contains "可上网"
+score CN_BODY_476	0.055
+
+body CN_BODY_484	/左右）/
+describe CN_BODY_484	Body contains "左右）"
+score CN_BODY_484	0.001
+
+body CN_BODY_491	/经理、/
+describe CN_BODY_491	Body contains "经理、"
+score CN_BODY_491	0.508
+
+body CN_BODY_495	/广州市/
+describe CN_BODY_495	Body contains "广州市"
+score CN_BODY_495	0.779
+
+body CN_BODY_504	/广州、/
+describe CN_BODY_504	Body contains "广州、"
+score CN_BODY_504	0.044
+
+body CN_BODY_526	/作为公司/
+describe CN_BODY_526	Body contains "作为公司"
+score CN_BODY_526	0.036
+
+body CN_BODY_533	/税、/
+describe CN_BODY_533	Body contains "税、"
+score CN_BODY_533	0.207
+
+body CN_BODY_552	/真正做到/
+describe CN_BODY_552	Body contains "真正做到"
+score CN_BODY_552	0.044
+
+body CN_BODY_574	/咨询、/
+describe CN_BODY_574	Body contains "咨询、"
+score CN_BODY_574	0.105
+
+body CN_BODY_588	/1\.5%左右/
+describe CN_BODY_588	Body contains "1\.5%左右"
+score CN_BODY_588	2.220
+
+body CN_BODY_589	/、必/
+describe CN_BODY_589	Body contains "、必"
+score CN_BODY_589	1.020
+
+body CN_BODY_602	/余额/
+describe CN_BODY_602	Body contains "余额"
+score CN_BODY_602	0.006
+
+body CN_BODY_604	/小时业务/
+describe CN_BODY_604	Body contains "小时业务"
+score CN_BODY_604	0.657
+
+body CN_BODY_620	/树立公司/
+describe CN_BODY_620	Body contains "树立公司"
+score CN_BODY_620	0.687
+
+body CN_BODY_656	/代征/
+describe CN_BODY_656	Body contains "代征"
+score CN_BODY_656	0.087
+
+body CN_BODY_657	/\(24小时/
+describe CN_BODY_657	Body contains "\(24小时"
+score CN_BODY_657	1.219
+
+body CN_BODY_659	/商祺！/
+describe CN_BODY_659	Body contains "商祺！"
+score CN_BODY_659	2.520
+
+body CN_BODY_688	/，敬请/
+describe CN_BODY_688	Body contains "，敬请"
+score CN_BODY_688	0.120
+
+body CN_BODY_696	/进销存/
+describe CN_BODY_696	Body contains "进销存"
+score CN_BODY_696	1.740
+
+body CN_BODY_701	/企业直接/
+describe CN_BODY_701	Body contains "企业直接"
+score CN_BODY_701	0.031
+
+body CN_BODY_702	/票额/
+describe CN_BODY_702	Body contains "票额"
+score CN_BODY_702	0.208
+
+body CN_BODY_703	/无标题/
+describe CN_BODY_703	Body contains "无标题"
+score CN_BODY_703	1.680
+
+body CN_BODY_707	/。欢迎/
+describe CN_BODY_707	Body contains "。欢迎"
+score CN_BODY_707	0.060
+
+body CN_BODY_708	/茶点/
+describe CN_BODY_708	Body contains "茶点"
+score CN_BODY_708	1.380
+
+body CN_BODY_711	/公司现有/
+describe CN_BODY_711	Body contains "公司现有"
+score CN_BODY_711	0.050
+
+body CN_BODY_715	/\)您好/
+describe CN_BODY_715	Body contains "\)您好"
+score CN_BODY_715	1.740
+
+body CN_BODY_717	/标题文档/
+describe CN_BODY_717	Body contains "标题文档"
+score CN_BODY_717	1.680
+
+body CN_BODY_719	/中心作为/
+describe CN_BODY_719	Body contains "中心作为"
+score CN_BODY_719	0.007
+
+body CN_BODY_721	/案例分析/
+describe CN_BODY_721	Body contains "案例分析"
+score CN_BODY_721	0.780
+
+body CN_BODY_728	/：______/
+describe CN_BODY_728	Body contains "：______"
+score CN_BODY_728	1.740
+
+body CN_BODY_739	/如需/
+describe CN_BODY_739	Body contains "如需"
+score CN_BODY_739	0.412
+
+body CN_BODY_740	/商谈/
+describe CN_BODY_740	Body contains "商谈"
+score CN_BODY_740	0.166
+
+body CN_BODY_787	/惠的/
+describe CN_BODY_787	Body contains "惠的"
+score CN_BODY_787	0.001
+
+body CN_BODY_794	/、培训/
+describe CN_BODY_794	Body contains "、培训"
+score CN_BODY_794	0.013
+
+body CN_BODY_795	/移动电话/
+describe CN_BODY_795	Body contains "移动电话"
+score CN_BODY_795	0.811
+
+body CN_BODY_806	/等其它/
+describe CN_BODY_806	Body contains "等其它"
+score CN_BODY_806	0.006
+
+body CN_BODY_808	/合作。/
+describe CN_BODY_808	Body contains "合作。"
+score CN_BODY_808	0.070
+
+body CN_BODY_810	/对外代/
+describe CN_BODY_810	Body contains "对外代"
+score CN_BODY_810	2.220
+
+body CN_BODY_811	/：李/
+describe CN_BODY_811	Body contains "：李"
+score CN_BODY_811	0.060
+
+body CN_BODY_824	/公司本着/
+describe CN_BODY_824	Body contains "公司本着"
+score CN_BODY_824	0.561
+
+body CN_BODY_826	/敬请原谅/
+describe CN_BODY_826	Body contains "敬请原谅"
+score CN_BODY_826	1.405
+
+body CN_BODY_834	/联 系/
+describe CN_BODY_834	Body contains "联 系"
+score CN_BODY_834	0.335
+
+body CN_BODY_838	/进出口/
+describe CN_BODY_838	Body contains "进出口"
+score CN_BODY_838	0.005
+
+body CN_BODY_839	/公司实力/
+describe CN_BODY_839	Body contains "公司实力"
+score CN_BODY_839	0.013
+
+body CN_BODY_853	/所开/
+describe CN_BODY_853	Body contains "所开"
+score CN_BODY_853	0.016
+
+body CN_BODY_858	/直接开出/
+describe CN_BODY_858	Body contains "直接开出"
+score CN_BODY_858	1.365
+
+body CN_BODY_864	/单位名称/
+describe CN_BODY_864	Body contains "单位名称"
+score CN_BODY_864	0.960
+
+body CN_BODY_865	/等按/
+describe CN_BODY_865	Body contains "等按"
+score CN_BODY_865	0.003
+
+body CN_BODY_866	/为贵/
+describe CN_BODY_866	Body contains "为贵"
+score CN_BODY_866	0.002
+
+body CN_BODY_869	/现有全国/
+describe CN_BODY_869	Body contains "现有全国"
+score CN_BODY_869	1.620
+
+body CN_BODY_874	/开或/
+describe CN_BODY_874	Body contains "开或"
+score CN_BODY_874	0.019
+
+body CN_BODY_879	/：　/
+describe CN_BODY_879	Body contains "：　"
+score CN_BODY_879	0.360
+
+body CN_BODY_895	/集团、/
+describe CN_BODY_895	Body contains "集团、"
+score CN_BODY_895	0.306
+
+body CN_BODY_916	/城市有/
+describe CN_BODY_916	Body contains "城市有"
+score CN_BODY_916	0.005
+
+body CN_BODY_928	/给贵/
+describe CN_BODY_928	Body contains "给贵"
+score CN_BODY_928	0.817
+
+body CN_BODY_931	/转帐/
+describe CN_BODY_931	Body contains "转帐"
+score CN_BODY_931	0.143
+
+body CN_BODY_946	/所有行业/
+describe CN_BODY_946	Body contains "所有行业"
+score CN_BODY_946	1.462
+
+body CN_BODY_953	/公司承诺/
+describe CN_BODY_953	Body contains "公司承诺"
+score CN_BODY_953	0.346
+
+body CN_BODY_972	/咨询！/
+describe CN_BODY_972	Body contains "咨询！"
+score CN_BODY_972	1.067
+
+body CN_BODY_982	/电脑版/
+describe CN_BODY_982	Body contains "电脑版"
+score CN_BODY_982	0.376
+
+body CN_BODY_992	/\, 真正/
+describe CN_BODY_992	Body contains "\, 真正"
+score CN_BODY_992	0.143
+
+body CN_BODY_998	/用到的话/
+describe CN_BODY_998	Body contains "用到的话"
+score CN_BODY_998	1.560
+

@@ -1,0 +1,114 @@
+<div style="padding-bottom:40px;"></div>
+<fieldset style="width:900px; margin: 0 auto; border:1px solid #CCCCCC;">
+<div style="padding:10px;">
+<h1 style="margin-left: 0px; ">Reply WOM report for "<?php echo $this->campaign_name; ?>" Campaign!</h1>
+<p>Your answer:</p>
+<p><?php echo $this->report_content; ?></p>
+
+<p>Consumer Personal Info:</p>
+<p><?php echo $this->translate('CONTACT INFORMATION_NAME');?><?php echo $this->consumer['name'];?>&nbsp;&nbsp;&nbsp;&nbsp;
+ <?php echo $this->translate('CONTACT INFORMATION_RECIPIENTS_NAME');?><?php echo $this->consumer['recipients_name'];?>&nbsp;&nbsp;&nbsp;&nbsp;
+ <?php echo $this->translate('CONTACT INFORMATION_PHONE');?><?php echo $this->consumer['phone'];?>
+ <br>
+ <?php echo $this->translate('CONTACT INFORMATION_ADDRESS1');?><?php echo $this->consumer['address1'];?>&nbsp;&nbsp;&nbsp;&nbsp;
+ <?php echo $this->translate('CONTACT GENDER');?><?php echo $this->consumer['gender'];?>
+ </p>
+ </div>
+</fieldset>
+<div style="clear:both"></div>
+
+<div class="content" style="background-color:#fff;padding-top:0;">
+
+			<h2></h2>
+			
+			<form id= 'form' name = 'form' action="<?php echo $this->url(array('controller'=>'report','action'=>'adminreplysend'));?>" method="post">
+			<table class="survey-history" style ="width:900px;">	
+				<div class="invite-emails-subject">		
+					<?php echo $this->mailForm->email; ?> 
+				</div>
+				
+				<div class="invite-emails-subject">
+					<?php echo $this->mailForm->subject; ?> 
+				</div>
+				
+				<div class="invite-emails-content">
+					<?php echo $this->mailForm->message; ?>	
+				</div>
+				
+				<?php if($this->status != 'SENT') {?>
+				<div class="invite-emails-subject">
+					<?php echo $this->mailForm->grade; ?>	
+				</div>
+				<?php }?>
+				<div style="clear:both"></div>
+				<input type="hidden" id="campaign_id" name='campaign_id' value='<?php echo $this->campaign_id;?>' />
+				
+				<input type="hidden" id="report_id"	name='report_id' value='<?php echo $this->report_id;?>' />
+				
+				
+				<div id="notice" style="padding-left: 10px; display:none; font-size: 15px; color: red;" ></div>
+				<div style="clear:both"></div>
+				<div class="buttons-bar" style="padding-top: 10px;">
+					<?php if($this->status != 'SENT') {?>
+						<a style="width:165px;" href='#' onclick = 'javascript:save()'><?php echo $this->translate('Save_Not_Send');?></a>
+						<a style="width:165px;" href="<?php echo $this->url(array('controller'=>'report','action'=>'adminreport', 'id'=>$this->campaign_id));?>" ><?php echo $this->translate('Back');?></a>
+						<?php echo $this->mailForm->submit; ?>
+					<?php } else{?>
+						<a style="width:165px;" href="<?php echo $this->url(array('controller'=>'report','action'=>'adminreport', 'id'=>$this->campaign_id));?>" ><?php echo $this->translate('Back');?></a>
+					<?php }?>
+				</div>
+				<div style="clear:both"></div>
+			</table>
+			</form>	
+			
+</div>
+<fieldset style="width:900px; margin: 0 auto; border:1px solid #CCCCCC;">
+<div style="padding:10px;">
+<?php echo $this->oldContents; ?>
+</div>
+</fieldset>
+<script type="text/javascript">
+var form = document.getElementById('form');
+form.onsubmit = function() {
+	  $('submit').disabled='disabled';
+	  $('notice').style.display = "";
+	  $('notice').innerHTML = 'Sending, please wait...';
+}
+
+
+function save(){
+	$('notice').style.display = "";
+	$('notice').innerHTML = "Please wait...";
+	var url = '<?php echo $this->url(array('controller'=>'report','action'=>'adminsavereply'));?>';  
+	var pars = Form.serialize($('form')); 
+//	alert(pars);    
+	new Ajax.Request(     
+		url,      
+		{     
+		method: 'post',      
+		parameters: pars,      
+		onSuccess: function(){
+				$('notice').innerHTML = "The email has been saved. At "+new Date();
+			}    
+		}
+	);
+}
+
+setInterval("save()", 60000);
+
+//function autosave(){
+//save();
+//setTimeout("autosave()",60000);
+//}
+//var oldOnloadFunc = window.onload;
+//
+//if (typeof window.onload != 'function') {
+//	 	window.onload = autosave;
+//	} else {
+//	    window.onload = function() {
+//		  oldOnloadFunc();
+//		  autosave();
+//	 	}
+//	}
+
+</script>

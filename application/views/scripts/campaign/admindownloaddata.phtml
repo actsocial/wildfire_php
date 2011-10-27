@@ -1,0 +1,40 @@
+<?php if($this->file){
+header('Content-type: application/vnd.ms-excel');
+//下载显示的名字
+header('Content-Disposition: attachment; filename="'.$this->filename.'"');
+readfile($this->file);
+exit(); 
+}
+?>
+
+<div align="center" >
+
+<form id='form' action="<?php echo $this->url(array('controller'=>'campaign','action'=>'admindownloaddata'));?>" method="post">
+<?php if($this->nousers){
+ echo "<p style='color:red'>没有数据</p>";
+}
+?>
+<table>
+<tr>
+<th>活动</th><th>报告数</th><th>参加状态</th>
+</tr>
+
+<tr><td>
+<select name='campaign'>
+<?php 
+foreach ($this->campaigns as $campaign){
+	echo "<option  value='$campaign->id' name='campaign[]'>&nbsp;&nbsp;" . $campaign->name . '</option>';
+	//echo  "</td><td><input type='text' value ='' name='report[".$campaign->id."]'/></td>";
+	//echo "<td><select name='status[".$campaign->id."]'><option value='NEW'>被邀请</option><option value='ACCEPTED'>已参加</option></td></tr>";
+}
+?>
+</select>
+</td>
+<td><input type='text' value ='' name='report' /></td>
+<td><select name='status'><option value='NEW'>被邀请</option><option value='ACCEPTED'>已参加</option></select></td>
+</tr>
+<tr><td><input type="submit" value="提交"/></td></tr>
+</table>
+
+</form>
+</div>                                                             

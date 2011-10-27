@@ -1,0 +1,125 @@
+<div align="center">
+		<h1 style="padding-top:40px;"><?php echo $this->translate("Admin_Reports")?></h1>
+		<p>
+		</p>
+		<div id="notice" style="padding-left: 700px; display:none; font-size: 15px; color: red;" ></div>
+		<table class="survey-history" style ="width:1100px;">
+			<tr>
+				<th><?php echo $this->translate("His_No.")?></th>
+                <th><?php echo $this->translate("Amin_Consumer_email")?></th>
+				<th><?php echo $this->translate("收件人")?></th>
+				<th><?php echo $this->translate("URL")?></th>
+				<th><?php echo $this->translate("His_Reports_date")?></th>
+				<th><a href="#" onclick = "javascript:setSelectedReportState()"> <?php echo $this->translate("审核并回复")?></a></th>
+				<th><?php echo $this->translate("邮件回复的内容")?></th>
+			</tr>
+			<?php $i = $this->NoInitValue ;
+				foreach ($this->paginator as $report):
+				$report_id = $report['id'];
+			?>
+				<tr	>
+				<td><?php echo $i;?></td>
+				<td><?php echo $report['email']?></td>
+				<td width='70px;'><?php echo $report['recipients_name']; ?></td>
+				<td width='400px;'><a href='<?php echo $report['url']?>' target='_blank';>
+				<?php echo $report['url']; if(array_key_exists($report['url'], $this->duplicatedUrlArray) && $report['state'] =='NEW'){ echo '  (提醒：该网址已提交过!)'; }?></a></td>
+				<td  width='100px;'><?php echo $report['create_date']?></td>
+				<td width='70px;'>
+				<?php if($report['state'] !=null && $report['state'] == 'APPROVED'){?>
+					<?php echo $this->translate("His_Reports_APPROVED")?>
+				<?php }else{?>
+					<select id='state_<?php echo $i; ?>' name='state_<?php echo $i; ?>' onchange = "javascript:saveSelectedReportState('<?php echo $i; ?>')" >	
+						<OPTION VALUE="APPROVED" ><?php echo $this->translate("His_Reports_APPROVED")?></OPTION>
+						<OPTION VALUE="UNAPPROVED" ><?php echo $this->translate("His_Reports_UNAPPROVED")?></OPTION>
+						<?php if($report['state'] != null && $report['state'] == 'NEW'){?>
+						<OPTION VALUE="NEW" Selected ><?php echo $this->translate("His_Reports_NEW")?></OPTION>
+						<?php }?> 
+					</select>
+					<?php }?>
+				</td>
+				<td width='270px;' >
+				<?php if($report['content'] !=null && $report['content'] != ''){?>
+					<?php echo $report['content']?>
+				<?php }else{?>
+					<?php if($report['email'] == ''){?>
+						<input type="text" id="reply_text_<?php echo $i; ?>" value='该用户没Email，可以审核通过但无法回复邮件' style="width:240px;border:1px;border-bottom-style:none;border-top-style:none;border-left-style:none;border-right-style:none;" >
+						<textarea id="reply_textarea_<?php echo $i; ?>" rows="3" cols="50" style="display:none;"></textarea>
+					<?php }else{?>
+						<input type="text" id="reply_text_<?php echo $i; ?>" value='' style="width:240px;border:1px;border-bottom-style:none;border-top-style:none;border-left-style:none;border-right-style:none;" >
+						<textarea id="reply_textarea_<?php echo $i; ?>" rows="3" cols="50" style="display:none;"></textarea>
+						<a id='reply_text_edit_<?php echo $i; ?>' style="display:none;" href='#' onclick='javascript:changetext(<?php echo $i; ?>)'>编辑</a>
+					<?php }?>
+				<?php }?>
+				</td>
+				</tr>
+				<input type="text" id="consumer_email_<?php echo $i; ?>"  value="<?php echo $report['email']?>" style="display:none;" />
+				<input type="text" id="report_id_<?php echo $i; ?>"  value="<?php echo $report['id']?>" style="display:none;" />
+				<input type="text" id="consumer_id_<?php echo $i; ?>"  value="<?php echo $report['consumer_id']?>" style="display:none;" />
+			<?php $i++;
+			endforeach;?>
+		</table>
+		 <?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?> 
+		<br>
+</div>
+
+<script type="text/javascript">
+var arrayReportIds = new Array();　
+function saveSelectedReportState(i){
+	$('reply_textarea_'+i).style.display = "none";
+	if($('consumer_email_'+i).value != ''){
+		if($('state_'+i).value == 'NEW'){
+			$('reply_text_edit_'+i).style.display = "none";
+			$('reply_textarea_'+i).value = $('reply_text_'+i).value = '';
+		}
+		if($('state_'+i).value == 'APPROVED'){
+			$('reply_text_edit_'+i).style.display = "";
+			$('reply_text_'+i).style.display = "";
+			$('reply_textarea_'+i).value = $('reply_text_'+i).value = "恭喜你！审核通过，你已获得300星星火积分！ ";
+		}
+		if($('state_'+i).value == 'UNAPPROVED'){
+			$('reply_text_edit_'+i).style.display = "";
+			$('reply_text_'+i).style.display = "";
+			$('reply_textarea_'+i).value = $('reply_text_'+i).value = '审核未通过，你可以登录星星火提交新的网址。';
+		}
+	}else{
+		$('reply_textarea_'+i).value = $('reply_text_'+i).value = '该用户没Email，可以审核通过但无法回复邮件';
+	}
+	for(var j=0;j<arrayReportIds.length;j++){
+		if(arrayReportIds[j] == i){
+			return;
+		}
+	}
+	arrayReportIds.push(i);
+}
+function changetext(i){
+	$('reply_text_'+i).style.display = "none";
+	$('reply_text_edit_'+i).style.display = "none";
+	$('reply_textarea_'+i).style.display = "";
+}
+function setSelectedReportState(){
+	$('notice').style.display = "";
+	$('notice').innerHTML = '处理中，请等待...';
+	var reportids = "";
+	//alert(arrayReportIds.length);
+	for(i=0; i<arrayReportIds.length; i++){
+		reportids += $('report_id_'+arrayReportIds[i]).value+'@'+$('state_'+arrayReportIds[i]).value+'@'+$('consumer_id_'+arrayReportIds[i]).value+'@'+$('reply_textarea_'+arrayReportIds[i]).value+',';
+	}
+	var url = '<?php echo $this->url(array('controller'=>'report','action'=>'adminsaveurlreportstate'));?>';    	
+	var pars = 'type=reportState&reportids='+reportids;
+//	alert(pars);
+	new Ajax.Request(     
+		url,      
+		{     
+		method: 'post',      
+		parameters: pars,      
+		onSuccess: function(){
+//			$('notice').style.display = "";
+//		 	$('notice').innerHTML = '设置完成！';
+		 	window.location.reload(); 
+			}    
+		}
+	);
+	
+}
+
+</script>

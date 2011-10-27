@@ -1,0 +1,45 @@
+<div style="padding-bottom:40px;"></div>
+<div class="content" style="background-color:#fff;padding-top:0;">
+	<h1><?php echo $this->translate("向会员发生活动邀请邮件");?></h1>
+	<form action="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminsendselectedinvitation'));?>" method="post">
+		
+		<?php echo $this->translate("INVITATION_MAIL_RECIPIENT");?><?php echo $this->translate('Email_Address_Notice');?>
+		<?php echo $this->mailForm->emailList; ?>
+		<div style="clear: both; "></div>
+		
+		<?php echo $this->translate("INVITATION_MAIL_SUBJECT");?>
+		<?php echo $this->mailForm->subject; ?>
+		<div style="clear: both; "></div>
+		
+		<?php echo $this->translate("INVITATION_MAIL_CONTENT_ADMIN");?><?php echo $this->translate('Email_Content_Notice');?> &nbsp;&nbsp;&nbsp;
+		<a href="#" onclick="javascript:showmessage();">text</a>/<a href="#" onclick="javascript:showhtmlmessage();">html</a>
+		<?php echo $this->mailForm->message; ?>
+		<div style="clear: both; "></div>
+		
+		<div id='htmlMessage' style="padding: 20px; padding-top:0px; margin-left: 20px; width:770px; display:none;">
+		<?php $this->oFCKeditor->create();?>
+		</div>
+		<div style="clear: both; "></div>
+		
+		<?php echo $this->translate("Admin_Select_CAMPAIGN_For_Invitation");?>
+		<?php echo $this->mailForm->campaignId; ?>
+		<div style="clear: both; "></div>
+		<div class="buttons-bar" style="padding-top: 10px;">
+		<?php echo $this->mailForm->submit; ?> 
+		<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'admincreate'));?>">Back</a>
+		</div>
+	</form>
+</div>
+<div style="clear: both;"></div>
+<script type="text/javascript">
+function showhtmlmessage(){
+	$('htmlMessage').style.display = "";
+	$('message').style.display = "none";
+	$('message').value = "";
+}
+function showmessage(){
+	$('message').style.display = "";
+	$('htmlMessage').style.display = "none";
+	$('htmlMessage').value = "";
+}
+</script>

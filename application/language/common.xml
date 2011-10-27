@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+		<tu tuid='Wildfire'>
+			<tuv xml:lang="zh">
+				<seg>星星火</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Wildfire</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Wildfire_bi_lang'>
+			<tuv xml:lang="zh">
+				<seg>星星火 Wildfire</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>星星火 Wildfire</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Fill_Out_The_Registration_Information'>
+			<tuv xml:lang="zh">
+				<seg>填写注册信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Registration Information</seg>
+			</tuv>
+		</tu>
+
+
+		
+		
+		<tu tuid='HOME'>
+			<tuv xml:lang="zh">
+				<seg>主页</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>my home</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Index_HOME'>
+			<tuv xml:lang="zh">
+				<seg>首页</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>home</seg>
+			</tuv>
+		</tu>
+		<tu tuid='ABOUT_US'>
+			<tuv xml:lang="zh">
+				<seg>关于我们</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>about us</seg>
+			</tuv>
+		</tu>
+		<tu tuid='About_Sparks'>
+			<tuv xml:lang="zh">
+				<seg>关于会员</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>about sparks</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Hire_Us'>
+			<tuv xml:lang="zh">
+				<seg>商业合作</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>hire us</seg>
+			</tuv>
+		</tu>
+		<tu tuid='SPARKS'>
+			<tuv xml:lang="zh">
+				<seg>火星</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>SPARKS</seg>
+			</tuv>
+		</tu>
+		<tu tuid='GET_WOM'>
+			<tuv xml:lang="zh">
+				<seg>口口相传</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>GET WOM</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Logout'>
+			<tuv xml:lang="zh">
+				<seg>注销</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Logout</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Register'>
+			<tuv xml:lang="zh">
+				<seg>注册</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Register</seg>
+			</tuv>
+		</tu>
+		<tu tuid='ACCEPTED'>
+			<tuv xml:lang="zh">
+				<seg>已接受</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Accepted</seg>
+			</tuv>
+		</tu>
+		<tu tuid='NEW'>
+			<tuv xml:lang="zh">
+				<seg>新增</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>NEW</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Back'>
+			<tuv xml:lang="zh">
+				<seg>返回</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Back</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Yes'>
+			<tuv xml:lang="zh">
+				<seg>是</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Yes</seg>
+			</tuv>
+		</tu>
+		<tu tuid='No'>
+			<tuv xml:lang="zh">
+				<seg>否</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>No</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Be_Sure_To_Delete'>
+			<tuv xml:lang="zh">
+				<seg>你是否确定要删除</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Are you sure that you want to delete</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='For'>
+			<tuv xml:lang="zh">
+				<seg>，</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>for</seg>
+			</tuv>
+		</tu>
+	
+		<tu tuid='Interrogation_Mark'>
+			<tuv xml:lang="zh">
+				<seg>？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>?</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Delete'>
+			<tuv xml:lang="zh">
+				<seg>删除</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Delete</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Edit'>
+			<tuv xml:lang="zh">
+				<seg>修改</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Edit</seg>
+			</tuv>
+		</tu>
+		
+		
+		<tu tuid='Email'>
+			<tuv xml:lang="zh">
+				<seg>Email/电话</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email/Phone</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Password'>
+			<tuv xml:lang="zh">
+				<seg>密码</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Password</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Login'>
+			<tuv xml:lang="zh">
+				<seg>登录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Login</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Add'>
+			<tuv xml:lang="zh">
+				<seg>增加</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Add</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Save'>
+			<tuv xml:lang="zh">
+				<seg>保存</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Save</seg>
+			</tuv>
+		</tu>
+		<tu tuid='CAMPAIGNS'>
+			<tuv xml:lang="zh">
+				<seg>活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>campaigns</seg>
+			</tuv>
+		</tu>
+		<tu tuid='TRAINING'>
+			<tuv xml:lang="zh">
+				<seg>培训</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>training</seg>
+			</tuv>
+		</tu>
+		<tu tuid='POLLS'>
+			<tuv xml:lang="zh">
+				<seg>问卷</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>polls</seg>
+			</tuv>
+		</tu>
+		<tu tuid='PROFILE'>
+			<tuv xml:lang="zh">
+				<seg>个人信息</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>profile</seg>
+			</tuv>
+		</tu>
+		<tu tuid='HISTORY'>
+			<tuv xml:lang="zh">
+				<seg>操作记录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>history</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Privacy_Policy'>
+			<tuv xml:lang="zh">
+				<seg>隐私声明</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Privacy Policy</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Terms'>
+			<tuv xml:lang="zh">
+				<seg>条款</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Terms</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Conditions'>
+			<tuv xml:lang="zh">
+				<seg>规定</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Conditions</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Site_Map'>
+			<tuv xml:lang="zh">
+				<seg>网站地图</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Site Map</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Contact_Us'>
+			<tuv xml:lang="zh">
+				<seg>联系我们</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Contact Us</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Investors'>
+			<tuv xml:lang="zh">
+				<seg>投资商</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Investors</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Invite_A_Friend'>
+			<tuv xml:lang="zh">
+				<seg>邀请朋友！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invite a Friend</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Logout'>
+			<tuv xml:lang="zh">
+				<seg>退出</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Logout</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Pagelist_Previous'>
+			<tuv xml:lang="zh">
+				<seg>上一页</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Previous</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Pagelist_Next'>
+			<tuv xml:lang="zh">
+				<seg>下一页</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Next</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Error_Message'>
+			<tuv xml:lang="zh">
+				<seg>您所访问的页面没有加载，请重新刷新一次</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>The page is not loaded successfully, please try to refresh!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Common_Username'>
+			<tuv xml:lang="zh">
+				<seg>Email/电话:</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email/Phone:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_Password'>
+			<tuv xml:lang="zh">
+				<seg>密码:</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Password:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_login'>
+			<tuv xml:lang="zh">
+				<seg>登录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>login</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_help'>
+			<tuv xml:lang="zh">
+				<seg>帮助</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>help</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_home'>
+			<tuv xml:lang="zh">
+				<seg>首页</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>home</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_about_us'>
+			<tuv xml:lang="zh">
+				<seg>关于我们</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>about us</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_about_Sparks'>
+			<tuv xml:lang="zh">
+				<seg>关于会员</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>about sparks</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_hire_us'>
+			<tuv xml:lang="zh">
+				<seg>商业合作</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>hire us</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Common_Contacts'>
+			<tuv xml:lang="zh">
+				<seg>联系我们</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Contacts</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_Privacy_Policy'>
+			<tuv xml:lang="zh">
+				<seg>隐私声明</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Privacy Policy</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_Terms_and_Conditions'>
+			<tuv xml:lang="zh">
+				<seg>条款</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Terms and Conditions</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_Jobs'>
+			<tuv xml:lang="zh">
+				<seg>加入我们</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Jobs</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_Investors'>
+			<tuv xml:lang="zh">
+				<seg>投资商</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Investors</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Common_Forget_Password'>
+			<tuv xml:lang="zh">
+				<seg>忘记密码？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Forget Password?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_Please_login'>
+			<tuv xml:lang="zh">
+				<seg>请登录</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please Login</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Common_Please_login_Content'>
+			<tuv xml:lang="zh">
+				<seg>欢迎来到中国第一个“口口相传”社区，在这里你可以得到你喜欢的各种免费产品，请马上登录和你的朋友一起来分享吧！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Welcome to China’s first word-of-mouth community, where you'll get exciting free products based on your interests, and be the first to tell your friends!</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

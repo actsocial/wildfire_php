@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+
+		<tu tuid='Register_Title'>
+			<tuv xml:lang="zh">
+				<seg>用户注册</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Sign up</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Register_Complete'>
+			<tuv xml:lang="zh">
+				<seg>您已经成功注册星星火会员，请尽快登录注册邮箱激活账户，否则无法登录网站。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have registered with our website,<br/>
+				 please confirm and activate the account in your email of the registering process,<br/>
+				 otherwise you can not login our website!
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Register_Capital_Content'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[<h1>加入星星火  — 让你成为消费者推动市场变革的中坚力量！</h1>
+<p>因为我们只依靠口口相传来扩大，所以你必须有朋友的邀请才能加入星星火社区。</p>
+<p>现在注册，就可以免费得到由世界最大的食品公司提供的儿童早餐饼和玩具。</p>]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[<h1>Become a Spark - be a part of the consumer-powered marketing revolution!</h1>
+<p>Because we rely solely on word-of-mouth to grow, you must be invited by a friend to join the Wildfire community.</p>]]></seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Invitation_Code'>
+			<tuv xml:lang="zh">
+				<seg>注册邀请码：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invitation Code:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Enter_Code'>
+			<tuv xml:lang="zh">
+				<seg>邀请码(可以为空)：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Enter Code:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Verify'>
+			<tuv xml:lang="zh">
+				<seg>验证</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Verify</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Information'>
+			<tuv xml:lang="zh">
+				<seg>个人信息：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Contact Information:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Email'>
+			<tuv xml:lang="zh">
+				<seg>邮箱：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email Address:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Phone'>
+			<tuv xml:lang="zh">
+				<seg>电话：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Phone:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Name'>
+			<tuv xml:lang="zh">
+				<seg>用户名：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Name:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Password'>
+			<tuv xml:lang="zh">
+				<seg>密码：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Password:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Confirm_Password'>
+			<tuv xml:lang="zh">
+				<seg>密码确认：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Confirm Password:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Privacy_Policy'>
+			<tuv xml:lang="zh">
+				<seg>隐私声明/规定条款</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Privacy Policy / Terms and Conditions:</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Privacy_Policy_Content1'>
+			<tuv xml:lang="zh">
+				<seg>我已经阅读了</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>I have read the</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Privacy_Policy_Content2'>
+			<tuv xml:lang="zh">
+				<seg>隐私声明</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Privacy Policy</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Privacy_Policy_Content3'>
+			<tuv xml:lang="zh">
+				<seg>与</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>and</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_Contact_Privacy_Policy_Content4'>
+			<tuv xml:lang="zh">
+				<seg>规定条款</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Terms and Conditions</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Join_Free'>
+			<tuv xml:lang="zh">
+				<seg>益等水果吧,免费产品等你拿!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Free stuff! Eden Juice Bar</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Join_Free_Content'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[<p style='line-height:20px; padding-right:0px; margin-bottom:10px;'>现在加入，你将自动获得“益等”水果吧活动的邀请！</p>
+			<p>你将会得到：</p>
+			<ul  style='line-height:20px; margin-left:40px; padding-left:0px; padding-right:0px;'>
+				<li  style='line-height:20px; margin-top:5px; padding-right:0px;'>1顿免费的食物（果汁和三明治）</li>
+				<li  style='line-height:20px; margin-top:5px;padding-right:0px;'>2杯免费的果汁</li>
+				<li style='line-height:20px;margin-top:5px;padding-right:0px;'>10张给你朋友的5折优惠券</li>
+			</ul>]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[<p style='line-height:20px; padding-right:0px;'>Join now and be automatically invited to the Eden Juice Bar Campaign!</p>
+			<p>You’ll get:</p>
+			<ul  style='line-height:20px;margin-left:40px; padding-left:0px; padding-right:0px;'>
+				<li style='line-height:18px; margin-top:5px; padding-right:0px;'>A free meal (sandwich and juice)</li>
+				<li style='line-height:18px; margin-top:5px; padding-right:0px;'>Two free juices</li>
+				<li style='line-height:18px; margin-top:5px; padding-right:0px;'>Ten 50% coupons for your friends</li>
+			</ul>]]></seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Sorry_This_register_link_has_been_overused'>
+			<tuv xml:lang="zh">
+				<seg>十分抱歉！该链接今天已超过最大使用次数，请联系我们或是明天再次尝试！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Sorry!This register link has been overused today! Please try it tomorrow or contact us directly!</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_err'>
+			<tuv xml:lang="zh">
+				<seg>注册出错：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Err: </seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_authcode_is_invalid'>
+			<tuv xml:lang="zh">
+				<seg>邀请码无效或已被使用</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Register authentication code is not valid.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_password_is_invalid'>
+			<tuv xml:lang="zh">
+				<seg>邀请码无效或已被使用</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>The passwords are not consistent.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_email_is_not_valid'>
+			<tuv xml:lang="zh">
+				<seg>无效或已被使用</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> has already exist.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_phone_is_not_valid'>
+			<tuv xml:lang="zh">
+				<seg>无效或已被使用</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> has already exist.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_password_is_invalid'>
+			<tuv xml:lang="zh">
+				<seg>请输入6~20位的密码</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>It is less than 6 characters long.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_email_is_invalid'>
+			<tuv xml:lang="zh">
+				<seg>Email无效或已被使用</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>It is not a valid email address.</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Register_phone_is_invalid'>
+			<tuv xml:lang="zh">
+				<seg>电话号码无效或已被使用</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>It is not a valid phone number.</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

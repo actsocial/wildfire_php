@@ -1,0 +1,46 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2>Spam Check</h2>
+<form name="spamcheck" action="<?php echo $this->url(array('controller'=>'spam','action'=>'spam'));?>" method="post" id="spamcheck">
+                <style>
+                    td {padding:4px;}
+                    .spamtbl {padding:8px 0;}
+                </style>
+                
+                <table class="spamtbl" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                        <td align="right">
+                            <b>From:</b>
+                        </td>
+                        <td>
+                            <input name="From" type="text" size="50">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right">
+                            <b>Subject:</b>
+                        </td>
+                        <td>
+                            <input name="Subject" type="text" size="50">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right" valign="top">
+                            <b>Body:</b><br>
+                        </td>
+                        <td>
+                            <textarea name="Body" wrap="soft" rows="20" cols="49"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td align="center">
+                            <input type="submit" name="send" value="Submit!">
+                        </td>
+                    </tr>
+
+                </table>
+</form>
+</div>

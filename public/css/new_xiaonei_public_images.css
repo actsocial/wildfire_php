@@ -1,0 +1,57 @@
+.container {
+	background-image: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/main_bk_repeat.gif);
+}
+.header {
+	background-image: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/top_bar_bk.gif);
+}
+.header ul li.selected a {
+	background-image: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/top_bar_active.gif);
+}
+.content {
+	background-image: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/main_bk.gif);
+}
+.content .campaigns .campaign {
+	background-image: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/campaign_bottom.gif);
+}
+.content .campaigns .campaign ul {
+	background-image: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/campaign_bk.gif);
+}
+.content .campaigns .campaign ul li {
+	background-image: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/arrow.gif);
+}
+.content .notices .notice .notice-content ul li {
+	background-image: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/arrow.gif);
+}
+.content .notices .notice .notice-content a {
+	background-image: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/a.gif);
+}
+.footer {
+	background-image: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/footer_bk.gif);
+}
+.content .create-account-panel .bind-account-next-button {
+	background: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/bind_account_next_btn.gif) no-repeat left top;
+}
+.xiaonei_questionnaire .questionnaire-header {
+	background: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/dotted_line.gif) repeat-x left bottom;
+}
+.xiaonei_questionnaire .questionnaire-header h1 {
+	background: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/report_title_bg_32x32.png) no-repeat left top;
+}
+.xiaonei_questionnaire .core-question-area .core-question-title-wrapper h2 {
+	background: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/question_symbol.png) no-repeat 1px 2px;
+}
+.xiaonei_questionnaire .core-question-area .core-question-content-wrapper .textbox {
+	background: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/fieldbg.gif) repeat-x left top ;
+}
+.xiaonei_questionnaire .core-question-area .core-column-one .textbox {
+	background: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/fieldbg.gif) repeat-x left top ;
+}
+.xiaonei_questionnaire .fillout-submit #submit {
+	background: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/bind_account_next_btn.gif) no-repeat left top;
+}
+.message-box {
+	background: url(http://home1.xingxinghuo.com/public/images/info-80x80.gif) no-repeat 80px 90px;
+}
+.message-box .buttons-bar .button {
+	background: url(http://home1.xingxinghuo.com/public/images/new_xiaonei/bind_account_next_btn.gif) no-repeat left top;
+}

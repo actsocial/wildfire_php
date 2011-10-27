@@ -1,0 +1,152 @@
+
+<SCRIPT LANGUAGE="JavaScript" type="text/javascript" src="<?php echo $this->baseUrl();?>/js/sms.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript">
+var APILength = new Array();
+APILength[2] = 70;
+APILength[3] = 70;
+APILength[4] = 70;
+APILength[8] = 0;
+maxlen = 70;
+atype = 3;
+function changeAPIType(type)
+{
+	if(type==1){
+		alert("通道一由于网络故障，暂时停用！请选择别的通道发送。");
+		document.getElementById("apitype").value = 2;
+		type=2;
+	}
+	/*if(type==4){
+		alert("营销通道还未正式启用！请选择别的通道发送。");
+		document.getElementById("apitype").value = 2;
+		type=2;
+	}*/
+	maxlen = APILength[type];
+	document.getElementById("MaxLen").innerHTML=maxlen;
+	smsCount(document.getElementById("sendForm"), 3);
+}
+function showOrNot(val){
+	if(val=="handwrite"){
+		document.getElementById("byyouself").style.display="";
+		document.getElementById("bytempleate").style.display="none";
+	}else if (val=="chosetempleate"){
+		document.getElementById("byyouself").style.display="none";
+		document.getElementById("bytempleate").style.display="";
+	}
+}
+</SCRIPT>
+</head>
+<body>
+<div align="center">
+
+<table border="0" width="40%">
+	<form id="sendForm" action="<?php echo $this->url(array('controller'=>'sms','action'=>'adminsend'));?>" method="post" onSubmit="return CheckForm(this)" >
+		<tr> <td valign="middle"><strong>接收号码：</strong></td> </tr>
+		<tr>
+			<td valign="middle">
+				<textarea id="textphone" name="PhoneNum" class="formstyle" cols="55" rows="6" wrap='virtual'><?php if (isset($this->phones)) echo $this->phones; ?></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td width="51%" align="left" valign="middle" style="line-height:20px">
+				<font color="#FF0000">*</font>发送多个手机号码请用逗号“,”分开，如：13700000000,13900000000 </td>
+		</tr>
+		<tr><td>			<input type="radio" name="send" value = "handwrite" onclick="showOrNot(this.value)" checked=checked >手动输入
+			<input type="radio" name="send" value = "chosetempleate" onclick="showOrNot(this.value)" >选择模板</td> </tr>
+		<tr> <td  valign="middle" ><strong>短信内容：</strong></td> </tr>
+		<tr> <td valign="middle">
+                           <div id="byyouself" style="display:">
+							<div> 您已写了
+								<input readonly value="0" type="text" name="chrLen" id="chrLen" class="formstyle" size=3 maxlength=3/>
+								个字数，共
+								<input readonly value="0" type="text" name="smsLen" class="formstyle" size=1 maxlength=1 />
+								条短信，当前通道允许<span id="MaxLen" style="color:#FF6600">70</span>字/条</div>
+							<div>
+								<textarea name="Msg" id="Msg" wrap=physical class="formstyle" cols="55" rows="6" onKeyUp="smsCount(this.form,1);this.pos=document.selection.createRange();" onChange="smsCount(this.form,1);" onSelect="this.pos=document.selection.createRange();" onClick="this.pos=document.selection.createRange();"><?php if (isset($this->content)) echo $this->content; ?></textarea>
+							</div> 
+							</div>
+							<div id="bytempleate" style="display:none">
+							<?php 
+							    if(count($this->smsmessages)){	
+							    	echo "<select name='message'>";						    	
+							    	foreach ($this->smsmessages as $message){
+							    		echo "<option value='$message->id'>$message->subject</option>";
+							    	}
+							    	echo "</select>";
+							    }
+							?> 
+						</div>
+			</td>
+		</tr>
+		<tr>
+			<td align="left" valign="middle" style="line-height:20px">&nbsp;<font color="#FF0000">*</font>每条短信字数与所选通道有关，一次1条。</td>
+		</tr>
+		<tr> <td  valign="middle" ><strong>发送通道：</strong></td> </tr>
+		<tr>
+			 <td  valign="middle" >
+				<div>
+						<select name="apitype" onChange="changeAPIType(this.value);">
+							<option value="8" selected>
+                             	 即时通道一       (客服类推荐)   (发送1条扣去  1.3条)
+                            </option>
+							<option value="9" >
+                             	即时通道一      (发送1条扣去1.3条)
+                             </option>
+                             <option value="2" >
+                             	 通道二    (发送1条扣去1条)
+                             </option>
+                             <option value="3" >
+                            	  即时通道二    (发送1条扣去 1.3条)
+                             </option>
+                             <option value="10" >
+                              	通道三  (发送1条扣去 1   条)
+                             </option>
+						</select>
+				</div>
+			</td>
+		</tr>
+		<tr> 
+			<td>
+				<table width="100%" border="1" cellspacing="0" cellpadding="1" bordercolor="#CCCCCC">
+						    <tr>
+
+                              <td>通道二：会对短信内容进行严格审核，不允许发送含有任何营销内容的短信。</td>
+                            </tr>
+                            <tr>
+                              <td ><font color="#FF6600">即fffff时通道：专为需即时发送的客户开辟的绿色通道，发送速度很快，支持回复短信。</font></td>
+                            </tr>
+                             <tr>
+							<td >通道三：为单条用户首选，其快速，价格便宜。</td>
+
+						  </tr>
+						  <tr>
+							<td >注：通道三群发时，只要用一条成功就会收款。</td>
+						  </tr>
+                            <!--<tr>
+                              <td >营销通道：专为发送广告营销信息的客户开辟的通道，成功率达92%以上。</td>
+                            </tr>-->
+                            <tr>
+                              <td >注：在发送高峰期，通道接口可能会出现涌堵现象，这时建议您更换通道来发送。</td>
+                            </tr>
+
+                            <tr>
+                              <td >注：由于近段垃圾短信整治，通道二和即时通道不允许发送广告营销类短信。</td>
+                            </tr>
+                            <tr>
+                              <td >注：通道二不支持发送全球通手机号码；如有全球通号码，请使用即时通道发送。</td>
+                            </tr>
+
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="44" colspan="2" align="center"  >
+				<input type="hidden" name="plan_id" value="<?php if (isset($this->plan_id)) echo $this->plan_id;?>"/>
+                <input type="submit" name="Submit"  value="发 送" />
+			</td>
+		</tr>
+		</form>
+	</table>
+	
+</div>
+</body>
+

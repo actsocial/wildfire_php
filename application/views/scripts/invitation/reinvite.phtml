@@ -1,0 +1,50 @@
+<div class="article-box">
+	<div class="article-box-inner">
+		<h1 style="margin-left:0;"><?php echo $this->translate('INVITATION_MAIL_INTRODUCTION_HEAD');?></h1>
+		<p><?php echo $this->translate('INVITATION_MAIL_INTRODUCTION_CONTENT');?></p>
+	</div>
+</div>
+
+<div class="article-box" style="background:#fff;padding-top:0;">
+	<div class="article-box-inner" style="background:#fff;">	
+			<form action="<?php echo $this->url(array('controller'=>'invitation','action'=>'resend'));?>" method="post">
+			<dl>
+				<div ><p style="margin-top:0px; margin-bottom:0px; padding-top:5px; padding-bottom:0px;">
+				<?php echo $this->translate("INVITATION_MAIL_RECIPIENT");?></p></div>
+				<div class="invite-emails-subject">	
+					<?php echo $this->sendMailForm->resendemail; ?>
+				</div>
+				
+				<div style="clear:both; "></div>
+				<div ><p style="margin-top:0px; margin-bottom:0px; padding-top:5px; padding-bottom:0px;">
+				<?php echo $this->translate("INVITATION_MAIL_SUBJECT");?></p></div>
+				<div class="invite-emails-subject">
+					<?php echo $this->sendMailForm->subject; ?>
+				</div>
+				
+				<div ><p style="margin-top:0px; margin-bottom:0px; padding-top:5px; padding-bottom:0px;">
+				<?php echo $this->translate("INVITATION_MAIL_CONTENT");?></p></div>
+				<div class="invite-emails-content">
+					<?php echo $this->sendMailForm->message; ?>
+				</div>
+			</dl>
+			
+				<div class="invite-emails-include" style="display:inline" >
+					<h2><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_HINT');?></h2>
+					<p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_1');?></p>
+					<ul>
+						<li><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_2');?></li>
+						<li><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_3');?></li>
+						<li><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_4');?></li>
+					</ul>
+					<p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_5');?></p>
+					<p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_6');?></p>
+					<p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_7');?></p>
+				</div>		
+
+				<input type ="text" name ='sendto' id='sendto' value=<?php echo $this->sendto; ?> style='display: none;' />	
+				<div class="send-invitation"><?php echo $this->sendMailForm->submit; ?></div>
+				<div style="clear:both"></div>
+			</form>	
+	</div>
+</div>

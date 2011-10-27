@@ -1,0 +1,38 @@
+<!-- 
+See http://developer.yahoo.com/ypatterns/pattern.php?pattern=searchpagination
+-->
+
+ <?php if ($this->pageCount): ?> 
+<div class="paginationControl">
+<!-- Previous page link --> 
+<?php if (isset($this->previous)): ?> 
+  <a href="<?= $this->url(array('controller' => $this->controller, 'action' => $this->action, 'page' => $this->previous,"id"=>$this->id,"pest"=>$this->pest,'state'=>$this->state)); ?>">&lt; <?php echo $this->translate('Pagelist_Previous')?></a> 
+<?php else: ?> 
+  <span class="disabled">&lt; <?php echo $this->translate('Pagelist_Previous')?></span>  
+<?php endif; ?> 
+
+<!-- Numbered page links -->
+<?php foreach ($this->pagesInRange as $page): ?> 
+  <?php if ($page != $this->current): ?>
+    <?php if (isset($this->p1)){?>
+     <a href="<?= $this->url(array('controller' => $this->controller, 'action' => $this->action, 't'=>$this->t, 'p1'=>$this->p1, 'p2'=>$this->p2,'page' => $page,"id"=>$this->id,"pest"=>$this->pest,'state'=>$this->state)); ?>"><?= $page; ?></a>  
+    <?php }else{?>
+    <a href="<?= $this->url(array('controller' => $this->controller, 'action' => $this->action, 'page' => $page,"id"=>$this->id,"pest"=>$this->pest,'state'=>$this->state)); ?>"><?= $page; ?></a>  
+    <?php }?>
+    <?php else: ?>
+    <?= $page; ?>  
+  <?php endif; ?>
+<?php endforeach; ?>
+
+<!-- Next page link --> 
+<?php if (isset($this->next)): ?> 
+    <?php if (isset($this->p1)){?>
+     <a href="<?= $this->url(array('controller' => $this->controller, 'action' => $this->action, 't'=>$this->t, 'p1'=>$this->p1, 'p2'=>$this->p2,'page' => $this->next,"id"=>$this->id,"pest"=>$this->pest,'state'=>$this->state,'select_state'=>$this->status)); ?>"><?php echo $this->translate('Pagelist_Next')?> &gt;</a>  
+    <?php }else{?>
+  <a href="<?= $this->url(array('controller' => $this->controller, 'action' => $this->action, 'page' => $this->next,"id"=>$this->id,"pest"=>$this->pest,'state'=>$this->state)); ?>"><?php echo $this->translate('Pagelist_Next')?> &gt;</a>
+ <?php }?>
+    <?php else: ?> 
+  <span class="disabled"><?php echo $this->translate('Pagelist_Next')?> &gt;</span>
+<?php endif; ?> 
+</div> 
+<?php endif; ?>

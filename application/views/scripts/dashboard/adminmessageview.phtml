@@ -1,0 +1,95 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center">
+  <h2><?php echo $this->translate('Client_Reply_List');?></h2><br/>
+  <p>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminmessageadd'));?>"><?php echo $this->translate('Client_Message_Add');?></a></span>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminmessage'));?>"><?php echo $this->translate('Client_Message_List');?></a></span>
+  </p>
+</div>
+<!-- message info -->
+<fieldset style="width:800px; margin: 0 auto; border:1px solid #CCCCCC;">
+<div style="padding:10px;">
+<h1 style="margin-left: 0px; "><?php echo $this->translate('Client_Message_Subject');?>: "<?php echo $this->message->subject; ?>"</h1>
+
+<table>
+  <tr>
+    <td><b><?php echo $this->translate('Client_Message_Type');?>: </b></td><td><?php echo $this->message->type;?></td>
+    <td><b><?php echo $this->translate('Client_Message_Date');?>: </b></td><td><?php echo $this->message->create_date;?></td>
+  </tr>
+  <tr>
+    <td><b><?php echo $this->translate('Client_Message_From_ID');?>: </b></td><td><?php echo $this->message->from;?>(<?php echo $this->message->from_type;?>)</td>
+    <td><b><?php echo $this->translate('Client_Message_Creator');?>: </b></td><td><?php echo $this->message->create_user;?></td>
+  </tr>
+  <tr>
+    <td><b><?php echo $this->translate('Client_Message_Subject');?>: </b></td><td colspan="3"><?php echo $this->message->subject;?></td>
+  </tr>
+  <tr>
+    <td><b><?php echo $this->translate('Client_Message_Content');?>: </b></td><td colspan="3"><?php echo $this->message->content;?></td>
+  </tr>
+</table>
+</div>
+</fieldset>
+<div style="clear:both"></div>
+<br/>
+
+<!-- reply list -->
+<fieldset style="width:800px; margin: 0 auto; border:1px solid #CCCCCC;">
+<div style="padding:10px;">
+<h1 style='margin-left: 0px;'>Old reply for this message:</h1>
+
+<?php if(count($this->oldreply) == 0) { echo "No other reports right now.";}
+$i = 0; foreach ($this->oldreply as $reply) { ?>
+<p><b><?php echo ++$i;?>#</b>
+<font style='font-size: 14px; color: #cc0000; padding: 0 10px;'><?php echo $reply->from;?></font>
+<span style='padding-right: 10px;'><?php echo $reply->create_date;?></span>
+<a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminreplydelete', 'id'=>$reply->id));?>" onclick="return confirm('确实要删除吗？');">
+  Delete
+</a>
+<br/><?php echo $reply->subject;?>
+<br/><?php echo $reply->content;?></p>
+<?php } ?>
+</div>
+</fieldset>
+<br/>
+
+<!-- add new reply -->
+<div id="reply-main" style="width:800px; margin: 0 auto;">
+<h1 style='margin-left: 0px;'><?php echo $this->translate('Client_Message_Reply');?>: </h1>
+<form id="reply_form" name="reply_form" action="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminreplysave'));?>" method="post">
+<table>
+  <tr>
+    <td align="right"><b><?php echo $this->translate('Client_Message_From_Type');?>: </b></td>
+    <td>
+      <select name="from_type">
+      <option value="Spark" <?php if($this->message->from_type=='Spark' || $this->message->from_type=='Client') { echo 'selected';}?>><?php echo $this->translate('Client_Message_From_Type Spark');?></option>
+      <option value="Wildfire" <?php if($this->message->from_type=='Wildfire') { echo 'selected';}?>><?php echo $this->translate('Client_Message_From_Type Wildfire');?></option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td align="right"><b><?php echo $this->translate('Client_Message_From_ID');?>: </b></td>
+    <td>
+      <input name="from" type="text" value="<?php echo ($this->message->from_type=='Client')?$this->message->to:$this->message->from;?>">
+      <input name="to_type" type="hidden" value="<?php echo ($this->message->from_type=='Client')?$this->message->from_type:$this->message->to_type;?>">
+      <input name="to" type="hidden" value="<?php echo ($this->message->from_type=='Client')?$this->message->from:$this->message->to;?>">
+    </td>
+  </tr>
+  <tr>
+    <td align="right"><b><?php echo $this->translate('Client_Message_Subject');?>: </b></td>
+    <td>
+      <input type="text" name="subject" size="30" value="<?php echo $this->translate('Client_Message_Reply_Prefix');?><?php echo $this->message->subject; ?>" />
+    </td>
+  </tr>
+  <tr>
+    <td align="right" valign="top"><b><?php echo $this->translate('Client_Message_Content');?>: </b></td>
+    <td>
+      <textarea rows="3" cols="28" name="content"></textarea>
+    </td>
+  </tr>
+  <tr><td colspan="2" align="right">
+      <input type="submit" value="submit" />
+  </td></tr>
+</table>
+<input type="hidden" id="reply-id" name="message_id" value="<?php echo $this->message->id; ?>" />
+</form>
+</div>

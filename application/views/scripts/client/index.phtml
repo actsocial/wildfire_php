@@ -1,0 +1,14 @@
+<div style="margin: 0 auto;width:362px;">
+<div ><img src="<?php echo $this->baseUrl();?>/images/dl_l_t.gif" /></div>
+<div id="client_login" style="width:312px;height: 160px;padding-top:20px;padding-left:50px;background:url('<?php echo $this->baseUrl();?>/images/dl_l_bg.gif')">
+
+      <h2><?php echo $this->translate('Client_Login');?></h2>
+      <br/>
+		<?php echo $this->form ;?>
+        
+		<div style="clear:both"></div>
+
+  </div>
+<div><img src="<?php echo $this->baseUrl();?>/images/dl_l_b.gif" /></div> 
+<?php if(isset($this->message)){echo "<div style='width:300px;color:red;margin: 0 auto;'>".$this->message."</div>"; }?>
+</div>

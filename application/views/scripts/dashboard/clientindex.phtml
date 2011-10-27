@@ -1,0 +1,48 @@
+﻿<div align="center" >
+<h2 ><?php echo $this->translate('Admin_Campaigns');?></h2>
+<br/>
+<table width="700">
+	<tr>
+    	<th>No.</th>
+    	<th><?php echo $this->translate('Admin_Campaigns_Name');?></th>
+    	<th><?php echo $this->translate('Admin_Campaigns_Create_Date');?></th>
+    	<th><?php echo $this->translate('Admin_Campaigns_Expired_Date');?></th>
+    	<th>&nbsp;</th>
+	</tr>
+<?php $count = 1; foreach($this->campaigns as $campaign) { ?>
+	<tr>
+    	<td ><?php echo $count++;?></td>
+    	<td><?php echo $this->escape($campaign->name);?></td>
+    	<td><?php echo $this->escape($campaign->create_date);?></td>
+    	<td><?php echo $this->escape($campaign->expire_date);?></td>
+    	<td>
+    	<a href="<?php echo $this->url(array('controller'=>'dashboard', 'action'=>'clientdrip', 'id'=>$campaign->id));?>">
+    	show</a>
+    	</td>
+	</tr>
+<?php } ?>
+</table>
+</div>
+
+	  <div style="text-align:center;margin: 0 auto;">
+	    <img style="width:960px;" src="<?php echo $this->baseUrl();?>/images/1000x400.jpg" />
+	  </div>
+<script type="text/javascript">
+        $(function(){
+            $("#openDialog").css("cursor", "pointer").bind("click", function(event){  //修改openDialog的鼠标样式，并绑定点击事件
+                //$("#divTip").dialog("destroy");   //销毁dialog对象
+                //$("#divTip").dialog();    //初始化dialog并自动弹出
+                $("#divTip").dialog({autoOpen:false, title:"base dialog"})
+                            .html($(event.target).attr("data"))   //读取span中的值
+                            .show("slow")
+                            .dialog("open");
+            });
+        });
+</script>
+
+    <div>
+        <span id="openDialog" style="color:Red;" data="我是红色的">弹出窗口</span>
+    </div>
+    <div id="divTip">
+        <span>弹出窗口</span>
+    </div>

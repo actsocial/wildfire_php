@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+	<header creationtoolversion="1.0.0" datatype="winres"
+		segtype="sentence" adminlang="en-us" srclang="de-de" o-tmf="abc"
+		creationtool="XYZTool">
+	</header>
+	<body>
+		<tu tuid='INDEX_SPARK_CAMPAIGN_INVITATION_OTHER'>
+			<tuv xml:lang="zh">
+				<seg>其它</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Other </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_SPARK_CAMPAIGN_INVITATION_OTHER_NotCapital'>
+			<tuv xml:lang="zh">
+				<seg>其它</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>other </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_SPARK_CAMPAIGN_INVITATION_HEADER'>
+			<tuv xml:lang="zh">
+				<seg>星星火活动邀请</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Campaign Invitations</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_SPARK_CAMPAIGN_INVITATION_CONTENT1'>
+			<tuv xml:lang="zh">
+				<seg>你当前没有</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You do not currently have invitations to any </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_SPARK_CAMPAIGN_INVITATION_CONTENT2'>
+			<tuv xml:lang="zh">
+				<seg>星星火活动的邀请。请你经常查看活动页面，如果发现任何你感兴趣的活动请立即接受邀请！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Campaigns. 
+				Be sure to check your Spark Homepage often and sign up quick if you see a Spark Campaign that interests you!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_LOOK_FOR_FUN'>
+			<tuv xml:lang="zh">
+				<seg>来做一些好玩的事？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Looking for something fun to do?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_LOOK_FOR_FUN_CONTENT_PART1'>
+			<tuv xml:lang="zh">
+				<seg>当你在等待下一个活动时，为什么不来做一些</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Why not complete some</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_LOOK_FOR_FUN_CONTENT_PART2'>
+			<tuv xml:lang="zh">
+				<seg>问卷调查</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Polls</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_LOOK_FOR_FUN_CONTENT_PART3'>
+			<tuv xml:lang="zh">
+				<seg>或是一些</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>or do some</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_LOOK_FOR_FUN_CONTENT_PART4'>
+			<tuv xml:lang="zh">
+				<seg>星星火培训</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spark Training </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_LOOK_FOR_FUN_CONTENT_PART5'>
+			<tuv xml:lang="zh">
+				<seg>？通过参与问卷让我们更加了解你的需要，完成问卷后你将得到星星火积分，同时会更有可能得到下次活动的邀请！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>while you wait for the next Spark Campaign? Completing polls lets us know more about you, which means you’re more likely to be invited to future campaigns!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INDEX_YOU_ARE_INVITED'>
+			<tuv xml:lang="zh">
+				<seg>邀请你参加 ——</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You’re Invited -</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Add_Campaign_Invitation'>
+			<tuv xml:lang="zh">
+				<seg>新增活动邀请</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Add Campaign Invitation</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Campaign_Invitations'>
+			<tuv xml:lang="zh">
+				<seg>活动邀请列表</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaign Invitations</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Campaign_Invitations_Name'>
+			<tuv xml:lang="zh">
+				<seg>活动邀请名称</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaign Invitations</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Consumers_Name'>
+			<tuv xml:lang="zh">
+				<seg>姓名</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Name</seg>
+			</tuv>
+		</tu>
+		<tu tuid='State'>
+			<tuv xml:lang="zh">
+				<seg>状态</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>State</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Create_Date'>
+			<tuv xml:lang="zh">
+				<seg>创建时间</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Create Date</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Accept'>
+			<tuv xml:lang="zh">
+				<seg>马上申请加入</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Join</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Rejcet_Go_back'>
+			<tuv xml:lang="zh">
+				<seg>返回</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Go Back</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Reject'>
+			<tuv xml:lang="zh">
+				<seg>不想参加</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>No thanks</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Reject_confirm1'>
+			<tuv xml:lang="zh">
+				<seg>你确定不想参加"</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Are you sure you do not want to participate in the "</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Reject_confirm2'>
+			<tuv xml:lang="zh">
+				<seg>"活动吗？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>" Spark Campaign?</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Select_User'>
+			<tuv xml:lang="zh">
+				<seg>请选择用户</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Select User</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_INTRODUCTION_HEAD'>
+			<tuv xml:lang="zh">
+				<seg>让你的朋友加入星星火</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Tell a Friend about Wildfire</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_INTRODUCTION_CONTENT'>
+			<tuv xml:lang="zh">
+				<seg>除了口口相传外，你还希望社区如何壮大？发送邮件邀请你的朋友加入到星星火社区吧，让他们一起来享受参与各种活动带来的乐趣吧！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>How else would you expect us to grow besides by word-of-mouth? Help your friends out by sending them an invitation to become a Spark. They'll be sure to thank you later when you're participating in great campaigns together.</seg>
+			</tuv>
+		</tu>		
+		<tu tuid='INVITATION_MAIL_LIST_PART1_Sucessful'>
+			<tuv xml:lang="zh">
+				<seg>你已成功发送邀请邮件，请继续！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your invitations have been sent!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_LIST_PART1_DataError'>
+			<tuv xml:lang="zh">
+				<seg>发送邮件失败！请确认你是否输入正确的数据。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your invitations have been not sent! Please make sure you enter the correct data.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_LIST_PART1_Fail'>
+			<tuv xml:lang="zh">
+				<seg>发送邮件失败！请确认你是否输入正确的Email地址或是该用户已被邀请。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your invitations have been not sent! Please make sure you enter the correct email.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Invites_More_Friends'>
+			<tuv xml:lang="zh">
+				<seg>继续邀请好友</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invite more friends</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_LIST_PART1'>
+			<tuv xml:lang="zh">
+				<seg>输入你最想邀请的朋友的邮箱地址（你还有</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Enter the e-mail addresses of your friends (you have</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_LIST_PART2'>
+			<tuv xml:lang="zh">
+				<seg>个朋友可以邀请）：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>invites left):</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_RECIPIENT'>
+			<tuv xml:lang="zh">
+				<seg>收件人：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>To:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_SUBJECT'>
+			<tuv xml:lang="zh">
+				<seg>邮件主题：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Subject:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_TEMPLATE'>
+			<tuv xml:lang="zh">
+				<seg>邮件模板：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Template: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_ADD'>
+			<tuv xml:lang="zh">
+				<seg>添加</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>ADD </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_CONTENT_ADMIN'>
+			<tuv xml:lang="zh">
+				<seg>邮件内容：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Message: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_CONTENT'>
+			<tuv xml:lang="zh">
+				<seg>邮件内容：（最多500个字符）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Message: (500 Characters Max)</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_CONTENT_ADD_HINT'>
+			<tuv xml:lang="zh">
+				<seg>下面的内容将被添加到你的邮件中：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>The following text will be added to your e-mail:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_CONTENT_ADD_1'>
+			<tuv xml:lang="zh">
+				<seg>成为星星火社区的一员，你将可以：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>As a Wildfire Member (a Spark), you'll get to:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_CONTENT_ADD_2'>
+			<tuv xml:lang="zh">
+				<seg>发现并得到最新的产品和服务</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Discover and try new products and services</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_CONTENT_ADD_3'>
+			<tuv xml:lang="zh">
+				<seg>通过口口相传与你的朋友进行最直接的交流</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Spread sincere word of mouth about them </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_CONTENT_ADD_4'>
+			<tuv xml:lang="zh">
+				<seg>你对产品意见将影响你身边一些最大的公司和品牌</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Have your opinions influence some of the biggest companies and brands around</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_CONTENT_ADD_5'>
+			<tuv xml:lang="zh">
+				<seg>如果你喜欢以上这些好处，就马上加入我们吧。此外，我们将保护你的个人隐私，不会公开你的个人信息。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>If you'd like to receive those benefits, become an Spark today. Don't worry, Wildfire respects its members' privacy and won't share your personal information or spam you. </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_CONTENT_ADD_6'>
+			<tuv xml:lang="zh">
+				<seg>我们是一个专注于口口相传的社区，所以没有比通过朋友推荐来发展新会员更好的方式了。事实上，通过朋友邀请是加入星星火社区唯一的方式。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>We're a community focused on word of mouth, so what better way to recruit new members than recommendations from friends? In fact, being invited by a friend is the only way to join Wildfire. </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_CONTENT_ADD_7'>
+			<tuv xml:lang="zh">
+				<seg>期待你加入我们！星星火——中国口碑社区</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>We hope to see you soon! Wildfire – China’s Word-of-Mouth Community </seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_SEND_NOTICE'>
+			<tuv xml:lang="zh">
+				<seg>正在发送，请等待...</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please wait...</seg>
+			</tuv>
+		</tu>
+		<tu tuid='INVITATION_MAIL_SEND'>
+			<tuv xml:lang="zh">
+				<seg>发送</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Send</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_currently_have_no_remaining'>
+			<tuv xml:lang="zh">
+				<seg>你当前没有剩余的“注册邀请”</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You currently have no remaining friend invitations.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='You_can_receive_more_invitations'>
+			<tuv xml:lang="zh">
+				<seg>通过参与星星火的活动，你将会有更多机会来发送注册邀请，以便让你的朋友来加入我们。快来参与活动吧！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You can receive more invitations by participating in Spark Campaigns, so be sure to participate in a Spark Campaign and check back soon!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Select_CAMPAIGN'>
+			<tuv xml:lang="zh">
+				<seg>活动：（用户将被自动邀请参加该活动）</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaign:</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Admin_Select_CAMPAIGN_For_Invitation'>
+			<tuv xml:lang="zh">
+				<seg>邀请参加的活动：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Campaign:</seg>
+			</tuv>
+		</tu>
+	</body>
+</tmx>

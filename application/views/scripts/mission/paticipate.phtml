@@ -1,0 +1,65 @@
+<img src="<?php echo $this->baseUrl();?>/images/popup-fillout-logo.gif" class="logo"/>
+<div class="top-content" >
+<h1><?php echo ' "'.$this->campaing_name.'" '; ?></h1>
+<!-- 想办法做成动态的 -->
+<?php if ($this->surveyId=='631'){?>
+<p>我们建议这个创意故事包含以下几个要素：<br/>
+参与的人<br/>
+与百利的发生的故事（例如用百利做布丁、蛋糕的过程）<br/>
+怎样谈论百利的<br/>
+你的百利创意搭配<br/>
+任何关于口味及搭配的建议<br/>
+你们和百利创意照片<br/>
+
+请记住，只有同时提交故事及照片才能获得400积分及参加“百利达人”的评选哦！</p>
+<?php }elseif ($this->surveyId=='675'){?>
+<p>
+你身边有可爱的宝宝嘛？<br/>
+你自己的？你亲戚？你同事的？你朋友的？<br/>
+那就来参加星星火宝宝秀任务吧！<br/>
+至少2张宝宝（或宝宝和家人）的照片<br/>
+</p>
+<?php }elseif ($this->surveyId == '689')?>
+<p>
+你是走街串巷寻找美食的吃货一族？<br>
+还是喜爱边走边拍彻头彻尾的微博控？<br>
+无论你是哪一种潮流人物，只要善于发现、乐于分享。<br>
+星星火新mission——“寻找美食之旅”等待的就是你！<br>
+</p>
+<?php ?>
+</div>
+<div class="clear"></div>
+
+<?php 
+include('../public/surveys/'.$this->file);
+?>
+
+<?php if (isset($this->file)) { ?>
+<script language="JavaScript" type="text/javascript">
+  $('id').value = '';
+  $('submit').disabled='disabled';
+  var url = "<?php echo $this->url(array('controller'=>'common','action'=>'getaccesscode'));?>";
+  var params = 'surveyId='+ <?php echo $this->surveyId ;?>;
+  new Ajax.Request(
+      url,
+      {
+      method: 'get',
+      parameters: params,
+      onSuccess: function(msg) {
+          var accessCode = msg.responseText;
+          $('id').value = accessCode.substring(1,accessCode.length-1);
+          $('submit').disabled='';
+          }
+      }
+  );
+</script>
+<?php } ?>
+
+<!-- 
+<div class="content" style="background:#fff;padding-top:0;">
+	<div class="buttons-bar">
+	<a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'description', 'id'=>$this->id));?>'>Back</a>
+	<div style="clear:both"></div>
+	</div>
+</div>
+ -->

@@ -1,0 +1,50 @@
+<?php 
+if(isset($this->file)){
+	echo  $this->file;
+}else{
+
+
+?>
+<center>
+<table width=85%>
+<tr>
+<td colspan=7 align='left'><input id="ajaxurl" type="hidden" value="<?php echo $this->url(array('controller'=>'email','action'=>'ajax'));?>"/><a href="<?php echo $this->url(array('controller'=>'email','action'=>'adminrecieve'));?>">接收</a>
+|<a href="<?php echo $this->url(array('controller'=>'email','action'=>'adminindex'));?>">刷新</a>
+|<a href="javascript:markEmails('seen')">标记为已读</a>
+|<a href="javascript:markEmails('unseen')">标记为未读</a>
+|<a href="javascript:markEmails('delete')">删除</a>
+</td>
+</tr>
+<tr>
+<th align='left'><input type="checkbox" id="selectall"/>全选</th>
+<th align='left'>标题</th>
+<th align='left'>发送者</th>
+<th align='left'>时间</th>
+</tr>
+<?php 
+foreach($this->content as $val){
+	echo "<tr id=\"h$val[id]\" style='font-weight:".(($val['unseen'])?'bold':'')."'>";
+    echo "<td align='left'><input type='checkbox' name='eid[]' value='$val[id]' class='eitem'/></td>";
+	echo "<td align='left'><input type='hidden' value='$val[unseen]' id='unseen_$val[id]'/><a href=\"javascript:showContent('$val[id]');\">".$val['subject']."</a></td>";
+	echo "<td align='left'>".$val['from']."</td>";
+	echo "<td align='left'>".$val['date']."</td>";
+	echo "<td align='left'>".(($val['reply_id']!=null)?'<a class="thickbox" href="'.$this->url(array('controller'=>'email','action'=>'adminviewreply')).'/reply_id/'.$val['reply_id'].'">查看回复</a>':'<a href="'.$this->url(array('controller'=>'email','action'=>'adminreplyemail')).'/id/'.$val['id'].'&TB_iframe=true" class="thickbox">回复</a>')."</td>";
+	echo "<td align='left'>".(($val['report_id']!=null)?'已转为报告':'<a href="'.$this->url(array('controller'=>'email','action'=>'adminconverttoreport')).'/id/'.$val['id'].'&TB_iframe=true&width=800px&height=600px" class="thickbox">转为报告</a>')."</td>";
+	echo "<td align='left'>"."<a href=\"javascript:deleteEmail('$val[id]')\">删除</a>"."</td>";
+	echo "</tr>";
+	if(($val['attachfile']!='')){
+		$i = 1;
+		$attachments = '';
+		foreach ($val['attachfile'] as $attach){
+			$attachments .=  '<a href="'.$this->url(array('controller'=>'email','action'=>'adminindex')).'/file/'.$attach.'&TB_iframe=true" class="thickbox">附件'.$i.'</a>';
+		    $i++;
+		}
+	}
+	echo "<tr id=\"c$val[id]\" class=\"hidden\"><td colspan=7 align='left'>".$val['content'].$attachments."</td></tr>";
+}
+?>
+</table>
+<?php echo  $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?>
+
+</center>
+<?php }?>

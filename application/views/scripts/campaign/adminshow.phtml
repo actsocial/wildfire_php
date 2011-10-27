@@ -1,0 +1,145 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+		<h1><?php echo $this->translate("Admin_participants_state")?></h1>
+		<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminsetsparkkits', 'id'=>$this->campaign_id));?>">
+		<?php echo $this->translate('Admin_Set_Spark_Kits')?>
+		</a>
+		<table  style="width:800px;">
+			<tr>
+				<th><?php echo $this->translate("His_No.")?></th>	
+				<th><?php echo $this->translate("Amin_Consumer_email")?></th>
+				<th><?php echo $this->translate("Admin_Recipients_name")?></th>
+				<th><?php echo $this->translate("Admin_Accept_date")?></th>
+				<th><?php echo $this->translate("State")?></th>
+				<th></th>
+			</tr>
+			<?php $i = $this->NoInitValue ;
+			foreach ($this->paginator as $consumer):?>
+			<tr>
+				
+				<td><?php echo $i++;?></td>
+				<td><?php echo $consumer['email']?></td>
+				<td><?php echo $consumer['recipients_name']?></td>
+				<td><?php echo $consumer['accept_date']?></td>
+				<td>
+					<select id='state_<?php echo $i; ?>' name='state_<?php echo $i; ?>'>
+						<?php if($consumer['state'] != null && $consumer['state'] == 'NEW'){?>
+						<OPTION VALUE="NEW" Selected><?php echo $this->translate("Amin_NEW")?></OPTION>
+						<OPTION VALUE="KIT SENT" ><?php echo $this->translate("KIT SENT")?></OPTION>
+						<OPTION VALUE="PRODUCT USED" ><?php echo $this->translate("PRODUCT USED")?></OPTION>
+						<OPTION VALUE="FINISHING" ><?php echo $this->translate("FINISHING")?></OPTION>
+						<OPTION VALUE="COMPLETED" ><?php echo $this->translate("COMPLETED")?></OPTION>
+						<?php }?>
+						<?php if($consumer['state'] !=null && $consumer['state'] == 'KIT SENT'){?>
+						<OPTION VALUE="NEW" ><?php echo $this->translate("Amin_NEW")?></OPTION>
+						<OPTION VALUE="KIT SENT" Selected ><?php echo $this->translate("KIT SENT")?></OPTION>
+						<OPTION VALUE="PRODUCT USED" ><?php echo $this->translate("PRODUCT USED")?></OPTION>
+						<OPTION VALUE="FINISHING" ><?php echo $this->translate("FINISHING")?></OPTION>
+						<OPTION VALUE="COMPLETED" ><?php echo $this->translate("COMPLETED")?></OPTION>
+						<?php }?>
+						<?php if($consumer['state'] !=null && $consumer['state'] == 'PRODUCT USED'){?>
+						<OPTION VALUE="NEW" ><?php echo $this->translate("Amin_NEW")?></OPTION>
+						<OPTION VALUE="KIT SENT" ><?php echo $this->translate("KIT SENT")?></OPTION>
+						<OPTION VALUE="PRODUCT USED" Selected ><?php echo $this->translate("PRODUCT USED")?></OPTION>
+						<OPTION VALUE="FINISHING" ><?php echo $this->translate("FINISHING")?></OPTION>
+						<OPTION VALUE="COMPLETED" ><?php echo $this->translate("COMPLETED")?></OPTION>
+						<?php }?>
+						<?php if($consumer['state'] !=null && $consumer['state'] == 'FINISHING'){?>
+						<OPTION VALUE="NEW" ><?php echo $this->translate("Amin_NEW")?></OPTION>
+						<OPTION VALUE="KIT SENT" ><?php echo $this->translate("KIT SENT")?></OPTION>
+						<OPTION VALUE="PRODUCT USED" ><?php echo $this->translate("PRODUCT USED")?></OPTION>
+						<OPTION VALUE="FINISHING" Selected><?php echo $this->translate("FINISHING")?></OPTION>
+						<OPTION VALUE="COMPLETED" ><?php echo $this->translate("COMPLETED")?></OPTION>
+						<?php }?>
+						<?php if($consumer['state'] !=null && $consumer['state'] == 'COMPLETED'){?>
+						<OPTION VALUE="NEW" ><?php echo $this->translate("Amin_NEW")?></OPTION>
+						<OPTION VALUE="KIT SENT" ><?php echo $this->translate("KIT SENT")?></OPTION>
+						<OPTION VALUE="PRODUCT USED" ><?php echo $this->translate("PRODUCT USED")?></OPTION>
+						<OPTION VALUE="FINISHING" ><?php echo $this->translate("FINISHING")?></OPTION>
+						<OPTION VALUE="COMPLETED" Selected ><?php echo $this->translate("COMPLETED")?></OPTION>
+						<?php }?>
+						
+						
+					</select>
+				</td>		
+				<input type='text' id='participant_id_<?php echo $i; ?>' name='participant_id_<?php echo $i; ?>' value=<?php echo $consumer['id']?> style="display:none;"/>
+				<td>
+					<input type="button" onclick = "javascript:setStatus('<?php echo $i; ?>')"  value=" <?php echo $this->translate('His_Reports_setting');?> ">
+				</td>
+				
+			</tr>
+			
+			
+			<?php endforeach;?>
+			<input type="text" id="campaign_id" name="campaign_id" value=<?php echo $this->campaign_id;?> style="display:none;" />
+		</table>
+		 <?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?>
+		<br>
+</div>
+<script type="text/javascript">
+function setStatus(i){
+	var url = '<?php echo $this->url(array('controller'=>'campaign','action'=>'adminupdateparticipation'));?>';  
+
+	var pars = 'id='+$('campaign_id').value+'&state='+$('state_'+i).value
+	+'&participant_id='+$('participant_id_'+i).value;
+//	alert(pars);
+	new Ajax.Request(     
+		url,      
+		{     
+		method: 'post',      
+		parameters: pars,      
+		onSuccess: function(){
+				alert("You have set the status successfully!")
+			}    
+		}
+	);
+}
+window.alert = function(txt)    
+{    
+ var shield = document.createElement("DIV");    
+ shield.id = "shield";    
+ shield.style.position = "absolute";    
+ shield.style.left = "0px";    
+ shield.style.top = "0px";    
+ shield.style.width = "100%";    
+ shield.style.height = document.body.scrollHeight+"px";    
+ shield.style.background = "";    
+ shield.style.textAlign = "center";    
+ shield.style.zIndex = "10000";    
+ shield.style.filter = "alpha(opacity=0)";    
+ var alertFram = document.createElement("DIV");    
+ alertFram.id="alertFram";    
+ alertFram.style.position = "absolute";    
+ alertFram.style.left = "50%";    
+ alertFram.style.top = "50%";    
+ alertFram.style.marginLeft = "-160px";    
+ alertFram.style.marginTop = "-75px";    
+ alertFram.style.width = "300px";    
+ alertFram.style.height = "100px";    
+ alertFram.style.background = "#ccc";    
+ alertFram.style.textAlign = "center";    
+ alertFram.style.lineHeight = "150px";    
+ alertFram.style.zIndex = "10001";    
+ strHtml = "<ul style=\"list-style:none;margin:0px;padding:0px;width:100%\">\n";    
+ strHtml += " <li style=\"background:#DD828D;text-align:left;padding-left:20px;font-size:14px;font-weight:bold;height:25px;line-height:25px;border:1px solid #F9CADE;\">[System Infor]</li>\n";    
+ strHtml += " <li style=\"background:#fff;text-align:center;font-size:12px;height:120px;line-height:120px;border-left:1px solid #F9CADE;border-right:1px solid #F9CADE;\">"+txt+"</li>\n";    
+ strHtml += " <li style=\"background:#FDEEF4;text-align:center;font-weight:bold;height:25px;line-height:25px; border:1px solid #F9CADE;\"><input type=\"button\" value=\"Yes\" onclick=\"doOk()\" /></li>\n";    
+ strHtml += "</ul>\n";    
+ alertFram.innerHTML = strHtml;    
+ document.body.appendChild(alertFram);    
+ document.body.appendChild(shield);    
+ var c = 0;    
+ this.doAlpha = function(){    
+     if (c++ > 20){clearInterval(ad);return 0;}    
+     shield.style.filter = "alpha(opacity="+c+");";    
+ }    
+ var ad = setInterval("doAlpha()",5);    
+ this.doOk = function(){    
+     alertFram.style.display = "none";    
+     shield.style.display = "none";    
+ }    
+ alertFram.focus();    
+ document.body.onselectstart = function(){return false;};    
+}    
+
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Send coupon</title>
+<link type="text/css" href="<?php echo $this->baseUrl();?>/css/coupon.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="whole">
+<div class="mainContent">
+
+ <div class="center">
+  <div style="color:#336699;margin-top:10px;margin-bottom:10px;font-size:14px;font-weight:bold">
+请填写你的姓名和手机号，接收金宝汤店内试礼券短信,<br/>
+到各大卖场领取金宝汤限量版“妈妈”汤勺并试吃两种<br/>
+口味金宝汤。
+</div>
+<div><img src="<?php echo $this->baseUrl();?>/images/dl_l_t.gif"></div>
+
+<form target="_parent" method="post" action="<?php echo $this->baseUrl();?>/sms/sendcoupon/uid/<?php echo $this->coupon;?>" enctype="application/x-www-form-urlencoded" style="background:url(<?php echo $this->baseUrl();?>/images/dl_l_bg.gif)  repeat-y;margin:0 0 0 137px;height:120px;">
+  
+  <table style="margin-left:80px;margin-top:10px">
+  <tr><td colspan="2" ><?php 
+if(count($this->message)){
+	foreach($this->message as $val){
+		echo '<font color="red">'.$val.'</font><br/>';
+	}
+}else{
+  echo '&nbsp;';
+}
+?></td></tr>
+  <tr>
+  <td><?php echo $this->translate('Coupon_Name');?>：</td>
+  <td><input type="text" value="<?php echo $this->postData['username']?>" name="username"/></td>
+   </tr>
+   <tr>
+  <td><?php echo $this->translate('Coupon_Telephone');?>：</td>
+ 
+  <td><input name="telephone" type="text" value="<?php echo $this->postData['telephone']?>"/></td>
+   </tr>
+  <tr>
+  <td colspan="2" align="right"><input type="submit" class="submit" value="领 取" /></td>
+  </tr>
+  
+  </table>
+    </form>
+<div><img src="<?php echo $this->baseUrl();?>/images/dl_l_b.gif"></div>
+  </div>
+
+
+<div class="bottom">
+  <ul>
+  <li><a href="http://www.marketing-research.cn/s/488" target="_blank">想赢得"家庭礼包"，快来填写问卷调查!</a></li>
+  <li><a href="http://www.19lou.com/forum-9-thread-30455797-1-1.html" target="_blank">看看大家获得的大礼包，听听大家和金宝汤的故事。</a></li>
+  <!--<li><a href="http://topic.19lou.com/jinbaotang">返回19楼</a></li>-->
+  </ul>
+</div>
+</div>
+</div>
+</body>
+</html>

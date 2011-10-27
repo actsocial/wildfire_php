@@ -1,0 +1,40 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2>Telephone Log List</h2>
+<br />
+
+<table width="800">
+    <tr>
+    <td width='5%'>Index</td>
+    <td width='7%'>Consumer</td>
+    <td width='5%'>State</td>
+    <td width='20%'>Note</td>
+    <td width='5%'>Score</td>
+    <td width='5%'>Duration (mins)</td>
+    <td width='30%'>Comments</td>
+    <td width='5%'>Call back</td>
+    <td width='5%'>Admin</td>
+    <td width='5%'>Edit Time</td>
+    </tr>
+    <?php $count=1; foreach($this->telephoneLogs as $telephoneLog) {?>
+    <tr <?php if ($count%2 != 0){ ?>  style="background-color: #EEF9EB "<?php }?>>
+    <td><?php echo $count++;?></td>
+    <td><a href="<?php echo $this->baseUrl().'/consumer/profile/uid/'.$telephoneLog['consumer_id'];?>"><?php if (isset($telephoneLog['recipients_name'])) { echo $telephoneLog['recipients_name'];} else { ?>(<?php echo $telephoneLog['consumer_name'];?>)<?php }?></a> </td>
+    <td><?php echo $telephoneLog['state'];?></td>
+    <td>
+         <?php if(count($this->oldTelephoneLogTagArray) > 0 && array_key_exists($telephoneLog['id'],$this->oldTelephoneLogTagArray)):?>
+         <?php foreach($this->oldTelephoneLogTagArray[$telephoneLog['id']] as $tag):?>
+         <?php echo $this->translate($tag['name']);?>
+         <?php endforeach;?>
+         <?php endif;?>
+    </td>
+    <td><?php if($telephoneLog['score'] > 0) { echo $telephoneLog['score'];} ?></td>
+    <td><?php if($telephoneLog['duration'] > 0) { echo $telephoneLog['duration'];} ?></td>
+    <td><?php echo $telephoneLog['comments'];?></td>
+    <td><?php if(ord($telephoneLog['busy']) == 1) { ?> Yes <?php } ?></td>
+    <td><?php echo $telephoneLog['admin_name'];?></td>
+    <td><?php echo $telephoneLog['edit_time'];?></td>
+    </tr>
+    <?php }?>
+</table>
+</div>

@@ -1,0 +1,20 @@
+<div style="padding-bottom:40px;"></div>
+<div class="container" style="background-color:#fff;padding-top:0;padding-left:100px;">
+<?php if(isset($this->url)){?>
+<p><iframe style="height:700px;width: 600px;" src="<?php echo $this->url;?>"></iframe></p>
+<?php }else{?>
+<table width=85%>
+<tr><th width=10% align=left>Email/Phone</th><th width=20% align=left>用户</th><th width=10% align=left>活动</th><th align=left>图片</th><th align=left>报告</th></tr>
+
+<!-- ice: Apache alias settings will redirect /public/uploads_images to /home/wildfire/upload_images -->
+<?php 
+   foreach($this->reportImages as $image){
+   	   echo "<tr><td>$image[email]/$image[phone]</td><td>$image[name]</td><td>".$this->campaigns[$image['campaign']]."</td><td><a href='".$this->baseUrl()."/upload_images/report_images/$image[images]' class='thickbox'>$image[images]</a></td><td><a href='".$this->url(array('controller'=>'report','action'=>'adminreportbatchreply'))."/report_id/$image[report]' class='thickbox'>查看</a></td></tr>";
+   }
+?>
+
+<?php }?>
+</table>
+
+</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="content">
+	<h1 class="bind-account-title">欢迎您使用“星星火”的校内网应用。请选择您的帐户类型：</h1>
+	<div class="create-account-panel">
+		<h1>我没有“星星火”的网站帐户</h1>
+		<p>如果您没有“星星火”网站的帐户，也可以使用人人网帐户参加我们的活动。</p>
+		<a href="createaccount" class="bind-account-next-button">继续</a>
+	</div>
+	<div class="create-account-panel bind-account-panel">
+		<h1>我已经拥有“星星火”的网站帐户</h1>
+		<p>请输入您在“星星火”网站上的帐户信息，以便将两个帐户绑定在一起。</p>
+<p>
+<?php 
+if (isset($this->flashMessenger)) {
+	echo $this->flashMessenger;
+}
+?>
+</p>
+		<fieldset>
+			<form action="bindaccountdo" method="post">
+			<dl>
+				<dt><label>电子邮箱:</label></dt><dd><input type="text" name="email"/></dd>
+				<dt><label>密码:</label></dt><dd><input type="password" name="password"/></dd>
+				<dt></dt><dd><input class="button" type="submit" value="绑定帐户"/></dd>
+			</dl>
+			</form>
+		</fieldset>
+	</div>
+</div>

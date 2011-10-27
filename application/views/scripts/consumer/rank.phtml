@@ -1,0 +1,22 @@
+<div id="fillout-dialog">
+<div class="content">
+<?php echo $this->translate('Rank_Detail')?>
+<table width="80%">
+<tr>
+<th align='left'>名称</th><th align='left'>完成活动数</th><th align='left'>所需总积分</th><th align='left'>奖励积分</th>
+</tr>
+<?php 
+foreach ($this->ranks as $rank){
+	
+	echo "<tr>";
+	echo "<td>".$rank->name.'</td>';
+	echo "<td>".$rank->campaign_number.'</td>';
+	echo "<td>".$rank->point_total.'</td>';
+	echo "<td>".$rank->point_bonus.'</td>';
+	echo "</tr>";
+}
+?>
+</table>
+
+</div>
+</div>

@@ -1,0 +1,145 @@
+/* CSS Document */
+body {
+	margin:0;
+	padding:0;
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+	font-size: 10px;
+	background:url(../images/body_background.gif) repeat-x left top;
+}
+input,textarea,select,option {
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+	font-size: 10px;
+}
+.main-container {
+	margin: 0 auto;
+	width: 102.4em;
+	height: 10em;
+	background: url(../images/top_menu_background.gif) no-repeat left top;
+}
+.header {
+	width: 102.4em;
+	margin: 0 auto;
+	float: left;
+}
+.header ul {
+	float: right;
+	width: 43em;
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+.header ul li {
+	float: left;
+	background: url(../images/top_menu_li.gif) no-repeat left top;
+	padding-left: 1.5em;
+	padding-right: 3em;
+}
+.header ul li a {
+	font-size: 1.4em;
+	line-height: 2em;
+	text-decoration: none;
+	color: #fff;
+}
+.logo {
+	background:url(../images/logo.gif) no-repeat right top;
+	width: 21.1em;
+	height: 12em;
+	float: left;
+	margin-top: 5em;
+	padding-left: 1em;
+}
+.login-form {
+	/*border: 1px solid #000;*/
+	float: right;
+	/*background: #fff;*/
+	height: 3em;
+	margin-top: 10em;
+}
+.login-form form {
+	float: left;
+}
+.login-form dt,
+.login-form dd {
+	float: left;
+	/*border: 1px solid red;*/
+	margin: 0;
+}
+.login-form label {
+	color: #333;
+	font-size: 1.2em;
+	line-height: 2.5em;
+}
+.login-form input#email,
+.login-form input#password {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	margin-top: 0.4em;
+	margin-right: 1em;
+}
+.login-form input#login {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	margin-top: 0.3em;
+}
+.login-form input#register {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	margin-top: 0.3em;
+}
+.main-content {
+	float: left;
+	width: 100%;
+}
+.main-content h1 {
+	text-align: center;
+	width: 100%;
+	color: #333333;
+	font-size: 2em;
+}
+.main-content fieldset {
+	width: 80em;
+	margin: 0 auto;
+}
+.main-content fieldset legend {
+	font-size: 1.4em;
+	font-weight: bold;
+}
+.form-register {
+	/*border: 1px solid red;*/
+	float: left;
+	clear: left;
+	width: 100%;
+	margin-bottom: 1em;
+}
+.form-register dt {
+	float: left;
+	font-size: 1.2em;
+	line-height: 2.4em;
+	height: 2.4em;
+	width: 8em;
+}
+.form-register dd {
+	float: left;
+}
+.form-register dd input {
+	font-size: 1.2em;
+	width: 18em;
+	margin-top: 0.4em;
+}
+.form-register dd ul {
+	margin: 0;
+	padding-left: 1.5em;
+	font-size: 1.2em;
+	color: red;
+	line-height: 1.6em;
+}
+.form-register input#register {
+	font-size: 1.2em;
+	line-height: 1.2em;
+	margin-top: 0.3em;
+	width: 6em;
+}
+
+h2{
+	color:#008000;
+	

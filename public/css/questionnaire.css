@@ -1,0 +1,187 @@
+@charset "utf-8";
+.ui-fillout-dialog {
+	background: url(../images/shadow_bg.png) no-repeat left top;
+	_background: #fff;
+	padding: 20px;
+	_padding:0;
+	border: 0;
+	_border: 1px;
+}
+.ui-widget-content {
+	/*border: 0;
+	_border: 1px;*/
+}
+.ui-fillout-dialog .ui-widget-header {
+	border-left: 0;
+	border-right: 0;
+	-moz-border-radius:0;
+	_border-top:0;
+}
+.ui-dialog-titlebar {
+}
+.ui-dialog .ui-dialog-titlebar-close {
+}
+.ui-fillout-dialog .ui-dialog-content {
+	padding-top:0;
+	padding-left:0;
+}
+.clear {
+	clear: both;
+}
+.fillout-content {
+	width: 650px;
+	background: url(../images/popup-fillout-bg.gif) repeat-y left top #fff;
+	margin: 0;
+}
+.loading {
+	width: 100%;
+	height: 100%;
+	background: #484848;
+}
+.fillout-content .container-inner {
+	width: auto;
+}
+.fillout-content .container {
+	background: none;
+	width: auto;
+	padding:0;
+}
+form .fillout-content .question-title a {
+	color: #006BC4;
+	text-decoration: none;
+}
+.fillout-content .logo {
+	float: left;
+	padding-right: 0px;
+	padding-top: 15px;
+}
+
+.fillout-content .top-content {
+	width: 520px;
+	padding: 20px;
+	padding-left:0;
+	padding-right: 0;
+	padding-top: 30px;
+	margin:0;
+	font-size: 14px;
+	color: #666;
+	float: right;
+}
+
+.fillout-content .top-content h1 {
+	margin:0;
+	font-size: 14px;
+	font-weight: bold;
+	color: #006BC4;
+	margin-bottom: 10px;
+	clear: left;
+}
+.fillout-content .top-content p {
+	margin:0;
+	line-height: 18px;
+	font-size: 12px;
+	width: 500px;
+	clear: left;
+}
+.fillout-content .seperate-line {
+	width: 541px;
+	height: 1px;
+	background: url(../images/line-seperate.gif) repeat-x left top;
+}
+.fillout-content .fillout-container {
+	width: 510px;
+	margin:0;
+	margin-left: 110px;
+	padding: 20px;
+	padding-right: 0;
+	padding-top: 10px;
+}
+.fillout-content .fillout-container .page-bar-area {
+	display: none;
+}
+.fillout-content .fillout-container table {
+	width: 510px;
+	width: 100%;
+	border-spacing:0;
+	border-collapse: collapse;
+	/*word-break: keep-all;*/
+	table-layout:fixed;
+}
+.fillout-content .fillout-container table table {
+	/*border: 1px solid #f00;*/
+}
+.fillout-content .fillout-container table td {
+	font-size: 12px;
+	color: #333;
+	padding-bottom: 10px;
+}
+.fillout-content .fillout-container table td .question-title {
+	width: 240px;
+	line-height: 16px;
+}
+.fillout-content .fillout-container table td .elementInfoText {
+	color: #999;
+	padding-left: 10px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	background: url(../images/list-style-line.gif) repeat-y 2px 8px;
+}
+.fillout-content .fillout-container table td table.select-table ul {
+	padding:0;
+	margin:0;
+	list-style-type: none;
+	width:240px;
+}
+.fillout-content .fillout-container table td table.select-table ul li {
+	width: 240px;
+}
+.fillout-content .fillout-container table td table.select-table ul li input {
+	display: block;
+	float: left;
+	clear: left;
+}
+.fillout-content .fillout-container table td table.select-table ul li label {
+	/*border: 1px solid #0f0;*/
+	display: block;
+	width: 215px;
+	float: left;
+	margin-bottom: 5px;
+	padding-top: 3px;
+	padding-left: 1px;
+	color: #666;
+}
+.fillout-content .fillout-container table td table.select-table select {
+	width: 240px;
+}
+.fillout-content .fillout-container table .twoColumnLayout textarea {
+	width: 490px;
+	height: 300px;
+}
+.fillout-content .fillout-container table td .noanswer-td {
+	display: none;
+}
+.fillout-content .fillout-container .header-section h2 {
+	font-size: 14px;
+	margin:0;
+	font-style:italic;
+	color: #006BC4;
+}
+.fillout-content .fillout-submit {
+	text-align: center;
+}
+.fillout-content .fillout-submit input {
+	border: 1px solid #fff;
+	background: #006bc4;
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+.fillout-content .fillout-submit input:hover {
+	background: #70ace4;
+	border: 1px solid #006bc4;
+}
+.fillout-content #mainzone-bottom-wrapper {
+	display: none;
+}

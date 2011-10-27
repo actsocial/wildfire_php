@@ -1,0 +1,14 @@
+<?php if ($this->campaignInvitation) :?>
+<p>Are you sure that you want to delete '<?php echo $this->campaignInvitation['con_name']; ?>'
+for '<?php echo $this->campaignInvitation['cam_name']; ?>'?</p>
+<form action="<?php echo $this->url(array('controller'=>'campaigninvitation', 'action'=>'delete')); ?>"
+	method="post">
+	<div>
+		<input type="hidden" name="id"	value="<?php echo $this->campaignInvitation['id']; ?>" /> 
+		<input type="submit" name="del" value="Yes" /> <input type="submit" name="del" value="No" />
+	</div>
+</form>
+
+<?php else: ?>
+	<p>Cannot find the consumer.</p>
+<?php endif;?>

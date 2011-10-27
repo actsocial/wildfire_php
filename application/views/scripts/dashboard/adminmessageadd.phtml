@@ -1,0 +1,84 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2><?php echo $this->translate('Client_Message_Add');?></h2>
+<br/>
+  <p>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminmessageadd'));?>"><?php echo $this->translate('Client_Message_Add');?></a></span>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminmessage'));?>"><?php echo $this->translate('Client_Message_List');?></a></span>
+  </p>
+<form id="addmessage" name="addmessage" action="<?php echo $this->url(array('controller'=>'dashboard','action'=>'adminmessagesave'));?>" method="post">
+  <table class="messagetable" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td align="right"><b><?php echo $this->translate('Client_Message_From_Type');?>: </b></td>
+      <td>
+        <select name="from_type">
+        <option value="Spark"><?php echo $this->translate('Client_Message_From_Type Spark');?></option>
+        <option value="Wildfire"><?php echo $this->translate('Client_Message_From_Type Wildfire');?></option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b><?php echo $this->translate('Client_Message_From_ID');?>: </b></td>
+      <td>
+        <input name="from" type="text" size="25">
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b><?php echo $this->translate('Client_Message_To_Type');?>: </b></td>
+      <td>
+        <select name="to_type">
+        <option value="Client">Client</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b><?php echo $this->translate('Client_Message_To_ID');?>: </b></td>
+      <td>
+      <!-- TODO: get to type from client -->
+        <select name="to">
+        <?php foreach ($this->clients as $client) {?>
+            <option value="<?php echo $client->id;?>"><?php echo $client->name." - ".$client->campany;?></option>
+        <?php } ?>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td align="right">
+        <b><?php echo $this->translate('Client_Message_Subject');?>: </b>
+      </td>
+      <td>
+        <input name="subject" type="text" size="50">
+      </td>
+    </tr>
+    <tr>
+      <td align="right">
+        <b><?php echo $this->translate('Client_Message_Type');?>: </b>
+      </td>
+      <td>
+        <select name="type">
+        <option value="Question"><?php echo $this->translate('Client_Message_Type Question');?></option>
+        <option value="Suggestion"><?php echo $this->translate('Client_Message_Type Suggestion');?></option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td align="right" valign="top">
+        <b><?php echo $this->translate('Client_Message_Content');?>: </b><br>
+      </td>
+      <td>
+        <textarea name="content" wrap="soft" rows="10" cols="49"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td align="center">
+        <input type="submit" value="Submit">
+      </td>
+    </tr>
+  </table>
+</form>
+<style>
+td {padding:4px;}
+.spamtbl {padding:8px 0;}
+</style>
+</div>

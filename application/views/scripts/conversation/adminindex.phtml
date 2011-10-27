@@ -1,0 +1,175 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2><?php echo $this->translate('Conversation_Plan'); ?></h2>
+<br />
+<p><a href="<?php echo $this->url(array('controller'=>'sms','action'=>'admincompose'));?>">
+>>compose sms</a>&nbsp; &nbsp; &nbsp;
+<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminaccount'));?>">
+>>account info</a>&nbsp; &nbsp; &nbsp;
+<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminreceive'));?>">
+>>receive sms</a>
+</p>
+<?php if(!$this->isSubmit){?>
+<form id="sqlform" enctype="multipart/form-data" name="sqlform" method="post" action ="<?php echo $this->url(array('controller'=>'conversation','action'=>'adminindex'));?>"  >
+<table width="700">
+    <tr>
+        <td align="left"> <?php echo $this->form->doc_path?></td>
+    </tr>
+    </tr>
+        <td align="left"> 
+       <?php echo $this->form->detail;?>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2" align="left"><?php echo $this->form->submit?></td>
+    </tr>
+</table>
+</form>
+<?php }elseif($this->exits){?>
+计划已经存在！<a href="<?php echo $this->url(array('controller'=>'conversation','action'=>'adminindex'));?>">创建新计划</a>
+<?php }else{?>
+成功创建计划，再次<a href="<?php echo $this->url(array('controller'=>'conversation','action'=>'adminindex'));?>">创建</a>
+<?php }?>
+</div>
+<!--  <div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2><?php echo $this->translate('Conversation_Plan'); ?></h2>
+<br />
+<p><a href="<?php echo $this->url(array('controller'=>'sms','action'=>'admincompose'));?>">
+>>compose sms</a>&nbsp; &nbsp; &nbsp;
+<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminaccount'));?>">
+>>account info</a>&nbsp; &nbsp; &nbsp;
+<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminreceive'));?>">
+>>receive sms</a>
+</p>
+<form id="sqlform" name="sqlform" method="post" action =""  >
+<table width="700">
+    <tr>
+        <td><?php echo $this->translate('Condition_Input'); ?></td>
+    </tr>
+    <tr>
+        <td>
+<textarea rows="4" cols="60" id="sql" name="sql">
+<?php if($this->sqlstr != null) { echo $this->sqlstr;} else {?>
+from consumer,campaign_invitation 
+where (consumer.pest is null or consumer.pest != 1)
+and campaign_invitation.consumer_id = consumer.id 
+and campaign_invitation.campaign_id = 1
+<?php }?>
+</textarea>
+        </td>
+    </tr>
+        <td><?php echo $this->translate('Conversation_Type'); ?>:
+        <select name="type" onchange = "javascript:switchAction(this)">
+        <option value=""></option>
+        <option value="TELEPHONE">Telephone</option>
+        <option value="SMS">SMS</option>
+		<option value="MSN">MSN</option>
+		<option value="QQ">QQ</option>
+		</select>
+        </td>
+    </tr>
+    </tr>
+        <td><?php echo $this->translate('Conversation_Content'); ?>:<br/>
+        <textarea rows="3" cols="60" id="content" name="content"></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="submit" value="Search" />
+        <input type="button" value="testsql"  onclick="testsql();" /></td>
+    </tr>
+</table>
+</form>
+<div style='width:800px;text-align:left;padding-top:10px;'><h3><?php echo $this->translate('Conversation_Old_Plans'); ?>:</h3></div>
+    <table width="800">
+        <tr>
+        <td width='5%'>Index</td>
+        <td width='5%'><?php echo $this->translate('Conversation_Type'); ?></td>
+        <td width='30%'><?php echo $this->translate('Conversation_Content'); ?></td>
+        <td width='5%'><?php echo $this->translate('Conversation_Total_Consumers'); ?></td>
+        <td width='7%'><?php echo $this->translate('Conversation_Undone_Consumers'); ?></td>
+        <td width='7%'><?php echo $this->translate('Conversation_Call_Back'); ?></td>
+        <td width='20%'><?php echo $this->translate('Conversation_Time'); ?></td>
+        <td width='5%'>View</td>
+        <td width='5%'>Delete</td>
+        </tr>
+        <?php $count=1; foreach($this->telephonePlans as $telephonePlan) {?>
+        <?php 
+            $controller = '';
+            if ($telephonePlan->type == 'TELEPHONE') {
+                $controller = 'conversation';
+            } else if ($telephonePlan->type == 'SMS') {
+                $controller = 'sms';
+            }
+        ?>
+        <tr <?php if ($count%2 != 0){ ?>  style="background-color: #EEF9EB "<?php }?>>
+        <td><?php echo $count++;?></td>
+        <td><?php echo $telephonePlan->type;?></td>
+        <td><?php echo $telephonePlan->content;?></td>
+        <td><div id='total_<?php echo $telephonePlan->id;?>'><?php echo $telephonePlan->total_consumers;?></div></td>
+        <td>
+        <a href="<?php echo $this->url(array('controller'=>$controller,'action'=>'adminlist', 'plan_id'=>$telephonePlan->id));?>">
+        <div id='undone_<?php echo $telephonePlan->id;?>'><?php if(isset($this->undoneArray[$telephonePlan->id])) {echo $this->undoneArray[$telephonePlan->id];} else {echo '';}?></div>
+        </a>
+        </td>
+        <td><?php if(isset($this->comesbackArray[$telephonePlan->id])) {echo $this->comesbackArray[$telephonePlan->id];} else {echo '';}?></td>
+        <td><?php echo $telephonePlan->edit_time;?></td>
+        <td><?php if ($telephonePlan->type == 'TELEPHONE') { ?>
+        <a href="<?php echo $this->url(array('controller'=>'conversation','action'=>'admintelephoneloglist','plan_id'=>$telephonePlan->id));?>">
+        view
+        </a>
+        </td><?php } ?>
+        <td>
+        <a href="<?php echo $this->url(array('controller'=>'conversation','action'=>'admindelete','plan_id'=>$telephonePlan->id,'type'=>$telephonePlan->type));?>" onclick="return deletePlan(<?php echo $telephonePlan->id;?>);">
+        delete
+        </a>
+        </td>
+        </tr>
+        <?php } ?>
+    </table>
+</div>
+</div>
+<script type="text/javascript">
+function switchAction(obj){
+    if (obj.value == 'SMS') {
+    	document.sqlform.action = '<?php echo $this->url(array('controller'=>'sms','action'=>'adminlist'));?>';
+        //document.sqlform.submit();
+    } else if (obj.value == 'TELEPHONE') {
+        document.sqlform.action = '<?php echo $this->url(array('controller'=>'conversation','action'=>'adminlist'));?>';
+        //document.sqlform.submit();
+    } else {
+        alert('Unsupported now');
+        document.sqlform.action = '';
+    }
+}
+
+function testsql() {
+//    document.sqlform.action = '<?php echo $this->url(array('controller'=>'conversation','action'=>'admintest'));?>';
+//    document.sqlform.submit();
+  var url = '<?php echo $this->url(array('controller'=>'conversation','action'=>'admintest'));?>';
+  var params = Form.serialize($('sqlform'));
+  new Ajax.Request(
+      url,
+      {
+      method: 'post',
+      parameters: params,
+      onSuccess: function(msg) {
+          alert(msg.responseText);
+          }
+      }
+  );
+}
+
+function deletePlan(id) {
+	var totalNum = $('total_'+id).innerHTML;
+	var undoneNum = $('undone_'+id).innerHTML;
+    if (totalNum == undoneNum) {
+    	return confirm('确实要删除吗？');
+    } else {
+        return confirm('这个计划已经有数据记录, 你确认要删除吗？');
+    }
+
+}
+</script>
+
+-->

@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<title><?php echo $this->escape($this->title); ?></title>
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/home.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/redmond/jquery-ui-1.7.2.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/dataTables_page.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/dataTables_table_jui.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/superfish.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo $this->baseUrl();?>/css/tinyaccordion.css"/>
+<script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery-1.3.2.min.js" ></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery-ui-1.7.2.custom.min.js" ></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.corner.js" ></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.simpletip-1.3.1.min.js" ></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.form.js" ></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.dataTables.min.js" ></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/ofc/json2.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/ofc/swfobject.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/superfish.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/tinyaccordion.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.expander.js"></script>
+<!--[if lte IE 6]>
+  <link href="/public/css/ieonly.css"  rel="stylesheet" type="text/css" />
+<![endif]-->
+<?php
+$this->loadSkin($this->skin, $this->baseUrl());
+echo $this->headLink();
+?>
+
+
+</head>
+<body id="page_bg">
+
+	<div class="header" style="background-image: url(<?php echo $this->baseUrl();?>/images/banner.png)">
+		<div class="header-inner">
+		    <div style="height:72px;width:100%;">
+            <img id="logo" height="70px;" src="<?php echo $this->baseUrl();?>/images/kraft_logo_2.gif" />
+            <img id="logo" height="70px;" src="<?php echo $this->baseUrl();?>/images/kraft_logo_1.gif" />
+            <ul class="sf-menu">
+            	<?php if(count($this->clientCampaignList) > 1):?>
+				<li class="ui-corner-all">
+					<a class="ui-corner-all" href="#" style="border-top:0;">[<?php echo $this->translate("Client_Change_Campaigns");?>]</a>
+					<ul><?php foreach($this->clientCampaignList as $clientCampaign):?>
+						<li>
+							<a href="<?php echo $this->baselink[0]?>/id/<?php echo $clientCampaign[0];?>"><?php echo $clientCampaign[1];?></a>
+						</li>
+						<?php endforeach;?>
+					</ul>
+				</li>
+				<?php endif;?>
+				<li class="ui-corner-all">
+					<a class="ui-corner-all" href="<?php echo $this->url(array('controller'=>'login','action'=>'logout'));?>" style="border-top:0">[<?php echo $this->translate("Logout")?>]</a>
+				</li>
+			</ul>
+			</div>
+			<div style="clear: both;"></div>
+	</div>
+	</div>
+				
+	<div class="navigator" style="width:1000px;margin: 0 auto">
+			<ul id="top-menu">
+				<li <?php if ($this->activeTab == 'clientimpression'):?> class="active" <?php endif?>>
+				<a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientimpression','id'=>$this->campaign_id));?>"><?php echo $this->translate('Client_Kraft_Tab_Impression');?></a>
+				</li>
+				<li <?php if ($this->activeTab=='clientreport'):?> class="active"
+				<?php endif?>><a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientreport','id'=>$this->campaign_id));?>"><?php echo $this->translate('Client_Kraft_Tab_Report_Drip');?></a>
+				</li>
+				<li <?php if ($this->activeTab=='clientcloudtag'):?> class="active"
+				<?php endif?>><a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientcloudtag','id'=>$this->campaign_id));?>"><?php echo $this->translate('Client_Kraft_Tab_Cloud_Tag');?></a>
+				</li>
+				<li <?php if ($this->activeTab == 'clientstat'):?> class="active" <?php endif?>>
+				<a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientstat','id'=>$this->campaign_id ));?>"><?php echo $this->translate('Client_Kraft_Tab_Report_Static');?></a>
+				</li>
+				<li <?php if ($this->activeTab == 'clientmessage'):?> class="active" <?php endif?>>
+                <a href="<?php echo $this->url(array('controller'=>'dashboard','action'=>'clientmessage','id'=>$this->campaign_id));?>"><?php echo $this->translate('Client_Kraft_Tab_Report_Message');?><?php echo $this->client_message_count;?></a>
+                </li>
+			</ul>
+			<div id="language-selector"><a
+					href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>">中文</a>/
+				<a
+					href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>">English</a></div>
+			</div>
+	
+	<div style="clear: both;"></div>
+	<div id="container" style="padding-top: 20px;background:transparent url(<?php echo $this->baseUrl();?>/images/background-banner-short-client.jpg) repeat-x scroll left top">
+	  <div style="padding-bottom:40px;margin: 0 auto;">
+	    <?php echo $this->layout()->content; ?>
+	  </div>
+	  
+
+	</div>
+	<div style="clear: both;"></div>
+		
+	
+	<div style="clear: both;"></div>
+</body>
+</html>

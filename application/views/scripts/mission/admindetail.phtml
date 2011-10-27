@@ -1,0 +1,100 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center" >
+<h2><?php echo $this->title;?></h2>
+<br/>
+  <p>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'mission','action'=>'adminadd'));?>">New Mission</a></span>
+    <span style="padding: 0 10px;"><a href="<?php echo $this->url(array('controller'=>'mission','action'=>'adminlist'));?>">Mission List</a></span>
+  </p>
+<form id="addmission" name="addmission" enctype="multipart/form-data" action="<?php echo $this->url(array('controller'=>'mission','action'=>'adminadd'));?>" method="post">
+  <table class="missiontable" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td align="right"><b>Brand: </b></td>
+      <td>
+        <select id="brand" name="brand">
+        <?php foreach($this->brands as $brand) {?>
+            <option value="<?php echo $this->escape($brand->id);?>"><?php echo $this->escape($brand->name);?></option>
+        <?php } ?>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Title: </b></td>
+      <td>
+        <input name="title" type="text" size="25">
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Introduce: </b></td>
+      <td>
+        <textarea name="intro" rows="5" cols="49"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Type: </b></td>
+      <td>
+        <select size="1" id="type" name="type">
+            <option>Question</option>
+            <option>Shopping</option>
+            <option>Share</option>
+            <option selected>None</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Start Date: </b></td>
+      <td>
+        <input id="startdate" name="startdate" type="text" readonly="readonly"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>End Date: </b></td>
+      <td>
+        <input id="enddate" name="enddate" type="text" readonly="readonly"/>
+      </td>
+    </tr>
+    <tr>
+      <td align="right"><b>Background: </b></td>
+      <td>
+        <input id="background" name="background" type="file" />
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <table width="100%">
+          <?php for($i=1; $i<=3; $i++) { ?>
+          <tr>
+            <?php for($j=1; $j<=3; $j++) { ?>
+              <td>
+                  Hello
+              </td>
+            <?php } ?>
+          </tr>
+          <?php } ?>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2">
+        <input type="submit" value="Submit">
+      </td>
+    </tr>
+  </table>
+</form>
+<div><?php echo $this->error; ?></div>
+<style type="text/css">
+td {padding:4px;}
+</style>
+<script language="javascript">
+$j(document).ready(
+    function() {
+        $j('#startdate').datepicker({
+            dateFormat: 'yy-mm-dd'
+        });
+        $j('#enddate').datepicker({
+            dateFormat: 'yy-mm-dd'
+        });
+    }
+);
+</script>
+</div>

@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="robots" content="index, follow" />
+<title><?php echo $this->escape($this->title); ?></title>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="<?php echo $this->baseUrl();?>/css/home.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/thickbox.css" />
+
+<link rel="stylesheet" type="text/css" media="screen"
+	href="<?php echo $this->baseUrl();?>/css/calendar-win2k-1.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/menu.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/smoothness/jquery-ui-1.7.2.custom.css" />
+
+<?php if (isset($this->includeCrystalCss) and $this->includeCrystalCss):?>
+<link rel="stylesheet" type="text/css" media="screen"
+	href="http://app.indicate2.cn/css/fillout_wildfire.css" />
+<script type="text/javascript" src="http://app.indicate2.cn/js/all.js"></script>
+<?php endif;?>
+  <script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery-1.3.2.min.js" ></script>
+  <script type="text/javascript">
+  	var jQuery = $;
+  </script>
+  <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/thickbox.js"></script>
+  <script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery-ui-1.7.2.custom.min.js" ></script>
+  <script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js" ></script>
+  <script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/dropdowntabs.js" ></script>
+<script type="text/javascript" media="screen"
+	src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>
+<link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl();?>/js/calendar.js"></script>
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl();?>/js/calendar-en.js"></script>
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl();?>/js/calendar-setup.js"></script>
+<script type="text/javascript"
+	src="<?php echo $this->baseUrl();?>/js/incomingemail.js"></script>
+<!--[if lte IE 6]>
+  <link href="/public/css/ieonly.css"  rel="stylesheet" type="text/css" />
+  <![endif]-->
+</head>
+<body id="page_bg">
+
+	<div class="menuheader">
+		<div class="header-inner">
+			<img src="<?php echo $this->baseUrl();?>/images/logo_new.png" style="height:85px;float:left;margin: 10px 30px 0 0px;"/>
+			<div id="colortab" class="ddcolortabs">
+			
+			<ul id="top-menu-admin">
+			
+				<li <?php if ($this->activeTab == 'List Campaigns'):?> class="active" <?php endif?>>			
+				<a rel="campaign_dropdown" href="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminindex'));?>">
+				<span><img src="<?php echo $this->baseUrl();?>/images/menu/glossy-3d-blue-orbs2-038-icon.png" alt="" />
+					<div><?php echo $this->translate('List_Campaigns');?></div>
+				</span>
+				</a>
+				</li>
+				
+				<li <?php if ($this->activeTab=='Reports'):?> class="active" <?php endif?>>
+				<a  rel="report_dropdown"  href="<?php echo $this->url(array('controller'=>'report','action'=>'adminindex'));?>">
+				<span><img src="<?php echo $this->baseUrl();?>/images/menu/glossy-3d-blue-orbs2-041-icon.png" alt="" />
+					<div><?php echo $this->translate('Reply_Report');?></div>
+				</span>
+				</a>
+				</li>
+				
+				<li <?php if ($this->activeTab == 'Mails'):?> class="active" <?php endif?>>
+				<a rel="email_dropdown"   href="<?php echo $this->url(array('controller'=>'email','action'=>'adminindex'));?>">
+				<span><img src="<?php echo $this->baseUrl();?>/images/menu/glossy-3d-blue-orbs2-075-icon.png" alt="" />
+				<div><?php echo $this->translate('Admin_Mail');?></div>
+				</span>
+				</a>
+				</li>
+				
+				<li <?php if ($this->activeTab == 'Conversation'):?> class="active" <?php endif?>>
+                <a rel="phone_dropdown" href="<?php echo $this->url(array('controller'=>'phone','action'=>'adminadd'));?>">
+                <span><img src="<?php echo $this->baseUrl();?>/images/menu/glossy-3d-blue-orbs2-105-icon.png" alt="" />
+                <div><?php echo $this->translate('Admin_Phone');?></div>
+                </span>
+                </a>
+                </li>
+                
+				<li <?php if ($this->activeTab == 'SMS'):?> class="active" <?php endif?>>
+				<a rel="sms_dropdown" href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminreceive'));?>">
+				<span><img src="<?php echo $this->baseUrl();?>/images/menu/glossy-3d-blue-orbs2-051-icon.png" alt="" />
+				<div><?php echo $this->translate('SMS');?></div>
+				</span>
+				</a>
+				</li>
+				
+				<!-- 
+				<li <?php if ($this->activeTab == 'Conversation'):?> class="active" <?php endif?>>
+                <a rel="online_dropdown" href="<?php echo $this->url(array('controller'=>'qqconversation','action'=>'adminadd'));?>">
+                <span><img src="<?php echo $this->baseUrl();?>/images/menu/glossy-3d-blue-web-icon.png" alt="" />
+                <div><?php echo $this->translate('Admin_Online');?></div>
+                </span>
+                </a>
+                </li>
+                -->
+				
+				<li <?php if ($this->activeTab == 'Redeem'):?> class="active" <?php endif?>>
+				<a rel="redeem_dropdown" href="<?php echo $this->url(array('controller'=>'point','action'=>'adminredeemlist'));?>">
+				<span><img src="<?php echo $this->baseUrl();?>/images/menu/glossy-3d-blue-orbs2-137-icon.png" alt="" />
+				<div><?php echo $this->translate('Admin_Product_Redeem');?></div>
+				</span>
+				</a>
+				</li>
+
+				<li <?php if ($this->activeTab == 'List Consumers'):?> class="active" <?php endif?>>
+				<a rel="spark_dropdown" href="<?php echo $this->url(array('controller'=>'consumer','action'=>'adminindex', 'pest'=>'0'));?>">
+				<span><img src="<?php echo $this->baseUrl();?>/images/menu/glossy-3d-blue-orbs2-076-icon.png" alt="" />
+					<div><?php echo $this->translate('Admin_Spark');?></div>
+				</span>
+				</a>
+				</li>
+				<!-- <li><a href="#">history</a></li> -->
+			</ul>
+
+			</div>
+			<div id="language-selector">
+			<ul>
+				<li><a	href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>"><span>中文</span></a></li>
+				<li><a	href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>"><span>English</span></a></li>
+				
+				
+			</ul>
+			<ul id="top-links">
+				<li>
+				<?php if($this->login==0):?>
+				<a
+					href="<?php echo $this->url(array('controller'=>'login','action'=>'logout'));?>"><?php echo $this->translate("Logout")?>
+				</a>
+				<?php endif;?>
+				<?php if($this->login==1):?>
+				<a href="<?php echo $this->url(array('controller'=>'admin','action'=>'index'));?>">
+					<?php echo $this->translate("Login")?>
+				</a>
+				<?php endif;?>
+					
+				</li>
+			</ul>
+			</div>
+			
+		</div>
+		
+		<!--campaign drop down menu -->                                                   
+		<div id="campaign_dropdown" class="dropmenudiv_a">
+		<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminindex'));?>">
+					<?php echo $this->translate("活动列表")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminadd'));?>">
+					<?php echo $this->translate("新增活动")?>
+				</a>
+		</div>
+		<!--report drop down menu -->                                                   
+		<div id="report_dropdown" class="dropmenudiv_a">
+		<a href="<?php echo $this->url(array('controller'=>'report','action'=>'adminindex'));?>">
+					<?php echo $this->translate("报告列表")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'report','action'=>'admindownloadindex'));?>">
+					<?php echo $this->translate("报告与问卷下载")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'report','action'=>'adminreportimages'));?>">
+					<?php echo $this->translate("报告附件列表")?>
+				</a>
+		</div>
+		<!--email drop down menu -->                                                   
+		<div id="email_dropdown" class="dropmenudiv_a">
+		<a href="<?php echo $this->url(array('controller'=>'email','action'=>'adminindex'));?>">
+					<?php echo $this->translate("收件箱")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminprepareinvitations'));?>">
+					<?php echo $this->translate("发送邮件")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'admindynamicprepareinvitations'));?>">
+				<?php echo $this->translate("动态发送邮件")?>
+		</a>
+		<a href="<?php echo $this->url(array('controller'=>'email','action'=>'adminsmtpsetting'));?>">
+					<?php echo $this->translate("SMTP设置")?>
+				</a>
+		</div>
+		<!--phone drop down menu -->                                                   
+		<div id="phone_dropdown" class="dropmenudiv_a">
+		<a href="<?php echo $this->url(array('controller'=>'conversation','action'=>'admintelephone'));?>">
+					<?php echo $this->translate("电话记录列表")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'conversation','action'=>'adminindex'));?>">
+					<?php echo $this->translate("上传电话记录")?>
+				</a>
+		</div>
+		
+		<!--sms drop down menu -->                                                        
+		<div id="sms_dropdown" class="dropmenudiv_a">
+		<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminreceive'));?>">
+					<?php echo $this->translate("收件箱")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'admincompose'));?>">
+					<?php echo $this->translate("编写发送")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'admindynamiccompose'));?>">
+					<?php echo $this->translate("动态短信发送")?>
+				</a>
+		</div>
+		
+		<!--sms drop down menu -->                                                        
+		<div id="redeem_dropdown" class="dropmenudiv_a">
+		<a href="<?php echo $this->url(array('controller'=>'point','action'=>'adminredeemlist'));?>">
+					<?php echo $this->translate("兑换记录")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'point','action'=>'adminshow','pest'=>'0'));?>">
+					<?php echo $this->translate("用户积分排名与统计")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'gift','action'=>'adminlistgifts'));?>">
+					<?php echo $this->translate("奖品列表")?>
+				</a>
+		</div>
+		
+		<!--sms drop down menu -->                                                        
+		<div id="spark_dropdown" class="dropmenudiv_a">
+		<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'adminsearch'));?>">
+					<?php echo $this->translate("快速搜索 ")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'adminshowinvitedfriends','pest'=>'0'));?>">
+					<?php echo $this->translate("邀请朋友列表")?>
+				</a>
+		<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'adminconfirmaddress'));?>">
+					<?php echo $this->translate("解析地址")?>
+				</a>
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript">
+		tabdropdown.init("colortab");
+	</script>
+	<div style="clear: both;"></div>
+	<div id="container">
+	<br/>
+	<?php echo $this->layout()->content; ?>
+	</div>
+	<div style="clear: both;"></div>
+		
+	<!-- 
+	<div id="footer"><div class="footer-inner">
+		<ul>
+			<li><a href="<?php echo $this->baseUrl();?>/site/privacypolicy"><?php echo $this->translate('Privacy_Policy');?></a></li>
+			<li><a href="<?php echo $this->baseUrl();?>/site/terms"><?php echo $this->translate('Terms');?>
+			&amp; <?php echo $this->translate('Conditions');?></a></li>
+			<li><a href="<?php echo $this->baseUrl();?>/site/contactus"><?php echo $this->translate('Contact_Us');?></a></li>
+		</ul>
+	</div></div>
+	 -->	
+	<div style="clear: both;"></div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11657111-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

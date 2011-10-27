@@ -1,0 +1,96 @@
+<div style="padding-bottom:30px;"></div>
+<div style="padding-left:150px;">
+	<div style="width:700px;">
+	<form action = '<?php echo $this->url(array('controller'=>'report','action'=>'admindownloadreport'));?>' id='form_1' name = 'form_1' method='post' target="_blank">
+	Campaign:
+	<div style="margin-top: 5px;">
+	<select name="campaign_id" id="campaign_id" >
+		<OPTION VALUE="" Selected></OPTION>
+		<?php foreach($this->campaigns as $campaign):?>
+		<OPTION VALUE=<?php echo $campaign->id;?> ><?php echo $campaign->name;?></OPTION>
+		<?php endforeach;?>
+	
+	</select>
+	</div>
+	<div style="clear:both;  margin-top: 10px;"></div>
+	Language:
+	<div style="margin-top: 5px;">
+	<select name="campaign_language" id="campaign_language" style="width:100px;">
+		<OPTION VALUE="zh" Selected>zh</OPTION>
+		<OPTION VALUE="en" >en</OPTION>
+	</select>
+	</div>
+	<div style="clear:both;  margin-top: 10px;"></div>
+	<input type="hidden" id="submittype" name="submittype" value="report" />
+	<input type="submit" id='submit1' value='Download Report'/>
+	<input type="button" id="pre_campaign_button" onclick="javascript:submitPrecampaign();" value="Download Pre-campaign Survey" />
+	<input type="button" id="post_campaign_button" onclick="javascript:submitPostcampaign();"  value="Download Post-campaign Survey" />
+	</form>
+	</div>
+	<br>
+	
+	<div>
+	<form action = '<?php echo $this->url(array('controller'=>'report','action'=>'admindownloadreport'));?>' id='form_2' name = 'form_2' method='post' target="_blank">
+	Report accessCode:
+	<div style="margin-top: 5px;">
+	<textarea rows="15" cols="25" id='accessCode' name='accessCode'></textarea>
+	</div>
+	<div style="clear:both;  margin-top: 10px;"></div>
+	<input type="submit" id='submit2' value='Download Report'/>
+	</form>
+	</div>
+	
+	<br>
+	<br>
+	<br>
+	<div style="width:500px;">
+	<form action = '<?php echo $this->url(array('controller'=>'report','action'=>'admindownloadsurvey'));?>' id='form_3' name = 'form_3' method='post' target="_blank" >
+	Survey:
+	<div style="margin-top: 5px;">
+	<select name="survey_id" id="survey_id" style="width:200px;">
+		<OPTION VALUE="" Selected></OPTION>
+		<?php foreach($this->profileSurvey as $survey):?>
+		<OPTION VALUE=<?php echo $survey->i2_survey_id;?> ><?php echo $survey->name;?></OPTION>
+		<?php endforeach;?>
+	
+	</select>
+	</div>
+	<div style="clear:both;  margin-top: 10px;"></div>
+	Language:
+	<div style="margin-top: 5px;">
+	<select name="language" id="language" style="width:100px;">
+		<OPTION VALUE="zh" Selected>zh</OPTION>
+		<OPTION VALUE="en" >en</OPTION>
+	</select>
+	</div>
+	<div style="clear:both;  margin-top: 10px;"></div>
+	<input type="submit" id='submit3' value='Download Survey'/>
+	<div id="notice" style="padding-bottom: 10px; display: none; font-size: 14px; color: #f00; font-weight: bold;" ><?php echo $this->translate('Please wait...')?></div>		
+	<?php foreach($this->profileSurvey as $survey):?>
+		<input type="hidden" id="survey_<?php echo $survey->i2_survey_id;?>_en" name="survey_<?php echo $survey->i2_survey_id;?>_en" value="<?php echo $survey->i2_survey_id_en;?>" />
+	<?php endforeach;?>
+	</form>
+	</div>
+</div>
+<script language="javascript">
+	var form_f1 = document.getElementById('form_1');
+	form_f1.onsubmit = function() {
+//		  $('submit1').disabled='disabled';
+	//	  $('notice').style.display = "";
+	}
+  var form_f3 = document.getElementById('form_3');
+  form_f3.onsubmit = function() {
+//	  $('submit3').disabled='disabled';
+//	  $('notice').style.display = "";
+  }
+  function submitPrecampaign(){
+	  $('submittype').value = 'pre_campaign';
+	  form_f1.submit();
+//	  $('pre_campaign_button').disabled='disabled';
+  }
+  function submitPostcampaign(){
+	  $('submittype').value = 'post_campaign';
+	  form_f1.submit();
+//	  $('post_campaign_button').disabled='disabled';
+  }
+</script>

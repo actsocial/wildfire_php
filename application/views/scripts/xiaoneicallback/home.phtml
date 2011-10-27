@@ -1,0 +1,104 @@
+<div class="content">
+<div class="campaigns">	
+<?php foreach ($this->activeCampaigns as $activeCampaign):?>
+	<div class="campaign">
+		<h1>
+			<img src="<?php echo $this->imageUrl;?>/images/new_xiaonei/campaign_title_<?php echo $activeCampaign['campaign_id'];?>.png" title="<?php echo $activeCampaign['name']; ?>"/>
+		</h1>
+		<ul>
+	<?php $reportCount=1?>
+	<?php foreach ($this->allCampaignReports as $report):?>
+		<?php if ($report['campaign_id']==$activeCampaign['campaign_id'] && $reportCount<=3):?>
+			<li>星星火活动报告#<?php echo $reportCount?> (0-500分)&nbsp;&nbsp;
+				<?php if(array_key_exists($report['id'], $this->approvedCampaignReportPoint)) {?>
+					<img src="<?php echo $this->imageUrl;?>/images/new_xiaonei/action_check.gif" align="absmiddle"/>
+					获得<?php echo $this->approvedCampaignReportPoint[$report['id']]?>积分!
+				<?php } else { ?>
+					提交成功，未评阅
+				<?php } ?>
+			</li>
+			<?php $reportCount++?>
+		<?php endif;?>
+	<?php endforeach;?>
+	<?php if ($reportCount == 1):?>
+			<li>
+				<a href="report?id=<?php echo $activeCampaign['campaign_id'];?>">点击提交报告#1</a> (0-500分)					
+			</li>
+			<li>
+				星星火活动报告#2 (0-500分)				
+			</li>
+			<li>
+				星星火活动报告#3 (0-500分)
+			</li>
+	<?php endif;?>
+	<?php if ($reportCount==2):?>
+			<li>
+				<a href="report?id=<?php echo $activeCampaign['campaign_id'];?>">点击提交报告#2</a> (0-500分)
+			</li>
+			<li>
+				星星火活动报告#3 (0-500分)
+			</li>
+	<?php endif;?>
+	<?php if ($reportCount ==3):?>
+			<li>
+				<a href="report?id=<?php echo $activeCampaign['campaign_id'];?>">点击提交报告#3</a> (0-500分)
+			</li>
+	<?php endif;?>
+	<?php if ($reportCount <=3){?>
+			<li>								
+				额外活动报告 (0-500分)
+			</li>
+	<?php }else{?>
+			<li>						
+			<a href="report?id=<?php echo $activeCampaign['campaign_id'];?>">
+				点击提交更多报告 (0-500分)
+			</a>
+			</li>
+	<?php }?>
+		</ul>
+	</div>
+<?php endforeach?>
+</div>
+<div class="notices">
+	<?php if (isset($this->recentInvitation['campaign_id'])):?>
+	<div class="notice notice-invitation">
+		<img src="<?php echo $this->imageUrl;?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" width="50" height="50"/>
+		<div class="notice-content">
+			<h2>请您参加<?php echo $this->escape($this->recentInvitation['name']);?>口口相传活动！</h2>
+			<p>
+				<?php echo $this->translate("xiaonei_campaign_invitation_description2_".$this->recentInvitation['campaign_id'])?>
+				<a href="acceptinvitation?campaign_id=<?php echo $this->recentInvitation['campaign_id'];?>">加入活动</a>
+				<a href="rejectinvitation?campaign_id=<?php echo $this->recentInvitation['campaign_id'];?>">不想参加</a>
+			</p>
+		</div>
+	</div>
+	<?php endif ?>
+	
+	<?php if (isset($this->postCampaignNotification['campaign_id'])):?>
+	<div class="notice notice-post-compaign">
+		<img src="<?php echo $this->imageUrl;?>/images/campaign/campaign_<?php echo $this->escape($this->postCampaignNotification['campaign_id']);?>_01.jpg" width="50" height="50"/>
+		<div class="notice-content">
+			<h2><?php echo $this->postCampaignNotification['name']?> 活动结束问卷</h2>
+			<p>
+				<?php echo $this->translate('xiaonei_campaign_post_survey_notice_'.$this->postCampaignNotification['campaign_id'])?>
+				<a href="postcampaign?id=<?php echo $this->postCampaignNotification['campaign_id'];?>">活动结束调查</a>
+			</p>
+		</div>
+	</div>
+	<?php endif ?>
+
+	<?php if (count($this->allInvitations)+count($this->activeCampaigns)==0):?>
+	<div class="notice notice-no-compaign">
+		<img src="<?php echo $this->imageUrl;?>/images/no-campaign.png" width="50" height="50"/>
+		<div class="notice-content">
+			<h2>所有星星火活动都已暂时满员！</h2>
+			<p>
+				但是，大部分的会员都会在加入星星火几周内收到活动邀请！请记得完成在你首页上出现的问卷，让我们更了解你，我们会及时通知你参加你感兴趣的活动。
+			</p>
+		</div>
+	</div>
+	<?php endif ?>
+</div>
+</div>
+
+

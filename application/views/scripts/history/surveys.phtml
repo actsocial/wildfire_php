@@ -1,0 +1,44 @@
+<div class="article-box"><div class="article-box-inner">
+	<h1 style="margin-left: 0px;"><?php echo $this->translate("Your_Spark_History")?></h1>
+	<p><?php echo $this->translate("Your_Spark_History_Content")?></p>
+</div></div>
+<div class="content" style="background: #fff;padding:0; margin-bottom: 0;margin-top:10px" align="center">
+<ul class="tabbed-buttons">
+	<li><a href="<?php echo $this->baseUrl();?>/history/campaigns"><?php echo $this->translate("His_Campaigns")?></a></li>
+	<li><a href="<?php echo $this->baseUrl();?>/history/reports"><?php echo $this->translate("His_Reports")?></a></li>
+	<li><a href="<?php echo $this->baseUrl();?>/history/referrals"><?php echo $this->translate("His_Referrals")?></a></li>
+	<li class="active"><a href="<?php echo $this->baseUrl();?>/history/surveys"><?php echo $this->translate("His_Surveys")?></a></li>
+	<li><a href="<?php echo $this->baseUrl();?>/history/stuff"><?php echo $this->translate("His_Stuff")?></a></li>
+</ul>
+</div>
+<div style="clear: both;"></div>
+<div class="content" style="background: #fff; padding: 0; margin-bottom: 0; margin-top: 10px; padding-left: 25px;">
+	<font style="font-size:14px"><?php echo $this->translate("History_Surveys_Hints")?></font>
+</div>
+<div style="clear: both;"></div>
+<div class="content" style="background: #fff; padding: 0;" align="center">
+<div class="tabbed-content">
+
+	<table class="survey-history">
+		<tr>
+			<th><?php echo $this->translate("His_Surveys_survey_name")?></th>
+			<th><?php echo $this->translate("His_Surveys_date_poll_taken")?></th>
+			<th><?php echo $this->translate("His_Surveys_Points_Earned")?></th>
+		</tr>
+		<?php 
+		foreach ($this->paginator as $survey):?>
+		<tr>
+			<?php if ($this->lang=='en') { ?> 
+			<td><?php echo $survey['english_name']?></td>
+			<?php } else{ ?>
+			<td><?php echo $survey['name']?></td>
+			<?php } ?>
+			<td><?php echo $survey['date']?></td>
+			<td><?php echo $survey['point_amount']?><?php echo $this->translate("History_Points")?></td>
+		</tr>
+		<?php endforeach;?>
+	</table>
+	<div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?></div>
+</div>
+<div style="clear: both;"></div>
+</div>

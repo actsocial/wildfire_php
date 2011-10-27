@@ -1,0 +1,47 @@
+﻿<div style="padding-bottom:40px;"></div>
+<div align="center" >
+
+<br/>
+<h2>sms list</h2>
+<br/>
+<p><a href="<?php echo $this->url(array('controller'=>'sms','action'=>'admincompose'));?>">
+>>compose sms</a>&nbsp; &nbsp; &nbsp;
+<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminaccount'));?>">
+>>account info</a>&nbsp; &nbsp; &nbsp;
+<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminreceive'));?>">
+>>receive sms</a>
+</p>
+<br/>
+<div align="center">
+<form action="<?php echo $this->url(array('controller'=>'sms','action'=>'admincompose'));?>" method="post">
+Send next
+<input type="text" name="send_number" size="2" value=""/>
+consumers
+<input type="hidden" name="plan_id" value="<?php echo $this->plan_id;?>"/>
+<input type="submit" value="Send" />
+</form>
+</div>
+<table width="800">
+	<tr>
+	<th width="10">No.</th>
+	<th width="50"><?php echo $this->translate('Consumers_Name'); ?></th>
+	<th width="50"><?php echo $this->translate('CONTACT INFORMATION_PHONE'); ?></th>
+	<th width="20">State</th>
+	<th width="50">Time</th>
+    <th width="10">Plan Id</th>
+	</tr>
+	
+	<?php $count = 1; foreach($this->sms as $row) { ?>
+	<tr>
+	<td><?php echo $count++;?></td>
+	<td><?php echo $row['name'];?></td>
+	<td><?php echo $row['phone'];?></td>
+	<td><?php echo $row['state'];?></td>
+	<td><?php echo $row['send_date'];?></td>
+	<td><?php echo $row['plan_id'];?></td>
+	</tr>
+	<?php } ?>
+</table>
+
+</div>
+

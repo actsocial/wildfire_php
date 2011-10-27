@@ -1,0 +1,27 @@
+		<table class="survey-history">
+			<tr>
+				<th><?php echo $this->translate("His_Reports_campaign_name")?></th>
+				<th><?php echo $this->translate("His_Reports_date")?></th>
+				<th><?php echo $this->translate("His_Reports_state")?></th>	
+				<th><?php echo $this->translate("His_Surveys_Points_Earned")?></th>
+			</tr>
+			<?php 
+			foreach ($this->paginator as $report):?>
+			<tr>
+				<td>
+				<a	href="<?php echo $this->url(array('controller'=>'history','action'=>'report','id'=>$report['id']));?>"><?php echo $report['name']?></a></td>
+				<td><?php echo $report['create_date']?></td>
+				<td>
+					<?php 
+					if($report['state'] == 'APPROVED'){echo $this->translate("His_Reports_APPROVED");}
+					if($report['state'] == 'NEW'){echo $this->translate("His_Reports_NEW");}?>
+				</td>
+				<td>
+				<?php $i = $report['id'];
+				if($report['reward_point_transaction_record_id']){echo $report['point_amount'];?><?php echo $this->translate("History_Points")?>
+				<?php }else{echo $this->translate("His_Reports_NEW");}?>
+				</td>
+			</tr>
+			<?php endforeach;?>
+		</table>
+		<div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?></div>

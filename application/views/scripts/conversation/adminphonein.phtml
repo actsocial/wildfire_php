@@ -1,0 +1,32 @@
+<form id="phone_report" target="blank" method="post" action="<?php echo $this->url(array('controller'=>'conversation','action'=>'adminreport'));?>">
+     <p>
+     <label for="source">Source</label>
+     <br/>
+          <select name="source">
+       	<option value="application" >Application</option>
+       	<option value="email" >Email</option>
+       	<option value="phone" >Phone</option>
+       	<option value="sms" >SMS</option>
+     </select>
+     </p>
+     <p>
+     <lable for="campaign_id">Campaign</lable>
+     <br/>
+     <select id="campaign_id" name="campaign_id">
+       <?php foreach($this->campaigns as $campaign) {?>
+       	<option value="<?php echo $campaign->id ?>" ><?php echo $campaign->name ?></option>
+       <? } ?>
+     </select>
+     </p>
+     <p>
+     <lable for="consumer_id">Consumer ID</lable>
+     <br/>
+     <input type="text" id="consumer_id" name="consumer_id" value=''/>
+      <p/>
+      <p>
+      <lable for="phone_comments">Comment</lable>
+      <br/>
+      <textarea id="phone_comments" name="phone_comments" cols="80" rows="10"></textarea>
+      <p/>
+      <input type='submit' value="提交电话报告" />
+    </form>	

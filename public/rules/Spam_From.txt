@@ -1,0 +1,2196 @@
+﻿########################## From ########################################
+
+header CN_FROM_000		From:name =~ /([\xB0-\xF7][\xA0-\xFE]){20,}/
+describe CN_FROM_000		发件人姓名为二十个汉字或以上
+score CN_FROM_000		25.00
+
+header CN_FROM_001		From:name =~ /([\xB0-\xF7][\xA0-\xFE]){10,}/
+describe CN_FROM_001		发件人姓名为十个汉字或以上
+score CN_FROM_001		10.00
+
+header CN_FROM_002		From:name =~ /([\xB0-\xF7][\xA0-\xFE]){7,}/
+describe CN_FROM_002		发件人姓名为七个汉字或以上
+score CN_FROM_002		6.00
+
+header CN_FROM_003		From:name =~ /([\xB0-\xF7][\xA0-\xFE]){5,}/
+describe CN_FROM_003		发件人姓名为五个汉字或以上
+score CN_FROM_003		5.00
+
+header CN_FROM_004		From:name =~ /^([\xB0-\xF7][\xA0-\xFE])\s?$/
+describe CN_FROM_004		发件人姓名中只有一个汉字
+score CN_FROM_004		4.00
+
+header CN_FROM_005		From:name =~ /^([\xB0-\xF7][\xA0-\xFE])生\s?$/
+describe CN_FROM_005		发件人中包括某生
+score CN_FROM_005		2.00
+
+header CN_FROM_006		From:name =~ /(?:!|！)/
+describe CN_FROM_006		发件人包括惊叹号
+score CN_FROM_006		25.00
+
+header CN_FROM_007		From:name =~ /^\d+$/
+describe CN_FROM_007		发件人只包含数字
+score CN_FROM_007		5.00
+
+header CN_FROM_008		From:name =~ /\.(?:com|net|org|cn|se)/
+describe CN_FROM_008		发件人名字部分含有网址
+score CN_FROM_008		4.00
+
+header CN_FROM_009		From:name =~ /^(?:((?:小|阿|老)([\xB0-\xF7][\xA0-\xFE]){1,2})|(([\xB0-\xF7][\xA0-\xFE])儿))$/
+describe CN_FROM_009		发件人包含昵称
+score CN_FROM_009		4.00
+
+header CN_FROM_010		From:name =~ /^([\xB0-\xF7][\xA0-\xFE])\1$/
+describe CN_FROM_010		发件人中只包含两字重复如姗姗、倩倩
+score CN_FROM_010		4.00
+
+header CN_FROM_011		From:name =~ /(?:网|报|中心)/
+describe CN_FROM_011		发件人中包含某网或某报
+score CN_FROM_011		3.00
+
+header CN_FROM_012		From:name =~ /(?:物流|感觉|忠言|香港|打折|专柜|建站|天才)/
+score CN_FROM_012		25.00
+
+header CN_FROM_013		From:name =~ /([\xA1-\xA3][\xA1-\xFE])/
+describe CN_FROM_013		发件人中包含非法字符
+score CN_FROM_013		4.00
+
+header CN_FROM_014		From:name =~ /先生/
+score CN_FROM_014		25.00
+
+header CN_FROM_015		From:name =~ /小姐/
+score CN_FROM_015		25.00
+
+header CN_FROM_016		From:name =~ /女士/
+score CN_FROM_016		25.00
+
+header CN_FROM_017		From:name =~ /老师/
+score CN_FROM_017		25.00
+
+header CN_FROM_018		From:name =~ /博士/
+score CN_FROM_018		25.00
+
+header CN_FROM_019		From:name =~ /经理/
+score CN_FROM_019		25.00
+
+header CN_FROM_020		From:name =~ /同学/
+score CN_FROM_020		25.00
+
+header CN_FROM_021		From:name =~ /你/
+score CN_FROM_021		25.00
+
+header CN_FROM_022		From:name =~ /我/
+score CN_FROM_022		25.00
+
+header CN_FROM_023		From:name =~ /您/
+score CN_FROM_023		25.00
+
+header CN_FROM_024		From:name =~ /她/
+score CN_FROM_024		25.00
+
+header CN_FROM_025		From:name =~ /他/
+score CN_FROM_025		25.00
+
+header CN_FROM_026		From:name =~ /飞龙/
+score CN_FROM_026		25.00
+
+header CN_FROM_027		From:name =~ /英语/
+score CN_FROM_027		25.00
+
+header CN_FROM_028		From:name =~ /图铃/
+score CN_FROM_028		25.00
+
+header CN_FROM_029		From:name =~ /俱乐部/
+score CN_FROM_029		25.00
+
+header CN_FROM_030		From:name =~ /天勤/
+score CN_FROM_030		25.00
+
+header CN_FROM_031		From:name =~ /商务邮/
+score CN_FROM_031		25.00
+
+header CN_FROM_032		From:name =~ /人才/
+score CN_FROM_032		5.00
+
+header CN_FROM_033		From:name =~ /肉/
+score CN_FROM_033		25.00
+
+header CN_FROM_034		From:name =~ /开天/
+score CN_FROM_034		25.00
+
+header CN_FROM_035		From:name =~ /情侣/
+score CN_FROM_035		25.00
+
+header CN_FROM_036		From:name =~ /博凯/
+score CN_FROM_036		25.00
+
+header CN_FROM_037		From:name =~ /龙鼎/
+score CN_FROM_037		25.00
+
+header CN_FROM_038		From:name =~ /房地产/
+score CN_FROM_038		25.00
+
+header CN_FROM_039		From:name =~ /音乐/
+score CN_FROM_039		25.00
+
+header CN_FROM_040		From:name =~ /免费/
+score CN_FROM_040		25.00
+
+header CN_FROM_041		From:name =~ /皮具/
+score CN_FROM_041		25.00
+
+header CN_FROM_042		From:name =~ /俱乐部/
+score CN_FROM_042		25.00
+
+header CN_FROM_043		From:name =~ /胸/
+score CN_FROM_043		25.00
+
+header CN_FROM_044		From:name =~ /邀请/
+score CN_FROM_044		25.00
+
+header CN_FROM_045		From:name =~ /设计/
+score CN_FROM_045		10.00
+
+header CN_FROM_046		From:name =~ /侨鑫/
+score CN_FROM_046		25.00
+
+header CN_FROM_047		From:name =~ /嘉诚/
+score CN_FROM_047		25.00
+
+header CN_FROM_048		From:name =~ /发票/
+score CN_FROM_048		25.00
+
+header CN_FROM_049		From:name =~ /开天/
+score CN_FROM_049		25.00
+
+header CN_FROM_050		From:name =~ /体育/
+score CN_FROM_050		25.00
+
+header CN_FROM_051		From:name =~ /青春/
+score CN_FROM_051		25.00
+
+header CN_FROM_052		From:name =~ /婚介/
+score CN_FROM_052		25.00
+
+header CN_FROM_053		From:name =~ /姐姐/
+score CN_FROM_053		25.00
+
+header CN_FROM_054		From:name =~ /空姐/
+score CN_FROM_054		25.00
+
+header CN_FROM_055		From:name =~ /女孩/
+score CN_FROM_055		25.00
+
+header CN_FROM_056		From:name =~ /妞/
+score CN_FROM_056		25.00
+
+header CN_FROM_057		From:name =~ /身材/
+score CN_FROM_057		25.00
+
+header CN_FROM_058		From:name =~ /减肥/
+score CN_FROM_058		25.00
+
+header CN_FROM_059		From:name =~ /情报/
+score CN_FROM_059		25.00
+
+header CN_FROM_060		From:name =~ /名录/
+score CN_FROM_060		25.00
+
+header CN_FROM_061		From:name =~ /油画/
+score CN_FROM_061		25.00
+
+header CN_FROM_062		From:name =~ /档案/
+score CN_FROM_062		25.00
+
+header CN_FROM_063		From:name =~ /饰品/
+score CN_FROM_063		25.00
+
+header CN_FROM_064		From:name =~ /化妆/
+score CN_FROM_064		25.00
+
+header CN_FROM_065		From:name =~ /店铺/
+score CN_FROM_065		25.00
+
+header CN_FROM_066		From:name =~ /乙烯/
+score CN_FROM_066		25.00
+
+header CN_FROM_067		From:name =~ /讲座/
+score CN_FROM_067		25.00
+
+header CN_FROM_068		From:name =~ /课程/
+score CN_FROM_068		25.00
+
+header CN_FROM_069		From:name =~ /求职/
+score CN_FROM_069		25.00
+
+header CN_FROM_070		From:name =~ /研修/
+score CN_FROM_070		25.00
+
+header CN_FROM_071		From:name =~ /课堂/
+score CN_FROM_071		25.00
+
+header CN_FROM_072		From:name =~ /培训/
+score CN_FROM_072		25.00
+
+header CN_FROM_073		From:name =~ /开课/
+score CN_FROM_073		25.00
+
+header CN_FROM_074		From:name =~ /开讲/
+score CN_FROM_074		25.00
+
+header CN_FROM_075		From:name =~ /必修/
+score CN_FROM_075		25.00
+
+header CN_FROM_076		From:name =~ /主讲/
+score CN_FROM_076		25.00
+
+header CN_FROM_077		From:name =~ /汽车/
+score CN_FROM_077		25.00
+
+header CN_FROM_078		From:name =~ /财富/
+score CN_FROM_078		25.00
+
+header CN_FROM_079		From:name =~ /淘宝/
+score CN_FROM_079		10.00
+
+header CN_FROM_080		From:name =~ /时尚/
+score CN_FROM_080		25.00
+
+header CN_FROM_081		From:name =~ /印刷/
+score CN_FROM_081		25.00
+
+header CN_FROM_082		From:name =~ /薪酬/
+score CN_FROM_082		25.00
+
+header CN_FROM_083		From:name =~ /展览/
+score CN_FROM_083		25.00
+
+header CN_FROM_084		From:name =~ /枪/
+score CN_FROM_084		25.00
+
+header CN_FROM_085		From:name =~ /美丽/
+score CN_FROM_085		25.00
+
+header CN_FROM_086		From:name =~ /名师/
+score CN_FROM_086		25.00
+
+header CN_FROM_087		From:name =~ /授课/
+score CN_FROM_087		25.00
+
+header CN_FROM_088		From:name =~ /组长/
+score CN_FROM_088		25.00
+
+header CN_FROM_089		From:name =~ /下载/
+score CN_FROM_089		25.00
+
+header CN_FROM_090		From:name =~ /博客/
+score CN_FROM_090		25.00
+
+header CN_FROM_091		From:name =~ /礼仪/
+score CN_FROM_091		25.00
+
+header CN_FROM_092		From:name =~ /网赚/
+score CN_FROM_092		25.00
+
+header CN_FROM_093		From:name =~ /文秘/
+score CN_FROM_093		25.00
+
+header CN_FROM_094		From:name =~ /宝贝/
+score CN_FROM_094		25.00
+
+header CN_FROM_095		From:name =~ /夫妻/
+score CN_FROM_095		25.00
+
+header CN_FROM_096		From:name =~ /咖啡/
+score CN_FROM_096		25.00
+
+header CN_FROM_097		From:name =~ /婚姻/
+score CN_FROM_097		25.00
+
+header CN_FROM_098		From:name =~ /交友/
+score CN_FROM_098		25.00
+
+header CN_FROM_099		From:name =~ /塑料/
+score CN_FROM_099		25.00
+
+header CN_FROM_100		From:name =~ /宠物/
+score CN_FROM_100		25.00
+
+header CN_FROM_101		From:name =~ /疯狂/
+score CN_FROM_101		25.00
+
+header CN_FROM_102		From:name =~ /彩票/
+score CN_FROM_102		25.00
+
+header CN_FROM_103		From:name =~ /三伦/
+score CN_FROM_103		25.00
+
+header CN_FROM_104		From:name =~ /教授/
+score CN_FROM_104		25.00
+
+header CN_FROM_105		From:name =~ /视频/
+score CN_FROM_105		25.00
+
+header CN_FROM_106		From:name =~ /性福/
+score CN_FROM_106		25.00
+
+header CN_FROM_107		From:name =~ /保健/
+score CN_FROM_107		25.00
+
+header CN_FROM_108		From:name =~ /惊险/
+score CN_FROM_108		25.00
+
+header CN_FROM_109		From:name =~ /礼品/
+score CN_FROM_109		25.00
+
+header CN_FROM_110		From:name =~ /收购/
+score CN_FROM_110		25.00
+
+header CN_FROM_111		From:name =~ /银饰/
+score CN_FROM_111		25.00
+
+header CN_FROM_112		From:name =~ /折扣/
+score CN_FROM_112		25.00
+
+header CN_FROM_113		From:name =~ /机票/
+score CN_FROM_113		25.00
+
+header CN_FROM_114		From:name =~ /火车票/
+score CN_FROM_114		25.00
+
+header CN_FROM_115		From:name =~ /精彩/
+score CN_FROM_115		25.00
+
+header CN_FROM_116		From:name =~ /饼干/
+score CN_FROM_116		25.00
+
+header CN_FROM_117		From:name =~ /白酒/
+score CN_FROM_117		25.00
+
+header CN_FROM_118		From:name =~ /芙蓉/
+score CN_FROM_118		25.00
+
+header CN_FROM_119		From:name =~ /乐酷/
+score CN_FROM_119		25.00
+
+header CN_FROM_120		From:name =~ /植树/
+score CN_FROM_120		25.00
+
+header CN_FROM_121		From:name =~ /瑞丽/
+score CN_FROM_121		25.00
+
+header CN_FROM_122		From:name =~ /转让/
+score CN_FROM_122		25.00
+
+header CN_FROM_123		From:name =~ /深省/
+score CN_FROM_123		25.00
+
+header CN_FROM_124		From:name =~ /瑞网/
+score CN_FROM_124		25.00
+
+header CN_FROM_125		From:name =~ /在线/
+score CN_FROM_125		25.00
+
+header CN_FROM_126		From:name =~ /深思/
+score CN_FROM_126		25.00
+
+header CN_FROM_127		From:name =~ /万事通/
+score CN_FROM_127		25.00
+
+header CN_FROM_128		From:name =~ /风情/
+score CN_FROM_128		25.00
+
+header CN_FROM_129		From:name =~ /精灵/
+score CN_FROM_129		25.00
+
+header CN_FROM_130		From:name =~ /招聘易/
+score CN_FROM_130		25.00
+
+header CN_FROM_131		From:name =~ /贵妃/
+score CN_FROM_131		25.00
+
+header CN_FROM_132		From:name =~ /知心/
+score CN_FROM_132		25.00
+
+header CN_FROM_133		From:name =~ /杂志/
+score CN_FROM_133		25.00
+
+header CN_FROM_134		From:name =~ /终生/
+score CN_FROM_134		25.00
+
+header CN_FROM_135		From:name =~ /领导/
+score CN_FROM_135		25.00
+
+header CN_FROM_136		From:name =~ /成人/
+score CN_FROM_136		25.00
+
+header CN_FROM_137		From:name =~ /地带/
+score CN_FROM_137		25.00
+
+header CN_FROM_138		From:name =~ /教育/
+score CN_FROM_138		25.00
+
+header CN_FROM_139		From:name =~ /绩效/
+score CN_FROM_139		25.00
+
+header CN_FROM_140		From:name =~ /专家/
+score CN_FROM_140		25.00
+
+header CN_FROM_141		From:name =~ /智慧/
+score CN_FROM_141		25.00
+
+header CN_FROM_142		From:name =~ /入门/
+score CN_FROM_142		25.00
+
+header CN_FROM_143		From:name =~ /妓/
+score CN_FROM_143		25.00
+
+header CN_FROM_144		From:name =~ /沐浴/
+score CN_FROM_144		25.00
+
+header CN_FROM_145		From:name =~ /桑拿/
+score CN_FROM_145		25.00
+
+header CN_FROM_146		From:name =~ /宣传/
+score CN_FROM_146		25.00
+
+header CN_FROM_147		From:name =~ /买卖/
+score CN_FROM_147		25.00
+
+header CN_FROM_148		From:name =~ /户外/
+score CN_FROM_148		25.00
+
+header CN_FROM_149		From:name =~ /漂流/
+score CN_FROM_149		25.00
+
+header CN_FROM_150		From:name =~ /感情/
+score CN_FROM_150		25.00
+
+header CN_FROM_151		From:name =~ /朋友/
+score CN_FROM_151		25.00
+
+header CN_FROM_152		From:name =~ /黄金/
+score CN_FROM_152		25.00
+
+header CN_FROM_153		From:name =~ /哈哈/
+score CN_FROM_153		25.00
+
+header CN_FROM_154		From:name =~ /大笑/
+score CN_FROM_154		25.00
+
+header CN_FROM_155		From:name =~ /笑话/
+score CN_FROM_155		25.00
+
+header CN_FROM_156		From:name =~ /搞笑/
+score CN_FROM_156		25.00
+
+header CN_FROM_157		From:name =~ /暴笑/
+score CN_FROM_157		25.00
+
+header CN_FROM_158		From:name =~ /吐血/
+score CN_FROM_158		25.00
+
+header CN_FROM_159		From:name =~ /玫瑰/
+score CN_FROM_159		25.00
+
+header CN_FROM_160		From:name =~ /肌肤/
+score CN_FROM_160		25.00
+
+header CN_FROM_161		From:name =~ /海运/
+score CN_FROM_161		25.00
+
+header CN_FROM_162		From:name =~ /男性/
+score CN_FROM_162		25.00
+
+header CN_FROM_163		From:name =~ /女性/
+score CN_FROM_163		25.00
+
+header CN_FROM_164		From:name =~ /电话/
+score CN_FROM_164		25.00
+
+header CN_FROM_165		From:name =~ /顾问/
+score CN_FROM_165		25.00
+
+header CN_FROM_166		From:name =~ /爱情/
+score CN_FROM_166		25.00
+
+header CN_FROM_167		From:name =~ /侦探/
+score CN_FROM_167		25.00
+
+header CN_FROM_168		From:name =~ /彩迪/
+score CN_FROM_168		25.00
+
+header CN_FROM_169		From:name =~ /艾滋/
+score CN_FROM_169		25.00
+
+header CN_FROM_170		From:name =~ /灯饰/
+score CN_FROM_170		25.00
+
+header CN_FROM_171		From:name =~ /视窗/
+score CN_FROM_171		25.00
+
+header CN_FROM_172		From:name =~ /指纹/
+score CN_FROM_172		25.00
+
+header CN_FROM_173		From:name =~ /紫光/
+score CN_FROM_173		25.00
+
+header CN_FROM_174		From:name =~ /酒店/
+score CN_FROM_174		25.00
+
+header CN_FROM_175		From:name =~ /生命/
+score CN_FROM_175		25.00
+
+header CN_FROM_176		From:name =~ /寻求/
+score CN_FROM_176		25.00
+
+header CN_FROM_177		From:name =~ /代理/
+score CN_FROM_177		25.00
+
+header CN_FROM_178		From:name =~ /机密/
+score CN_FROM_178		25.00
+
+header CN_FROM_179		From:name =~ /月赚/
+score CN_FROM_179		25.00
+
+header CN_FROM_180		From:name =~ /人生/
+score CN_FROM_180		25.00
+
+header CN_FROM_181		From:name =~ /伟业/
+score CN_FROM_181		25.00
+
+header CN_FROM_182		From:name =~ /小编/
+score CN_FROM_182		25.00
+
+header CN_FROM_183		From:name =~ /周易/
+score CN_FROM_183		25.00
+
+header CN_FROM_184		From:name =~ /研究/
+score CN_FROM_184		25.00
+
+header CN_FROM_185		From:name =~ /互联/
+score CN_FROM_185		25.00
+
+header CN_FROM_186		From:name =~ /收藏/
+score CN_FROM_186		25.00
+
+header CN_FROM_187		From:name =~ /华航/
+score CN_FROM_187		25.00
+
+header CN_FROM_188		From:name =~ /富翁/
+score CN_FROM_188		25.00
+
+header CN_FROM_189		From:name =~ /策划/
+score CN_FROM_189		25.00
+
+header CN_FROM_190		From:name =~ /风险/
+score CN_FROM_190		25.00
+
+header CN_FROM_191		From:name =~ /咨询/
+score CN_FROM_191		25.00
+
+header CN_FROM_192		From:name =~ /热线/
+score CN_FROM_192		25.00
+
+header CN_FROM_193		From:name =~ /情感/
+score CN_FROM_193		25.00
+
+header CN_FROM_194		From:name =~ /办理/
+score CN_FROM_194		25.00
+
+header CN_FROM_195		From:name =~ /证件/
+score CN_FROM_195		25.00
+
+header CN_FROM_196		From:name =~ /幽默/
+score CN_FROM_196		25.00
+
+header CN_FROM_197		From:name =~ /读者/
+score CN_FROM_197		25.00
+
+header CN_FROM_198		From:name =~ /老板/
+score CN_FROM_198		25.00
+
+header CN_FROM_199		From:name =~ /订单/
+score CN_FROM_199		25.00
+
+header CN_FROM_200		From:name =~ /购物/
+score CN_FROM_200		25.00
+
+header CN_FROM_201		From:name =~ /流量/
+score CN_FROM_201		25.00
+
+header CN_FROM_202		From:name =~ /厉害/
+score CN_FROM_202		25.00
+
+header CN_FROM_203		From:name =~ /影视/
+score CN_FROM_203		25.00
+
+header CN_FROM_204		From:name =~ /软网/
+score CN_FROM_204		25.00
+
+header CN_FROM_205		From:name =~ /治理/
+score CN_FROM_205		25.00
+
+header CN_FROM_206		From:name =~ /商家/
+score CN_FROM_206		25.00
+
+header CN_FROM_207		From:name =~ /辅导/
+score CN_FROM_207		25.00
+
+header CN_FROM_208		From:name =~ /考试/
+score CN_FROM_208		25.00
+
+header CN_FROM_209		From:name =~ /征婚/
+score CN_FROM_209		25.00
+
+header CN_FROM_210		From:name =~ /天曦/
+score CN_FROM_210		25.00
+
+header CN_FROM_211		From:name =~ /震憾/
+score CN_FROM_211		25.00
+
+header CN_FROM_212		From:name =~ /图书/
+score CN_FROM_212		25.00
+
+header CN_FROM_213		From:name =~ /超女/
+score CN_FROM_213		25.00
+
+header CN_FROM_214		From:name =~ /悠悠/
+score CN_FROM_214		25.00
+
+header CN_FROM_215		From:name =~ /导航/
+score CN_FROM_215		25.00
+
+header CN_FROM_216		From:name =~ /银行/
+score CN_FROM_216		5.00
+
+header CN_FROM_217		From:name =~ /同盟/
+score CN_FROM_217		25.00
+
+header CN_FROM_218		From:name =~ /房屋/
+score CN_FROM_218		25.00
+
+header CN_FROM_219		From:name =~ /阅读/
+score CN_FROM_219		25.00
+
+header CN_FROM_220		From:name =~ /美女/
+score CN_FROM_220		25.00
+
+header CN_FROM_221		From:name =~ /靓女/
+score CN_FROM_221		25.00
+
+header CN_FROM_222		From:name =~ /帅哥/
+score CN_FROM_222		25.00
+
+header CN_FROM_223		From:name =~ /靓仔/
+score CN_FROM_223		25.00
+
+header CN_FROM_224		From:name =~ /诚邀/
+score CN_FROM_224		25.00
+
+header CN_FROM_225		From:name =~ /好工作/
+score CN_FROM_225		25.00
+
+header CN_FROM_226		From:name =~ /好房/
+score CN_FROM_226		25.00
+
+header CN_FROM_227		From:name =~ /好车网/
+score CN_FROM_227		25.00
+
+header CN_FROM_228		From:name =~ /百万/
+score CN_FROM_228		25.00
+
+header CN_FROM_229		From:name =~ /维护/
+score CN_FROM_229		25.00
+
+header CN_FROM_230		From:name =~ /禁片/
+score CN_FROM_230		25.00
+
+header CN_FROM_231		From:name =~ /爽片/
+score CN_FROM_231		25.00
+
+header CN_FROM_232		From:name =~ /高级/
+score CN_FROM_232		25.00
+
+header CN_FROM_233		From:name =~ /优秀/
+score CN_FROM_233		25.00
+
+header CN_FROM_234		From:name =~ /搜索/
+score CN_FROM_234		25.00
+
+header CN_FROM_235		From:name =~ /聚会/
+score CN_FROM_235		25.00
+
+header CN_FROM_236		From:name =~ /狂言/
+score CN_FROM_236		25.00
+
+header CN_FROM_237		From:name =~ /污染/
+score CN_FROM_237		25.00
+
+header CN_FROM_238		From:name =~ /风铃/
+score CN_FROM_238		25.00
+
+header CN_FROM_239		From:name =~ /节电/
+score CN_FROM_239		25.00
+
+header CN_FROM_240		From:name =~ /节能/
+score CN_FROM_240		25.00
+
+header CN_FROM_241		From:name =~ /存储/
+score CN_FROM_241		25.00
+
+header CN_FROM_242		From:name =~ /大师/
+score CN_FROM_242		25.00
+
+header CN_FROM_243		From:name =~ /警世/
+score CN_FROM_243		25.00
+
+header CN_FROM_244		From:name =~ /良言/
+score CN_FROM_244		25.00
+
+header CN_FROM_245		From:name =~ /谈判/
+score CN_FROM_245		25.00
+
+header CN_FROM_246		From:name =~ /甩卖/
+score CN_FROM_246		25.00
+
+header CN_FROM_247		From:name =~ /遗憾/
+score CN_FROM_247		25.00
+
+header CN_FROM_248		From:name =~ /试验/
+score CN_FROM_248		25.00
+
+header CN_FROM_249		From:name =~ /售票/
+score CN_FROM_249		25.00
+
+header CN_FROM_250		From:name =~ /铝氧/
+score CN_FROM_250		25.00
+
+header CN_FROM_251		From:name =~ /逸能/
+score CN_FROM_251		25.00
+
+header CN_FROM_252		From:name =~ /赚钱/
+score CN_FROM_252		25.00
+
+header CN_FROM_253		From:name =~ /漫画/
+score CN_FROM_253		25.00
+
+header CN_FROM_254		From:name =~ /税.务/
+score CN_FROM_254		25.00
+
+header CN_FROM_255		From:name =~ /策.划/
+score CN_FROM_255		25.00
+
+header CN_FROM_256		From:name =~ /买买/
+score CN_FROM_256		25.00
+
+header CN_FROM_257		From:name =~ /娟娟/
+score CN_FROM_257		5.00
+
+header CN_FROM_258		From:name =~ /都市/
+score CN_FROM_258		25.00
+
+header CN_FROM_259		From:name =~ /恋人/
+score CN_FROM_259		25.00
+
+header CN_FROM_260		From:name =~ /查询/
+score CN_FROM_260		25.00
+
+header CN_FROM_261		From:name =~ /调查/
+score CN_FROM_261		25.00
+
+header CN_FROM_262		From:name =~ /珍珠/
+score CN_FROM_262		25.00
+
+header CN_FROM_263		From:name =~ /抽奖/
+score CN_FROM_263		25.00
+
+header CN_FROM_264		From:name =~ /耗材/
+score CN_FROM_264		25.00
+
+header CN_FROM_265		From:name =~ /妙酷/
+score CN_FROM_265		25.00
+
+header CN_FROM_266		From:name =~ /苏-州/
+score CN_FROM_266		25.00
+
+header CN_FROM_267		From:name =~ /深-圳/
+score CN_FROM_267		25.00
+
+header CN_FROM_268		From:name =~ /成-都/
+score CN_FROM_268		25.00
+
+header CN_FROM_269		From:name =~ /上-海/
+score CN_FROM_269		25.00
+
+header CN_FROM_270		From:name =~ /广-州/
+score CN_FROM_270		25.00
+
+header CN_FROM_271		From:name =~ /北-京/
+score CN_FROM_271		25.00
+
+header CN_FROM_272		From:name =~ /绝对/
+score CN_FROM_272		25.00
+
+header CN_FROM_273		From:name =~ /震撼/
+score CN_FROM_273		25.00
+
+header CN_FROM_274		From:name =~ /穷人/
+score CN_FROM_274		25.00
+
+header CN_FROM_275		From:name =~ /富人/
+score CN_FROM_275		25.00
+
+header CN_FROM_276		From:name =~ /选择/
+score CN_FROM_276		25.00
+
+header CN_FROM_277		From:name =~ /经典/
+score CN_FROM_277		25.00
+
+header CN_FROM_278		From:name =~ /错过/
+score CN_FROM_278		25.00
+
+header CN_FROM_279		From:name =~ /海盗/
+score CN_FROM_279		25.00
+
+header CN_FROM_280		From:name =~ /阴阳/
+score CN_FROM_280		25.00
+
+header CN_FROM_281		From:name =~ /批发/
+score CN_FROM_281		25.00
+
+header CN_FROM_282		From:name =~ /资料/
+score CN_FROM_282		25.00
+
+header CN_FROM_283		From:name =~ /退休/
+score CN_FROM_283		25.00
+
+header CN_FROM_284		From:name =~ /电器/
+score CN_FROM_284		25.00
+
+header CN_FROM_285		From:name =~ /领地/
+score CN_FROM_285		25.00
+
+header CN_FROM_286		From:name =~ /得易搜/
+score CN_FROM_286		25.00
+
+header CN_FROM_287		From:name =~ /丹溪女/
+score CN_FROM_287		25.00
+
+header CN_FROM_288		From:name =~ /快乐/
+score CN_FROM_288		25.00
+
+header CN_FROM_289		From:name =~ /大本营/
+score CN_FROM_289		25.00
+
+header CN_FROM_290		From:name =~ /智囊/
+score CN_FROM_290		25.00
+
+header CN_FROM_291		From:name =~ /纤维/
+score CN_FROM_291		25.00
+
+header CN_FROM_292		From:name =~ /水泥/
+score CN_FROM_292		25.00
+
+header CN_FROM_293		From:name =~ /装饰/
+score CN_FROM_293		25.00
+
+header CN_FROM_294		From:name =~ /想象/
+score CN_FROM_294		25.00
+
+header CN_FROM_295		From:name =~ /王牌/
+score CN_FROM_295		25.00
+
+header CN_FROM_296		From:name =~ /女人/
+score CN_FROM_296		25.00
+
+header CN_FROM_297		From:name =~ /翠翠/
+score CN_FROM_297		25.00
+
+header CN_FROM_298		From:name =~ /深圳站/
+score CN_FROM_298		25.00
+
+header CN_FROM_299		From:name =~ /信息网/
+score CN_FROM_299		25.00
+
+header CN_FROM_300		From:name =~ /禽兽/
+score CN_FROM_300		25.00
+
+header CN_FROM_301		From:name =~ /魔盒/
+score CN_FROM_301		25.00
+
+header CN_FROM_302		From:name =~ /美食/
+score CN_FROM_302		25.00
+
+header CN_FROM_303		From:name =~ /天堂/
+score CN_FROM_303		25.00
+
+header CN_FROM_304		From:name =~ /行业网/
+score CN_FROM_304		25.00
+
+header CN_FROM_305		From:name =~ /梦想/
+score CN_FROM_305		25.00
+
+header CN_FROM_306		From:name =~ /生产计划/
+score CN_FROM_306		25.00
+
+header CN_FROM_307		From:name =~ /物料计划/
+score CN_FROM_307		25.00
+
+header CN_FROM_308		From:name =~ /友谊/
+score CN_FROM_308		25.00
+
+header CN_FROM_309		From:name =~ /商务网/
+score CN_FROM_309		25.00
+
+header CN_FROM_310		From:name =~ /世界杯/
+score CN_FROM_310		25.00
+
+header CN_FROM_311		From:name =~ /皮带机/
+score CN_FROM_311		25.00
+
+header CN_FROM_312		From:name =~ /加班/
+score CN_FROM_312		25.00
+
+header CN_FROM_313		From:name =~ /讲师/
+score CN_FROM_313		25.00
+
+header CN_FROM_314		From:name =~ /暗恋/
+score CN_FROM_314		25.00
+
+header CN_FROM_315		From:name =~ /热恋/
+score CN_FROM_315		25.00
+
+header CN_FROM_316		From:name =~ /痴恋/
+score CN_FROM_316		25.00
+
+header CN_FROM_317		From:name =~ /苦恋/
+score CN_FROM_317		25.00
+
+header CN_FROM_318		From:name =~ /失恋/
+score CN_FROM_318		25.00
+
+header CN_FROM_319		From:name =~ /生物学/
+score CN_FROM_319		25.00
+
+header CN_FROM_320		From:name =~ /成年/
+score CN_FROM_320		25.00
+
+header CN_FROM_321		From:name =~ /采购商/
+score CN_FROM_321		25.00
+
+header CN_FROM_322		From:name =~ /姐妹/
+score CN_FROM_322		25.00
+
+header CN_FROM_323		From:name =~ /兄弟/
+score CN_FROM_323		25.00
+
+header CN_FROM_324		From:name =~ /健康/
+score CN_FROM_324		25.00
+
+header CN_FROM_325		From:name =~ /即时通/
+score CN_FROM_325		25.00
+
+header CN_FROM_326		From:name =~ /顶九网/
+score CN_FROM_326		25.00
+
+header CN_FROM_327		From:name =~ /百货/
+score CN_FROM_327		25.00
+
+header CN_FROM_328		From:name =~ /商场/
+score CN_FROM_328		25.00
+
+header CN_FROM_329		From:name =~ /超市/
+score CN_FROM_329		25.00
+
+header CN_FROM_330		From:name =~ /干部/
+score CN_FROM_330		25.00
+
+header CN_FROM_331		From:name =~ /旅行社/
+score CN_FROM_331		25.00
+
+header CN_FROM_332		From:name =~ /理财/
+score CN_FROM_332		25.00
+
+header CN_FROM_333		From:name =~ /法宝/
+score CN_FROM_333		25.00
+
+header CN_FROM_334		From:name =~ /佛缘/
+score CN_FROM_334		25.00
+
+header CN_FROM_335		From:name =~ /佛教/
+score CN_FROM_335		25.00
+
+header CN_FROM_336		From:name =~ /目标/
+score CN_FROM_336		25.00
+
+header CN_FROM_337		From:name =~ /恋爱/
+score CN_FROM_337		25.00
+
+header CN_FROM_338		From:name =~ /基地/
+score CN_FROM_338		25.00
+
+header CN_FROM_339		From:name =~ /办证/
+score CN_FROM_339		25.00
+
+header CN_FROM_340		From:name =~ /城市/
+score CN_FROM_340		25.00
+
+header CN_FROM_341		From:name =~ /招贴/
+score CN_FROM_341		25.00
+
+header CN_FROM_342		From:name =~ /住店/
+score CN_FROM_342		25.00
+
+header CN_FROM_343		From:name =~ /服饰/
+score CN_FROM_343		25.00
+
+header CN_FROM_344		From:name =~ /合作/
+score CN_FROM_344		25.00
+
+header CN_FROM_345		From:name =~ /业务/
+score CN_FROM_345		25.00
+
+header CN_FROM_346		From:name =~ /跟单/
+score CN_FROM_346		25.00
+
+header CN_FROM_347		From:name =~ /贼酷/
+score CN_FROM_347		25.00
+
+header CN_FROM_348		From:name =~ /图片/
+score CN_FROM_348		25.00
+
+header CN_FROM_349		From:name =~ /债权/
+score CN_FROM_349		25.00
+
+header CN_FROM_350		From:name =~ /债务/
+score CN_FROM_350		25.00
+
+header CN_FROM_351		From:name =~ /烦恼/
+score CN_FROM_351		25.00
+
+header CN_FROM_352		From:name =~ /困惑/
+score CN_FROM_352		25.00
+
+header CN_FROM_353		From:name =~ /早泄/
+score CN_FROM_353		25.00
+
+header CN_FROM_354		From:name =~ /前列腺/
+score CN_FROM_354		25.00
+
+header CN_FROM_355		From:name =~ /阴茎/
+score CN_FROM_355		25.00
+
+header CN_FROM_356		From:name =~ /提高/
+score CN_FROM_356		25.00
+
+header CN_FROM_357		From:name =~ /通关/
+score CN_FROM_357		25.00
+
+header CN_FROM_358		From:name =~ /效率/
+score CN_FROM_358		25.00
+
+header CN_FROM_359		From:name =~ /降低/
+score CN_FROM_359		25.00
+
+header CN_FROM_360		From:name =~ /拼音/
+score CN_FROM_360		25.00
+
+header CN_FROM_361		From:name =~ /企划/
+score CN_FROM_361		25.00
+
+header CN_FROM_362		From:name =~ /开源/
+score CN_FROM_362		25.00
+
+header CN_FROM_363		From:name =~ /牛股/
+score CN_FROM_363		25.00
+
+header CN_FROM_364		From:name =~ /自由呼/
+score CN_FROM_364		25.00
+
+header CN_FROM_365		From:name =~ /学城网/
+score CN_FROM_365		25.00
+
+header CN_FROM_366		From:name =~ /低价/
+score CN_FROM_366		25.00
+
+header CN_FROM_367		From:name =~ /流血/
+score CN_FROM_367		25.00
+
+header CN_FROM_368		From:name =~ /孔雀/
+score CN_FROM_368		25.00
+
+header CN_FROM_369		From:name =~ /缘分/
+score CN_FROM_369		25.00
+
+header CN_FROM_370		From:name =~ /星空/
+score CN_FROM_370		25.00
+
+header CN_FROM_371		From:name =~ /养成/
+score CN_FROM_371		25.00
+
+header CN_FROM_372		From:name =~ /塑造/
+score CN_FROM_372		25.00
+
+header CN_FROM_373		From:name =~ /咨讯/
+score CN_FROM_373		25.00
+
+header CN_FROM_374		From:name =~ /同居/
+score CN_FROM_374		25.00
+
+header CN_FROM_375		From:name =~ /好利来/
+score CN_FROM_375		25.00
+
+header CN_FROM_376		From:name =~ /贸易/
+score CN_FROM_376		25.00
+
+header CN_FROM_377		From:name =~ /露营/
+score CN_FROM_377		25.00
+
+header CN_FROM_378		From:name =~ /焊接/
+score CN_FROM_378		25.00
+
+header CN_FROM_379		From:name =~ /贺卡/
+score CN_FROM_379		25.00
+
+header CN_FROM_380		From:name =~ /酒吧/
+score CN_FROM_380		25.00
+
+header CN_FROM_381		From:name =~ /盛航鑫/
+score CN_FROM_381		25.00
+
+header CN_FROM_382		From:name =~ /泳装/
+score CN_FROM_382		25.00
+
+header CN_FROM_383		From:name =~ /安眠药/
+score CN_FROM_383		25.00
+
+header CN_FROM_384		From:name =~ /岗位/
+score CN_FROM_384		25.00
+
+header CN_FROM_385		From:name =~ /偷情/
+score CN_FROM_385		25.00
+
+header CN_FROM_386		From:name =~ /隐私/
+score CN_FROM_386		25.00
+
+header CN_FROM_387		From:name =~ /损失/
+score CN_FROM_387		25.00
+
+header CN_FROM_388		From:name =~ /分析/
+score CN_FROM_388		25.00
+
+header CN_FROM_389		From:name =~ /钓鱼/
+score CN_FROM_389		25.00
+
+header CN_FROM_390		From:name =~ /捍卫/
+score CN_FROM_390		25.00
+
+header CN_FROM_391		From:name =~ /交换/
+score CN_FROM_391		25.00
+
+header CN_FROM_392		From:name =~ /供货/
+score CN_FROM_392		25.00
+
+header CN_FROM_393		From:name =~ /亚龙网/
+score CN_FROM_393		25.00
+
+header CN_FROM_394		From:name =~ /洛阳人/
+score CN_FROM_394		25.00
+
+header CN_FROM_395		From:name =~ /暑假/
+score CN_FROM_395		25.00
+
+header CN_FROM_396		From:name =~ /公园/
+score CN_FROM_396		25.00
+
+header CN_FROM_397		From:name =~ /商业墙/
+score CN_FROM_397		25.00
+
+header CN_FROM_398		From:name =~ /触摸屏/
+score CN_FROM_398		25.00
+
+header CN_FROM_399		From:name =~ /播放器/
+score CN_FROM_399		25.00
+
+header CN_FROM_400		From:name =~ /媒体/
+score CN_FROM_400		5.00
+
+header CN_FROM_401		From:name =~ /模具展/
+score CN_FROM_401		25.00
+
+header CN_FROM_402		From:name =~ /协同OA/
+score CN_FROM_402		25.00
+
+header CN_FROM_403		From:name =~ /财税/
+score CN_FROM_403		25.00
+
+header CN_FROM_404		From:name =~ /呈部门/
+score CN_FROM_404		25.00
+
+header CN_FROM_405		From:name =~ /阿琴/
+score CN_FROM_405		25.00
+
+header CN_FROM_406		From:name =~ /大奖/
+score CN_FROM_406		25.00
+
+header CN_FROM_407		From:name =~ /侯志山/
+score CN_FROM_407		25.00
+
+header CN_FROM_408		From:name =~ /你好/
+score CN_FROM_408		25.00
+
+header CN_FROM_409		From:name =~ /您好/
+score CN_FROM_409		25.00
+
+header CN_FROM_410		From:name =~ /致富/
+score CN_FROM_410		25.00
+
+header CN_FROM_411		From:name =~ /秘诀/
+score CN_FROM_411		25.00
+
+header CN_FROM_412		From:name =~ /情爱/
+score CN_FROM_412		25.00
+
+header CN_FROM_413		From:name =~ /电影/
+score CN_FROM_413		25.00
+
+header CN_FROM_414		From:name =~ /动力/
+score CN_FROM_414		25.00
+
+header CN_FROM_415		From:name =~ /任务/
+score CN_FROM_415		25.00
+
+header CN_FROM_416		From:name =~ /测试/
+score CN_FROM_416		25.00
+
+header CN_FROM_417		From:name =~ /唐古拉/
+score CN_FROM_417		25.00
+
+header CN_FROM_418		From:name =~ /易格斯/
+score CN_FROM_418		25.00
+
+header CN_FROM_419		From:name =~ /贷款/
+score CN_FROM_419		25.00
+
+header CN_FROM_420		From:name =~ /河南天迈/
+score CN_FROM_420		25.00
+
+header CN_FROM_421		From:name =~ /美白/
+score CN_FROM_421		25.00
+
+header CN_FROM_422		From:name =~ /是我/
+score CN_FROM_422		25.00
+
+header CN_FROM_423		From:name =~ /足资园/
+score CN_FROM_423		25.00
+
+header CN_FROM_424		From:name =~ /珍藏/
+score CN_FROM_424		25.00
+
+header CN_FROM_425		From:name =~ /实验室/
+score CN_FROM_425		25.00
+
+header CN_FROM_426		From:name =~ /威纶/
+score CN_FROM_426		25.00
+
+header CN_FROM_427		From:name =~ /惊喜/
+score CN_FROM_427		25.00
+
+header CN_FROM_428		From:name =~ /领带/
+score CN_FROM_428		25.00
+
+header CN_FROM_429		From:name =~ /刻录/
+score CN_FROM_429		25.00
+
+header CN_FROM_430		From:name =~ /诗歌/
+score CN_FROM_430		25.00
+
+header CN_FROM_431		From:name =~ /推广/
+score CN_FROM_431		25.00
+
+header CN_FROM_432		From:name =~ /画展/
+score CN_FROM_432		25.00
+
+header CN_FROM_433		From:name =~ /李雪儿/
+score CN_FROM_433		25.00
+
+header CN_FROM_434		From:name =~ /车展/
+score CN_FROM_434		25.00
+
+header CN_FROM_435		From:name =~ /税务/
+score CN_FROM_435		25.00
+
+header CN_FROM_436		From:name =~ /密码/
+score CN_FROM_436		25.00
+
+header CN_FROM_437		From:name =~ /易雅/
+score CN_FROM_437		25.00
+
+header CN_FROM_438		From:name =~ /充气/
+score CN_FROM_438		25.00
+
+header CN_FROM_439		From:name =~ /娃娃/
+score CN_FROM_439		25.00
+
+header CN_FROM_440		From:name =~ /家教/
+score CN_FROM_440		25.00
+
+header CN_FROM_441		From:name =~ /保姆/
+score CN_FROM_441		25.00
+
+header CN_FROM_442		From:name =~ /幼儿/
+score CN_FROM_442		25.00
+
+header CN_FROM_443		From:name =~ /儿童/
+score CN_FROM_443		25.00
+
+header CN_FROM_444		From:name =~ /女童/
+score CN_FROM_444		25.00
+
+header CN_FROM_445		From:name =~ /孩子/
+score CN_FROM_445		25.00
+
+header CN_FROM_446		From:name =~ /假期/
+score CN_FROM_446		25.00
+
+header CN_FROM_447		From:name =~ /宽屏/
+score CN_FROM_447		25.00
+
+header CN_FROM_448		From:name =~ /宽频/
+score CN_FROM_448		25.00
+
+header CN_FROM_449		From:name =~ /传说/
+score CN_FROM_449		25.00
+
+header CN_FROM_450		From:name =~ /猛男/
+score CN_FROM_450		25.00
+
+header CN_FROM_451		From:name =~ /倒扁/
+score CN_FROM_451		25.00
+
+header CN_FROM_452		From:name =~ /邮件/
+score CN_FROM_452		25.00
+
+header CN_FROM_453		From:name =~ /地址/
+score CN_FROM_453		25.00
+
+header CN_FROM_454		From:name =~ /帝博/
+score CN_FROM_454		25.00
+
+header CN_FROM_455		From:name =~ /泌尿/
+score CN_FROM_455		25.00
+
+header CN_FROM_456		From:name =~ /音像/
+score CN_FROM_456		25.00
+
+header CN_FROM_457		From:name =~ /搜吧/
+score CN_FROM_457		25.00
+
+header CN_FROM_458		From:name =~ /癌病/
+score CN_FROM_458		25.00
+
+header CN_FROM_459		From:name =~ /三人行/
+score CN_FROM_459		25.00
+
+header CN_FROM_460		From:name =~ /门客网/
+score CN_FROM_460		25.00
+
+header CN_FROM_461		From:name =~ /工艺品/
+score CN_FROM_461		25.00
+
+header CN_FROM_462		From:name =~ /快车/
+score CN_FROM_462		25.00
+
+header CN_FROM_463		From:name =~ /买易通/
+score CN_FROM_463		25.00
+
+header CN_FROM_464		From:name =~ /家园/
+score CN_FROM_464		25.00
+
+header CN_FROM_465		From:name =~ /家庭/
+score CN_FROM_465		25.00
+
+header CN_FROM_466		From:name =~ /考研/
+score CN_FROM_466		25.00
+
+header CN_FROM_467		From:name =~ /之家/
+score CN_FROM_467		25.00
+
+header CN_FROM_468		From:name =~ /游戏/
+score CN_FROM_468		25.00
+
+header CN_FROM_469		From:name =~ /训犬/
+score CN_FROM_469		25.00
+
+header CN_FROM_470		From:name =~ /马仔/
+score CN_FROM_470		25.00
+
+header CN_FROM_471		From:name =~ /教主/
+score CN_FROM_471		25.00
+
+header CN_FROM_472		From:name =~ /联合网/
+score CN_FROM_472		25.00
+
+header CN_FROM_473		From:name =~ /搬运/
+score CN_FROM_473		25.00
+
+header CN_FROM_474		From:name =~ /搬家/
+score CN_FROM_474		25.00
+
+header CN_FROM_475		From:name =~ /案例/
+score CN_FROM_475		25.00
+
+header CN_FROM_476		From:name =~ /查收/
+score CN_FROM_476		25.00
+
+header CN_FROM_477		From:name =~ /网友/
+score CN_FROM_477		25.00
+
+header CN_FROM_478		From:name =~ /人体/
+score CN_FROM_478		25.00
+
+header CN_FROM_479		From:name =~ /蛋蛋/
+score CN_FROM_479		25.00
+
+header CN_FROM_480		From:name =~ /蓝之星/
+score CN_FROM_480		25.00
+
+header CN_FROM_481		From:name =~ /模特/
+score CN_FROM_481		25.00
+
+header CN_FROM_482		From:name =~ /演员/
+score CN_FROM_482		25.00
+
+header CN_FROM_483		From:name =~ /水站/
+score CN_FROM_483		25.00
+
+header CN_FROM_484		From:name =~ /芝麻/
+score CN_FROM_484		25.00
+
+header CN_FROM_485		From:name =~ /开门/
+score CN_FROM_485		25.00
+
+header CN_FROM_486		From:name =~ /标语/
+score CN_FROM_486		25.00
+
+header CN_FROM_487		From:name =~ /馅饼/
+score CN_FROM_487		25.00
+
+header CN_FROM_488		From:name =~ /麻将/
+score CN_FROM_488		25.00
+
+header CN_FROM_489		From:name =~ /贝塔斯曼/
+score CN_FROM_489		25.00
+
+header CN_FROM_490		From:name =~ /慰问金/
+score CN_FROM_490		25.00
+
+header CN_FROM_491		From:name =~ /情趣/
+score CN_FROM_491		25.00
+
+header CN_FROM_492		From:name =~ /惊嚗/
+score CN_FROM_492		25.00
+
+header CN_FROM_493		From:name =~ /七彩谷/
+score CN_FROM_493		25.00
+
+header CN_FROM_494		From:name =~ /重要/
+score CN_FROM_494		25.00
+
+header CN_FROM_495		From:name =~ /通知/
+score CN_FROM_495		25.00
+
+header CN_FROM_496		From:name =~ /抚摸/
+score CN_FROM_496		25.00
+
+header CN_FROM_497		From:name =~ /高手/
+score CN_FROM_497		25.00
+
+header CN_FROM_498		From:name =~ /苹果/
+score CN_FROM_498		25.00
+
+header CN_FROM_499		From:name =~ /菠萝/
+score CN_FROM_499		25.00
+
+header CN_FROM_500		From:name =~ /稳赢/
+score CN_FROM_500		25.00
+
+header CN_FROM_501		From:name =~ /真诚/
+score CN_FROM_501		25.00
+
+header CN_FROM_502		From:name =~ /娱乐/
+score CN_FROM_502		25.00
+
+header CN_FROM_503              From:name =~ /门客/
+score CN_FROM_503               25.00
+
+header CN_FROM_504              From:name =~ /考核/
+score CN_FROM_504               25.00
+
+header CN_FROM_505		From:name =~ /热卖/
+score CN_FROM_505		25.00
+
+header CN_FROM_506		From:name =~ /会员/
+score CN_FROM_506		25.00
+
+header CN_FROM_507		From:name =~ /销售/
+score CN_FROM_507		25.00
+
+header CN_FROM_508		From:name =~ /生意/
+score CN_FROM_508		25.00
+
+header CN_FROM_509		From:name =~ /回头客/
+score CN_FROM_509		25.00
+
+header CN_FROM_510		From:name =~ /营销/
+score CN_FROM_510		25.00
+
+header CN_FROM_511		From:name =~ /商户/
+score CN_FROM_511		25.00
+
+header CN_FROM_512		From:name =~ /创业/
+score CN_FROM_512		25.00
+
+header CN_FROM_513		From:name =~ /水晶/
+score CN_FROM_513		25.00
+
+header CN_FROM_514		From:name =~ /门诊/
+score CN_FROM_514		25.00
+
+header CN_FROM_515		From:name =~ /万岁/
+score CN_FROM_515		25.00
+
+header CN_FROM_516		From:name =~ /医疗/
+score CN_FROM_516		25.00
+
+header CN_FROM_517		From:name =~ /便宜/
+score CN_FROM_517		25.00
+
+header CN_FROM_518		From:name =~ /购买/
+score CN_FROM_518		25.00
+
+header CN_FROM_519		From:name =~ /厂价/
+score CN_FROM_519		25.00
+
+header CN_FROM_520		From:name =~ /股票/
+score CN_FROM_520		25.00
+
+header CN_FROM_521		From:name =~ /读书/
+score CN_FROM_521		25.00
+
+header CN_FROM_522		From:name =~ /投一票/
+score CN_FROM_522		25.00
+
+header CN_FROM_523		From:name =~ /投票/
+score CN_FROM_523		25.00
+
+header CN_FROM_524		From:name =~ /员工/
+score CN_FROM_524		25.00
+
+header CN_FROM_525		From:name =~ /手册/
+score CN_FROM_525		25.00
+
+header CN_FROM_526		From:name =~ /控制/
+score CN_FROM_526		25.00
+
+header CN_FROM_527		From:name =~ /强者/
+score CN_FROM_527		25.00
+
+header CN_FROM_528		From:name =~ /哥们/
+score CN_FROM_528		25.00
+
+header CN_FROM_529		From:name =~ /猪/
+score CN_FROM_529		25.00
+
+header CN_FROM_530		From:name =~ /狗/
+score CN_FROM_530		25.00
+
+header CN_FROM_531		From:name =~ /猫/
+score CN_FROM_531		25.00
+
+header CN_FROM_532		From:name =~ /加缘网/
+score CN_FROM_532		25.00
+
+header CN_FROM_533		From:name =~ /期望/
+score CN_FROM_533		25.00
+
+header CN_FROM_534		From:name =~ /孩 子/
+score CN_FROM_534		25.00
+
+header CN_FROM_535		From:name =~ /父 母/
+score CN_FROM_535		25.00
+
+header CN_FROM_536		From:name =~ /农牧网/
+score CN_FROM_536		25.00
+
+header CN_FROM_537		From:name =~ /领导/
+score CN_FROM_537		25.00
+
+header CN_FROM_538		From:name =~ /小贴士/
+score CN_FROM_538		25.00
+
+header CN_FROM_539		From:name =~ /尚衣阁/
+score CN_FROM_539		25.00
+
+header CN_FROM_540		From:name =~ /香薰/
+score CN_FROM_540		25.00
+
+header CN_FROM_541		From:name =~ /行业研究/
+score CN_FROM_541		25.00
+
+header CN_FROM_542		From:name =~ /研究网/
+score CN_FROM_542		25.00
+
+header CN_FROM_543		From:name =~ /河南普天/
+score CN_FROM_543		25.00
+
+header CN_FROM_544		From:name =~ /普天时代/
+score CN_FROM_544		25.00
+
+header CN_FROM_545		From:name =~ /花粉/
+score CN_FROM_545		25.00
+
+header CN_FROM_546		From:name =~ /空间/
+score CN_FROM_546		25.00
+
+header CN_FROM_547		From:name =~ /天使/
+score CN_FROM_547		25.00
+
+header CN_FROM_548		From:name =~ /买家/
+score CN_FROM_548		25.00
+
+header CN_FROM_549		From:name =~ /北京·/
+score CN_FROM_549		25.00
+
+header CN_FROM_550		From:name =~ /上海·/
+score CN_FROM_550		25.00
+
+header CN_FROM_551		From:name =~ /深圳·/
+score CN_FROM_551		25.00
+
+header CN_FROM_552		From:name =~ /代办/
+score CN_FROM_552		25.00
+
+header CN_FROM_553		From:name =~ /代开/
+score CN_FROM_553		25.00
+
+header CN_FROM_554		From:name =~ /税票/
+score CN_FROM_554		25.00
+
+header CN_FROM_555		From:name =~ /服装/
+score CN_FROM_555		25.00
+
+header CN_FROM_556		From:name =~ /鞋帽/
+score CN_FROM_556		25.00
+
+header CN_FROM_557		From:name =~ /破解/
+score CN_FROM_557		25.00
+
+header CN_FROM_558		From:name =~ /卖家/
+score CN_FROM_558		25.00
+
+header CN_FROM_559		From:name =~ /易呼通/
+score CN_FROM_559		25.00
+
+header CN_FROM_560		From:name =~ /翻译/
+score CN_FROM_560		25.00
+
+header CN_FROM_561		From:name =~ /实战/
+score CN_FROM_561		25.00
+
+header CN_FROM_562		From:name =~ /训练/
+score CN_FROM_562		25.00
+
+header CN_FROM_563		From:name =~ /一起玩/
+score CN_FROM_563		25.00
+
+header CN_FROM_564		From:name =~ /玻璃/
+score CN_FROM_564		25.00
+
+header CN_FROM_565		From:name =~ /跟 单/
+score CN_FROM_565		25.00
+
+header CN_FROM_566		From:name =~ /专业/
+score CN_FROM_566		25.00
+
+header CN_FROM_567		From:name =~ /亚历山大/
+score CN_FROM_567		25.00
+
+header CN_FROM_568		From:name =~ /T恤/
+score CN_FROM_568		25.00
+
+header CN_FROM_569		From:name =~ /展会/
+score CN_FROM_569		25.00
+
+header CN_FROM_570		From:name =~ /会展/
+score CN_FROM_570		25.00
+
+header CN_FROM_571		From:name =~ /幸福/
+score CN_FROM_571		25.00
+
+header CN_FROM_572		From:name =~ /摩力游/
+score CN_FROM_572		25.00
+
+header CN_FROM_573		From:name =~ /便利/
+score CN_FROM_573		25.00
+
+header CN_FROM_574		From:name =~ /友姆网/
+score CN_FROM_574		25.00
+
+header CN_FROM_575		From:name =~ /前程/
+score CN_FROM_575		25.00
+
+header CN_FROM_576		From:name =~ /报价/
+score CN_FROM_576		25.00
+
+header CN_FROM_577		From:name =~ /玉兰油/
+score CN_FROM_577		25.00
+
+header CN_FROM_578		From:name =~ /污雪/
+score CN_FROM_578		25.00
+
+header CN_FROM_579		From:name =~ /经纪人/
+score CN_FROM_579		25.00
+
+header CN_FROM_580		From:name =~ /协会/
+score CN_FROM_580		25.00
+
+header CN_FROM_581		From:name =~ /中国缘/
+score CN_FROM_581		25.00
+
+header CN_FROM_582		From:name =~ /电视/
+score CN_FROM_582		6.00
+
+header CN_FROM_583		From:name =~ /手机/
+score CN_FROM_583		5.00
+
+header CN_FROM_584		From:name =~ /得得网/
+score CN_FROM_584		25.00
+
+header CN_FROM_585		From:name =~ /比基尼/
+score CN_FROM_585		25.00
+
+header CN_FROM_586		From:name =~ /军刀/
+score CN_FROM_586		25.00
+
+header CN_FROM_587		From:name =~ /阿土伯/
+score CN_FROM_587		25.00
+
+header CN_FROM_588		From:name =~ /服 装/
+score CN_FROM_588		25.00
+
+header CN_FROM_589		From:name =~ /发布/
+score CN_FROM_589		25.00
+
+header CN_FROM_590		From:name =~ /鞋 帽/
+score CN_FROM_590		25.00
+
+header CN_FROM_591		From:name =~ /顾 客/
+score CN_FROM_591		25.00
+
+header CN_FROM_592		From:name =~ /服 务/
+score CN_FROM_592		25.00
+
+header CN_FROM_593		From:name =~ /亿友/
+score CN_FROM_593		25.00
+
+header CN_FROM_594		From:name =~ /宜车网/
+score CN_FROM_594		25.00
+
+header CN_FROM_595		From:name =~ /快讯/
+score CN_FROM_595		25.00
+
+header CN_FROM_596		From:name =~ /定单/
+score CN_FROM_596		25.00
+
+header CN_FROM_597		From:name =~ /积分/
+score CN_FROM_597		25.00
+
+header CN_FROM_598		From:name =~ /广告/
+score CN_FROM_598		5.00
+
+header CN_FROM_599		From:name =~ /摇篮/
+score CN_FROM_599		25.00
+
+header CN_FROM_600		From:name =~ /风流/
+score CN_FROM_600		25.00
+
+header CN_FROM_601		From:name =~ /爱国者/
+score CN_FROM_601		25.00
+
+header CN_FROM_602		From:name =~ /出版网/
+score CN_FROM_602		25.00
+
+header CN_FROM_603		From:name =~ /玛玛网/
+score CN_FROM_603		25.00
+
+header CN_FROM_604		From:name =~ /演唱/
+score CN_FROM_604		25.00
+
+header CN_FROM_605		From:name =~ /药业/
+score CN_FROM_605		25.00
+
+header CN_FROM_606		From:name =~ /白领/
+score CN_FROM_606		25.00
+
+header CN_FROM_607		From:name =~ /拉链/
+score CN_FROM_607		25.00
+
+header CN_FROM_608		From:name =~ /秘籍/
+score CN_FROM_608		25.00
+
+header CN_FROM_609		From:name =~ /车间/
+score CN_FROM_609		25.00
+
+header CN_FROM_610		From:name =~ /能力/
+score CN_FROM_610		25.00
+
+header CN_FROM_611		From:name =~ /商格里拉/
+score CN_FROM_611		25.00
+
+header CN_FROM_612		From:name =~ /比客网/
+score CN_FROM_612		25.00
+
+header CN_FROM_613		From:name =~ /吃亏/
+score CN_FROM_613		25.00
+
+header CN_FROM_614		From:name =~ /刀具/
+score CN_FROM_614		25.00
+
+header CN_FROM_615		From:name =~ /失宠/
+score CN_FROM_615		25.00
+
+header CN_FROM_616		From:name =~ /做帐/
+score CN_FROM_616		25.00
+
+header CN_FROM_617		From:name =~ /报销/
+score CN_FROM_617		25.00
+
+header CN_FROM_618		From:name =~ /班组长/
+score CN_FROM_618		25.00
+
+header CN_FROM_619		From:name =~ /孕婴/
+score CN_FROM_619		25.00
+
+header CN_FROM_620		From:name =~ /婴孕/
+score CN_FROM_620		25.00
+
+header CN_FROM_621		From:name =~ /测评/
+score CN_FROM_621		25.00
+
+header CN_FROM_622		From:name =~ /评测/
+score CN_FROM_622		25.00
+
+header CN_FROM_623		From:name =~ /传媒/
+score CN_FROM_623		25.00
+
+header CN_FROM_624		From:name =~ /注册/
+score CN_FROM_624		25.00
+
+header CN_FROM_625		From:name =~ /性感/
+score CN_FROM_625		25.00
+
+header CN_FROM_626		From:name =~ /慧聪网/
+score CN_FROM_626		25.00
+
+header CN_FROM_627		From:name =~ /育儿网/
+score CN_FROM_627		25.00
+
+header CN_FROM_628		From:name =~ /韩剧/
+score CN_FROM_628		25.00
+
+header CN_FROM_629		From:name =~ /地图/
+score CN_FROM_629		25.00
+
+header CN_FROM_630		From:name =~ /佰草集/
+score CN_FROM_630		25.00
+
+header CN_FROM_631		From:name =~ /沪江网/
+score CN_FROM_631		25.00
+
+header CN_FROM_632		From:name =~ /素养/
+score CN_FROM_632		25.00
+
+header CN_FROM_633		From:name =~ /职业/
+score CN_FROM_633		25.00
+
+header CN_FROM_634		From:name =~ /研讨/
+score CN_FROM_634		25.00
+
+header CN_FROM_635		From:name =~ /旅行/
+score CN_FROM_635		25.00
+
+header CN_FROM_636		From:name =~ /食物/
+score CN_FROM_636		25.00
+
+header CN_FROM_637		From:name =~ /观察/
+score CN_FROM_637		25.00
+
+header CN_FROM_638		From:name =~ /碰碰网/
+score CN_FROM_638		25.00
+
+header CN_FROM_639		From:name =~ /预告/
+score CN_FROM_639		25.00
+
+header CN_FROM_640		From:name =~ /交易通/
+score CN_FROM_640		25.00
+
+header CN_FROM_641		From:name =~ /世易网/
+score CN_FROM_641		25.00
+
+header CN_FROM_642		From:name =~ /铁通/
+score CN_FROM_642		25.00
+
+header CN_FROM_643		From:name =~ /供求/
+score CN_FROM_643		25.00
+
+header CN_FROM_644		From:name =~ /匹配/
+score CN_FROM_644		25.00
+
+header CN_FROM_645		From:name =~ /商机/
+score CN_FROM_645		25.00
+
+header CN_FROM_646		From:name =~ /撮合/
+score CN_FROM_646		25.00
+
+header CN_FROM_647		From:name =~ /基金/
+score CN_FROM_647		25.00
+
+header CN_FROM_648		From:name =~ /邮寄/
+score CN_FROM_648		25.00
+
+header CN_FROM_649		From:name =~ /当当网/
+score CN_FROM_649		25.00
+
+header CN_FROM_650		From:name =~ /哈佛/
+score CN_FROM_650		25.00
+
+header CN_FROM_651		From:name =~ /靓妹子/
+score CN_FROM_651		25.00
+
+header CN_FROM_652		From:name =~ /交流/
+score CN_FROM_652		25.00
+
+header CN_FROM_653		From:name =~ /沟通/
+score CN_FROM_653		25.00
+
+header CN_FROM_654		From:name =~ /物品/
+score CN_FROM_654		25.00
+
+header CN_FROM_655		From:name =~ /龙讯网/
+score CN_FROM_655		25.00
+
+header CN_FROM_656		From:name =~ /华陌网/
+score CN_FROM_656		25.00
+
+header CN_FROM_657		From:name =~ /中国聘网/
+score CN_FROM_657		25.00
+
+header CN_FROM_658		From:name =~ /购房/
+score CN_FROM_658		25.00
+
+header CN_FROM_659		From:name =~ /房奴/
+score CN_FROM_659		25.00
+
+header CN_FROM_660		From:name =~ /买房/
+score CN_FROM_660		25.00
+
+header CN_FROM_661		From:name =~ /卖房/
+score CN_FROM_661		25.00
+
+header CN_FROM_662		From:name =~ /葫芦/
+score CN_FROM_662		25.00
+
+header CN_FROM_663		From:name =~ /财神/
+score CN_FROM_663		25.00
+
+header CN_FROM_664		From:name =~ /之声/
+score CN_FROM_664		25.00
+
+header CN_FROM_665		From:name =~ /软件/
+score CN_FROM_665		25.00
+
+header CN_FROM_666		From:name =~ /校友/
+score CN_FROM_666		25.00
+
+header CN_FROM_667		From:name =~ /实业/
+score CN_FROM_667		10.00
+
+header CN_FROM_668		From:name =~ /资源/
+score CN_FROM_668		25.00
+
+header CN_FROM_669		From:name =~ /动画/
+score CN_FROM_669		25.00
+
+header CN_FROM_670		From:name =~ /丝路/
+score CN_FROM_670		25.00
+
+header CN_FROM_671		From:name =~ /喀嚓/
+score CN_FROM_671		25.00
+
+header CN_FROM_672		From:name =~ /申瓯/
+score CN_FROM_672		25.00
+
+header CN_FROM_673		From:name =~ /设备/
+score CN_FROM_673		5.00
+
+header CN_FROM_674		From:name =~ /茉莉花/
+score CN_FROM_674		25.00
+
+header CN_FROM_9987		From:name =~ /\::+/
+score CN_FROM_9987		5.00
+
+header CN_FROM_9989		From:name =~ /\++/
+score CN_FROM_9989		5.00
+
+header CN_FROM_9990		From:name =~ /\?+/
+score CN_FROM_9990		5.00
+
+header CN_FROM_9991		From:name =~ /\!+/
+score CN_FROM_9991		5.00
+
+header CN_FROM_9992		From:name =~ /\^+/
+score CN_FROM_9992		5.00
+
+header CN_FROM_9993		From:name =~ /\&+/
+score CN_FROM_9993		5.00
+
+header CN_FROM_9994		From:name =~ /\%+/
+score CN_FROM_9994		5.00
+
+header CN_FROM_9995		From:name =~ /\$+/
+score CN_FROM_9995		5.00
+
+header CN_FROM_9996		From:name =~ /\#+/
+score CN_FROM_9996		5.00
+
+header CN_FROM_9997		From:name =~ /\=+/
+score CN_FROM_9997		5.00
+
+header CN_FROM_9998		From:name =~ /\~+/
+score CN_FROM_9998		5.00
+
+header CN_FROM_9999		From:name =~ /\*+/
+score CN_FROM_9999		5.00
+
+####################### English From ################################
+
+header EN_FROM_001		From:name =~ /(?:MARRERO|worlds)/
+score EN_FROM_001		20.00
+
+header EN_FROM_002		From:name =~ /(?:Music|loves)/
+score EN_FROM_002		20.00
+
+header EN_FROM_003		From:name =~ /(?:Other|granger)/
+score EN_FROM_003		20.00
+
+header EN_FROM_004		From:name =~ /(?:Scanned|sexton)/
+score EN_FROM_004		20.00
+
+header EN_FROM_005		From:name =~ /(?:OAsoft|skill)/
+score EN_FROM_005		20.00
+
+header EN_FROM_006		From:name =~ /(?:said|photo)/
+score EN_FROM_006		20.00
+
+header EN_FROM_007		From:name =~ /(?:failed|software)/
+score EN_FROM_007		20.00
+
+header EN_FROM_008		From:name =~ /(?:anywhere|windows)/
+score EN_FROM_008		20.00
+
+header EN_FROM_009		From:name =~ /(?:parent|possibly)/
+score EN_FROM_009		20.00
+
+header EN_FROM_010		From:name =~ /(?:already|similar)/
+score EN_FROM_010		20.00
+
+header EN_FROM_011		From:name =~ /(?:head|jobs)/
+score EN_FROM_011		20.00
+
+header EN_FROM_012		From:name =~ /online/
+score EN_FROM_012		20.00
+
+header EN_FROM_013		From:name =~ /(?:complete|test)/
+score EN_FROM_013		20.00
+
+header EN_FROM_014		From:name =~ /(?:message|option)/
+score EN_FROM_014		20.00
+
+header EN_FROM_015		From:name =~ /(?:suggest|drive)/
+score EN_FROM_015		20.00
+
+header EN_FROM_016		From:name =~ /(?:brittany|choose)/
+score EN_FROM_016		20.00
+
+header EN_FROM_017		From:name =~ /(?:shadow|izrboc)/
+score EN_FROM_017		20.00
+
+header EN_FROM_018		From:name =~ /(?:shield|need)/
+score EN_FROM_018		20.00
+
+﻿# ****************************** CH_FROM *********************************
+
+header CH_FROM_001		From:name =~ /(?:認證|光碟|課程)/
+score CH_FROM_001		25.00
+
+header CH_FROM_002		From:name =~ /(?:財運|特價|優惠)/
+score CH_FROM_002		25.00
+
+header CH_FROM_003		From:name =~ /(?:清純|慾女|翻譯)/
+score CH_FROM_003		25.00
+
+header CH_FROM_004		From:name =~ /(?:財富|外勞|音樂)/
+score CH_FROM_004		25.00
+
+header CH_FROM_005		From:name =~ /(?:設計|招財|牽手)/
+score CH_FROM_005		25.00
+
+header CH_FROM_006		From:name =~ /(?:日語|觀音|專業)/
+score CH_FROM_006		25.00
+
+header CH_FROM_007		From:name =~ /(?:訓練|創業|國際)/
+score CH_FROM_007		25.00
+
+header CH_FROM_008		From:name =~ /(?:桃園|鯨彩|理財)/
+score CH_FROM_008		8.00
+
+header CH_FROM_009		From:name =~ /(?:名師|教學|環亞)/
+score CH_FROM_009		25.00
+
+header CH_FROM_010		From:name =~ /(?:房貸|信貸)/
+score CH_FROM_010		25.00
+
+header CH_FROM_011		From:name =~ /(?:歡迎|光臨|討論區)/
+score CH_FROM_011		25.00
+
+header CH_FROM_012		From:name =~ /(?:電話|大師|丑魚)/
+score CH_FROM_012		25.00
+
+header CH_FROM_013		From:name =~ /(?:幼稚園|兼職)/
+score CH_FROM_013		25.00
+
+header CH_FROM_014		From:name =~ /(?:公園|銀行|購物)/
+score CH_FROM_014		25.00
+
+header CH_FROM_015		From:name =~ /(?:訓犬|美語)/
+score CH_FROM_015		25.00
+
+header CH_FROM_016		From:name =~ /(?:夢想|康復|禿頭)/
+score CH_FROM_016		25.00
+
+header CH_FROM_017		From:name =~ /(?:資源|快樂|騎馬)/
+score CH_FROM_017		25.00
+
+header CH_FROM_018		From:name =~ /(?:薪酬|媽媽)/
+score CH_FROM_018		25.00
+
+header CH_FROM_019		From:name =~ /(?:高手|貸款)/
+score CH_FROM_019		25.00
+
+header CH_FROM_020		From:name =~ /張田記/
+score CH_FROM_020		25.00
+
+header CH_FROM_021		From:name =~ /髒話/
+score CH_FROM_021		25.00

@@ -1,0 +1,59 @@
+<div class="article-box">
+	<div class="article-box-inner">
+	<h1 style="margin-left: 0px;"><?php echo $this->translate("Your_Spark_History")?></h1>
+	<p><?php echo $this->translate("Your_Spark_History_Content")?></p>
+	</div>
+</div>
+<div class="content" style="background: #fff; padding: 0; margin-bottom: 0;padding-left:20px" align="left">
+	<h3 style="color:#666; font-size:14px"><?php echo $this->translate("Your_Spark_Report_Summary")?></h3>
+	<div style="background: #fff; padding: 0; margin-bottom: 0; margin-top: 10px;">
+		<font style="font-size:14px"><?php echo $this->translate("History_Report_Hints")?></font>
+	</div>
+
+</div>
+
+<div style="clear: both;"></div>
+<div style="clear: both;"></div>
+<div class="content" style="background: #fff; padding: 0;" align="left">
+	<div class="tabbed-content" style="padding-bottom:15px;">
+	
+		<table class="campaigns-history">
+			<colgroup>
+				
+				<col id="name" />
+				<col id="accept-date" />
+				<col id="expire-date" />
+			</colgroup>
+			<tr>
+				<th style="padding-left:0;"><?php echo $this->translate("His_Reports_campaign_name")?></th>
+				<th><?php echo $this->translate("His_Reports_date")?></th>
+				<th><?php echo $this->translate("His_Reports_state")?></th>	
+				<th><?php echo $this->translate("His_Reports_Spark_Points")?></th>
+			</tr>
+			<tr>
+				<td style="padding-left:0;"><?php echo $this->report['name']?></td>
+				<td><?php echo $this->report['create_date']?></td>
+				<td><?php 
+					if($this->report['state'] == 'UNAPPROVED'){echo $this->translate("His_Reports_UNAPPROVED");}
+					if($this->report['state'] == 'APPROVED'){echo $this->translate("His_Reports_APPROVED");}
+					if($this->report['state'] == 'NEW'){echo $this->translate("His_Reports_NEW");}?> 
+				</td>	
+				<td><?php if($this->point != 0){echo $this->point; }else{ echo $this->translate("His_Reports_No_Point"); }?></td>
+			</tr>
+		</table>
+		
+		<h3 style="color:#666; font-size:14px"><?php echo $this->translate("What_you_said")?></h3>
+		<p ><?php readfile("$this->reportPage1")?><?php readfile("$this->reportPage2")?></p>
+		<br/>
+		<?php if (isset($this->replyContent)&&!empty($this->replyContent)):?>
+			<h3 style="color:#666; font-size:14px"><?php echo $this->translate("What_we_said")?></h3>
+			<p style="padding-top: 15px; "><?php echo $this->replyContent?></p>
+		<?php endif;?>
+	</div>
+	<div style="clear: both;"></div>
+</div>
+<div class="edit-profile">
+	<div class="buttons-bar">
+		<a class="button" href='<?php echo $this->url(array('controller'=>'history','action'=>'reports'));?>'><?php echo $this->translate('Back');?></a>
+	</div>
+</div>

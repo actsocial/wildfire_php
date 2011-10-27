@@ -1,0 +1,117 @@
+<div style="padding-bottom:40px;"></div>
+<div class="content" style="background-color:#fff;padding-top:0;">
+	<h1><?php echo $this->translate("Admin_Send_emails");?>(From: <?php echo $this->emailServer;?>)</h1>
+	<form id='form' action="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminsendinvitations'));?>" method="post">
+		
+		<?php echo $this->translate("Admin_EmailCategory");?>
+		<?php echo $this->mailForm->emailCategory; ?>
+		<div style="clear: both; "></div>
+		<div id="sparks"></div>
+		<div id="notsparks"></div>
+		<?php echo $this->translate("INVITATION_MAIL_RECIPIENT");?><?php echo $this->translate('Email_Address_Notice');?>
+		<?php echo $this->mailForm->emailList; ?>
+		
+
+		<div style="clear: both; "></div>
+		
+		<?php echo $this->translate("INVITATION_MAIL_TEMPLATE");?><br/>
+		<select name='emailTemplate'>
+		<?php 
+		   foreach ($this->emailTemplates as $email){
+		   	   echo "<option value='$email[id]'>$email[subject]</option>";
+		   }
+		?>
+		</select><br/><br/>
+
+		<!--  
+		<?php echo $this->translate("INVITATION_MAIL_SUBJECT");?>
+		<?php echo $this->mailForm->subject; ?>
+		<div style="clear: both; "></div>
+		
+		<?php echo $this->translate("INVITATION_MAIL_CONTENT_ADMIN");?><?php echo $this->translate('Email_Content_Notice');?> &nbsp;&nbsp;&nbsp;
+		<a href="#" onclick="javascript:showmessage();">text</a>/<a href="#" onclick="javascript:showhtmlmessage();">html</a>
+		<?php echo $this->mailForm->message; ?>
+		<div style="clear: both; "></div>
+		
+		<div id='htmlMessage' style="padding: 20px; padding-top:0px; margin-left: 20px; width:770px; display:none;">
+		<?php $this->oFCKeditor->create();?>
+		</div>
+		 -->
+		<div style="clear: both; "></div>
+		
+		<div id='campaignId_title'><?php echo $this->translate("Admin_Select_CAMPAIGN");?></div>
+		<?php echo $this->mailForm->campaignId; ?>
+		<div style="clear: both; "></div>
+		
+		<div id='code_source_title'><?php echo $this->translate("Code_source: (like 'SIGNUP')");?></div>
+		<?php echo $this->mailForm->code_source; ?>
+		<div style="clear: both; "></div>
+		<input type="hidden" id="startDate" name="startDate" value="<?php echo $this->startDate;?>" />
+		
+		
+		<div style="clear: both; "></div>
+		
+		<?php echo $this->mailForm->submit; ?>
+	</form>
+</div>
+
+<script type="text/javascript">
+function showhtmlmessage(){
+	$('htmlMessage').style.display = "";
+	$('message').style.display = "none";
+	$('message').value = "";
+}
+function showmessage(){
+	$('message').style.display = "";
+	$('htmlMessage').style.display = "none";
+	$('htmlMessage').value = "";
+}
+function ChangeOption(Interface){
+	var inter = $(Interface).value;
+	switch(inter){
+		case 'Invite non-sparks to join campaign':
+			$('campaignId').style.display = "";
+			$('campaignId_title').style.display = "";
+			$('code_source').style.display = "";
+			$('code_source_title').style.display = "";	
+			break;
+		case 'Invite sparks to join campaign':
+			$('campaignId').style.display = "";
+			$('campaignId_title').style.display = "";
+			$('code_source').style.display = "none";
+			$('code_source_title').style.display = "none";
+			break;
+		case 'Send mail to sparks':
+			$('campaignId').style.display = "none";
+			$('campaignId_title').style.display = "none";
+			$('code_source').style.display = "none";
+			$('code_source_title').style.display = "none";
+			break;
+			
+	}
+//	alert($(Interface).value);
+}
+jQuery(document).ready(function(){   
+	jQuery('#emailList').blur(
+   	 function(){
+  		jQuery.ajax({
+
+			   type: "POST",
+
+			   url: "<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'admincheckemail'));?>",
+
+			   data: "emailCategory="+jQuery('#emailCategory').val()+"+&emails="+jQuery('#emailList').val(),
+
+			   success: function(msg){
+                    var emails = msg.split('|');
+			        jQuery('#sparks').html("<strong>会员</strong><br/>"+emails[0]);
+			        jQuery('#notsparks').html("<strong>非会员</strong><br/>"+emails[1]);
+
+			   }
+
+			 });
+        });
+});
+
+
+</script>

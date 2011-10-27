@@ -1,0 +1,137 @@
+<?php if($this->ajax) {?>
+<form id="email_form" action="<?php echo $this->url(array('controller'=>'user_email','action'=>'create'));?>" method="post" onsubmit="return false;">
+  <div>我要推荐好友参与问卷，好友的Email:</div>
+  <input type="text" name="email" id="email" />
+  <input type="hidden" name="accessCode" id="accessCode" value="<?php echo $this->accessCode ?>" />
+  <input type="submit" name="submit" value="提交" onclick="add_email()" />
+</form>
+<div id="indicator" style="display:none"><img src="<?php echo $this->baseUrl();?>/images/indicator.gif" /></div>
+<div id="message"><?php echo $this->message; ?></div>
+<?php } else {?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>感谢您的参与</title>
+<script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery-1.3.2.min.js" ></script>
+<script type="text/javascript">
+  function validate(email) {
+     var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+     if(reg.test(email) == false) {
+       $('div#message').html('请输入正确的Email地址');
+       return false;
+     }
+     return true;
+  }
+  
+  function clear_error() {
+  	$('div#message').html('');
+  }
+
+  function add_email(form) {
+  	$('div#message').html('');
+  	if(validate($("input#email").val())) {
+      $("div#indicator").show();
+  	  $("#email_form").hide(); 	
+  	  $.post("<?php echo $this->url(array('controller'=>'useremail','action'=>'create'));?>", $("#email_form").serialize(), function(data) { $("div#email_area").html(data);} );
+  	} 
+  }
+</script>
+<style type="text/css">
+<!--
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	background: #eee;
+}
+.container {
+	background: url(<?php echo $this->baseUrl();?>/image/bg.jpg) no-repeat left top;
+	width: 900px;
+	height: 600px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+.container h1 {
+	margin:0;
+	padding-top: 340px;
+	padding-left: 40px;
+	font-size: 30px;
+	color:#06F;
+	width: 700px;
+	line-height: 45px;
+	display: none;
+}
+.container h2 {
+	color: #EB8B12;
+	margin:0;
+	padding:0;
+	font-size: 18px;
+	line-height: 30px;
+	margin-bottom: 14px;
+}
+.container .detail {
+	color: #666;
+	font-size: 14px;
+	line-height: 24px;
+}
+.content {
+	width:600px;
+	padding-top: 160px;
+	padding-left:60px;
+}
+
+div#email_area {
+	width:600px;
+	padding-top: 200px;
+	padding-left:560px;
+}
+
+-->
+</style>
+</head>
+
+<body>
+<div class="container">
+	<h1>感谢您参与我们的有奖问答，如果您被选中参与品牌宣传活动并获得我们的免费产品，我们将在12月11日前用邮件通知您!</h1>
+	<div class="content">
+	<?php if($this->type == 'A') {?>
+		<h2>A：照顾周全型</h2>
+<div class="detail">您是一位心思细腻的妈妈。在您的悉心呵护下，您的孩子能得到无与伦比的照顾。您会注意到每一个细节，把一切都尽力做到最好。既会想到他没完成的功课，又会关心天气变化是否要增减衣物。</div>
+	<?php } else if($this->type == 'B') {?>
+		<h2>B：营养专家型</h2>
+<div class="detail">您是一位懂得营养搭配的妈妈。懂得各种食物的营养成份，以及如何搭配的理论，可以让您的孩子茁壮成长。而您就是有这样的天赋。一道营养丰富又均衡的菜肴，您都不费吹灰之力。</div>
+		
+	<?php } else if($this->type == 'C') {?>
+		<h2>C：轻松闲暇型</h2>
+<div class="detail">您是一位懂得劳逸结合的妈妈。您知道孩子需要的，不止是您的全方面照顾。他们也需要自己的空间，需要自己独立地照顾自己。要知道，学会独立是孩子成长中最为重要的环节。</div>
+		
+	<?php } else if($this->type == 'D') {?>
+		<h2>D：积极活跃型</h2>
+<div class="detail">您是一位活泼可爱的妈妈。在孩子的眼中，您更像是他的一位好朋友。您可以跟孩子们一起打闹嬉戏。您经常主动的邀请孩子一起做事。不论是游戏还是家务，都能在您和孩子的配合中，轻松完成。</div>
+		
+	<?php } else if($this->type == 'E') {?>
+		<h2>E：聪慧博学型</h2>
+<div class="detail">您是一位聪明又博学的妈妈。您可以解答孩子的各种疑惑。在孩子的眼中，您是无所不知，无所不晓的“专家”。在您的指导下，孩子的学习和成长将会更加顺利。都说父母是孩子的启蒙老师，而您这位老师又是最称职的。</div>
+		
+    <?php } else if($this->type == 'F') {?>
+		<h2>F：广泛社交型</h2>
+<div class="detail">您是一位喜欢交际的妈妈。您喜欢交朋友，喜欢在论坛上与网友交流。您的这种性格将对孩子产生深远的影响。懂得如何与人交流，懂得如何与人分享。在您的世界里，您和您的孩子永远都大众的焦点。</div>
+		
+	<?php } ?>
+	</div>
+	<div id="email_area">
+	  <form id="email_form" action="<?php echo $this->url(array('controller'=>'useremail','action'=>'create'));?>" method="post" onsubmit="return false;">
+        <div>我要推荐好友参与问卷，好友的Email:</div>
+        <input type="text" name="email" id="email" onfocus="clear_error()"/>
+        <input type="hidden" name="accessCode" id="accessCode" value="<?php echo $this->accessCode ?>" />
+        <input type="submit" name="submit" value="提交" onclick="add_email()" />
+      </form>
+      <div id="indicator" style="display:none"><img src="<?php echo $this->baseUrl();?>/images/indicator.gif" /></div>
+      <div id="message"><? echo $this->message ?></div>
+	</div>
+</div>
+</body>
+</html>
+<?php }?>

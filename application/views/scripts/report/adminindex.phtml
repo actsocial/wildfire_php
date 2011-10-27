@@ -1,0 +1,96 @@
+<div style="padding-bottom:30px;"></div>
+<div align="center">	
+	<br/>
+	<h2 ><?php echo $this->translate('Reply_Report');?></h2>
+	<br/>
+	<?php if($this->messageArray != null):?>
+		<p><font color='red'><?php echo $this->messageArray[0]; ?></font></p>
+		<?php endif;?>
+	<table width="750">
+	<tr>
+	<th>No.</th>
+	<th><?php echo $this->translate('Admin_Campaigns_Name');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Create_Date');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Expired_Date');?></th>
+	<th>&nbsp;</th><th>&nbsp;</th>
+	</tr>
+	<?php $count = 1; foreach($this->campaigns as $campaign) : ?>
+	<tr>
+	<td ><?php echo $this->escape($campaign->id);?></td>
+	<td><?php echo $this->escape($campaign->name);?></td>
+	<td><?php echo $this->escape($campaign->create_date);?></td>
+	<td><?php echo $this->escape($campaign->expire_date);?></td>
+	<td align="right">
+	<a href="<?php echo $this->url(array('controller'=>'report',
+	'action'=>'adminreport', 'id'=>$campaign->id, 'pest'=>'0'));?>"><?php echo $this->translate('Admin_Campaign_Report'); 
+	if(array_key_exists($campaign->id, $this->newReportAmountArray)){ echo "(".$this->newReportAmountArray[$campaign->id].")";}?></a>
+	</td>
+	<td align="left">
+	|
+	<a href="<?php echo $this->url(array('controller'=>'report',
+	'action'=>'adminreport', 'id'=>$campaign->id, 'pest'=>'1'));?>"><?php echo $this->translate('Admin_Pest_Campaign_Report');
+	?></a>
+	</td>
+	<td align="right">
+	<a href="<?php echo $this->url(array('controller'=>'report',
+	'action'=>'adminurlreport', 'id'=>$campaign->id, 'pest'=>'0'));?>"><?php echo $this->translate('URL报告');
+	if(array_key_exists($campaign->id, $this->newURLReportAmountArray)){ echo "(".$this->newURLReportAmountArray[$campaign->id].")";}?></a>
+	</td>
+	<td align="left">
+	|
+	<a href="<?php echo $this->url(array('controller'=>'image',
+	'action'=>'adminimagereport', 'id'=>$campaign->id, 'pest'=>'0'));?>"><?php echo $this->translate('image报告');
+	if(array_key_exists($campaign->id, $this->newImageReportAmountArray)){ echo "(".$this->newImageReportAmountArray[$campaign->id].")";}?></a>
+	</td>
+	</tr>
+	<?php endforeach; ?>
+	</table>
+
+</div>	
+<br/><br/><br/>
+<div align="center" >
+	<br/>
+
+	<h2 ><?php echo $this->translate('Admin_Reply_Mission');?></h2>
+	<br/>
+	<table width="750">
+	<tr><td>	 <a href="<?php echo $this->url(array('controller'=>'report',
+	'action'=>'adminreportcaculate'));?>">统计和查询</a></td></tr>
+	<tr>
+	<th>No.</th>
+	<th><?php echo $this->translate('Admin_Report_Batch_amount');?></th>
+	<th><?php echo $this->translate('Admin_Report_Batch_left');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Create_Date');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Duration_Date');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Average_Time');?></th>
+	<th><?php echo $this->translate('Admin_Campaigns_Name');?></th>
+	<th><?php if($this->admin_id == '2'){echo $this->translate('Admin_Assign_TO');}?></th>
+	<th>&nbsp;</th>
+	</tr>
+	<?php $count = $this->NoInitValue ; foreach($this->paginator as $reportBatch) : ?>
+	<tr>
+	<td ><?php echo $count++;?></td>
+	<td><?php echo count(explode(',',$reportBatch['report_ids']))-2;?></td>
+	<td><?if ($reportBatch['state']=='NEW'):?><?php echo count(explode(',',$reportBatch['report_ids']))-2;?><?php else:?><?php echo $reportBatch['state'];?><?php endif?></td>
+	<td><?php echo $reportBatch['start_datetime'];?></td>
+	<td><?php if($reportBatch['end_datetime'] == null || $reportBatch['end_datetime'] == ''){echo $this->translate('Admin_Report_Batch_NotFinished');}
+	else{echo floor($reportBatch['totaltime']/60).'min';}?></td>
+	<td><?php if($reportBatch['end_datetime'] == null || $reportBatch['end_datetime'] == ''){echo $this->translate('Admin_Report_Batch_NotFinished');}
+	else{echo round($reportBatch['totaltime']/60/(count(explode(',',$reportBatch['report_ids']))-2),1).'min';}?></td>
+	<td><?php echo $reportBatch['campaign_name'];?></td>
+	
+	<td><?php if($this->admin_id == '2'){ echo $reportBatch['admin_name'];}?></td>
+	<td>
+	<a href="<?php echo $this->url(array('controller'=>'report',
+	'action'=>'admincreatebatch', 'batch_id'=>$reportBatch['id']));?>"><?php echo $this->translate('Admin_Process_Report');?></a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</td>
+	</tr>
+	<?php endforeach; ?>
+	</table>
+		<div class="pagebar" ><?= $this->paginationControl($this->paginator, 'Sliding', 'pagination/pagelist.phtml', array("controller" => $this->controller, "action" => $this->action)); ?></div>
+	
+</div>
+
+
+

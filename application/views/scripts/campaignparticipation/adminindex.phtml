@@ -1,0 +1,174 @@
+<div style="padding-bottom:40px;"></div>
+<div align="center">
+
+<br/>
+<h2><?php echo $this->translate('Amin_Campaign_Participations');?></h2>
+<br>
+<br>
+<div><font color='red'>Pink => "NOT SENT" &nbsp; &nbsp; &nbsp;  Green => "REPORT SUBMITTED"</font>
+</div>
+<table >
+<tr><td><input type="text" name="tags" value="" id="addTags" /> <a href="javascript:addTags()">添加Tags</a><br/></td></tr>
+<tr><td><input type="text" name="tags" value="" id="deleteTags" /> <a href="javascript:deleteTags()">删除Tags</a></td></tr>
+<tr><td>
+<select name="profileSurvey" id="profileSurvey" style="width:133px">
+<?php 
+foreach ($this->profilesurvey as $profilesurvey){
+	echo "<option value='$profilesurvey->id'>$profilesurvey->name</option>";
+}
+?>
+</select>&nbsp;<a href="javascript:inviteToSurvey()">邀请参加该调查</a></td></tr>
+<tr><td>一共有<?php echo count($this->campaignParticipations);?>参加活动<br/></td></tr>
+<tr><td><?php if($this->tag) echo "筛选tag为" . $this->tag;?><?php if($this->tag){?><a href="<?php echo $this->url(array('controller'=>'campaignparticipation','action'=>'adminindex'));?>/id/<?php echo $this->campaign_id?>">所有参加者</a><?php }?></td></tr>
+</table>
+
+<table width="1200" cellspacing="0" cellpadding="0">
+	<tr>
+	    <th width="40"><input type="checkbox" value="ALL" id="checkAll"/>ALL</th>
+		<th width="20">No.</th>
+		<th width="50"><?php echo $this->translate('Consumers_Name');?></th>
+		<th width="50"><?php echo $this->translate('Email');?></th>
+		<th width="50"><?php echo $this->translate('Admin_Recipients_Name');?></th>
+		<th width="40"><?php echo $this->translate('Admin_Province');?></th>
+		<th width="40"><?php echo $this->translate('Admin_City');?></th>
+		<th width="150"><?php echo $this->translate('Admin_Address1');?></th>
+		<th width="50"><?php echo $this->translate('Admin_Phone');?></th>
+		
+		<!--<th width="30"><?php echo $this->translate('Admin_Postal_Code');?></th>-->
+		<th width="30"><?php echo $this->translate('UserID');?></th>
+		<th width="100"><?php echo $this->translate('Admin_Date');?></th>
+		<th width="30">Tags</th>	
+	</tr>
+	<?php $index = 0?>
+	<?php foreach($this->campaignParticipations as $campaignParticipations) : ?>
+	<?php $index++;?>
+	<tr
+	<?php 
+	if ($campaignParticipations['state'] == 'NEW'){ ?>  style="background-color: #FFEADA "
+	<?php }?>
+	>
+	    <td width="20"><input type="checkbox" value="<?php echo $campaignParticipations['id'];?>"  class="Paticipate"/></td>
+		<td width="20"><?php echo $index;?></td>
+		<td width="50"><a href="<?php echo $this->baseUrl().'/consumer/profile/uid/'.$campaignParticipations['id'];?>" target="_blank"><?php echo $this->escape($campaignParticipations['name']);?></a></td>
+		<td width="50"><?php echo $this->escape($campaignParticipations['email']);?>/<?php echo $this->escape($campaignParticipations['login_phone']);?></td>
+		<td width="50"><?php echo $this->escape($campaignParticipations['recipients_name']);?></td>
+		<td width="40"><?php echo $this->escape($campaignParticipations['province']);?></td>
+		<td width="40"><?php echo $this->escape($campaignParticipations['city']);?></td>
+		<td width="150"><?php echo $this->escape($campaignParticipations['address1']);?></td>
+		<td width="50"><?php echo $this->escape($campaignParticipations['phone']);?></td>
+		
+		<!--<td width="30"><?php echo $this->escape($campaignParticipations['postalcode']);?></td>
+		-->
+		<td width="30"><?php echo $this->escape($campaignParticipations['id']);?></td>
+		<td width="100"><?php echo $this->escape($campaignParticipations['accept_date']);?></td>
+		<td width="50">
+		<?php 
+		
+			$arrayTag = explode(',',$campaignParticipations['tags']) ; 
+			if(count($arrayTag)){
+				foreach($arrayTag as $val){
+					if(trim($val) != ''){
+					   echo "<a href='". $this->url(array('controller'=>'campaignparticipation','action'=>'adminindex'))."/id/$this->campaign_id/tag/$val'>" .$val . "</a><a href='javascript:deleteTag(\"$val\",\"$campaignParticipations[id]\")'><img src='". $this->baseUrl() ."/images/red_cross.gif'/></a><br/>";
+					}
+				}
+			}
+		?></td>
+		
+	</tr>
+	<?php endforeach; ?>
+</table>
+<ul>
+	<li><a
+		href='<?php echo $this->url(array('controller'=>'campaign','action'=>'adminindex'));?>'><?php echo $this->translate('Back'); ?></a></li>
+</ul>
+</div>
+<script type="text/javascript">
+jQuery('#checkAll').click(
+
+		function(){
+
+			if(jQuery('#checkAll').is(':checked')){
+
+				jQuery('.Paticipate').attr('checked', true);
+
+			}else{
+
+				jQuery('.Paticipate').attr('checked', false);
+
+			}					
+
+		});
+
+function addTags(){
+	var tags = jQuery('#addTags').val();
+	var participate = jQuery('.Paticipate:checked');
+	var strid = '';
+	participate.each(function(){
+      strid = strid + jQuery(this).val() + ',' ;
+	});
+	strid = strid.substring(0,strid.length -1);
+	if( (jQuery.trim(tags) != '') && (jQuery.trim(strid) != '')  ){
+		jQuery.ajax({
+			   type: "POST",
+			   url: "<?php echo $this->url(array('controller'=>'consumer','action'=>'adminaddtags'));?>",
+			   data: "type=add&tags=" + tags + "&id=" + strid,
+			   success: function(msg){
+			        alert(msg);
+			        window.location.reload( true );
+			   }
+			 });
+	}
+}
+function deleteTags(){
+	var tags = jQuery('#deleteTags').val();
+	var participate = jQuery('.Paticipate:checked');
+	var strid = '';
+	participate.each(function(){
+      strid = strid + jQuery(this).val() + ',' ;
+	});
+	strid = strid.substring(0,strid.length -1);
+	if( (jQuery.trim(tags) != '') && (jQuery.trim(strid) != '')  ){
+		jQuery.ajax({
+			   type: "POST",
+			   url: "<?php echo $this->url(array('controller'=>'consumer','action'=>'adminaddtags'));?>",
+			   data: "type=delete&tags=" + tags + "&id=" + strid,
+			   success: function(msg){
+			        alert(msg);
+			        window.location.reload( true );
+			   }
+			 });
+	}
+}
+function deleteTag(tag,id){
+	jQuery.ajax({
+		   type: "POST",
+		   url: "<?php echo $this->url(array('controller'=>'consumer','action'=>'adminaddtags'));?>",
+		   data: "type=delete&tags=" + tag + "&id=" + id,
+		   success: function(msg){
+					alert(msg);
+					window.location.reload( true );
+		   }
+	});
+}
+
+function inviteToSurvey(){
+	var profileSurvey = jQuery('#profileSurvey').val();
+	var participate = jQuery('.Paticipate:checked');
+	var strid = '';
+	participate.each(function(){
+      strid = strid + jQuery(this).val() + ',' ;
+	});
+	strid = strid.substring(0,strid.length -1);
+	if( (jQuery.trim(strid) != '')  ){
+		jQuery.ajax({
+			   type: "POST",
+			   url: "<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminprofilesurvey'));?>",
+			   data: "profileSurvey=" + profileSurvey + "&id=" + strid,
+			   success: function(msg){
+			        alert(msg);
+			   }
+			 });
+	}
+	
+}
+  </script>

@@ -1,0 +1,97 @@
+ <?php if(isset($this->file)){?>
+ <link href="/index.php?format=feed&amp;type=rss&amp;lang=en" rel="alternate" type="application/rss+xml" title="RSS 2.0" />
+ <link href="/index.php?format=feed&amp;type=atom&amp;lang=en" rel="alternate" type="application/atom+xml" title="Atom 1.0" />
+ <link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+ <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/calendar-win2k-1.css" />
+ <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/smoothness/jquery-ui-1.7.2.custom.css" />
+ <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/thickbox.css" />
+ <script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js" ></script>
+ <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/thickbox.js"></script>
+
+<link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/newhome.css" type="text/css"/>
+<link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/questionnaire.css" type="text/css"/>
+
+
+
+<?php 
+if (isset($this->file)) {  // if static file exist
+    include($this->file);
+}
+?>
+<?php if (isset($this->file)) { ?>
+<script language="JavaScript" type="text/javascript">
+  $('id').value = '';
+  $('submit').disabled='disabled';
+  var url = "<?php echo $this->url(array('controller'=>'common','action'=>'admingetaccesscode'));?>";
+  var params = 'surveyId=<?php echo $this->surveyId ;?>&email=<?php echo $this->consumer->email?>';
+  new Ajax.Request(
+      url,
+      {
+      method: 'get',
+      parameters: params,
+      onSuccess: function(msg) {
+          var accessCode = msg.responseText;
+          $('id').value = accessCode.substring(1,accessCode.length-1);
+          $('submit').disabled='';
+          }
+      }
+  );
+</script>
+<?php } ?>
+
+<?php }else{ ?>
+<div align="center">
+<p>&nbsp</p>
+<p>&nbsp</p>
+
+	<form action = '<?php echo $this->url(array('controller'=>'report','action'=>'adminaddreport'));?>/uid/<?php echo $this->uid?>' id='form_1' name = 'form_1' method='post' >
+	<table >
+	<tr>
+	<td>
+	 活动：
+	 </td>
+	 <td>
+	 <select name="campaign">
+     <?php 
+	 foreach($this->campaigns as $val){
+	 	if(isset($this->campaign)&&($this->campaign==$val->id)){
+	 		$selected = 'selected';
+	 	}else{
+	 		$selected = '';
+	 	}
+	 	echo "<option value='$val->id' $selected>$val->name</option>";
+	 }
+	 ?>
+	 </select></td>
+	 </tr>
+	 <tr>
+	<td>
+	 来源：</td>
+	 <td>
+	 <select name="source">
+     <?php 
+	 foreach($this->sources as $val){
+	 	if(isset($this->source)&&($this->source==$val)){
+	 		$selected = 'selected';
+	 	}else{
+	 		$selected = '';
+	 	}
+	 	echo "<option value='$val' $selected>$val</option>";
+	 }
+	 ?>
+	 
+	 </select></td>
+	 <tr><td colspan="2">
+	 <input value="提交" type="submit"/>
+	 </td>
+	 </tr>
+	 <?php if(isset($this->link)){?>
+	 <tr><td colspan="2"><a href="<?php echo $this->url(array('controller'=>'report','action'=>'adminaddreport'));?>/uid/<?php echo $this->uid;?>/survey/<?php echo $this->surveyId?>/file/<?php echo $this->link?>?TB_iframe=true" class="thickbox">点击填写报告</a></td></tr>
+	 <?php }?>
+	 </table>
+	
+	</form>
+	
+	
+</div>
+<?php }?>
