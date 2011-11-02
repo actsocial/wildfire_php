@@ -1,28 +1,7 @@
 <link href="<?php echo $this->baseUrl();?>/uploadify/uploadify.css" type="text/css" rel="stylesheet" />
-<script type="text/javascript" src="<?php echo $this->baseUrl();?>/uploadify/jquery-1.4.2.min.js"></script>
 <script type="text/javascript" src="<?php echo $this->baseUrl();?>/uploadify/swfobject.js"></script>
 <script type="text/javascript" src="<?php echo $this->baseUrl();?>/uploadify/jquery.uploadify.v2.1.4.min.js"></script>
-<script type="text/javascript">
-jQuery(document).ready(function() {
-  jQuery('#file_upload').uploadify({
-    'uploader'  : '<?php echo $this->baseUrl();?>/uploadify/uploadify.swf',
-    'script'    : '<?php echo $this->baseUrl();?>/uploadify/uploadify.php?param=url_/wildfire/public/report/saveuploaddata_accesscode_'+jQuery('#id').val()+'_consumer_<?php echo $this->consumer?>_report_0',
-    'cancelImg' : '<?php echo $this->baseUrl();?>/images/cancel.png',
-    'folder'    : '<?php echo $this->baseUrl();?>/uploads',
-    'auto'           : true,
-    'fileExt'        : '*.jpg;*.gif;*.png',
-    'fileDesc'       : 'Image Files (.JPG, .GIF, .PNG)',
-    'queueID'        : 'custom-queue',
-    'queueSizeLimit' : 3,
-    'simUploadLimit' : 3,
-    'removeCompleted': false,
-    'onAllComplete'  : function(event,data) {
-	    //jQuery('#status-message').text(data.filesUploaded + ' 文件上传成功, ' + data.errors + ' 错误.');
-      }
 
-  });
-});
-</script>
 <script language="JavaScript" type="text/javascript">
 	<!--
 	// <![CDATA[
@@ -529,11 +508,12 @@ jQuery(document).ready(function() {
 		<div id="mainzone-bottom-right">&nbsp;</div>
 		</div>
 </div>
- 上传图片:</br>
+ <!-- 上传图片:</br>
 		<div id="custom-queue" class="uploadifyQueue"></div>
 		</p>
 		<input id="file_upload" name="Filedata" type="file" width="120" height="40"/>
 <br/>
+-->
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
 <input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />

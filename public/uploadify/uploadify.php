@@ -23,62 +23,41 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
-
-//if(!is_numeric($_GET['consumer'])||!is_numeric($_GET['report'])){
-//	die;
-//}
-
-//$result = mysql_connect('localhost','root','123456')or die('can not connect to the mysql');
-//mysql_set_charset('utf8');
-//mysql_select_db('wildfire');
+$result = mysql_connect('127.0.0.1','wf','8HmmIg3T')or die('can not connect to the mysql');
+mysql_set_charset('utf8');
+mysql_select_db('wildfire');
 if (!empty($_FILES)) {
-		$tempFile = $_FILES['Filedata']['tmp_name'];
+	$tempFile = $_FILES['Filedata']['tmp_name'];
+	$param = explode('_', $_GET['param']);
+	$consumer = $param[1];
+       $report   = $param[0];
+
+	$targetPath = $_SERVER['DOCUMENT_ROOT'] . $_REQUEST['folder'] . '_images/';
+       $targetPath =  '/home/wildfire/upload_images/';
+       // $name     = iconv("utf-8","gb2312",$consumer.'_'.$report.$_FILES['Filedata']['name']);
+	$name     = iconv("utf-8","gb2312",$consumer.'_'.$report.date('Y-m-d H:i:s').'.png');
+
+ 
+	$targetFile =  str_replace('//','/',$targetPath) . iconv("utf-8","gb2312",$_FILES['Filedata']['name']);
+       $targetFile =  str_replace('//','/',$targetPath) .$name ;	
 	
-     	$param = explode('_', $_GET['param']);
-     	
-     	$num = count($param) ;
-     	for ($i = 0; $i < $num ; ){
-     		$request[$param[$i]] =  $param[$i+1];
-     		$i = $i + 2;
-     	}
-        //$name     = iconv("utf-8","gb2312",$consumer.'_'.$report.$_FILES['Filedata']['name']);
-        $name     = iconv("utf-8","gb2312",date('Y-m-d-H-i-s').'.png');
-        $targetPath = $_SERVER['DOCUMENT_ROOT'] . $_REQUEST['folder'] . '/';
-        $url      = "http://".$_SERVER['SERVER_NAME'].$request['url'].'/name/'.$name.'';
-        foreach($request as $key => $val){
-        	if($key != 'url'){
-        		$url  .= "/$key/$val";
-        	}        	
-        }
-		//$targetPath = $_SERVER['DOCUMENT_ROOT'] . $_REQUEST['folder'] . '_images/';
-		//$targetFile =  str_replace('//','/',$targetPath) . $_FILES['Filedata']['name'];
-        $targetFile =  str_replace('//','/',$targetPath) .$name ;	
+	// $fileTypes  = str_replace('*.','',$_REQUEST['fileext']);
+	// $fileTypes  = str_replace(';','|',$fileTypes);
+	// $typesArray = split('\|',$fileTypes);
+	// $fileParts  = pathinfo($_FILES['Filedata']['name']);
 	
-		// $fileTypes  = str_replace('*.','',$_REQUEST['fileext']);
-		// $fileTypes  = str_replace(';','|',$fileTypes);
-		// $typesArray = split('\|',$fileTypes);
-		// $fileParts  = pathinfo($_FILES['Filedata']['name']);
-	
-	    // if (in_array($fileParts['extension'],$typesArray)) {
+	// if (in_array($fileParts['extension'],$typesArray)) {
 		// Uncomment the following line if you want to make the directory if it doesn't exist
 		// mkdir(str_replace('//','/',$targetPath), 0755, true);
 		
-	     
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $url);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_HEADER, 0);
-		$output = curl_exec($ch);
-		curl_close($ch);
-			   		
-		
-	    move_uploaded_file($tempFile,$targetFile);
-	    $name = iconv("gb2312","utf-8",$name);
-	    $targetFile = str_replace('//','/',$targetPath).$name;
-	    //mysql_query("insert into report_images(name,consumer,report,path,crdate) values ('$name','$consumer','$report','$targetFile','".date('Y-m-d h:i:s')."')");
+		move_uploaded_file($tempFile,$targetFile);
+	    	$name = iconv("gb2312","utf-8",$name);
+	   	$targetFile = str_replace('//','/',$targetPath).$name;
+		mysql_query("insert into report_images(name,consumer,report,path,crdate) values ('$name','$consumer','$report','$targetFile','".date('Y-m-d H:i:s')."')");
+
 		echo str_replace($_SERVER['DOCUMENT_ROOT'],'',$targetFile);
-		// } else {
-		// 	echo 'Invalid file type.';
-		// }
+	// } else {
+	// 	echo 'Invalid file type.';
+	// }
 }
 ?>
