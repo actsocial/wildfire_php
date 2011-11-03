@@ -1,0 +1,1532 @@
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	// <![CDATA[
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie > 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length > MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+	// ]]>
+	-->
+	</script>
+<div class="main-container-outer" style="background: #fff;width:100%;">
+	<div id="container" style="background: #fff;">
+		<div id="header" class="header" style="display: none;">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			<div class="main-logo" id="main-logo">
+				<a href="http://www.ostrakon.org" target="_blank">
+				</a>
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div> <!-- header -->
+		<div id="nav" class="navigation" style="display:none;">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content" style="background:#fff;width:100%;">
+ 		
+
+<div id="content" style="width:100%;">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	mandatoryElements = new Array(); 
+// ]]>
+-->
+</script>
+<div class="fillout-container">
+<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
+<div class="mainOneContent">
+
+<div style="margin-top:10px;"></div>
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
+  <div id="mainzone-top-left">
+    <div id="mainzone-top-right"></div>
+  </div>
+</div>
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none;">
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"/></td>
+		<td bgcolor="#ffffff">
+			<div class="web-dialog-message">
+				<p id="web-dialog-message-text" class=""></p>
+			</div>
+			<div class="buttons" id="web-dialog-buttons">
+			</div>
+		</td>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"/></td>
+	</tr>
+</table>
+
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	var WebDialog = {
+		element : $('web-dialog'),
+		onok : function() {},
+		oncancel : function() {},
+		show : function() {
+			var width = document.body.clientWidth;
+			var height = document.body.offsetHeight;
+			var left = (width - this.element.offsetWidth) / 2;
+			var top = (height - this.element.offsetHeight) / 2;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+		},
+		alert : function(msg,agree,disagree,onok,oncancel) {
+			var buttons = ["OK","Cancel"];
+			var callbacks = [onok, oncancel];
+			this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+		},
+		ok : function() {
+			this.onok();
+		},
+		close : function() {
+			this.element.hide();
+			$('mask').hide();
+			this.oncancel();
+		},
+		showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions) {
+			// icon_type : "none", "alert", "question"
+			// msg_align : "left", "center", "right"
+			// width : -1 means auto
+			
+			var width = document.body.clientWidth;
+			var height = window.screen.availHeight;
+			var left = (width - window_width) / 2;
+			var top = (height - 300) / 2;
+			var pos = 0;
+			if (window.innerHeight) {
+		    	pos = window.pageYOffset
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
+		    	pos = document.documentElement.scrollTop
+		    } else if (document.body) {
+		    	pos = document.body.scrollTop;
+		    }
+		    top += pos;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+			$('mask').style.height = document.body.scrollHeight + "px";
+			
+			if (width != undefined) {
+				this.element.style.width = window_width + "px";
+			}
+			if (msg != undefined) {
+				$('web-dialog-message-text').innerHTML = msg;
+			}
+			if (icon_type != undefined && msg_align != undefined) {
+				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
+			} else if (icon_type == undefined && msg_align == undefined) {
+				$('web-dialog-message-text').className = "icon-none left";
+			} else if (icon_type == undefined) {
+				$('web-dialog-message-text').className = msg_align;
+			} else {
+				$('web-dialog-message-text').className = "icon-"+icon_type;
+			}
+			
+			$('web-dialog-buttons').innerHTML = "";
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
+					if (buttons[i]==undefined || callback_functions[i]==undefined) {
+						continue;
+					}
+					var e = document.createElement('a');
+					e.setAttribute('href', '#');
+					e.innerHTML = buttons[i];
+					e.onclick = callback_functions[i];
+					$('web-dialog-buttons').appendChild(e);
+				}
+			}
+			
+			
+			this.element.show();
+			$('mask').show();
+		}
+	}
+// ]]>
+-->
+</script>
+<div id="mainzone">
+<div id="mainzone-inner">
+
+
+<input type="hidden" name="id" value="Acm6pNTx005I" id="id" />
+<input type="hidden" name="theme" value="wildfire" id="theme" />
+
+<div class="page-bar-area">
+<span id="pageBar">Page:&nbsp;</span>
+<strong class="no-answer">No Answer</strong><img class="no-answer" src="/images/no_answer.gif" align="absmiddle"/>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+
+	
+	<div id="page_0">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1551" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						On how many occasions did you mention Blue Fountain, online or offline, during the last three months?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8151].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8151].id" value="" id="answers[8151].id" />
+
+	<select group="8151" class="selection" id="question_8151" name="answers[8151].value" title="title"  size = "1" >
+	<option selected="selected" value="0">Please choose</option>
+<option value="5389" style=""  >0</option>
+<option value="5390" style=""  >1</option>
+<option value="5391" style=""  >2</option>
+<option value="5392" style=""  >3</option>
+<option value="5393" style=""  >4</option>
+<option value="5394" style=""  >5</option>
+<option value="5395" style=""  >6</option>
+<option value="5396" style=""  >7</option>
+<option value="5397" style=""  >8</option>
+<option value="5398" style=""  >9</option>
+<option value="5399" style=""  >10</option>
+<option value="5400" style=""  >11</option>
+<option value="5401" style=""  >12</option>
+<option value="5402" style=""  >13</option>
+<option value="5403" style=""  >14</option>
+<option value="5404" style=""  >15</option>
+<option value="5405" style=""  >16</option>
+<option value="5406" style=""  >17</option>
+<option value="5407" style=""  >18</option>
+<option value="5408" style=""  >19</option>
+<option value="5409" style=""  >20</option>
+<option value="5410" style=""  >20+</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1533" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Did you make use of Blue Fountain service during the campaign?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8152].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8152].id" value="" id="answers[8152].id" />
+<ul>
+	<li>
+			<input group="8152" type="radio" id="8152_0" name="answers[8152].value" value="5289"  class="selection question_radio_8152"  />		<label for="8152_0">Yes</label>
+	</li>
+	<li>
+			<input group="8152" type="radio" id="8152_1" name="answers[8152].value" value="5290"  class="selection question_radio_8152"  />		<label for="8152_1">No</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8152  qc_0 radio" type="radio" name="answers[8152].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1516" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Please give details:
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[8153].id" value="" id="answers[8153].id" />
+<textarea name="answers[8153].value" id="question_8153" cols="40" group="8153" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[8153].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1517" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Why not?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[8154].id" value="" id="answers[8154].id" />
+<textarea name="answers[8154].value" id="question_8154" cols="40" group="8154" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[8154].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1496" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Did you or your friends have any problems redeeming Blue Fountain coupons?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8155].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8155].id" value="" id="answers[8155].id" />
+<ul>
+	<li>
+			<input group="8155" type="radio" id="8155_0" name="answers[8155].value" value="5098"  class="selection question_radio_8155"  />		<label for="8155_0">Yes</label>
+	</li>
+	<li>
+			<input group="8155" type="radio" id="8155_1" name="answers[8155].value" value="5099"  class="selection question_radio_8155"  />		<label for="8155_1">No</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8155  qc_0 radio" type="radio" name="answers[8155].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1518" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Please comment on coupon redemption:
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[8156].id" value="" id="answers[8156].id" />
+<textarea name="answers[8156].value" id="question_8156" cols="40" group="8156" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[8156].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1511" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=100% valign="top">
+					<div class="question-title">
+						How likely is it that you would recommend Blue Fountain to a friend or colleague?
+					</div>
+							<div class="elementInfoText " >
+							   
+							</div>
+				</td>
+			</tr>
+			 <tr>
+				<td width=100% valign="top" class="question-td twoColumnLayout" style="padding-left:15px;">
+<span class="error-content" id="err_answers[8157].value" ></span>
+<input type="hidden" name="answers[8157].id" value="" id="answers[8157].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">not at all likely</div>
+	<table class="rating-table">
+		<tr class="radio-line">
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[8157].value" value="0" id="8157_0" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8157].value" value="1" id="8157_1" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8157].value" value="2" id="8157_2" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8157].value" value="3" id="8157_3" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8157].value" value="4" id="8157_4" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8157].value" value="5" id="8157_5" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8157].value" value="6" id="8157_6" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8157].value" value="7" id="8157_7" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8157].value" value="8" id="8157_8" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[8157].value" value="9" id="8157_9" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[8157].value" value="10" id="8157_10" group="8157" class="question_radio_8157 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+		</tr>
+	</table> <div class="right-label">extremely likely</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[8157].value" value="" id="answers[8157].value" class="q_8157 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1519" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Why:
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[8158].id" value="" id="answers[8158].id" />
+<textarea name="answers[8158].value" id="question_8158" cols="40" group="8158" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[8158].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1534" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of Blue Fountain?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8159].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8159].id" value="" id="answers[8159].id" />
+<ul>
+	<li>
+			<input group="8159" type="radio" id="8159_0" name="answers[8159].value" value="5291"  class="selection question_radio_8159"  />		<label for="8159_0">very positive</label>
+	</li>
+	<li>
+			<input group="8159" type="radio" id="8159_1" name="answers[8159].value" value="5292"  class="selection question_radio_8159"  />		<label for="8159_1">somewhat positive</label>
+	</li>
+	<li>
+			<input group="8159" type="radio" id="8159_2" name="answers[8159].value" value="5293"  class="selection question_radio_8159"  />		<label for="8159_2">neutral</label>
+	</li>
+	<li>
+			<input group="8159" type="radio" id="8159_3" name="answers[8159].value" value="5294"  class="selection question_radio_8159"  />		<label for="8159_3">somewhat negative</label>
+	</li>
+	<li>
+			<input group="8159" type="radio" id="8159_4" name="answers[8159].value" value="5295"  class="selection question_radio_8159"  />		<label for="8159_4">negative</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8159  qc_0 radio" type="radio" name="answers[8159].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1535" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of the books of Blue Fountain?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8160].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8160].id" value="" id="answers[8160].id" />
+<ul>
+	<li>
+			<input group="8160" type="radio" id="8160_0" name="answers[8160].value" value="5296"  class="selection question_radio_8160"  />		<label for="8160_0">excellent</label>
+	</li>
+	<li>
+			<input group="8160" type="radio" id="8160_1" name="answers[8160].value" value="5297"  class="selection question_radio_8160"  />		<label for="8160_1">above average</label>
+	</li>
+	<li>
+			<input group="8160" type="radio" id="8160_2" name="answers[8160].value" value="5298"  class="selection question_radio_8160"  />		<label for="8160_2">average</label>
+	</li>
+	<li>
+			<input group="8160" type="radio" id="8160_3" name="answers[8160].value" value="5299"  class="selection question_radio_8160"  />		<label for="8160_3">below average</label>
+	</li>
+	<li>
+			<input group="8160" type="radio" id="8160_4" name="answers[8160].value" value="5300"  class="selection question_radio_8160"  />		<label for="8160_4">poor</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8160  qc_0 radio" type="radio" name="answers[8160].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1536" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of the quality of the Blue Fountain website?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8161].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8161].id" value="" id="answers[8161].id" />
+<ul>
+	<li>
+			<input group="8161" type="radio" id="8161_0" name="answers[8161].value" value="5301"  class="selection question_radio_8161"  />		<label for="8161_0">excellent design, enjoyable to use</label>
+	</li>
+	<li>
+			<input group="8161" type="radio" id="8161_1" name="answers[8161].value" value="5302"  class="selection question_radio_8161"  />		<label for="8161_1">good design, easy to use</label>
+	</li>
+	<li>
+			<input group="8161" type="radio" id="8161_2" name="answers[8161].value" value="5303"  class="selection question_radio_8161"  />		<label for="8161_2">average</label>
+	</li>
+	<li>
+			<input group="8161" type="radio" id="8161_3" name="answers[8161].value" value="5304"  class="selection question_radio_8161"  />		<label for="8161_3">poor design, difficult to use</label>
+	</li>
+	<li>
+			<input group="8161" type="radio" id="8161_4" name="answers[8161].value" value="5305"  class="selection question_radio_8161"  />		<label for="8161_4">extremely poor design, very difficult to use</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8161  qc_0 radio" type="radio" name="answers[8161].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1520" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Please comment on the website:
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[8162].id" value="" id="answers[8162].id" />
+<textarea name="answers[8162].value" id="question_8162" cols="40" group="8162" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[8162].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1537" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What is your overall opinion of the price of Blue Fountain
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8163].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8163].id" value="" id="answers[8163].id" />
+<ul>
+	<li>
+			<input group="8163" type="radio" id="8163_0" name="answers[8163].value" value="5306"  class="selection question_radio_8163"  />		<label for="8163_0">very affordable</label>
+	</li>
+	<li>
+			<input group="8163" type="radio" id="8163_1" name="answers[8163].value" value="5307"  class="selection question_radio_8163"  />		<label for="8163_1">affordable</label>
+	</li>
+	<li>
+			<input group="8163" type="radio" id="8163_2" name="answers[8163].value" value="5308"  class="selection question_radio_8163"  />		<label for="8163_2">average</label>
+	</li>
+	<li>
+			<input group="8163" type="radio" id="8163_3" name="answers[8163].value" value="5309"  class="selection question_radio_8163"  />		<label for="8163_3">expensive</label>
+	</li>
+	<li>
+			<input group="8163" type="radio" id="8163_4" name="answers[8163].value" value="5310"  class="selection question_radio_8163"  />		<label for="8163_4">very expensive</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_8163  qc_0 radio" type="radio" name="answers[8163].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1502" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How many coupons did you give to your friends during the campaign?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8164].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8164].id" value="" id="answers[8164].id" />
+
+	<select group="8164" class="selection" id="question_8164" name="answers[8164].value" title="title"  size = "1" >
+	<option selected="selected" value="0">Please choose</option>
+<option value="5120" style=""  >0</option>
+<option value="5121" style=""  >1</option>
+<option value="5122" style=""  >2</option>
+<option value="5123" style=""  >3</option>
+<option value="5124" style=""  >4</option>
+<option value="5125" style=""  >5</option>
+<option value="5126" style=""  >6</option>
+<option value="5127" style=""  >7</option>
+<option value="5128" style=""  >8</option>
+<option value="5129" style=""  >9</option>
+<option value="5130" style=""  >10</option>
+<option value="5131" style=""  >10+</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1514" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How many books, if any, did you purchase from Blue Fountain during the campaign?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8165].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8165].id" value="" id="answers[8165].id" />
+
+	<select group="8165" class="selection" id="question_8165" name="answers[8165].value" title="title"  size = "1" >
+	<option selected="selected" value="0">Please choose</option>
+<option value="5179" style=""  >0</option>
+<option value="5180" style=""  >1</option>
+<option value="5181" style=""  >2</option>
+<option value="5182" style=""  >3</option>
+<option value="5183" style=""  >4</option>
+<option value="5184" style=""  >5</option>
+<option value="5185" style=""  >6</option>
+<option value="5186" style=""  >7</option>
+<option value="5187" style=""  >8</option>
+<option value="5188" style=""  >9</option>
+<option value="5189" style=""  >10</option>
+<option value="5190" style=""  >10+</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_1515" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How many books, if any, did your friends say that they had purchased from Blue Fountain during the campaign?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[8166].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[8166].id" value="" id="answers[8166].id" />
+
+	<select group="8166" class="selection" id="question_8166" name="answers[8166].value" title="title"  size = "1" >
+	<option selected="selected" value="0">Please choose</option>
+<option value="5191" style=""  >0</option>
+<option value="5192" style=""  >1</option>
+<option value="5193" style=""  >2</option>
+<option value="5194" style=""  >3</option>
+<option value="5195" style=""  >4</option>
+<option value="5196" style=""  >5</option>
+<option value="5197" style=""  >6</option>
+<option value="5198" style=""  >7</option>
+<option value="5199" style=""  >8</option>
+<option value="5200" style=""  >9</option>
+<option value="5201" style=""  >10</option>
+<option value="5202" style=""  >10+</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+	
+
+
+</div> 
+<br/>
+<div style="clear:both"></div>
+</div> 
+</div> 
+
+<div id="mainzone-bottom-wrapper">
+	<div id="mainzone-bottom-left">
+		<div id="mainzone-bottom-right">&nbsp;</div>
+	</div>
+</div>
+<br/>
+<div class="fillout-submit">
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+</div>
+
+</form>
+</div> 
+<div class="clear"></div>
+<br/>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+  var pageNum=0;
+ 
+  var noPage0 = false;
+  var currentPage=0;
+  
+
+  function showPage(_pageIndex) {
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex == pageNum) {
+    	Element.hide("nextPageButton");
+    } else {
+    	Element.show("nextPageButton");
+    }
+    
+    if (_pageIndex <1 && noPage0) return ;
+  	var _pageElement = $("page_"+_pageIndex);
+  	var _currElement = $("page_"+currentPage);
+  	
+  	Element.hide(_currElement);
+  	Element.show(_pageElement);
+	
+	if($("pageNum" + _pageIndex) != undefined) {
+		$("pageNum" + _pageIndex).style.fontWeight = "bolder"; 
+		$("pageNum" + _pageIndex).style.textDecoration = "underline";
+	}
+    if($("pageNum" + currentPage) != undefined) {		
+  		$("pageNum" + currentPage).style.fontWeight = "normal"; 
+		$("pageNum" + currentPage).style.textDecoration = "none";
+	}
+	
+
+  	currentPage = _pageIndex;
+	
+	if(_pageIndex == pageNum) {
+		Element.show($('submit'));
+	} else if ( _pageIndex < pageNum) {
+		Element.hide($('submit'));
+	}
+  }
+  
+  function showNextPage(){
+  	showPage(currentPage+1);
+  }
+  
+  function showPrevPage(){
+  	showPage(currentPage-1);
+  }
+  
+  function initPages() {
+  	var i;
+
+  	for (i=0; i<=pageNum; i++) {
+  		Element.hide($("page_"+i));
+  	}
+  	
+ 
+  	var _pageBar = document.getElementById("pageBar");
+  	if (pageNum==0) {
+  		_pageBar.innerHTML = "";
+  	} else {
+	  	for (i=0; i<=pageNum; i++) {
+			var s ="";
+			if( i == 0 ) {
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
+			}
+
+			if (noPage0){
+	  		 if (i!=0){ 
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
+	  		  }
+	  		}else{
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
+	  		}
+	  		
+			if( i == pageNum ) {
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
+			}
+	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  	}		
+  	}
+  }
+  
+  initPages();
+  if (noPage0){
+  	showPage(1);
+  }else{
+  	showPage(0);
+  }
+// ]]>
+-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+    //do not include radio answers
+	if(typeof checkNoAnswer=="undefined") {
+		checkNoAnswer=function(index,checkbox) {
+			var question = $("question_" + index);
+			var checked = checkbox.checked;
+			if( checked) {
+				question.disabled="disabled";
+				checkbox.value=false;
+			} else {
+				question.disabled="";
+				checkbox.value=true;
+			}
+		};
+	};
+	
+		if(typeof checkRadioNoAnswer=="undefined") {
+		checkRadioNoAnswer = function(index,checkbox) {
+			var clazz = "question_radio_" +index;
+			var radios = document.getElementsByClassName(clazz).each(function(radio) {
+				var checked = checkbox.checked;
+			    if( checked) {
+					if(radio.checked="checked")radio.checked="";
+					radio.disabled="disabled";
+					checkbox.value=false;
+			    } else {
+					radio.disabled="";
+					checkbox.value=true;
+			    }
+			});
+		};
+	}
+	
+	if(typeof checkSubboxes=="undefined") {
+		checkSubboxes = function(qc_id) {
+			//get the question context checkbox's value
+			var qc_value = $("qc_checkbox_" + qc_id).checked;
+			//get the checkBoxed belongs to the above question context
+			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
+			for(var i = 0; i < checkBoxes.length;i++) {
+				var checkBox = checkBoxes[i];
+				//to reuse checkRadioNoAnswer and checkNoAnswer
+				checkBox.checked=qc_value;
+				var clazzName = checkBox.className;
+				var question_id = clazzName.split(" ")[0].split("_")[1];
+				if( clazzName.indexOf("radio") != -1) {
+					checkRadioNoAnswer(question_id,checkBox);
+				} else {
+					checkNoAnswer(question_id,checkBox);
+				}
+			}
+		}
+		
+	}
+// ]]>
+-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function loading() {
+		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
+		WebDialog.showMessageBox(html, "none", "center", 600);
+	}
+	
+	function checkMandatory() {
+	    var fillMandatory = true;
+	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+			if(elements.length > 1) {
+			  var filled = false;
+			  for(var i=0; i < elements.length; i++) {
+			  	var element = elements[i];
+				if(element.checked) {
+				  filled = true;
+				  break;
+				}
+			  }
+			  if(!filled) {
+			  	fillMandatory = false;
+			  	break;
+			  }
+			} else {
+			  var element = elements[0];
+			  if(element.hasClassName("selection")) {
+			  	if(element.value.strip() == '') {
+	    			fillMandatory =  false;
+	    			break;                                  
+	    		}
+			  } else if (element.hasClassName("input-text")) {
+			 	if(element.value == 0) {
+					fillMandatory = false;
+					break;
+				}
+			  }
+			}
+	    }
+	    if(!fillMandatory) {
+	    	var html = 'Mandatory questions must be filled out';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    }
+            return fillMandatory;
+	}
+	
+	function checkMandatoryOfSelectionQuestion() {
+	 var mandatory = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+
+
+	function checkAnswerSet() {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
+		    return true;
+		} else {
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			return false;
+		}
+	}
+	
+	function checkAnswersOfSelectionQuestions() {
+	 var filled = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+	
+	function checkAnswersOfRatingQuestions() {
+	    var filled = false;
+	    $$('input.rating').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;  
+										}
+	                                });
+
+		 return filled;
+	}
+	
+	function checkAnswersOfCommentQuestions() {
+	    var filled = false;
+	    $$('.input-text').each(function(element) {
+	                                    if(element.value.strip() != '') {
+	                                        filled = true;
+	                                    	throw $break;                                 
+	                                    }
+	                                });
+		 return filled;
+	}
+	
+	function locateErrorPage() {
+		var errorElements = $$('span.error-content') ;
+		var hasError = false;
+		var errorElementsPointer = 0;
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+			var html = errorElements[errorElementsPointer].innerHTML;
+			if (html != "") {
+				hasError = true;
+				break;
+			}
+		}
+		if( hasError ) {
+			var errorParentElement = errorElements[errorElementsPointer].up('div');
+			while (errorParentElement != undefined) {
+			var elementId = errorParentElement.id;
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
+				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
+				showPage(errorPageNum);
+				break;
+		}
+		errorParentElement = errorParentElement.up('div');
+		}
+		}
+	}
+	locateErrorPage();
+	
+	function showOtherValueInputInSelect(element) {
+	    var options = element.options;
+	    var selectedOption;
+	    for( var i = 0; i < options.length; i++) {
+	       if( options[i].selected) {
+	       	 selectedOption = options[i];
+	       }
+	    }
+	    var selectedOptionId = selectedOption.id;
+	    if( selectedOptionId.indexOf("other") != -1) {
+	    	$(element.id + "_other").show();
+	    } else {
+	        $(element.id + "_other").value = "";
+	    	$(element.id + "_other").hide();
+	    }
+	}
+	
+	function showOtherValueInputInRadio(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( value == 0 ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+	function showOtherValueInputInCheckBox(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( element.checked ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+// ]]>
+-->
+</script>
+</div>
+</div> 
+</div>
+
+<div class="footer" style="display:none;">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/c/methodName/c"  target="_blank">Help</a> | <a href="http://www.ostrakon.org"  target="_blank">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow" style="display:none;"></div>
+	<div style="clear: both"></div>
+	
+</div> 
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+
+
+	 Element.hide("q_1516");
+	 Element.hide("q_1517");
+	 Element.hide("q_1518");
+
+
+var myrules = {
+	   
+	   "input#8155_0": function(el){
+			el.onclick = function(){
+				if ($("8155_0").checked){
+						Element.show($("q_1518"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8152_0": function(el){
+			el.onclick = function(){
+				if ($("8152_0").checked){
+						Element.show($("q_1516"));
+						Element.hide($("q_1517"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8155_1": function(el){
+			el.onclick = function(){
+				if ($("8155_1").checked){
+						Element.hide($("q_1518"));
+				}
+			}
+		}
+	,
+	   
+	   "input#8152_1": function(el){
+			el.onclick = function(){
+				if ($("8152_1").checked){
+						Element.hide($("q_1516"));
+						Element.show($("q_1517"));
+				}
+			}
+		}
+}
+
+Behaviour.register(myrules);
+
+Framework.registerAjaxSensors();
+// ]]>
+-->
+</script>
