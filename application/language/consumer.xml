@@ -578,7 +578,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>上一次登录时间：</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Last time login:</seg>
+                <seg>Last login time:</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_gender'>

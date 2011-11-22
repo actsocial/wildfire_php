@@ -481,6 +481,15 @@
 				<seg>Forget Password?</seg>
 			</tuv>
 		</tu>
+
+                <tu tuid='Common_Inactive_Account'>
+                    <tuv xml:lang="zh">
+                        <seg>未激活账户？</seg>
+                    </tuv>
+                    <tuv xml:lang="en">
+                        <seg>Inactive Account?</seg>
+                    </tuv>
+                </tu>
 		<tu tuid='Common_Please_login'>
 			<tuv xml:lang="zh">
 				<seg>请登录</seg>
