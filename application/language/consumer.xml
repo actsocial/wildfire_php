@@ -437,6 +437,25 @@ You can also update your contact information and preferences.</seg>
 				<seg>Forgot your password?</seg>
 			</tuv>
 		</tu>
+                
+                <tu tuid='Inactive_account?'>
+			<tuv xml:lang="zh">
+				<seg>忘记激活你的账户？</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Forgot to active your acccout?</seg>
+			</tuv>
+		</tu>
+
+                <tu tuid='Active_email'>
+			<tuv xml:lang="zh">
+				<seg>请输入你注册时的邮箱，发送激活邮件</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Please enter your registered email, the system will send your activition email.</seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='Forgot_your_password_Content_By_SMS'>
 			<tuv xml:lang="zh">
 				<seg>请你输入你在星星火注册的电话号码，我们将发送重置密码的短信给你。</seg>
