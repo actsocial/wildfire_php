@@ -148,7 +148,7 @@
 			</tr>
 		</table>
 		</fieldset>
-		<div><?php echo $this->errMessage; ?></div><br/>
+		<div><?php echo $this->errMessage; ?></div><div id="err" style="color:red;display:">Please accept the privacy policy.</div><br/>
 		<div class="buttons-bar" style="float: left;"><?php echo $this->registerForm->submit ;?><div class="clear"></div></div>
 		</form>
 <?php }else{?>
@@ -245,9 +245,11 @@ function forbidInput(){
 
 function allowSubmit(){
 	if ($("agree").checked == true){
+		$("err").hide();
 		$("register").disabled=false;
 		$("register").className="input-enabled";
 	}else{
+		$("err").style.display="";
 		$("register").disabled=true;
 		$("register").className="";
 	}

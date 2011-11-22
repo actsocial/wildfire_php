@@ -219,12 +219,12 @@
 			</tuv>
 		</tu>
 		
-		<tu tuid='Register_password_is_invalid'>
+		<tu tuid='Register_code_is_invalid'>
 			<tuv xml:lang="zh">
 				<seg>邀请码无效或已被使用</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>The passwords are not consistent.</seg>
+				<seg>The invitation code are not consistent.</seg>
 			</tuv>
 		</tu>
 		
