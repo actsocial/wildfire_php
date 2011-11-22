@@ -264,6 +264,15 @@
 			</tuv>
 		</tu>
 		
+		<tu tuid='Register_name_is_invalid'>
+			<tuv xml:lang="zh">
+				<seg>请输入1-50位的用户名</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>It is not a valid name.</seg>
+			</tuv>
+		</tu>
+		
 		<tu tuid='Register_phone_is_invalid'>
 			<tuv xml:lang="zh">
 				<seg>电话号码无效或已被使用</seg>

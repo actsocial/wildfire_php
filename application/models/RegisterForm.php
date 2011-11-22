@@ -20,7 +20,7 @@ class RegisterForm extends Zend_Form
 		->setRequired(true)
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
-		->addValidator('NotEmpty')
+		//->addValidator('NotEmpty')
 		->addValidator('EmailAddress')
 		->addErrorMessage($this->getView()->translate('Register_email_is_invalid'));
 		
@@ -37,9 +37,10 @@ class RegisterForm extends Zend_Form
 		->setRequired(true)
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
-		->addValidator('NotEmpty')
-		->addValidators(array(array('StringLength', false, array(1, 50)),));
-
+		//->addValidator('NotEmpty')
+		->addValidators(array(array('StringLength', false, array(1, 50)),))
+		->addErrorMessage($this->getView()->translate('Register_name_is_invalid'));
+		
 		$password = new Zend_Form_Element_Password('registerPassword');
 		$password
 		->setRequired(true)
