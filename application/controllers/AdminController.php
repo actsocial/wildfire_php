@@ -18,7 +18,7 @@ class AdminController extends MyController
 			'action' => $fc->getBaseUrl().'/admin/login',
 			'method' => 'post',
 			));
-
+  
 		$form->getElement('url')->setValue($this->getRequest()->getParam('url'));
 
 		$this->view->form = $form;
