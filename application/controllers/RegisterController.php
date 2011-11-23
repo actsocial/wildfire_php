@@ -144,7 +144,7 @@ class RegisterController extends MyController
 											       "?ENABLEACCOUNTLINK?" => $activeLink
 							                );              
 							                
-						    $emailBody = strtr($emailBody,$stringChange);
+                                                        $emailBody = strtr($emailBody,$stringChange);
 							$config = Zend_Registry::get ( 'config' );
 							$smtpSender = new Zend_Mail_Transport_Smtp ( $config->smtp->invitation->mail->server, array ('username' => $config->smtp->invitation->mail->username, 'password' => $config->smtp->invitation->mail->password, 'auth' => $config->smtp->invitation->mail->auth, 'ssl' => $config->smtp->invitation->mail->ssl, 'port' => $config->smtp->invitation->mail->port ) );
 							//				$smtpSender = new Zend_Mail_Transport_Smtp(
@@ -365,41 +365,41 @@ class RegisterController extends MyController
     			}
 
 				//save link into DB
-				$tomorrow  = mktime(date("H"), date("i"), date("s"), date("m"), date("d")+1, date("Y"));
-				$expire_date = date("Y-m-d H:i:s",$tomorrow); 
-				$enableLink->expire_date = $expire_date;
-				$temporaryLinkModel->update(array('expire_date'=> $expire_date), 'id = '.$enableLink->id);
+                        $tomorrow  = mktime(date("H"), date("i"), date("s"), date("m"), date("d")+1, date("Y"));
+                        $expire_date = date("Y-m-d H:i:s",$tomorrow);
+                        $enableLink->expire_date = $expire_date;
+                        $temporaryLinkModel->update(array('expire_date'=> $expire_date), 'id = '.$enableLink->id);
 
-				//send mail
-				$emailSubject = $this->view->translate('ENABLE_ACCOUNT_subject');
-				$emailBody    = $this->view->translate('ENABLE_ACCOUNT_body');
-				$stringChange = array(
-								       "?ENABLEACCOUNTLINK?" => $enableLink->link
-				                );              
+                        //send mail
+                        $emailSubject = $this->view->translate('ENABLE_ACCOUNT_subject');
+                        $emailBody    = $this->view->translate('ENABLE_ACCOUNT_body');
+                        $stringChange = array(
+                                                               "?ENABLEACCOUNTLINK?" => $enableLink->link
+                                        );
 				                
-			    $emailBody = strtr($emailBody,$stringChange);
-				$config = Zend_Registry::get ( 'config' );
-				$smtpSender = new Zend_Mail_Transport_Smtp ( $config->smtp->invitation->mail->server, array ('username' => $config->smtp->invitation->mail->username, 'password' => $config->smtp->invitation->mail->password, 'auth' => $config->smtp->invitation->mail->auth, 'ssl' => $config->smtp->invitation->mail->ssl, 'port' => $config->smtp->invitation->mail->port ) );
+                        $emailBody = strtr($emailBody,$stringChange);
+                        $config = Zend_Registry::get ( 'config' );
+                        $smtpSender = new Zend_Mail_Transport_Smtp ( $config->smtp->invitation->mail->server, array ('username' => $config->smtp->invitation->mail->username, 'password' => $config->smtp->invitation->mail->password, 'auth' => $config->smtp->invitation->mail->auth, 'ssl' => $config->smtp->invitation->mail->ssl, 'port' => $config->smtp->invitation->mail->port ) );
 				//											 $smtpSender = new Zend_Mail_Transport_Smtp(
 				//											 'smtp.163.com',array(
 				//											 'username'=>'yun_simon@163.com',
 				//											 'password'=>'19990402',
 				//											 'auth'=>'login'));
-				Zend_Mail::setDefaultTransport ( $smtpSender );
-				$mail = new Zend_Mail('utf-8');
-				$langNamespace = new Zend_Session_Namespace('Lang');
-				if($langNamespace->lang == 'en' || $langNamespace->lang == 'EN'){
-					$mail->setSubject($emailSubject);
-				}else{
-					$mail->setSubject("=?UTF-8?B?".base64_encode($emailSubject)."?=");					
-				}
-				$mail->setBodyText($emailBody);
-				$mail->setFrom($config->smtp->forgetpassword->mail->username,$this->view->translate('Wildfire'));
+                        Zend_Mail::setDefaultTransport ( $smtpSender );
+                        $mail = new Zend_Mail('utf-8');
+                        $langNamespace = new Zend_Session_Namespace('Lang');
+                        if($langNamespace->lang == 'en' || $langNamespace->lang == 'EN'){
+                                $mail->setSubject($emailSubject);
+                        }else{
+                                $mail->setSubject("=?UTF-8?B?".base64_encode($emailSubject)."?=");
+                        }
+                        $mail->setBodyText($emailBody);
+                        $mail->setFrom($config->smtp->forgetpassword->mail->username,$this->view->translate('Wildfire'));
 //				$mail->setFrom('yun_simon@163.com','yun_simon');
-				$mail->addTo($email);
-				$mail->send();
-                        //Zend_Debug::dump($emailBody);
-				$this->view->message = $this->view->translate('Active_your_email');
+                        $mail->addTo($email);
+                        $mail->send();
+                //Zend_Debug::dump($emailBody);
+                        $this->view->message = $this->view->translate('Active_your_email');
 		}
 
 		
@@ -413,20 +413,20 @@ class RegisterController extends MyController
 		
 		$activeLink = $this->view->home.'/public/register/activate/p/'.$activateCode;
 		$temporaryLink = new TemporaryLink();
-        $temporaryLinkData = $temporaryLink->fetchRow('link like "%'.$activeLink.'%"');
+                $temporaryLinkData = $temporaryLink->fetchRow('link like "%'.$activeLink.'%"');
         
-        $conumserModel = new Consumer();
-        $consumerData  = $conumserModel->fetchRow('email like "%'.$temporaryLinkData->email.'%"');
-        
-        if($consumerData->state == 'ACTIVE'){
-        	$message = $this->view->translate('Has_actived');
-        }elseif($temporaryLinkData->expire_date < date("Y-m-d H:i:s")){
-        	$message = $this->view->translate('OutOfData_register');
-        }else{
-        	$consumerData->state= 'ACTIVE';
-        	$consumerData->save();
-        }
-        $this->view->message = $message;
+                $conumserModel = new Consumer();
+                $consumerData  = $conumserModel->fetchRow('email like "%'.$temporaryLinkData->email.'%"');
+
+                if($consumerData->state == 'ACTIVE'){
+                        $message = $this->view->translate('Has_actived');
+                }elseif($temporaryLinkData->expire_date < date("Y-m-d H:i:s")){
+                        $message = $this->view->translate('OutOfDate_register');
+                }else{
+                        $consumerData->state= 'ACTIVE';
+                        $consumerData->save();
+                }
+                $this->view->message = $message;
 	
 	}
 	

@@ -318,12 +318,12 @@
 			</tuv>
 		</tu>
 
-                <tu tuid='OutOfData_register'>
+                <tu tuid='OutOfDate_register'>
 			<tuv xml:lang="zh">
 				<seg>你的激活已经失效，请联系客服</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Your register code is out of data, please contact the constomer service.</seg>
+				<seg>Your register code is out of date, please contact the constomer service.</seg>
 			</tuv>
 		</tu>
 	</body>
