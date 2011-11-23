@@ -326,6 +326,14 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>Redeem Points</seg>
 			</tuv>
 		</tu>
+                <tu tuid='Check_Points'>
+			<tuv xml:lang="zh">
+				<seg>查看积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Check Points</seg>
+			</tuv>
+		</tu>
 		<tu tuid='You_joined_a_campaign1'>
 			<tuv xml:lang="zh">
 				<seg>恭喜你加入</seg>
