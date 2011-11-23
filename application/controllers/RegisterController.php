@@ -419,7 +419,7 @@ class RegisterController extends MyController
         $consumerData  = $conumserModel->fetchRow('email like "%'.$temporaryLinkData->email.'%"');
         
         if($consumerData->state == 'ACTIVE'){
-        	$message = $this->view->translate('OutOfData_registe');
+        	$message = $this->view->translate('Has_actived');
         }elseif($temporaryLinkData->expire_date < date("Y-m-d H:i:s")){
         	$message = $this->view->translate('OutOfData_register');
         }else{
