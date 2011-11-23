@@ -355,12 +355,12 @@ class RegisterController extends MyController
     			$consumerModel = new Consumer();
     			$consumer = $consumerModel->fetchRow("email ='$email' and state ='ACTIVE'");
 		    	if(count($consumer)){
-    				$this->view->message = "该邮箱已经激活";
+    				$this->view->translate('Active_Email_hint');
     				return;
     			}
     			$enableLink = $temporaryLinkModel->fetchRow(" email like '%$email%' and link like '%activate%'");
     			if(!count($enableLink)){
-    				$this->view->message = "该邮箱没有注册";
+    				$this->view->translate('No_Registered_email');
     				return;
     			}
 
@@ -399,7 +399,7 @@ class RegisterController extends MyController
 				$mail->addTo($email);
 				$mail->send();
                         //Zend_Debug::dump($emailBody);
-				$this->view->message  = "激活邮件已经发送，请及时激活";        
+				$this->view->translate('Active_your_email');
 		}
 
 		

@@ -5,14 +5,43 @@
 		adminlang="en-us" srclang="de-de" o-tmf="abc" creationtool="XYZTool">
 	</header>
 	<body>
-		<tu tuid='Invitation_Email_subject'>
+
+            <tu tuid='Invitation_Email_subject'>
+		<tuv xml:lang="zh">
+                    <seg><![CDATA[你的朋友 ?EMAIL?，邀请你加入星星火社区]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+                    <seg><![CDATA[Invitation to Wildfire from ?EMAIL?]]></seg>
+		</tuv>
+            </tu>
+
+		<tu tuid='Active_Email_hint'>
 			<tuv xml:lang="zh">
-				<seg><![CDATA[你的朋友 ?EMAIL?，邀请你加入星星火社区]]></seg>
+				<seg>该邮箱已经激活</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg><![CDATA[Invitation to Wildfire from ?EMAIL?]]></seg>
+				<seg>This email has been actived</seg>
 			</tuv>
 		</tu>
+                
+                <tu tuid='No_Registered_email'>
+			<tuv xml:lang="zh">
+				<seg>该邮箱没有注册</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>This email address has not registered</seg>
+			</tuv>
+		</tu>
+
+                <tu tuid='Active_your_email'>
+			<tuv xml:lang="zh">
+				<seg>激活邮件已经发送，请及时激活</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>The activition email has been sent, please active your account ASAP.</seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='Invitation_Email_body'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[你的朋友 ?USERNAME?，邀请你加入星星火社区！
