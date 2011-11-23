@@ -36,7 +36,7 @@ class ConsumerForm extends Zend_Form
 								array('Label')
 								));
 								
-	    $login_phone = new Zend_Form_Element_Text('login_phone');
+	        $login_phone = new Zend_Form_Element_Text('login_phone');
 		$login_phone->setLabel($this->getView()->translate('CONTACT INFORMATION_PHONE'))
 		->addFilter('StripTags')
 		->addFilter('StringTrim')

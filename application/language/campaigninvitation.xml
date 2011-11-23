@@ -240,7 +240,7 @@
 				<seg>Invite:</seg>
 			</tuv>
 		</tu>
-                <tu tuid='INVITATION_FRIEND'>
+                <tu tuid='INVITATED_FRIEND'>
 			<tuv xml:lang="zh">
 				<seg>邀请的朋友：</seg>
 			</tuv>
