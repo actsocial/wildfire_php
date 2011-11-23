@@ -42,35 +42,7 @@ http://home.xingxinghuo.cn/public/register/register/a/?AUTHCODE?
 如果有任何问题请联系我们：
 400-600-8707
 yangyang@wildfire.asia
-
-
-
-?USERNAME? has invited you to join the Wildfire word-of-mouth community. 
-
-?USERNAME? has the following message for you:
-
-"?MESSAGE?"
-
-As a Wildfire Member, you'll also be invited to other natural word-of-mouth campaigns where you can:
-
-  - Receive free products and services, selected for your interests
-  - Use them as you normally would
-  - Talk about them as you normally would
-  - Let us know what your friends have to say
-
-Wildfire is all about natural, authentic word-of-mouth - no pyramid schemes or spamming. And don't worry, we respect you privacy and won't share your personal information or spam you.
-
-Just click the following link to join: 
-http://home.xingxinghuo.cn/public/register/register/a/?AUTHCODE?
-
-We hope to see you soon!
-
-- Your friends at Wildfire.
-
-----------------------------------------------
-Contact us if you have any questions:
-400-600-8707
-yangyang@wildfire.asia]]></seg>
+]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg><![CDATA[?USERNAME? has invited you to join the Wildfire word-of-mouth community. 
@@ -100,37 +72,8 @@ Contact us if you have any questions:
 400-600-8707
 yangyang@wildfire.asia
 
-
-
-
-你的朋友 ?USERNAME?，邀请你加入星星火社区！
-
-你的朋友 ?USERNAME? 给你留言:
-
-"?MESSAGE?"
-
-成为星星火社区的一员，你将会被邀请参加其他各种非常棒的口碑活动。在这些活动中你可以：
-
-  - 根据你的兴趣可以得到最新的产品和服务 
-  - 你可以任意的使用我们提供的产品
-  - 与朋友谈论你的体验
-  - 让我们了解你们的需要
-
-星星火为你提供最自然的、真实的口碑！同时我们将保护你的个人隐私，不会公开你的个人信息。
-
-请打开如下地址进行注册：
-http://home.xingxinghuo.cn/public/register/register/a/?AUTHCODE?
-
-期待你加入我们！
-
-星星火——中国口碑社区
-
-----------------------------------------------
-
-如果有任何问题请联系我们：
-400-600-8707
-yangyang@wildfire.asia]]></seg>
-			</tuv>
+]]></seg>
+		</tuv>
 		</tu>
 		
 		
@@ -183,7 +126,7 @@ yangyang@wildfire.asia]]></seg>
 				<seg><![CDATA[激活你的星星火账户]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg><![CDATA[]]></seg>
+				<seg><![CDATA[Active your wildfire accounts]]></seg>
 			</tuv>
 		</tu>
 		<tu tuid='ENABLE_ACCOUNT_body'>
@@ -203,8 +146,11 @@ yangyang@wildfire.asia]]></seg>
 QQ：852666147]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg><![CDATA[
+				<seg><![CDATA[Please click the link shows below to active your account:
+?ENABLEACCOUNTLINK?
+If this is a wrong email, please ignore it or contact with us.
 
+Thank you!
 
 星星火 Wildfire
 www.xingxinghuo.cn
@@ -254,31 +200,31 @@ http://www.xingxinghuo.cn
 yangyang@wildfire.asia]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg><![CDATA[亲爱的?USERNAME?，
+				<seg><![CDATA[Dear ?USERNAME?，
 
-你的交谈内容：
+Your conservation content：
 
 ?YOURSTORY?
 
-我们给你的回复：
+Our response：
 
 ?MYRESPONSE?
 
 
 
-你的朋友 Alice
-星星火
+Your friend Alice
+Wildfire
 
 
 ----------------------------------------------------------------------------------
-有新的口碑报告要提交了吗？快来这里提交赢取更多积分吧！
+Do you have new WOM report? Upload it to win more points!
 http://home.xingxinghuo.cn/public/home
 
-参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
-Wildfire 星星火社区 
+Take part in more activties to win more gift. Our community:
+Wildfire Community
 http://www.xingxinghuo.cn
 
-如果有任何问题，欢迎随时联系我们！
+Please do not heritate to contact us if you have any questions!
 400-600-8707
 yangyang@wildfire.asia]]></seg>
 			</tuv>

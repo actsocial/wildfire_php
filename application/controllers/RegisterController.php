@@ -397,7 +397,8 @@ class RegisterController extends MyController
 				$mail->setFrom($config->smtp->forgetpassword->mail->username,$this->view->translate('Wildfire'));
 //				$mail->setFrom('yun_simon@163.com','yun_simon');
 				$mail->addTo($email);
-				$mail->send();	
+				$mail->send();
+                        //Zend_Debug::dump($emailBody);
 				$this->view->message  = "激活邮件已经发送，请及时激活";        
 		}
 
