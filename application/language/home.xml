@@ -17,10 +17,34 @@
 		</tu>
 		<tu tuid='Home_Your_Info_Completeness'>
 			<tuv xml:lang="zh">
-				<seg>你的资料完整度：</seg>
+				<seg>你的资料完整度： </seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Your info completeness:</seg>
+				<seg>Your info completeness: </seg>
+			</tuv>
+		</tu>
+                <tu tuid='Account_Info_Pic'>
+			<tuv xml:lang="zh">
+				<seg>/images/lb_ac_inf.gif</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>/images/lb_ac_inf_en.gif</seg>
+			</tuv>
+		</tu>
+                <tu tuid='Post_Address_Pic'>
+			<tuv xml:lang="zh">
+				<seg>/images/lb_post_inf.gif</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>/images/lb_post_inf_en.gif</seg>
+			</tuv>
+		</tu>
+                <tu tuid='Personal_Info_Pic'>
+			<tuv xml:lang="zh">
+				<seg>/images/lb_per_inf.gif</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>/images/lb_per_inf_en.gif</seg>
 			</tuv>
 		</tu>
 		<tu tuid='how_does_it_work'>
@@ -29,6 +53,14 @@
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>how does it work ?</seg>
+			</tuv>
+		</tu>
+                <tu tuid='Your_badge'>
+			<tuv xml:lang="zh">
+				<seg>您获得的徽章:</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your badges:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Home_head_content_1'>

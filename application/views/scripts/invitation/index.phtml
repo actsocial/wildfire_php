@@ -29,7 +29,7 @@
                         method="post">
                             <table>
                                 <tr>
-                                    <td>
+                                    <td valign="top">
                                         <div align="left">
                                             <?php echo $this->translate("INVITATION_FRIEND"); ?>
                                         </div>
@@ -100,12 +100,10 @@
                                     <p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_6'); ?></p>
                                     <p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_7'); ?></p>
                                     -->
-                                    <img alt="" src="../public/image/demo.png">
+                                    <img alt="" src="../public/image/demo.png" width="30%">
                                 </div>
                             </dl>
                         </form>
-                    </td>
-                    <td>
                     </td>
                 </tr>
             </table>
@@ -129,11 +127,11 @@
         if (previe_text.style.display == "none") {
             previe_text.style.display = "";
             //img_show.src="../public/image/opened.png";
-            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/opened.png">' + '<?php echo $this->translate("MAIL_PREVIEW")?>';
+            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/opened.png">' + '<?php echo $this->translate("FOLD_MAIL")?>';
         } else if (previe_text.style.display == "") {
             previe_text.style.display = "none";
             //img_show.src="../public/image/colsed.png";
-            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/colsed.png">' + '<?php echo $this->translate("FOLD_MAIL")?>';
+            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/colsed.png">' + '<?php echo $this->translate("MAIL_PREVIEW")?>';
         }
     }
     var form = document.getElementById('f');

@@ -1,67 +1,71 @@
 <div id="fillout-dialog">
-<div class="content"></div>
+    <div class="content"></div>
 </div>
-<div id="check-alert-dialog"><p class="content"></p></div>
+<div id="check-alert-dialog">
+    <p class="content"></p>
+</div>
 <?php if (isset($this->recentInvitation)&&$this->recentInvitation):?>
 <?php if($this->recentInvitation['type'] == 'mission'){?>
 <div id="web-dialog" class="web-dialog" style="display:none;">
-	<div class="content-2column">
-		<div class="images-column"><img
-			src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" /> <img
-			src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
-		</div>
-		<div class="main-column">
-			<h2><?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->recentInvitation['name'];?><?php echo $this->translate('You_Are_Invited_2')?></h2>
-			<a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
-			<p><?php echo $this->recentInvitation['invitation_description']?></p>
-			<p><?php echo $this->recentInvitation['invitation_description2']?></p>
-		</div>
-		<div class="buttons-bar">
-			<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Accept');?></a>
-			
-		</div>
-	</div>
+    <div class="content-2column">
+	<div class="images-column">
+            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
+            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
+        </div>
+        <div class="main-column">
+            <h2><?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->recentInvitation['name'];?><?php echo $this->translate('You_Are_Invited_2')?></h2>
+            <a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
+            <p><?php echo $this->recentInvitation['invitation_description']?></p>
+            <p><?php echo $this->recentInvitation['invitation_description2']?></p>
+        </div>
+        <div class="buttons-bar">
+            <a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Accept');?></a>
+        </div>
+    </div>
 </div>
 
 <?php }else{?>
 <div id="web-dialog" class="web-dialog" style="display:none;">
-	<div class="content-2column">
-		<div class="images-column"><img
-			src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" /> <img
-			src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
-		</div>
-		<div class="main-column">
-			<h2><?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->translate('Campaign_name_'.$this->recentInvitation['campaign_id']);?><?php echo $this->translate('You_Are_Invited_2')?></h2>
-			<a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
-			<p><?php echo $this->translate("Campaign_invitation_description_".$this->recentInvitation['campaign_id'])?></p>
-			<?php echo $this->translate("Campaign_invitation_description2_".$this->recentInvitation['campaign_id'])?>
-		</div>
-		<div class="buttons-bar">
-			<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'precampaign', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Accept');?></a>
-			<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'prereject', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Reject');?></a>
-		</div>
+    <div class="content-2column">
+	<div class="images-column">
+            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
+            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
 	</div>
+        <div class="main-column">
+            <h2>
+                <?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->translate('Campaign_name_'.$this->recentInvitation['campaign_id']);?><?php echo $this->translate('You_Are_Invited_2')?>
+            </h2>
+            <a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
+            <p><?php echo $this->translate("Campaign_invitation_description_".$this->recentInvitation['campaign_id'])?></p>
+            <?php echo $this->translate("Campaign_invitation_description2_".$this->recentInvitation['campaign_id'])?>
+	</div>
+	<div class="buttons-bar">
+            <a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'precampaign', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Accept');?></a>
+            <a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'prereject', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Reject');?></a>
+	</div>
+    </div>
 </div>
+
 <?php }?>
 <?php endif?>
 
 <?php if(isset($this->postCampaignNotification)&&$this->postCampaignNotification):?>
 <div id="web-dialog2" class="post-campaign-dialog" style="display: none;">
-	<div class="content-2column">
-		<div class="images-column">
-		<img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->postCampaignNotification['campaign_id']);?>_01.jpg" /> 
-		</div>
-		<div class="main-column">
-			<h2><?php echo $this->postCampaignNotification['name']?> <?php echo $this->translate('Home_Post_Campaign_Survey_end')?></h2>
-			<a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
-			<!--<?php echo $this->translate('Campaign_post_survey_notice_'.$this->postCampaignNotification['campaign_id'])?>-->
-			</br>
-			<?php echo$this->postCampaignNotification['post_survey_notice']?>
-		</div>
-		<div class="buttons-bar">
-			<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'postcampaign', 'id'=>$this->postCampaignNotification['campaign_id']));?>" class="button"><?php echo $this->translate('Home_Finish_Survey')?></a>
-		</div>
+    <div class="content-2column">
+	<div class="images-column">
+            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->postCampaignNotification['campaign_id']);?>_01.jpg" />
 	</div>
+	<div class="main-column">
+            <h2><?php echo $this->postCampaignNotification['name']?> <?php echo $this->translate('Home_Post_Campaign_Survey_end')?></h2>
+            <a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
+            <!--<?php echo $this->translate('Campaign_post_survey_notice_'.$this->postCampaignNotification['campaign_id'])?>-->
+            <br />
+            <?php echo$this->postCampaignNotification['post_survey_notice']?>
+	</div>
+	<div class="buttons-bar">
+            <a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'postcampaign', 'id'=>$this->postCampaignNotification['campaign_id']));?>" class="button"><?php echo $this->translate('Home_Finish_Survey')?></a>
+	</div>
+    </div>
 </div>
 <?php endif?>
 
@@ -83,7 +87,8 @@
 
 <div class="mask" id="mask" style="display:none;"></div>
 
-<div class="article-box" style="margin-bottom: 15px;"><div class="article-box-inner">
+<div class="article-box" style="margin-bottom: 15px;">
+    <div class="article-box-inner">
 	<h1 style="float:left;"><?php echo $this->translate("Welcome")?>, <?php echo $this->currentUser['name']?>!</h1>
 	
 	<div class="yourinfo">
@@ -112,8 +117,8 @@
 	<a href="<?php echo $this->url(array('controller'=>'training',	'action'=>'howitworks','id'=>'0'));?>"><?php echo $this->translate("Home_head_content_2_2")?></a>
 	</p>
 	<?php if(count($this->badges)){?>	     
-	<p> <h2>你获得的徽章：</h2>
-   <?php
+	<p> <h2><?php echo $this->translate("Your_badge")?></h2>
+        <?php
 	foreach($this->badges as $badge){
 	
 	echo "<a class='thickbox' style='margin-right:5px' href='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg'><img src='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg' width=30 height = 30 style='border:1px solid #ccc'></a>";
