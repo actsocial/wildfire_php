@@ -821,14 +821,14 @@ class ReportController extends MyController
 			$type = $imgfile['type'];
 			$size = $imgfile['size'];
 			if(!preg_match('/^image\//i', $type)?true:false) {
-				$this->view->error = "请上传正确的图片";
+				$this->view->error = "璇蜂笂浼犳纭殑鍥剧墖";
 			} else if($size > 2000000) {
-				$this->view->error = "图片不得超过2M";
+				$this->view->error = "鍥剧墖涓嶅緱瓒呰繃2M";
 			} else {
 				$tmpfile = $imgfile['tmp_name'];
 							  if ($tmpfile && is_uploaded_file($tmpfile)) {
 				$file = fopen($tmpfile, "rb");
-				//$imgdata = bin2hex(fread($file,$size)); //bin2hex()将二进制数据转换成十六进制表示
+				//$imgdata = bin2hex(fread($file,$size)); //bin2hex()灏嗕簩杩涘埗鏁版嵁杞崲鎴愬崄鍏繘鍒惰〃绀�
 				$imgdata = fread($file,$size);
 				fclose($file);
 				// save to db
@@ -1800,7 +1800,7 @@ function adminreportbatchreplyAction(){
 				$selectAccessCode = $db->select();
 				$selectAccessCode->from('report', array('consumer_id','accesscode', 'create_date', 'source'))
 				->joinLeft('reward_point_transaction_record', 'report.reward_point_transaction_record_id = reward_point_transaction_record.id', 'point_amount')
-				->join('consumer', 'consumer.id = report.consumer_id', array('email'))
+				->join('consumer', 'consumer.id = report.consumer_id', array('email,login_phone,recipients_name'))
 				->where('report.accesscode in ('.substr($accessCodeString,0,strlen($accessCodeString)-1).")")
 				->where("report.state = 'APPROVED'")
 				->limit(0);
@@ -2492,7 +2492,7 @@ function adminreportbatchreplyAction(){
    	    $row->state = 'COMPLETED';
    	    $row->save();
    	    $this->_helper->layout->disableLayout();
-   	    die('成功设置');
+   	    die('鎴愬姛璁剧疆');
    	    
    	    
    }
