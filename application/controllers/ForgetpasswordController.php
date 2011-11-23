@@ -143,6 +143,8 @@ class ForgetpasswordController extends MyController
 	
 	
 	function resetAction(){
+                $p = $this->_request->getParam("p");
+                $this->view->p = $p;
 		$this->_helper->layout->disableLayout();
 		
 	}
