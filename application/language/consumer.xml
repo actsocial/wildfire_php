@@ -315,7 +315,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>Change Password</seg>
 			</tuv>
 		</tu>
-		
+
 		<tu tuid='Please_enter_your_name'>
 			<tuv xml:lang="zh">
 				<seg>不能为空，且不能超过50字符!</seg>
