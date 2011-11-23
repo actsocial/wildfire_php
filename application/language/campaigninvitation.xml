@@ -240,6 +240,22 @@
 				<seg>Invite:</seg>
 			</tuv>
 		</tu>
+                <tu tuid='INVITATION_FRIEND'>
+			<tuv xml:lang="zh">
+				<seg>邀请的朋友：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invited Friends:</seg>
+			</tuv>
+		</tu>
+                <tu tuid='MAIL_PREVIEW'>
+			<tuv xml:lang="zh">
+				<seg>邮件预览</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email Preview</seg>
+			</tuv>
+		</tu>
 		<tu tuid='INVITATION_MAIL_LIST_PART1_Fail'>
 			<tuv xml:lang="zh">
 				<seg>发送邮件失败！请确认你是否输入正确的Email地址或是该用户已被邀请。</seg>

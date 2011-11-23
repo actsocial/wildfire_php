@@ -34,63 +34,53 @@
                                             <?php echo $this->translate("INVITATION_FRIEND"); ?>
                                         </div>
                                         <div>
-                                            <?php $temp1="email" . $this->
-                                                justone ?>
-                                                <?php echo $this->
-                                                    sendMailForm->$temp1; ?>
+                                            <?php $temp1="email" . $this->justone ?>
+                                            <?php echo $this->sendMailForm->$temp1; ?>
                                         </div>
                                         <div style="clear:both; ">
                                         </div>
                                         <div>
                                             <p style="margin-top:0px; margin-bottom:0px; padding-top:5px; padding-bottom:0px;">
-                                                <?php echo $this->
-                                                    translate("INVITATION_MAIL_SUBJECT"); ?>
+                                                <?php echo $this->translate("INVITATION_MAIL_SUBJECT"); ?>
                                             </p>
                                         </div>
                                         <div class="">
-                                            <?php echo $this->
-                                                sendMailForm->subject; ?>
+                                            <?php echo $this->sendMailForm->subject; ?>
                                         </div>
                                         <div>
                                             <p style="margin-top:0px; margin-bottom:0px; padding-top:5px; padding-bottom:0px;">
-                                                <?php echo $this->
-                                                    translate("INVITATION_MAIL_CONTENT"); ?>
+                                                <?php echo $this->translate("INVITATION_MAIL_CONTENT"); ?>
                                             </p>
                                         </div>
                                         <div class="">
-                                            <?php echo $this->
-                                                sendMailForm->message; ?>
+                                            <?php echo $this->sendMailForm->message; ?>
                                                 <!--<textarea rows="5" cols="100"> Hello. I'm a member of Wildfire, the Chinese word-of-mouth consumer community.Wildfire helps its members spread word of mouth about products and services naturally and honestly through free products, coupons and more. Joining is totally free and there is no obligation involved. Interested in learning more and signing up?
                                                 </textarea>-->
                                         </div>
-                                        </dl>
                                         <div id="notice" style="padding-bottom: 10px; display: none; font-size: 14px; color: #f00; font-weight: bold;">
-                                            <?php echo $this->
-                                                translate('INVITATION_MAIL_SEND_NOTICE') ?>
+                                            <?php echo $this->translate('INVITATION_MAIL_SEND_NOTICE') ?>
                                         </div>
                                         <div class="send-invitation">
                                             <input id="submit" type="submit" value="<?php echo $this->translate('INVITATION_MAIL_SEND') ?>"
                                             onclick="onSend();return true;">
                                         </div>
-                                        <?php echo $this->
-                                            sendMailForm->sentMailAmount; ?>
+                                        <?php echo $this->sendMailForm->sentMailAmount; ?>
                                             <a tyle='cursor:hand;' id="preview_hide" onclick="show_info()">
                                                 <div id="changeable_text" style="width:500px;">
                                                     <img id="img_change" alt="" src="../public/image/colsed.png">
-                                                    邮件预览
+                                                    <?php echo $this->translate('MAIL_PREVIEW') ?>
                                                 </div>
                                             </a>
                                     </td>
-                                    <td rowspan="2">
-                                        邀请的朋友:
+                                    <td valign="top" width="30%">
+                                        <?php echo $this->translate("INVITATION_MAIL_SUBJECT"); ?>
                                         <ul>
                                             <?php for ($i=1 ; $i < $this->
                                                 justone - 1; $i++): ?>
                                                 <?php $temp="email" . $i ?>
                                                     <li>
                                                         <!--<?php echo $this->to_str ?>-->
-                                                        <?php echo $this->
-                                                            receivers[$i]['to']; ?>
+                                                        <?php echo $this->receivers[$i]['to']; ?>
                                                     </li>
                                                     <?php endfor; ?>
                                         </ul>
@@ -112,6 +102,7 @@
                                     -->
                                     <img alt="" src="../public/image/demo.png">
                                 </div>
+                            </dl>
                         </form>
                     </td>
                     <td>
