@@ -355,12 +355,12 @@ class RegisterController extends MyController
     			$consumerModel = new Consumer();
     			$consumer = $consumerModel->fetchRow("email ='$email' and state ='ACTIVE'");
 		    	if(count($consumer)){
-    				$this->view->translate('Active_Email_hint');
+    				$this->view->message = $this->view->translate('Active_Email_hint');
     				return;
     			}
     			$enableLink = $temporaryLinkModel->fetchRow(" email like '%$email%' and link like '%activate%'");
     			if(!count($enableLink)){
-    				$this->view->translate('No_Registered_email');
+    				$this->view->message = $this->view->translate('No_Registered_email');
     				return;
     			}
 
@@ -399,7 +399,7 @@ class RegisterController extends MyController
 				$mail->addTo($email);
 				$mail->send();
                         //Zend_Debug::dump($emailBody);
-				$this->view->translate('Active_your_email');
+				$this->view->message = $this->view->translate('Active_your_email');
 		}
 
 		
@@ -419,9 +419,9 @@ class RegisterController extends MyController
         $consumerData  = $conumserModel->fetchRow('email like "%'.$temporaryLinkData->email.'%"');
         
         if($consumerData->state == 'ACTIVE'){
-        	$message = '你已经激活账户';
+        	$message = $this->view->translate('OutOfData_registe');
         }elseif($temporaryLinkData->expire_date < date("Y-m-d H:i:s")){
-        	$message = '你的激活已经失效，请联系客服';
+        	$message = $this->view->translate('OutOfData_register');
         }else{
         	$consumerData->state= 'ACTIVE';
         	$consumerData->save();
