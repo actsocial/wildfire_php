@@ -317,7 +317,7 @@ class RegisterController extends MyController
 		    		}		    			
 		    	  }
 				} else {
-					$this->view->errMessage = $this->view->translate('Register_err') . $this->view->translate('Register_password_is_invalid');
+					$this->view->errMessage = $this->view->translate('Register_err') . $this->view->translate('Register_repeat_password_is_error');
 				}
 			} else {
 				$form->populate($formData);

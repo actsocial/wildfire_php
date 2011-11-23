@@ -282,6 +282,15 @@
 			</tuv>
 		</tu>
 
+		<tu tuid='Register_repeat_password_is_error'>
+			<tuv xml:lang="zh">
+				<seg>确认密码与密码不一致</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Your confirm password is not equal to you password.</seg>
+			</tuv>
+		</tu>
+
                 <tu tuid='Active_Email_hint'>
 			<tuv xml:lang="zh">
 				<seg>该邮箱已经激活</seg>
