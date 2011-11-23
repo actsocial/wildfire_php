@@ -129,11 +129,11 @@
         if (previe_text.style.display == "none") {
             previe_text.style.display = "";
             //img_show.src="../public/image/opened.png";
-            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/opened.png">' + '<?php $this.translate("MAIL_PREVIEW")?>';
+            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/opened.png">' + '<?php echo $this->translate("MAIL_PREVIEW")?>';
         } else if (previe_text.style.display == "") {
             previe_text.style.display = "none";
             //img_show.src="../public/image/colsed.png";
-            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/colsed.png">' + '<?php $this.translate("FOLD_MAIL")?>';
+            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/colsed.png">' + '<?php echo $this->translate("FOLD_MAIL")?>';
         }
     }
     var form = document.getElementById('f');
