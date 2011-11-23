@@ -240,7 +240,7 @@
 				<seg>Invite:</seg>
 			</tuv>
 		</tu>
-                <tu tuid='INVITATED_FRIEND'>
+                <tu tuid='INVITED_FRIENDS'>
 			<tuv xml:lang="zh">
 				<seg>邀请的朋友：</seg>
 			</tuv>
@@ -254,6 +254,14 @@
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Email Preview</seg>
+			</tuv>
+		</tu>
+                <tu tuid='FOLD_MAIL'>
+			<tuv xml:lang="zh">
+				<seg>收起</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Fold</seg>
 			</tuv>
 		</tu>
 		<tu tuid='INVITATION_MAIL_LIST_PART1_Fail'>

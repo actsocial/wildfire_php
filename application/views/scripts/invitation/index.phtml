@@ -73,7 +73,7 @@
                                             </a>
                                     </td>
                                     <td valign="top" width="30%">
-                                        <?php echo $this->translate("INVITATED_FRIENDS"); ?>
+                                        <?php echo $this->translate("INVITED_FRIENDS"); ?>
                                         <ul>
                                             <?php for ($i=1 ; $i < $this->
                                                 justone - 1; $i++): ?>
@@ -129,11 +129,11 @@
         if (previe_text.style.display == "none") {
             previe_text.style.display = "";
             //img_show.src="../public/image/opened.png";
-            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/opened.png">' + "收起";
+            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/opened.png">' + '<?php $this.translate("MAIL_PREVIEW")?>';
         } else if (previe_text.style.display == "") {
             previe_text.style.display = "none";
             //img_show.src="../public/image/colsed.png";
-            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/colsed.png">' + "邮件预览";
+            previe_hand.innerHTML = '<img id="img_change" alt="" src="../public/image/colsed.png">' + '<?php $this.translate("FOLD_MAIL")?>';
         }
     }
     var form = document.getElementById('f');
