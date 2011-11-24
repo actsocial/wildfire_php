@@ -103,10 +103,10 @@
 
                 <tu tuid='Submit_button'>
 			<tuv xml:lang="zh">
-				<seg>提交</seg>
+				<seg>"提交"</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Submit</seg>
+				<seg>"Submit"</seg>
 			</tuv>
 		</tu>
 		
