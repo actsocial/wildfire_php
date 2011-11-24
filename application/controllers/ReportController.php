@@ -1810,6 +1810,8 @@ function adminreportbatchreplyAction(){
 					array_push($accessCodeList,$accessCode['accesscode']);
 					$reportInforArray[$accessCode['accesscode']]['consumer_id'] = $accessCode['consumer_id'];
 					$reportInforArray[$accessCode['accesscode']]['email'] = $accessCode['email'];
+					$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
+					$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
 					$reportInforArray[$accessCode['accesscode']]['createdate'] = $accessCode['create_date'];
 					$reportInforArray[$accessCode['accesscode']]['source'] = $accessCode['source'];
 					$reportInforArray[$accessCode['accesscode']]['point'] = $accessCode['point_amount'];
@@ -1875,7 +1877,7 @@ function adminreportbatchreplyAction(){
 						$selectAccessCode = $db->select();
 						$selectAccessCode->from('report', array('consumer_id','accesscode', 'create_date', 'source'))
 						->joinLeft('reward_point_transaction_record', 'report.reward_point_transaction_record_id = reward_point_transaction_record.id', 'point_amount')
-						->join('consumer', 'consumer.id = report.consumer_id', array('email'))
+						->join('consumer', 'consumer.id = report.consumer_id', array('email,login_phone,recipients_name'))
 						->where('report.campaign_id = ?',$formData['campaign_id'])
 						->where("report.state = 'APPROVED'")
 						->limit(0);
@@ -1885,6 +1887,8 @@ function adminreportbatchreplyAction(){
 							array_push($accessCodeList,$accessCode['accesscode']);
 							$reportInforArray[$accessCode['accesscode']]['consumer_id'] = $accessCode['consumer_id'];
 							$reportInforArray[$accessCode['accesscode']]['email'] = $accessCode['email'];
+							$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
+							$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
 							$reportInforArray[$accessCode['accesscode']]['createdate'] = $accessCode['create_date'];
 							$reportInforArray[$accessCode['accesscode']]['source'] = $accessCode['source'];
 							$reportInforArray[$accessCode['accesscode']]['point'] = $accessCode['point_amount'];
