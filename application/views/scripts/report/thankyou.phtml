@@ -38,9 +38,11 @@ jQuery(document).ready(function() {
                     <table>
                         <tr>
                             <td><?php echo $this->form->image;?></td>
-                            <td><?php echo $this->form->submit;?></td>
                             <td><?php echo $this->translate('Upload_hint');?></td>
                         </tr>
+                        <tr>
+                            <td><?php echo $this->form->submit;?></td>
+                        <tr>
                     </table>
                 </form>
                 <?php if($this->saved == 1){?>
