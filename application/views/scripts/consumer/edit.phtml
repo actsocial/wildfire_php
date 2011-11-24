@@ -27,14 +27,14 @@
 	action="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>"
 	method="post">
 <fieldset>
-  <legend><img src="<?php echo $this->baseUrl();?>/images/lb_ac_inf.gif" /></legend>
+  <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Account_Info_Pic');?>" /></legend>
   <div class="form-line"><?php echo $this->form->email ;?></div>
   <div class="form-line"><?php echo $this->form->login_phone ;?></div>
   <div class="form-line"><?php echo $this->form->name ;?></div>
 </fieldset>
 
 <fieldset>
-  <legend><img src="<?php echo $this->baseUrl();?>/images/lb_post_inf.gif" /></legend>
+  <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Post_Address_Pic');?>" /></legend>
 	<div class="form-line"><?php echo $this->form->recipients_name ;?></div>
 	<div class="form-line"><?php echo $this->form->phone ;?></div>
 	<div class="form-line">
@@ -90,7 +90,7 @@
 </fieldset>
 
 <fieldset>
-	<legend><img src="<?php echo $this->baseUrl();?>/images/lb_per_inf.gif" /></legend>
+	<legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Personal_Info_Pic');?>"/></legend>
 	<div class="form-line"><?php echo $this->form->birthdate ;?></div>
 
 	<div class="form-line not-text"><?php echo $this->form->gender ;?></div>

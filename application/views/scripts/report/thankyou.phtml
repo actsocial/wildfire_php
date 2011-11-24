@@ -16,6 +16,8 @@ jQuery(document).ready(function() {
     'queueSizeLimit' : 3,
     'simUploadLimit' : 3,
     'removeCompleted': false,
+    'multi'          : true,
+    'sizeLimit'      : 10240000,  //10MB
     'onAllComplete'  : function(event,data) {
 	    //jQuery('#status-message').text(data.filesUploaded + ' 文件上传成功, ' + data.errors + ' 错误.');
       }
@@ -31,21 +33,29 @@ jQuery(document).ready(function() {
 		<p style="padding-top: 10px;"><?php echo $this->translate('Thanks_For_Report_Content1')?>
 		<br/>
 		</p>
-		<p>如果你需要提交照片，请选择文件提交</p>
-<form  id="uploadImage" action="" method="post" enctype="multipart/form-data">
-<?php echo $this->form->image;?>
-<?php echo $this->form->submit;?>
-</form>
-<?php if($this->saved == 1){?>
-<h3>你已经成功提交图片!</h3>
-<?php }?>
-
-<?php if($this->saved == -1){?>
-<h3>你没有成功提交图片!</h3>
-<?php }?>
-<br/>
-		<div class="buttons-bar" style="padding-top: 10px;">
-			<a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"><?php echo $this->translate('Take_Me_Home')?></a>
+		<p><?php echo $this->translate('Choose_file')?></p>
+                <form  id="uploadImage" action="" method="post" enctype="multipart/form-data">
+                    <table>
+                        <tr>
+                            <td><?php echo $this->form->image;?></td>
+                            <td><?php echo $this->translate('Upload_hint');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $this->form->submit;?></td>
+                        <tr>
+                    </table>
+                </form>
+                <?php if($this->saved == 1){?>
+                <h3><?php echo $this->translate('Successful_upload')?></h3>
+                <?php }?>
+                <?php if($this->saved == -1){?>
+                <h3><?php echo $this->translate('Unsuccessful_upload');?></h3>
+                <?php }?>
+                <br/>
+                <div class="buttons-bar" style="padding-top: 10px;">
+			<a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>">
+                            <?php echo $this->translate('Take_Me_Home')?>
+                        </a>
 		</div>
 	</div>
 </div>
