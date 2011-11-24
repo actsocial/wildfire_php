@@ -92,12 +92,21 @@
 			</tuv>
 		</tu>
 
-                 <tu tuid='Upload_hint'>
+                <tu tuid='Upload_hint'>
 			<tuv xml:lang="zh">
 				<seg>支持格式：jpg，gif，png，最大数量：3张，每张大小限制：10MB</seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Support format: jpg,gif,png, Quantity limit: 3, Size limit: 10MB</seg>
+			</tuv>
+		</tu>
+
+                <tu tuid='Submit_button'>
+			<tuv xml:lang="zh">
+				<seg>提交</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit</seg>
 			</tuv>
 		</tu>
 		
