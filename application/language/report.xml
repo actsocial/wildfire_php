@@ -64,6 +64,42 @@
 				<seg>We loving hearing what your friends had to say, and we'll get back to you with our thoughts very soon.</seg>
 			</tuv>
 		</tu>
+
+                <tu tuid='Choose_file'>
+			<tuv xml:lang="zh">
+				<seg>如果你需要提交照片，请选择文件提交</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>If you need to upload pictures, please choose the files</seg>
+			</tuv>
+		</tu>
+
+                <tu tuid='Successful_upload'>
+			<tuv xml:lang="zh">
+				<seg>你已经成功提交图片!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have uploaded the picture successfully!</seg>
+			</tuv>
+		</tu>
+
+                <tu tuid='Unsuccessful_upload'>
+			<tuv xml:lang="zh">
+				<seg>你没有成功提交图片!</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have not successfully uploaded the picture!</seg>
+			</tuv>
+		</tu>
+
+                 <tu tuid='Upload_hint'>
+			<tuv xml:lang="zh">
+				<seg>最大数量：3张，每张大小限制：10MB</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>quantity limit: 3, size limit: 10MB</seg>
+			</tuv>
+		</tu>
 		
 		<tu tuid='Admin_Grade'>
 			<tuv xml:lang="zh">
