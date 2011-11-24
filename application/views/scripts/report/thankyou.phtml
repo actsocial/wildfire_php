@@ -35,10 +35,14 @@ jQuery(document).ready(function() {
 		</p>
 		<p><?php echo $this->translate('Choose_file')?></p>
                 <form  id="uploadImage" action="" method="post" enctype="multipart/form-data">
-                    <?php echo $this->form->image;?>
-                    <?php echo $this->form->submit;?>
+                    <table>
+                        <tr>
+                            <td><?php echo $this->form->image;?></td>
+                            <td><?php echo $this->form->submit;?></td>
+                            <td><?php echo $this->translate('Upload_hint');?></td>
+                        </tr>
+                    </table>
                 </form>
-                <p><?php echo $this->translate('Upload_hint');?></p>
                 <?php if($this->saved == 1){?>
                 <h3><?php echo $this->translate('Successful_upload')?></h3>
                 <?php }?>
