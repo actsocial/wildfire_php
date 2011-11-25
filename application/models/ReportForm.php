@@ -13,7 +13,7 @@ class ReportForm extends Zend_Form{
 				//'target' => PUBLIC_PATH. DIRECTORY_SEPARATOR . 'image/qq' . DIRECTORY_SEPARATOR . $fileName,
                 'overwrite' => true));
 		$submit = new Zend_Form_Element_Submit ( 'submit' );
-		$submit->setLabel("提交");
+		$submit->setLabel($this->getView()->translate("Submit_button"));
 		
 		$this->addElements( array( $image , $submit ) );
 	}
