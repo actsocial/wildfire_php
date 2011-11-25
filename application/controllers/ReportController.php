@@ -2496,7 +2496,7 @@ function adminreportbatchreplyAction(){
    	    $row->state = 'COMPLETED';
    	    $row->save();
    	    $this->_helper->layout->disableLayout();
-   	    die('鎴愬姛璁剧疆');
+   	    die('结束');
    	    
    	    
    }
