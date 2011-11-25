@@ -50,7 +50,9 @@ class ForgetpasswordController extends MyController
 				$msg = iconv("UTF-8","GB2312",$message);
 				
 				$respxml=$newclient->sendSMS($mobile, $msg, $time, $apitype);
-				$this->view->login_phone = $login_phone;
+
+                // crypt the login_phone, added by ZHL on 2011-11-25
+				$this->view->crypt_login_phone = substr($login_phone,0,3)."*****".substr($login_phone,8,3);
 			}catch(Exception $e){
 				//roll back...
 				$this->view->phoneErr =  $this->view->translate('Send_fail_Try_Again');
@@ -58,7 +60,9 @@ class ForgetpasswordController extends MyController
 		}else{
 			$this->view->phoneErr = $this->view->translate('The_phone_is_not_existed');
 		}
-		$this->_helper->redirector('reset', 'forgetpassword');
+
+                // sms has been sent
+		// $this->_helper->redirector('reset', 'forgetpassword');
 	}
 	
 	function sendemailAction(){

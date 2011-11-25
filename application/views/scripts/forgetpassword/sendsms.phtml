@@ -75,14 +75,19 @@
 			<?php if($this->phoneErr == null ){?>
 			<h1 style="margin-left:0;"><?php echo $this->translate("Check_you_phone")?></h1>
 			<div style="clear: both;"></div>
-			<p><?php echo $this->translate("Check_you_phone_Content1")?><?php echo $this->login_phone;?><?php echo $this->translate("Check_you_phone_Content2")?></p>
-			
+			<p><?php echo $this->translate("Check_you_phone_Content1")?><?php echo $this->crypt_login_phone;?><?php echo $this->translate("Check_you_phone_Content2")?></p>
+
+            <div style="clear: both;"></div>
+            <div class="buttons-bar">
+                <input id="gotoreset" target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'forgetpassword', 'action'=>'reset'));?>'" type='button'  value='<?php echo $this->translate("Reset_password")?>'></input>
+            </div>
+
 			<?php } else{?>
 					<h1 style="margin-left:0;"><?php echo $this->phoneErr; ?></h1>
 			
 					<div style="clear: both;"></div>
 					<div class="buttons-bar">
-					<input id="changepassword" target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'forgetpassword', 'action'=>'index'));?>'" type='button'  value='<?php echo $this->translate("Back")?>'></input>
+                        <input id="changepassword" target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'forgetpassword', 'action'=>'index'));?>'" type='button'  value='<?php echo $this->translate("Back")?>'></input>
 					</div>
 			<?php }?>
 			
@@ -101,7 +106,7 @@
 			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=60&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Terms_and_Conditions');?></a>
 			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=89&amp;Itemid=61&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Jobs');?></a>
 			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=90&amp;Itemid=62&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Investors');?></a></td>
-			</tr></table>		
+			</tr></table>
 		</div>
     </div></div>
 </body>
