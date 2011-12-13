@@ -1877,7 +1877,7 @@ function adminreportbatchreplyAction(){
 						$selectAccessCode = $db->select();
 						$selectAccessCode->from('report', array('consumer_id','accesscode', 'create_date', 'source'))
 						->joinLeft('reward_point_transaction_record', 'report.reward_point_transaction_record_id = reward_point_transaction_record.id', 'point_amount')
-						->join('consumer', 'consumer.id = report.consumer_id', array('email,login_phone,recipients_name'))
+						->join('consumer', 'consumer.id = report.consumer_id', array('email','login_phone','recipients_name'))
 						->where('report.campaign_id = ?',$formData['campaign_id'])
 						->where("report.state = 'APPROVED'")
 						->limit(0);
