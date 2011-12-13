@@ -75,8 +75,13 @@
 			<div>
 			<?php echo $this->form->postalcode ;?> 
 			</div>
+			
 			<div>
 				<dt style="width:690px;height:50px;margin-left:0;color:blue">
+				<?php if($this->campaign->id==30){ ?>
+				<p style="color:red">*只有完整参加本次星星火口碑活动，才能享受星星火英孚教育独家优惠。</p>
+				<p style="color:red">*请确保你提供的好友的孩子年龄在3至14岁，没有参加过英孚的课程并在三个月内没有和英孚有过联系</p>
+				<?php }?>
 				<?php echo $this->campaign['pre_campaign_friends'];?>
 				</dt>
 			</div>
@@ -105,8 +110,9 @@
 
 <script type="text/javascript">
 var total_relative="<?php echo $this->relative?>";
+var campaign_id_test= "<?php echo $this->campaign->id ?>"
 var friends_count = <?php echo $this->friendsNum?>;
-if(total_relative>0&&friends_count<6){
+if(total_relative>0&&friends_count<6&&campaign_id_test!=30){
 	document.getElementById("show_warn").innerHTML="在确认前请将好友名称填写完成";
 }else{
 	document.form.elements['edit'].disabled=false;
@@ -123,7 +129,7 @@ function relativeTest(val){
 			count_relative++;
 		}
 	}
-	if(count_relative>=6){
+	if(count_relative>=6||campaign_id_test==30){
 		document.form.elements['edit'].disabled=false;
 		document.getElementById("show_warn").innerHTML="";
 	}else{

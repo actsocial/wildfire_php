@@ -677,16 +677,16 @@ class CampaignController extends MyController
 			$campaignInvitation->save();
              
 			//2011-05-19 ham.bao add the badge
-			$consumerBadgeModel = new ConsumerBadge();
-			$consumerBadgeData  = $consumerBadgeModel->fetchRow('badge='.$this->view->campaign->badge .' and consumer='.$consumer->id);
-			if(!count($consumerBadgeData)){
-				$row = $consumerBadgeModel->createRow();
-				$row->consumer = $consumer->id;
-				$row->badge    = $this->view->campaign->badge;
-				$row->create_date = date("Y-m-d H:i:s");
-				$row->save();
-
-			}
+//			$consumerBadgeModel = new ConsumerBadge();
+//			$consumerBadgeData  = $consumerBadgeModel->fetchRow('badge='.$this->view->campaign->badge .' and consumer='.$consumer->id);
+//			if(!count($consumerBadgeData)){
+//				$row = $consumerBadgeModel->createRow();
+//				$row->consumer = $consumer->id;
+//				$row->badge    = $this->view->campaign->badge;
+//				$row->create_date = date("Y-m-d H:i:s");
+//				$row->save();
+//
+//			}
 			//2011-05-19 ham.bao add the badge
 			
 			$result = $db->fetchOne(

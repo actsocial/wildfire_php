@@ -1,0 +1,63 @@
+
+
+<div class="search_field">
+<p>参加“与星星火的第一次约会”活动任务,获取更多积分。</p>
+</div>	
+		
+		<div>
+		<table class='mission' CELLPADDING="5px" style="font-size:11px">
+			<tr >
+				<td style="width:35%">
+					<div class="mission_instruction">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/one.jpg' width=36 height=36 />用自己的相机或手机随手拍下参加星星火活动分享的照片。
+</p>
+					</div>
+				</td>
+				<td style="background: url('<?php echo $this->baseUrl();?>images/mission/arrow1.jpg') no-repeat bottom left;"></td>
+				<td style="width:25%"></td>
+			</tr>
+			<tr style="width:50%">
+				<td></td>
+				<td>
+					<div class="mission_process">
+						<p><img src='<?php echo $this->baseUrl();?>/images/mission/two.jpg' width=36 height=36 /><a style="color:#FE6700;font-weight:bold;">
+							写下与星星火第一次接触的时间，地点、人物并且简单的介绍一下参加活动的感受和对星星火的评价与期望，写下自己使用分享产品的感受。
+						</p>
+					</div>
+				</td>
+				<td style="background: url('<?php echo $this->baseUrl();?>/images/mission/arrow1.jpg') no-repeat bottom left;"></td>
+			</tr>
+			<tr >
+				<td>
+					<div class="mission_reward">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/three.jpg' width=35 height=36 />审核通过，获得400积分，可用于礼品兑换</p>
+					</div>
+				</td>
+				<td style="background: url('<?php echo $this->baseUrl();?>/images/mission/arrow3.jpg') no-repeat top left ;"></td>
+				<td>
+					<div class="mission_reward">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/four.jpg' width=36 height=36 />如若不通过，请再次提交
+</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td style="height:60px; background: url('<?php echo $this->baseUrl();?>/images/mission/button.jpg') no-repeat center center; ">
+				<ul class="submit-report" style="display: block;">
+			<div class="li-wrapper">
+		<li><?php if ($this->state == 'COMPLETED'){?>
+		
+		           <div style="font-weight:bold; font-size:16px; text-align:center;"><a  onclick="return false;" href="#">已经完成任务</a></div>
+		<?php }else{?>
+			<div style="font-weight:bold; font-size:16px; text-align:center;"><a  onclick="filloutDialogOpen('<?php echo $this->baseUrl();?>/mission/paticipate/id/<?php echo $this->campaign_id ?>');return false;" href="#">点击参与任务</a></div>
+		<?php }?>
+		</li>
+			</div>
+</ul>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		
+		</div>
