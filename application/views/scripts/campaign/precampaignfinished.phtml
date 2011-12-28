@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="article-box" style="padding-bottom:10px;">
 	<div class="article-box-inner">
 		<h1><?php echo $this->translate("You_are_in")?></h1>
@@ -240,3 +241,249 @@ if (typeof window.onload != 'function') {
 	 	}
 	}
 </script>
+=======
+<div class="article-box" style="padding-bottom:10px;">
+	<div class="article-box-inner">
+		<h1><?php echo $this->translate("You_are_in")?></h1>
+		<p><?php echo $this->campaign['pre_campaign_info']?></p>
+	</div>
+</div>
+<div class="edit-profile">
+		<h1 style="margin-left: 10px; padding-top: 10px;"><?php echo $this->translate('Confirm_shipping_address');?></h1>
+		<form name="form" action="<?php echo $this->url(array('controller'=>'consumer','action'=>'editcontact','cid'=>$this->campaign->id));?>" method="post">
+		<dl>
+		<fieldset>
+			<div><?php echo $this->form->recipients_name ;?></div>
+			<div class="form-line not-text" ><?php echo $this->form->gender ;?></div>
+			<div class="form-line"><?php echo $this->form->education ;?></div>
+			<div class="form-line-long-title"><?php echo $this->form->income ;?></div>
+			<div class="form-line"><?php echo $this->form->birthdate ;?></div>
+			<div><?php echo $this->form->phone ;?></div>
+			<div><?php echo $this->form->telephone;?></div>
+			<div><?php echo $this->form->qq;?></div>
+			<div>
+				<dt><label><?php echo $this->translate('CONTACT CITY')?></label></dt>
+				<dd><input type="text" id="englishcity" name="englishcity" /> <select
+					name="province" id="province" style="width: 80px"
+					onChange="JavaScript:ChangeOption('province', 'city')">
+					<OPTION VALUE="" Selected>未选择</OPTION>
+					<OPTION VALUE=北京市>北京市</OPTION>
+					<OPTION VALUE=上海市>上海市</OPTION>
+					<OPTION VALUE=广东省>广东省</OPTION>
+					<OPTION VALUE=深圳市>深圳市</OPTION>
+					<OPTION VALUE=天津市>天津市</OPTION>
+					<OPTION VALUE=重庆市>重庆市</OPTION>
+					<OPTION VALUE=江苏省>江苏省</OPTION>
+					<OPTION VALUE=浙江省>浙江省</OPTION>
+					<OPTION VALUE=四川省>四川省</OPTION>
+					<OPTION VALUE=海南省>海南省</OPTION>
+					<OPTION VALUE=福建省>福建省</OPTION>
+					<OPTION VALUE=山东省>山东省</OPTION>
+					<OPTION VALUE=江西省>江西省</OPTION>
+					<OPTION VALUE=广西>广西</OPTION>
+					<OPTION VALUE=安徽省>安徽省</OPTION>
+					<OPTION VALUE=河北省>河北省</OPTION>
+					<OPTION VALUE=河南省>河南省</OPTION>
+					<OPTION VALUE=湖北省>湖北省</OPTION>
+					<OPTION VALUE=湖南省>湖南省</OPTION>
+					<OPTION VALUE=陕西省>陕西省</OPTION>
+					<OPTION VALUE=山西省>山西省</OPTION>
+					<OPTION VALUE=黑龙江省>黑龙江省</OPTION>
+					<OPTION VALUE=辽宁省>辽宁省</OPTION>
+					<OPTION VALUE=吉林省>吉林省</OPTION>
+					<OPTION VALUE=云南省>云南省</OPTION>
+					<OPTION VALUE=贵州省>贵州省</OPTION>
+					<OPTION VALUE=甘肃省>甘肃省</OPTION>
+					<OPTION VALUE=内蒙古>内蒙古</OPTION>
+					<OPTION VALUE=宁夏>宁夏</OPTION>
+					<OPTION VALUE=西藏>西藏</OPTION>
+					<OPTION VALUE=新疆>新疆</OPTION>
+					<OPTION VALUE=青海省>青海省</OPTION>
+					<OPTION VALUE=香港>香港</OPTION>
+					<OPTION VALUE=澳门>澳门</OPTION>
+					<OPTION VALUE=台湾>台湾</OPTION>
+					<OPTION VALUE=国外>国外</OPTION>
+				</select> 
+				<select name="city" id="city" style="width: 80px"></select> 
+				<INPUT TYPE="HIDDEN" id="AreaCode" NAME="AreaCode"
+					VALUE=",未选择;北京市,北京市;上海市,上海市;广东省,广东省;广东省,广州市;广东省,惠州市;广东省,汕头市;广东省,珠海市;广东省,佛山市;广东省,中山市;广东省,东莞市;广东省,从化市;广东省,韶关市;广东省,江门市;广东省,增城市;广东省,湛江市;广东省,肇庆市;广东省,清远市;广东省,潮州市;广东省,河源市;广东省,揭阳市;广东省,茂名市;广东省,汕尾市;广东省,顺德市;深圳市,深圳市;天津市,天津市;重庆市,重庆市;江苏省,江苏省;江苏省,南京市;江苏省,苏州市;江苏省,无锡市;江苏省,常州市;江苏省,昆山市;江苏省,常熟市;江苏省,扬州市;江苏省,南通市;江苏省,镇江市;江苏省,徐州市;江苏省,连云港市;江苏省,盐城市;江苏省,张家港市;浙江省,浙江省;浙江省,杭州市;浙江省,宁波市;浙江省,温州市;浙江省,绍兴市;浙江省,金华市;浙江省,嘉兴市;浙江省,台州市;浙江省,湖州市;浙江省,丽水市;浙江省,舟山市;浙江省,衢州市;四川省,四川省;四川省,成都市;四川省,绵阳市;四川省,乐山市;四川省,泸州市;四川省,德阳市;四川省,宜宾市;四川省,自贡市;四川省,内江市;四川省,攀枝花市;海南省,海南省;海南省,海口市;海南省,三亚市;福建省,福建省;福建省,福州市;福建省,厦门市;福建省,泉州市;福建省,漳州市;福建省,莆田市;福建省,三明市;福建省,南平市;福建省,宁德市;福建省,龙岩市;山东省,山东省;山东省,济南市;山东省,青岛市;山东省,烟台市;山东省,潍坊市;山东省,威海市;山东省,淄博市;山东省,临沂市;山东省,济宁市;山东省,东营市;山东省,泰安市;山东省,日照市;山东省,德州市;江西省,江西省;江西省,南昌市;江西省,九江市;广西,广西;广西,南宁市;广西,桂林市;广西,柳州市;广西,北海市;安徽省,安徽省;安徽省,合肥市;安徽省,芜湖市;安徽省,安庆市;安徽省,马鞍山市;安徽省,蚌埠市;安徽省,阜阳市;安徽省,铜陵市;安徽省,滁州市;安徽省,黄山市;安徽省,淮南市;安徽省,六安市;安徽省,巢湖市;安徽省,宣城市;安徽省,池州市;河北省,河北省;河北省,石家庄市;河北省,廊坊市;河北省,保定市;河北省,唐山市;河北省,秦皇岛市;河南省,河南省;河南省,郑州市;河南省,洛阳市;河南省,开封市;湖北省,湖北省;湖北省,武汉市;湖北省,宜昌市;湖北省,黄石市;湖北省,襄樊市;湖北省,十堰市;湖北省,荆州市;湖北省,荆门市;湖北省,孝感市;湖北省,鄂州市;湖南省,湖南省;湖南省,长沙市;湖南省,株洲市;湖南省,湘潭市;湖南省,衡阳市;湖南省,岳阳市;湖南省,常德市;湖南省,益阳市;湖南省,郴州市;湖南省,邵阳市;湖南省,怀化市;湖南省,娄底市;湖南省,永州市;湖南省,张家界市;陕西省,陕西省;陕西省,西安市;陕西省,咸阳市;陕西省,宝鸡市;陕西省,铜川市;陕西省,延安市;山西省,山西省;山西省,太原市;山西省,运城市;山西省,大同市;山西省,临汾市;黑龙江省,黑龙江省;黑龙江省,哈尔滨市;黑龙江省,伊春市;黑龙江省,绥化市;黑龙江省,大庆市;黑龙江省,齐齐哈尔市;黑龙江省,牡丹江市;黑龙江省,佳木斯市;辽宁省,辽宁省;辽宁省,沈阳市;辽宁省,大连市;辽宁省,鞍山市;辽宁省,营口市;辽宁省,抚顺市;辽宁省,锦州市;辽宁省,丹东市;辽宁省,葫芦岛市;辽宁省,本溪市;辽宁省,辽阳市;辽宁省,铁岭市;吉林省,吉林省;吉林省,长春市;吉林省,吉林市;吉林省,辽源市;吉林省,通化市;云南省,云南省;云南省,昆明市;云南省,曲靖市;云南省,玉溪市;云南省,大理市;云南省,丽江市;云南省,蒙自市;云南省,开远市;云南省,个旧市;云南省,红河州;贵州省,贵州省;贵州省,贵阳市;贵州省,遵义市;甘肃省,甘肃省;甘肃省,兰州市;甘肃省,金昌市;内蒙古,内蒙古;内蒙古,呼和浩特市;内蒙古,赤峰市;内蒙古,包头市;宁夏,宁夏;宁夏,银川市;西藏,西藏;西藏,拉萨市;西藏,日喀则市;新疆,新疆;新疆,乌鲁木齐市;新疆,克拉玛依市;新疆,喀什地区市;青海省,青海省;青海省,西宁市;香港,香港;澳门,澳门;台湾,台湾;国外,国外;" />
+				</dd>
+				
+			</div>
+			
+			<div class="address-box"><?php echo $this->form->address1 ;?><dd style="padding-left:120px;height:30px;color:blue">
+				<!--<?php echo $this->translate('Address Notice')?>-->
+				<?php echo $this->campaign['pre_campaign_thankyou']?>
+				
+			</dd></div>
+			<div>
+			<?php echo $this->form->postalcode ;?> 
+			</div>
+			
+			<div>
+				<dt style="width:690px;height:50px;margin-left:0;color:blue">
+				<?php if($this->campaign->id==30){ ?>
+				<p style="color:red">*只有完整参加本次星星火口碑活动，才能享受星星火英孚教育独家优惠。</p>
+				<p style="color:red">*请确保你提供的好友的孩子年龄在3至14岁，没有参加过英孚的课程并在三个月内没有和英孚有过联系</p>
+				<?php }?>
+				<?php echo $this->campaign['pre_campaign_friends'];?>
+				</dt>
+			</div>
+			<div>
+			<table align="center">
+			<?php 
+			for ($i = 1; $i <= $this->relative; $i++) {?>
+<!--				$n = 'relative'.$i;-->
+				<tr><?php $n = 'relative'.$i;
+				 echo $this->form->$n ?></tr>
+<!--				echo $this->form->$n;-->
+			<?php }			
+			?> 
+			</table>
+			</div>
+			</fieldset>		
+		</dl>
+		<div style="clear: both; "></div>
+		<div class="buttons-bar">
+			<?php echo $this->form->submit ;?>
+			<label id="show_warn" style="color:red"></label>
+		</div>
+		</form>
+		<div style="clear:both"></div>
+</div>
+
+<script type="text/javascript">
+var total_relative="<?php echo $this->relative?>";
+var campaign_id_test= "<?php echo $this->campaign->id ?>"
+var friends_count = <?php echo $this->friendsNum?>;
+if(total_relative>0&&friends_count<6&&campaign_id_test!=30){
+	document.getElementById("show_warn").innerHTML="在确认前请将好友名称填写完成";
+}else{
+	document.form.elements['edit'].disabled=false;
+}
+function relativeTest(val){
+	var count_relative=0;
+	var input_array=new Array();
+	input_array=document.getElementsByTagName("input");
+	for(var i=0;i<input_array.length;i++){
+//		alert(input_array.length+"===="+input_array[i].name);
+//		alert("---"+input_array[i].name.substr(0,8));
+		if(input_array[i].name.substr(0,8)=='relative'&&input_array[i].value!=''){
+//			alert(input_array[i].id+"---"+input_array[i].vlaue);
+			count_relative++;
+		}
+	}
+	if(count_relative>=6||campaign_id_test==30){
+		document.form.elements['edit'].disabled=false;
+		document.getElementById("show_warn").innerHTML="";
+	}else{
+		document.form.elements['edit'].disabled=true;
+		document.getElementById("show_warn").innerHTML="在确认前请将好友名称填写完成";
+	}
+}
+</script>
+
+<script type="text/javascript">
+
+function GetObjID(ObjName)
+{
+	for (var ObjID=0; ObjID < document.form.elements.length; ObjID++)
+    if ( document.form.elements[ObjID].name == ObjName )
+    {  return(ObjID);
+       break;
+    }
+  return(-1);
+}
+function ChangeOption(ObjName, DesName)
+{
+	
+  //GET OBJECT VALUE, ID OF DESTINATION OBJECT
+  ObjID    = GetObjID(ObjName);//7
+  DesObjID = GetObjID(DesName);//8
+  if ( ObjID != -1 && DesObjID != -1 )
+  {
+    var CatValue = document.form.elements[ObjID].value.toString();
+    
+    if ( CatValue == "0" )
+      document.form.elements[DesObjID].length=0;     
+    else
+    { //PARSING  	
+      document.form.elements[DesObjID].length=0;
+      var tt = document.form.AreaCode.value.toString();
+      var SubCategory = tt.split(";");
+      //GENERATE OPTIONS
+      j=0;
+      for (var i=0; i< SubCategory.length; i++ )
+      { pp = SubCategory[i].split(",");
+        if ( pp[0] == CatValue )
+        {   document.form.elements[DesObjID].options[j]= new Option( pp[1], pp[1]);
+            j++;
+           
+        }//if
+      }//for
+    }//if
+  }//if
+}
+function init(){
+	var province = "<?php echo $this->province ?>";
+	var city = "<?php echo $this->city ?>";
+	var lang ="<?php echo $this->language?>";
+	var encity = "<?php echo $this->encity ?>";
+
+	var p = $("province");
+	var c = $("city");
+	if('en' == lang || 'EN' == lang){
+		c.style.display = "none"; 
+		p.style.display = "none";
+		$("englishcity").value = encity;
+	}else{
+		
+		$("englishcity").style.display = "none";
+		if(province != null && city != null && province != '' && city != ''){
+			for(var i=0;i<p.length;i++){
+				if(p[i].value == province){
+					p[i].selected = true;
+					break;
+				}
+			}
+			var tt = $F("AreaCode");
+			
+		    var SubCategory = tt.split(";");
+		    province = province.toString();
+		    var CatValue = province;
+			var j=0;
+		    for (i=0; i< SubCategory.length; i++ )
+		    {   pp = SubCategory[i].split(",");
+		        if ( pp[0] == CatValue )
+		        { c.options[j]= new Option( pp[1], pp[1]);
+		          if(pp[1] == city){
+		        	  c.options[j].selected = true;
+		              }
+		          j++;
+		        }
+		    }
+		}else{
+			for(var i=0;i<p.length;i++){
+				if(p[i].value == ''){
+					p[i].selected = true;
+					break;
+				}
+			}
+			c.options[0]= new Option( '未选择', '');
+			c.options[0].selected = true;
+		}
+	}
+}
+
+var oldOnloadFunc = window.onload;
+
+if (typeof window.onload != 'function') {
+	 	window.onload = init;
+	} else {
+	    window.onload = function() {
+		  oldOnloadFunc();
+		  init();
+	 	}
+	}
+</script>
+>>>>>>> f02a9ecf0312cd5438aa914009270f397a3c24e8

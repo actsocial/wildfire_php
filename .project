@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-<<<<<<< HEAD
-	<name>community</name>
-=======
-	<name>wildfire</name>
->>>>>>> 6cb6ebeadb49ebc6fd8cf0f96d4c42adea35763f
+	<name>wildfire_php</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -22,10 +18,5 @@
 	</buildSpec>
 	<natures>
 		<nature>org.eclipse.php.core.PHPNature</nature>
-<<<<<<< HEAD
-		<nature>org.eclipse.rse.ui.remoteSystemsTempNature</nature>
-		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
-=======
->>>>>>> 6cb6ebeadb49ebc6fd8cf0f96d4c42adea35763f
 	</natures>
 </projectDescription>
