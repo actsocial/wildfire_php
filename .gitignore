@@ -1,1 +1,3 @@
 application/config.ini
+public/uploads_images/*
+public/surveys/*
