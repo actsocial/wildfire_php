@@ -67,46 +67,50 @@
 				
 			</div>
 			
-			<div class="address-box"><?php echo $this->form->address1 ;?><dd style="padding-left:120px;height:30px;color:blue">
-				<!--<?php echo $this->translate('Address Notice')?>-->
-				<?php echo $this->campaign['pre_campaign_thankyou']?>
+			<div class="address-box"><?php echo $this->form->address1 ;?><!--<dd style="padding-left:120px;height:30px;color:blue">
+				<?php echo $this->translate('Address Notice')?>
+				<?php echo $this->campaign['pre_campaign_thankyou']?>-->
 				
 			</dd></div>
 			<div>
 			<?php echo $this->form->postalcode ;?> 
 			</div>
-			<div>
-				<dt style="width:690px;height:50px;margin-left:0;color:blue">
-				<?php echo $this->campaign['pre_campaign_friends'];?>
-				</dt>
-			</div>
-			<div>
-			<table align="center">
-			<?php 
-			for ($i = 1; $i <= $this->relative; $i++) {?>
-<!--				$n = 'relative'.$i;-->
-				<tr><?php $n = 'relative'.$i;
-				 echo $this->form->$n ?></tr>
-<!--				echo $this->form->$n;-->
-			<?php }			
-			?> 
-			</table>
-			</div>
-			</fieldset>		
-		</dl>
-		<div style="clear: both; "></div>
+			<?php echo $this->campaign->id == 30 ?>
+			<?php if($this->campaign->id == 30){?>
+					<div>
+						<dt style="width:690px;height:50px;margin-left:0;color:blue">
+						<?php echo $this->campaign['pre_campaign_friends'];?>
+						</dt>
+					</div>
+					<div>
+					<table align="center">
+					<?php 
+					for ($i = 1; $i <= $this->friendsLimit; $i++) {?>
+						<tr>
+						    <td> Friend No. <?php echo $i; ?> : </td>
+						    <td><?php $field = 'friend_name_'.$i; echo $this->form->$field ?></td>
+						    <td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td>
+						    <td><?php $field = 'friend_phone_'.$i; echo $this->form->$field ?></td>
+						 </tr>
+					<?php }			
+					?> 
+					</table>
+					</div>
+					</fieldset>		
+				</dl>
+				<div style="clear: both; "></div>
+		 <?php }?>
 		<div class="buttons-bar">
 			<?php echo $this->form->submit ;?>
-			<label id="show_warn" style="color:red"></label>
 		</div>
 		</form>
 		<div style="clear:both"></div>
 </div>
 
 <script type="text/javascript">
-var total_relative="<?php echo $this->relative?>";
-var friends_count = <?php echo $this->friendsNum?>;
-if(total_relative>0&&friends_count<6){
+var total_relative="<?php echo $this->friendsLimit?>";
+var friendsNum = <?php echo $this->friendsNum?>;
+if(total_relative>0&&friendsNum<6){
 	document.getElementById("show_warn").innerHTML="在确认前请将好友名称填写完成";
 }else{
 	document.form.elements['edit'].disabled=false;
