@@ -415,7 +415,7 @@ class ConsumerController extends MyController {
 					    $friend->campaign = $campaign;
 						$friend->name = $formData['friend_name_'.$i]; //change column name in db
 						$friend->email = $formData['friend_email_'.$i]; //add column in db
-						$friend->phone = $formData['friend_phone_'.$i];//add column in db
+						$friend->message = $formData['friend_message_'.$i];//add column in db
 						$friend->date = date('Y-m-d H:i:s');
 						$friend->save();
 					}

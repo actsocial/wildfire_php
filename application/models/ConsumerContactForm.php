@@ -18,32 +18,32 @@ class ConsumerContactForm extends Zend_Form
 		$qq->setLabel('QQ号码 :');
 		
 		$telephone = new Zend_Form_Element_Text('telephone');
-		$telephone->setLabel('公司电话 :');
+		$telephone->setLabel('campaign phone :');
 		if($options['relative']){
 			for($i = 1 ; $i <= $options['relative'] ; $i++){
 				${'friend_name_'.$i} = new Zend_Form_Element_Text('friend_name_'.$i);
-			    ${'friend_name_'.$i}->setLabel('Name :');
-//				->addFilter('StripTags')
-//		        ->addFilter('StringTrim')
-//		        ->addValidator('NotEmpty');
+			    ${'friend_name_'.$i}->setLabel('Name :')
+				->addFilter('StripTags')
+		        ->addFilter('StringTrim')
+		        ->addValidator('NotEmpty');
 //				${'friend_name_'.$i}->setAttrib('onchange','relativeTest(this.value)');
 				$this->addElement(${'friend_name_'.$i});
 				
 				${'friend_email_'.$i} = new Zend_Form_Element_Text('friend_email_'.$i);
-			    ${'friend_email_'.$i}->setLabel('Email :');
-//				->addFilter('StripTags')
-//		        ->addFilter('StringTrim')
-//		        ->addValidator('NotEmpty');
+			    ${'friend_email_'.$i}->setLabel('Email :')
+				->addFilter('StripTags')
+		        ->addFilter('StringTrim')
+		        ->addValidator('NotEmpty');
 //				${'friend_email_'.$i}->setAttrib('onchange','relativeTest(this.value)');
 				$this->addElement(${'friend_email_'.$i});
 				
-				${'friend_phone_'.$i} = new Zend_Form_Element_Text('friend_phone_'.$i);
-			    ${'friend_phone_'.$i}->setLabel('Phone :');
-//				->addFilter('StripTags')
-//		        ->addFilter('StringTrim')
+				${'friend_message_'.$i} = new Zend_Form_Element_Text('friend_message_'.$i);
+			    ${'friend_message_'.$i}->setLabel('Message :')
+				->addFilter('StripTags')
+		        ->addFilter('StringTrim');
 //		        ->addValidator('NotEmpty');
 //				${'friend_phone_'.$i}->setAttrib('onchange','relativeTest(this.value)');
-				$this->addElement(${'friend_phone_'.$i});
+				$this->addElement(${'friend_message_'.$i});
 				
 			}
 		}		
@@ -106,9 +106,9 @@ class ConsumerContactForm extends Zend_Form
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->setLabel($this->getView()->translate('CONTACT_INFORMATION_EDIT_AND_RERURN'))
 		->setAttrib('id', 'edit');
-//		if($options['relative'] >0){
-//			$submit->setAttrib('disabled','disabled');
-//		}
+	/*	if($options['relative'] >0){
+			$submit->setAttrib('disabled','disabled');
+		}*/
 		$this->addElements(array($id, $recipients_name, $phone, $address1, $postalcode, $submit,$qq,$telephone,$income,$birthdate,$education,$gender));
 		
 	}

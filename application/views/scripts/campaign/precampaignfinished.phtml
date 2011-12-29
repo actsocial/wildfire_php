@@ -16,6 +16,8 @@
 			<div class="form-line"><?php echo $this->form->birthdate ;?></div>
 			<div><?php echo $this->form->phone ;?></div>
 			<div><?php echo $this->form->telephone;?></div>
+			
+			<!--
 			<div><?php echo $this->form->qq;?></div>
 			<div>
 				<dt><label><?php echo $this->translate('CONTACT CITY')?></label></dt>
@@ -67,7 +69,7 @@
 				
 			</div>
 			
-			<div class="address-box"><?php echo $this->form->address1 ;?><!--<dd style="padding-left:120px;height:30px;color:blue">
+			--><div class="address-box"><?php echo $this->form->address1 ;?><!--<dd style="padding-left:120px;height:30px;color:blue">
 				<?php echo $this->translate('Address Notice')?>
 				<?php echo $this->campaign['pre_campaign_thankyou']?>-->
 				
@@ -75,15 +77,15 @@
 			<div>
 			<?php echo $this->form->postalcode ;?> 
 			</div>
-					<!--<div>
-						<dt style="width:690px;height:50px;margin-left:0;color:blue">
-						<?php echo $this->campaign['pre_campaign_friends'];?>
+				    <!--  <div>
+						<dt style="width:690px;height:50px;margin-left:0;color:blue"> -->
 						
-						</dt>
-					</div>
-					
-					-->
-					<div>
+						<!-- </dt>
+					</div> -->
+
+				<div style="float:left;">
+					<?php echo $this->campaign['pre_campaign_friends'];?>
+
 					<table align="center">
 					<?php 
 					for ($i = 1; $i <= $this->friendsLimit; $i++) {?>
@@ -92,10 +94,10 @@
 						 </tr>
 						 <tr><td><?php $field = 'friend_name_'.$i; echo $this->form->$field ?></td></tr>
 						 <tr><td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td></tr>
-						 <tr><td><?php $field = 'friend_phone_'.$i; echo $this->form->$field ?></td></tr>
+						 <tr><td><?php $field = 'friend_message_'.$i; echo $this->form->$field ?></td></tr>
 					<?php }			
 					?> 
-					</table>
+				</table>
 					</div>
 			</fieldset>		
 				</dl>
@@ -110,10 +112,10 @@
 <script type="text/javascript">
 var total_relative="<?php echo $this->friendsLimit?>";
 var friendsNum = <?php echo $this->friendsNum?>;
-if(total_relative>0{
+if(total_relative>0){
 	document.getElementById("show_warn").innerHTML="在确认前请将好友名称填写完成";
 }else{
-	document.form.elements['edit'].disabled=false;
+	document.form.elements['edit'].disabled=false;	
 }
 function relativeTest(val){
 	var count_relative=0;

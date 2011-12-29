@@ -753,10 +753,10 @@ class CampaignController extends MyController
 			foreach ($friends as $friend){
 				$name = 'friend_name_'.$i ;
 				$email= 'friend_email_'.$i;
-				$phone = 'friend_phone_'.$i;
+				$message = 'friend_message_'.$i;
 				$form->$name->setValue($friend->name);
 				$form->$email->setValue($friend->email);
-				$form->$phone->setValue($friend->phone);
+				$form->$message->setValue($friend->message);
 				$i++;
 			}
 		}
