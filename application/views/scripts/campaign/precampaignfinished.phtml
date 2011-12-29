@@ -84,7 +84,7 @@
 					<table align="center">
 					<?php 
 					for ($i = 1; $i <= $this->friendsLimit; $i++) {?>
-						<tr>
+						<tr style="width:300px;">
 						    <td> Friend No. <?php echo $i; ?> : </td>
 						    <td><?php $field = 'friend_name_'.$i; echo $this->form->$field ?></td>
 						    <td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td>
@@ -116,9 +116,7 @@ function relativeTest(val){
 	var count_relative=0;
 	var input_array=new Array();
 	input_array=document.getElementsByTagName("input");
-	alert("==="+total_relative+"----"+friendNum);
 	for(var i=0;i<input_array.length;i++){
-//		alert(input_array.length+"===="+input_array[i].name);
 //		alert("---"+input_array[i].name.substr(0,8));
 		if(input_array[i].name.substr(0,8)=='relative'&&input_array[i].value!=''){
 //			alert(input_array[i].id+"---"+input_array[i].vlaue);
