@@ -403,18 +403,20 @@ class ConsumerController extends MyController {
 					}
 				}*/
 				//2011-05-03 ham.bao add the related friends 
-				
+				$campaign_model = new Campaign();
+				$campaign_campaign=$campaign_model->find($campaign)->current();
+//				Zend_Debug::dump($campaign_campaign->relative);die;
 				//new
-				for ($i=0;$i<$campaign->relative;$i++){
-					if ($formData['friend_name_'.$i] && $formData['friend_name_'.$i]!=''){
+				for ($i=0;$i<$campaign_campaign->relative;$i++){
+					if ($formData['friend_name_'.$i] && $formData['friend_name_'.$i]!='' ){
 						$consumerFriend = new ConsumerFriend();
 						$friend = $consumerFriend->createRow();
 					    $friend->consumer = $id;
 					    $friend->campaign = $campaign;
 						$friend->name = $formData['friend_name_'.$i]; //change column name in db
-						$friend->email = $formData['friend_name_'.$i]; //add column in db
-						$friend->phone = $formData['friend_name_'.$i];//add column in db
-						$friend->date = date('m-d-Y H:i:s');
+						$friend->email = $formData['friend_email_'.$i]; //add column in db
+						$friend->phone = $formData['friend_phone_'.$i];//add column in db
+						$friend->date = date('Y-m-d H:i:s');
 						$friend->save();
 					}
 				} 

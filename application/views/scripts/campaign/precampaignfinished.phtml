@@ -107,7 +107,7 @@
 <script type="text/javascript">
 var total_relative="<?php echo $this->friendsLimit?>";
 var friendsNum = <?php echo $this->friendsNum?>;
-if(total_relative>0&&friendsNum<6){
+if(total_relative>0{
 	document.getElementById("show_warn").innerHTML="在确认前请将好友名称填写完成";
 }else{
 	document.form.elements['edit'].disabled=false;
@@ -116,6 +116,7 @@ function relativeTest(val){
 	var count_relative=0;
 	var input_array=new Array();
 	input_array=document.getElementsByTagName("input");
+	alert("==="+total_relative+"----"+friendNum);
 	for(var i=0;i<input_array.length;i++){
 //		alert(input_array.length+"===="+input_array[i].name);
 //		alert("---"+input_array[i].name.substr(0,8));
@@ -124,7 +125,7 @@ function relativeTest(val){
 			count_relative++;
 		}
 	}
-	if(count_relative>=6){
+	if(count_relative>=0){
 		document.form.elements['edit'].disabled=false;
 		document.getElementById("show_warn").innerHTML="";
 	}else{

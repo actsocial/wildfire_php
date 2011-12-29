@@ -751,8 +751,12 @@ class CampaignController extends MyController
 		if(count($friends)){
 			$i = 1;
 			foreach ($friends as $friend){
-				$n = 'relative'.$i ;
-				$form->$n->setValue($friend->friend);
+				$name = 'friend_name_'.$i ;
+				$email= 'friend_email_'.$i;
+				$phone = 'friend_phone_'.$i;
+				$form->$name->setValue($friend->name);
+				$form->$email->setValue($friend->email);
+				$form->$phone->setValue($friend->phone);
 				$i++;
 			}
 		}
