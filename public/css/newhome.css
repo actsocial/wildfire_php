@@ -1194,7 +1194,7 @@ ul.tabbed-buttons li.active a:visited {
 }
 .edit-profile dd {
 	width: 400px;
-	/*height: 30px;*/
+	height: 30px;
 }
 .edit-profile dd input {
 	height: 16px;
