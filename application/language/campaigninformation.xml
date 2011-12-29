@@ -1281,5 +1281,310 @@
         		<seg></seg>
         	</tuv>
         </tu>
+        
+        <!-- Karft campaign I  -->
+		<tu tuid='Campaign_name_28'>
+			<tuv xml:lang="zh">
+				<seg>儿童零食</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>儿童零食</seg>
+			</tuv>
+		</tu>		   
+		<tu tuid='Campaign_simple_description_28'>
+			<tuv xml:lang="zh">
+				<seg>description页面简单描述</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>description页面简单描述</seg>
+			</tuv>
+		</tu>		
+		<tu tuid='Campaign_invitation_description_28'>
+			<tuv xml:lang="zh">
+				<seg>倾听孩子对零食的真实想法，星星火与你共同关注他们的成长</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>倾听孩子对零食的真实想法，星星火与你共同关注他们的成长</seg>
+			</tuv>
+		</tu>	
+		<tu tuid='Campaign_invitation_image_name_2'>
+			<tuv xml:lang="zh">
+				<seg>campaign_invitation_bk_zh_2.png</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>campaign_invitation_bk_en_2.png</seg>
+			</tuv>
+		</tu>	
+		<tu tuid='Campaign_invitation_description2_28'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+					<p>如果你确认参加，将会收到：<br/>
+						<em>－ 零食礼包            1份（为你的孩子及玩伴们准备的） </em><br/>
+						<em>－ 活动手册            1份（为你准备的） </em><br/>
+					</p>
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+					<p>如果你确认参加，将会收到：<br/>
+						<em>－ 零食礼包            1份（为你的孩子及玩伴们准备的） </em><br/>
+						<em>－ 活动手册            1份（为你准备的） </em><br/>
+					</p>
+				]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Pre_campaign_intro_28'>
+			<tuv xml:lang="zh">
+				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该品牌的看法。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_28'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成儿童零食的星星火活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>你已经完成儿童零食的星星火活动。</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_28'>
+			<tuv xml:lang="zh">
+				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Campaign_post_survey_notice_28'>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[<p>非常感谢你参加儿童零食的星星火活动！</p>]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[<p>Thank you for participating in the Baily Spark Campaign!</p>]]></seg>
+            </tuv>
+        </tu>
+        <tu tuid='pre_campaign_info_28'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
+			</tuv>
+		</tu> 
+        <tu tuid="pre_campaign_thankyou_28">
+        	<tuv xml:lang="zh">
+        		<!--<seg>请填写上海地区的办公地址</seg>-->
+        		<seg></seg>
+        	</tuv>
+        </tu>
+	    <tu tuid="pre_campaign_friends_28">
+        	<tuv xml:lang="zh">
+        		<seg></seg>
+        	</tuv>
+        </tu>
+        
+         <!-- Karft campaign II  -->
+		<tu tuid='Campaign_name_29'>
+			<tuv xml:lang="zh">
+				<seg>儿童零食</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>儿童零食</seg>
+			</tuv>
+		</tu>		   
+		<tu tuid='Campaign_simple_description_29'>
+			<tuv xml:lang="zh">
+				<seg>description页面简单描述</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>description页面简单描述</seg>
+			</tuv>
+		</tu>		
+		<tu tuid='Campaign_invitation_description_29'>
+			<tuv xml:lang="zh">
+				<seg>倾听孩子对零食的真实想法，星星火与你共同关注他们的成长</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>倾听孩子对零食的真实想法，星星火与你共同关注他们的成长</seg>
+			</tuv>
+		</tu>	
+		<tu tuid='Campaign_invitation_image_name_2'>
+			<tuv xml:lang="zh">
+				<seg>campaign_invitation_bk_zh_2.png</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>campaign_invitation_bk_en_2.png</seg>
+			</tuv>
+		</tu>	
+		<tu tuid='Campaign_invitation_description2_29'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+					<p>如果你确认参加，将会收到：<br/>
+						<em>－ 零食礼包            1份（为你的孩子及玩伴们准备的） </em><br/>
+						<em>－ 活动手册            1份（为你准备的） </em><br/>
+					</p>
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+					<p>如果你确认参加，将会收到：<br/>
+						<em>－ 零食礼包            1份（为你的孩子及玩伴们准备的） </em><br/>
+						<em>－ 活动手册            1份（为你准备的） </em><br/>
+					</p>
+				]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Pre_campaign_intro_29'>
+			<tuv xml:lang="zh">
+				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该品牌的看法。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_29'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成儿童零食的星星火活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>你已经完成儿童零食的星星火活动。</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_29'>
+			<tuv xml:lang="zh">
+				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Campaign_post_survey_notice_29'>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[<p>非常感谢你参加儿童零食的星星火活动！</p>]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[<p>Thank you for participating in the Baily Spark Campaign!</p>]]></seg>
+            </tuv>
+        </tu>
+        <tu tuid='pre_campaign_info_29'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
+			</tuv>
+		</tu> 
+        <tu tuid="pre_campaign_thankyou_29">
+        	<tuv xml:lang="zh">
+        		<!--<seg>请填写上海地区的办公地址</seg>-->
+        		<seg></seg>
+        	</tuv>
+        </tu>
+	    <tu tuid="pre_campaign_friends_29">
+        	<tuv xml:lang="zh">
+        		<seg></seg>
+        	</tuv>
+        </tu>
+        
+           <!-- EnglishFirst campaign -->
+		<tu tuid='Campaign_name_30'>
+			<tuv xml:lang="zh">
+				<seg>英孚教育</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>英孚教育</seg>
+			</tuv>
+		</tu>		   
+		<tu tuid='Campaign_simple_description_30'>
+			<tuv xml:lang="zh">
+				<seg>description页面简单描述</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>description页面简单描述</seg>
+			</tuv>
+		</tu>		
+		<tu tuid='Campaign_invitation_description_30'>
+			<tuv xml:lang="zh">
+				<seg>英孚青少儿英语教育针对不同年龄段孩子的成长特点设计了不同的儿童英语课程，以迎合不同年龄段孩子的学习需要，在中国取得了卓越的教学成果。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>英孚青少儿英语教育针对不同年龄段孩子的成长特点设计了不同的儿童英语课程，以迎合不同年龄段孩子的学习需要，在中国取得了卓越的教学成果。</seg>
+			</tuv>
+		</tu>	
+		<tu tuid='Campaign_invitation_image_name_2'>
+			<tuv xml:lang="zh">
+				<seg>campaign_invitation_bk_zh_2.png</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>campaign_invitation_bk_en_2.png</seg>
+			</tuv>
+		</tu>	
+		<tu tuid='Campaign_invitation_description2_30'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+					<p>此次首批体验分享家仅100名，如果你确认参加，将会收到：<br/>
+						<em>－ 贵宾卡    	    1张（为你准备的） </em><br/>
+						<em>－ 贵宾卡			若干 张（为你的好友们准备的） </em><br/>
+						<em>－ 活动手册                 1份（为你准备的）</em><br/>
+						<em>－ 英孚DVD       1份（为你准备的）</em><br/>
+					</p>
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+					<p>此次首批体验分享家仅100名，如果你确认参加，将会收到：<br/>
+						<em>－ 贵宾卡    	    1张（为你准备的） </em><br/>
+						<em>－ 贵宾卡			若干 张（为你的好友们准备的） </em><br/>
+						<em>－ 活动手册                 1份（为你准备的）</em><br/>
+						<em>－ 英孚DVD       1份（为你准备的）</em><br/>
+					</p>
+				]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Pre_campaign_intro_30'>
+			<tuv xml:lang="zh">
+				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该教育品牌的看法。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_30'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成英孚教育的星星火活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>你已经完成英孚教育的星星火活动。</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_30'>
+			<tuv xml:lang="zh">
+				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Campaign_post_survey_notice_30'>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[<p>非常感谢你参加英孚教育的星星火活动！</p>]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[<p>Thank you for participating in the Baily Spark Campaign!</p>]]></seg>
+            </tuv>
+        </tu>
+        <tu tuid='pre_campaign_info_30'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
+			</tuv>
+		</tu> 
+        <tu tuid="pre_campaign_thankyou_30">
+        	<tuv xml:lang="zh">
+        		<!--<seg>请填写上海地区的办公地址</seg>-->
+        		<seg></seg>
+        	</tuv>
+        </tu>
+	    <tu tuid="pre_campaign_friends_30">
+        	<tuv xml:lang="zh">
+        		<seg></seg>
+        	</tuv>
+        </tu>
+        
 	</body>
 </tmx>

@@ -21,13 +21,30 @@ class ConsumerContactForm extends Zend_Form
 		$telephone->setLabel('公司电话 :');
 		if($options['relative']){
 			for($i = 1 ; $i <= $options['relative'] ; $i++){
-				${'relative'.$i} = new Zend_Form_Element_Text('relative'.$i);
-			    ${'relative'.$i}->setLabel('好友姓名 '.$i.':')
+				${'friend_name_'.$i} = new Zend_Form_Element_Text('friend_name_'.$i);
+			    ${'friend_name_'.$i}->setLabel('Name :')
 				->addFilter('StripTags')
 		        ->addFilter('StringTrim')
 		        ->addValidator('NotEmpty');
-				${'relative'.$i}->setAttrib('onchange','relativeTest(this.value)');
-				$this->addElement(${'relative'.$i});
+				${'friend'.$i}->setAttrib('onchange','relativeTest(this.value)');
+				$this->addElement(${'friend_name_'.$i});
+				
+				${'friend_email_'.$i} = new Zend_Form_Element_Text('friend_email_'.$i);
+			    ${'friend_email_'.$i}->setLabel('Email :')
+				->addFilter('StripTags')
+		        ->addFilter('StringTrim')
+		        ->addValidator('NotEmpty');
+				${'friend'.$i}->setAttrib('onchange','relativeTest(this.value)');
+				$this->addElement(${'friend_email_'.$i});
+				
+				${'friend_phone_'.$i} = new Zend_Form_Element_Text('friend_phone_'.$i);
+			    ${'friend_phone_'.$i}->setLabel('Phone :')
+				->addFilter('StripTags')
+		        ->addFilter('StringTrim')
+		        ->addValidator('NotEmpty');
+				${'friend'.$i}->setAttrib('onchange','relativeTest(this.value)');
+				$this->addElement(${'friend_phone_'.$i});
+				
 			}
 		}		
 
