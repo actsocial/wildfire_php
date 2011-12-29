@@ -4,7 +4,7 @@
 		<p><?php echo $this->campaign['pre_campaign_info']?></p>
 	</div>
 </div>
-<div class="edit-profile">
+<div class="edit-profile" >
 		<h1 style="margin-left: 10px; padding-top: 10px;"><?php echo $this->translate('Confirm_shipping_address');?></h1>
 		<form name="form" action="<?php echo $this->url(array('controller'=>'consumer','action'=>'editcontact','cid'=>$this->campaign->id));?>" method="post">
 		<dl>
@@ -75,26 +75,29 @@
 			<div>
 			<?php echo $this->form->postalcode ;?> 
 			</div>
-					<div>
+					<!--<div>
 						<dt style="width:690px;height:50px;margin-left:0;color:blue">
 						<?php echo $this->campaign['pre_campaign_friends'];?>
+						
 						</dt>
 					</div>
+					
+					-->
 					<div>
 					<table align="center">
 					<?php 
 					for ($i = 1; $i <= $this->friendsLimit; $i++) {?>
-						<tr style="width:300px;">
-						    <td> Friend No. <?php echo $i; ?> : </td>
-						    <td><?php $field = 'friend_name_'.$i; echo $this->form->$field ?></td>
-						    <td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td>
-						    <td><?php $field = 'friend_phone_'.$i; echo $this->form->$field ?></td>
+						<tr>
+						    <td><?php echo 'Friend No.'.$i;?></td>
 						 </tr>
+						 <tr><td><?php $field = 'friend_name_'.$i; echo $this->form->$field ?></td></tr>
+						 <tr><td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td></tr>
+						 <tr><td><?php $field = 'friend_phone_'.$i; echo $this->form->$field ?></td></tr>
 					<?php }			
 					?> 
 					</table>
 					</div>
-					</fieldset>		
+			</fieldset>		
 				</dl>
 				<div style="clear: both; "></div>
 		<div class="buttons-bar">

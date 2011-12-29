@@ -26,7 +26,7 @@ class ConsumerContactForm extends Zend_Form
 //				->addFilter('StripTags')
 //		        ->addFilter('StringTrim')
 //		        ->addValidator('NotEmpty');
-				${'friend_name_'.$i}->setAttrib('onchange','relativeTest(this.value)');
+//				${'friend_name_'.$i}->setAttrib('onchange','relativeTest(this.value)');
 				$this->addElement(${'friend_name_'.$i});
 				
 				${'friend_email_'.$i} = new Zend_Form_Element_Text('friend_email_'.$i);
@@ -34,7 +34,7 @@ class ConsumerContactForm extends Zend_Form
 //				->addFilter('StripTags')
 //		        ->addFilter('StringTrim')
 //		        ->addValidator('NotEmpty');
-				${'friend_email_'.$i}->setAttrib('onchange','relativeTest(this.value)');
+//				${'friend_email_'.$i}->setAttrib('onchange','relativeTest(this.value)');
 				$this->addElement(${'friend_email_'.$i});
 				
 				${'friend_phone_'.$i} = new Zend_Form_Element_Text('friend_phone_'.$i);
@@ -42,7 +42,7 @@ class ConsumerContactForm extends Zend_Form
 //				->addFilter('StripTags')
 //		        ->addFilter('StringTrim')
 //		        ->addValidator('NotEmpty');
-				${'friend_phone_'.$i}->setAttrib('onchange','relativeTest(this.value)');
+//				${'friend_phone_'.$i}->setAttrib('onchange','relativeTest(this.value)');
 				$this->addElement(${'friend_phone_'.$i});
 				
 			}
