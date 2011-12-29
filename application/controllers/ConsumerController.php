@@ -389,9 +389,11 @@ class ConsumerController extends MyController {
 				//2011-05-03 ham.bao add the related friends 
 				$consumerFriend = new ConsumerFriend();
 				$consumerFriend->delete('consumer ='.$consumer->id.' and campaign='.$campaign);
-				foreach ( $formData as $key =>$val ){
+				
+				//delete
+				/*foreach ( $formData as $key =>$val ){
 					$consumerFriend = new ConsumerFriend();
-					if((substr($key, 0,8) == 'relative')&& ($val != '')){
+					if((substr($key, 0,6) == 'friend')&& ($val != '')){
 						$friend = $consumerFriend->createRow();
 						$friend->consumer = $id;
 						$friend->campaign = $campaign;
@@ -399,8 +401,24 @@ class ConsumerController extends MyController {
 						$friend->date = date('m-d-Y H:i:s');
 						$friend->save();
 					}
-				}
+				}*/
 				//2011-05-03 ham.bao add the related friends 
+				
+				//new
+				for ($i=0;$i<$campaign->relative;$i++){
+					if ($formData['friend_name_'.$i] && $formData['friend_name_'.$i]!=''){
+						$consumerFriend = new ConsumerFriend();
+						$friend = $consumerFriend->createRow();
+					    $friend->consumer = $id;
+					    $friend->campaign = $campaign;
+						$friend->name = $formData['friend_name_'.$i]; //change column name in db
+						$friend->email = $formData['friend_name_'.$i]; //add column in db
+						$friend->phone = $formData['friend_name_'.$i];//add column in db
+						$friend->date = date('m-d-Y H:i:s');
+						$friend->save();
+					}
+				} 
+				
 				
 				$this->_helper->redirector ( 'index', 'campaigninvitation' );
 			}
