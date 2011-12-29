@@ -23,18 +23,23 @@ class ConsumerContactForm extends Zend_Form
 			for($i = 1 ; $i <= $options['relative'] ; $i++){
 				${'friend_name_'.$i} = new Zend_Form_Element_Text('friend_name_'.$i);
 			    ${'friend_name_'.$i}->setLabel('Name :')
-				->addFilter('StripTags')
+		        ->setRequired(true)
+			    ->addFilter('StripTags')
 		        ->addFilter('StringTrim')
-		        ->addValidator('NotEmpty');
+              //  ->addValidator('NotEmpty', true)
+                ->addErrorMessage('Value is empty, but a non-empty value is required.');
 //				${'friend_name_'.$i}->setAttrib('onchange','relativeTest(this.value)');
 				$this->addElement(${'friend_name_'.$i});
 				
 				${'friend_email_'.$i} = new Zend_Form_Element_Text('friend_email_'.$i);
 			    ${'friend_email_'.$i}->setLabel('Email :')
+			    ->setRequired(true)
 				->addFilter('StripTags')
 		        ->addFilter('StringTrim')
-		        ->addValidator('NotEmpty');
-//				${'friend_email_'.$i}->setAttrib('onchange','relativeTest(this.value)');
+               // ->addValidator('NotEmpty', true)
+		        ->addValidator('EmailAddress')
+		        ->addErrorMessage($this->getView()->translate('Register_email_is_invalid'));
+		        		        //				${'friend_email_'.$i}->setAttrib('onchange','relativeTest(this.value)');
 				$this->addElement(${'friend_email_'.$i});
 				
 				${'friend_message_'.$i} = new Zend_Form_Element_Text('friend_message_'.$i);

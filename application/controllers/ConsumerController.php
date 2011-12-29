@@ -334,12 +334,15 @@ class ConsumerController extends MyController {
 	}
 
 	function editcontactAction() {
-		$form = new ConsumerContactForm ();
 		$campaign = $this->_request->getParam('cid');
+		$campaignModel = new Campaign();	
+		$cam = $campaignModel->find($campaign)->current();
+		$form = new ConsumerContactForm (array('relative' =>$cam->relative));
 		
 		$consumerModel = new Consumer ();
 		if ($this->_request->isPost ()) { //POST
 			$formData = $this->_request->getPost ();
+			//Zend_Debug::dump($form->isValid ( $formData ));die;
 			if ($form->isValid ( $formData )) {
 				$id = $this->_currentUser->id;
 				$consumer = $consumerModel->find ( $id )
@@ -407,7 +410,7 @@ class ConsumerController extends MyController {
 				$campaign_campaign=$campaign_model->find($campaign)->current();
 //				Zend_Debug::dump($campaign_campaign->relative);die;
 				//new
-				for ($i=0;$i<$campaign_campaign->relative;$i++){
+				for ($i=1;$i<=$campaign_campaign->relative;$i++){
 					if ($formData['friend_name_'.$i] && $formData['friend_name_'.$i]!='' ){
 						$consumerFriend = new ConsumerFriend();
 						$friend = $consumerFriend->createRow();
@@ -423,9 +426,15 @@ class ConsumerController extends MyController {
 				
 				
 				$this->_helper->redirector ( 'index', 'campaigninvitation' );
+			}else{
+				$this->view->errMessage = "Please fill out all mandatory fields and make sure your emails are correct!";
+				$this->_forward('precampaignfinished',
+                                       'campaign',
+                                       null,
+                                       array('survey' => '643'));		
 			}
 		} else {
-
+			
 		}
 	}
 
