@@ -743,42 +743,53 @@ class CampaignController extends MyController
 		//edit ConsumerContactForm();
 		$form = new ConsumerContactForm( array('relative' =>$this->view->campaign->relative));
 		$consumer = $this->_currentUser;
-		$form->populate($consumer->toArray());
 		
 		$consumerFriend = new ConsumerFriend();
-		$friends  = $consumerFriend->fetchAll('consumer= '.$consumer->id .' and campaign='.$this->view->campaign->id);
-		
-		if(count($friends)){
-			$i = 1;
-			foreach ($friends as $friend){
-				$name = 'friend_name_'.$i ;
-				$email= 'friend_email_'.$i;
-				$message = 'friend_message_'.$i;
-				$form->$name->setValue($friend->name);
-				$form->$email->setValue($friend->email);
-				$form->$message->setValue($friend->message);
-				$i++;
-			}
-		}
-		
+	    $friends  = $consumerFriend->fetchAll('consumer= '.$consumer->id .' and campaign='.$this->view->campaign->id);		
 		$this->view->friendsNum = count($friends);
+		
+		if ($this->_request->getPost ()){
+			$formData = $this->_request->getPost ();
+			$form->populate($formData);	
+			$this->view->city = $formData["city"];
+			$this->view->province = $formData["province"];	
+			$this->view->encity = $formData["city"];		
+			
+		}else{
+			$form->populate($consumer->toArray());
+			// zh city
+			if($consumer["city"]!= NULL && $consumer["province"]!= NULL ){
+				$this->view->city = $consumer["city"];
+				$this->view->province = $consumer["province"];
+			}
+			// en city
+			if($consumer["city"]!= NULL && $consumer["province"]== NULL ){
+				$this->view->encity = $consumer["city"];
+			}		
+						
+			if(count($friends)){
+				$i = 1;
+				foreach ($friends as $friend){
+					$name = 'friend_name_'.$i ;
+					$email= 'friend_email_'.$i;
+					$message = 'friend_message_'.$i;
+					$form->$name->setValue($friend->name);
+					$form->$email->setValue($friend->email);
+					$form->$message->setValue($friend->message);
+					$i++;
+				}
+			}		
+		}
 		
 		//var_dump($form);die;
 
 		$langNamespace = new Zend_Session_Namespace('Lang');
 		$this->view->language = $langNamespace->lang;
-		// zh city
-		if($consumer["city"]!= NULL && $consumer["province"]!= NULL ){
-			$this->view->city = $consumer["city"];
-			$this->view->province = $consumer["province"];
-		}
-		// en city
-		if($consumer["city"]!= NULL && $consumer["province"]== NULL ){
-			$this->view->encity = $consumer["city"];
-		}
 
 		$this->view->form = $form;
 		$this->view->friendsLimit = $this->view->campaign->relative;
+		//Zend_Debug::dump($this->_request->getPost ());
+		
 		//Zend_Debug::dump($this->view->friendsLimit);
 	}
 

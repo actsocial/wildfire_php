@@ -23,7 +23,7 @@ class ConsumerContactForm extends Zend_Form
 			for($i = 1 ; $i <= $options['relative'] ; $i++){
 				${'friend_name_'.$i} = new Zend_Form_Element_Text('friend_name_'.$i);
 			    ${'friend_name_'.$i}->setLabel('Name :')
-		        ->setRequired(true)
+		        //->setRequired(true)
 			    ->addFilter('StripTags')
 		        ->addFilter('StringTrim')
               //  ->addValidator('NotEmpty', true)
@@ -33,7 +33,7 @@ class ConsumerContactForm extends Zend_Form
 				
 				${'friend_email_'.$i} = new Zend_Form_Element_Text('friend_email_'.$i);
 			    ${'friend_email_'.$i}->setLabel('Email :')
-			    ->setRequired(true)
+			    //->setRequired(true)
 				->addFilter('StripTags')
 		        ->addFilter('StringTrim')
                // ->addValidator('NotEmpty', true)
