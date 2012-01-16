@@ -85,7 +85,7 @@ class RegisterController extends MyController
 				$form->auth_code->setValue($generatedCode);
 			}else{
 				$this->_flashMessenger->addMessage($this->view->translate('Sorry_This_register_link_has_been_overused'));
-			    $this->_helper->redirector('register','register');
+                                $this->_helper->redirector('register','register');
 			}
 		}
 		
@@ -230,33 +230,7 @@ class RegisterController extends MyController
 													"expire_date" =>$expire_date);
 							$temporaryLink_id = $temporaryLinkModel->insert($temporaryLink);
 							//send mail
-							$emailSubject = $this->view->translate('ENABLE_ACCOUNT_subject');
-							$emailBody    = $this->view->translate('ENABLE_ACCOUNT_body');
-							$stringChange = array(
-											       "?ENABLEACCOUNTLINK?" => $activeLink
-							                );              
-							                
-						    $emailBody = strtr($emailBody,$stringChange);
-							$config = Zend_Registry::get ( 'config' );
-							$smtpSender = new Zend_Mail_Transport_Smtp ( $config->smtp->invitation->mail->server, array ('username' => $config->smtp->invitation->mail->username, 'password' => $config->smtp->invitation->mail->password, 'auth' => $config->smtp->invitation->mail->auth, 'ssl' => $config->smtp->invitation->mail->ssl, 'port' => $config->smtp->invitation->mail->port ) );
-							//											 $smtpSender = new Zend_Mail_Transport_Smtp(
-							//											 'smtp.163.com',array(
-							//											 'username'=>'yun_simon@163.com',
-							//											 'password'=>'19990402',
-							//											 'auth'=>'login'));
-							Zend_Mail::setDefaultTransport ( $smtpSender );
-							$mail = new Zend_Mail('utf-8');
-							$langNamespace = new Zend_Session_Namespace('Lang');
-							if($langNamespace->lang == 'en' || $langNamespace->lang == 'EN'){
-								$mail->setSubject($emailSubject);
-							}else{
-								$mail->setSubject("=?UTF-8?B?".base64_encode($emailSubject)."?=");					
-							}
-							$mail->setBodyText($emailBody);
-							$mail->setFrom($config->smtp->forgetpassword->mail->username,$this->view->translate('Wildfire'));
-			//				$mail->setFrom('yun_simon@163.com','yun_simon');
-							$mail->addTo($email);
-							$mail->send();	
+								
 		    				//2011-04-02 ham.bao add the logic of activating the account
 		    				
 		    				// save new consumer
@@ -266,6 +240,7 @@ class RegisterController extends MyController
 		    				$row->email = $form->getValue('registerEmail');
 		    				$row->login_phone = $form->getValue('loginPhone');
 		    				$row->password = md5($form->getValue('registerPassword'));
+							$row->state ="ACTIVE";
 		    				$row->save();
 
 		    				//expire the auth_code
@@ -296,21 +271,21 @@ class RegisterController extends MyController
 		    				
 		    				$this->view->registered = 1;
 
-//		    				// Login Automatically
-//		    				$authAdapter = new Zend_Auth_Adapter_DbTable($db);
-//		    				$authAdapter->setTableName('consumer');
-//		    				$authAdapter->setIdentityColumn('email');
-//		    				$authAdapter->setCredentialColumn('password');
-//
-//		    				$authAdapter->setIdentity($form->getValue('registerEmail'));
-//		    				$authAdapter->setCredential(md5($form->getValue('registerPassword')));
-//		    				$auth = Zend_Auth::getInstance();
-//		    				$auth->authenticate($authAdapter);
-//		    				 
-//		    				$authNamespace = new Zend_Session_Namespace('Zend_Auth');
-//		    				$authNamespace->user =$row;
-//		    				$this->_flashMessenger->addMessage('Welcome!');
-//		    				$this->_helper->redirector('index','home');
+		    				// Login Automatically
+		    				$authAdapter = new Zend_Auth_Adapter_DbTable($db);
+		    				$authAdapter->setTableName('consumer');
+		    				$authAdapter->setIdentityColumn('email');
+		    				$authAdapter->setCredentialColumn('password');
+
+		    				$authAdapter->setIdentity($form->getValue('registerEmail'));
+		    				$authAdapter->setCredential(md5($form->getValue('registerPassword')));
+		    				$auth = Zend_Auth::getInstance();
+		    				$auth->authenticate($authAdapter);
+		    				 
+		    				$authNamespace = new Zend_Session_Namespace('Zend_Auth');
+		    				$authNamespace->user =$row;
+		    				$this->_flashMessenger->addMessage('Welcome!');
+		    				$this->_helper->redirector('index','home');
 		    			}
 		    		}else{	    			
 		    			$this->view->errMessage = $this->view->translate('Register_err') . $this->view->translate('Register_authcode_is_invalid');
