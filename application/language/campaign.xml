@@ -457,5 +457,21 @@
                 <seg>Show big photo</seg>
             </tuv>
         </tu>
+		<tu tuid='Because_Your_Have_Joined'>
+            <tuv xml:lang="zh">
+                <seg>由于你已经参加或者拒绝了邀请</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>You have completed or refused the campaign,</seg>
+            </tuv>
+        </tu>
+		<tu tuid='You_Can_Not_Fill'>
+            <tuv xml:lang="zh">
+                <seg>无法填写调查前问卷</seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg>So that you can not fill in this questionnaire</seg>
+            </tuv>
+        </tu>
 	</body>
 </tmx>
