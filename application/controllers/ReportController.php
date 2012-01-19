@@ -1934,7 +1934,7 @@ function adminreportbatchreplyAction(){
 			$this->view->reportExtraInfoArray = $reportInforArray;
 			$this->view->surveyQuestionArray = $response->QuestionType;
 			$this->view->surveyArray = $response->AnswerSetType;
-			//Zend_Debug::dump($response);
+			Zend_Debug::dump($response);
 			//return;
 
 			// create phpexcel obj.
