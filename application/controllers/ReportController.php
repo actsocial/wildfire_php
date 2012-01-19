@@ -823,12 +823,12 @@ class ReportController extends MyController
 			if(!preg_match('/^image\//i', $type)?true:false) {
 				$this->view->error = "璇蜂笂浼犳纭殑鍥剧墖";
 			} else if($size > 2000000) {
-				$this->view->error = "鍥剧墖涓嶅緱瓒呰繃2M";
+				$this->view->error = "鍥剧墖涓嶅緱瓒呰�?M";
 			} else {
 				$tmpfile = $imgfile['tmp_name'];
 							  if ($tmpfile && is_uploaded_file($tmpfile)) {
 				$file = fopen($tmpfile, "rb");
-				//$imgdata = bin2hex(fread($file,$size)); //bin2hex()灏嗕簩杩涘埗鏁版嵁杞崲鎴愬崄鍏繘鍒惰〃绀�
+				//$imgdata = bin2hex(fread($file,$size)); //bin2hex()灏嗕簩杩涘埗鏁版嵁杞崲鎴愬崄鍏繘鍒惰〃绀�?
 				$imgdata = fread($file,$size);
 				fclose($file);
 				// save to db
@@ -1934,8 +1934,8 @@ function adminreportbatchreplyAction(){
 			$this->view->reportExtraInfoArray = $reportInforArray;
 			$this->view->surveyQuestionArray = $response->QuestionType;
 			$this->view->surveyArray = $response->AnswerSetType;
-			Zend_Debug::dump($response);
-			die;
+			//Zend_Debug::dump($response);
+			//die;
 
 			// create phpexcel obj.
 			require_once 'PHPExcel.php';
@@ -2068,7 +2068,7 @@ function adminreportbatchreplyAction(){
 					// print answers from ws
 					for($i = 0; $i<count($tag); $i++){
 						if(isset($temp[$tag[$i]])){
-							$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, $temp[$tag[$i]]);
+							$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, "\""+$temp[$tag[$i]]+"\"");
 						}
 						$columnNumber++;
 					}
@@ -2118,6 +2118,7 @@ function adminreportbatchreplyAction(){
 					if(isset($survey->AnswerType->AnswerText) && is_array($survey->AnswerType->AnswerText) && !empty($survey->AnswerType->AnswerText)){
 						foreach($surveys->AnswerType->AnswerText as $text):
 							$temp[$text] =  "1";
+
 						endforeach;
 					}else{
 						if(array_key_exists($surveys->AnswerType->QuestionId, $textQuestionArray)){
@@ -2131,7 +2132,7 @@ function adminreportbatchreplyAction(){
 				// print answers from ws
 				for($i = 0; $i<count($tag); $i++){
 					if(isset($temp[$tag[$i]])){
-						$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, $temp[$tag[$i]]);
+						$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, "\""+$temp[$tag[$i]]+"\"");
 					}
 					$columnNumber++;
 				}
