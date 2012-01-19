@@ -1783,6 +1783,7 @@ function adminreportbatchreplyAction(){
 	
 	public function admindownloadreportAction(){
 		ini_set('display_errors', 1);
+		$frontController = Zend_Controller_Front::getInstance();
 		$frontController->throwExceptions(true);
 		$this->_helper->layout->disableLayout();
 		//post
