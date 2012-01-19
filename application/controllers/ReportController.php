@@ -1782,6 +1782,7 @@ function adminreportbatchreplyAction(){
 	}
 	
 	public function admindownloadreportAction(){
+		$frontController->throwExceptions(true);
 		$this->_helper->layout->disableLayout();
 		//post
 		if($this->_request->isPost()){
