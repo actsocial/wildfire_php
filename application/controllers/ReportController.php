@@ -1782,6 +1782,7 @@ function adminreportbatchreplyAction(){
 	}
 	
 	public function admindownloadreportAction(){
+		ini_set('display_errors', 1);
 		$frontController->throwExceptions(true);
 		$this->_helper->layout->disableLayout();
 		//post
