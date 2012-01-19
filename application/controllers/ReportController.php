@@ -1935,7 +1935,7 @@ function adminreportbatchreplyAction(){
 			$this->view->surveyQuestionArray = $response->QuestionType;
 			$this->view->surveyArray = $response->AnswerSetType;
 			Zend_Debug::dump($response);
-			//return;
+			die;
 
 			// create phpexcel obj.
 			require_once 'PHPExcel.php';
