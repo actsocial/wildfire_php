@@ -57,7 +57,7 @@ class ConsumerContactForm extends Zend_Form
 		$recipients_name->setLabel($this->getView()->translate('CONTACT INFORMATION_RECIPIENTS_NAME'))
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
-		->addValidators(array(array('StringLength', false, array(1, 20)),));
+		->addValidators(array(array('StringLength', false, array(1, 50)),));
 
 		$address1 = new Zend_Form_Element_Textarea('address1');
 		$address1->setLabel($this->getView()->translate('CONTACT INFORMATION_ADDRESS1'))
