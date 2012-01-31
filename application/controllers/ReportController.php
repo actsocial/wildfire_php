@@ -2065,13 +2065,19 @@ function adminreportbatchreplyAction(){
 							}
 						}
 					}
+                    
+
 					// print answers from ws
 					for($i = 0; $i<count($tag); $i++){
 						if(isset($temp[$tag[$i]])){
-							$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, "\""+$temp[$tag[$i]]+"\"");
+							$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, "\"".$temp[$tag[$i]]."\"");
+                            //Zend_Debug::dump($i); 
+                            //Zend_Debug::dump($temp[$tag[$i]]);
+                            //Zend_Debug::dump("\"".$temp[$tag[$i]]."\"");
 						}
 						$columnNumber++;
 					}
+                    //die;
 					// print user extra info
 					foreach($this->view->reportExtraInfoArray[$surveys->AccessCode] as $reportExtraInfo):
 						if(isset($reportExtraInfo)){
