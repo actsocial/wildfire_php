@@ -823,12 +823,12 @@ class ReportController extends MyController
 			if(!preg_match('/^image\//i', $type)?true:false) {
 				$this->view->error = "璇蜂笂浼犳纭殑鍥剧墖";
 			} else if($size > 2000000) {
-				$this->view->error = "鍥剧墖涓嶅緱瓒呰�?M";
+				$this->view->error = "鍥剧墖涓嶅緱瓒呰�?M";
 			} else {
 				$tmpfile = $imgfile['tmp_name'];
 							  if ($tmpfile && is_uploaded_file($tmpfile)) {
 				$file = fopen($tmpfile, "rb");
-				//$imgdata = bin2hex(fread($file,$size)); //bin2hex()灏嗕簩杩涘埗鏁版嵁杞崲鎴愬崄鍏繘鍒惰〃绀�?
+				//$imgdata = bin2hex(fread($file,$size)); //bin2hex()灏嗕簩杩涘埗鏁版嵁杞崲鎴愬崄鍏繘鍒惰〃绀�?
 				$imgdata = fread($file,$size);
 				fclose($file);
 				// save to db
@@ -1786,6 +1786,7 @@ function adminreportbatchreplyAction(){
 		$frontController = Zend_Controller_Front::getInstance();
 		$frontController->throwExceptions(true);
 		$this->_helper->layout->disableLayout();
+		$reportInforArray = array();
 		//post
 		if($this->_request->isPost()){
 			$formData = $this->_request->getPost();
@@ -1807,7 +1808,7 @@ function adminreportbatchreplyAction(){
 				->where('report.accesscode in ('.substr($accessCodeString,0,strlen($accessCodeString)-1).")")
 				->where("report.state = 'APPROVED'")
 				->limit(0);
-				$reportInforArray = array();
+				
 				$accessCodeArray = $db->fetchAll($selectAccessCode);
 				foreach($accessCodeArray as $accessCode):
 					array_push($accessCodeList,$accessCode['accesscode']);
@@ -1884,7 +1885,7 @@ function adminreportbatchreplyAction(){
 						->where('report.campaign_id = ?',$formData['campaign_id'])
 						->where("report.state = 'APPROVED'")
 						->limit(0);
-						$reportInforArray = array();
+						
 						$accessCodeArray = $db->fetchAll($selectAccessCode);
 						foreach($accessCodeArray as $accessCode):
 							array_push($accessCodeList,$accessCode['accesscode']);
