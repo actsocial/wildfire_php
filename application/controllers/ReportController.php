@@ -2070,8 +2070,11 @@ function adminreportbatchreplyAction(){
 
 					// print answers from ws
 					for($i = 0; $i<count($tag); $i++){
-						if(isset($temp[$tag[$i]])){
-							$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, "\"".$temp[$tag[$i]]."\"");
+						if(isset($temp[$tag[$i]])){ 
+                            if($temp[$tag[$i]]=="1" ||$temp[$tag[$i]]=="0" )
+                                $objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, $temp[$tag[$i]]);
+                            else
+                                $objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, "\"".$temp[$tag[$i]]."\"");
                             //Zend_Debug::dump($i); 
                             //Zend_Debug::dump($temp[$tag[$i]]);
                             //Zend_Debug::dump("\"".$temp[$tag[$i]]."\"");
@@ -2139,7 +2142,7 @@ function adminreportbatchreplyAction(){
 				// print answers from ws
 				for($i = 0; $i<count($tag); $i++){
 					if(isset($temp[$tag[$i]])){
-						$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, "\""+$temp[$tag[$i]]+"\"");
+						$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, "\"".$temp[$tag[$i]]."\"");
 					}
 					$columnNumber++;
 				}
