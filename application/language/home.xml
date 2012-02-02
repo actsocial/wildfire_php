@@ -834,6 +834,15 @@ Each Report = Up to 500 Points]]></seg>
 				<seg> Spark Campaign! </seg>
 			</tuv>
 		</tu>
+		
+		<tu tuid='You_Are_Invited_3'>
+			<tuv xml:lang="zh">
+				<seg>任务！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Spark Mission! </seg>
+			</tuv>
+		</tu>
 				
 		<tu tuid='You_Are_Joined'>
 			<tuv xml:lang="zh">
