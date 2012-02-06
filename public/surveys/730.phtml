@@ -66,7 +66,7 @@
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -76,7 +76,7 @@
 <div id="mainzone-inner">
 
 
-<input type="hidden" name="id" value="6yemraAnbJyC" id="id" />
+<input type="hidden" name="id" value="" id="id" />
 <input type="hidden" name="theme" value="wildfire" id="theme" />
 <input type="hidden" name="surveyId" value="6yemraAnbJyC"/>
 
@@ -118,22 +118,22 @@
 <input type="hidden" name="answers[13651].id" value="" id="answers[13651].id" />
 <ul>
 	<li>
-			<input group="13651" type="radio" id="13651_0" name="answers[13651].value" value="11414"  class="selection question_radio_13651"  />		<label for="13651_0">是的，一个月超过两次</label>
+			<input group="13651" type="radio" id="13651_0" name="answers[13651].value" value="11414"  class="selection question_radio_13651" onclick="showOrHide1()" />		<label for="13651_0">是的，一个月超过两次</label>
 	</li>
 	<li>
-			<input group="13651" type="radio" id="13651_1" name="answers[13651].value" value="11415"  class="selection question_radio_13651"  />		<label for="13651_1">是的，大概半个月喝一次</label>
+			<input group="13651" type="radio" id="13651_1" name="answers[13651].value" value="11415"  class="selection question_radio_13651" onclick="showOrHide1()" />		<label for="13651_1">是的，大概半个月喝一次</label>
 	</li>
 	<li>
-			<input group="13651" type="radio" id="13651_2" name="answers[13651].value" value="11416"  class="selection question_radio_13651"  />		<label for="13651_2">是的，一个月一次</label>
+			<input group="13651" type="radio" id="13651_2" name="answers[13651].value" value="11416"  class="selection question_radio_13651" onclick="showOrHide1()" />		<label for="13651_2">是的，一个月一次</label>
 	</li>
 	<li>
-			<input group="13651" type="radio" id="13651_3" name="answers[13651].value" value="11417"  class="selection question_radio_13651"  />		<label for="13651_3">是的，但是少于每月一次</label>
+			<input group="13651" type="radio" id="13651_3" name="answers[13651].value" value="11417"  class="selection question_radio_13651" onclick="showOrHide1()" />		<label for="13651_3">是的，但是少于每月一次</label>
 	</li>
 	<li>
-			<input group="13651" type="radio" id="13651_4" name="answers[13651].value" value="11418"  class="selection question_radio_13651"  />		<label for="13651_4">没喝过，但是我想尝试一下</label>
+			<input group="13651" type="radio" id="13651_4" name="answers[13651].value" value="11418"  class="selection question_radio_13651" onclick="showOrHide1()" />		<label for="13651_4">没喝过，但是我想尝试一下</label>
 	</li>
 	<li>
-			<input group="13651" type="radio" id="13651_5" name="answers[13651].value" value="11419"  class="selection question_radio_13651"  />		<label for="13651_5">没喝过，我不喜欢葡萄酒</label>
+			<input group="13651" type="radio" id="13651_5" name="answers[13651].value" value="11419"  class="selection question_radio_13651" onclick="showOrHide1()"  />		<label for="13651_5">没喝过，我不喜欢葡萄酒</label>
 	</li>
 </ul>
  </td>
@@ -145,11 +145,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide1(){
+	if(document.getElementById("13651_0").checked||document.getElementById("13651_1").checked||document.getElementById("13651_2").checked||document.getElementById("13651_3").checked){
+		document.getElementById("q_2987").style.display="";
+	}else{
+		document.getElementById("q_2987").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -250,22 +252,22 @@
 <input type="hidden" name="answers[13653].id" value="" id="answers[13653].id" />
 <ul>
 	<li>
-			<input group="13653" type="radio" id="13653_0" name="answers[13653].value" value="11426"  class="selection question_radio_13653"  />		<label for="13653_0">啤酒</label>
+			<input group="13653" type="radio" id="13653_0" name="answers[13653].value" value="11426"  class="selection question_radio_13653" onclick="showOrHide2()" />		<label for="13653_0">啤酒</label>
 	</li>
 	<li>
-			<input group="13653" type="radio" id="13653_1" name="answers[13653].value" value="11427"  class="selection question_radio_13653"  />		<label for="13653_1">白酒</label>
+			<input group="13653" type="radio" id="13653_1" name="answers[13653].value" value="11427"  class="selection question_radio_13653" onclick="showOrHide2()" />		<label for="13653_1">白酒</label>
 	</li>
 	<li>
-			<input group="13653" type="radio" id="13653_2" name="answers[13653].value" value="11428"  class="selection question_radio_13653"  />		<label for="13653_2">其他中国的酒（如黄酒等）</label>
+			<input group="13653" type="radio" id="13653_2" name="answers[13653].value" value="11428"  class="selection question_radio_13653" onclick="showOrHide2()" />		<label for="13653_2">其他中国的酒（如黄酒等）</label>
 	</li>
 	<li>
-			<input group="13653" type="radio" id="13653_3" name="answers[13653].value" value="11429"  class="selection question_radio_13653"  />		<label for="13653_3">威士忌</label>
+			<input group="13653" type="radio" id="13653_3" name="answers[13653].value" value="11429"  class="selection question_radio_13653" onclick="showOrHide2()" />		<label for="13653_3">威士忌</label>
 	</li>
 	<li>
-			<input group="13653" type="radio" id="13653_4" name="answers[13653].value" value="11430"  class="selection question_radio_13653"  />		<label for="13653_4">伏特加</label>
+			<input group="13653" type="radio" id="13653_4" name="answers[13653].value" value="11430"  class="selection question_radio_13653" onclick="showOrHide2()" />		<label for="13653_4">伏特加</label>
 	</li>
 	<li>
-			<input group="13653" type="radio" id="13653_5" name="answers[13653].value" value="11431"  class="selection question_radio_13653"  />		<label for="13653_5">其他（请详述）</label>
+			<input group="13653" type="radio" id="13653_5" name="answers[13653].value" value="11431"  class="selection question_radio_13653"  onclick="showOrHide2()" />		<label for="13653_5">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -277,11 +279,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide2(){
+	if(document.getElementById("13653_5").checked){
+		document.getElementById("q_2644").style.display="";
+	}else{
+		document.getElementById("q_2644").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -294,7 +298,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_2644" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_2644" style="margin-bottom:0px; display:none" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -328,7 +332,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_2987" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_2987" style="margin-bottom:0px; display:none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -380,7 +384,7 @@
 			<input group="13655" class="question_radio_13655 selection" type="checkbox" id="13655_7" name="answers[13655].value" value="11439" 	onclick=" "/>		<label for="13655_7">我不记得了</label>
 	</li>
 	<li>
-			<input group="13655" class="question_radio_13655 selection" type="checkbox" id="13655_8" name="answers[13655].value" value="11440" 	onclick=" "/>		<label for="13655_8">其他（请详述）</label>
+			<input group="13655" class="question_radio_13655 selection" type="checkbox" id="13655_8" name="answers[13655].value" value="11440" 	onclick="showOrHide3() "/>		<label for="13655_8">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -391,11 +395,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide3(){
+	if(document.getElementById("13655_8").checked){
+		document.getElementById("q_3003").style.display="";
+	}else if(!document.getElementById("13655_8").checked){
+		document.getElementById("q_3003").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -408,7 +414,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3003" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3003" style="margin-bottom:0px; display:none" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -538,31 +544,31 @@
 <input type="hidden" name="answers[13658].id" value="" id="answers[13658].id" />
 <ul>
 	<li>
-			<input group="13658" type="radio" id="13658_0" name="answers[13658].value" value="11448"  class="selection question_radio_13658"  />		<label for="13658_0">中国葡萄酒</label>
+			<input group="13658" type="radio" id="13658_0" name="answers[13658].value" value="11448"  class="selection question_radio_13658"onclick="showOrHide4()"  />		<label for="13658_0">中国葡萄酒</label>
 	</li>
 	<li>
-			<input group="13658" type="radio" id="13658_1" name="answers[13658].value" value="11449"  class="selection question_radio_13658"  />		<label for="13658_1">澳大利亚葡萄酒</label>
+			<input group="13658" type="radio" id="13658_1" name="answers[13658].value" value="11449"  class="selection question_radio_13658" onclick="showOrHide4()" />		<label for="13658_1">澳大利亚葡萄酒</label>
 	</li>
 	<li>
-			<input group="13658" type="radio" id="13658_2" name="answers[13658].value" value="11450"  class="selection question_radio_13658"  />		<label for="13658_2">西班牙葡萄酒</label>
+			<input group="13658" type="radio" id="13658_2" name="answers[13658].value" value="11450"  class="selection question_radio_13658" onclick="showOrHide4()" />		<label for="13658_2">西班牙葡萄酒</label>
 	</li>
 	<li>
-			<input group="13658" type="radio" id="13658_3" name="answers[13658].value" value="11451"  class="selection question_radio_13658"  />		<label for="13658_3">意大利葡萄酒</label>
+			<input group="13658" type="radio" id="13658_3" name="answers[13658].value" value="11451"  class="selection question_radio_13658" onclick="showOrHide4()" />		<label for="13658_3">意大利葡萄酒</label>
 	</li>
 	<li>
-			<input group="13658" type="radio" id="13658_4" name="answers[13658].value" value="11452"  class="selection question_radio_13658"  />		<label for="13658_4">法国葡萄酒</label>
+			<input group="13658" type="radio" id="13658_4" name="answers[13658].value" value="11452"  class="selection question_radio_13658"onclick="showOrHide4()"  />		<label for="13658_4">法国葡萄酒</label>
 	</li>
 	<li>
-			<input group="13658" type="radio" id="13658_5" name="answers[13658].value" value="11453"  class="selection question_radio_13658"  />		<label for="13658_5">南美葡萄酒 (智利， 阿根廷...)</label>
+			<input group="13658" type="radio" id="13658_5" name="answers[13658].value" value="11453"  class="selection question_radio_13658" onclick="showOrHide4()" />		<label for="13658_5">南美葡萄酒 (智利， 阿根廷...)</label>
 	</li>
 	<li>
-			<input group="13658" type="radio" id="13658_6" name="answers[13658].value" value="11454"  class="selection question_radio_13658"  />		<label for="13658_6">南非葡萄酒</label>
+			<input group="13658" type="radio" id="13658_6" name="answers[13658].value" value="11454"  class="selection question_radio_13658" onclick="showOrHide4()" />		<label for="13658_6">南非葡萄酒</label>
 	</li>
 	<li>
-			<input group="13658" type="radio" id="13658_7" name="answers[13658].value" value="11455"  class="selection question_radio_13658"  />		<label for="13658_7">我不太清楚</label>
+			<input group="13658" type="radio" id="13658_7" name="answers[13658].value" value="11455"  class="selection question_radio_13658" onclick="showOrHide4()" />		<label for="13658_7">我不太清楚</label>
 	</li>
 	<li>
-			<input group="13658" type="radio" id="13658_8" name="answers[13658].value" value="11456"  class="selection question_radio_13658"  />		<label for="13658_8">其他（请详述）</label>
+			<input group="13658" type="radio" id="13658_8" name="answers[13658].value" value="11456"  class="selection question_radio_13658"  onclick="showOrHide4()" />		<label for="13658_8">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -574,11 +580,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide4(){
+	if(document.getElementById("13658_8").checked){
+		document.getElementById("q_3004").style.display="";
+	}else{
+		document.getElementById("q_3004").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -591,7 +599,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3004" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3004" style="margin-bottom:0px; display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -647,22 +655,22 @@
 <input type="hidden" name="answers[13660].id" value="" id="answers[13660].id" />
 <ul>
 	<li>
-			<input group="13660" type="radio" id="13660_0" name="answers[13660].value" value="11520"  class="selection question_radio_13660"  />		<label for="13660_0">有名的品牌</label>
+			<input group="13660" type="radio" id="13660_0" name="answers[13660].value" value="11520"  class="selection question_radio_13660" onclick="showOrHide5()" />		<label for="13660_0">有名的品牌</label>
 	</li>
 	<li>
-			<input group="13660" type="radio" id="13660_1" name="answers[13660].value" value="11521"  class="selection question_radio_13660"  />		<label for="13660_1">价格合适</label>
+			<input group="13660" type="radio" id="13660_1" name="answers[13660].value" value="11521"  class="selection question_radio_13660" onclick="showOrHide5()" />		<label for="13660_1">价格合适</label>
 	</li>
 	<li>
-			<input group="13660" type="radio" id="13660_2" name="answers[13660].value" value="11522"  class="selection question_radio_13660"  />		<label for="13660_2">朋友及家人的推荐</label>
+			<input group="13660" type="radio" id="13660_2" name="answers[13660].value" value="11522"  class="selection question_radio_13660" onclick="showOrHide5()" />		<label for="13660_2">朋友及家人的推荐</label>
 	</li>
 	<li>
-			<input group="13660" type="radio" id="13660_3" name="answers[13660].value" value="11523"  class="selection question_radio_13660"  />		<label for="13660_3">广告及品牌形象</label>
+			<input group="13660" type="radio" id="13660_3" name="answers[13660].value" value="11523"  class="selection question_radio_13660" onclick="showOrHide5()" />		<label for="13660_3">广告及品牌形象</label>
 	</li>
 	<li>
-			<input group="13660" type="radio" id="13660_4" name="answers[13660].value" value="11524"  class="selection question_radio_13660"  />		<label for="13660_4">味道不错</label>
+			<input group="13660" type="radio" id="13660_4" name="answers[13660].value" value="11524"  class="selection question_radio_13660" onclick="showOrHide5()" />		<label for="13660_4">味道不错</label>
 	</li>
 	<li>
-			<input group="13660" type="radio" id="13660_5" name="answers[13660].value" value="11525"  class="selection question_radio_13660"  />		<label for="13660_5">其他（请详述）</label>
+			<input group="13660" type="radio" id="13660_5" name="answers[13660].value" value="11525"  class="selection question_radio_13660"  onclick="showOrHide5()" />		<label for="13660_5">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -674,11 +682,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide5(){
+	if(document.getElementById("13660_5").checked){
+		document.getElementById("q_2832").style.display="";
+	}else{
+		document.getElementById("q_2832").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -691,7 +701,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_2832" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_2832" style="margin-bottom:0px; display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -867,7 +877,7 @@
 			<input group="13664" class="question_radio_13664 selection" type="checkbox" id="13664_5" name="answers[13664].value" value="11473" 	onclick=" "/>		<label for="13664_5">卢瓦尔河</label>
 	</li>
 	<li>
-			<input group="13664" class="question_radio_13664 selection" type="checkbox" id="13664_6" name="answers[13664].value" value="11474" 	onclick=" "/>		<label for="13664_6">其他（请详述）</label>
+			<input group="13664" class="question_radio_13664 selection" type="checkbox" id="13664_6" name="answers[13664].value" value="11474" 	onclick="showOrHide6 "/>		<label for="13664_6">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -878,11 +888,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide6(){
+	if(document.getElementById("13664_6").checked){
+		document.getElementById("q_3005").style.display="";
+	}else if(!document.getElementById("13664_6").checked){
+		document.getElementById("q_3005").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -895,7 +907,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3005" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3005" style="margin-bottom:0px; display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -966,7 +978,7 @@
 			<input group="13666" type="radio" id="13666_4" name="answers[13666].value" value="11479"  class="selection question_radio_13666"  />		<label for="13666_4">电台</label>
 	</li>
 	<li>
-			<input group="13666" type="radio" id="13666_5" name="answers[13666].value" value="11480"  class="selection question_radio_13666"  />		<label for="13666_5">其他</label>
+			<input group="13666" type="radio" id="13666_5" name="answers[13666].value" value="11480"  class="selection question_radio_13666"  onclick="showOrHide7" />		<label for="13666_5">其他</label>
 	</li>
 </ul>
  </td>
@@ -978,11 +990,14 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide7(){
+	if(document.getElementById("13666_5").checked){
+		document.getElementById("q_3006").style.display="";
+	}else{
+		document.getElementById("q_3006").style.display="none";
+	}
+}
+
 </script>
 				</td>
 			</tr>
@@ -995,7 +1010,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3006" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3006" style="margin-bottom:0px; display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -1069,7 +1084,7 @@
 			<input group="13668" class="question_radio_13668 selection" type="checkbox" id="13668_3" name="answers[13668].value" value="11484" 	onclick=" "/>		<label for="13668_3">是的，在饭店，酒吧或迪厅里</label>
 	</li>
 	<li>
-			<input group="13668" class="question_radio_13668 selection" type="checkbox" id="13668_4" name="answers[13668].value" value="11485" 	onclick=" "/>		<label for="13668_4">是的，在其他地方（请详述）</label>
+			<input group="13668" class="question_radio_13668 selection" type="checkbox" id="13668_4" name="answers[13668].value" value="11485" 	onclick="showOrHide8() "/>		<label for="13668_4">是的，在其他地方（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -1080,11 +1095,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide8(){
+	if(document.getElementById("13668_4").checked){
+		document.getElementById("q_2646").style.display="";
+	}else if(!document.getElementById("13668_4").checked){
+		document.getElementById("q_2646").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -1097,7 +1114,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_2646" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_2646" style="margin-bottom:0px; display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -1342,7 +1359,7 @@
 			<input group="13673" type="radio" id="13673_0" name="answers[13673].value" value="11501"  class="selection question_radio_13673"  />		<label for="13673_0">是的，我愿意</label>
 	</li>
 	<li>
-			<input group="13673" type="radio" id="13673_1" name="answers[13673].value" value="11502"  class="selection question_radio_13673"  />		<label for="13673_1">是的，我愿意，我还想了解其他酒类（请详述）</label>
+			<input group="13673" type="radio" id="13673_1" name="answers[13673].value" value="11502"  class="selection question_radio_13673"  onclick="showOrHide9" />		<label for="13673_1">是的，我愿意，我还想了解其他酒类（请详述）</label>
 	</li>
 	<li>
 			<input group="13673" type="radio" id="13673_2" name="answers[13673].value" value="11503"  class="selection question_radio_13673"  />		<label for="13673_2">不，谢谢</label>
@@ -1357,11 +1374,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide9(){
+	if(document.getElementById("13673_1").checked){
+		document.getElementById("q_3010").style.display="";
+	}else{
+		document.getElementById("q_3010").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -1374,7 +1393,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3010" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3010" style="margin-bottom:0px; display:none" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -1656,7 +1675,7 @@
 <br/>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -1978,10 +1997,9 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    	var html = '提交失败：必填的题目不能为空';
+	        jQuery("#check-alert-dialog .content").html(html);
+	        jQuery("#check-alert-dialog").dialog('open');
 	    }
 		return fillMandatory;
 	}
@@ -2010,10 +2028,9 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			var html = '提交失败：不能提交空报告';
+		    jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
@@ -2174,7 +2191,6 @@
 <!--
 // <![CDATA[
 
-Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
