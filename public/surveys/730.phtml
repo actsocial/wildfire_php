@@ -882,8 +882,13 @@ function showOrHide5(){
 	<li>
 			<input group="13664" class="question_radio_13664 selection" type="checkbox" id="13664_5" name="answers[13664].value" value="11473" 	onclick=" "/>		<label for="13664_5">卢瓦尔河</label>
 	</li>
+	
 	<li>
-			<input group="13664" class="question_radio_13664 selection" type="checkbox" id="13664_6" name="answers[13664].value" value="11474" 	onclick="showOrHide6() "/>		<label for="13664_6">其他（请详述）</label>
+			<input group="13664" class="question_radio_13664 selection" type="checkbox" id="13664_6" name="answers[13664].value" value="11534" 	onclick=" "/>		<label for="13664_6">以上都没听说过</label>
+	</li>
+	
+	<li>
+			<input group="13664" class="question_radio_13664 selection" type="checkbox" id="13664_7" name="answers[13664].value" value="11474" 	onclick="showOrHide6() "/>		<label for="13664_7">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -895,9 +900,9 @@ function showOrHide5(){
   </table>
 <script language="JavaScript" type="text/javascript">
 function showOrHide6(){
-	if(document.getElementById("13664_6").checked){
+	if(document.getElementById("13664_7").checked){
 		document.getElementById("q_3005").style.display="";
-	}else if(!document.getElementById("13664_6").checked){
+	}else if(!document.getElementById("13664_7").checked){
 		document.getElementById("q_3005").style.display="none";
 	}
 }
