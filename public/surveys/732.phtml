@@ -66,7 +66,7 @@
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -76,7 +76,7 @@
 <div id="mainzone-inner">
 
 
-<input type="hidden" name="id" value="dPKTUD99lXS5" id="id" />
+<input type="hidden" name="id" value="" id="id" />
 <input type="hidden" name="theme" value="wildfire" id="theme" />
 <input type="hidden" name="surveyId" value="dPKTUD99lXS5"/>
 
@@ -1068,7 +1068,7 @@
 <input type="hidden" name="answers[13737].id" value="" id="answers[13737].id" />
 
 	<select group="13737" class="selection" id="question_13737" name="answers[13737].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="11707" style=""  >博士</option>
 <option value="11708" style=""  >研究生</option>
 <option value="11709" style=""  >本科</option>
@@ -1177,7 +1177,7 @@
 <input type="hidden" name="answers[13739].id" value="" id="answers[13739].id" />
 
 	<select group="13739" class="selection" id="question_13739" name="answers[13739].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="11597" style=""  >北京市</option>
 <option value="11647" style=""  >上海市</option>
 <option value="11612" style=""  >广州市</option>
@@ -1321,7 +1321,7 @@
 <input type="hidden" name="answers[13740].id" value="" id="answers[13740].id" />
 
 	<select group="13740" class="selection" id="question_13740" name="answers[13740].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="11222" style=""  >1960以前</option>
 <option value="11223" style=""  >1961</option>
 <option value="11224" style=""  >1962</option>
@@ -1498,7 +1498,7 @@
 <br/>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -1820,11 +1820,9 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
-	    }
+	    	var html = '提交失败：必填的题目不能为空';
+	        jQuery("#check-alert-dialog .content").html(html);
+	        jQuery("#check-alert-dialog").dialog('open');	    }
 		return fillMandatory;
 	}
 	
@@ -1852,10 +1850,9 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			var html = '提交失败：不能提交空报告';
+		    jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
@@ -2051,7 +2048,6 @@ var myrules = {
 
 Behaviour.register(myrules);
 
-Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
