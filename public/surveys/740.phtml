@@ -66,7 +66,7 @@
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -261,10 +261,10 @@
 <input type="hidden" name="answers[14034].id" value="" id="answers[14034].id" />
 <ul>
 	<li>
-			<input group="14034" type="radio" id="14034_0" name="answers[14034].value" value="11899"  class="selection question_radio_14034"  />		<label for="14034_0">是</label>
+			<input group="14034" type="radio" id="14034_0" name="answers[14034].value" value="11899"  class="selection question_radio_14034" onclick="showOrHide1()" />		<label for="14034_0">是</label>
 	</li>
 	<li>
-			<input group="14034" type="radio" id="14034_1" name="answers[14034].value" value="11900"  class="selection question_radio_14034"  />		<label for="14034_1">否</label>
+			<input group="14034" type="radio" id="14034_1" name="answers[14034].value" value="11900"  class="selection question_radio_14034" onclick="showOrHide1()"  />		<label for="14034_1">否</label>
 	</li>
 </ul>
  </td>
@@ -276,11 +276,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide1(){
+	if(document.getElementById("14034_1").checked){
+		document.getElementById("q_3084").style.display="";
+	}else{
+		document.getElementById("q_3084").style.display="none";
+	}
+} 
 </script>
 				</td>
 			</tr>
@@ -293,7 +295,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3084" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3084" style="margin-bottom:0px;" class="question-odd question-area" style="display:none">
 	  	
 		<table class="question-table">
 			<tr>
@@ -394,19 +396,19 @@
 <input type="hidden" name="answers[14037].id" value="" id="answers[14037].id" />
 <ul>
 	<li>
-			<input group="14037" type="radio" id="14037_0" name="answers[14037].value" value="11903"  class="selection question_radio_14037"  />		<label for="14037_0">他们主要提供减肥产品</label>
+			<input group="14037" type="radio" id="14037_0" name="answers[14037].value" value="11903"  class="selection question_radio_14037" onclick="showOrHide()"  />		<label for="14037_0">他们主要提供减肥产品</label>
 	</li>
 	<li>
-			<input group="14037" type="radio" id="14037_1" name="answers[14037].value" value="11904"  class="selection question_radio_14037"  />		<label for="14037_1">他们提供瘦身食谱</label>
+			<input group="14037" type="radio" id="14037_1" name="answers[14037].value" value="11904"  class="selection question_radio_14037" onclick="showOrHide()"  />		<label for="14037_1">他们提供瘦身食谱</label>
 	</li>
 	<li>
-			<input group="14037" type="radio" id="14037_2" name="answers[14037].value" value="11905"  class="selection question_radio_14037"  />		<label for="14037_2">他们以科学的方法为基础提供在线瘦身指导服务</label>
+			<input group="14037" type="radio" id="14037_2" name="answers[14037].value" value="11905"  class="selection question_radio_14037" onclick="showOrHide()"  />		<label for="14037_2">他们以科学的方法为基础提供在线瘦身指导服务</label>
 	</li>
 	<li>
-			<input group="14037" type="radio" id="14037_3" name="answers[14037].value" value="11906"  class="selection question_radio_14037"  />		<label for="14037_3">我不太清楚</label>
+			<input group="14037" type="radio" id="14037_3" name="answers[14037].value" value="11906"  class="selection question_radio_14037" onclick="showOrHide()"  />		<label for="14037_3">我不太清楚</label>
 	</li>
 	<li>
-			<input group="14037" type="radio" id="14037_4" name="answers[14037].value" value="11907"  class="selection question_radio_14037"  />		<label for="14037_4">其他（请详述）</label>
+			<input group="14037" type="radio" id="14037_4" name="answers[14037].value" value="11907"  class="selection question_radio_14037" onclick="showOrHide()"  />		<label for="14037_4">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -418,11 +420,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide(){
+	if(document.getElementById("14037_4").checked){
+		document.getElementById("q_3087").style.display="";
+	}else{
+		document.getElementById("q_3087").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -435,7 +439,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3087" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3087" style="margin-bottom:0px;" class="question-even question-area" style="display:none">
 	  	
 		<table class="question-table">
 			<tr>
@@ -540,7 +544,7 @@
 <br/>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -862,10 +866,9 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    	var html = '提交失败：必填的题目不能为空';
+	        jQuery("#check-alert-dialog .content").html(html);
+	        jQuery("#check-alert-dialog").dialog('open');
 	    }
 		return fillMandatory;
 	}
@@ -894,10 +897,9 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			var html = '提交失败：不能提交空报告';
+		    jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
@@ -1058,7 +1060,6 @@
 <!--
 // <![CDATA[
 
-Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
