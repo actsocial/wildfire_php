@@ -22,6 +22,7 @@ class CampaignInvitationController extends MyController {
 		$select->where ( 'campaign.expire_date > ?', $currentTime );
 		$select->join ( 'campaign_invitation', 'campaign.id = campaign_invitation.campaign_id' );
 		$select->join ( 'campaign_participation', 'campaign_invitation.id = campaign_participation.campaign_invitation_id', 'accept_date' );
+		$select->where("campaign_participation.state != 'COMPLETED'");
 		$this->view->activeCampaigns = $db->fetchAll ( $select );
 		
 		$select2 = $db->select ();
