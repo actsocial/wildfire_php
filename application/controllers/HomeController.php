@@ -33,6 +33,7 @@ class HomeController extends MyController
 		//$select->joinLeft('url_report','url_report.campaign_id = campaign.id and url_report.consumer_id = campaign_invitation.consumer_id ',array('url', 'state as url_state'));
 		$select->where('campaign_invitation.consumer_id = ?',$consumer->id);
 		$select->where('campaign.expire_date > ?',$currentTime);
+		$select->where('campaign_participation.state ! = "COMPLETED" ');
 		//$select->where('campaign.type = "campaign"');
 		
 		//url report 
