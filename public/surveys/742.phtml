@@ -66,7 +66,7 @@
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -76,7 +76,7 @@
 <div id="mainzone-inner">
 
 
-<input type="hidden" name="id" value="Iq9BeiMQjdCU" id="id" />
+<input type="hidden" name="id" value="" id="id" />
 <input type="hidden" name="theme" value="wildfire" id="theme" />
 <input type="hidden" name="surveyId" value="Iq9BeiMQjdCU"/>
 
@@ -175,16 +175,16 @@
 <input type="hidden" name="answers[14044].id" value="" id="answers[14044].id" />
 <ul>
 	<li>
-			<input group="14044" type="radio" id="14044_0" name="answers[14044].value" value="11917"  class="selection question_radio_14044"  />		<label for="14044_0">一般的牙刷</label>
+			<input group="14044" type="radio" id="14044_0" name="answers[14044].value" value="11917"  class="selection question_radio_14044"  onclick="showOrHide()" />		<label for="14044_0">一般的牙刷</label>
 	</li>
 	<li>
-			<input group="14044" type="radio" id="14044_1" name="answers[14044].value" value="11918"  class="selection question_radio_14044"  />		<label for="14044_1">电动牙刷</label>
+			<input group="14044" type="radio" id="14044_1" name="answers[14044].value" value="11918"  class="selection question_radio_14044"   onclick="showOrHide()"/>		<label for="14044_1">电动牙刷</label>
 	</li>
 	<li>
-			<input group="14044" type="radio" id="14044_2" name="answers[14044].value" value="11919"  class="selection question_radio_14044"  />		<label for="14044_2">声波牙刷</label>
+			<input group="14044" type="radio" id="14044_2" name="answers[14044].value" value="11919"  class="selection question_radio_14044"   onclick="showOrHide()"/>		<label for="14044_2">声波牙刷</label>
 	</li>
 	<li>
-			<input group="14044" type="radio" id="14044_3" name="answers[14044].value" value="11920"  class="selection question_radio_14044"  />		<label for="14044_3">其他（请详述）</label>
+			<input group="14044" type="radio" id="14044_3" name="answers[14044].value" value="11920"  class="selection question_radio_14044"   onclick="showOrHide()" />		<label for="14044_3">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -196,11 +196,23 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide(){
+		if(document.getElementById("14044_0").checked){
+			document.getElementById("q_3098").style.display ="";
+			document.getElementById("q_3094").style.display ="none"
+			document.getElementById("q_3095").style.display ="none"
+		}
+		if(document.getElementById("14044_1").checked){
+			document.getElementById("q_3095").style.display ="";
+			document.getElementById("q_3094").style.display ="none"
+			document.getElementById("q_3098").style.display ="none"
+		}
+		if(document.getElementById("14044_3").checked){
+			document.getElementById("q_3094").style.display ="";
+			document.getElementById("q_3095").style.display ="none"
+			document.getElementById("q_3098").style.display ="none"
+		}
+}
 </script>
 				</td>
 			</tr>
@@ -213,7 +225,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3094" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3094" style="margin-bottom:0px; display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -244,7 +256,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3095" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3095" style="margin-bottom:0px;display:none" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -318,7 +330,7 @@
 			<input group="14047" class="question_radio_14047 selection" type="checkbox" id="14047_5" name="answers[14047].value" value="11926" 	onclick=" "/>		<label for="14047_5">保证牙龈健康</label>
 	</li>
 	<li>
-			<input group="14047" class="question_radio_14047 selection" type="checkbox" id="14047_6" name="answers[14047].value" value="11927" 	onclick=" "/>		<label for="14047_6">其他（请详述）</label>
+			<input group="14047" class="question_radio_14047 selection" type="checkbox" id="14047_6" name="answers[14047].value" value="11927" 	onclick="showOrHide2() "/>		<label for="14047_6">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -329,11 +341,16 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+function showOrHide2(){
+
+	if(document.getElementById("14047_6").checked){
+		document.getElementById("q_3097").style.display="";
+	}else{
+		document.getElementById("q_3097").style.display="none";
+	}
+		
 	
-// ]]>
--->
+}
 </script>
 				</td>
 			</tr>
@@ -346,7 +363,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3097" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3097" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -377,7 +394,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3098" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3098" style="margin-bottom:0px;display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -396,10 +413,10 @@
 <input type="hidden" name="answers[14049].id" value="" id="answers[14049].id" />
 <ul>
 	<li>
-			<input group="14049" type="radio" id="14049_0" name="answers[14049].value" value="11928"  class="selection question_radio_14049"  />		<label for="14049_0">没有考虑过</label>
+			<input group="14049" type="radio" id="14049_0" name="answers[14049].value" value="11928"  class="selection question_radio_14049" onclick="showOrHide1()" />		<label for="14049_0">没有考虑过</label>
 	</li>
 	<li>
-			<input group="14049" type="radio" id="14049_1" name="answers[14049].value" value="11929"  class="selection question_radio_14049"  />		<label for="14049_1">是的，我考虑过</label>
+			<input group="14049" type="radio" id="14049_1" name="answers[14049].value" value="11929"  class="selection question_radio_14049" onclick="showOrHide1()" />		<label for="14049_1">是的，我考虑过</label>
 	</li>
 </ul>
  </td>
@@ -423,12 +440,17 @@
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
+function showOrHide1(){
+	
+	if(document.getElementById("14049_1").checked){
+		document.getElementById("q_3099").style.display="";
+	}else{
+		document.getElementById("q_3099").style.display="none";
+	}
+	
+}
 </script>
-		  <div id="q_3099" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3099" style="margin-bottom:0px;display:none" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -474,7 +496,7 @@
 			<input group="14050" class="question_radio_14050 selection" type="checkbox" id="14050_6" name="answers[14050].value" value="11936" 	onclick=" "/>		<label for="14050_6">更换刷头太贵了</label>
 	</li>
 	<li>
-			<input group="14050" class="question_radio_14050 selection" type="checkbox" id="14050_7" name="answers[14050].value" value="11937" 	onclick=" "/>		<label for="14050_7">其他（请详述）</label>
+			<input group="14050" class="question_radio_14050 selection" type="checkbox" id="14050_7" name="answers[14050].value" value="11937" 	onclick="showOrHide3() "/>		<label for="14050_7">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -485,11 +507,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide3(){
+	if(document.getElementById("14050_7").checked){
+		document.getElementById("q_2832").style.display=""
+	}else{
+		document.getElementById("q_2832").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -502,7 +526,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_2832" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_2832" style="margin-bottom:0px;display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -706,10 +730,10 @@
 <input type="hidden" name="answers[14055].id" value="" id="answers[14055].id" />
 <ul>
 	<li>
-			<input group="14055" type="radio" id="14055_0" name="answers[14055].value" value="11949"  class="selection question_radio_14055"  />		<label for="14055_0">是</label>
+			<input group="14055" type="radio" id="14055_0" name="answers[14055].value" value="11949"  class="selection question_radio_14055" onclick="showOrHide4()" />		<label for="14055_0">是</label>
 	</li>
 	<li>
-			<input group="14055" type="radio" id="14055_1" name="answers[14055].value" value="11950"  class="selection question_radio_14055"  />		<label for="14055_1">否</label>
+			<input group="14055" type="radio" id="14055_1" name="answers[14055].value" value="11950"  class="selection question_radio_14055" onclick="showOrHide4()" />		<label for="14055_1">否</label>
 	</li>
 </ul>
  </td>
@@ -721,11 +745,13 @@
 
   </table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide4(){
+	if(document.getElementById("14055_0").checked){
+		document.getElementById("q_3104").style.display="";
+	}else{
+		document.getElementById("q_3104").style.display="none";
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -738,7 +764,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3104" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3104" style="margin-bottom:0px;display:none" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -781,7 +807,7 @@
 			<input group="14056" class="question_radio_14056 selection" type="checkbox" id="14056_5" name="answers[14056].value" value="11956" 	onclick=" "/>		<label for="14056_5">牙医的推荐</label>
 	</li>
 	<li>
-			<input group="14056" class="question_radio_14056 selection" type="checkbox" id="14056_6" name="answers[14056].value" value="11957" 	onclick=" "/>		<label for="14056_6">其他（请详述）</label>
+			<input group="14056" class="question_radio_14056 selection" type="checkbox" id="14056_6" name="answers[14056].value" value="11957" 	onclick=" showOrHide5()"/>		<label for="14056_6">其他（请详述）</label>
 	</li>
 </ul>
  </td>
@@ -804,10 +830,15 @@
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
+function showOrHide5(){
+
+	if(document.getElementById("14056_6").checked){
+		document.getElementById("q_2776").style.display="";
+	}else{
+		document.getElementById("q_2776").style.display="none";
+	}
+	
+}
 </script>
 		  <div id="q_2776" style="margin-bottom:0px;" class="question-even question-area">
 	  	
@@ -890,13 +921,13 @@
 <input type="hidden" name="answers[14059].id" value="" id="answers[14059].id" />
 <ul>
 	<li>
-			<input group="14059" type="radio" id="14059_0" name="answers[14059].value" value="11958"  class="selection question_radio_14059"  />		<label for="14059_0">否</label>
+			<input group="14059" type="radio" id="14059_0" name="answers[14059].value" value="11958"  class="selection question_radio_14059" onclick="showOrHide6()" />		<label for="14059_0">否</label>
 	</li>
 	<li>
-			<input group="14059" type="radio" id="14059_1" name="answers[14059].value" value="11959"  class="selection question_radio_14059"  />		<label for="14059_1">如果可以事先尝试一下，我会考虑</label>
+			<input group="14059" type="radio" id="14059_1" name="answers[14059].value" value="11959"  class="selection question_radio_14059" onclick="showOrHide6()" />		<label for="14059_1">如果可以事先尝试一下，我会考虑</label>
 	</li>
 	<li>
-			<input group="14059" type="radio" id="14059_2" name="answers[14059].value" value="11960"  class="selection question_radio_14059"  />		<label for="14059_2">是</label>
+			<input group="14059" type="radio" id="14059_2" name="answers[14059].value" value="11960"  class="selection question_radio_14059" onclick="showOrHide6()" />		<label for="14059_2">是</label>
 	</li>
 </ul>
  </td>
@@ -920,12 +951,16 @@
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
+function showOrHide6(){
+
+	if(document.getElementById("14059_0").checked){
+		document.getElementById("q_3107").style.display="";
+	}else{
+		document.getElementById("q_3107").style.display="none";
+	}
+}
 </script>
-		  <div id="q_3107" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3107" style="margin-bottom:0px; display:none" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -1173,7 +1208,7 @@
 <br/>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -1495,10 +1530,9 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    	var html = '提交失败：必填的题目不能为空';
+	        jQuery("#check-alert-dialog .content").html(html);
+	        jQuery("#check-alert-dialog").dialog('open');
 	    }
 		return fillMandatory;
 	}
@@ -1527,10 +1561,9 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			var html = '提交失败：不能提交空报告';
+		    jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
@@ -1691,7 +1724,6 @@
 <!--
 // <![CDATA[
 
-Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
