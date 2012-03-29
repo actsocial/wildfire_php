@@ -1,0 +1,2123 @@
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	// <![CDATA[
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie > 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length > MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+	// ]]>
+	-->
+	</script>
+<div class="main-container-outer" >
+	<div id="container">
+		<div id="header" class="header" style="display: none;">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			<div class="main-logo" id="main-logo">
+				<a href="http://www.ostrakon.org" target="_blank">
+					<img src="/survey/logoImage/744" style="height:70px; width:301px" />
+				</a>
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div> <!-- header -->
+		<div id="nav" class="navigation" style="display:none;">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content" >
+ 		
+
+<div id="content" style="width:100%;">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	mandatoryElements = new Array(); 
+// ]]>
+-->
+</script>
+<div class="fillout-container">
+<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
+<div class="mainOneContent">
+
+<div style="margin-top:10px;"></div>
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
+  <div id="mainzone-top-left">
+    <div id="mainzone-top-right"></div>
+  </div>
+</div>
+<div id="mainzone">
+<div id="mainzone-inner">
+
+
+<input type="hidden" name="id" value="Rnq4ijPkOy0u" id="id" />
+<input type="hidden" name="theme" value="wildfire" id="theme" />
+<input type="hidden" name="surveyId" value="Rnq4ijPkOy0u"/>
+
+<div class="page-bar-area">
+<span id="pageBar">Page:&nbsp;</span>
+<strong class="no-answer">No Answer</strong><img class="no-answer" src="/images/no_answer.gif" align="absmiddle"/>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+
+	
+	<div id="page_0">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3110" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						倘若你现在正考虑买一辆车，你认为哪些特性对你来说是最重要的？请说出三个。
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14067].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14067].id" value="" id="answers[14067].id" />
+
+
+
+
+<span id="hint_14067">
+    Please select at most  3 values.<br>
+</span>
+<ul>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_0" name="answers[14067].value" value="11963" 	onclick="checkChanged('14067_0',3,0);  "/>		<label for="14067_0">豪华</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_1" name="answers[14067].value" value="11964" 	onclick="checkChanged('14067_1',3,0);  "/>		<label for="14067_1">设计比较运动感</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_2" name="answers[14067].value" value="11965" 	onclick="checkChanged('14067_2',3,0);  "/>		<label for="14067_2">设计比较经典</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_3" name="answers[14067].value" value="11966" 	onclick="checkChanged('14067_3',3,0);  "/>		<label for="14067_3">昂贵</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_4" name="answers[14067].value" value="11967" 	onclick="checkChanged('14067_4',3,0);  "/>		<label for="14067_4">价格合理，物有所值</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_5" name="answers[14067].value" value="11968" 	onclick="checkChanged('14067_5',3,0);  "/>		<label for="14067_5">车内装饰好看</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_6" name="answers[14067].value" value="11969" 	onclick="checkChanged('14067_6',3,0);  "/>		<label for="14067_6">比较适合男人</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_7" name="answers[14067].value" value="11970" 	onclick="checkChanged('14067_7',3,0);  "/>		<label for="14067_7">省油</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_8" name="answers[14067].value" value="11971" 	onclick="checkChanged('14067_8',3,0);  "/>		<label for="14067_8">容易驾驶</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_9" name="answers[14067].value" value="11972" 	onclick="checkChanged('14067_9',3,0);  "/>		<label for="14067_9">比较适合女人</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_10" name="answers[14067].value" value="11973" 	onclick="checkChanged('14067_10',3,0);  "/>		<label for="14067_10">方便停车</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_11" name="answers[14067].value" value="11974" 	onclick="checkChanged('14067_11',3,0);  "/>		<label for="14067_11">性能较好</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_12" name="answers[14067].value" value="11975" 	onclick="checkChanged('14067_12',3,0);  "/>		<label for="14067_12">设计比较现代</label>
+	</li>
+	<li>
+			<input group="14067" class="question_radio_14067 selection" type="checkbox" id="14067_13" name="answers[14067].value" value="11976" 	onclick="checkChanged('14067_13',3,0);  "/>		<label for="14067_13">安全</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+
+	
+		if(typeof previouslySelectedOptions == "undefined") {
+				var previouslySelectedOptions = new Array();
+		}
+				
+		if(typeof previouslySelectedOptions[14067]=="undefined") {		
+			 previouslySelectedOptions[14067] = new Array();
+						
+		}
+
+		if(typeof checkChanged=="undefined") {
+			checkChanged = function(id, max, min) {
+				var elementId = id.split("_")[0];
+				if($(id).checked == true) {				
+					previouslySelectedOptions[elementId].push(id);
+					// if there are now more elements in the array than allowed, delete the first one
+					if (previouslySelectedOptions[elementId].length > max && max != 0){
+						$(previouslySelectedOptions[elementId][0]).checked=false;
+						previouslySelectedOptions[elementId].shift();					
+					}	
+				} else {
+				   var newArray = new Array();
+				    // delete the now unselected checkbox from the array
+					for (var i = 0; i < previouslySelectedOptions[elementId].length; i++) {
+						if (previouslySelectedOptions[elementId][i] != id) {
+							newArray.push(previouslySelectedOptions[elementId][i]);
+						}
+					}
+					previouslySelectedOptions[elementId] = newArray;
+				}
+				if (previouslySelectedOptions[elementId].length < min  && min != 0) {
+					new Effect.Pulsate("hint_14067", {pulses:1, from:0.4});
+				}		
+			}
+		}
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3111" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你平常在网上或与朋友家人谈论车品牌吗？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14068].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14068].id" value="" id="answers[14068].id" />
+<ul>
+	<li>
+			<input group="14068" type="radio" id="14068_0" name="answers[14068].value" value="11977"  class="selection question_radio_14068"  />		<label for="14068_0">不谈论</label>
+	</li>
+	<li>
+			<input group="14068" type="radio" id="14068_1" name="answers[14068].value" value="11978"  class="selection question_radio_14068"  />		<label for="14068_1">谈论，我平常谈论的车品牌是：</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_14068  qc_0 radio" type="radio" name="answers[14068].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3112" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						我平常谈论的车品牌是:
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14069].id" value="" id="answers[14069].id" />
+<input type="text" name="answers[14069].value" value="" id="question_14069" group="14069" class="input-text" />
+
+<span class="error-content" id="err_answers[14069].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3113" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你通常在哪里谈论车品牌？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14070].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14070].id" value="" id="answers[14070].id" />
+<ul>
+	<li>
+			<input group="14070" type="radio" id="14070_0" name="answers[14070].value" value="11979"  class="selection question_radio_14070"  />		<label for="14070_0">我通常在网上谈论（请填写网站名称）</label>
+	</li>
+	<li>
+			<input group="14070" type="radio" id="14070_1" name="answers[14070].value" value="11980"  class="selection question_radio_14070"  />		<label for="14070_1">其他：(请填写)</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_14070  qc_0 radio" type="radio" name="answers[14070].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3114" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						网站名称
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14071].id" value="" id="answers[14071].id" />
+<input type="text" name="answers[14071].value" value="" id="question_14071" group="14071" class="input-text" />
+
+<span class="error-content" id="err_answers[14071].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2640" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						其他
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14072].id" value="" id="answers[14072].id" />
+<input type="text" name="answers[14072].value" value="" id="question_14072" group="14072" class="input-text" />
+
+<span class="error-content" id="err_answers[14072].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3115" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你的朋友在过去一年里买过车吗？如果有，什么品牌？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14073].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14073].id" value="" id="answers[14073].id" />
+<ul>
+	<li>
+			<input group="14073" type="radio" id="14073_0" name="answers[14073].value" value="11981"  class="selection question_radio_14073"  />		<label for="14073_0">没有，我的朋友在过去一年里没有买过车</label>
+	</li>
+	<li>
+			<input group="14073" type="radio" id="14073_1" name="answers[14073].value" value="11982"  class="selection question_radio_14073"  />		<label for="14073_1">有，我试过朋友的车，他的车品牌是：</label>
+	</li>
+	<li>
+			<input group="14073" type="radio" id="14073_2" name="answers[14073].value" value="11983"  class="selection question_radio_14073"  />		<label for="14073_2">有，我没有试过朋友的车，他的车品牌是：</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_14073  qc_0 radio" type="radio" name="answers[14073].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3116" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						朋友的车品牌是
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14074].id" value="" id="answers[14074].id" />
+<input type="text" name="answers[14074].value" value="" id="question_14074" group="14074" class="input-text" />
+
+<span class="error-content" id="err_answers[14074].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3117" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你在过去一年里买过车吗？如果有，什么品牌？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14075].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14075].id" value="" id="answers[14075].id" />
+<ul>
+	<li>
+			<input group="14075" type="radio" id="14075_0" name="answers[14075].value" value="11984"  class="selection question_radio_14075"  />		<label for="14075_0">没有</label>
+	</li>
+	<li>
+			<input group="14075" type="radio" id="14075_1" name="answers[14075].value" value="11985"  class="selection question_radio_14075"  />		<label for="14075_1">有，我还让朋友试过我的车，我的车品牌是：</label>
+	</li>
+	<li>
+			<input group="14075" type="radio" id="14075_2" name="answers[14075].value" value="11986"  class="selection question_radio_14075"  />		<label for="14075_2">有，我没让朋友试过我的车，我的品牌是：</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_14075  qc_0 radio" type="radio" name="answers[14075].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3118" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						我的车品牌是
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14076].id" value="" id="answers[14076].id" />
+<input type="text" name="answers[14076].value" value="" id="question_14076" group="14076" class="input-text" />
+
+<span class="error-content" id="err_answers[14076].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3119" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你或你的伴侣曾买过车吗
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14077].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14077].id" value="" id="answers[14077].id" />
+<ul>
+	<li>
+			<input group="14077" type="radio" id="14077_0" name="answers[14077].value" value="11987"  class="selection question_radio_14077"  />		<label for="14077_0">买过</label>
+	</li>
+	<li>
+			<input group="14077" type="radio" id="14077_1" name="answers[14077].value" value="11988"  class="selection question_radio_14077"  />		<label for="14077_1">没买过</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_14077  qc_0 radio" type="radio" name="answers[14077].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3120" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						哪一个品牌？
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14078].id" value="" id="answers[14078].id" />
+<input type="text" name="answers[14078].value" value="" id="question_14078" group="14078" class="input-text" />
+
+<span class="error-content" id="err_answers[14078].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3121" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你买车时，是现金支付的还是通过贷款支付的？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14079].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14079].id" value="" id="answers[14079].id" />
+<ul>
+	<li>
+			<input group="14079" type="radio" id="14079_0" name="answers[14079].value" value="11989"  class="selection question_radio_14079"  />		<label for="14079_0">现金</label>
+	</li>
+	<li>
+			<input group="14079" type="radio" id="14079_1" name="answers[14079].value" value="11990"  class="selection question_radio_14079"  />		<label for="14079_1">贷款</label>
+	</li>
+	<li>
+			<input group="14079" type="radio" id="14079_2" name="answers[14079].value" value="11991"  class="selection question_radio_14079"  />		<label for="14079_2">我不太想说</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_14079  qc_0 radio" type="radio" name="answers[14079].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3122" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						在买车前，你或你的伴侣是向谁讨教购买建议呢？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14080].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14080].id" value="" id="answers[14080].id" />
+
+
+
+
+<span id="hint_14080">
+</span>
+<ul>
+	<li>
+			<input group="14080" class="question_radio_14080 selection" type="checkbox" id="14080_0" name="answers[14080].value" value="11992" 	onclick=" "/>		<label for="14080_0">家中男性</label>
+	</li>
+	<li>
+			<input group="14080" class="question_radio_14080 selection" type="checkbox" id="14080_1" name="answers[14080].value" value="11993" 	onclick=" "/>		<label for="14080_1">家中女性</label>
+	</li>
+	<li>
+			<input group="14080" class="question_radio_14080 selection" type="checkbox" id="14080_2" name="answers[14080].value" value="11994" 	onclick=" "/>		<label for="14080_2">朋友</label>
+	</li>
+	<li>
+			<input group="14080" class="question_radio_14080 selection" type="checkbox" id="14080_3" name="answers[14080].value" value="11995" 	onclick=" "/>		<label for="14080_3">同事</label>
+	</li>
+	<li>
+			<input group="14080" class="question_radio_14080 selection" type="checkbox" id="14080_4" name="answers[14080].value" value="11996" 	onclick=" "/>		<label for="14080_4">卖车销售员</label>
+	</li>
+	<li>
+			<input group="14080" class="question_radio_14080 selection" type="checkbox" id="14080_5" name="answers[14080].value" value="11997" 	onclick=" "/>		<label for="14080_5">网上寻找建议</label>
+	</li>
+	<li>
+			<input group="14080" class="question_radio_14080 selection" type="checkbox" id="14080_6" name="answers[14080].value" value="11998" 	onclick=" "/>		<label for="14080_6">其他：[请填写]</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3123" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						其他人
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14081].id" value="" id="answers[14081].id" />
+<input type="text" name="answers[14081].value" value="" id="question_14081" group="14081" class="input-text" />
+
+<span class="error-content" id="err_answers[14081].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3124" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						当时是什么原因让你或你的伴侣决定买这辆车？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14082].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14082].id" value="" id="answers[14082].id" />
+
+
+
+
+<span id="hint_14082">
+</span>
+<ul>
+	<li>
+			<input group="14082" class="question_radio_14082 selection" type="checkbox" id="14082_0" name="answers[14082].value" value="11999" 	onclick=" "/>		<label for="14082_0">不记得了</label>
+	</li>
+	<li>
+			<input group="14082" class="question_radio_14082 selection" type="checkbox" id="14082_1" name="answers[14082].value" value="12000" 	onclick=" "/>		<label for="14082_1">降价</label>
+	</li>
+	<li>
+			<input group="14082" class="question_radio_14082 selection" type="checkbox" id="14082_2" name="answers[14082].value" value="12001" 	onclick=" "/>		<label for="14082_2">一个比较好的理财计划</label>
+	</li>
+	<li>
+			<input group="14082" class="question_radio_14082 selection" type="checkbox" id="14082_3" name="answers[14082].value" value="12002" 	onclick=" "/>		<label for="14082_3">我买的时候，刚好是新车型</label>
+	</li>
+	<li>
+			<input group="14082" class="question_radio_14082 selection" type="checkbox" id="14082_4" name="answers[14082].value" value="12003" 	onclick=" "/>		<label for="14082_4">我之前试过类似的车</label>
+	</li>
+	<li>
+			<input group="14082" class="question_radio_14082 selection" type="checkbox" id="14082_5" name="answers[14082].value" value="12004" 	onclick=" "/>		<label for="14082_5">我之前试过同样的车</label>
+	</li>
+	<li>
+			<input group="14082" class="question_radio_14082 selection" type="checkbox" id="14082_6" name="answers[14082].value" value="12005" 	onclick=" "/>		<label for="14082_6">因为广告</label>
+	</li>
+	<li>
+			<input group="14082" class="question_radio_14082 selection" type="checkbox" id="14082_7" name="answers[14082].value" value="12006" 	onclick=" "/>		<label for="14082_7">其他：[请填写]</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2832" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						其他原因
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14083].id" value="" id="answers[14083].id" />
+<input type="text" name="answers[14083].value" value="" id="question_14083" group="14083" class="input-text" />
+
+<span class="error-content" id="err_answers[14083].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3125" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你之前有听说过以下哪些车品牌或车型？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14084].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14084].id" value="" id="answers[14084].id" />
+<ul>
+	<li>
+			<input group="14084" type="radio" id="14084_0" name="answers[14084].value" value="12007"  class="selection question_radio_14084"  />		<label for="14084_0">大众新甲克虫</label>
+	</li>
+	<li>
+			<input group="14084" type="radio" id="14084_1" name="answers[14084].value" value="12008"  class="selection question_radio_14084"  />		<label for="14084_1">菲亚特500</label>
+	</li>
+	<li>
+			<input group="14084" type="radio" id="14084_2" name="answers[14084].value" value="12009"  class="selection question_radio_14084"  />		<label for="14084_2">奥迪A1</label>
+	</li>
+	<li>
+			<input group="14084" type="radio" id="14084_3" name="answers[14084].value" value="12010"  class="selection question_radio_14084"  />		<label for="14084_3">奔驰A级</label>
+	</li>
+	<li>
+			<input group="14084" type="radio" id="14084_4" name="answers[14084].value" value="12011"  class="selection question_radio_14084"  />		<label for="14084_4">雷诺新风景</label>
+	</li>
+	<li>
+			<input group="14084" type="radio" id="14084_5" name="answers[14084].value" value="12012"  class="selection question_radio_14084"  />		<label for="14084_5">大众尚酷</label>
+	</li>
+	<li>
+			<input group="14084" type="radio" id="14084_6" name="answers[14084].value" value="12013"  class="selection question_radio_14084"  />		<label for="14084_6">长安铃木</label>
+	</li>
+	<li>
+			<input group="14084" type="radio" id="14084_7" name="answers[14084].value" value="12014"  class="selection question_radio_14084"  />		<label for="14084_7">力帆320</label>
+	</li>
+	<li>
+			<input group="14084" type="radio" id="14084_8" name="answers[14084].value" value="12015"  class="selection question_radio_14084"  />		<label for="14084_8">雪铁龙DS3</label>
+	</li>
+	<li>
+			<input group="14084" type="radio" id="14084_9" name="answers[14084].value" value="12016"  class="selection question_radio_14084"  />		<label for="14084_9">其他 [请填写]</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_14084  qc_0 radio" type="radio" name="answers[14084].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3126" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						其他品牌或车型
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14085].id" value="" id="answers[14085].id" />
+<input type="text" name="answers[14085].value" value="" id="question_14085" group="14085" class="input-text" />
+
+<span class="error-content" id="err_answers[14085].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3127" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						以下哪些车品牌或车型是你最喜欢的？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14086].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14086].id" value="" id="answers[14086].id" />
+<ul>
+	<li>
+			<input group="14086" type="radio" id="14086_0" name="answers[14086].value" value="12017"  class="selection question_radio_14086"  />		<label for="14086_0">大众新甲克</label>
+	</li>
+	<li>
+			<input group="14086" type="radio" id="14086_1" name="answers[14086].value" value="12018"  class="selection question_radio_14086"  />		<label for="14086_1">菲亚特500</label>
+	</li>
+	<li>
+			<input group="14086" type="radio" id="14086_2" name="answers[14086].value" value="12019"  class="selection question_radio_14086"  />		<label for="14086_2">奥迪A1</label>
+	</li>
+	<li>
+			<input group="14086" type="radio" id="14086_3" name="answers[14086].value" value="12020"  class="selection question_radio_14086"  />		<label for="14086_3">奔驰A级</label>
+	</li>
+	<li>
+			<input group="14086" type="radio" id="14086_4" name="answers[14086].value" value="12021"  class="selection question_radio_14086"  />		<label for="14086_4">雷诺新风景</label>
+	</li>
+	<li>
+			<input group="14086" type="radio" id="14086_5" name="answers[14086].value" value="12022"  class="selection question_radio_14086"  />		<label for="14086_5">大众尚酷</label>
+	</li>
+	<li>
+			<input group="14086" type="radio" id="14086_6" name="answers[14086].value" value="12023"  class="selection question_radio_14086"  />		<label for="14086_6">长安铃木</label>
+	</li>
+	<li>
+			<input group="14086" type="radio" id="14086_7" name="answers[14086].value" value="12024"  class="selection question_radio_14086"  />		<label for="14086_7">力帆320</label>
+	</li>
+	<li>
+			<input group="14086" type="radio" id="14086_8" name="answers[14086].value" value="12025"  class="selection question_radio_14086"  />		<label for="14086_8">雪铁龙DS3</label>
+	</li>
+	<li>
+			<input group="14086" type="radio" id="14086_9" name="answers[14086].value" value="12026"  class="selection question_radio_14086"  />		<label for="14086_9">其他 [请填写]</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_14086  qc_0 radio" type="radio" name="answers[14086].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3128" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						其他喜欢的车品牌或车型
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14087].id" value="" id="answers[14087].id" />
+<input type="text" name="answers[14087].value" value="" id="question_14087" group="14087" class="input-text" />
+
+<span class="error-content" id="err_answers[14087].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3129" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你最喜欢的原因是：
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14088].id" value="" id="answers[14088].id" />
+<textarea name="answers[14088].value" id="question_14088" cols="40" group="14088" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[14088].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3130" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						当你在考虑买哪个车时，哪些特性是你优先考虑的？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14089].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14089].id" value="" id="answers[14089].id" />
+
+
+
+
+<span id="hint_14089">
+</span>
+<ul>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_0" name="answers[14089].value" value="12027" 	onclick=" "/>		<label for="14089_0">豪华</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_1" name="answers[14089].value" value="12028" 	onclick=" "/>		<label for="14089_1">设计比较运动感</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_2" name="answers[14089].value" value="12029" 	onclick=" "/>		<label for="14089_2">设计比较经典</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_3" name="answers[14089].value" value="12030" 	onclick=" "/>		<label for="14089_3">昂贵</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_4" name="answers[14089].value" value="12031" 	onclick=" "/>		<label for="14089_4">价格合理，物有所值</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_5" name="answers[14089].value" value="12032" 	onclick=" "/>		<label for="14089_5">车内装饰好看</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_6" name="answers[14089].value" value="12033" 	onclick=" "/>		<label for="14089_6">比较适合男人</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_7" name="answers[14089].value" value="12034" 	onclick=" "/>		<label for="14089_7">省油</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_8" name="answers[14089].value" value="12035" 	onclick=" "/>		<label for="14089_8">容易驾驶</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_9" name="answers[14089].value" value="12036" 	onclick=" "/>		<label for="14089_9">比较适合女人</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_10" name="answers[14089].value" value="12037" 	onclick=" "/>		<label for="14089_10">方便停车</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_11" name="answers[14089].value" value="12038" 	onclick=" "/>		<label for="14089_11">性能较好</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_12" name="answers[14089].value" value="12039" 	onclick=" "/>		<label for="14089_12">设计比较现代</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_13" name="answers[14089].value" value="12040" 	onclick=" "/>		<label for="14089_13">设计不美观</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_14" name="answers[14089].value" value="12041" 	onclick=" "/>		<label for="14089_14">性能不好</label>
+	</li>
+	<li>
+			<input group="14089" class="question_radio_14089 selection" type="checkbox" id="14089_15" name="answers[14089].value" value="12042" 	onclick=" "/>		<label for="14089_15">安全</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3131" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						当你考虑迷你库柏 (Mini Cooper) 时，哪些特性是你优先考虑的？
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14090].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14090].id" value="" id="answers[14090].id" />
+
+
+
+
+<span id="hint_14090">
+</span>
+<ul>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_0" name="answers[14090].value" value="12043" 	onclick=" "/>		<label for="14090_0">豪华</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_1" name="answers[14090].value" value="12044" 	onclick=" "/>		<label for="14090_1">设计比较运动感</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_2" name="answers[14090].value" value="12045" 	onclick=" "/>		<label for="14090_2">设计比较经典</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_3" name="answers[14090].value" value="12046" 	onclick=" "/>		<label for="14090_3">昂贵</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_4" name="answers[14090].value" value="12047" 	onclick=" "/>		<label for="14090_4">价格合理，物有所值</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_5" name="answers[14090].value" value="12048" 	onclick=" "/>		<label for="14090_5">车内装饰好看</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_6" name="answers[14090].value" value="12049" 	onclick=" "/>		<label for="14090_6">比较适合男人</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_7" name="answers[14090].value" value="12050" 	onclick=" "/>		<label for="14090_7">省油</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_8" name="answers[14090].value" value="12051" 	onclick=" "/>		<label for="14090_8">容易驾驶</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_9" name="answers[14090].value" value="12052" 	onclick=" "/>		<label for="14090_9">比较适合女人</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_10" name="answers[14090].value" value="12053" 	onclick=" "/>		<label for="14090_10">方便停车</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_11" name="answers[14090].value" value="12054" 	onclick=" "/>		<label for="14090_11">性能较好</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_12" name="answers[14090].value" value="12055" 	onclick=" "/>		<label for="14090_12">设计比较现代</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_13" name="answers[14090].value" value="12056" 	onclick=" "/>		<label for="14090_13">设计不美观</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_14" name="answers[14090].value" value="12057" 	onclick=" "/>		<label for="14090_14">性能不好</label>
+	</li>
+	<li>
+			<input group="14090" class="question_radio_14090 selection" type="checkbox" id="14090_15" name="answers[14090].value" value="12058" 	onclick=" "/>		<label for="14090_15">安全</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3132" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						当你想到迷你库柏 (Mini Cooper) 时，哪三个词是最先映入你的脑海？
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14091].id" value="" id="answers[14091].id" />
+<textarea name="answers[14091].value" id="question_14091" cols="40" group="14091" rows="2" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[14091].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3133" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						姓名：
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14092].id" value="" id="answers[14092].id" />
+<input type="text" name="answers[14092].value" value="" id="question_14092" group="14092" class="input-text" />
+
+<span class="error-content" id="err_answers[14092].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3134" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Email:
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14093].id" value="" id="answers[14093].id" />
+<input type="text" name="answers[14093].value" value="" id="question_14093" group="14093" class="input-text" />
+
+<span class="error-content" id="err_answers[14093].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3135" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						电话：
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14094].id" value="" id="answers[14094].id" />
+<input type="text" name="answers[14094].value" value="" id="question_14094" group="14094" class="input-text" />
+
+<span class="error-content" id="err_answers[14094].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3136" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						地址：
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[14095].id" value="" id="answers[14095].id" />
+<input type="text" name="answers[14095].value" value="" id="question_14095" group="14095" class="input-text" />
+
+<span class="error-content" id="err_answers[14095].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_3137" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你的家庭月收入是多少
+					</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[14096].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[14096].id" value="" id="answers[14096].id" />
+<ul>
+	<li>
+			<input group="14096" type="radio" id="14096_0" name="answers[14096].value" value="12059"  class="selection question_radio_14096"  />		<label for="14096_0">&lt;￥5,000/月</label>
+	</li>
+	<li>
+			<input group="14096" type="radio" id="14096_1" name="answers[14096].value" value="12060"  class="selection question_radio_14096"  />		<label for="14096_1">￥5,000～10,000/月</label>
+	</li>
+	<li>
+			<input group="14096" type="radio" id="14096_2" name="answers[14096].value" value="12061"  class="selection question_radio_14096"  />		<label for="14096_2">￥10,000～15,000/月</label>
+	</li>
+	<li>
+			<input group="14096" type="radio" id="14096_3" name="answers[14096].value" value="12062"  class="selection question_radio_14096"  />		<label for="14096_3">￥15,000～20,000/月</label>
+	</li>
+	<li>
+			<input group="14096" type="radio" id="14096_4" name="answers[14096].value" value="12063"  class="selection question_radio_14096"  />		<label for="14096_4">￥20,000～25,000/月</label>
+	</li>
+	<li>
+			<input group="14096" type="radio" id="14096_5" name="answers[14096].value" value="12064"  class="selection question_radio_14096"  />		<label for="14096_5">&gt;￥25,000/月</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_14096  qc_0 radio" type="radio" name="answers[14096].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+	
+
+
+</div> 
+<br/>
+<div style="clear:both"></div>
+</div> 
+</div> 
+
+<div id="mainzone-bottom-wrapper">
+	<div id="mainzone-bottom-left">
+		<div id="mainzone-bottom-right">&nbsp;</div>
+	</div>
+</div>
+<br/>
+<div class="fillout-submit">
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+</div>
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"/></td>
+		<td bgcolor="#ffffff">
+			<div class="web-dialog-message">
+				<p id="web-dialog-message-text" class=""></p>
+			</div>
+			<div class="buttons" id="web-dialog-buttons">
+			</div>
+		</td>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"/></td>
+	</tr>
+</table>
+
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	var WebDialog = {
+		element : $('web-dialog'),
+		onok : function() {},
+		oncancel : function() {},
+		show : function() {
+			var width = document.body.clientWidth;
+			var height = document.body.offsetHeight;
+			var left = (width - this.element.offsetWidth) / 2;
+			var top = (height - this.element.offsetHeight) / 2;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+		},
+		alert : function(msg,agree,disagree,onok,oncancel) {
+			var buttons = ["OK","Cancel"];
+			var callbacks = [onok, oncancel];
+			this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+		},
+		ok : function() {
+			this.onok();
+		},
+		close : function() {
+			this.element.hide();
+			$('mask').hide();
+			this.oncancel();
+		},
+		showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions) {
+			// icon_type : "none", "alert", "question"
+			// msg_align : "left", "center", "right"
+			// width : -1 means auto
+			
+			var width = document.body.clientWidth;
+			var height = window.screen.availHeight;
+			var left = (width - window_width) / 2;
+			var top = (height - 300) / 2;
+			var pos = 0;
+			if (window.innerHeight) {
+		    	pos = window.pageYOffset
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
+		    	pos = document.documentElement.scrollTop
+		    } else if (document.body) {
+		    	pos = document.body.scrollTop;
+		    }
+		    top += pos;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+			$('mask').style.height = document.body.scrollHeight + "px";
+			
+			if (width != undefined) {
+				this.element.style.width = window_width + "px";
+			}
+			if (msg != undefined) {
+				$('web-dialog-message-text').innerHTML = msg;
+			}
+			if (icon_type != undefined && msg_align != undefined) {
+				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
+			} else if (icon_type == undefined && msg_align == undefined) {
+				$('web-dialog-message-text').className = "icon-none left";
+			} else if (icon_type == undefined) {
+				$('web-dialog-message-text').className = msg_align;
+			} else {
+				$('web-dialog-message-text').className = "icon-"+icon_type;
+			}
+			
+			$('web-dialog-buttons').innerHTML = "";
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
+					if (buttons[i]==undefined || callback_functions[i]==undefined) {
+						continue;
+					}
+					var e = document.createElement('a');
+					e.setAttribute('href', '#');
+					e.innerHTML = buttons[i];
+					e.onclick = callback_functions[i];
+					$('web-dialog-buttons').appendChild(e);
+				}
+			}
+			
+			
+			this.element.show();
+			//$('mask').show();
+		}
+	}
+// ]]>
+-->
+</script>
+</form>
+</div> 
+<div class="clear"></div>
+<br/>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+  var pageNum=0;
+ 
+  var noPage0 = false;
+  var currentPage=0;
+  
+
+  function showPage(_pageIndex) {
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex == pageNum) {
+    	Element.hide("nextPageButton");
+    } else {
+    	Element.show("nextPageButton");
+    }
+    
+    if (_pageIndex <1 && noPage0) return ;
+  	var _pageElement = $("page_"+_pageIndex);
+  	var _currElement = $("page_"+currentPage);
+  	
+  	Element.hide(_currElement);
+  	Element.show(_pageElement);
+	
+	if($("pageNum" + _pageIndex) != undefined) {
+		$("pageNum" + _pageIndex).style.fontWeight = "bolder"; 
+		$("pageNum" + _pageIndex).style.textDecoration = "underline";
+	}
+    if($("pageNum" + currentPage) != undefined) {		
+  		$("pageNum" + currentPage).style.fontWeight = "normal"; 
+		$("pageNum" + currentPage).style.textDecoration = "none";
+	}
+	
+
+  	currentPage = _pageIndex;
+	
+	if(_pageIndex == pageNum) {
+		Element.show($('submit'));
+	} else if ( _pageIndex < pageNum) {
+		Element.hide($('submit'));
+	}
+  }
+  
+  function showNextPage(){
+  	showPage(currentPage+1);
+  }
+  
+  function showPrevPage(){
+  	showPage(currentPage-1);
+  }
+  
+  function initPages() {
+  	var i;
+
+  	for (i=0; i<=pageNum; i++) {
+  		Element.hide($("page_"+i));
+  	}
+  	
+ 
+  	var _pageBar = document.getElementById("pageBar");
+  	if (pageNum==0) {
+  		_pageBar.innerHTML = "";
+  	} else {
+	  	for (i=0; i<=pageNum; i++) {
+			var s ="";
+			if( i == 0 ) {
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
+			}
+
+			if (noPage0){
+	  		 if (i!=0){ 
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
+	  		  }
+	  		}else{
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
+	  		}
+	  		
+			if( i == pageNum ) {
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
+			}
+	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  	}		
+  	}
+  }
+  
+  initPages();
+  if (noPage0){
+  	showPage(1);
+  }else{
+  	showPage(0);
+  }
+// ]]>
+-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+    //do not include radio answers
+	if(typeof checkNoAnswer=="undefined") {
+		checkNoAnswer=function(index,checkbox) {
+			var question = $("question_" + index);
+			var checked = checkbox.checked;
+			if( checked) {
+				question.disabled="disabled";
+				checkbox.value=false;
+			} else {
+				question.disabled="";
+				checkbox.value=true;
+			}
+		};
+	};
+	
+		if(typeof checkRadioNoAnswer=="undefined") {
+		checkRadioNoAnswer = function(index,checkbox) {
+			var clazz = "question_radio_" +index;
+			var radios = document.getElementsByClassName(clazz).each(function(radio) {
+				var checked = checkbox.checked;
+			    if( checked) {
+					if(radio.checked="checked")radio.checked="";
+					radio.disabled="disabled";
+					checkbox.value=false;
+			    } else {
+					radio.disabled="";
+					checkbox.value=true;
+			    }
+			});
+		};
+	}
+	
+	if(typeof checkSubboxes=="undefined") {
+		checkSubboxes = function(qc_id) {
+			//get the question context checkbox's value
+			var qc_value = $("qc_checkbox_" + qc_id).checked;
+			//get the checkBoxed belongs to the above question context
+			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
+			for(var i = 0; i < checkBoxes.length;i++) {
+				var checkBox = checkBoxes[i];
+				//to reuse checkRadioNoAnswer and checkNoAnswer
+				checkBox.checked=qc_value;
+				var clazzName = checkBox.className;
+				var question_id = clazzName.split(" ")[0].split("_")[1];
+				if( clazzName.indexOf("radio") != -1) {
+					checkRadioNoAnswer(question_id,checkBox);
+				} else {
+					checkNoAnswer(question_id,checkBox);
+				}
+			}
+		}
+		
+	}
+// ]]>
+-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function loading() {
+		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
+		WebDialog.showMessageBox(html, "none", "center", 600);
+	}
+	
+	function checkMandatory() {
+	    var fillMandatory = true;
+	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+			if(elements.length > 1) {
+			  var filled = false;
+			  for(var i=0; i < elements.length; i++) {
+			  	var element = elements[i];
+				if(element.checked) {
+				  filled = true;
+				  break;
+				}
+			  }
+			  if(!filled) {
+			  	fillMandatory = false;
+			  	break;
+			  }
+			} else {
+			  var element = elements[0];
+			  if(element.hasClassName("selection")) {
+			  	if(element.value.strip() == '') {
+	    			fillMandatory =  false;
+	    			break;                                  
+	    		}
+			  } else if (element.hasClassName("input-text")) {
+			 	if(element.value == 0) {
+					fillMandatory = false;
+					break;
+				}
+			  }
+			}
+	    }
+	    if(!fillMandatory) {
+	    	var html = 'Mandatory questions must be filled out';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    }
+		return fillMandatory;
+	}
+	
+	function checkMandatoryOfSelectionQuestion() {
+	 var mandatory = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+
+
+	function checkAnswerSet() {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
+		    return true;
+		} else {
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			return false;
+		}
+	}
+	
+	function checkAnswersOfSelectionQuestions() {
+	 var filled = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+	
+	function checkAnswersOfRatingQuestions() {
+	    var filled = false;
+	    $$('input.rating').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;  
+										}
+	                                });
+
+		 return filled;
+	}
+	
+	function checkAnswersOfCommentQuestions() {
+	    var filled = false;
+	    $$('.input-text').each(function(element) {
+	                                    if(element.value.strip() != '') {
+	                                        filled = true;
+	                                    	throw $break;                                 
+	                                    }
+	                                });
+		 return filled;
+	}
+	
+	function locateErrorPage() {
+		var errorElements = $$('span.error-content') ;
+		var hasError = false;
+		var errorElementsPointer = 0;
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+			var html = errorElements[errorElementsPointer].innerHTML;
+			if (html != "") {
+				hasError = true;
+				break;
+			}
+		}
+		if( hasError ) {
+			var errorParentElement = errorElements[errorElementsPointer].up('div');
+			while (errorParentElement != undefined) {
+			var elementId = errorParentElement.id;
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
+				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
+				showPage(errorPageNum);
+				break;
+		}
+		errorParentElement = errorParentElement.up('div');
+		}
+		}
+	}
+	locateErrorPage();
+	
+	function showOtherValueInputInSelect(element) {
+	    var options = element.options;
+	    var selectedOption;
+	    for( var i = 0; i < options.length; i++) {
+	       if( options[i].selected) {
+	       	 selectedOption = options[i];
+	       }
+	    }
+	    var selectedOptionId = selectedOption.id;
+	    if( selectedOptionId.indexOf("other") != -1) {
+	    	$(element.id + "_other").show();
+	    } else {
+	        $(element.id + "_other").value = "";
+	    	$(element.id + "_other").hide();
+	    }
+	}
+	
+	function showOtherValueInputInRadio(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( value == 0 ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+	function showOtherValueInputInCheckBox(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( element.checked ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5436862-10']);
+  _gaq.push(['_setDomainName', '.marketing-research.cn']);
+  _gaq.push(['setAllowHash', 'false']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+	
+// ]]>
+-->
+</script>
+</div>
+</div> 
+</div>
+
+<div class="footer" style="display:none;">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/c/methodName/c"  target="_blank">Help</a> | <a href="http://www.ostrakon.org"  target="_blank">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow" style="display:none;"></div>
+	<div style="clear: both"></div>
+	
+</div> 
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+
+Framework.registerAjaxSensors();
+// ]]>
+-->
+</script>
