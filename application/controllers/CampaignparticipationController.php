@@ -76,7 +76,7 @@ class CampaignparticipationController extends MyController {
 				->where ( 'consumer.pest is null or consumer.pest != 1' );
 			
 			$campaignParticipations = $db->fetchAll ( $select );
-			
+//			Zend_Debug::dump($campaignParticipations);die();
 			$campaignUsers = array ();
 			
 			$file = $this->campaign_id . '_' . date ( 'Y-m-d_H_i_s' ) . "participation.csv";
@@ -90,6 +90,7 @@ class CampaignparticipationController extends MyController {
 				$header = array ('No.', 'Name', 'Email', 'Telephone', 'Recipients_name', 'Province', 'City', 'Address', 'Phone', 'UserID', 'Date' );
 				
 				$handle = fopen ( dirname ( dirname ( dirname ( __FILE__ ) ) ) . '/public/csv/' . $file, "w" );
+				Zend_Debug::dump(dirname ( dirname ( dirname ( __FILE__ ) ) ) . '/public/csv/' . $file);die();
 				fputcsv ( $handle, $header );
 				foreach ( $campaignUsers as $line ) {
 					fputcsv ( $handle, $line );
