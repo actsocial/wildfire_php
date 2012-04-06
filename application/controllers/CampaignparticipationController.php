@@ -84,10 +84,10 @@ class CampaignparticipationController extends MyController {
 			if ($campaignParticipations) {
 				$i = 0;
 				foreach ( $campaignParticipations as $val ) {
-					$campaignUsers [] = array ($i, $val ['name'], $val ['email'] , $val ['login_phone'], $val ['recipients_name'], $val ['province'], $val ['city'], $val ['address1'], $val ['phone'], $val ['id'],$val['create_date'], $val ['accept_date'] );
+					$campaignUsers [] = array ($i, $val ['name'], $val ['email'] , $val ['login_phone'], $val ['recipients_name'], $val ['province'], $val ['city'], $val ['address1'], $val ['phone'], $val['qq'], $val ['id'],$val['create_date'], $val ['accept_date'] );
 					$i ++;
 				}
-				$header = array ('No.', 'Name', 'Email', 'Telephone', 'Recipients_name', 'Province', 'City', 'Address', 'Phone', 'UserID','InvitateDate' , 'AcceptedDate' );
+				$header = array ('No.', 'Name', 'Email', 'Login_phone', 'Recipients_name', 'Province', 'City', 'Address1', 'Phone','QQ', 'UserID','InvitateDate' , 'AcceptedDate' );
 				
 				$handle = fopen ( dirname ( dirname ( dirname ( __FILE__ ) ) ) . '/public/csv/' . $file, "w" );
 //				Zend_Debug::dump(dirname ( dirname ( dirname ( __FILE__ ) ) ) . '/public/csv/' . $file);die();
