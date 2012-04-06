@@ -90,7 +90,7 @@ class CampaignparticipationController extends MyController {
 				$header = array ('No.', 'Name', 'Email', 'Telephone', 'Recipients_name', 'Province', 'City', 'Address', 'Phone', 'UserID', 'Date' );
 				
 				$handle = fopen ( dirname ( dirname ( dirname ( __FILE__ ) ) ) . '/public/csv/' . $file, "w" );
-				Zend_Debug::dump(dirname ( dirname ( dirname ( __FILE__ ) ) ) . '/public/csv/' . $file);die();
+//				Zend_Debug::dump(dirname ( dirname ( dirname ( __FILE__ ) ) ) . '/public/csv/' . $file);die();
 				fputcsv ( $handle, $header );
 				foreach ( $campaignUsers as $line ) {
 					fputcsv ( $handle, $line );
