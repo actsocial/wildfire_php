@@ -25,6 +25,105 @@
 		}
 		return !hasError;
 	}
+	jQuery(function(){
+		jQuery(".question_radio_14084").bind("click",function(){
+			if(jQuery("#14084_10").attr("checked")){
+				jQuery("#q_3126").show();
+			}else{
+				jQuery("#q_3126").hide();
+			}
+		});
+		jQuery(".question_radio_14068").bind("click",function(){
+			if(jQuery("#14068_1").attr("checked")){
+				jQuery("#q_3112").show();
+				jQuery("#q_3113").show();
+				
+			}else{
+				jQuery("#q_3112").hide().attr("checked",false);
+				jQuery("#q_3113").hide().attr("checked",false);
+				jQuery("#q_3114").hide().val("");
+			}
+		});
+		jQuery(".question_radio_14070").bind("click",function(){
+			if(!jQuery("#14070_1").attr("checked")){
+				jQuery("#q_3114").show();
+				jQuery("#q_2640").hide().val("");
+				
+			}else{
+			jQuery("#q_2640").show();
+				jQuery("#q_3114").hide().val("");
+			}
+		});
+		
+		jQuery(".question_radio_14075").bind("click",function(){
+		    if(jQuery("#14075_0").attr("checked")){
+				    jQuery("#q_3119").show();
+				    jQuery("#q_3121").hide().attr("checked",false);
+				    jQuery("#q_3122").hide().attr("checked",false);
+			jQuery("#q_3124").hide();
+				    
+				}else{
+				jQuery("#q_3121").show();
+				jQuery("#q_3122").show();
+			jQuery("#q_3124").show();
+				    jQuery("#q_3119").hide().attr("checked",false);
+				    jQuery(".question_radio_14077").attr("checked",false);
+				}			
+					
+		});
+		jQuery(".question_radio_14077").bind("click",function(){
+		    if(jQuery("#14077_0").attr("checked")){
+			jQuery("#q_3120").show();
+			jQuery("#q_3121").show();
+			jQuery("#q_3122").show();
+			jQuery("#q_3124").show();
+			
+		    }else{
+		    jQuery("#q_3121").hide().val("");
+		    jQuery("#q_3120").hide().attr("checked",false);
+		    jQuery("#q_3122").hide().attr("checked",false);
+			jQuery("#q_3124").hide().attr("checked",false);
+		}
+		});
+		
+		jQuery(".question_radio_14084").bind("click",function(){
+		    if(jQuery("#14084_10").attr("checked")){
+					jQuery("#q_3126").show();
+			
+		    }else{
+		    	jQuery("#q_3126").hide().val("");
+				}
+		});
+		jQuery(".question_radio_14080").bind("click",function(){
+		    if(jQuery("#14080_6").attr("checked")){
+					jQuery("#q_3123").show();
+			
+		    }else{
+		    	jQuery("#q_3123").hide().val("");
+				}
+		});
+		jQuery(".question_radio_14082").bind("click",function(){
+		    if(jQuery("#14082_7").attr("checked")){
+					jQuery("#q_2832").show();
+			
+		    }else{
+		    	jQuery("#q_2832").hide().val("");
+				}
+		});
+		jQuery(".question_radio_14086").bind("click",function(){
+		    if(jQuery("#14086_10").attr("checked")){
+					jQuery("#q_3128").show();
+		    }else{
+		    	jQuery("#q_3128").hide().val("");
+				}
+				if(jQuery("#14086_9").attr("checked")){
+					jQuery("#q_3131").hide().attr("checked",false);
+			
+		    }else{
+		    	jQuery("#q_3131").show();
+				}
+		});
+	});
 	// ]]>
 	-->
 	</script>
@@ -76,9 +175,9 @@
 <div id="mainzone-inner">
 
 
-<input type="hidden" name="id" value="Rnq4ijPkOy0u" id="id" />
+<input type="hidden" name="id" value="" id="id" />
 <input type="hidden" name="theme" value="wildfire" id="theme" />
-<input type="hidden" name="surveyId" value="Rnq4ijPkOy0u"/>
+<input type="hidden" name="surveyId" value="BUAHhcjsg1UZ"/>
 
 <div class="page-bar-area">
 <span id="pageBar">Page:&nbsp;</span>
@@ -247,7 +346,7 @@
 			<input group="14068" type="radio" id="14068_0" name="answers[14068].value" value="11977"  class="selection question_radio_14068"  />		<label for="14068_0">不谈论</label>
 	</li>
 	<li>
-			<input group="14068" type="radio" id="14068_1" name="answers[14068].value" value="11978"  class="selection question_radio_14068"  />		<label for="14068_1">谈论，我平常谈论的车品牌是：</label>
+			<input group="14068" type="radio" id="14068_1" name="answers[14068].value" value="11978"  class="selection question_radio_14068"  />		<label for="14068_1">谈论</label>
 	</li>
 </ul>
  </td>
@@ -442,10 +541,10 @@
 			<input group="14073" type="radio" id="14073_0" name="answers[14073].value" value="11981"  class="selection question_radio_14073"  />		<label for="14073_0">没有，我的朋友在过去一年里没有买过车</label>
 	</li>
 	<li>
-			<input group="14073" type="radio" id="14073_1" name="answers[14073].value" value="11982"  class="selection question_radio_14073"  />		<label for="14073_1">有，我试过朋友的车，他的车品牌是：</label>
+			<input group="14073" type="radio" id="14073_1" name="answers[14073].value" value="11982"  class="selection question_radio_14073"  />		<label for="14073_1">有，我试过朋友的车</label>
 	</li>
 	<li>
-			<input group="14073" type="radio" id="14073_2" name="answers[14073].value" value="11983"  class="selection question_radio_14073"  />		<label for="14073_2">有，我没有试过朋友的车，他的车品牌是：</label>
+			<input group="14073" type="radio" id="14073_2" name="answers[14073].value" value="11983"  class="selection question_radio_14073"  />		<label for="14073_2">有，我没有试过朋友的车</label>
 	</li>
 </ul>
  </td>
@@ -527,10 +626,10 @@
 			<input group="14075" type="radio" id="14075_0" name="answers[14075].value" value="11984"  class="selection question_radio_14075"  />		<label for="14075_0">没有</label>
 	</li>
 	<li>
-			<input group="14075" type="radio" id="14075_1" name="answers[14075].value" value="11985"  class="selection question_radio_14075"  />		<label for="14075_1">有，我还让朋友试过我的车，我的车品牌是：</label>
+			<input group="14075" type="radio" id="14075_1" name="answers[14075].value" value="11985"  class="selection question_radio_14075"  />		<label for="14075_1">有，我还让朋友试过我的车：</label>
 	</li>
 	<li>
-			<input group="14075" type="radio" id="14075_2" name="answers[14075].value" value="11986"  class="selection question_radio_14075"  />		<label for="14075_2">有，我没让朋友试过我的车，我的品牌是：</label>
+			<input group="14075" type="radio" id="14075_2" name="answers[14075].value" value="11986"  class="selection question_radio_14075"  />		<label for="14075_2">有，我没让朋友试过我的车：</label>
 	</li>
 </ul>
  </td>
@@ -950,42 +1049,50 @@
 <span class="error-content" id="err_answers[14084].value"  class="redFieldError" style="display:block"></span>
 
 <input type="hidden" name="answers[14084].id" value="" id="answers[14084].id" />
+
+
+
+
+<span id="hint_14084">
+</span>
 <ul>
 	<li>
-			<input group="14084" type="radio" id="14084_0" name="answers[14084].value" value="12007"  class="selection question_radio_14084"  />		<label for="14084_0">大众新甲克虫</label>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_0" name="answers[14084].value" value="12007" 	onclick=" "/>		<label for="14084_0">大众新甲壳虫</label>
 	</li>
 	<li>
-			<input group="14084" type="radio" id="14084_1" name="answers[14084].value" value="12008"  class="selection question_radio_14084"  />		<label for="14084_1">菲亚特500</label>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_1" name="answers[14084].value" value="12008" 	onclick=" "/>		<label for="14084_1">菲亚特500</label>
 	</li>
 	<li>
-			<input group="14084" type="radio" id="14084_2" name="answers[14084].value" value="12009"  class="selection question_radio_14084"  />		<label for="14084_2">奥迪A1</label>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_2" name="answers[14084].value" value="12009" 	onclick=" "/>		<label for="14084_2">奥迪A1</label>
 	</li>
 	<li>
-			<input group="14084" type="radio" id="14084_3" name="answers[14084].value" value="12010"  class="selection question_radio_14084"  />		<label for="14084_3">奔驰A级</label>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_3" name="answers[14084].value" value="12010" 	onclick=" "/>		<label for="14084_3">奔驰A级</label>
 	</li>
 	<li>
-			<input group="14084" type="radio" id="14084_4" name="answers[14084].value" value="12011"  class="selection question_radio_14084"  />		<label for="14084_4">雷诺新风景</label>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_4" name="answers[14084].value" value="12011" 	onclick=" "/>		<label for="14084_4">雷诺新风景</label>
 	</li>
 	<li>
-			<input group="14084" type="radio" id="14084_5" name="answers[14084].value" value="12012"  class="selection question_radio_14084"  />		<label for="14084_5">大众尚酷</label>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_5" name="answers[14084].value" value="12012" 	onclick=" "/>		<label for="14084_5">大众尚酷</label>
 	</li>
 	<li>
-			<input group="14084" type="radio" id="14084_6" name="answers[14084].value" value="12013"  class="selection question_radio_14084"  />		<label for="14084_6">长安铃木</label>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_6" name="answers[14084].value" value="12013" 	onclick=" "/>		<label for="14084_6">长安铃木</label>
 	</li>
 	<li>
-			<input group="14084" type="radio" id="14084_7" name="answers[14084].value" value="12014"  class="selection question_radio_14084"  />		<label for="14084_7">力帆320</label>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_7" name="answers[14084].value" value="12014" 	onclick=" "/>		<label for="14084_7">力帆320</label>
 	</li>
 	<li>
-			<input group="14084" type="radio" id="14084_8" name="answers[14084].value" value="12015"  class="selection question_radio_14084"  />		<label for="14084_8">雪铁龙DS3</label>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_8" name="answers[14084].value" value="12015" 	onclick=" "/>		<label for="14084_8">雪铁龙DS3</label>
 	</li>
 	<li>
-			<input group="14084" type="radio" id="14084_9" name="answers[14084].value" value="12016"  class="selection question_radio_14084"  />		<label for="14084_9">其他 [请填写]</label>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_9" name="answers[14084].value" value="12016" 	onclick=" "/>		<label for="14084_9">迷你库柏</label>
+	</li>
+	<li>
+			<input group="14084" class="question_radio_14084 selection" type="checkbox" id="14084_10" name="answers[14084].value" value="12065" 	onclick=" "/>		<label for="14084_10">其他 [请填写]</label>
 	</li>
 </ul>
  </td>
 
 <td valign="top" class="noanswer-td">
-		<input class="q_14084  qc_0 radio" type="radio" name="answers[14084].value" />
 </td>
 </tr>
 
@@ -1058,7 +1165,7 @@
 <input type="hidden" name="answers[14086].id" value="" id="answers[14086].id" />
 <ul>
 	<li>
-			<input group="14086" type="radio" id="14086_0" name="answers[14086].value" value="12017"  class="selection question_radio_14086"  />		<label for="14086_0">大众新甲克</label>
+			<input group="14086" type="radio" id="14086_0" name="answers[14086].value" value="12017"  class="selection question_radio_14086"  />		<label for="14086_0">大众新甲壳虫</label>
 	</li>
 	<li>
 			<input group="14086" type="radio" id="14086_1" name="answers[14086].value" value="12018"  class="selection question_radio_14086"  />		<label for="14086_1">菲亚特500</label>
@@ -1085,7 +1192,10 @@
 			<input group="14086" type="radio" id="14086_8" name="answers[14086].value" value="12025"  class="selection question_radio_14086"  />		<label for="14086_8">雪铁龙DS3</label>
 	</li>
 	<li>
-			<input group="14086" type="radio" id="14086_9" name="answers[14086].value" value="12026"  class="selection question_radio_14086"  />		<label for="14086_9">其他 [请填写]</label>
+			<input group="14086" type="radio" id="14086_9" name="answers[14086].value" value="12026"  class="selection question_radio_14086"  />		<label for="14086_9">迷你库柏</label>
+	</li>
+	<li>
+			<input group="14086" type="radio" id="14086_10" name="answers[14086].value" value="12066"  class="selection question_radio_14086"  />		<label for="14086_10">其他 [请填写]</label>
 	</li>
 </ul>
  </td>
@@ -1181,7 +1291,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						当你在考虑买哪个车时，哪些特性是你优先考虑的？
+						当你在考虑上述车型时，哪些特性是你优先考虑的？
 					</div>
 				</td>
 				<td width=50% valign="top">
@@ -1401,7 +1511,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3133" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3133" style="margin-bottom:0px;display:none" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -1432,7 +1542,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3134" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3134" style="margin-bottom:0px;display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -1463,7 +1573,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3135" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3135" style="margin-bottom:0px;display:none" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -2117,7 +2227,202 @@
 <!--
 // <![CDATA[
 
-Framework.registerAjaxSensors();
+
+	 Element.hide("q_2640");
+	 Element.hide("q_3113");
+	 Element.hide("q_3114");
+	 Element.hide("q_2640");
+	 Element.hide("q_3116");
+	 Element.hide("q_3118");
+	 Element.hide("q_3119");
+	 Element.hide("q_3120");
+	 Element.hide("q_3121");
+	 Element.hide("q_3122");
+	 Element.hide("q_3123");
+	 Element.hide("q_3124");
+	 Element.hide("q_2832");
+	 Element.hide("q_3131");
+	 Element.hide("q_3126");
+	 Element.hide("q_3128");
+	 Element.hide("q_3112");
+
+
+var myrules = {
+	   
+	   "input#14086_0": function(el){
+			el.onclick = function(){
+				if ($("14086_0").checked){
+						Element.hide($("q_3128"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14073_1": function(el){
+			el.onclick = function(){
+				if ($("14073_1").checked){
+						Element.show($("q_3116"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14086_10": function(el){
+			el.onclick = function(){
+				if ($("14086_10").checked){
+						Element.show($("q_3128"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14086_8": function(el){
+			el.onclick = function(){
+				if ($("14086_8").checked){
+						Element.hide($("q_3128"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14086_7": function(el){
+			el.onclick = function(){
+				if ($("14086_7").checked){
+						Element.hide($("q_3128"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14073_2": function(el){
+			el.onclick = function(){
+				if ($("14073_2").checked){
+						Element.show($("q_3116"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14086_1": function(el){
+			el.onclick = function(){
+				if ($("14086_1").checked){
+						Element.hide($("q_3128"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14086_2": function(el){
+			el.onclick = function(){
+				if ($("14086_2").checked){
+						Element.hide($("q_3128"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14068_0": function(el){
+			el.onclick = function(){
+				if ($("14068_0").checked){
+						Element.hide($("q_3112"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14075_0": function(el){
+			el.onclick = function(){
+				if ($("14075_0").checked){
+						Element.hide($("q_3118"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14086_3": function(el){
+			el.onclick = function(){
+				if ($("14086_3").checked){
+						Element.hide($("q_3128"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14086_6": function(el){
+			el.onclick = function(){
+				if ($("14086_6").checked){
+						Element.hide($("q_3128"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14073_0": function(el){
+			el.onclick = function(){
+				if ($("14073_0").checked){
+						Element.hide($("q_3116"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14068_1": function(el){
+			el.onclick = function(){
+				if ($("14068_1").checked){
+						Element.show($("q_3112"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14086_4": function(el){
+			el.onclick = function(){
+				if ($("14086_4").checked){
+						Element.hide($("q_3128"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14075_2": function(el){
+			el.onclick = function(){
+				if ($("14075_2").checked){
+						Element.show($("q_3118"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14086_9": function(el){
+			el.onclick = function(){
+				if ($("14086_9").checked){
+						Element.hide($("q_3128"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14075_1": function(el){
+			el.onclick = function(){
+				if ($("14075_1").checked){
+						Element.show($("q_3118"));
+				}
+			}
+		}
+	,
+	   
+	   "input#14086_5": function(el){
+			el.onclick = function(){
+				if ($("14086_5").checked){
+						Element.hide($("q_3128"));
+				}
+			}
+		}
+}
+
+Behaviour.register(myrules);
+
+//Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
