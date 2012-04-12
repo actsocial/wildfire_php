@@ -100,23 +100,22 @@
 </div>
 <div class="spark-status">
 	<!--  Tip  -->
-	<img onmouseover="showtip(2);" onmouseout="hidetip(2);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
-	<div class="tip-wrapper">
-		<div id="tip2" class="tip-box" style="display:none; ">
-			<div class="top"></div>
-			<div class="middle">
-			<h2><?php echo $this->translate("What_is_Status_Header")?></h2>
-			<p><?php echo $this->translate("What_is_Status_Content_1")?></p>
-			<p><?php echo $this->translate("What_is_Status_Content_2")?></p>
-			<p><?php echo $this->translate("What_is_Status_Content_3")?></p>
-			<p><?php echo $this->translate("What_is_Status_Content_4")?></p>
-			<p><?php echo $this->translate("What_is_Status_Content_5")?></p>
-			</div>
-			<div class="bottom"></div>
-		</div>
-	</div>
 	<div class="spark-status-box">
-	
+		<img onmouseover="showtip(2);" onmouseout="hidetip(2);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+		<div class="tip-wrapper">
+			<div id="tip2" class="tip-box" style="display:none; ">
+				<div class="top"></div>
+				<div class="middle">
+				<h2><?php echo $this->translate("What_is_Status_Header")?></h2>
+				<p><?php echo $this->translate("What_is_Status_Content_1")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_2")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_3")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_4")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_5")?></p>
+				</div>
+				<div class="bottom"></div>
+			</div>
+		</div>	
 	    <!--  info bar  -->
 		<div class="yourinfo">
 		    <span><?php echo $this->currentUser['name']?></span><br>
@@ -179,19 +178,20 @@
 
 <div class="spark-report">
 	<?php if (count($this->activeCampaigns)+count($this->allInvitations)>0):?>
-	<h2><?php echo $this->translate("Told_a_friend?_Submit_a_Spark_Report!")?></h2>
-	<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
-	<div class="tip-wrapper">
-		<div id="tip1" class="tip-box" style="display:none;">
-				<h2><?php echo $this->translate("What’s_a_Spark_Report?")?></h2>
-				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_1")?></p>
-				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_2")?></p>
-				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_3")?></p>
-				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_4")?></p>
-		</div>
-	</div>
+	
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
+			<h2><?php echo $this->translate("Told_a_friend?_Submit_a_Spark_Report!")?></h2>
+			<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+			<div class="tip-wrapper">
+				<div id="tip1" class="tip-box" style="display:none;">
+						<h2><?php echo $this->translate("What’s_a_Spark_Report?")?></h2>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_1")?></p>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_2")?></p>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_3")?></p>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_4")?></p>
+				</div>
+			</div>
 			<ul class="tab">
 				<?php $i = 1; foreach ($this->allInvitations as $invitation):?>
 				<li <?php if ($i==1):?>class="active"<?php endif;?> id="campaign_<?php echo $i;?>" onclick="showUlTab(<?php echo $i?>);	return false;">
@@ -406,19 +406,21 @@
 	</div>
 	<?php endif;?>
 	
-	<h2><?php echo $this->translate("Quick_Polls:_Tell_Us_About_Yourself!")?></h2>
-	<img  onmouseover="showtip(3);" onmouseout="hidetip(3);"  class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
-	<div class="tip-wrapper">
-		<div id="tip3" class="tip-box" style="display:none;">
-			<h2><?php echo $this->translate("What_are_Quick_Polls?")?></h2>
-			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_1")?></p>
-			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_2")?></p>
-			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_3")?></p>
-			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_4")?></p>
-		</div>
-	</div>
+	
+	
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
+		  <h2><?php echo $this->translate("Quick_Polls:_Tell_Us_About_Yourself!")?></h2>
+		  <img  onmouseover="showtip(3);" onmouseout="hidetip(3);"  class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+			<div class="tip-wrapper">
+				<div id="tip3" class="tip-box" style="display:none;">
+					<h2><?php echo $this->translate("What_are_Quick_Polls?")?></h2>
+					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_1")?></p>
+					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_2")?></p>
+					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_3")?></p>
+					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_4")?></p>
+				</div>
+			</div>
 			<div class="ul-wrapper">
 			<ul class="updates">
 			<?php foreach ($this->surveys as $survey) : ?>
