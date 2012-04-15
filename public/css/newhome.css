@@ -2338,6 +2338,22 @@ a.list-orders:hover {
 	width: 260px;
 }
 
+.avatar {
+	float: left;
+	width:120px;
+	height:120px;
+	padding-bottom:1px;
+}
+.avatar a{
+	display:block;
+	height:120px;
+	height:120px;
+	background:url(../images/anonymous.jpeg) no-repeat;
+}
+.avatar img{
+	vertical-align:middle;
+}
+
 .yourinfo {
 	float: left;
 	margin-top: 6px;
@@ -2345,7 +2361,7 @@ a.list-orders:hover {
 }
 .yourinfo span {
 	display: block;
-	float: left;
+	/*float: left;*/
 	height: 20px;
 	line-height: 20px;
 }

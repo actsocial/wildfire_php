@@ -55,19 +55,22 @@
 	<div class="header">
 		<div class="header-inner">
 			<div class="logo">
-				<a href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.png" /></a>
+				<!--<a href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.png" /></a>-->
 			</div>
 			<div class="navigator">
-				<ul id="mainlevel-nav"><li <?php if ($this->activeTab=='Home'):?>class="active" <?php endif?>><a href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"><?php echo $this->translate("HOME")?></a></li><li <?php if ($this->activeTab=='Campaigns'):?>class="active" <?php endif?>><a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><?php echo $this->translate("CAMPAIGNS")?></a></li><li <?php if ($this->activeTab=='Training'):?>class="active" <?php endif?>><a href="<?php echo $this->url(array('controller'=>'training','action'=>'index'));?>"><?php echo $this->translate("TRAINING")?></a></li><li <?php if ($this->activeTab=='Polls'):?>class="active" <?php endif?>><a href="<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'index'));?>"><?php echo $this->translate("POLLS")?></a></li></ul>
-				<div class="language-selector"><div id="jflanguageselection"><ul class="jflanguageselection"><li><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>"><span lang="zh" xml:lang="zh">中文&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li><li id="active_language"><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>"><span lang="en" xml:lang="en">English</span></a></li></ul></div><!--Joom!fish V2.0.2 ()-->
+				<ul id="mainlevel-nav"><li <?php if ($this->activeTab=='Home'):?>class="active" <?php endif?>><a href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"><?php echo $this->translate("HOME")?></a></li><li <?php if ($this->activeTab=='Campaigns'):?>class="active" <?php endif?>><a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><?php echo $this->translate("CAMPAIGNS")?></a></li><li <?php if ($this->activeTab=='Training'):?>class="active" <?php endif?>><a href="<?php echo $this->url(array('controller'=>'training','action'=>'index'));?>"><?php echo $this->translate("TRAINING")?></a></li><li <?php if ($this->activeTab=='Polls'):?>class="active" <?php endif?>><a href="<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'index'));?>"><?php echo $this->translate("POLLS")?></a></li><li><a href="<?php echo $this->url(array('controller'=>'invitation','action'=>'index'));?>"><?php echo $this->translate("Invite_A_Friend")?></a></li></ul>
+				<div>Hi,<?php  echo $this->consumer[0]['name']; ?><a href="<?php echo $this->url(array('controller'=>'login','action'=>'logout'));?>"><?php echo $this->translate("Logout")?></a></div>
+				<div class="language-selector"><div id="jflanguageselection">
+					<ul class="jflanguageselection">
+						<li><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>"><span lang="zh" xml:lang="zh">中文&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li><li id="active_language"><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>"><span lang="en" xml:lang="en">English</span></a></li>
+					</ul></div><!--Joom!fish V2.0.2 ()-->
 				<!-- &copy; 2003-2009 Think Network, released under the GPL. -->
 				<!-- More information: at http://www.joomfish.net -->
 				</div>
 			</div>
-			<div class="logout-panel">
-				<a href="<?php echo $this->url(array('controller'=>'invitation','action'=>'index'));?>"><?php echo $this->translate("Invite_A_Friend")?></a>
+			<!--<div class="logout-panel">
 				<a href="<?php echo $this->url(array('controller'=>'login','action'=>'logout'));?>"><?php echo $this->translate("Logout")?></a>
-			</div>
+			</div>-->
 	
 			
 			<div class="clear"></div>
