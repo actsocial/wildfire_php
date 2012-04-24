@@ -23,7 +23,7 @@
 </div></div>
 
 <div class="edit-profile">
-<form name="form"
+<form name="form" id="editForm"
 	action="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>"
 	method="post">
 <fieldset>
@@ -125,6 +125,59 @@
 	);
 </script>
 <script type="text/javascript">
+$().ready(function() {
+// validate signup form on keyup and submit
+	$("#editForm").validate({
+		rules: {
+			name: {
+				required: true,
+				minlength: 2
+			},
+			recipients_name: {
+				required: true,
+				minlength: 2
+			},
+			phone: {
+				required: true,
+				number:true,
+				rangelength:[2,12]
+			},
+			address1: {
+			  required:true,
+			  minlength:3
+		  },
+			postalcode: {
+			  required:true,
+			  number:true,
+			  length:6
+		  }
+		},
+		messages: {
+			name: {
+				required: "请填写姓名",
+				minlength: "字符长度不能小于2个字符"
+			},
+			recipients_name: {
+				required: "请填写收件人姓名",
+				minlength: "字符长度不能小于2个字符"
+			},
+			phone: {
+				required: "请填写电话号码",
+				number: "电话号码只能为数字",
+				rangelength: "电话号码长度错误"
+			},
+			address1: {
+				required: "请填写收件人地址",
+				minlength: "字符长度不能小于3个字符"
+			},
+			postalcode: {
+				required: "请填写收件人邮编",
+				number: "邮编只能为数字",
+				length: "邮编长度错误"
+			}
+		}
+	});
+});
 function GetObjID(ObjName)
 { for (var ObjID=0; ObjID < document.form.elements.length; ObjID++)
     if ( document.form.elements[ObjID].name == ObjName )
