@@ -750,7 +750,7 @@ class SmsController extends MyController {
 		$id = $this->_request->getParam('id');
     	if($id){
 			$smsMessage->update(array("delete"=>1),'id = '.$id);
-			$this->_helper->redirector("smsmessagelist");
+			$this->_helper->redirector("adminsmsmessagelist");
 		}
 		$db = Zend_Registry::get ( 'db' );
 		$select = $db->select ();

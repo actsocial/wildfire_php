@@ -971,12 +971,10 @@ class CampaignInvitationController extends MyController {
 	function adminemailtemplatelistAction(){
 		if($this->_request->getParam ('id')){
 			$this->_helper->layout->disableLayout();
-			
 			$doValue = explode('&',$this->_request->getParam('do'));
 			$do = $doValue[0];
 			$emailTemplate = new EmailTemplate();
 			if($do == 'delete'){
-				
 				$emailTemplate->update(array("delete"=>1),'id = '.$this->_request->getParam ('id'));
 				$this->_helper->redirector("adminemailtemplatelist");
 			}else{
@@ -1041,5 +1039,12 @@ class CampaignInvitationController extends MyController {
 		}
 		$this->_helper->json('Success');
 	}
-	
+	function admindeleteemailAction(){
+			
+			Zend_Debug::dump("admindeleteEmailAction");die();
+			$this->_helper->layout->disableLayout();
+			$emailTemplate = new EmailTemplate();
+			$emailTemplate->update(array("delete"=>1),'id = '.$this->_request->getParam ('id'));
+			$this->_helper->redirector("adminemailtemplatelist");
+	}
 }

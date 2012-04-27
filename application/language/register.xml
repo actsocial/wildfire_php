@@ -76,7 +76,7 @@
 		
 		<tu tuid='Register_Contact_Email'>
 			<tuv xml:lang="zh">
-				<seg>邮箱：</seg>
+				<seg>邮箱<span style="color:red">(必填)</span>：</seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Email Address:</seg>
@@ -85,7 +85,7 @@
 		
 		<tu tuid='Register_Contact_Phone'>
 			<tuv xml:lang="zh">
-				<seg>电话：</seg>
+				<seg>电话<span style="color:red">(必填)</span>：</seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Phone:</seg>
@@ -94,7 +94,7 @@
 		
 		<tu tuid='Register_Contact_Name'>
 			<tuv xml:lang="zh">
-				<seg>用户名：</seg>
+				<seg>用户名<span style="color:red">(必填)</span>：</seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Name:</seg>
@@ -103,7 +103,7 @@
 		
 		<tu tuid='Register_Contact_Password'>
 			<tuv xml:lang="zh">
-				<seg>密码：</seg>
+				<seg>密码<span style="color:red">(必填)</span>：</seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Password:</seg>
@@ -112,7 +112,7 @@
 		
 		<tu tuid='Register_Contact_Confirm_Password'>
 			<tuv xml:lang="zh">
-				<seg>密码确认：</seg>
+				<seg>密码确认<span style="color:red">(必填)</span>：</seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Confirm Password:</seg>

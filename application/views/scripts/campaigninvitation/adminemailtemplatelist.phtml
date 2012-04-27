@@ -13,6 +13,15 @@ if (count($this->emailTemplates)){
 		echo "<tr><td>$email[id]</td><td>$email[name]</td><td><a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'))."/id/$email[id]/do/view'  class='thickbox'>$email[subject]</a></td><td><a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'))."/id/$email[id]/do/delete'>Delete</a>|<a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplate'))."/id/$email[id]'>Edit</a></td>";
 	}
 }?>
+
+ <!-- 
+ <?php 
+if (count($this->emailTemplates)){
+	foreach ($this->emailTemplates as $email){
+		echo "<tr><td>$email[id]</td><td>$email[name]</td><td><a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'))."/id/$email[id]/do/view'  class='thickbox'>$email[subject]</a></td><td><a href='javascript:deleteEmail($email[id])'>Delete</a>|<a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplate'))."/id/$email[id]'>Edit</a></td>";
+	}
+}?>
+  -->
 </table>
 </div>
 </div>
@@ -21,3 +30,23 @@ if (count($this->emailTemplates)){
 <?php echo $this->emailTemplate->message;?>
 
 <?php }?>
+<script type="text/javascript">
+
+function deleteEmail(id){
+    var answer = confirm ("确认删除该邮件吗?")
+	if (answer){
+		jQuery.ajax({
+			   type: "POST",
+			   url: "<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'));?>",
+			   data: "id="+id,
+			   success: function(msg){
+						window.location.reload( true );
+			   }
+		});
+	}else{
+	    return;
+	}
+}
+
+
+</script>
