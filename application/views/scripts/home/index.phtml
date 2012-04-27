@@ -87,8 +87,13 @@
 
 <div class="mask" id="mask" style="display:none;"></div>
 
-<div class="article-box" style="margin-bottom: 15px;">
-    <div class="article-box-inner">
+<!-- notification box  -->
+<div class="article-box" style="margin-bottom:15px;display:none;" id="notification-box">
+
+</div>
+
+<div class="article-box" style="margin-bottom: 15px;" >
+    <div class="article-box-inner" >
 		<?php if ($this->consumer!=null){ ?>
 			<p style="margin: 10px 0 5px 0;font-size:120%;font-weight: bold;"><?php echo $this->translate("Home_head_content_1")?></p>
 			<p style="margin: 0 0 5px 0;font-size:120%;font-weight: bold;"><?php echo $this->translate("Home_head_content_2_1")?>
@@ -98,6 +103,7 @@
 		<?php }?>
 	</div>
 </div>
+
 <div class="spark-status">
 	<!--  Tip  -->
 	<div class="spark-status-box">
@@ -191,16 +197,7 @@
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
 			<h2><?php echo $this->translate("Campaign_name_".$invitation['campaign_id'])?></h2>
-			<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
-			<div class="tip-wrapper">
-				<div id="tip1" class="tip-box" style="display:none;">
-						<h2><?php echo $this->translate("What’s_a_Spark_Report?")?></h2>
-						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_1")?></p>
-						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_2")?></p>
-						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_3")?></p>
-						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_4")?></p>
-				</div>
-			</div>        			
+		
             <div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:true;"<?php endif;?>>
 			<?php $i++;?>
 			<ul>
@@ -515,6 +512,7 @@ function hidetip(id){
 	Element.hide(tip);
 }
 
+/*
 function hideAllUlTabs(){
 	var count =  <?php echo count($this->activeCampaigns)+count($this->allInvitations)?>;
 	for (var i=1;i<=count;i++){
@@ -530,6 +528,7 @@ function showUlTab(id){
 	$('campaign_'+id).addClassName('active');
 
 }
+*/
 
 function submitURL(campaignId){
 	campaign_id = campaignId;
@@ -724,7 +723,8 @@ var callbacks = [function(){},function(){}];
 
 jQuery(document).ready(function(){
 jQuery('#fillout-dialog').dialog({dialogClass: 'ui-fillout-dialog', bgiframe: true, autoOpen: false, resizable: false, modal: true, width: 680, height: 600, title: '<?php echo $this->translate("Submit_WOM_Report")?>' });
-jQuery('#check-alert-dialog').dialog({title:'<?php echo $this->translate("Submit_you_report_error")?>', bgiframe: true, autoOpen: false, resizable: false, modal: true, buttons: {
+jQuery('#check-alert-dialog').dialog(
+		{title:'<?php echo $this->translate("Submit_you_report_error")?>', bgiframe: true, autoOpen: false, resizable: false, modal: true, buttons: {
 		'<?php echo $this->translate("Submit_you_report_confirm")?>': function() {
 			jQuery(this).dialog('close');
 		}
@@ -769,21 +769,21 @@ new AjaxUpload(button_<?php echo $activeCampaign['campaign_id'];?>,{
 });
 
 var filloutDialogOpen = function(url) {
-jQuery("#fillout-dialog .content").load(url,function(){
-});
-jQuery("#fillout-dialog").dialog('open');
+	jQuery("#fillout-dialog .content").load(url,function(){
+	});
+	jQuery("#fillout-dialog").dialog('open');
 }
 var currentReportPanel = 0;
 var showReportPanel = function(panelId) {
-var panels = new Array('.submit-report','.uploading-image','.submit-url');
-var buttons = new Array('.button-submit-report img','.button-upload-image img','.button-submit-url img');
-var buttonsGrey = new Array('tab_button_report_grey.png','tab_button_photo_grey.png','tab_button_url_grey.png');
-var buttonsBlue = new Array('tab_button_report_blue.png','tab_button_photo_blue.png','tab_button_url_blue.png');
-jQuery(panels[currentReportPanel]).hide();
-jQuery(buttons[currentReportPanel]).attr("src","<?php echo $this->baseUrl();?>/images/"+buttonsGrey[currentReportPanel]);
-jQuery(buttons[panelId]).attr("src","<?php echo $this->baseUrl();?>/images/"+buttonsBlue[panelId]);
-jQuery(panels[panelId]).show('slide');
-currentReportPanel = panelId;
+	var panels = new Array('.submit-report','.uploading-image','.submit-url');
+	var buttons = new Array('.button-submit-report img','.button-upload-image img','.button-submit-url img');
+	var buttonsGrey = new Array('tab_button_report_grey.png','tab_button_photo_grey.png','tab_button_url_grey.png');
+	var buttonsBlue = new Array('tab_button_report_blue.png','tab_button_photo_blue.png','tab_button_url_blue.png');
+	jQuery(panels[currentReportPanel]).hide();
+	jQuery(buttons[currentReportPanel]).attr("src","<?php echo $this->baseUrl();?>/images/"+buttonsGrey[currentReportPanel]);
+	jQuery(buttons[panelId]).attr("src","<?php echo $this->baseUrl();?>/images/"+buttonsBlue[panelId]);
+	jQuery(panels[panelId]).show('slide');
+	currentReportPanel = panelId;
 }
 
 function move_down(e) {
@@ -809,4 +809,6 @@ function move_up(e) {
   	jQuery('div#error').text("已经是第一个了").show().fadeOut(5000);
   }
 }
+
+loadNotification(jQuery("#notification-box"));
 </script>

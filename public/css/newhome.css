@@ -280,6 +280,17 @@ a.link {
 	box-shadow: 0 4px 4px rgba(0,0,0,0.3),-2px -2px 30px rgba(100,100,100,0.2) inset;
 	-pie-box-shadow: 0 4px 4px rgba(150,150,150,0.3);
 }
+
+.msg-inner{
+  padding:0 5px; 
+  background-color:#DDFFD8;
+}
+.msg-inner a{
+  color:#006BC4;
+  text-decoration:underline;
+}
+
+
 .article-box h1,
 .article-box h2 {
 	font-size: 14px;
@@ -2341,14 +2352,14 @@ a.list-orders:hover {
 
 .avatar {
 	float: left;
-	width:120px;
-	height:120px;
+	width:100px;
+	height:100px;
 	padding-bottom:1px;
 }
 .avatar a{
 	display:block;
-	height:120px;
-	height:120px;
+	height:100px;
+	height:100px;
 	background:url(../images/anonymous.jpeg) no-repeat;
 }
 .avatar img{
@@ -2358,7 +2369,7 @@ a.list-orders:hover {
 .yourinfo {
 	float: left;
 	margin-top: 6px;
-	padding-left: 20px;
+	padding-left: 10px;
 	width:150px;
 }
 .yourinfo span {
