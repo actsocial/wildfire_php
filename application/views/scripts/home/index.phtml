@@ -127,7 +127,7 @@
 			<!--  Badge  -->
 			<div>
 				<?php if(count($this->badges)){?>	     
-					<?php echo $this->translate("Your_badge")?>
+					<?php echo $this->translate("Your_badge")?><br>
 				<?php
 					foreach($this->badges as $badge){
 						echo "<a class='thickbox' style='margin-right:5px' href='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg'><img src='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg' width=30 height = 30 style='border:1px solid #ccc'></a>";
@@ -172,6 +172,12 @@
 			</div>
 		</div>
 		
+		<div style="float: left;">
+			<h3><?php echo $this->translate("新进积分")?></h3><br>
+			<div class="spark-status-content">
+				<h4><?php echo ($this->totalPoints-$this->redeemPoints); ?></h4>
+			</div>
+		</div>
 		
 		<div style="float: right;">
 			<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'point',	'action'=>'show'));?>" style=""><?php echo $this->translate("Redeem_Points")?></a></div>
@@ -181,11 +187,47 @@
 </div>
 
 <div class="spark-report">
-	<?php if (count($this->activeCampaigns)+count($this->allInvitations)>0):?>
-	
+<?php $i=1; foreach ($this->allInvitations as $invitation):?>
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
-			<h2><?php echo $this->translate("Told_a_friend?_Submit_a_Spark_Report!")?></h2>
+			<h2><?php echo $this->translate("Campaign_name_".$invitation['campaign_id'])?></h2>
+			<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+			<div class="tip-wrapper">
+				<div id="tip1" class="tip-box" style="display:none;">
+						<h2><?php echo $this->translate("What’s_a_Spark_Report?")?></h2>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_1")?></p>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_2")?></p>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_3")?></p>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_4")?></p>
+				</div>
+			</div>        			
+            <div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:true;"<?php endif;?>>
+			<?php $i++;?>
+			<ul>
+				<div style="border:1px dashed #3AB6EB;height:110px;width:630px">
+					<div style="float: left;">
+						<?php if($invitation['type'] == 'mission'){?>
+						<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
+						<?php }else{?>
+						<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"  height="110"/></a>
+						<?php }?>
+					</div>
+					<div style="float: left; width:200px; padding:10px;">
+						<?php echo $this->translate("Campaign_invitation_description2_".$this->recentInvitation['campaign_id'])?>
+					</div>
+				</div>
+			</ul>
+			</div>
+		</div>
+	</div>
+<?php endforeach?>
+
+
+
+<?php $j = $i;foreach ($this->activeCampaigns as $activeCampaign):?>			
+	<div class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<h2><?php echo $this->translate("Campaign_name_".$activeCampaign['campaign_id'])?></h2>
 			<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
 			<div class="tip-wrapper">
 				<div id="tip1" class="tip-box" style="display:none;">
@@ -196,51 +238,7 @@
 						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_4")?></p>
 				</div>
 			</div>
-			<!--<ul class="tab">
-				<?php $i = 1; foreach ($this->allInvitations as $invitation):?>
-				<li <?php if ($i==1):?>class="active"<?php endif;?> id="campaign_<?php echo $i;?>" onclick="showUlTab(<?php echo $i?>);	return false;">
-					<a href="#"><?php echo $invitation['name']?></a>
-				</li>
-				<?php $i++?>
-				<?php endforeach;?>
-				
-				
-				<?php 
-				foreach ($this->activeCampaigns as $activeCampaign):?>
-				<li <?php if ($i==1):?>class="active"<?php endif;?> id="campaign_<?php echo $i;?>" onclick="showUlTab(<?php echo $i?>);	return false;">
-					<a href="#"><?php echo $activeCampaign['name']?></a>
-				</li>
-				<?php $i++?>
-				<?php endforeach;?>
-				
-				<?php if ($i<=2):?>
-					<li class="blank"><a href="#" onclick="return false;" style="cursor:default;">&nbsp;</a></li>
-				<?php endif;?>
-				<?php if ($i<=3):?>
-					<li class="blank"><a href="#" onclick="return false;" style="cursor:default;">&nbsp;</a></li>
-				<?php endif;?>
-			</ul>-->
-			<?php $i=1; foreach ($this->allInvitations as $invitation):?>
-			
-			<div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:true;"<?php endif;?>>
-			<?php $i++;?>
-			<ul>
-				<div style="border:1px dashed #3AB6EB;height:110px;width:630px">
-					<div style="float: left;">
-						<?php if($invitation['type'] == 'mission'){?>
-						<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" width="300" height="110"/></a>
-						<?php }else{?>
-						<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" width="300" height="110"/></a>
-						<?php }?>
-					</div>
-					<div style="float: left; width:310px; padding:10px;">
-						<p>使用独家配方，由酒精、护肤霜和维他命E等材料配制而成的普瑞来（Purell）净手消毒液，能在15秒钟内杀死99.99%病菌。生活中病菌无处不在，使用普瑞来将会让你与家人在任何时候与地方远离手部病菌的传染！</p>
-					</div>
-				</div>
-			</ul>
-			</div>
-			<?php endforeach?>
-			<?php $j = $i;foreach ($this->activeCampaigns as $activeCampaign):?>			
+			<div class="clear"></div>
 			<div class="ul-wrapper" id="ul_tab_<?php echo $j?>"<?php if ($j>1):?> style="display:true;"<?php endif;?>>
 			<?php if($activeCampaign['type'] == 'campaign'){?>
 			<div class="report-area">
@@ -410,12 +408,11 @@
 			<?php }?>
 			<?php $j++;?>
 			</div>
-			<?php endforeach?>
-			
-			
 		</div>
 	</div>
-	<?php endif;?>
+<?php endforeach?>
+
+
 	
 	
 	
@@ -432,6 +429,7 @@
 					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_4")?></p>
 				</div>
 			</div>
+			<div class="clear"></div>
 			<div class="ul-wrapper">
 			<ul class="updates">
 			<?php foreach ($this->surveys as $survey) : ?>
