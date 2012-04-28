@@ -327,7 +327,7 @@
 		</tu>
 		<tu tuid='Invite_A_Friend'>
 			<tuv xml:lang="zh">
-				<seg>邀请朋友！</seg>
+				<seg>邀请朋友</seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Invite a Friend</seg>

@@ -96,7 +96,7 @@ img {
 	height: 36px;
 	width: 680px;
 	border: 0px solid #000;
-	margin-top: 4px;
+	margin-top: 15px;
 }
 .header .navigator ul {
 	float: left;
@@ -128,8 +128,13 @@ img {
 	color: #404040;
 	text-decoration: none;
 }
-.header .navigator .language-selector {
+.header .navigator .hi-spark{
 	float: right;
+	margin-top: 10px;
+}
+.header .navigator .language-selector {
+	/*float: right;*/
+	text-align:right;
 	height: 36px;
 	line-height: 36px;
 	width: 90px;
@@ -157,6 +162,7 @@ img {
 	font-size: 12px;
 	font-weight: normal;
 }
+
 .container {
 	width: 100%;
 	//background: url(../images/background-banner-short.jpg) repeat-x left top;

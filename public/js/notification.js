@@ -3,10 +3,10 @@ function loadNotification(container){
 	jQuery.ajax({
 		  url: 'notification/ajaxpop',
 		  success: function(data) {
-		    //alert(data);
-			shift(container,data);
-			if (data==undefined){
-				close(container,defaultContent);
+		  	if (data=="False"){
+				//close(container);
+			} else {
+				shift(container,data);
 			}
 		  }
 		});
@@ -19,11 +19,20 @@ function shift(container,data){
 }
 
 function react(id){
-	alert(id);
+	container = jQuery("#notification-box")
 	//ajax put , change the status of notification
+	jQuery.ajax({
+	  url: 'notification/ajaxchange/nid/'+id,
+	  success: function(msg) {
+	  	if (msg=="Success"){
+			close(container);
+		}
+	  }
+	});
 	//load next notification
+	loadNotification(container);
 }
 
-function close(){
+function close(container){
 	container.hide();
 }

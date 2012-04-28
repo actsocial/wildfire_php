@@ -164,7 +164,7 @@
 	
 	    <!--  Points  -->
         <div style="float: left;">
-			<h3><?php echo $this->translate("Home_Spark_Points_Earned")?></h3><br>	
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("Home_Spark_Points_Earned")?></h3><br>	
 			<div class="spark-status-content">
 				<h4><?php echo $this->totalPoints; ?></h4>
 				<p><?php echo $this->translate("Spark_Points_Earned_Content_1")?>two<?php echo $this->translate("Spark_Points_Earned_Content_2")?>20<?php echo $this->translate("Spark_Points_Earned_Content_3")?></p>
@@ -172,20 +172,20 @@
 		</div>
 		
 		<div style="float: left;">
-			<h3><?php echo $this->translate("Rewards_Ready_to_Redeem")?></h3><br>
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("Rewards_Ready_to_Redeem")?></h3><br>
 			<div class="spark-status-content">
 				<h4><?php echo $this->redeemPoints; ?></h4>
 			</div>
 		</div>
 		
 		<div style="float: left;">
-			<h3><?php echo $this->translate("新进积分")?></h3><br>
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("新进积分")?></h3><br>
 			<div class="spark-status-content">
 				<h4><?php echo ($this->totalPoints-$this->redeemPoints); ?></h4>
 			</div>
 		</div>
 		
-		<div style="float: right;">
+		<div style="float: right; padding-right:35px;">
 			<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'point',	'action'=>'show'));?>" style=""><?php echo $this->translate("Redeem_Points")?></a></div>
 			<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'history',	'action'=>'stuff'));?>" style=""><?php echo $this->translate("Check_Points") ?></a></div>
 		</div>
