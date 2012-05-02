@@ -447,6 +447,8 @@ class GiftController extends MyController
 			$currentTime = date("Y-m-d H:i:s");
 			$rewardPointTransactionRecordModel = new RewardPointTransactionRecord();
 			$prodcutOrderModel = new ProductOrder();
+			$notificationModel = new Notification();
+			$total_redeem_point = 0;
 			foreach($cartNamespace->list as $product){
 				// add records to reward_point_transaction_record table			
 				$rewardPointTransactionRecord = array("consumer_id" => $this->_currentUser->id,
@@ -464,7 +466,10 @@ class GiftController extends MyController
 				$prodcutOrderId = $prodcutOrderModel->insert($prodcutOrder);
 				// roll back if an exception occurred
 				// ...
+				$total_redeem_point += $product['amount']*$product['point'];
 			}
+			// add notification
+			$notificationModel->createRecord("REDEEM_POINT",$this->_currentUser->id,$total_redeem_point);
 			$this->paidGifts = $cartNamespace->list;
 			$cartNamespace->list = null;
 			// show redeem.phtml with "... Successfully"

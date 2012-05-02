@@ -38,6 +38,9 @@ class Rank extends Zend_Db_Table{
 			}else{
 				$this->consumerData->rank = $rank->id;
 				$this->consumerData->save();
+				// add notification
+				$notificationModel = new Notification();
+				$notificationModel->createRecord("RANK_UPGRADE",$uid);
 				$row  = $this->rewardPointTransactionRecord->createRow();
 				$row->consumer_id = $uid;
 				$row->date = date("Y-m-d H:i:s");

@@ -1,11 +1,6 @@
 <?php
 class NotificationController extends MyController{
 	
-	public $WOM_REPORT_REPLY_TEMPLET = array(
-	  "type"=>"wom_report_reply",
-	  "text"=>"您#campaign活动的口碑报告已经审核通过，您获得了#point积分",
-	  "redirectionURL"=>"campaign/description/id/#campaignId"
-	);
 	
 	function ajaxpopAction(){
 		$this->_helper->layout->disableLayout();
