@@ -1,0 +1,56 @@
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.mousewheel.min.js" ></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.tagsphere.min.js" ></script>
+<link type="text/css" href="<?php echo $this->baseUrl();?>/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/sns.css" />
+<div id="tagCloudDiv">
+<ul class="nav nav-list">
+<?php if(sizeof($this->issues)>0){?>
+<li class="nav-header">任务</li>
+<div style="padding-left:15px" class="nav">
+<?php foreach($this->issues as $issue):
+?>
+<li><a onclick="openIssues(this);" href="javascript:void(0);" description="<?php echo $issue['description']?>" issue="<?php echo $issue['id']?>" data='<?php echo urlencode($issue['topic'])?>'><?php echo $issue['title']?></a></li>
+<?php 
+endforeach;?>
+</div>
+<?php }?>
+<li class="nav-header">我关注的</li>
+<div style="padding-left:15px" class="nav" id="folders">
+<?php foreach($this->topicsUntaggedSumByFolder as $topicsUntaggedByFolder):
+?>
+	<li><a onclick="openDetail('<?php echo $topicsUntaggedByFolder['key']?>','<?php echo $topicsUntaggedByFolder['value']?>',0);" href="javascript:void(0);" rel="<?php echo $topicsUntaggedByFolder['value'] ?>"><?php echo $topicsUntaggedByFolder['key'] ?></a></li>
+<?php 
+endforeach;?>
+</div></ul>
+</div>
+<div class="topics"></div>
+<script type="text/javascript">
+jQuery(function($){
+	//$('#tagCloudDiv').tagcloud({centrex:400, centrey:300, init_motion_x:10, init_motion_y:10,zoom: 100,max_zoom: 100,min_zoom: 100});
+});
+function openDetail(key,count,page){
+	if(!page){
+		page=0;
+	}
+	jQuery(".topics").html("读取中...");
+	jQuery.get("tag/ajaxdetail?key="+key+"&totalCount="+count+"&page="+page,function(data){
+		jQuery(".topics").html(data);
+	});
+}
+function openIssues(e){
+	var description = jQuery("<div class='issuedetail'>"+jQuery(e).attr("description")+"</div>");
+	var topic = jQuery(e).attr("data");
+	var issue = jQuery(e).attr("issue");
+	var button = jQuery("<button class='btn btn-primary'>领取</button>").bind("click",function(){getIssue(topic,issue)});
+	jQuery(".topics").html(description).append(button);
+	
+}
+function getIssue(topic,issue){
+	jQuery(".topics").html("读取中...");
+	jQuery.post("tag/ajaxgetissue",{issue:issue},function(){
+		jQuery.get("tag/ajaxissuedetail?key="+topic,function(data){
+			jQuery(".topics").html(data);
+		});
+	});
+}
+</script>

@@ -90,7 +90,7 @@ class MyController extends Zend_Controller_Action
 	private function filter($controller, $action) {
 	  $exceptions = array(
 	  				   'useremail'   => null, 
-                       'login'       => null, 
+                       'login'       => null,
                        'index'       =>null, 
                        'site'        =>null, 
                        'training'    =>null, 

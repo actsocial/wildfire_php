@@ -1,0 +1,45 @@
+<?php 
+$length = sizeof($this->posts);
+if($length>5){
+	$hiddenFormat = true;
+}else{
+	$hiddenFormat = false;
+}
+$index = 0;
+foreach($this->posts as $post):?>
+<div class="post row-fluid" <?php if($hiddenFormat&&$index>0&&$index<$length-1){echo 'style="display:none"';} ?>>
+	<div class="head span1">
+		<div style="vertical-align: top; margin-left: 0px;">
+			<img style=""
+				src="<?php echo $this->baseUrl()."/images/unknown.jpg"?>"
+				user="<?php echo $post['value']['author']?>">
+		</div>
+	</div>
+	<div class="span10">
+	<?php $author = explode("@",$post['value']['author']);
+		$dateArr = $post['value']['date'];
+		$date = date(DATE_RFC822,mktime($dateArr[3],$dateArr[4],$dateArr[5],$dateArr[1],$dateArr[2],$dateArr[0])); 
+	?>
+		<div class="author"><?php echo $author[0]?></div>
+		<br>
+		<div class="body">
+			<table>
+				<tbody>
+					<tr>
+						<td><?php echo $post['value']['body']?></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="body_translated"></div>
+		<div class="date"><?php echo $date?></div>
+	</div>
+</div>
+<?php 
+if($hiddenFormat && $index ==$length-2){?>
+<div class="post posthidden"></div>
+<div class="post posthidden" style="cursor:pointer;text-align:center;" onclick="showPosts(this)"><span><?php echo $length-2?> More</span></div>
+<div class="post posthidden"></div>
+<?php }
+$index++;
+endforeach;?>

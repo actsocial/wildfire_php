@@ -1,0 +1,80 @@
+<?php foreach($this->topicIds as $topicId):?>
+	<div class="topic" style="display:none" data="<?php echo urlencode($topicId['id'])?>"></div>
+<?php endforeach;?>
+<div class="pageInfo">
+<?php 
+	if($this->page>0){
+?>
+<span><a onclick="openDetail('<?php echo $this->key?>','<?php echo $this->totalCount?>',<?php echo $this->page-1?>)" href="javascript:void(0);">上一页</a></span>
+<?php 
+	}
+?>
+<span><?php echo $this->currentPage."/".$this->totalPage?></span>
+<?php 
+	if($this->page < $this->totalPage-1){
+?>
+<span><a onclick="openDetail('<?php echo $this->key?>','<?php echo $this->totalCount?>',<?php echo $this->page+1?>)" href="javascript:void(0);">下一页</a></span>
+<?php 
+	}
+?>
+</div>
+<script>
+	jQuery(".topic").each(function(){
+		var context = jQuery(this);
+		jQuery.get('tag/ajaxgettopic?topic='+context.attr("data"),function(data){
+			context.html(data).show();
+		});
+	});
+	function toggleDiv(e,id){
+		var topicPRR =jQuery(e).parent().parent().parent().find(".topicPRR");
+		if (topicPRR.css('display')=='none'){
+			loadPosts(id,topicPRR);
+			//loadResponses(id);
+			//showReplyBox(id);
+        	topicPRR.show();
+			resizeTopicDiv();
+			return true;
+        }else{
+        	topicPRR.hide();
+			resizeTopicDiv();
+			return false;
+        }
+		
+	}
+	function resizeTopicDiv(adjust){
+   		var ll = 0;
+		if(adjust){
+			ll += adjust;
+		}
+		jQuery('.topics>div').each(function(i,e){
+		    ll+=jQuery(e).height()+3;
+			if(jQuery.browser.webkit){
+				ll+=4;
+			}
+		});
+		jQuery('.topics').css("height", ll);
+   }
+	function loadPosts(id,context){
+		context.find(".posts").html("读取中...");
+		jQuery.get('tag/ajaxgetposts?topic='+id,function(data){
+			context.find(".posts").html(data);
+			resizeTopicDiv();
+		});
+	}
+	function showPosts(e){
+		jQuery(e).parent().find("div.post").show().end().find("div.posthidden").hide();if(resizeTopicDiv){resizeTopicDiv();}
+	}
+	function saveReply(topicId,e){
+		jQuery.post('tag/ajaxsavereply',{topicId:topicId,content:jQuery(e).parent().find(".reply-content").val()},function(data){
+			if(data=='ok'){
+				alert("回复成功");
+			}else{
+				alert("系统忙,请稍后再试");
+			}
+		});
+	}
+	function addSourceUrl(url,e){
+		jQuery(e).parent().find(".reply-content").val(jQuery(e).parent().find(".reply-content").val()+'\r\n http://'+url);
+	}
+</script>
+<input type="hidden" value="<?php echo $this->page ?>"></input>

@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta property="qc:admins" content="126001440270167057636" />
 <meta name="robots" content="index, follow" />
 <meta name="keywords" content="word-of-mouth marketing" />
 <meta name="title" content="Sign Up" />
@@ -17,7 +18,6 @@
 	type="text/css" />
 <script type="text/javascript" media="screen"
 	src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>
-
 
 <link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/newhome.css" type="text/css"/>
 <!--[if lte IE 6]>
@@ -103,6 +103,12 @@
 <div class="buttons-bar">
 <?php echo $this->form->login?>
 <input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>
+</div>
+<div>
+<a href="<?php echo $this->baseUrl();?>/weibologin"><img src="<?php echo $this->baseUrl();?>/images/loginButton_24.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a>
+</div>
+<div>
+	<a href="<?php echo $this->baseUrl();?>/qqlogin"><img src="<?php echo $this->baseUrl();?>/images/qqLoginButton_24.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a>
 </div>
 <input type="hidden" name="url" id="url" value="<?php echo $this->url?>"></input>
 </form>

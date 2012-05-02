@@ -31,6 +31,9 @@ $include_path.= PATH_SEPARATOR . $applicationDir . 'library'. DIRECTORY_SEPARATO
 $include_path.= PATH_SEPARATOR . $applicationDir . 'public'. DIRECTORY_SEPARATOR .'js'. DIRECTORY_SEPARATOR.'fckeditor'. DIRECTORY_SEPARATOR;
 $include_path.= PATH_SEPARATOR . $applicationDir . 'ws'. DIRECTORY_SEPARATOR;
 $include_path.= PATH_SEPARATOR . $applicationDir . 'library'. DIRECTORY_SEPARATOR .'PHPExcel'. DIRECTORY_SEPARATOR;
+$include_path.= PATH_SEPARATOR . $applicationDir . 'library'. DIRECTORY_SEPARATOR .'weibo'. DIRECTORY_SEPARATOR; 
+$include_path.= PATH_SEPARATOR . $applicationDir . 'library'. DIRECTORY_SEPARATOR .'qq'. DIRECTORY_SEPARATOR;
+$include_path.= PATH_SEPARATOR . $applicationDir . 'library'. DIRECTORY_SEPARATOR .'couch'. DIRECTORY_SEPARATOR;
 
 set_include_path($include_path);
 

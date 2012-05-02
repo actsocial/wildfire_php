@@ -13,7 +13,7 @@ class LoginAuthAdapter implements Zend_Auth_Adapter_Interface {
 		if (count ( $rs ) > 0) {
 		  return new Zend_Auth_Result(Zend_Auth_Result :: SUCCESS, $this->_login);
 		} else {
-		  return new Zend_Auth_Result(Zend_Auth_Result :: FAILURE);
+		  return new Zend_Auth_Result(Zend_Auth_Result :: FAILURE, $this->_login);
 		}
 	}
 }

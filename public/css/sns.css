@@ -1,0 +1,63 @@
+.topic{
+	min-height:50px;
+	border-bottom: 1px solid #FCC0D1;
+}
+#tagCloudDiv {
+	width:150px;
+	margin-left:-150px;
+	float:left;
+}
+.topics{
+	min-height:500px;
+	float:left;
+	width:100%;
+}
+/**#tagCloudDiv li a{
+    text-decoration:none;
+    color:black;
+}
+#tagCloudDiv li a:hover{
+    color:red !important;
+}
+#tagCloudDiv ul {list-style-type:none;}**/
+
+.topicTitle{
+	float:left;
+	width:100%;
+}
+.post .author {
+    float: left;
+    font-size: 100%;
+    font-weight: bold;
+    width: 45%;
+}
+.post {
+    border-bottom: 1px solid #FCC0D1;
+}
+.posthidden {
+    border-bottom: 1px solid #FCC0D1;
+    height: 5px;
+}
+.post .body {
+    color: #666666;
+}
+.posthidden span {
+    background-color: white;
+    border: 1px solid #FCC0D1;
+    border-radius: 5px 5px 5px 5px;
+    color: red;
+    display: inline;
+    padding: 5px;
+    position: relative;
+    top: -7px;
+}
+.pageInfo{
+	padding-right: 50px;
+    text-align: right;
+}
+.nav{
+	margin-bottom: 0px !important;
+}
+.issuedetail{
+	min-height:100px;
+}

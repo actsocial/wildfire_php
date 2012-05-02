@@ -157,9 +157,9 @@ img {
 	font-weight: normal;
 }
 .container {
-	width: 100%;
-	background: url(../images/background-banner-short.jpg) repeat-x left top;
-	padding-top: 36px;
+	width: 100% !important;
+	background: url(../images/background-banner-short.jpg) repeat-x left top !important;
+	padding-top: 36px !important;
 }
 .container-inner {
 	width:680px;
