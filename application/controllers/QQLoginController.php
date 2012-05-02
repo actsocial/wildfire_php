@@ -2,7 +2,6 @@
 include_once( 'comm/qqconfig.php' );
 include_once("comm/utils.php");
 require_once 'QQLoginAuthAdapter.php';
-require_once("user/get_user_info.php");
 require_once APPLICATION_PATH . '/models/Log.php';
 class QQLoginController extends Zend_Controller_Action{
 	
@@ -16,6 +15,7 @@ class QQLoginController extends Zend_Controller_Action{
 	}
 	
 	function callbackAction(){
+		
 // 		if($this->_request->getParam('state')== $_SESSION['state']) //csrf
 // 	    {
 	        $token_url = "https://graph.qq.com/oauth2.0/token?grant_type=authorization_code&"
@@ -45,7 +45,7 @@ class QQLoginController extends Zend_Controller_Action{
 	
 	        //set access token to session
 	        $_SESSION["access_token"] = $params["access_token"];
-	        
+	        require_once("user/get_user_info.php");
 	        $graph_url = "https://graph.qq.com/oauth2.0/me?access_token=". $_SESSION['access_token'];
 		
 			$str  = get_url_contents($graph_url);

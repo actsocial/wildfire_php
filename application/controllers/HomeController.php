@@ -226,7 +226,7 @@ class HomeController extends MyController
 		//consumer information 
 		$select = $db->select();
 		$select->from('consumer', '*');
-		$select->join('rank','rank.id = consumer.rank',array('name as rname'));
+		$select->joinLeft('rank','consumer.rank = rank.id',array('name as rname'));
 		$select->where('consumer.id = ?' , $this->_currentUser->id);
 		$this->view->consumer = $db->fetchAll($select);
 		//var_dump($this->view->consumer);die;
