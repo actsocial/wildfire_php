@@ -3,12 +3,42 @@
 <p><a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminsmsmessagelist'));?>">List sms</a>|<a href="<?php echo $this->url(array('controller'=>'sms','action'=>'adminsmsmessage'));?>">Add sms</a></p>
 <table style="width:900px">
 <tr><th width="20%" align='left'>ID</th><th width="20%" align='left'>Subject</th><th align='left' width='40%'> Content</th><th align='left'>Action</th></tr>
+<!-- 
 <?php 
 if (count($this->sms)){
 	foreach ($this->sms as $val){
 		echo "<tr><td>$val[id]</td><td>$val[subject]</td><td>$val[content]</td><td><a href=' ".$this->url(array('controller'=>'sms','action'=>'adminsmsmessagelist'))."/id/$val[id]/do/delete'>Delete</a>|<a href=' ".$this->url(array('controller'=>'sms','action'=>'adminsmsmessage'))."/id/$val[id]/'>Edit</a></td>";
 	}
 }?>
+
+ -->
+ 
+ <?php 
+if (count($this->sms)){
+	foreach ($this->sms as $val){
+		echo "<tr><td>$val[id]</td><td>$val[subject]</td><td>$val[content]</td><td><a href='javascript:deleteSms($val[id])'>Delete</a>|<a href=' ".$this->url(array('controller'=>'sms','action'=>'adminsmsmessage'))."/id/$val[id]/'>Edit</a></td>";
+	}
+}?>
 </table>
 </div>
+<script type="text/javascript">
+
+function deleteSms(id){
+    var answer = confirm ("确认删除该信息吗?")
+if (answer){
+jQuery.ajax({
+	   type: "POST",
+	   url: "<?php echo $this->url(array('controller'=>'sms','action'=>'adminsmsmessagelist'));?>",
+	   data: "id=" + id,
+	   success: function(msg){
+				window.location.reload( true );
+	   }
+});
+}else{
+    return;
+}
+}
+
+
+</script>
 </div>

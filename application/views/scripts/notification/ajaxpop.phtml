@@ -1,0 +1,9 @@
+<div class="article-box-inner msg-inner" >
+    <img style="margin: 0 0 0 3px;vertical-align:middle;" src="images/icons/msg_<?php echo $this->notification["type"]?>.png"/>
+	<span style="line-height:40px;font-size: 100%;"><?php echo $this->notification["text"]?></span>
+	<?php if ($this->notification["redirection_url"]):?>
+		<a  style="line-height:40px;" href="<?php echo $this->notification["redirection_url"]?>" onclick="react(<?php echo $this->notification["id"]?>);">查看详情</a>
+	<?php endif?>
+	
+	<a  style="line-height:40px;" href="#" onclick="react(<?php echo $this->notification["id"]?>);">我知道了</a>
+</div>

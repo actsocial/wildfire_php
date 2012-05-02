@@ -87,135 +87,156 @@
 
 <div class="mask" id="mask" style="display:none;"></div>
 
-<div class="article-box" style="margin-bottom: 15px;">
-    <div class="article-box-inner">
-	<h1 style="float:left;"><?php echo $this->translate("Welcome")?>, <?php echo $this->currentUser['name']?>!</h1>
-	
-	<div class="yourinfo">
-		<span><?php echo $this->translate("Home_Your_Info_Completeness")?></span>
-		<?php if ($this->consumerextrainfo<40): ?>
-		<div class="progressbar-red">
-		<?php endif;?>
-		<?php if ($this->consumerextrainfo>=40 && $this->consumerextrainfo<70): ?>
-		<div class="progressbar-yel">
-		<?php endif;?>
-		<?php if ($this->consumerextrainfo>=70 && $this->consumerextrainfo<90): ?>
-		<div class="progressbar-grey">
-		<?php endif;?>
-		<?php if ($this->consumerextrainfo>=90): ?>
-		<div class="progressbar-blu">
-		<?php endif;?>
-		<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" class="progressbar"><div style="width:<?php echo $this->consumerextrainfo ?>px"></div></a></div>
-		<span><a href='<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>'><?php echo $this->consumerextrainfo ?>%</a></span>
-	</div>
-	
-	<div class="clear"></div>
-	<?php if ($this->consumer!=null){ ?>
-	<h2 style="float:left;"><?php echo $this->translate("Rank")?>:<a href="#"><?php  echo $this->consumer[0]['rname']; ?></a></h2><br/><?php }?>
-	<p style="margin: 10px 0 5px 0;"><?php echo $this->translate("Home_head_content_1")?></p>
-	<p style="margin: 0 0 5px 0;"><?php echo $this->translate("Home_head_content_2_1")?>
-	<a href="<?php echo $this->url(array('controller'=>'training',	'action'=>'howitworks','id'=>'0'));?>"><?php echo $this->translate("Home_head_content_2_2")?></a>
-	</p>
-	<?php if(count($this->badges)){?>	     
-	<p> <h2><?php echo $this->translate("Your_badge")?></h2>
-        <?php
-	foreach($this->badges as $badge){
-	
-	echo "<a class='thickbox' style='margin-right:5px' href='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg'><img src='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg' width=30 height = 30 style='border:1px solid #ccc'></a>";
-	
-	}
-	?>  
-	</p>
-	<?php }?>
-	<div class="clear"></div>
-</div></div>
-<div class="spark-status">
-	<h2><?php echo $this->translate("Your_Spark_Points")?></h2>
-	<img onmouseover="showtip(2);" onmouseout="hidetip(2);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
-	<div class="tip-wrapper">
-		<div id="tip2" class="tip-box" style="display:none; ">
-			<div class="top"></div>
-			<div class="middle">
-			<h2><?php echo $this->translate("What_is_Status_Header")?></h2>
-			<p><?php echo $this->translate("What_is_Status_Content_1")?></p>
-			<p><?php echo $this->translate("What_is_Status_Content_2")?></p>
-			<p><?php echo $this->translate("What_is_Status_Content_3")?></p>
-			<p><?php echo $this->translate("What_is_Status_Content_4")?></p>
-			<p><?php echo $this->translate("What_is_Status_Content_5")?></p>
-			</div>
-			<div class="bottom"></div>
-		</div>
-	</div>
-	<div class="spark-status-box">
-		<h3><?php echo $this->translate("Home_Spark_Points_Earned")?></h3>
-		<div class="spark-status-content">
-			<h4><?php echo $this->totalPoints; ?></h4>
-			<p><?php echo $this->translate("Spark_Points_Earned_Content_1")?>two<?php echo $this->translate("Spark_Points_Earned_Content_2")?>20<?php echo $this->translate("Spark_Points_Earned_Content_3")?></p>
-		</div>
-		<h3><?php echo $this->translate("Rewards_Ready_to_Redeem")?></h3>
-		<div class="spark-status-content">
-			<h4><?php echo $this->redeemPoints; ?></h4>
-		</div>
-		<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'point',	'action'=>'show'));?>" style=""><?php echo $this->translate("Redeem_Points")?></a></div>
-		<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'history',	'action'=>'stuff'));?>" style=""><?php echo $this->translate("Check_Points") ?></a></div>
+<!-- notification box  -->
+<div class="article-box" style="margin-bottom:15px;display:none;" id="notification-box">
 
+</div>
+
+<div class="article-box" style="margin-bottom: 15px;" >
+    <div class="article-box-inner" >
+		<?php if ($this->consumer!=null){ ?>
+			<p style="margin: 10px 0 5px 0;font-size:120%;font-weight: bold;"><?php echo $this->translate("Home_head_content_1")?></p>
+			<p style="margin: 0 0 5px 0;font-size:120%;font-weight: bold;"><?php echo $this->translate("Home_head_content_2_1")?>
+			<a href="<?php echo $this->url(array('controller'=>'training',	'action'=>'howitworks','id'=>'0'));?>"><?php echo $this->translate("Home_head_content_2_2")?></a>
+			</p>
+			<div class="clear"></div>
+		<?php }?>
+	</div>
+</div>
+
+<div class="spark-status">
+	<!--  Tip  -->
+	<div class="spark-status-box">
+		<img onmouseover="showtip(2);" onmouseout="hidetip(2);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+		<div class="tip-wrapper">
+			<div id="tip2" class="tip-box" style="display:none; ">
+				<div class="top"></div>
+				<div class="middle">
+				<h2><?php echo $this->translate("What_is_Status_Header")?></h2>
+				<p><?php echo $this->translate("What_is_Status_Content_1")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_2")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_3")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_4")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_5")?></p>
+				</div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+		<div class="avatar">
+			<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>">
+				<img src="">
+			</a>
+		</div>
+	    <!--  info bar  -->
+		<div class="yourinfo">
+			<span><?php echo $this->translate("Rank")?>:<a href="#"><?php  echo $this->consumer[0]['rname']; ?></a></span>
+			<!--  Badge  -->
+			<div>
+				<?php if(count($this->badges)){?>	     
+					<?php echo $this->translate("Your_badge")?><br>
+				<?php
+					foreach($this->badges as $badge){
+						echo "<a class='thickbox' style='margin-right:5px' href='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg'><img src='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg' width=30 height = 30 style='border:1px solid #ccc'></a>";
+					}
+				?>
+				<?php }?>
+			</div><br/>
+		    <div>
+				<?php echo $this->translate("Home_Your_Info_Completeness")?>
+				<?php if ($this->consumerextrainfo<40): ?>
+				<div class="progressbar-red">
+				<?php endif;?>
+				<?php if ($this->consumerextrainfo>=40 && $this->consumerextrainfo<70): ?>
+				<div class="progressbar-yel">
+				<?php endif;?>
+				<?php if ($this->consumerextrainfo>=70 && $this->consumerextrainfo<90): ?>
+				<div class="progressbar-grey">
+				<?php endif;?>
+				<?php if ($this->consumerextrainfo>=90): ?>
+				<div class="progressbar-blu">
+				<?php endif;?>
+				<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" class="progressbar"><div style="width:<?php echo $this->consumerextrainfo ?>px"></div></a></div>
+				<span><a href='<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>'><?php echo $this->consumerextrainfo ?>%</a></span>
+			</div>
+		</div>
+
+        
+	
+	    <!--  Points  -->
+        <div style="float: left;">
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("Home_Spark_Points_Earned")?></h3><br>	
+			<div class="spark-status-content">
+				<h4><?php echo $this->totalPoints; ?></h4>
+				<p><?php echo $this->translate("Spark_Points_Earned_Content_1")?>two<?php echo $this->translate("Spark_Points_Earned_Content_2")?>20<?php echo $this->translate("Spark_Points_Earned_Content_3")?></p>
+			</div>
+		</div>
+		
+		<div style="float: left;">
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("Rewards_Ready_to_Redeem")?></h3><br>
+			<div class="spark-status-content">
+				<h4><?php echo $this->redeemPoints; ?></h4>
+			</div>
+		</div>
+		
+		<div style="float: left;">
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("新进积分")?></h3><br>
+			<div class="spark-status-content">
+				<h4><?php echo ($this->totalPoints-$this->redeemPoints); ?></h4>
+			</div>
+		</div>
+		
+		<div style="float: right; padding-right:35px;">
+			<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'point',	'action'=>'show'));?>" style=""><?php echo $this->translate("Redeem_Points")?></a></div>
+			<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'history',	'action'=>'stuff'));?>" style=""><?php echo $this->translate("Check_Points") ?></a></div>
+		</div>
 	</div>
 </div>
 
 <div class="spark-report">
-	<?php if (count($this->activeCampaigns)+count($this->allInvitations)>0):?>
-	<h2><?php echo $this->translate("Told_a_friend?_Submit_a_Spark_Report!")?></h2>
-	<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
-	<div class="tip-wrapper">
-		<div id="tip1" class="tip-box" style="display:none;">
-				<h2><?php echo $this->translate("What’s_a_Spark_Report?")?></h2>
-				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_1")?></p>
-				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_2")?></p>
-				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_3")?></p>
-				<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_4")?></p>
-		</div>
-	</div>
+<?php $i=1; foreach ($this->allInvitations as $invitation):?>
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
-			<ul class="tab">
-				<?php $i = 1; foreach ($this->allInvitations as $invitation):?>
-				<li <?php if ($i==1):?>class="active"<?php endif;?> id="campaign_<?php echo $i;?>" onclick="showUlTab(<?php echo $i?>);	return false;">
-					<a href="#"><?php echo $invitation['name']?></a>
-				</li>
-				<?php $i++?>
-				<?php endforeach;?>
-				
-				
-				<?php 
-				foreach ($this->activeCampaigns as $activeCampaign):?>
-				<li <?php if ($i==1):?>class="active"<?php endif;?> id="campaign_<?php echo $i;?>" onclick="showUlTab(<?php echo $i?>);	return false;">
-					<a href="#"><?php echo $activeCampaign['name']?></a>
-				</li>
-				<?php $i++?>
-				<?php endforeach;?>
-				
-				<?php if ($i<=2):?>
-					<li class="blank"><a href="#" onclick="return false;" style="cursor:default;">&nbsp;</a></li>
-				<?php endif;?>
-				<?php if ($i<=3):?>
-					<li class="blank"><a href="#" onclick="return false;" style="cursor:default;">&nbsp;</a></li>
-				<?php endif;?>
-			</ul>
-			<?php $i=1; foreach ($this->allInvitations as $invitation):?>
-			
-			<div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:none;"<?php endif;?>>
+			<h2><?php echo $this->translate("Campaign_name_".$invitation['campaign_id'])?></h2>
+		
+            <div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:true;"<?php endif;?>>
 			<?php $i++;?>
 			<ul>
-			<?php if($invitation['type'] == 'mission'){?>
-			<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"/></a>
-			<?php }else{?>
-			<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"/></a>
-			<?php }?>
+				<div style="border:1px dashed #3AB6EB;height:110px;width:630px">
+					<div style="float: left;">
+						<?php if($invitation['type'] == 'mission'){?>
+						<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
+						<?php }else{?>
+						<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"  height="110"/></a>
+						<?php }?>
+					</div>
+					<div style="float: left; width:200px; padding:10px;">
+						<?php echo $this->translate("Campaign_invitation_description2_".$this->recentInvitation['campaign_id'])?>
+					</div>
+				</div>
 			</ul>
 			</div>
-			<?php endforeach?>
-			<?php $j = $i;foreach ($this->activeCampaigns as $activeCampaign):?>			
-			<div class="ul-wrapper" id="ul_tab_<?php echo $j?>"<?php if ($j>1):?> style="display:none;"<?php endif;?>>
+		</div>
+	</div>
+<?php endforeach?>
+
+
+
+<?php $j = $i;foreach ($this->activeCampaigns as $activeCampaign):?>			
+	<div class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<h2><?php echo $this->translate("Campaign_name_".$activeCampaign['campaign_id'])?></h2>
+			<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+			<div class="tip-wrapper">
+				<div id="tip1" class="tip-box" style="display:none;">
+						<h2><?php echo $this->translate("What’s_a_Spark_Report?")?></h2>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_1")?></p>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_2")?></p>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_3")?></p>
+						<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_4")?></p>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="ul-wrapper" id="ul_tab_<?php echo $j?>"<?php if ($j>1):?> style="display:true;"<?php endif;?>>
 			<?php if($activeCampaign['type'] == 'campaign'){?>
 			<div class="report-area">
 				<div class="report-panel">
@@ -384,26 +405,28 @@
 			<?php }?>
 			<?php $j++;?>
 			</div>
-			<?php endforeach?>
-			
-			
 		</div>
 	</div>
-	<?php endif;?>
+<?php endforeach?>
+
+
 	
-	<h2><?php echo $this->translate("Quick_Polls:_Tell_Us_About_Yourself!")?></h2>
-	<img  onmouseover="showtip(3);" onmouseout="hidetip(3);"  class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
-	<div class="tip-wrapper">
-		<div id="tip3" class="tip-box" style="display:none;">
-			<h2><?php echo $this->translate("What_are_Quick_Polls?")?></h2>
-			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_1")?></p>
-			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_2")?></p>
-			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_3")?></p>
-			<p><?php echo $this->translate("What_are_Quick_Polls?_Content_4")?></p>
-		</div>
-	</div>
+	
+	
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
+		  <h2><?php echo $this->translate("Quick_Polls:_Tell_Us_About_Yourself!")?></h2>
+		  <img  onmouseover="showtip(3);" onmouseout="hidetip(3);"  class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+			<div class="tip-wrapper">
+				<div id="tip3" class="tip-box" style="display:none;">
+					<h2><?php echo $this->translate("What_are_Quick_Polls?")?></h2>
+					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_1")?></p>
+					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_2")?></p>
+					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_3")?></p>
+					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_4")?></p>
+				</div>
+			</div>
+			<div class="clear"></div>
 			<div class="ul-wrapper">
 			<ul class="updates">
 			<?php foreach ($this->surveys as $survey) : ?>
@@ -489,6 +512,7 @@ function hidetip(id){
 	Element.hide(tip);
 }
 
+/*
 function hideAllUlTabs(){
 	var count =  <?php echo count($this->activeCampaigns)+count($this->allInvitations)?>;
 	for (var i=1;i<=count;i++){
@@ -504,6 +528,7 @@ function showUlTab(id){
 	$('campaign_'+id).addClassName('active');
 
 }
+*/
 
 function submitURL(campaignId){
 	campaign_id = campaignId;
@@ -698,7 +723,8 @@ var callbacks = [function(){},function(){}];
 
 jQuery(document).ready(function(){
 jQuery('#fillout-dialog').dialog({dialogClass: 'ui-fillout-dialog', bgiframe: true, autoOpen: false, resizable: false, modal: true, width: 680, height: 600, title: '<?php echo $this->translate("Submit_WOM_Report")?>' });
-jQuery('#check-alert-dialog').dialog({title:'<?php echo $this->translate("Submit_you_report_error")?>', bgiframe: true, autoOpen: false, resizable: false, modal: true, buttons: {
+jQuery('#check-alert-dialog').dialog(
+		{title:'<?php echo $this->translate("Submit_you_report_error")?>', bgiframe: true, autoOpen: false, resizable: false, modal: true, buttons: {
 		'<?php echo $this->translate("Submit_you_report_confirm")?>': function() {
 			jQuery(this).dialog('close');
 		}
@@ -743,21 +769,21 @@ new AjaxUpload(button_<?php echo $activeCampaign['campaign_id'];?>,{
 });
 
 var filloutDialogOpen = function(url) {
-jQuery("#fillout-dialog .content").load(url,function(){
-});
-jQuery("#fillout-dialog").dialog('open');
+	jQuery("#fillout-dialog .content").load(url,function(){
+	});
+	jQuery("#fillout-dialog").dialog('open');
 }
 var currentReportPanel = 0;
 var showReportPanel = function(panelId) {
-var panels = new Array('.submit-report','.uploading-image','.submit-url');
-var buttons = new Array('.button-submit-report img','.button-upload-image img','.button-submit-url img');
-var buttonsGrey = new Array('tab_button_report_grey.png','tab_button_photo_grey.png','tab_button_url_grey.png');
-var buttonsBlue = new Array('tab_button_report_blue.png','tab_button_photo_blue.png','tab_button_url_blue.png');
-jQuery(panels[currentReportPanel]).hide();
-jQuery(buttons[currentReportPanel]).attr("src","<?php echo $this->baseUrl();?>/images/"+buttonsGrey[currentReportPanel]);
-jQuery(buttons[panelId]).attr("src","<?php echo $this->baseUrl();?>/images/"+buttonsBlue[panelId]);
-jQuery(panels[panelId]).show('slide');
-currentReportPanel = panelId;
+	var panels = new Array('.submit-report','.uploading-image','.submit-url');
+	var buttons = new Array('.button-submit-report img','.button-upload-image img','.button-submit-url img');
+	var buttonsGrey = new Array('tab_button_report_grey.png','tab_button_photo_grey.png','tab_button_url_grey.png');
+	var buttonsBlue = new Array('tab_button_report_blue.png','tab_button_photo_blue.png','tab_button_url_blue.png');
+	jQuery(panels[currentReportPanel]).hide();
+	jQuery(buttons[currentReportPanel]).attr("src","<?php echo $this->baseUrl();?>/images/"+buttonsGrey[currentReportPanel]);
+	jQuery(buttons[panelId]).attr("src","<?php echo $this->baseUrl();?>/images/"+buttonsBlue[panelId]);
+	jQuery(panels[panelId]).show('slide');
+	currentReportPanel = panelId;
 }
 
 function move_down(e) {
@@ -783,4 +809,6 @@ function move_up(e) {
   	jQuery('div#error').text("已经是第一个了").show().fadeOut(5000);
   }
 }
+
+loadNotification(jQuery("#notification-box"));
 </script>
