@@ -47,7 +47,12 @@
             <td><?php echo $count++;?></td>
             <td><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'admineditgift', 'product_id'=>$product['id']));?>"><?php echo $product['name']?></a></td>
             <td><?php echo $product['point'];?></td>
-            <td><?php echo $product['state'];?></td>
+            <td><select>
+            	<option value="EXPIRED" <?php if($product['state']=="EXPIRED"){?> selected <?php }?>>EXPIRED</option>
+            	<option value="STOCK" <?php if($product['state']=="STOCK"){?> selected <?php }?>>STOCK</option>
+            	<option value="oos" <?php if($product['state']=="oos"){?> selected <?php }?>>oos</option>
+            	<option value="00S" <?php if($product['state']=="00S"){?> selected <?php }?>>00S</option>
+            </select> </td>
             <td><a href="<?php echo $product['url'];?>"><?php echo $product['source'];?></a></td>
             <td><?php echo $product['category'];?></td>
              <td><a href="javascript:deleteGift('<?php echo $product['id']?>')">删除</a></td>
