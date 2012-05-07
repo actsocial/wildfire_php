@@ -6,22 +6,22 @@
 
 <table style="width:900px">
 <tr><th width="20%" align='left'>ID</th><th width="20%" align='left'>Campaign</th><th align='left' width='40%'> Subject</th><th align='left'>Action</th></tr>
-
+<!-- 
 <?php 
 if (count($this->emailTemplates)){
 	foreach ($this->emailTemplates as $email){
 		echo "<tr><td>$email[id]</td><td>$email[name]</td><td><a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'))."/id/$email[id]/do/view'  class='thickbox'>$email[subject]</a></td><td><a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'))."/id/$email[id]/do/delete'>Delete</a>|<a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplate'))."/id/$email[id]'>Edit</a></td>";
 	}
 }?>
+-->
 
- <!-- 
  <?php 
 if (count($this->emailTemplates)){
 	foreach ($this->emailTemplates as $email){
 		echo "<tr><td>$email[id]</td><td>$email[name]</td><td><a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'))."/id/$email[id]/do/view'  class='thickbox'>$email[subject]</a></td><td><a href='javascript:deleteEmail($email[id])'>Delete</a>|<a href=' ".$this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplate'))."/id/$email[id]'>Edit</a></td>";
 	}
 }?>
-  -->
+
 </table>
 </div>
 </div>
@@ -37,8 +37,8 @@ function deleteEmail(id){
 	if (answer){
 		jQuery.ajax({
 			   type: "POST",
-			   url: "<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'adminemailtemplatelist'));?>",
-			   data: "id="+id,
+			   url: "<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'admindeleteemail'))?>",
+			   data:"id="+id,
 			   success: function(msg){
 						window.location.reload( true );
 			   }
