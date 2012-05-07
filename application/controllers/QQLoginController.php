@@ -45,7 +45,7 @@ class QQLoginController extends Zend_Controller_Action{
 	
 	        //set access token to session
 	        $_SESSION["access_token"] = $params["access_token"];
-	        require_once("user/get_user_info.php");
+	        include_once("user/get_user_info.php");
 	        $graph_url = "https://graph.qq.com/oauth2.0/me?access_token=". $_SESSION['access_token'];
 		
 			$str  = get_url_contents($graph_url);

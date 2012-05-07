@@ -1,0 +1,29 @@
+<table>
+<thead>
+<th>用户</th>
+<th>原帖地址</th>
+<th>微博地址</th>
+<th>时间</th>
+<th>分数</th>
+</thead>
+<tbody>
+<?php foreach($this->irrs as $irr):
+?>
+<tr>
+	<td><?php echo $irr['consumer_name']?></td>
+	<td><a href="<?php echo "http://".$irr['topic']?>" target="_blank"><?php echo "http://".$irr['topic']?></a></td>
+	<?php if($irr['sns_type']=='weibo'){?>
+	<td><a href="<?php echo "http://weibo.com/".$irr['weiboid']."/".mid2url($irr['sns_reply_id'])?>" target="_blank"><?php echo "http://weibo.com/".$irr['weiboid']."/".mid2url($irr['sns_reply_id'])?></a></td>
+	<?php }?>
+	<td><?php echo date($irr['timestamp'])?></td>
+	<td><?php echo date($irr['point_amount'])?></td>
+</tr>
+<?php 
+endforeach;?>
+</tbody>
+</table>
+<style type="text/css">
+	td{
+		padding-left:10px;
+	}
+</style>

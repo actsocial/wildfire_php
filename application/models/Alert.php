@@ -13,4 +13,10 @@ class Alert extends Zend_Db_Table
 		$row->status = 'start';
 		$row->save();
 	}
+	
+	public function finishAlert($userId,$topic){
+		$set = array('status'=>'finish');
+		$where = 'consumer = '.$userId.' and exists (select id from issue where topic = "'.urldecode($topic).'" and alert.issue = issue.id)';
+		$this->update($set,$where);
+	}
 }
