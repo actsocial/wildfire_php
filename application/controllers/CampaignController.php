@@ -678,6 +678,7 @@ class CampaignController extends MyController
              
 			//2011-05-19 ham.bao add the badge
 //			$consumerBadgeModel = new ConsumerBadge();
+//			$notificationModel = new Notification();
 //			$consumerBadgeData  = $consumerBadgeModel->fetchRow('badge='.$this->view->campaign->badge .' and consumer='.$consumer->id);
 //			if(!count($consumerBadgeData)){
 //				$row = $consumerBadgeModel->createRow();
@@ -685,6 +686,8 @@ class CampaignController extends MyController
 //				$row->badge    = $this->view->campaign->badge;
 //				$row->create_date = date("Y-m-d H:i:s");
 //				$row->save();
+//				// add notification
+//				$notificationModel->createRecord("CONSUMER_BADGE",$consumer->id);
 //
 //			}
 			//2011-05-19 ham.bao add the badge

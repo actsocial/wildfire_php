@@ -25,6 +25,17 @@ class Notification extends Zend_Db_Table{
 	  "redirectionURL"=>"campaigninvitation/index"
 	);
 	
+	public $WOM_PROFILE_SURVEY_TEMPLATE = array(
+	  "type"=>"wom_profile_survey",
+	  "text"=>"您已被邀请参加问卷活动.",
+	  "redirectionURL"=>"profilesurvey/participate/id/#profile_survey_id"
+	);
+	
+	public $WOM_CONSUMER_BADGE_TEMPLATE = array(
+	  "type"=>"wom_consumer_badge",
+	  "text"=>"恭喜您！您获得了一枚勋章，快去看看吧",
+	);
+	
 	public function save($data) {
 		if (null === ($data['id'])) {
 			unset ($data['id']);
@@ -43,7 +54,12 @@ class Notification extends Zend_Db_Table{
 		}
 		return $this->fetchAll($select);
 	}
-	
+	/*
+	* USAGE:
+	    $notificationModel = new Notification();
+	    // add notification
+	    $notificationModel->createRecord("REDEEM_POINT",$this->_currentUser->id,$total_redeem_point);
+	*/
 	function createRecord($template_name,$consumer_id,$param = null)
     {
         if($template_name == null || $template_name == "") {
@@ -58,6 +74,11 @@ class Notification extends Zend_Db_Table{
         	$template = $WOM_RANK_UPGRADE_TEMPLET;
         } elseif($templet_name == "CAMPAIGN_INVITATION") {
         	$template = $WOM_CAMPAIGN_INVITATION_TEMPLET;
+        } elseif($templet_name == "PROFILE_SURVEY") {
+        	$template = $WOM_PROFILE_SURVEY_TEMPLATE;
+        	$replaced_url = str_replace("#profile_survey_id",$param,$template['redirectionURL']);
+        } elseif($templet_name == "CONSUMER_BADGE") {
+        	$template = $WOM_CONSUMER_BADGE_TEMPLATE;
         }
     	
     	$row = $this->createRow();
@@ -70,7 +91,11 @@ class Notification extends Zend_Db_Table{
         	$row->text = $template['text'];
         }
         $row->status = "NEW";
-        $row->redirection_url = $template['redirectionURL'];
+        if($replaced_url) {
+        	$row->redirection_url = $replaced_url;
+        } else {
+        	$row->redirection_url = $template['redirectionURL'];
+        }
         
         return $row->save();
     }
