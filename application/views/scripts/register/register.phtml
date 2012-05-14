@@ -15,9 +15,20 @@
 <link rel="stylesheet"
 	href="<?php echo $this->joomlahome;?>/modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css"
 	type="text/css" />
-<script type="text/javascript" media="screen"
-	src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>
-
+<script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery-1.7.1.min.js" ></script>
+<script type="text/javascript">
+  var jQuery = $;
+</script>
+<script type="text/javascript" media="screen" src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>
+<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.validate.min.js"></script>
+<STYLE TYPE="text/css" MEDIA=screen>
+<!-- 
+  label.error {   
+    padding-left:10px;
+    color: red;display: none;   
+  }
+-->
+</STYLE>
 <!-- 
 <link rel="stylesheet"
 	href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/general.css"
@@ -81,7 +92,7 @@
 		<?php endforeach?>
 	</div>
 <?php if(!$this->registered){?>
-<form
+<form id="registerForm" 
 			action="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>"
 			method="post">
 		<fieldset><legend><?php echo $this->translate('Invitation_Code');?></legend>
@@ -181,6 +192,59 @@
         </div></div>
 
 <script>
+
+jQuery().ready(function() {
+// validate signup form on keyup and submit
+	jQuery("#registerForm").validate({
+		rules: {
+			registerEmail: {
+				required: true,
+				email: true
+			},
+			loginPhone: {
+				required: true,
+				number:true
+			},
+			name: {
+				required: true,
+				rangelength:[1,50]
+			},
+			registerPassword: {
+			  required: true,
+			  rangelength:[6,20]
+		  },
+			repeat: {
+			  required: true,
+			  rangelength:[6,20],
+			  equalTo: "#registerPassword"
+		  }
+		},
+		messages: {
+			registerEmail: {
+				required: "请填写邮箱地址",
+				email: "邮箱地址不符合格式"
+			},
+			loginPhone: {
+			  required: "请填写电话号码",
+				number: "电话号码只能为数字"
+			},
+			name: {
+				required: "请填写用户名",
+				rangelength: "请输入1-50位的用户名"
+			},
+			registerPassword: {
+				required: "请填写密码",
+				rangelength: "请输入6~20位的密码"
+			},
+			repeat: {
+				required: "请填写密码确认",
+				rangelength: "请输入6~20位的密码确认",
+				equalTo: "两次输入密码不一致"
+			}
+		}
+	});
+});
+
 <?php if (true):?>
 $("register").disabled=true;
 allowInput();

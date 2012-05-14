@@ -1,3 +1,11 @@
+<STYLE TYPE="text/css">
+<!-- 
+  label.error {   
+    padding-left:10px;
+    color: red;display: none;   
+  }
+-->
+</STYLE>
 <div class="consumer-edit">
 <div class="article-box" style="margin-bottom: 15px;"><div class="article-box-inner">
 <h1 style="float: left;"><?php echo $this->translate('Consumer_Extra_Info_Subject')?></h1>
@@ -125,17 +133,25 @@
 	);
 </script>
 <script type="text/javascript">
-$().ready(function() {
+jQuery().ready(function() {
 // validate signup form on keyup and submit
-	$("#editForm").validate({
+	jQuery("#editForm").validate({
 		rules: {
+			email: {
+				required: true,
+				email: true
+			},
+			login_phone: {
+				required: true,
+				number:true
+			},
 			name: {
 				required: true,
-				minlength: 2
+				rangelength:[1,50]
 			},
 			recipients_name: {
 				required: true,
-				minlength: 2
+				rangelength:[1,30]
 			},
 			phone: {
 				required: true,
@@ -143,23 +159,31 @@ $().ready(function() {
 				rangelength:[2,12]
 			},
 			address1: {
-			  required:true,
-			  minlength:3
+			  //required: true,
+			  maxlength:240
 		  },
 			postalcode: {
-			  required:true,
+			  //required: true,
 			  number:true,
-			  length:6
+			  maxlength:30
 		  }
 		},
 		messages: {
+			email: {
+				required: "请填写邮箱地址",
+				email: "邮箱地址不符合格式"
+			},
+			login_phone: {
+			  required: "请填写电话号码",
+				number: "电话号码只能为数字"
+			},
 			name: {
-				required: "请填写姓名",
-				minlength: "字符长度不能小于2个字符"
+				required: "请填写用户名",
+				rangelength: "请输入1-50位的用户名"
 			},
 			recipients_name: {
 				required: "请填写收件人姓名",
-				minlength: "字符长度不能小于2个字符"
+				rangelength: "请输入1-30位的收件人姓名"
 			},
 			phone: {
 				required: "请填写电话号码",
@@ -167,13 +191,13 @@ $().ready(function() {
 				rangelength: "电话号码长度错误"
 			},
 			address1: {
-				required: "请填写收件人地址",
-				minlength: "字符长度不能小于3个字符"
+			  required: "请填写收件人地址",
+				maxlength: "字符长度不能超过240个字符"
 			},
 			postalcode: {
 				required: "请填写收件人邮编",
 				number: "邮编只能为数字",
-				length: "邮编长度错误"
+				maxlength: "字符长度不能超过30个字符"
 			}
 		}
 	});
