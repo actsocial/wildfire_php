@@ -300,7 +300,9 @@ class ReportController extends MyController
 				    	$config = Zend_Registry::get('config');
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en);
+						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission);
+//						$contents = file_get_contents($url_zh).file_get_contents($url_en);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -1534,7 +1536,8 @@ function adminreportbatchreplyAction(){
 				    	$config = Zend_Registry::get('config');
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en);
+						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);

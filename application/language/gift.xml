@@ -212,6 +212,14 @@
 				<seg>All</seg>
 			</tuv>
 		</tu>
+		<tu tuid='Gift_list_category_news'>
+			<tuv xml:lang="zh">
+				<seg>最新上架</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>New Catalog</seg>
+			</tuv>
+		</tu>
 		<tu tuid='Gift_list_category_electronics'>
 			<tuv xml:lang="zh">
 				<seg>数码/家电</seg>

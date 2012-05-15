@@ -25,6 +25,7 @@ class RegisterController extends MyController
 		$this->view->form =$loginform;
 
 		$form = new RegisterForm();
+		$form->setAttrib('id', 'registerForm');
 		$this->view->registerForm = $form;
 		$signupAuthCodeModel = new SignupAuthCode();
 		

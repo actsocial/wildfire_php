@@ -10,6 +10,7 @@ class GiftController extends MyController
 	 * Enter description here ...
 	 */
 	function listAction(){
+		
 		$this->view->title = $this->view->translate("Wildfire")." - ".$this->view->translate("GIFT_LIST");
 		
 		$this->view->consumer = $this->_currentUser;
@@ -34,7 +35,13 @@ class GiftController extends MyController
 
 			}else{
 				if($this->_request->getParam('t') != null && $this->_request->getParam('t') != 'none'){
-					$products = $productModel->fetchAll("category = '".$this->_request->getParam('t')."'".' and state ="STOCK"', 'point')->toArray();
+					if($this->_request->getParam('t')=="NEW"){
+						//添加最新上架 Bruce.Liu
+						$products = $productModel->fetchAll(' state ="STOCK" ','id desc',18,'point')->toArray();
+//						Zend_Debug::dump($products);die();
+					}else{
+						$products = $productModel->fetchAll("category = '".$this->_request->getParam('t')."'".' and state ="STOCK"', 'point')->toArray();
+					}
 				}else{
 					$products = $productModel->fetchAll('state ="STOCK"', 'point')->toArray(); 
 				}
@@ -71,7 +78,6 @@ class GiftController extends MyController
 		$paginator->setCurrentPageNumber($this->_curPage)
 		->setItemCountPerPage($this->_rowsPerPage); 
 		$this->view->products = $paginator; 
-
         //set the No. inital value in view page
         $this->view->NoInitValue = ($this->_curPage-1)*$this->_rowsPerPage+1;
 	}

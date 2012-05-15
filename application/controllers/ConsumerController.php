@@ -702,7 +702,15 @@ class ConsumerController extends MyController {
 		if (empty ( $this->view->redeemPoints )) {
 			$this->view->redeemPoints = 0;
 		}
-
+		//usable points
+		$today = date("Y-m-d" , time());
+		$this->view->usablePoints =  $db->fetchOne(
+    		"SELECT sum(point_amount) FROM reward_point_transaction_record WHERE (consumer_id = :temp and date <:temp2) or (consumer_id = :temp and date >=:temp2 and transaction_id=4) ",
+			array('temp' =>$uid,'temp2'=>date("Y-m-d",strtotime("$today   -30   day")))
+		);
+		if (empty($this->view->usablePoints)){ 
+			$this->view->usablePoints=0;
+		}
 		$redeemSelect = $db->select ();
 		$redeemSelect->from ( 'product_order', array ('product_order.amount as amount', 'product_order.create_date', 'product_order.state as pstate', 'product_order.id as pid', 'product.name', 'reward_point_transaction_record.point_amount' ) );
 		$redeemSelect->join ( 'product', 'product_order.product_id=product.id' );

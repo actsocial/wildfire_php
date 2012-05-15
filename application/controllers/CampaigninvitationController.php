@@ -1025,7 +1025,7 @@ class CampaignInvitationController extends MyController {
 		$consumerArray = explode(',', $consumerId);
 			
 		$profileSurveyInvitation = new ProfileSurveyInvitation();
-		
+		$notificationModel = new Notification();
 		foreach ($consumerArray as $consumer){			
 			if ( $consumer !='') {
 				$invitation = $profileSurveyInvitation->fetchRow('consumer_id = '. $consumer . ' and profile_id = ' .$profileSurvey);
@@ -1036,6 +1036,8 @@ class CampaignInvitationController extends MyController {
 					$row->profile_id  = $profileSurvey;
 					$row->date        = $currentTime;
 					$row->save();
+					// add notification
+					$notificationModel->createRecord("PROFILE_SURVEY",$consumer,$profileSurvey);
 				}
 			}			
 		}
