@@ -62,25 +62,28 @@ class Notification extends Zend_Db_Table{
 	*/
 	function createRecord($template_name,$consumer_id,$param = null)
     {
-        if($template_name == null || $template_name == "") {
+        $template = null;
+        $replaced_text = null;
+        $replaced_url  = null;
+        //Zend_Debug::dump($template_name);
+    	if($template_name == null || $template_name == "") {
         	return null;
-        } elseif($templet_name == "REPORT_REPLY") {
-        	$template = $WOM_REPORT_REPLY_TEMPLET;
+        } elseif($template_name == "REPORT_REPLY") {
+        	$template = $this->WOM_REPORT_REPLY_TEMPLATE;
         	$replaced_text = str_replace("#point",$param,$template['text']);
-        } elseif($templet_name == "REDEEM_POINT") {
-        	$template = $WOM_REDEEM_POINT_TEMPLET;
+        } elseif($template_name == "REDEEM_POINT") {
+        	$template = $this->WOM_REDEEM_POINT_TEMPLATE;
         	$replaced_text = str_replace("#point",$param,$template['text']);
-        } elseif($templet_name == "RANK_UPGRADE") {
-        	$template = $WOM_RANK_UPGRADE_TEMPLET;
-        } elseif($templet_name == "CAMPAIGN_INVITATION") {
-        	$template = $WOM_CAMPAIGN_INVITATION_TEMPLET;
-        } elseif($templet_name == "PROFILE_SURVEY") {
-        	$template = $WOM_PROFILE_SURVEY_TEMPLATE;
+        } elseif($template_name == "RANK_UPGRADE") {
+        	$template = $this->WOM_RANK_UPGRADE_TEMPLATE;
+        } elseif($template_name == "CAMPAIGN_INVITATION") {
+        	$template = $this->WOM_CAMPAIGN_INVITATION_TEMPLATE;
+        } elseif($template_name == "PROFILE_SURVEY") {
+        	$template = $this->WOM_PROFILE_SURVEY_TEMPLATE;
         	$replaced_url = str_replace("#profile_survey_id",$param,$template['redirectionURL']);
-        } elseif($templet_name == "CONSUMER_BADGE") {
-        	$template = $WOM_CONSUMER_BADGE_TEMPLATE;
+        } elseif($template_name == "CONSUMER_BADGE") {
+        	$template = $this->WOM_CONSUMER_BADGE_TEMPLATE;
         }
-    	
     	$row = $this->createRow();
         $row->consumer_id = $consumer_id;
         $row->date = date("Y-m-d H:i:s");
