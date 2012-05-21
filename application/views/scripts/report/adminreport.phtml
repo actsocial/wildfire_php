@@ -77,7 +77,7 @@
 					</select>
 				</td>
 				<?php if ($this->currentAdmin->id=='2'){?>
-					<?php if ($report['adminname']!=null && $report['adminname']!=""){?><td> <?php echo $report['adminname']?> </td><?php } else {?><td><?php echo $this->translate("暂时没有人")?></td> <?php }?> 
+					<?php  if (isset($report["adminname"])&&$report['adminname']!=""){?><td> <?php echo $report['adminname']?> </td><?php } else {?><td> <?php echo $this->translate("暂时没有人")?> </td> <?php }?> 
 				<?php }?>	
 					<input type="text" id="consumer_id_<?php echo $i; ?>" name='consumer_id' value=<?php echo $report['consumer_id']?> style="display:none;"/>
 					<input type="text" id="report_id_<?php echo $i; ?>" name='report_id' value=<?php echo $report['id']?> style="display:none;"/>
