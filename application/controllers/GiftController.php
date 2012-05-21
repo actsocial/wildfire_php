@@ -31,7 +31,7 @@ class GiftController extends MyController
 			$products = $productModel->fetchAll('point <= '.$amountPoints.' and state ="STOCK"', 'point desc')->toArray(); 
 		}else{
 			if($this->_request->getParam('p2') != null && (int)$this->_request->getParam('p2') > 0){
-				$products = $productModel->fetchAll('point >= '.$this->_request->getParam('p1').' and point < '.$this->_request->getParam('p2').' and state ="STOCK"', 'point')->toArray(); 			
+				$products = $productModel->fetchAll('point >= '.$this->_request->getParam('p1').' and point <= '.$this->_request->getParam('p2').' and state ="STOCK"', 'point')->toArray(); 			
 
 			}else{
 				if($this->_request->getParam('t') != null && $this->_request->getParam('t') != 'none'){
@@ -549,7 +549,7 @@ class GiftController extends MyController
 		if( $this->_request->getParam('p2')){
 			$this->view->p2 = $this->_request->getParam('p2');
 			if ($this->view->p2 != 0){
-				$p2 = 'point >= '.$this->_request->getParam('p1').' and point < '.$this->_request->getParam('p2');
+				$p2 = 'point >= '.$this->_request->getParam('p1').' and point <= '.$this->_request->getParam('p2');
 			}else{
 				$p2 = '';
 			}
