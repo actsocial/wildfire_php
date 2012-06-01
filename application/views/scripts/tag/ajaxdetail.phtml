@@ -22,7 +22,7 @@
 			foreach($topic['value']['tracker'] as $k => $v):
 				if(!$lastestKey){
 					$lastestKey = $k;
-				}else if($lasteKey < $k){
+				}else if($lastestKey < $k){
 					$lastestKey = $k;
 				}
 			endforeach;
@@ -71,7 +71,7 @@
 		</div>
 	</div>
 <?php endforeach;?>
-<div class="pageInfo">
+<!-- div class="pageInfo">
 <?php 
 	if($this->page>0){
 ?>
@@ -87,8 +87,10 @@
 <?php 
 	}
 ?>
-</div>
+</div-->
 <script>
+_totalPage = <?php echo $this->totalPage?>;
+_currentPage = <?php echo $this->page?>;
 	function toggleDiv(e,id){
 		var topicPRR =jQuery(e).parent().parent().parent().find(".topicPRR");
 		if (topicPRR.css('display')=='none'){

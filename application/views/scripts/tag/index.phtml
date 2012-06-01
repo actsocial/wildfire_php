@@ -23,18 +23,40 @@ endforeach;?>
 endforeach;?>
 </div></ul>
 </div>
-<div class="topics"></div>
+<div class="topics"><div class="loadingtopic" style="display: none">读取中...</div></div>
 <script type="text/javascript">
+_totalPage = 0;
+_currentPage = 0;
+_selectKey = null;
+_totalCount = 0;
+_loading = false;
 jQuery(function($){
 	//$('#tagCloudDiv').tagcloud({centrex:400, centrey:300, init_motion_x:10, init_motion_y:10,zoom: 100,max_zoom: 100,min_zoom: 100});
+	$(window).bind("scroll",function(){
+		if(_selectKey){
+			if(_totalPage>0&&_currentPage<_totalPage){
+				var top = document.documentElement.scrollTop + document.body.scrollTop;
+				if($(".topics").height() - top < 500){
+					if(!_loading){
+						openDetail(_selectKey,_totalCount,++_currentPage);
+					}
+				}
+			}
+		}
+	});
 });
 function openDetail(key,count,page){
+	_loading = true;
 	if(!page){
 		page=0;
 	}
-	jQuery(".topics").html("读取中...");
+	_selectKey = key;
+	_totalCount = count;
+	jQuery(".topics .loadingtopic").show();
 	jQuery.get("tag/ajaxdetail?key="+key+"&totalCount="+count+"&page="+page,function(data){
-		jQuery(".topics").html(data);
+		jQuery(".topics .loadingtopic").hide();
+		jQuery(".loadingtopic").before(data);
+		_loading = false;
 	});
 }
 function openIssues(e){
