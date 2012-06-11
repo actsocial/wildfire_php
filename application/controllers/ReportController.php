@@ -522,9 +522,9 @@ class ReportController extends MyController
 		//get report
 		$select = $db->select();
 		$select->from('report', 'report.*');
-		$select->join('consumer', 'report.consumer_id = consumer.id',array('consumer.email','consumer.login_phone','consumer.name as adminname'));
-		$select->join('campaign', 'campaign.id = report.campaign_id', 'name');
-		$select->join('campaign_invitation','campaign_invitation.consumer_id = report.consumer_id and report.campaign_id = campaign_invitation.campaign_id','campaign_invitation.state as cistate');
+		$select->join('consumer', 'report.consumer_id = consumer.id',array('consumer.email','consumer.login_phone','consumer.name as consumername'));
+		$select->join('campaign', 'campaign.id = '.$this->view->campaign_id, 'name');
+		$select->join('campaign_invitation','campaign_invitation.consumer_id = consumer.id and campaign_invitation.campaign_id = '.$this->view->campaign_id,'campaign_invitation.state as cistate');
 		$select->where('report.campaign_id = ? ', $this->view->campaign_id);
 		if($this->report_state!=""&&$this->report_state!=null&&$this->report_state!="all"){
 			$select->where('report.state = ? ', $this->report_state);
@@ -535,32 +535,41 @@ class ReportController extends MyController
 		}else{
 			$select->where('consumer.pest = 1');
 		}
+
+		$select->order('report.create_date desc');
+		$this->view->AllReports = $db->fetchAll($select);
+		// add adminname to AllReports 
+		
 		//campagin 
 		$campaignModel = new Campaign();
 		$this->view->campaign = $campaignModel->fetchRow('id = '.$this->view->campaign_id);
 		
-		$select->order('report.create_date desc');
-		$this->view->AllReports = $db->fetchAll($select);
-		// add adminname to AllReports 
 		$num=0;
+		
+		$select_report_batch = $db->select();
+		$select_report_batch->from('report_batch');
+		$select_report_batch->join('admin','admin.id = report_batch.admin_id','admin.name as adminname');
+		$select_report_batch->where('report_batch.campaign_id = '.$this->view->campaign_id );
+		$report_batches = $db->fetchAll($select_report_batch);
+
 		foreach ($this->view->AllReports as $rep):
-			$select_admin=$db->select();
-			$select_admin->from('report_batch','report_batch.admin_id');
-			$select_admin->join('admin','admin.id = report_batch.admin_id','admin.name as adminname');
-			$select_admin->where('FIND_IN_SET('.$rep['id'].',report_batch.report_ids) > 0');
-			$this->admin_name=$db->fetchAll($select_admin);
-			if ($this->admin_name!=""&&$this->admin_name!=null)
-			{
-				$this->view->AllReports[$num]['adminname']=$this->admin_name[0]['adminname'];
-			}else {
-				$this->view->AllReports[$num]['adminname']='';
-			}
+
+            foreach ($report_batches as $batch):
+            	if (strpos($batch["report_ids"],$rep['id'])>0){
+            	  	$this->view->AllReports[$num]['adminname'] = $batch["adminname"];
+            	}
+            endforeach;
+            
 			$num++;
 		endforeach;
+
 //		Zend_Debug::dump($this->view->AllReports );die();
 		$this->view->totalReports = count($this->view->AllReports);
-		$select->where('report.state != "UNAPPROVED"');
-		$this->view->totalApprovedReports = count($db->fetchAll($select));
+		
+		$selectcount = $db->select();
+		$selectcount->from('report', 'count(*)');
+		$selectcount->where('report.state != "UNAPPROVED"');
+		$this->view->totalApprovedReports = $db->fetchAll($selectcount);
 		//get report amount for each member
 		$selectReportAmount = $db->select();
 		$selectReportAmount->from('report',array('count(*)', 'consumer_id'))

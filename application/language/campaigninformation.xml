@@ -1585,6 +1585,23 @@
         		<seg></seg>
         	</tuv>
         </tu>
-        
+        <!-- fixbug campaign -->
+		<tu tuid='Campaign_name_17'>
+			<tuv xml:lang="zh">
+				<seg>我是品牌控</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>我是品牌控</seg>
+			</tuv>
+		</tu>
+        <tu tuid='Campaign_name_20'>
+			<tuv xml:lang="zh">
+				<seg>百利甜酒</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>百利甜酒</seg>
+			</tuv>
+		</tu>
+		
 	</body>
 </tmx>

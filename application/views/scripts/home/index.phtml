@@ -129,7 +129,7 @@
 		</div>
 	    <!--  info bar  -->
 		<div class="yourinfo">
-			<span><?php echo $this->translate("Rank")?>:<a href="#"><?php  echo $this->consumer[0]['rname']; ?></a></span>
+			<span><?php echo $this->translate("Rank")?><a href="#"><?php  echo $this->consumer[0]['rname']; ?></a></span>
 			<!--  Badge  -->
 			<div>
 				<?php if(count($this->badges)){?>	     
@@ -179,7 +179,7 @@
 		</div>
 		
 		<div style="float: left;">
-			<h3>&nbsp;&nbsp;<?php echo $this->translate("新进积分")?></h3><br>
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("新进积分：")?></h3><br>
 			<div class="spark-status-content">
 				<h4><?php echo ($this->totalPoints-$this->redeemPoints); ?></h4>
 			</div>
@@ -210,7 +210,7 @@
 						<?php }?>
 					</div>
 					<div style="float: left; width:200px; padding:10px;">
-						<?php echo $this->translate("Campaign_invitation_description2_".$this->recentInvitation['campaign_id'])?>
+						<?php echo $this->translate("Campaign_invitation_description2_".$invitation['campaign_id'])?>
 					</div>
 				</div>
 			</ul>
