@@ -2,7 +2,7 @@
 include_once 'Indicate2Connect.php';
 class ReportController extends MyController
 {
-	
+	 
 	function createAction()
 	{
 		
@@ -211,7 +211,7 @@ class ReportController extends MyController
     	$url = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']; 
 		$contents = file_get_contents($url); 
 	    $this->view->report_content = $contents;
-	    
+ 	    
 		$this->view->title = "Reply Reports";
 		$this->view->activeTab = "Reply Reports";
 		$this->view->mailForm = new ReplyReportForm();
@@ -335,7 +335,7 @@ class ReportController extends MyController
 //						$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
 						//send!
 						$mail->send();
-											
+		 									
 						//4.save "reply email" into DB		
 						$replyModel = new Reply();
 						$reply = $replyModel->fetchRow('report_id = '.$this->_request->getParam('report_id'));
