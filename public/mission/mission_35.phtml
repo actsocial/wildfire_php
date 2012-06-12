@@ -1,0 +1,75 @@
+
+
+<div class="search_field">
+<p>参加“宠物情缘”活动任务,获取更多积分。</p>
+</div>	
+		
+		<div>
+		<table class='mission' CELLPADDING="5px" style="font-size:11px">
+			<tr >
+				<td style="width:35%">
+					<div class="mission_instruction">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/one.jpg' width=36 height=36 />收到邀请邮件，登录星星火，接受任务邀请
+</p>
+					</div>
+				</td>
+				<td style="background: url('<?php echo $this->baseUrl();?>images/mission/arrow1.jpg') no-repeat bottom left;"></td>
+				<td style="width:25%"></td>
+			</tr>
+			<tr style="width:50%">
+				<td></td>
+				<td>
+					<div class="mission_process">
+						<p><img src='<?php echo $this->baseUrl();?>/images/mission/two.jpg' width=36 height=36 /><a style="color:#FE6700;font-weight:bold;">
+							根据任务中步骤，完成相应的问卷
+						</p>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<tr >
+				<td>
+					<div class="mission_reward">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/three.jpg' width=35 height=36 />提交确认，等待审核</p>
+					</div>
+				</td>
+				<td  style="background: url('<?php echo $this->baseUrl();?>/images/mission/arrow3.jpg') no-repeat top left ;"></td>
+                <td  style="background: url('<?php echo $this->baseUrl();?>/images/mission/arrow1.jpg') no-repeat bottom left;"></td>
+                
+			</tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td  > </td>
+            
+            </tr>
+            <tr>
+            <td></td>
+            <td></td>
+				<td>
+					<div class="mission_reward">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/four.jpg' width=36 height=36 />获得积分，兑换礼品
+</p>
+					</div>
+				</td>
+            </tr>
+			<tr>
+				<td></td>
+				<td style="height:60px; background: url('<?php echo $this->baseUrl();?>/images/mission/button.jpg') no-repeat center center; ">
+				<ul class="submit-report" style="display: block;">
+			<div class="li-wrapper">
+		<li><?php if ($this->state == 'COMPLETED'){?>
+		
+		           <div style="font-weight:bold; font-size:16px; text-align:center;"><a  onclick="return false;" href="#">已经完成任务</a></div>
+		<?php }else{?>
+			<div style="font-weight:bold; font-size:16px; text-align:center;"><a  onclick="filloutDialogOpen('<?php echo $this->baseUrl();?>/mission/paticipate/id/<?php echo $this->campaign_id ?>');return false;" href="#">点击参与任务</a></div>
+		<?php }?>
+		</li>
+			</div>
+</ul>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		
+		</div>

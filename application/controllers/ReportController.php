@@ -301,8 +301,9 @@ class ReportController extends MyController
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
 						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission);
-//						$contents = file_get_contents($url_zh).file_get_contents($url_en);
+						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
+						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -436,9 +437,6 @@ class ReportController extends MyController
 			}
 			$row->reward_point_transaction_record_id = $rewardReocrd->id;
 			$row->save();
-			// add notification
-			$notificationModel = new Notification();
-			$notificationModel->createRecord("REPORT_REPLY",$row->consumer_id,$points);
 	}
 	
 	function saveTags($report_id,$tagArray){
@@ -522,9 +520,9 @@ class ReportController extends MyController
 		//get report
 		$select = $db->select();
 		$select->from('report', 'report.*');
-		$select->join('consumer', 'report.consumer_id = consumer.id',array('consumer.email','consumer.login_phone','consumer.name as consumername'));
-		$select->join('campaign', 'campaign.id = '.$this->view->campaign_id, 'name');
-		$select->join('campaign_invitation','campaign_invitation.consumer_id = consumer.id and campaign_invitation.campaign_id = '.$this->view->campaign_id,'campaign_invitation.state as cistate');
+		$select->join('consumer', 'report.consumer_id = consumer.id',array('consumer.email','consumer.login_phone','consumer.name as adminname'));
+		$select->join('campaign', 'campaign.id = report.campaign_id', 'name');
+		$select->join('campaign_invitation','campaign_invitation.consumer_id = report.consumer_id and report.campaign_id = campaign_invitation.campaign_id','campaign_invitation.state as cistate');
 		$select->where('report.campaign_id = ? ', $this->view->campaign_id);
 		if($this->report_state!=""&&$this->report_state!=null&&$this->report_state!="all"){
 			$select->where('report.state = ? ', $this->report_state);
@@ -535,41 +533,32 @@ class ReportController extends MyController
 		}else{
 			$select->where('consumer.pest = 1');
 		}
-
-		$select->order('report.create_date desc');
-		$this->view->AllReports = $db->fetchAll($select);
-		// add adminname to AllReports 
-		
 		//campagin 
 		$campaignModel = new Campaign();
 		$this->view->campaign = $campaignModel->fetchRow('id = '.$this->view->campaign_id);
 		
+		$select->order('report.create_date desc');
+		$this->view->AllReports = $db->fetchAll($select);
+		// add adminname to AllReports 
 		$num=0;
-		
-		$select_report_batch = $db->select();
-		$select_report_batch->from('report_batch');
-		$select_report_batch->join('admin','admin.id = report_batch.admin_id','admin.name as adminname');
-		$select_report_batch->where('report_batch.campaign_id = '.$this->view->campaign_id );
-		$report_batches = $db->fetchAll($select_report_batch);
-
 		foreach ($this->view->AllReports as $rep):
-
-            foreach ($report_batches as $batch):
-            	if (strpos($batch["report_ids"],$rep['id'])>0){
-            	  	$this->view->AllReports[$num]['adminname'] = $batch["adminname"];
-            	}
-            endforeach;
-            
+			$select_admin=$db->select();
+			$select_admin->from('report_batch','report_batch.admin_id');
+			$select_admin->join('admin','admin.id = report_batch.admin_id','admin.name as adminname');
+			$select_admin->where('FIND_IN_SET('.$rep['id'].',report_batch.report_ids) > 0');
+			$this->admin_name=$db->fetchAll($select_admin);
+			if ($this->admin_name!=""&&$this->admin_name!=null)
+			{
+				$this->view->AllReports[$num]['adminname']=$this->admin_name[0]['adminname'];
+			}else {
+				$this->view->AllReports[$num]['adminname']='';
+			}
 			$num++;
 		endforeach;
-
 //		Zend_Debug::dump($this->view->AllReports );die();
 		$this->view->totalReports = count($this->view->AllReports);
-		
-		$selectcount = $db->select();
-		$selectcount->from('report', 'count(*)');
-		$selectcount->where('report.state != "UNAPPROVED"');
-		$this->view->totalApprovedReports = $db->fetchAll($selectcount);
+		$select->where('report.state = "APPROVED"');
+		$this->view->totalApprovedReports = count($db->fetchAll($select));
 		//get report amount for each member
 		$selectReportAmount = $db->select();
 		$selectReportAmount->from('report',array('count(*)', 'consumer_id'))
@@ -1467,7 +1456,10 @@ function adminreportbatchreplyAction(){
 				    	$config = Zend_Registry::get('config');
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en);
+						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
+						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
+						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -1546,11 +1538,14 @@ function adminreportbatchreplyAction(){
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
 						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission);
+						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
+						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
-						$contents = preg_replace('/&nbsp;/', '', $contents);	
+						$contents = preg_replace('/&nbsp;/', '', $contents);
+                                                	
 						preg_match_all ("|<div class.*answer_content.*>(.*)</[^>]+>|U", $contents, $out, PREG_PATTERN_ORDER);
 						
 					    //3.create email and send
