@@ -1,0 +1,1663 @@
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	// <![CDATA[
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie > 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length > MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+	// ]]>
+	-->
+	</script>
+<div class="main-container-outer" >
+	<div id="container">
+		<div id="header" class="header" style="display: none;">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			<div class="main-logo" id="main-logo">
+				<a href="http://www.ostrakon.org" target="_blank">
+					<img src="/survey/logoImage/625" style="height:70px; width:301px" />
+				</a>
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div> <!-- header -->
+		<div id="nav" class="navigation" style="display:none;">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content" >
+ 		
+
+<div id="content" style="width:100%;">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	mandatoryElements = new Array(); 
+// ]]>
+-->
+</script>
+<div class="fillout-container">
+<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
+<div class="mainOneContent">
+
+<div style="margin-top:10px;"></div>
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
+  <div id="mainzone-top-left">
+    <div id="mainzone-top-right"></div>
+  </div>
+</div>
+<div id="mainzone">
+<div id="mainzone-inner">
+
+
+<input type="hidden" name="id" value="amZbj7664haR" id="id" />
+<input type="hidden" name="theme" value="wildfire" id="theme" />
+
+<div class="mandatory"><span style="color: red;">* </span>- It is mandatory</div>
+<div class="page-bar-area">
+<span id="pageBar">Page:&nbsp;</span>
+<strong class="no-answer">No Answer</strong><img class="no-answer" src="/images/no_answer.gif" align="absmiddle"/>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+
+	
+	<div id="page_0">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2528" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						请问下面哪句话描述你的视力最准确？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12085].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12085].id" value="" id="answers[12085].id" />
+<ul>
+	<li>
+			<input group="12085" type="radio" id="12085_0" name="answers[12085].value" value="9532"  class="selection question_radio_12085" onclick="showOtherValueInputInRadio(this)" />		<label for="12085_0">我视力很好，不需要眼镜或隐形眼镜</label>
+	</li>
+	<li>
+			<input group="12085" type="radio" id="12085_1" name="answers[12085].value" value="9533"  class="selection question_radio_12085" onclick="showOtherValueInputInRadio(this)" />		<label for="12085_1">我视力一般，我需要的只是眼镜</label>
+	</li>
+	<li>
+			<input group="12085" type="radio" id="12085_2" name="answers[12085].value" value="9534"  class="selection question_radio_12085" onclick="showOtherValueInputInRadio(this)" />		<label for="12085_2">我视力一般，需要眼镜和隐形眼镜</label>
+	</li>
+	<li>
+			<input group="12085" type="radio" id="12085_3" name="answers[12085].value" value="9535"  class="selection question_radio_12085" onclick="showOtherValueInputInRadio(this)" />		<label for="12085_3">我视力一般，我需要的只是隐形眼镜</label>
+	</li>
+		<li>
+			<input type="radio" id="12085_other" name="answers[12085].value" value="0" class="question_radio_12085" onclick="showOtherValueInputInRadio(this)" />			<label for="12085_other">Other</label>
+			<input id="12085_other_input" type="text" name="answers[12085].otherValue" value=""  style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12085  qc_0 radio" type="radio" name="answers[12085].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2513" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						请问你的月收入是多少？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12086].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12086].id" value="" id="answers[12086].id" />
+<ul>
+	<li>
+			<input group="12086" type="radio" id="12086_0" name="answers[12086].value" value="9480"  class="selection question_radio_12086"  />		<label for="12086_0">0-4999 元</label>
+	</li>
+	<li>
+			<input group="12086" type="radio" id="12086_1" name="answers[12086].value" value="9481"  class="selection question_radio_12086"  />		<label for="12086_1">5000-6999 元</label>
+	</li>
+	<li>
+			<input group="12086" type="radio" id="12086_2" name="answers[12086].value" value="9482"  class="selection question_radio_12086"  />		<label for="12086_2">7000-8999 元</label>
+	</li>
+	<li>
+			<input group="12086" type="radio" id="12086_3" name="answers[12086].value" value="9483"  class="selection question_radio_12086"  />		<label for="12086_3">9000 元及以上</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12086  qc_0 radio" type="radio" name="answers[12086].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2529" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						请问你每周会花在网上购买衣物或配饰的时间？(例如T恤，牛仔裤，墨镜，手表等等)
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12087].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12087].id" value="" id="answers[12087].id" />
+<ul>
+	<li>
+			<input group="12087" type="radio" id="12087_0" name="answers[12087].value" value="9536"  class="selection question_radio_12087"  />		<label for="12087_0">1-5 小时</label>
+	</li>
+	<li>
+			<input group="12087" type="radio" id="12087_1" name="answers[12087].value" value="9537"  class="selection question_radio_12087"  />		<label for="12087_1">6-10 小时</label>
+	</li>
+	<li>
+			<input group="12087" type="radio" id="12087_2" name="answers[12087].value" value="9538"  class="selection question_radio_12087"  />		<label for="12087_2">11-15 小时</label>
+	</li>
+	<li>
+			<input group="12087" type="radio" id="12087_3" name="answers[12087].value" value="9539"  class="selection question_radio_12087"  />		<label for="12087_3">16-20 小时</label>
+	</li>
+	<li>
+			<input group="12087" type="radio" id="12087_4" name="answers[12087].value" value="9540"  class="selection question_radio_12087"  />		<label for="12087_4">超过20 小时</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12087  qc_0 radio" type="radio" name="answers[12087].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2515" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						在你的生活中，“紧跟时尚”有多重要？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<span class="error-content" id="err_answers[12088].value" ></span>
+<input type="hidden" name="answers[12088].id" value="" id="answers[12088].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">不重要</div>
+	<table class="rating-table">
+		<tr class="radio-line">
+
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[12088].value" value="1" id="12088_1" group="12088" class="question_radio_12088 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[12088].value" value="2" id="12088_2" group="12088" class="question_radio_12088 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[12088].value" value="3" id="12088_3" group="12088" class="question_radio_12088 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[12088].value" value="4" id="12088_4" group="12088" class="question_radio_12088 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[12088].value" value="5" id="12088_5" group="12088" class="question_radio_12088 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[12088].value" value="6" id="12088_6" group="12088" class="question_radio_12088 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[12088].value" value="7" id="12088_7" group="12088" class="question_radio_12088 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[12088].value" value="8" id="12088_8" group="12088" class="question_radio_12088 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[12088].value" value="9" id="12088_9" group="12088" class="question_radio_12088 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[12088].value" value="10" id="12088_10" group="12088" class="question_radio_12088 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+		</tr>
+	</table> <div class="right-label">很重要</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[12088].value" value="" id="answers[12088].value" class="q_12088 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2530" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你通常在哪里购买衣物或配饰？(例如T恤，牛仔裤，墨镜，手表等等)
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12089].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12089].id" value="" id="answers[12089].id" />
+<ul>
+	<li>
+			<input group="12089" type="radio" id="12089_0" name="answers[12089].value" value="9541"  class="selection question_radio_12089" onclick="showOtherValueInputInRadio(this)" />		<label for="12089_0">网上</label>
+	</li>
+	<li>
+			<input group="12089" type="radio" id="12089_1" name="answers[12089].value" value="9542"  class="selection question_radio_12089" onclick="showOtherValueInputInRadio(this)" />		<label for="12089_1">大商场</label>
+	</li>
+	<li>
+			<input group="12089" type="radio" id="12089_2" name="answers[12089].value" value="9543"  class="selection question_radio_12089" onclick="showOtherValueInputInRadio(this)" />		<label for="12089_2">专卖店</label>
+	</li>
+	<li>
+			<input group="12089" type="radio" id="12089_3" name="answers[12089].value" value="9544"  class="selection question_radio_12089" onclick="showOtherValueInputInRadio(this)" />		<label for="12089_3">小摊</label>
+	</li>
+		<li>
+			<input type="radio" id="12089_other" name="answers[12089].value" value="0" class="question_radio_12089" onclick="showOtherValueInputInRadio(this)" />			<label for="12089_other">Other</label>
+			<input id="12089_other_input" type="text" name="answers[12089].otherValue" value=""  style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12089  qc_0 radio" type="radio" name="answers[12089].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2517" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你每周看多少博客？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12090].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12090].id" value="" id="answers[12090].id" />
+<ul>
+	<li>
+			<input group="12090" type="radio" id="12090_0" name="answers[12090].value" value="9493"  class="selection question_radio_12090"  />		<label for="12090_0">0</label>
+	</li>
+	<li>
+			<input group="12090" type="radio" id="12090_1" name="answers[12090].value" value="9494"  class="selection question_radio_12090"  />		<label for="12090_1">1-3</label>
+	</li>
+	<li>
+			<input group="12090" type="radio" id="12090_2" name="answers[12090].value" value="9495"  class="selection question_radio_12090"  />		<label for="12090_2">4-5</label>
+	</li>
+	<li>
+			<input group="12090" type="radio" id="12090_3" name="answers[12090].value" value="9496"  class="selection question_radio_12090"  />		<label for="12090_3">5-6</label>
+	</li>
+	<li>
+			<input group="12090" type="radio" id="12090_4" name="answers[12090].value" value="9497"  class="selection question_radio_12090"  />		<label for="12090_4">多于6</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12090  qc_0 radio" type="radio" name="answers[12090].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2531" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你经常读的时尚杂志数量？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12091].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12091].id" value="" id="answers[12091].id" />
+<ul>
+	<li>
+			<input group="12091" type="radio" id="12091_0" name="answers[12091].value" value="9545"  class="selection question_radio_12091"  />		<label for="12091_0">1</label>
+	</li>
+	<li>
+			<input group="12091" type="radio" id="12091_1" name="answers[12091].value" value="9546"  class="selection question_radio_12091"  />		<label for="12091_1">2</label>
+	</li>
+	<li>
+			<input group="12091" type="radio" id="12091_2" name="answers[12091].value" value="9547"  class="selection question_radio_12091"  />		<label for="12091_2">3</label>
+	</li>
+	<li>
+			<input group="12091" type="radio" id="12091_3" name="answers[12091].value" value="9548"  class="selection question_radio_12091"  />		<label for="12091_3">4</label>
+	</li>
+	<li>
+			<input group="12091" type="radio" id="12091_4" name="answers[12091].value" value="9549"  class="selection question_radio_12091"  />		<label for="12091_4">多于5</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12091  qc_0 radio" type="radio" name="answers[12091].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2532" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你戴墨镜的原因是什么？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12092].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12092].id" value="" id="answers[12092].id" />
+<ul>
+	<li>
+			<input group="12092" type="radio" id="12092_0" name="answers[12092].value" value="9550"  class="selection question_radio_12092" onclick="showOtherValueInputInRadio(this)" />		<label for="12092_0">表现自我</label>
+	</li>
+	<li>
+			<input group="12092" type="radio" id="12092_1" name="answers[12092].value" value="9551"  class="selection question_radio_12092" onclick="showOtherValueInputInRadio(this)" />		<label for="12092_1">看起来时尚</label>
+	</li>
+	<li>
+			<input group="12092" type="radio" id="12092_2" name="answers[12092].value" value="9552"  class="selection question_radio_12092" onclick="showOtherValueInputInRadio(this)" />		<label for="12092_2">防止眼睛被烈日灼伤</label>
+	</li>
+	<li>
+			<input group="12092" type="radio" id="12092_3" name="answers[12092].value" value="9553"  class="selection question_radio_12092" onclick="showOtherValueInputInRadio(this)" />		<label for="12092_3">我其实不太喜欢墨镜</label>
+	</li>
+		<li>
+			<input type="radio" id="12092_other" name="answers[12092].value" value="0" class="question_radio_12092" onclick="showOtherValueInputInRadio(this)" />			<label for="12092_other">Other</label>
+			<input id="12092_other_input" type="text" name="answers[12092].otherValue" value=""  style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12092  qc_0 radio" type="radio" name="answers[12092].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2520" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你有多少副真正品牌的墨镜？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12093].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12093].id" value="" id="answers[12093].id" />
+<ul>
+	<li>
+			<input group="12093" type="radio" id="12093_0" name="answers[12093].value" value="9507"  class="selection question_radio_12093"  />		<label for="12093_0">0</label>
+	</li>
+	<li>
+			<input group="12093" type="radio" id="12093_1" name="answers[12093].value" value="9508"  class="selection question_radio_12093"  />		<label for="12093_1">1</label>
+	</li>
+	<li>
+			<input group="12093" type="radio" id="12093_2" name="answers[12093].value" value="9509"  class="selection question_radio_12093"  />		<label for="12093_2">2-3</label>
+	</li>
+	<li>
+			<input group="12093" type="radio" id="12093_3" name="answers[12093].value" value="9510"  class="selection question_radio_12093"  />		<label for="12093_3">4个以上</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12093  qc_0 radio" type="radio" name="answers[12093].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2521" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						与朋友在一起的时候，你是话比较多的人吗？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12094].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12094].id" value="" id="answers[12094].id" />
+<ul>
+	<li>
+			<input group="12094" type="radio" id="12094_0" name="answers[12094].value" value="9511"  class="selection question_radio_12094"  />		<label for="12094_0">是</label>
+	</li>
+	<li>
+			<input group="12094" type="radio" id="12094_1" name="answers[12094].value" value="9512"  class="selection question_radio_12094"  />		<label for="12094_1">否</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12094  qc_0 radio" type="radio" name="answers[12094].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2522" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						请问你有长辈或朋友患有白内障吗?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12095].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12095].id" value="" id="answers[12095].id" />
+<ul>
+	<li>
+			<input group="12095" type="radio" id="12095_0" name="answers[12095].value" value="9513"  class="selection question_radio_12095"  />		<label for="12095_0">有</label>
+	</li>
+	<li>
+			<input group="12095" type="radio" id="12095_1" name="answers[12095].value" value="9514"  class="selection question_radio_12095"  />		<label for="12095_1">无</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12095  qc_0 radio" type="radio" name="answers[12095].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2523" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						如果有一天可以让你做任何想做的事，你最想干什么？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12096].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12096].id" value="" id="answers[12096].id" />
+<ul>
+	<li>
+			<input group="12096" type="radio" id="12096_0" name="answers[12096].value" value="9515"  class="selection question_radio_12096" onclick="showOtherValueInputInRadio(this)" />		<label for="12096_0">和朋友在室内一起玩</label>
+	</li>
+	<li>
+			<input group="12096" type="radio" id="12096_1" name="answers[12096].value" value="9516"  class="selection question_radio_12096" onclick="showOtherValueInputInRadio(this)" />		<label for="12096_1">KTV或与朋友在外游玩</label>
+	</li>
+	<li>
+			<input group="12096" type="radio" id="12096_2" name="answers[12096].value" value="9517"  class="selection question_radio_12096" onclick="showOtherValueInputInRadio(this)" />		<label for="12096_2">攀岩或远足，与自然亲密接触</label>
+	</li>
+	<li>
+			<input group="12096" type="radio" id="12096_3" name="answers[12096].value" value="9518"  class="selection question_radio_12096" onclick="showOtherValueInputInRadio(this)" />		<label for="12096_3">去上海以外的地方旅游观光</label>
+	</li>
+	<li>
+			<input group="12096" type="radio" id="12096_4" name="answers[12096].value" value="9519"  class="selection question_radio_12096" onclick="showOtherValueInputInRadio(this)" />		<label for="12096_4">只要是冒险就行</label>
+	</li>
+	<li>
+			<input group="12096" type="radio" id="12096_5" name="answers[12096].value" value="9520"  class="selection question_radio_12096" onclick="showOtherValueInputInRadio(this)" />		<label for="12096_5">睡一整天</label>
+	</li>
+		<li>
+			<input type="radio" id="12096_other" name="answers[12096].value" value="0" class="question_radio_12096" onclick="showOtherValueInputInRadio(this)" />			<label for="12096_other">Other</label>
+			<input id="12096_other_input" type="text" name="answers[12096].otherValue" value=""  style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12096  qc_0 radio" type="radio" name="answers[12096].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2524" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						哪本杂志决定了你的风格？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[12097].id" value="" id="answers[12097].id" />
+<input type="text" name="answers[12097].value" value="" id="question_12097" group="12097" class="input-text" />
+
+<span class="error-content" id="err_answers[12097].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2525" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						买墨镜的时候，你最看重什么?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12098].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12098].id" value="" id="answers[12098].id" />
+<ul>
+	<li>
+			<input group="12098" type="radio" id="12098_0" name="answers[12098].value" value="9521"  class="selection question_radio_12098" onclick="showOtherValueInputInRadio(this)" />		<label for="12098_0">设计款式</label>
+	</li>
+	<li>
+			<input group="12098" type="radio" id="12098_1" name="answers[12098].value" value="9522"  class="selection question_radio_12098" onclick="showOtherValueInputInRadio(this)" />		<label for="12098_1">时尚</label>
+	</li>
+	<li>
+			<input group="12098" type="radio" id="12098_2" name="answers[12098].value" value="9523"  class="selection question_radio_12098" onclick="showOtherValueInputInRadio(this)" />		<label for="12098_2">独特性</label>
+	</li>
+	<li>
+			<input group="12098" type="radio" id="12098_3" name="answers[12098].value" value="9524"  class="selection question_radio_12098" onclick="showOtherValueInputInRadio(this)" />		<label for="12098_3">阻止紫外线</label>
+	</li>
+	<li>
+			<input group="12098" type="radio" id="12098_4" name="answers[12098].value" value="9525"  class="selection question_radio_12098" onclick="showOtherValueInputInRadio(this)" />		<label for="12098_4">价位</label>
+	</li>
+		<li>
+			<input type="radio" id="12098_other" name="answers[12098].value" value="0" class="question_radio_12098" onclick="showOtherValueInputInRadio(this)" />			<label for="12098_other">Other</label>
+			<input id="12098_other_input" type="text" name="answers[12098].otherValue" value=""  style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12098  qc_0 radio" type="radio" name="answers[12098].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2526" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你多久发一条微博？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[12099].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[12099].id" value="" id="answers[12099].id" />
+<ul>
+	<li>
+			<input group="12099" type="radio" id="12099_0" name="answers[12099].value" value="9526"  class="selection question_radio_12099"  />		<label for="12099_0">一天多次</label>
+	</li>
+	<li>
+			<input group="12099" type="radio" id="12099_1" name="answers[12099].value" value="9527"  class="selection question_radio_12099"  />		<label for="12099_1">一天一次</label>
+	</li>
+	<li>
+			<input group="12099" type="radio" id="12099_2" name="answers[12099].value" value="9528"  class="selection question_radio_12099"  />		<label for="12099_2">一周几次</label>
+	</li>
+	<li>
+			<input group="12099" type="radio" id="12099_3" name="answers[12099].value" value="9529"  class="selection question_radio_12099"  />		<label for="12099_3">一周一次</label>
+	</li>
+	<li>
+			<input group="12099" type="radio" id="12099_4" name="answers[12099].value" value="9530"  class="selection question_radio_12099"  />		<label for="12099_4">不到一周一次</label>
+	</li>
+	<li>
+			<input group="12099" type="radio" id="12099_5" name="answers[12099].value" value="9531"  class="selection question_radio_12099"  />		<label for="12099_5">几乎不</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_12099  qc_0 radio" type="radio" name="answers[12099].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_2527" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你的微博链接是什么？
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[12100].id" value="" id="answers[12100].id" />
+<input type="text" name="answers[12100].value" value="" id="question_12100" group="12100" class="input-text" />
+
+<span class="error-content" id="err_answers[12100].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+		 	mandatoryElements.push("12101");
+// ]]>
+-->
+</script>
+		  <div id="q_2533" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你的邮箱地址
+							<span style="color:red">*</span>
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[12101].id" value="" id="answers[12101].id" />
+<input type="text" name="answers[12101].value" value="" id="question_12101" group="12101" class="input-text" />
+
+<span class="error-content" id="err_answers[12101].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+		 	mandatoryElements.push("12102");
+// ]]>
+-->
+</script>
+		  <div id="q_2534" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						你的手机号码
+							<span style="color:red">*</span>
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[12102].id" value="" id="answers[12102].id" />
+<input type="text" name="answers[12102].value" value="" id="question_12102" group="12102" class="input-text" />
+
+<span class="error-content" id="err_answers[12102].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+	
+
+
+</div> 
+<br/>
+<div style="clear:both"></div>
+</div> 
+</div> 
+
+<div id="mainzone-bottom-wrapper">
+	<div id="mainzone-bottom-left">
+		<div id="mainzone-bottom-right">&nbsp;</div>
+	</div>
+</div>
+<br/>
+<div class="fillout-submit">
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+</div>
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"/></td>
+		<td bgcolor="#ffffff">
+			<div class="web-dialog-message">
+				<p id="web-dialog-message-text" class=""></p>
+			</div>
+			<div class="buttons" id="web-dialog-buttons">
+			</div>
+		</td>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"/></td>
+	</tr>
+</table>
+
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	var WebDialog = {
+		element : $('web-dialog'),
+		onok : function() {},
+		oncancel : function() {},
+		show : function() {
+			var width = document.body.clientWidth;
+			var height = document.body.offsetHeight;
+			var left = (width - this.element.offsetWidth) / 2;
+			var top = (height - this.element.offsetHeight) / 2;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+		},
+		alert : function(msg,agree,disagree,onok,oncancel) {
+			var buttons = ["OK","Cancel"];
+			var callbacks = [onok, oncancel];
+			this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+		},
+		ok : function() {
+			this.onok();
+		},
+		close : function() {
+			this.element.hide();
+			$('mask').hide();
+			this.oncancel();
+		},
+		showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions) {
+			// icon_type : "none", "alert", "question"
+			// msg_align : "left", "center", "right"
+			// width : -1 means auto
+			
+			var width = document.body.clientWidth;
+			var height = window.screen.availHeight;
+			var left = (width - window_width) / 2;
+			var top = (height - 300) / 2;
+			var pos = 0;
+			if (window.innerHeight) {
+		    	pos = window.pageYOffset
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
+		    	pos = document.documentElement.scrollTop
+		    } else if (document.body) {
+		    	pos = document.body.scrollTop;
+		    }
+		    top += pos;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+			$('mask').style.height = document.body.scrollHeight + "px";
+			
+			if (width != undefined) {
+				this.element.style.width = window_width + "px";
+			}
+			if (msg != undefined) {
+				$('web-dialog-message-text').innerHTML = msg;
+			}
+			if (icon_type != undefined && msg_align != undefined) {
+				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
+			} else if (icon_type == undefined && msg_align == undefined) {
+				$('web-dialog-message-text').className = "icon-none left";
+			} else if (icon_type == undefined) {
+				$('web-dialog-message-text').className = msg_align;
+			} else {
+				$('web-dialog-message-text').className = "icon-"+icon_type;
+			}
+			
+			$('web-dialog-buttons').innerHTML = "";
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
+					if (buttons[i]==undefined || callback_functions[i]==undefined) {
+						continue;
+					}
+					var e = document.createElement('a');
+					e.setAttribute('href', '#');
+					e.innerHTML = buttons[i];
+					e.onclick = callback_functions[i];
+					$('web-dialog-buttons').appendChild(e);
+				}
+			}
+			
+			
+			this.element.show();
+			//$('mask').show();
+		}
+	}
+// ]]>
+-->
+</script>
+</form>
+</div> 
+<div class="clear"></div>
+<br/>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+  var pageNum=0;
+ 
+  var noPage0 = false;
+  var currentPage=0;
+  
+
+  function showPage(_pageIndex) {
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex == pageNum) {
+    	Element.hide("nextPageButton");
+    } else {
+    	Element.show("nextPageButton");
+    }
+    
+    if (_pageIndex <1 && noPage0) return ;
+  	var _pageElement = $("page_"+_pageIndex);
+  	var _currElement = $("page_"+currentPage);
+  	
+  	Element.hide(_currElement);
+  	Element.show(_pageElement);
+	
+	if($("pageNum" + _pageIndex) != undefined) {
+		$("pageNum" + _pageIndex).style.fontWeight = "bolder"; 
+		$("pageNum" + _pageIndex).style.textDecoration = "underline";
+	}
+    if($("pageNum" + currentPage) != undefined) {		
+  		$("pageNum" + currentPage).style.fontWeight = "normal"; 
+		$("pageNum" + currentPage).style.textDecoration = "none";
+	}
+	
+
+  	currentPage = _pageIndex;
+	
+	if(_pageIndex == pageNum) {
+		Element.show($('submit'));
+	} else if ( _pageIndex < pageNum) {
+		Element.hide($('submit'));
+	}
+  }
+  
+  function showNextPage(){
+  	showPage(currentPage+1);
+  }
+  
+  function showPrevPage(){
+  	showPage(currentPage-1);
+  }
+  
+  function initPages() {
+  	var i;
+
+  	for (i=0; i<=pageNum; i++) {
+  		Element.hide($("page_"+i));
+  	}
+  	
+ 
+  	var _pageBar = document.getElementById("pageBar");
+  	if (pageNum==0) {
+  		_pageBar.innerHTML = "";
+  	} else {
+	  	for (i=0; i<=pageNum; i++) {
+			var s ="";
+			if( i == 0 ) {
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
+			}
+
+			if (noPage0){
+	  		 if (i!=0){ 
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
+	  		  }
+	  		}else{
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
+	  		}
+	  		
+			if( i == pageNum ) {
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
+			}
+	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  	}		
+  	}
+  }
+  
+  initPages();
+  if (noPage0){
+  	showPage(1);
+  }else{
+  	showPage(0);
+  }
+// ]]>
+-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+    //do not include radio answers
+	if(typeof checkNoAnswer=="undefined") {
+		checkNoAnswer=function(index,checkbox) {
+			var question = $("question_" + index);
+			var checked = checkbox.checked;
+			if( checked) {
+				question.disabled="disabled";
+				checkbox.value=false;
+			} else {
+				question.disabled="";
+				checkbox.value=true;
+			}
+		};
+	};
+	
+		if(typeof checkRadioNoAnswer=="undefined") {
+		checkRadioNoAnswer = function(index,checkbox) {
+			var clazz = "question_radio_" +index;
+			var radios = document.getElementsByClassName(clazz).each(function(radio) {
+				var checked = checkbox.checked;
+			    if( checked) {
+					if(radio.checked="checked")radio.checked="";
+					radio.disabled="disabled";
+					checkbox.value=false;
+			    } else {
+					radio.disabled="";
+					checkbox.value=true;
+			    }
+			});
+		};
+	}
+	
+	if(typeof checkSubboxes=="undefined") {
+		checkSubboxes = function(qc_id) {
+			//get the question context checkbox's value
+			var qc_value = $("qc_checkbox_" + qc_id).checked;
+			//get the checkBoxed belongs to the above question context
+			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
+			for(var i = 0; i < checkBoxes.length;i++) {
+				var checkBox = checkBoxes[i];
+				//to reuse checkRadioNoAnswer and checkNoAnswer
+				checkBox.checked=qc_value;
+				var clazzName = checkBox.className;
+				var question_id = clazzName.split(" ")[0].split("_")[1];
+				if( clazzName.indexOf("radio") != -1) {
+					checkRadioNoAnswer(question_id,checkBox);
+				} else {
+					checkNoAnswer(question_id,checkBox);
+				}
+			}
+		}
+		
+	}
+// ]]>
+-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function loading() {
+		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
+		WebDialog.showMessageBox(html, "none", "center", 600);
+	}
+	
+	function checkMandatory() {
+	    var fillMandatory = true;
+	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+			if(elements.length > 1) {
+			  var filled = false;
+			  for(var i=0; i < elements.length; i++) {
+			  	var element = elements[i];
+				if(element.checked) {
+				  filled = true;
+				  break;
+				}
+			  }
+			  if(!filled) {
+			  	fillMandatory = false;
+			  	break;
+			  }
+			} else {
+			  var element = elements[0];
+			  if(element.hasClassName("selection")) {
+			  	if(element.value.strip() == '') {
+	    			fillMandatory =  false;
+	    			break;                                  
+	    		}
+			  } else if (element.hasClassName("input-text")) {
+			 	if(element.value == 0) {
+					fillMandatory = false;
+					break;
+				}
+			  }
+			}
+	    }
+	    if(!fillMandatory) {
+	    	var html = 'Mandatory questions must be filled out';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    }
+		return fillMandatory;
+	}
+	
+	function checkMandatoryOfSelectionQuestion() {
+	 var mandatory = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+
+
+	function checkAnswerSet() {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
+		    return true;
+		} else {
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			return false;
+		}
+	}
+	
+	function checkAnswersOfSelectionQuestions() {
+	 var filled = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+	
+	function checkAnswersOfRatingQuestions() {
+	    var filled = false;
+	    $$('input.rating').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;  
+										}
+	                                });
+
+		 return filled;
+	}
+	
+	function checkAnswersOfCommentQuestions() {
+	    var filled = false;
+	    $$('.input-text').each(function(element) {
+	                                    if(element.value.strip() != '') {
+	                                        filled = true;
+	                                    	throw $break;                                 
+	                                    }
+	                                });
+		 return filled;
+	}
+	
+	function locateErrorPage() {
+		var errorElements = $$('span.error-content') ;
+		var hasError = false;
+		var errorElementsPointer = 0;
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+			var html = errorElements[errorElementsPointer].innerHTML;
+			if (html != "") {
+				hasError = true;
+				break;
+			}
+		}
+		if( hasError ) {
+			var errorParentElement = errorElements[errorElementsPointer].up('div');
+			while (errorParentElement != undefined) {
+			var elementId = errorParentElement.id;
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
+				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
+				showPage(errorPageNum);
+				break;
+		}
+		errorParentElement = errorParentElement.up('div');
+		}
+		}
+	}
+	locateErrorPage();
+	
+	function showOtherValueInputInSelect(element) {
+	    var options = element.options;
+	    var selectedOption;
+	    for( var i = 0; i < options.length; i++) {
+	       if( options[i].selected) {
+	       	 selectedOption = options[i];
+	       }
+	    }
+	    var selectedOptionId = selectedOption.id;
+	    if( selectedOptionId.indexOf("other") != -1) {
+	    	$(element.id + "_other").show();
+	    } else {
+	        $(element.id + "_other").value = "";
+	    	$(element.id + "_other").hide();
+	    }
+	}
+	
+	function showOtherValueInputInRadio(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( value == 0 ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+	function showOtherValueInputInCheckBox(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( element.checked ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5436862-10']);
+  _gaq.push(['_setDomainName', '.marketing-research.cn']);
+  _gaq.push(['setAllowHash', 'false']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+	
+// ]]>
+-->
+</script>
+</div>
+</div> 
+</div>
+
+<div class="footer" style="display:none;">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/c/methodName/c"  target="_blank">Help</a> | <a href="http://www.ostrakon.org"  target="_blank">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow" style="display:none;"></div>
+	<div style="clear: both"></div>
+	
+</div> 
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+
+Framework.registerAjaxSensors();
+// ]]>
+-->
+</script>
