@@ -196,7 +196,7 @@
 <?php $i=1; foreach ($this->allInvitations as $invitation):?>
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
-			<h2><?php echo $this->translate("Campaign_name_".$invitation['campaign_id'])?></h2>
+			<h2><?php echo $invitation["name"]?></h2>
 		
             <div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:true;"<?php endif;?>>
 			<?php $i++;?>
@@ -224,7 +224,7 @@
 <?php $j = $i;foreach ($this->activeCampaigns as $activeCampaign):?>			
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
-			<h2><?php echo $this->translate("Campaign_name_".$activeCampaign['campaign_id'])?></h2>
+			<h2><?php echo $activeCampaign["name"]?></h2>
 			<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
 			<div class="tip-wrapper">
 				<div id="tip1" class="tip-box" style="display:none;">
