@@ -1,9 +1,5 @@
 <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.mousewheel.min.js" ></script>
 <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.tagsphere.min.js" ></script>
-<script src="<?php echo $this->baseUrl();?>/js/json2.js"></script>
-<script src="<?php echo $this->baseUrl();?>/js/underscore.js"></script>
-<script src="<?php echo $this->baseUrl();?>/js/backbone.js"></script>
-
 <link type="text/css" href="<?php echo $this->baseUrl();?>/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/sns.css" />
 <div id="tagCloudDiv">
@@ -20,18 +16,14 @@ endforeach;?>
 <?php }?>
 <li class="nav-header">我关注的</li>
 <div style="padding-left:15px" class="nav" id="folders">
-
+<?php foreach($this->topicsUntaggedSumByFolder as $topicsUntaggedByFolder):
+?>
+	<li><a onclick="openDetail('<?php echo $topicsUntaggedByFolder['key']?>','<?php echo $topicsUntaggedByFolder['value']?>',0);" href="javascript:void(0);" rel="<?php echo $topicsUntaggedByFolder['value'] ?>"><?php echo $topicsUntaggedByFolder['key'] ?></a></li>
+<?php 
+endforeach;?>
 </div></ul>
 </div>
 <div class="topics"><div class="loadingtopic" style="display: none">读取中...</div></div>
-
-
-<script type="text/template" id="tag_template">
-	<li><a href="javascript:void(0);" rel="<%= topic_num%>"><%= name%></a></li>
-</script>
-
-<script src="<?php echo $this->baseUrl();?>/js/backbone/tags/tag.js"></script>
-
 <script type="text/javascript">
 _totalPage = 0;
 _currentPage = 0;
@@ -53,9 +45,19 @@ jQuery(function($){
 		}
 	});
 });
-
-function getTopics(key,count,page){
-
+function openDetail(key,count,page){
+	_loading = true;
+	if(!page){
+		page=0;
+	}
+	_selectKey = key;
+	_totalCount = count;
+	jQuery(".topics .loadingtopic").show();
+	jQuery.get("tag/ajaxtopics?key="+key+"&totalCount="+count+"&page="+page,function(data){
+		jQuery(".topics .loadingtopic").hide();
+		jQuery(".loadingtopic").before(data);
+		_loading = false;
+	});
 }
 function openIssues(e){
 	var description = jQuery("<div class='issuedetail'>"+jQuery(e).attr("description")+"</div>");
@@ -73,37 +75,4 @@ function getIssue(topic,issue){
 		});
 	});
 }
-
-
-
-// backbone app
-      window.AppView = Backbone.View.extend({
-
-        el: $("#inbox"),
-
-        events: {
-
-        },
-
-        initialize: function() {
-        	<?php foreach($this->topicsUntaggedSumByFolder as $topicsUntaggedByFolder):?>
-        	var tag = new Tag({
-                name:'<?php echo $topicsUntaggedByFolder['key']?>',
-                topic_num :'<?php echo $topicsUntaggedByFolder['value']?>'
-              });
-        	tags.add(tag);
-        	var view = new TagView({model: tag});
-        	jQuery("#folders").append(view.render().el);
-        	
-       		<?php endforeach;?>
-        },
-
-        render: function() {
-        }
-
-      });
-
-      window.App = new AppView;
-
-
 </script>

@@ -53,7 +53,7 @@ class TagController extends MyController {
 		}
 	}
 	
-	function ajaxdetailAction(){
+	function ajaxtopicsAction(){
 		$this->_helper->layout->disableLayout();
 		define("PAGESIZE",10);
 		$config = Zend_Registry::get('config');
