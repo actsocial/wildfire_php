@@ -10,6 +10,7 @@ class GiftController extends MyController
 	 * Enter description here ...
 	 */
 	function listAction(){
+		
 		$this->view->title = $this->view->translate("Wildfire")." - ".$this->view->translate("GIFT_LIST");
 		
 		$this->view->consumer = $this->_currentUser;
@@ -34,7 +35,13 @@ class GiftController extends MyController
 
 			}else{
 				if($this->_request->getParam('t') != null && $this->_request->getParam('t') != 'none'){
-					$products = $productModel->fetchAll("category = '".$this->_request->getParam('t')."'".' and state ="STOCK"', 'point')->toArray();
+					if($this->_request->getParam('t')=="NEW"){
+						//添加最新上架 Bruce.Liu
+						$products = $productModel->fetchAll(' state ="STOCK" ','id desc',18,'point')->toArray();
+//						Zend_Debug::dump($products);die();
+					}else{
+						$products = $productModel->fetchAll("category = '".$this->_request->getParam('t')."'".' and state ="STOCK"', 'point')->toArray();
+					}
 				}else{
 					$products = $productModel->fetchAll('state ="STOCK"', 'point')->toArray(); 
 				}
@@ -71,7 +78,6 @@ class GiftController extends MyController
 		$paginator->setCurrentPageNumber($this->_curPage)
 		->setItemCountPerPage($this->_rowsPerPage); 
 		$this->view->products = $paginator; 
-
         //set the No. inital value in view page
         $this->view->NoInitValue = ($this->_curPage-1)*$this->_rowsPerPage+1;
 	}
@@ -447,6 +453,8 @@ class GiftController extends MyController
 			$currentTime = date("Y-m-d H:i:s");
 			$rewardPointTransactionRecordModel = new RewardPointTransactionRecord();
 			$prodcutOrderModel = new ProductOrder();
+			$notificationModel = new Notification();
+			$total_redeem_point = 0;
 			foreach($cartNamespace->list as $product){
 				// add records to reward_point_transaction_record table			
 				$rewardPointTransactionRecord = array("consumer_id" => $this->_currentUser->id,
@@ -464,7 +472,10 @@ class GiftController extends MyController
 				$prodcutOrderId = $prodcutOrderModel->insert($prodcutOrder);
 				// roll back if an exception occurred
 				// ...
+				$total_redeem_point += $product['amount']*$product['point'];
 			}
+			// add notification
+			$notificationModel->createRecord("REDEEM_POINT",$this->_currentUser->id,$total_redeem_point);
 			$this->paidGifts = $cartNamespace->list;
 			$cartNamespace->list = null;
 			// show redeem.phtml with "... Successfully"
