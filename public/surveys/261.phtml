@@ -1,0 +1,1012 @@
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	// <![CDATA[
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie > 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length > MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+	// ]]>
+	-->
+	</script>
+<div class="main-container-outer" >
+	<div id="container">
+		<div id="header" class="header" style="display: none;">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			<div class="main-logo" id="main-logo">
+				<a href="http://www.ostrakon.org" target="_blank">
+					<img src="/survey/logoImage/261" style="height:70px; width:301px" />
+				</a>
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div> <!-- header -->
+		<div id="nav" class="navigation" style="display:none;">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content" >
+ 		
+
+<div id="content" style="width:100%;">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	mandatoryElements = new Array(); 
+// ]]>
+-->
+</script>
+<div class="fillout-container">
+<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
+<div class="mainOneContent">
+
+<div style="margin-top:10px;"></div>
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
+  <div id="mainzone-top-left">
+    <div id="mainzone-top-right"></div>
+  </div>
+</div>
+<div id="mainzone">
+<div id="mainzone-inner">
+
+
+<input type="hidden" name="id" value="" id="id" />
+<input type="hidden" name="theme" value="wildfire" id="theme" />
+
+<div class="mandatory"><span style="color: red;">* </span>- It is mandatory</div>
+<div class="page-bar-area">
+<span id="pageBar">Page:&nbsp;</span>
+<strong class="no-answer">No Answer</strong><img class="no-answer" src="/images/no_answer.gif" align="absmiddle"/>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+	<div id="page_0">
+
+
+
+
+
+<div class="header-section" id="h_98">
+	<h3></h3>
+<span class="header-title">
+<h2>以下这些问题是为了完成或更新您的个人资料。请务必真实地填写以下内容，这样我们才能继续为您提供更优质的服务 包括更多的活动。</h2>
+</span>
+	<h3></h3>
+</div>
+<!-- <span  class="no-answer-all">No answer all <input type="checkbox" name="qc_checkbox_98" value="" id="qc_checkbox_98" onClick="checkSubboxes(98)" />
+ </span>-->
+<div style="clear: both ;"></div><script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_98_517" style="margin-bottom:0px;" class="question-even question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您的最高学历
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[3081].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[3081].id" value="" id="answers[3081].id" />
+
+	<select group="3081" class="selection" id="question_3081" name="answers[3081].value" title="title"  size = "1" >
+	<option selected="selected" value="0">请选择</option>
+<option value="951" style=""  >小学</option>
+<option value="952" style=""  >初中</option>
+<option value="953" style=""  >高中</option>
+<option value="954" style=""  >专科</option>
+<option value="955" style=""  >本科</option>
+<option value="956" style=""  >硕士</option>
+<option value="957" style=""  >博士</option>
+<option value="958" style=""  >博士后</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_98_691" style="margin-bottom:0px;" class="question-odd question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您的年龄
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[3082].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[3082].id" value="" id="answers[3082].id" />
+
+	<select group="3082" class="selection" id="question_3082" name="answers[3082].value" title="title"  size = "1" >
+	<option selected="selected" value="0">请选择</option>
+<option value="1798" style=""  >18岁以下</option>
+<option value="1799" style=""  >18-25岁</option>
+<option value="1800" style=""  >26-30岁</option>
+<option value="1801" style=""  >31-35岁</option>
+<option value="1802" style=""  >36-40岁</option>
+<option value="1803" style=""  >41-50岁</option>
+<option value="1804" style=""  >51-65岁</option>
+<option value="1805" style=""  >66岁或以上</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_98_519" style="margin-bottom:0px;" class="question-even question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您有几名子女或孙辈？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[3083].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[3083].id" value="" id="answers[3083].id" />
+
+	<select group="3083" class="selection" id="question_3083" name="answers[3083].value" title="title"  size = "1" >
+	<option selected="selected" value="0">请选择</option>
+<option value="962" style=""  >0位</option>
+<option value="963" style=""  >1位</option>
+<option value="964" style=""  >2位</option>
+<option value="965" style=""  >3位</option>
+<option value="966" style=""  >4位</option>
+<option value="967" style=""  >5位或更多</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_98_692" style="margin-bottom:0px;" class="question-odd question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您是否开车？
+				</div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[3084].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[3084].id" value="" id="answers[3084].id" />
+<ul>
+	<li>
+			<input group="3084" type="radio" id="3084_0" name="answers[3084].value" value="1806"  class="selection question_radio_3084"  />		<label for="3084_0">是</label>
+	</li>
+	<li>
+			<input group="3084" type="radio" id="3084_1" name="answers[3084].value" value="1807"  class="selection question_radio_3084"  />		<label for="3084_1">否</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_3084  qc_98 radio" type="radio" name="answers[3084].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_98_693" style="margin-bottom:0px;" class="question-even question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					如果是，请问您开什么牌子的车？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[3085].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[3085].id" value="" id="answers[3085].id" />
+
+	<select group="3085" class="selection" id="question_3085" name="answers[3085].value" title="title"  size = "1" onchange="showOtherValueInputInSelect(this)">
+	<option selected="selected" value="0">请选择</option>
+<option value="1808" style=""  >我不开车</option>
+<option value="1809" style=""  >阿尔法罗米欧</option>
+<option value="1810" style=""  >保时捷</option>
+<option value="1811" style=""  >北京吉普</option>
+<option value="1812" style=""  >北京现代</option>
+<option value="1813" style=""  >比亚迪</option>
+<option value="1814" style=""  >宾利</option>
+<option value="1815" style=""  >劳斯莱斯</option>
+<option value="1816" style=""  >东风标致</option>
+<option value="1817" style=""  >东风雪铁龙</option>
+<option value="1818" style=""  >法拉利</option>
+<option value="1819" style=""  >广州本田</option>
+<option value="1820" style=""  >广州丰田</option>
+<option value="1821" style=""  >悍马</option>
+<option value="1822" style=""  >霍普汽车</option>
+<option value="1823" style=""  >捷豹</option>
+<option value="1824" style=""  >进口奥迪</option>
+<option value="1825" style=""  >进口宝马</option>
+<option value="1826" style=""  >进口奔驰</option>
+<option value="1827" style=""  >进口沃尔沃</option>
+<option value="1828" style=""  >兰博基尼</option>
+<option value="1829" style=""  >雷克萨斯</option>
+<option value="1830" style=""  >林肯</option>
+<option value="1831" style=""  >奇瑞汽车</option>
+<option value="1832" style=""  >瑞风汽车</option>
+<option value="1833" style=""  >上海大众</option>
+<option value="1834" style=""  >通用别克</option>
+<option value="1835" style=""  >一汽奥迪</option>
+<option value="1836" style=""  >一汽红旗</option>
+		<option id="3085_other" value="0"  >其他</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+<tr>
+	<td><input id="question_3085_other" style="display:none;" type="text" name="answers[3085].otherValue" value=""/></td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+	<div id="q_98_694" style="margin-bottom:0px;" class="question-odd question-area">
+		<table class="question-table">
+		    		   
+			<tr>
+			<td width=50% valign="top">
+				<div class="question-title">
+					您拥有以下哪些东西？
+				</div>
+				  <div class="questionnaireElementInfoText twoColumnLayout">
+				    
+				  </div>
+			</td>
+			<td width=50% valign="top" class="question-td" style="padding-left:15px;">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[3086].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[3086].id" value="" id="answers[3086].id" />
+
+
+
+
+<span id="hint_3086">
+</span>
+<ul>
+	<li>
+			<input group="3086" class="question_radio_3086 selection" type="checkbox" id="3086_0" name="answers[3086].value" value="1837" 	onclick=" "/>		<label for="3086_0">自行车</label>
+	</li>
+	<li>
+			<input group="3086" class="question_radio_3086 selection" type="checkbox" id="3086_1" name="answers[3086].value" value="1838" 	onclick=" "/>		<label for="3086_1">健身会员卡</label>
+	</li>
+	<li>
+			<input group="3086" class="question_radio_3086 selection" type="checkbox" id="3086_2" name="answers[3086].value" value="1839" 	onclick=" "/>		<label for="3086_2">笔记本电脑</label>
+	</li>
+	<li>
+			<input group="3086" class="question_radio_3086 selection" type="checkbox" id="3086_3" name="answers[3086].value" value="1840" 	onclick=" "/>		<label for="3086_3">（轻便）摩托车</label>
+	</li>
+	<li>
+			<input group="3086" class="question_radio_3086 selection" type="checkbox" id="3086_4" name="answers[3086].value" value="1841" 	onclick=" "/>		<label for="3086_4">帐篷/远足设备</label>
+	</li>
+		<li>
+			<input class="question_radio_3086" type="checkbox" id="3086_other"   value="0" onclick="showOtherValueInputInCheckBox(this)" />			<label for="3086_other">其他</label>
+			<input id="3086_other_input" type="text" name="answers[3086].otherValue" value="" style="display:none;"/>
+		</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+			</td>
+			</tr>
+	    </table>
+    </div>
+    <div style="clear:both;"></div>
+
+</div> 
+<br/>
+<div style="clear:both"></div>
+</div> 
+</div> 
+
+<div id="mainzone-bottom-wrapper">
+	<div id="mainzone-bottom-left">
+		<div id="mainzone-bottom-right">&nbsp;</div>
+	</div>
+</div>
+<br/>
+<div class="fillout-submit">
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
+</div>
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"/></td>
+		<td bgcolor="#ffffff">
+			<div class="web-dialog-message">
+				<p id="web-dialog-message-text" class=""></p>
+			</div>
+			<div class="buttons" id="web-dialog-buttons">
+			</div>
+		</td>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"/></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"/></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"/></td>
+	</tr>
+</table>
+
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	var WebDialog = {
+		element : $('web-dialog'),
+		onok : function() {},
+		oncancel : function() {},
+		show : function() {
+			var width = document.body.clientWidth;
+			var height = document.body.offsetHeight;
+			var left = (width - this.element.offsetWidth) / 2;
+			var top = (height - this.element.offsetHeight) / 2;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+		},
+		alert : function(msg,agree,disagree,onok,oncancel) {
+			var buttons = ["OK","Cancel"];
+			var callbacks = [onok, oncancel];
+			this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+		},
+		ok : function() {
+			this.onok();
+		},
+		close : function() {
+			this.element.hide();
+			$('mask').hide();
+			this.oncancel();
+		},
+		showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions) {
+			// icon_type : "none", "alert", "question"
+			// msg_align : "left", "center", "right"
+			// width : -1 means auto
+			
+			var width = document.body.clientWidth;
+			var height = window.screen.availHeight;
+			var left = (width - window_width) / 2;
+			var top = (height - 300) / 2;
+			var pos = 0;
+			if (window.innerHeight) {
+		    	pos = window.pageYOffset
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
+		    	pos = document.documentElement.scrollTop
+		    } else if (document.body) {
+		    	pos = document.body.scrollTop;
+		    }
+		    top += pos;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+			$('mask').style.height = document.body.scrollHeight + "px";
+			
+			if (width != undefined) {
+				this.element.style.width = window_width + "px";
+			}
+			if (msg != undefined) {
+				$('web-dialog-message-text').innerHTML = msg;
+			}
+			if (icon_type != undefined && msg_align != undefined) {
+				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
+			} else if (icon_type == undefined && msg_align == undefined) {
+				$('web-dialog-message-text').className = "icon-none left";
+			} else if (icon_type == undefined) {
+				$('web-dialog-message-text').className = msg_align;
+			} else {
+				$('web-dialog-message-text').className = "icon-"+icon_type;
+			}
+			
+			$('web-dialog-buttons').innerHTML = "";
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
+					if (buttons[i]==undefined || callback_functions[i]==undefined) {
+						continue;
+					}
+					var e = document.createElement('a');
+					e.setAttribute('href', '#');
+					e.innerHTML = buttons[i];
+					e.onclick = callback_functions[i];
+					$('web-dialog-buttons').appendChild(e);
+				}
+			}
+			
+			
+			this.element.show();
+			//$('mask').show();
+		}
+	}
+// ]]>
+-->
+</script>
+</form>
+</div> 
+<div class="clear"></div>
+<br/>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+  var pageNum=0;
+ 
+  var noPage0 = false;
+  var currentPage=0;
+  
+
+  function showPage(_pageIndex) {
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex == pageNum) {
+    	Element.hide("nextPageButton");
+    } else {
+    	Element.show("nextPageButton");
+    }
+    
+    if (_pageIndex <1 && noPage0) return ;
+  	var _pageElement = $("page_"+_pageIndex);
+  	var _currElement = $("page_"+currentPage);
+  	
+  	Element.hide(_currElement);
+  	Element.show(_pageElement);
+	
+	if($("pageNum" + _pageIndex) != undefined) {
+		$("pageNum" + _pageIndex).style.fontWeight = "bolder"; 
+		$("pageNum" + _pageIndex).style.textDecoration = "underline";
+	}
+    if($("pageNum" + currentPage) != undefined) {		
+  		$("pageNum" + currentPage).style.fontWeight = "normal"; 
+		$("pageNum" + currentPage).style.textDecoration = "none";
+	}
+	
+
+  	currentPage = _pageIndex;
+	
+	if(_pageIndex == pageNum) {
+		Element.show($('submit'));
+	} else if ( _pageIndex < pageNum) {
+		Element.hide($('submit'));
+	}
+  }
+  
+  function showNextPage(){
+  	showPage(currentPage+1);
+  }
+  
+  function showPrevPage(){
+  	showPage(currentPage-1);
+  }
+  
+  function initPages() {
+  	var i;
+
+  	for (i=0; i<=pageNum; i++) {
+  		Element.hide($("page_"+i));
+  	}
+  	
+ 
+  	var _pageBar = document.getElementById("pageBar");
+  	if (pageNum==0) {
+  		_pageBar.innerHTML = "";
+  	} else {
+	  	for (i=0; i<=pageNum; i++) {
+			var s ="";
+			if( i == 0 ) {
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
+			}
+
+			if (noPage0){
+	  		 if (i!=0){ 
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
+	  		  }
+	  		}else{
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
+	  		}
+	  		
+			if( i == pageNum ) {
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
+			}
+	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  	}		
+  	}
+  }
+  
+  initPages();
+  if (noPage0){
+  	showPage(1);
+  }else{
+  	showPage(0);
+  }
+// ]]>
+-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+    //do not include radio answers
+	if(typeof checkNoAnswer=="undefined") {
+		checkNoAnswer=function(index,checkbox) {
+			var question = $("question_" + index);
+			var checked = checkbox.checked;
+			if( checked) {
+				question.disabled="disabled";
+				checkbox.value=false;
+			} else {
+				question.disabled="";
+				checkbox.value=true;
+			}
+		};
+	};
+	
+		if(typeof checkRadioNoAnswer=="undefined") {
+		checkRadioNoAnswer = function(index,checkbox) {
+			var clazz = "question_radio_" +index;
+			var radios = document.getElementsByClassName(clazz).each(function(radio) {
+				var checked = checkbox.checked;
+			    if( checked) {
+					if(radio.checked="checked")radio.checked="";
+					radio.disabled="disabled";
+					checkbox.value=false;
+			    } else {
+					radio.disabled="";
+					checkbox.value=true;
+			    }
+			});
+		};
+	}
+	
+	if(typeof checkSubboxes=="undefined") {
+		checkSubboxes = function(qc_id) {
+			//get the question context checkbox's value
+			var qc_value = $("qc_checkbox_" + qc_id).checked;
+			//get the checkBoxed belongs to the above question context
+			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
+			for(var i = 0; i < checkBoxes.length;i++) {
+				var checkBox = checkBoxes[i];
+				//to reuse checkRadioNoAnswer and checkNoAnswer
+				checkBox.checked=qc_value;
+				var clazzName = checkBox.className;
+				var question_id = clazzName.split(" ")[0].split("_")[1];
+				if( clazzName.indexOf("radio") != -1) {
+					checkRadioNoAnswer(question_id,checkBox);
+				} else {
+					checkNoAnswer(question_id,checkBox);
+				}
+			}
+		}
+		
+	}
+// ]]>
+-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function loading() {
+		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
+		WebDialog.showMessageBox(html, "none", "center", 600);
+	}
+	
+	function checkMandatory() {
+	    var fillMandatory = true;
+	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+			if(elements.length > 1) {
+			  var filled = false;
+			  for(var i=0; i < elements.length; i++) {
+			  	var element = elements[i];
+				if(element.checked) {
+				  filled = true;
+				  break;
+				}
+			  }
+			  if(!filled) {
+			  	fillMandatory = false;
+			  	break;
+			  }
+			} else {
+			  var element = elements[0];
+			  if(element.hasClassName("selection")) {
+			  	if(element.value.strip() == '') {
+	    			fillMandatory =  false;
+	    			break;                                  
+	    		}
+			  } else if (element.hasClassName("input-text")) {
+			 	if(element.value == 0) {
+					fillMandatory = false;
+					break;
+				}
+			  }
+			}
+	    }
+	    if(!fillMandatory) {
+	    	var html = '提交失败：必填的题目不能为空';
+			jQuery("#check-alert-dialog .content").html(html);
+			jQuery("#check-alert-dialog").dialog('open');
+	    }
+		return fillMandatory;
+	}
+	
+	function checkMandatoryOfSelectionQuestion() {
+	 var mandatory = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+
+
+	function checkAnswerSet() {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
+		    return true;
+		} else {
+			var html = 'Can not submit empty questionnaire form';
+			jQuery("#check-alert-dialog .content").html(html);
+			jQuery("#check-alert-dialog").dialog('open');
+			return false;
+		}
+	}
+	
+	function checkAnswersOfSelectionQuestions() {
+	 var filled = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+	
+	function checkAnswersOfRatingQuestions() {
+	    var filled = false;
+	    $$('input.rating').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;  
+										}
+	                                });
+
+		 return filled;
+	}
+	
+	function checkAnswersOfCommentQuestions() {
+	    var filled = false;
+	    $$('.input-text').each(function(element) {
+	                                    if(element.value.strip() != '') {
+	                                        filled = true;
+	                                    	throw $break;                                 
+	                                    }
+	                                });
+		 return filled;
+	}
+	
+	function locateErrorPage() {
+		var errorElements = $$('span.error-content') ;
+		var hasError = false;
+		var errorElementsPointer = 0;
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+			var html = errorElements[errorElementsPointer].innerHTML;
+			if (html != "") {
+				hasError = true;
+				break;
+			}
+		}
+		if( hasError ) {
+			var errorParentElement = errorElements[errorElementsPointer].up('div');
+			while (errorParentElement != undefined) {
+			var elementId = errorParentElement.id;
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
+				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
+				showPage(errorPageNum);
+				break;
+		}
+		errorParentElement = errorParentElement.up('div');
+		}
+		}
+	}
+	locateErrorPage();
+	
+	function showOtherValueInputInSelect(element) {
+	    var options = element.options;
+	    var selectedOption;
+	    for( var i = 0; i < options.length; i++) {
+	       if( options[i].selected) {
+	       	 selectedOption = options[i];
+	       }
+	    }
+	    var selectedOptionId = selectedOption.id;
+	    if( selectedOptionId.indexOf("other") != -1) {
+	    	$(element.id + "_other").show();
+	    } else {
+	        $(element.id + "_other").value = "";
+	    	$(element.id + "_other").hide();
+	    }
+	}
+	
+	function showOtherValueInputInRadio(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( value == 0 ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+	function showOtherValueInputInCheckBox(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( element.checked ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5436862-10']);
+  _gaq.push(['_setDomainName', '.marketing-research.cn']);
+  _gaq.push(['setAllowHash', 'false']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+	
+// ]]>
+-->
+</script>
+</div>
+</div> 
+</div>
+
+<div class="footer" style="display:none;">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/c/methodName/c"  target="_blank">Help</a> | <a href="http://www.ostrakon.org"  target="_blank">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow" style="display:none;"></div>
+	<div style="clear: both"></div>
+	
+</div> 
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+
+// ]]>
+-->
+</script>

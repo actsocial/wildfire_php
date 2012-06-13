@@ -301,8 +301,10 @@ class ReportController extends MyController
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
 						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission);
-//						$contents = file_get_contents($url_zh).file_get_contents($url_en);
+						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
+						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
+						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -437,8 +439,8 @@ class ReportController extends MyController
 			$row->reward_point_transaction_record_id = $rewardReocrd->id;
 			$row->save();
 			// add notification
-			$notificationModel = new Notification();
-			$notificationModel->createRecord("REPORT_REPLY",$row->consumer_id,$points);
+//			$notificationModel = new Notification();
+//			$notificationModel->createRecord("REPORT_REPLY",$row->consumer_id,$points);
 	}
 	
 	function saveTags($report_id,$tagArray){
@@ -1546,7 +1548,10 @@ function adminreportbatchreplyAction(){
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
 						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission);
+						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
+						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
+						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
