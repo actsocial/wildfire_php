@@ -439,8 +439,8 @@ class ReportController extends MyController
 			$row->reward_point_transaction_record_id = $rewardReocrd->id;
 			$row->save();
 			// add notification
-			$notificationModel = new Notification();
-			$notificationModel->createRecord("REPORT_REPLY",$row->consumer_id,$points);
+//			$notificationModel = new Notification();
+//			$notificationModel->createRecord("REPORT_REPLY",$row->consumer_id,$points);
 	}
 	
 	function saveTags($report_id,$tagArray){
