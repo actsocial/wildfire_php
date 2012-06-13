@@ -76,6 +76,12 @@ window.Tag = Backbone.Model.extend({
         
         loadTopics: function(){
         	this.model.loadTopics();
+        	$('.topics').isotope({
+        		  itemSelector : '.topic',
+        		  layoutMode : 'fitRows'
+        		});
+
+
         }
 
       });
