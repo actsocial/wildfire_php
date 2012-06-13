@@ -1,55 +1,11 @@
 <?php foreach($this->topics as $topic):?>
-	<?php 
-		if(isset($topic['value']['title'])){
-			$title = $topic['value']['title'];
-		}else{
-			$title = "-";
-		}
-		if(isset($topic['key'][1])){
-			list($year,$month,$day,$hour,$minute,$second) = $topic['key'][1];
-			$month+=1;
-			$date = date("Y-m-d g:i:s a",mktime($hour,$minute,$second,$month,$day,$year));
-		}else{
-			$date = "-";
-		}
-		if(isset($topic['value']['body'])){
-			$body = $topic['value']['body'];
-		}else{
-			$body = "-";
-		}
-		if(isset($topic['value']['tracker'])){
-			$lastestKey = false;
-			foreach($topic['value']['tracker'] as $k => $v):
-				if(!$lastestKey){
-					$lastestKey = $k;
-				}else if($lastestKey < $k){
-					$lastestKey = $k;
-				}
-			endforeach;
-			$tracker = $topic['value']['tracker'][$lastestKey];
-			if(isset($tracker['views'])){
-				$views = $tracker['views'];
-			}else{
-				$views = "-";
-			}
-			if(isset($tracker['comments'])){
-				$comments = $tracker['comments'];
-			}else{
-				$comments = "-";
-			}
-		}else{
-			$comments = "-";
-			$views = "-";
-		}
-		
-	?>
 	<div class="topic" data="<?php echo urlencode($topic['id'])?>">
 		<div style="width:100%;" class="topic_head">
 			<div style="" class="title_td">
 				<div class="row-fluid">
 					<div class="span11">
 						<i class="babytree" style=""></i>
-						<span onclick="toggleDiv(this,'<?php echo urlencode($topic['id'])?>');" class="title"><a href="javascript:void(0)"><?php echo $title ?></a></span>
+						<span onclick="toggleDiv(this,'<?php echo urlencode($topic['id'])?>');" class="title"><a href="javascript:void(0)"><?php echo $topic['value']['title'] ?></a></span>
 					</div>
 			        <div span="span2">
 			        	<i class="icon-zh-CN" style="float:right"></i>
@@ -79,7 +35,7 @@
 <?php 
 	}
 ?>
-<span><?php echo $this->currentPage."/".$this->totalPage?></span>
+<span><?php echo $this->page."/".$this->totalPage?></span>
 <?php 
 	if($this->page < $this->totalPage-1){
 ?>
@@ -88,59 +44,3 @@
 	}
 ?>
 </div-->
-<script>
-_totalPage = <?php echo $this->totalPage?>;
-_currentPage = <?php echo $this->page?>;
-	function toggleDiv(e,id){
-		var topicPRR =jQuery(e).parent().parent().parent().find(".topicPRR");
-		if (topicPRR.css('display')=='none'){
-			loadPosts(id,topicPRR);
-			//loadResponses(id);
-			//showReplyBox(id);
-        	topicPRR.show();
-			resizeTopicDiv();
-			return true;
-        }else{
-        	topicPRR.hide();
-			resizeTopicDiv();
-			return false;
-        }
-		
-	}
-	function resizeTopicDiv(adjust){
-   		var ll = 0;
-		if(adjust){
-			ll += adjust;
-		}
-		jQuery('.topics>div').each(function(i,e){
-		    ll+=jQuery(e).height()+3;
-			if(jQuery.browser.webkit){
-				ll+=4;
-			}
-		});
-		jQuery('.topics').css("height", ll);
-   }
-	function loadPosts(id,context){
-		context.find(".posts").html("读取中...");
-		jQuery.get('tag/ajaxgetposts?topic='+id,function(data){
-			context.find(".posts").html(data);
-			resizeTopicDiv();
-		});
-	}
-	function showPosts(e){
-		jQuery(e).parent().find("div.post").show().end().find("div.posthidden").hide();if(resizeTopicDiv){resizeTopicDiv();}
-	}
-	function saveReply(topicId,e){
-		jQuery.post('tag/ajaxsaveweiboreply',{topicId:topicId,content:jQuery(e).parent().find(".reply-content").val()},function(data){
-			if(data=='ok'){
-				alert("回复成功");
-			}else{
-				alert("系统忙,请稍后再试");
-			}
-		});
-	}
-	function addSourceUrl(url,e){
-		jQuery(e).parent().find(".reply-content").val(jQuery(e).parent().find(".reply-content").val()+'\r\n http://'+url);
-	}
-</script>
-<input type="hidden" value="<?php echo $this->page ?>"></input>
