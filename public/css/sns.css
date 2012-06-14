@@ -1,6 +1,8 @@
 .topic{
 	min-height:50px;
-	border-bottom: 1px solid #FCC0D1;
+	position:relative;
+	float:left;
+	//border-bottom: 1px solid #FCC0D1;
 }
 #tagCloudDiv {
 	width:150px;
@@ -11,6 +13,10 @@
 	min-height:500px;
 	float:left;
 	width:100%;
+}
+
+.topics li{
+    list-style: none;	
 }
 /**#tagCloudDiv li a{
     text-decoration:none;

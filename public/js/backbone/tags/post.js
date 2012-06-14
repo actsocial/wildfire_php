@@ -1,4 +1,3 @@
-$(function(){
     window.Post = Backbone.Model.extend({
         defaults: function() {
           return {
@@ -10,7 +9,7 @@ $(function(){
             author: "",
             username: "",
             translatedBody: "",
-            date_since: null
+            display:""
           };
         }
     });
@@ -24,9 +23,10 @@ $(function(){
     window.PostsView = Backbone.View.extend({
         tagName:  "div",
 
-        template: _.template($('#posts_template').html()),
+        template: _.template(jQuery('#posts_template').html()),
 
         events: {
+        	"click .showHiddenPost" : "showPosts"
         },
 
         initialize: function() {
@@ -35,9 +35,10 @@ $(function(){
 
         // Re-render the contents of the todo item.
         render: function() {
-          $(this.el).html(this.template(this.model));
+        	jQuery(this.el).html(this.template(this.model));
           return this;
         },
+    	showPosts : function(e){
+    		jQuery(e.currentTarget).parent().find("div.post").show().end().find("div.posthidden").hide();
+    	}
     });
-
-});

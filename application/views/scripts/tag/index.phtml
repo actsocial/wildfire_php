@@ -1,58 +1,95 @@
-<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.mousewheel.min.js" ></script>
-<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.tagsphere.min.js" ></script>
-<script src="<?php echo $this->baseUrl();?>/js/json2.js"></script>
-<script src="<?php echo $this->baseUrl();?>/js/underscore.js"></script>
-<script src="<?php echo $this->baseUrl();?>/js/backbone.js"></script>
-
-<link type="text/css" href="<?php echo $this->baseUrl();?>/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/sns.css" />
-<div id="tagCloudDiv">
-<ul class="nav nav-list">
-<?php if(sizeof($this->issues)>0){?>
-<li class="nav-header">任务</li>
-<div style="padding-left:15px" class="nav">
-<?php foreach($this->issues as $issue):
-?>
-<li><a onclick="openIssues(this);" href="javascript:void(0);" description="<?php echo $issue['description']?>" issue="<?php echo $issue['id']?>" data='<?php echo urlencode($issue['topic'])?>'><?php echo $issue['title']?></a></li>
-<?php 
-endforeach;?>
-</div>
-<?php }?>
-<li class="nav-header">我关注的</li>
-<div style="padding-left:15px" class="nav" id="folders">
 
-</div></ul>
+<div class="span11">
+  <div style="padding-left:15px" class="nav" id="folders">
+
+  </div>
 </div>
-<div class="topics"><div class="loadingtopic" style="display: none">读取中...</div></div>
+
+
+<div class="span11 topics isotope">
+	<div class="loadingtopic" style="display: none">读取中...</div>
+</div>
 
 
 <script type="text/template" id="tag_template">
 	<li><a href="javascript:void(0);" rel="<%= topic_num%>"><%= name%></a></li>
 </script>
 
+<script type="text/template" id="topic_template">
+	<div class="topic span2 isotope-item alert alert-success" data="<%= id %>">
+		<div style="width:100%;" class="topic_head">
+			<div style="" class="title_td">
+				<div class="row-fluid">
+					<div class="span11">
+						<i class="babytree" style=""></i>
+						<span class="title"><a href="javascript:void(0)"><%= title %></a></span>
+					</div>
+			        <div span="span2">
+			        	<i class="icon-zh-CN" style="float:right"></i>
+			        </div>
+				</div>
+				<div style="display: none;" class="topicPRR">
+			    	<div class="posts"><div>Loading...</div></div>
+			        <div class="responses">
+			        </div>
+			        <div class="reply" id="reply_box_1">
+						<form action="">
+						    <textarea placeholder="在这里填写您想回复的话" style="width:100%" rows="4" class="reply-content"></textarea>
+						    <button id="" class="btn btn-primary add-url">添加原帖链接</button>
+						<img id="submit_button_1" class="weibo-reply-img" style="cursor:pointer;" src="<?php echo $this->baseUrl();?>/images/weiboreply.gif"></img>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+<script type="text/template" id="posts_template">
+<% var length = models.length;var hiddenFormat=false;var index = 0;if(length>5){hiddenFormat=true}; %>
+<%  _.each(models, function(post){ %>
+<% if(hiddenFormat && index>0 && index< length-1){ %>
+<div class="post row-fluid" style="display:none">
+<%}else{ %>
+<div class="post row-fluid">
+<%} %>
+
+	<div class="head span1">
+		<div style="vertical-align: top; margin-left: 0px;">
+			<img style=""
+				src="<?php echo $this->baseUrl()."/images/unknown.jpg"?>
+				user="<%= post.get("author")%>">
+		</div>
+	</div>
+	<div class="span10">
+		<div class="author"></div>
+		<br>
+		<div class="body">
+			<table>
+				<tbody>
+					<tr>
+						<td><%= post.get("body") %></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="body_translated"></div>
+		<div class="date"><%=post.get("date")%></div>
+	</div>
+</div>
+<% if(hiddenFormat && index == 2){ %>
+<div class="post posthidden"></div>
+<div class="post posthidden showHiddenPost" style="cursor:pointer;text-align:center;"><span><%= length-2 %> More</span></div>
+<div class="post posthidden"></div>
+<% } %>
+<% index ++;%>
+<% }); %>
+</script>
+<script src="<?php echo $this->baseUrl();?>/js/backbone/tags/post.js"></script>
+<script src="<?php echo $this->baseUrl();?>/js/backbone/tags/topic.js"></script>
 <script src="<?php echo $this->baseUrl();?>/js/backbone/tags/tag.js"></script>
 
 <script type="text/javascript">
-_totalPage = 0;
-_currentPage = 0;
-_selectKey = null;
-_totalCount = 0;
-_loading = false;
-jQuery(function($){
-	//$('#tagCloudDiv').tagcloud({centrex:400, centrey:300, init_motion_x:10, init_motion_y:10,zoom: 100,max_zoom: 100,min_zoom: 100});
-	$(window).bind("scroll",function(){
-		if(_selectKey){
-			if(_totalPage>0&&_currentPage<_totalPage){
-				var top = document.documentElement.scrollTop + document.body.scrollTop;
-				if($(".topics").height() - top < 500){
-					if(!_loading){
-						openDetail(_selectKey,_totalCount,++_currentPage);
-					}
-				}
-			}
-		}
-	});
-});
 
 function getTopics(key,count,page){
 
@@ -105,5 +142,9 @@ function getIssue(topic,issue){
 
       window.App = new AppView;
 
+  	  $('.topics').isotope({
+		  itemSelector : '.topic',
+		  filter: '*'
+		});
 
 </script>
