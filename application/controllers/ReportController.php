@@ -303,7 +303,8 @@ class ReportController extends MyController
 						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
 						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
 						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2);
+						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -438,8 +439,8 @@ class ReportController extends MyController
 			$row->reward_point_transaction_record_id = $rewardReocrd->id;
 			$row->save();
 			// add notification
-			$notificationModel = new Notification();
-			$notificationModel->createRecord("REPORT_REPLY",$row->consumer_id,$points);
+//			$notificationModel = new Notification();
+//			$notificationModel->createRecord("REPORT_REPLY",$row->consumer_id,$points);
 	}
 	
 	function saveTags($report_id,$tagArray){
@@ -838,12 +839,12 @@ class ReportController extends MyController
 			if(!preg_match('/^image\//i', $type)?true:false) {
 				$this->view->error = "璇蜂笂浼犳纭殑鍥剧墖";
 			} else if($size > 2000000) {
-				$this->view->error = "鍥剧墖涓嶅緱瓒呰�?M";
+				$this->view->error = "鍥剧墖涓嶅緱瓒呰�?M";
 			} else {
 				$tmpfile = $imgfile['tmp_name'];
 							  if ($tmpfile && is_uploaded_file($tmpfile)) {
 				$file = fopen($tmpfile, "rb");
-				//$imgdata = bin2hex(fread($file,$size)); //bin2hex()灏嗕簩杩涘埗鏁版嵁杞崲鎴愬崄鍏繘鍒惰〃绀�?
+				//$imgdata = bin2hex(fread($file,$size)); //bin2hex()灏嗕簩杩涘埗鏁版嵁杞崲鎴愬崄鍏繘鍒惰〃绀�?
 				$imgdata = fread($file,$size);
 				fclose($file);
 				// save to db
@@ -1547,7 +1548,10 @@ function adminreportbatchreplyAction(){
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
 						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission);
+						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
+						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
+						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);

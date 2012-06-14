@@ -5,7 +5,7 @@ class Notification extends Zend_Db_Table{
 	public $WOM_REPORT_REPLY_TEMPLATE = array(
 	  "type"=>"wom_report_reply",
 	  "text"=>"您的口碑报告已经审核通过，您获得了#point积分",
-	  "redirectionURL"=>"campaign/description/id/#campaignId"
+//	  "redirectionURL"=>"campaign/description/id/#campaignId"
 	);
 	
 	public $WOM_REDEEM_POINT_TEMPLATE = array(

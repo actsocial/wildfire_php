@@ -69,7 +69,6 @@ class TagController extends MyController {
 				$startKey = array($key,array(0,0,0,0,0,0));
 				$endKey = array($key,array('{}','{}','{}','{}','{}','{}'));
 				$view = $topicsClient->skip($page*PAGESIZE)->limit(PAGESIZE)->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->getView('bayers','topics-untagged-by-folder');
-				$this->view->topics = $view['rows'];
 				$this->view->key = $key;
 				if($totalCount>0){
 					$this->view->totalPage = ceil($totalCount/PAGESIZE);
@@ -77,7 +76,60 @@ class TagController extends MyController {
 					$this->view->totalPage = "-";
 				}
 				$this->view->totalCount = $totalCount;
-				$this->view->currentPage = $page+1;
+				$result = array();
+				$topics = array();
+				foreach($view['rows'] as $topic):
+					if(!isset($topic['value']['title'])){
+						$topic['value']['title'] = "-";
+					}
+					if(isset($topic['key'][1])){
+						list($year,$month,$day,$hour,$minute,$second) = $topic['key'][1];
+						$month+=1;
+						$date = date("Y-m-d g:i:s a",mktime($hour,$minute,$second,$month,$day,$year));
+					}else{
+						$date = "-";
+					}
+					$topic['value']['date'] = $date;
+					if(isset($topic['value']['body'])){
+						$body = $topic['value']['body'];
+					}else{
+						$body = "-";
+					}
+					$topic['value']['body'] = $body;
+					if(isset($topic['value']['tracker'])){
+						$lastestKey = false;
+						foreach($topic['value']['tracker'] as $k => $v):
+						if(!$lastestKey){
+							$lastestKey = $k;
+						}else if($lastestKey < $k){
+							$lastestKey = $k;
+						}
+						endforeach;
+						$tracker = $topic['value']['tracker'][$lastestKey];
+						if(isset($tracker['views'])){
+							$views = $tracker['views'];
+						}else{
+							$views = "-";
+						}
+						if(isset($tracker['comments'])){
+							$comments = $tracker['comments'];
+						}else{
+							$comments = "-";
+						}
+					}else{
+						$comments = "-";
+						$views = "-";
+					}
+					$topic['value']['comments'] = $comments;
+					$topic['value']['views'] = $views;
+					array_push($topics,$topic);
+				endforeach;
+				$this->view->topics = $topics;
+				$result['topics'] = $this->view->topics;
+				$result['key'] = $this->view->key;
+				$result['totalCount'] = $this->view->totalCount;
+				$result['page'] = $this->view->page;
+				$this->_helper->json($result);
 			}
 		} catch (Exception $e) {
 				
@@ -94,7 +146,16 @@ class TagController extends MyController {
 			$postsClient = new couchClient ($config->couchdb->uri.":".$config->couchdb->port,$config->couchdb->posts_users);
 			$posts = $postsClient->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->getView('socialmediathread','posts-by-topic');
 			$this->view->posts = $posts['rows'];
+			$return_posts = array();
+			foreach($posts['rows'] as $post):
+				$author = explode("@",$post['value']['author']);
+				$post['value']['author'] = $author[0];
+// 				$dateArr = $post['value']['date'];
+// 				$post['value']['date'] = date(DATE_RFC822,mktime($dateArr[3],$dateArr[4],$dateArr[5],$dateArr[1],$dateArr[2],$dateArr[0]));
+				array_push($return_posts,$post);
+			endforeach;
 			$this->_helper->layout->disableLayout();
+			$this->_helper->json($return_posts);
 		}
 	}
 	
