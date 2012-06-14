@@ -34,7 +34,7 @@
 			</tuv>
 			<tuv xml:lang="en">
 				<seg><![CDATA[<h1>Become a Spark - be a part of the consumer-powered marketing revolution!</h1>
-<p>Because we rely solely on word-of-mouth to grow, you must be invited by a friend to join the Wildfire community.</p>]]></seg>
+<p>Because we rely solely on word-of-mouth to grow, you can invite your friends to join Wildfire community!</p>]]></seg>
 			</tuv>
 		</tu>
 		
@@ -52,7 +52,9 @@
 				<seg>邀请码(可以为空)：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Enter Code:</seg>
+				<seg>Enter Code:
+					(Leave it blank if you have no inivitation code)
+				</seg>
 			</tuv>
 		</tu>
 		

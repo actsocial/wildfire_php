@@ -1542,7 +1542,7 @@
 				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该教育品牌的看法。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>.</seg>
+				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该教育品牌的看法。</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Thanks_For_Post_Campaign_Survey_30'>
@@ -1577,7 +1577,7 @@
         <tu tuid="pre_campaign_thankyou_30">
         	<tuv xml:lang="zh">
         		<!--<seg>请填写上海地区的办公地址</seg>-->
-        		<seg></seg>
+        		<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
         	</tuv>
         </tu>
 	    <tu tuid="pre_campaign_friends_30">
