@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+
+.topbar{top:40px; }
+
+.topbar #searchDiv{padding:8px 5px 3px 0;}
+
+#folders li{display:inline; padding-right:8px;}

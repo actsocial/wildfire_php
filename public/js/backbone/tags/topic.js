@@ -78,7 +78,7 @@ window.topics = new TopicList;
 window.TopicView = Backbone.View.extend({
 
 	//... is a list tag.
-	tagName : "li",
+	//tagName : "li",
 
 	display : "none",
 
@@ -118,6 +118,7 @@ window.TopicView = Backbone.View.extend({
 			$(".topicPRR", this.$el).hide();
 			this.resizeTopicDiv(100);
 		}
+		$('.topics').isotope('reLayout');
 
 	},
 

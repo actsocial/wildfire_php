@@ -21,6 +21,8 @@ class TagController extends MyController {
 			}
 		} catch (Exception $e) {
 		}
+		$this->_helper->layout->setLayout("layout_isotope");
+		
 	}
 	
 	function ajaxissuedetailAction(){

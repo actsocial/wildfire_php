@@ -1,36 +1,23 @@
-<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.mousewheel.min.js" ></script>
-<script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.tagsphere.min.js" ></script>
-<script src="<?php echo $this->baseUrl();?>/js/json2.js"></script>
-<script src="<?php echo $this->baseUrl();?>/js/underscore.js"></script>
-<script src="<?php echo $this->baseUrl();?>/js/backbone.js"></script>
-
-<link type="text/css" href="<?php echo $this->baseUrl();?>/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/sns.css" />
-<div id="tagCloudDiv">
-<ul class="nav nav-list">
-<?php if(sizeof($this->issues)>0){?>
-<li class="nav-header">任务</li>
-<div style="padding-left:15px" class="nav">
-<?php foreach($this->issues as $issue):
-?>
-<li><a onclick="openIssues(this);" href="javascript:void(0);" description="<?php echo $issue['description']?>" issue="<?php echo $issue['id']?>" data='<?php echo urlencode($issue['topic'])?>'><?php echo $issue['title']?></a></li>
-<?php 
-endforeach;?>
-</div>
-<?php }?>
-<li class="nav-header">我关注的</li>
-<div style="padding-left:15px" class="nav" id="folders">
 
-</div></ul>
+<div class="span11">
+  <div style="padding-left:15px" class="nav" id="folders">
+
+  </div>
 </div>
-<div class="topics"><div class="loadingtopic" style="display: none">读取中...</div></div>
+
+
+<div class="span11 topics isotope">
+	<div class="loadingtopic" style="display: none">读取中...</div>
+</div>
 
 
 <script type="text/template" id="tag_template">
 	<li><a href="javascript:void(0);" rel="<%= topic_num%>"><%= name%></a></li>
 </script>
+
 <script type="text/template" id="topic_template">
-	<div class="topic" data="<%= id %>">
+	<div class="topic span2 isotope-item alert alert-success" data="<%= id %>">
 		<div style="width:100%;" class="topic_head">
 			<div style="" class="title_td">
 				<div class="row-fluid">
@@ -155,5 +142,9 @@ function getIssue(topic,issue){
 
       window.App = new AppView;
 
+  	  $('.topics').isotope({
+		  itemSelector : '.topic',
+		  filter: '*'
+		});
 
 </script>

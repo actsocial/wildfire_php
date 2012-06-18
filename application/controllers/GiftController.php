@@ -683,7 +683,7 @@ class GiftController extends MyController
 					$this->view->oFCKeditor->Value= $this->view->product['long_desc'];
 				}
 			
-		}
+		} 
 		
 	}
 	function admintestAction(){
@@ -705,7 +705,7 @@ class GiftController extends MyController
 			$this->_redirect('gift/description/id/'.$formData['id']);
 //		Zend_Debug::dump($formData['long_desc']);
 	}
-	
+	 
 	function deletegiftlogicAction(){
 		$pid = $this->_request->getParam('id');	
 		$db = Zend_Registry::get('db');	

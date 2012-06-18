@@ -38,9 +38,15 @@ window.Tag = Backbone.Model
 									view_count : t['value']['views']
 					              });
 					        	var view = new TopicView({model: topic});
-					        	jQuery(".topics .loadingtopic").before(view.render().el);
+//					        	jQuery(".topics .loadingtopic").before(view.render().el);
+					        	
+					        	var newItems = $(view.render().el);
+//					        	$('.topics').append(newItems).isotope('addItems',newItems);
+					        	//alert($(view.render().el).html());
+					        	$('.topics').isotope( 'insert', newItems );
 							});
 							self.set({"topicloading":false});
+							//alert(1);
 						}
 					});
 				}
@@ -92,6 +98,7 @@ window.TagView = Backbone.View.extend({
 		jQuery(window).unbind('scroll');
 		this.model.set({'name':jQuery(e.currentTarget).text(),'page':0,'selected':true,'topic_num':jQuery(e.currentTarget).attr('rel')});
 		jQuery(window).bind('scroll', _.bind(this.turnPage, this));
+
 	},
 	
 	turnPage : function(e){
@@ -113,6 +120,7 @@ window.TagView = Backbone.View.extend({
 			jQuery(".loadingtopic").show();
 		}else{
 			jQuery(".loadingtopic").hide();
+	    	//$('.topics').isotope('reLayout');
 		}
 	}
 

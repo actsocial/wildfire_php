@@ -29,6 +29,7 @@ class CampaignInvitationController extends MyController {
 		$select2->from ( 'campaign_invitation', array('campaign_invitation.*','campaign.*') );
 		$select2->join ( 'campaign', 'campaign.id = campaign_invitation.campaign_id and campaign.type="campaign"', 'name' );
 		$select2->where ( 'campaign_invitation.consumer_id = ?', $this->_currentUser->id );
+		$select2->where ( 'campaign.expire_date > ?', $currentTime );
 		$select2->where ( 'campaign_invitation.state = ?', 'NEW' );
 		$select2->order ( 'campaign_invitation.create_date DESC' );
 		$this->view->campaignInvitations = $db->fetchAll ( $select2 );

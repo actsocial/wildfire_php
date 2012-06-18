@@ -157,23 +157,28 @@ class HomeController extends MyController
 		->order('poll_participation.date DESC');
 		$this->view->completedPolls = $db->fetchAll($select2);
 
-		// get invitation
+		// get invitation 
+		// add expire_date by Bruce.Liu 
 		$select3 = $db->select();
 		$select3->from('campaign_invitation','*');
 		$select3->join('campaign', 'campaign.id = campaign_invitation.campaign_id ', array('name','type','product_name','simple_description','invitation_description','invitation_description2'));
 		$select3->where('campaign_invitation.consumer_id = ?', $this->_currentUser->id);
 		$select3->where('campaign_invitation.state = ?', 'NEW');
+		$select3->where('campaign.expire_date > ?', $currentTime);
 		$select3->order('campaign_invitation.create_date DESC');
 		$this->view->recentInvitation = $db->fetchRow($select3);
 		$this->view->allInvitations = $db->fetchAll($select3);
 		//print_r($this->view->allInvitations);die;
+//		Zend_Debug::dump($this->view->allInvitations);die();
 		
 		//post-campaign survey popup
+		// add expire_date by Bruce.Liu
 		$select4 = $db->select();
 		$select4->from('campaign_participation','*');
 		$select4->join('campaign_invitation', 'campaign_participation.campaign_invitation_id = campaign_invitation.id');
 		$select4->join('campaign', 'campaign.id = campaign_invitation.campaign_id');
 		$select4->where('campaign_invitation.consumer_id = ?', $this->_currentUser->id);
+		$select4->where('campaign.expire_date > ?', $currentTime);
 		$select4->where('campaign_participation.state = ?', 'FINISHING');
 		$select4->order('campaign_invitation.create_date DESC');
 		$this->view->postCampaignNotification = $db->fetchRow($select4);

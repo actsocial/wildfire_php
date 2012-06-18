@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" >
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="word-of-mouth marketing" />
+  <meta name="description" content="Wildfire XingXingHuo - Asias Word-of-Mouth Community" />
+
+  <title><?php echo $this->escape($this->title); ?></title>
+
+  <script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery-1.7.1.min.js" ></script>
+
+  <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.mousewheel.min.js" ></script>
+  <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.tagsphere.min.js" ></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.isotope.min.js" ></script>
+  
+  <script src="<?php echo $this->baseUrl();?>/js/json2.js"></script>
+  <script src="<?php echo $this->baseUrl();?>/js/underscore.js"></script>
+  <script src="<?php echo $this->baseUrl();?>/js/backbone.js"></script>
+
+  <link type="text/css" href="<?php echo $this->baseUrl();?>/css/isotope.css" rel="stylesheet">
+  <link type="text/css" href="<?php echo $this->baseUrl();?>/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/v2home.css" type="text/css"/>
+
+</head>
+<body>	 
+
+	<div class="logo">
+		<a href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>"><img style="width:100px;" src="<?php echo $this->baseUrl();?>/images/logo_2011.png" /></a>
+	</div>
+	<div class="navbar navbar-top topbar">
+		<div class="navbar-inner">
+
+			<div class="container">
+                <div id="searchDiv">
+                  <input type="text" class="span9"></input>
+				  <a class="btn" href="#"><i class="icon-search"></i> </a>                
+				</div>
+			</div>	
+			
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	<div class="container-fluid">
+		<div class="row-fluid">
+	        <?php echo $this->layout()->content; ?>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	<div class="footer">
+		<div class="footer-inner">
+		  <div class="moduletable bottom_menu">
+					<table width="100%" border="0" cellpadding="0" cellspacing="1"><tr><td nowrap="nowrap"><a href="<?php echo $this->baseUrl();?>/site/privacypolicy"><?php echo $this->translate('Privacy_Policy');?></a><a href="<?php echo $this->baseUrl();?>/site/terms"><?php echo $this->translate('Terms');?> &amp; <?php echo $this->translate('Conditions');?></a><a href="<?php echo $this->baseUrl();?>/site/contactus"><?php echo $this->translate('Contact_Us');?></a></td></tr></table>		
+		  </div>
+	
+        </div>
+    </div>
+
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+		try {
+		var pageTracker = _gat._getTracker("UA-11657111-1");
+		pageTracker._trackPageview();
+		} catch(err) {}
+	</script>
+</body>
+</html>

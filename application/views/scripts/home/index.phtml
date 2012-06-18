@@ -163,7 +163,7 @@
         
 	
 	    <!--  Points  -->
-        <div style="float: left;">
+        <div style="float: left;width:120px;">
 			<h3>&nbsp;&nbsp;<?php echo $this->translate("Home_Spark_Points_Earned")?></h3><br>	
 			<div class="spark-status-content">
 				<h4><?php echo $this->totalPoints; ?></h4>
@@ -171,15 +171,15 @@
 			</div>
 		</div>
 		
-		<div style="float: left;">
+		<div style="float: left;width:120px;">
 			<h3>&nbsp;&nbsp;<?php echo $this->translate("Rewards_Ready_to_Redeem")?></h3><br>
 			<div class="spark-status-content">
 				<h4><?php echo $this->redeemPoints; ?></h4>
 			</div>
 		</div>
 		
-		<div style="float: left;">
-			<h3>&nbsp;&nbsp;<?php echo $this->translate("新进积分：")?></h3><br>
+		<div style="float: left;width:120px;">
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("New_points")?></h3><br>
 			<div class="spark-status-content">
 				<h4><?php echo ($this->totalPoints-$this->redeemPoints); ?></h4>
 			</div>
@@ -443,7 +443,7 @@
 				<li>
 					<?php if ($this->lang=='en'):?> 
 						<a href="<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'participate', 'id'=>$survey['id']));?>">
-							 <?php echo $survey->english_name;?> 
+							 <?php echo $survey['english_name'];?> 
 						</a>
 					<?php else:?>
 						<a href="<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'participate', 'id'=>$survey['id']));?>">

@@ -166,7 +166,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>星星火总积分：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Spark Points Earned:</seg>
+				<seg>Total Points :</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Spark_Points_Earned_Content_1'>
@@ -215,10 +215,17 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>可用兑换积分：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Not Yet Redeemed:</seg>
+				<seg>Can be Used:</seg>
 			</tuv>
 		</tu>
-		
+		<tu tuid='New_points'>
+			<tuv xml:lang="zh">
+				<seg>新近积分：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>New Points:</seg>
+			</tuv>
+		</tu>
 		<tu tuid='Told_a_friend?_Submit_a_Spark_Report!'>
 			<tuv xml:lang="zh">
 				<seg>已和你的朋友谈论过？那就来提交报告吧！</seg>
