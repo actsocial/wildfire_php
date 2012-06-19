@@ -17,6 +17,7 @@ window.Tag = Backbone.Model
 				if (this.get("topicloading") == false) {
 					this.set({"topicloading":true});
 					var self = this;
+					var typeArray = ["success","warning","error"];
 					jQuery.ajax({
 						type : "GET",
 						url : "tag/ajaxtopics",
@@ -35,7 +36,9 @@ window.Tag = Backbone.Model
 									lang : "zh-CN",
 									body : t['value']['body'],
 									comment_count : t['value']['comments'],
-									view_count : t['value']['views']
+									view_count : t['value']['views'],
+									type: typeArray[~~(Math.random()*10/3)],
+									author: t['value']['author']
 					              });
 					        	var view = new TopicView({model: topic});
 //					        	jQuery(".topics .loadingtopic").before(view.render().el);
@@ -94,11 +97,14 @@ window.TagView = Backbone.View.extend({
 	},
 
 	selectTag : function(e) {
+		jQuery(".topics").isotope( 'remove', $(".topic"));
 		jQuery(".topics").html(jQuery(".loadingtopic"));
+		jQuery(".topics").isotope( 'reloadItems' );
+		this.model.set({'name':jQuery(e.currentTarget).text(),'page':null,'selected':true,'topic_num':jQuery(e.currentTarget).attr('rel')});
 		jQuery(window).unbind('scroll');
 		this.model.set({'name':jQuery(e.currentTarget).text(),'page':0,'selected':true,'topic_num':jQuery(e.currentTarget).attr('rel')});
-		jQuery(window).bind('scroll', _.bind(this.turnPage, this));
-
+		jQuery(window).bind('scroll', _.bind(this.turnPage, this));	
+		
 	},
 	
 	turnPage : function(e){
@@ -113,7 +119,9 @@ window.TagView = Backbone.View.extend({
 		
 	},
 	loadPage : function(e){
-		this.model.loadTopics();
+		if (this.model.get("page")!=undefined){
+			this.model.loadTopics();
+		}
 	},
 	loadingStatus : function(e){
 		if(this.model.get("topicloading")){
