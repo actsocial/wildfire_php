@@ -46,8 +46,7 @@ window.Topic = Backbone.Model
 														body : row.value.body,
 														id : encodeURIComponent(row.id),
 														topicId : encodeURIComponent(row.key[0]),
-														date : date
-																.toLocaleString(),
+														date : date.toLocaleString(),
 														index : i,
 														author : row.value.author,
 														username : row.value.userName,
@@ -74,6 +73,46 @@ window.TopicList = Backbone.Collection.extend({
 });
 
 window.topics = new TopicList;
+
+window.ContainerView = Backbone.View.extend({
+	tagName : "div",
+	
+	className: "span11 topics isotope",
+
+	// Cache the template function for a single item.
+	template : _.template($('#container_template').html()),
+
+	// The DOM events specific to an item.
+	events : {
+//		"click .title" : "toggle",
+//		"click .add-url" : "addSourceUrl",
+//		"click .weibo-reply-img" : "saveReply"
+	},
+
+	// The TodoView listens for changes to its model, re-rendering.
+	initialize : function() {
+//		this.model.bind("change:postLoaded", this.afterPostLoaded, this);
+		//this.model.bind('change', this.render, this);
+		//this.model.bind('destroy', this.remove, this);
+	},
+
+	// Re-render the contents of the todo item.
+	render : function() {
+		$(this.el).html(this.template());
+		return this;
+	},
+	
+	layout : function(){
+		$(this.el).isotope({
+			  itemSelector : '.topic',
+			  filter: '*'
+			});
+	},
+	
+	relayout : function(){
+		$(this.el).isotope("reLayout");
+	}
+});
 
 window.TopicView = Backbone.View.extend({
 
@@ -113,12 +152,17 @@ window.TopicView = Backbone.View.extend({
 				this.model.loadposts();
 			}
 			$(".topicPRR", this.$el).show();
+			$('.topic',this.$el).removeClass("span2");
+			$('.topic',this.$el).addClass("span61");
+
 			this.resizeTopicDiv(100);
 		} else {
+			$('.topic',this.$el).removeClass("span61");
+			$('.topic',this.$el).addClass("span2");
 			$(".topicPRR", this.$el).hide();
 			this.resizeTopicDiv(100);
 		}
-		$('.topics').isotope('reLayout');
+		App.container.relayout();
 
 	},
 
@@ -130,6 +174,8 @@ window.TopicView = Backbone.View.extend({
 			}
 		});
 		$(".posts", this.$el).html(view.render().el);
+		App.container.relayout();
+
 	},
 
 	resizeTopicDiv : function(adjust) {

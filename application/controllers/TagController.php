@@ -66,9 +66,9 @@ class TagController extends MyController {
 			$totalCount = $this->_request->getParam('totalCount')|0;
 			$this->view->page = $page;
 			if($key){
-				$startKey = array($key,array(0,0,0,0,0,0));
-				$endKey = array($key,array('{}','{}','{}','{}','{}','{}'));
-				$view = $topicsClient->skip($page*PAGESIZE)->limit(PAGESIZE)->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->getView('bayers','topics-untagged-by-folder');
+				$endKey = array($key,array(0,0,0,0,0,0));
+				$startKey = array($key,array('{}','{}','{}','{}','{}','{}'));
+				$view = $topicsClient->skip($page*PAGESIZE)->limit(PAGESIZE)->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->descending(TRUE)->getView('bayers','topics-by-folder');
 				$this->view->key = $key;
 				if($totalCount>0){
 					$this->view->totalPage = ceil($totalCount/PAGESIZE);
@@ -251,5 +251,9 @@ class TagController extends MyController {
 		$irrModel = new InboxReplyRecord();
 		$this->view->irrs = $irrModel->findReplyRecord();
 	}
+	
+	function testAction(){
+		$this->_helper->layout->disableLayout();
+			}
 	
 }

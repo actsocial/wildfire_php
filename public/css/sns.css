@@ -2,6 +2,14 @@
 	min-height:50px;
 	position:relative;
 	float:left;
+	margin:8px;
+	padding:10px 5px;
+	//-moz-border-radius:10px;
+	//-webkit-border-radius:10px;
+	//border-radius:10px;
+	border:1px solid ddd;
+	-webkit-box-shadow:0 0 2px #AAA;
+	-moz-box-shadow:0 0 2px black;
 	//border-bottom: 1px solid #FCC0D1;
 }
 #tagCloudDiv {
@@ -31,6 +39,7 @@
 	float:left;
 	width:100%;
 }
+	
 .post .author {
     float: left;
     font-size: 100%;
@@ -38,10 +47,8 @@
     width: 45%;
 }
 .post {
-    border-bottom: 1px solid #FCC0D1;
 }
 .posthidden {
-    border-bottom: 1px solid #FCC0D1;
     height: 5px;
 }
 .post .body {
