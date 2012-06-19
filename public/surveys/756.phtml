@@ -28,6 +28,16 @@
 	// ]]>
 	-->
 	</script>
+	<script src="../js/jquery-1.7.1.min.js"></script>
+	<script>
+	
+	var jQuery=$.noConflict();
+	
+	jQuery(function(){
+		alert("test!!");
+	});
+	</script>
+
 <div class="main-container-outer" >
 	<div id="container">
 		<div id="header" class="header" style="display: none;">
@@ -66,7 +76,7 @@
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -1065,7 +1075,7 @@
 <input type="hidden" name="answers[14328].id" value="" id="answers[14328].id" />
 
 	<select group="14328" class="selection" id="question_14328" name="answers[14328].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="12348" style=""  >男</option>
 <option value="12349" style=""  >女</option>
 	</select> 
@@ -1238,7 +1248,7 @@
 <br/>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -1560,10 +1570,9 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    	var html = '提交失败：必填的题目不能为空';
+	        jQuery("#check-alert-dialog .content").html(html);
+	        jQuery("#check-alert-dialog").dialog('open');
 	    }
 		return fillMandatory;
 	}
@@ -1592,10 +1601,9 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			var html = '提交失败：不能提交空报告';
+		    jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
@@ -1756,7 +1764,6 @@
 <!--
 // <![CDATA[
 
-Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
