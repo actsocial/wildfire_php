@@ -28,16 +28,6 @@
 	// ]]>
 	-->
 	</script>
-	<script src="../js/jquery-1.7.1.min.js"></script>
-	<script>
-	
-	var jQuery=$.noConflict();
-	
-	jQuery(function(){
-		alert("test!!");
-	});
-	</script>
-
 <div class="main-container-outer" >
 	<div id="container">
 		<div id="header" class="header" style="display: none;">
@@ -76,7 +66,7 @@
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -86,7 +76,7 @@
 <div id="mainzone-inner">
 
 
-<input type="hidden" name="id" value="aPuM0OMYEHe9" id="id" />
+<input type="hidden" name="id" value="Kwoxpg5KnXU5" id="id" />
 <input type="hidden" name="theme" value="wildfire" id="theme" />
 
 <div class="mandatory"><span style="color: red;">* </span>- It is mandatory</div>
@@ -175,7 +165,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						请问您一般在哪里为孩子买童装？
+						请问您一般在哪里为孩子买童装？(最多选三项)
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
 							   
@@ -194,22 +184,23 @@
 
 
 <span id="hint_14311">
+    Please select at most  3 values.<br>
 </span>
 <ul>
 	<li>
-			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_0" name="answers[14311].value" value="12315" 	onclick=" "/>		<label for="14311_0">网上（如淘宝）</label>
+			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_0" name="answers[14311].value" value="12315" 	onclick="checkChanged('14311_0',3,0);  "/>		<label for="14311_0">网上（如淘宝）</label>
 	</li>
 	<li>
-			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_1" name="answers[14311].value" value="12316" 	onclick=" "/>		<label for="14311_1">欧美连锁服装品牌，如 C&amp;A, H&amp;M</label>
+			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_1" name="answers[14311].value" value="12316" 	onclick="checkChanged('14311_1',3,0);  "/>		<label for="14311_1">欧美连锁服装品牌，如 C&amp;A, H&amp;M</label>
 	</li>
 	<li>
-			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_2" name="answers[14311].value" value="12317" 	onclick=" "/>		<label for="14311_2">商场</label>
+			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_2" name="answers[14311].value" value="12317" 	onclick="checkChanged('14311_2',3,0);  "/>		<label for="14311_2">商场</label>
 	</li>
 	<li>
-			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_3" name="answers[14311].value" value="12318" 	onclick=" "/>		<label for="14311_3">当地的小店</label>
+			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_3" name="answers[14311].value" value="12318" 	onclick="checkChanged('14311_3',3,0);  "/>		<label for="14311_3">当地的小店</label>
 	</li>
 	<li>
-			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_4" name="answers[14311].value" value="12319" 	onclick=" "/>		<label for="14311_4">其他(请填写)</label>
+			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_4" name="answers[14311].value" value="12319" 	onclick="checkChanged('14311_4',3,0);  "/>		<label for="14311_4">其他(请填写)</label>
 	</li>
 </ul>
  </td>
@@ -222,6 +213,42 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+
+	
+		if(typeof previouslySelectedOptions == "undefined") {
+				var previouslySelectedOptions = new Array();
+		}
+				
+		if(typeof previouslySelectedOptions[14311]=="undefined") {		
+			 previouslySelectedOptions[14311] = new Array();
+						
+		}
+
+		if(typeof checkChanged=="undefined") {
+			checkChanged = function(id, max, min) {
+				var elementId = id.split("_")[0];
+				if($(id).checked == true) {				
+					previouslySelectedOptions[elementId].push(id);
+					// if there are now more elements in the array than allowed, delete the first one
+					if (previouslySelectedOptions[elementId].length > max && max != 0){
+						$(previouslySelectedOptions[elementId][0]).checked=false;
+						previouslySelectedOptions[elementId].shift();					
+					}	
+				} else {
+				   var newArray = new Array();
+				    // delete the now unselected checkbox from the array
+					for (var i = 0; i < previouslySelectedOptions[elementId].length; i++) {
+						if (previouslySelectedOptions[elementId][i] != id) {
+							newArray.push(previouslySelectedOptions[elementId][i]);
+						}
+					}
+					previouslySelectedOptions[elementId] = newArray;
+				}
+				if (previouslySelectedOptions[elementId].length < min  && min != 0) {
+					new Effect.Pulsate("hint_14311", {pulses:1, from:0.4});
+				}		
+			}
+		}
 	
 // ]]>
 -->
@@ -346,7 +373,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						在帮孩子购置童装时，你最看重哪些方面？
+						在帮孩子购置童装时，你最看重哪些方面？(最多选三项)<br/>
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
 							   
@@ -365,34 +392,35 @@
 
 
 <span id="hint_14314">
+    Please select at most  3 values.<br>
 </span>
 <ul>
 	<li>
-			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_0" name="answers[14314].value" value="12320" 	onclick=" "/>		<label for="14314_0">是否时髦</label>
+			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_0" name="answers[14314].value" value="12320" 	onclick="checkChanged('14314_0',3,0);  "/>		<label for="14314_0">是否时髦</label>
 	</li>
 	<li>
-			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_1" name="answers[14314].value" value="12321" 	onclick=" "/>		<label for="14314_1">是否耐穿</label>
+			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_1" name="answers[14314].value" value="12321" 	onclick="checkChanged('14314_1',3,0);  "/>		<label for="14314_1">是否耐穿</label>
 	</li>
 	<li>
-			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_2" name="answers[14314].value" value="12322" 	onclick=" "/>		<label for="14314_2">价格实惠</label>
+			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_2" name="answers[14314].value" value="12322" 	onclick="checkChanged('14314_2',3,0);  "/>		<label for="14314_2">价格实惠</label>
 	</li>
 	<li>
-			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_3" name="answers[14314].value" value="12323" 	onclick=" "/>		<label for="14314_3">有中国风格</label>
+			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_3" name="answers[14314].value" value="12323" 	onclick="checkChanged('14314_3',3,0);  "/>		<label for="14314_3">有中国风格</label>
 	</li>
 	<li>
-			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_4" name="answers[14314].value" value="12324" 	onclick=" "/>		<label for="14314_4">有欧美风格</label>
+			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_4" name="answers[14314].value" value="12324" 	onclick="checkChanged('14314_4',3,0);  "/>		<label for="14314_4">有欧美风格</label>
 	</li>
 	<li>
-			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_5" name="answers[14314].value" value="12325" 	onclick=" "/>		<label for="14314_5">让孩子穿出自己的风格</label>
+			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_5" name="answers[14314].value" value="12325" 	onclick="checkChanged('14314_5',3,0);  "/>		<label for="14314_5">让孩子穿出自己的风格</label>
 	</li>
 	<li>
-			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_6" name="answers[14314].value" value="12326" 	onclick=" "/>		<label for="14314_6">穿起来是否舒适</label>
+			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_6" name="answers[14314].value" value="12326" 	onclick="checkChanged('14314_6',3,0);  "/>		<label for="14314_6">穿起来是否舒适</label>
 	</li>
 	<li>
-			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_7" name="answers[14314].value" value="12327" 	onclick=" "/>		<label for="14314_7">尺寸更大，不怕孩子长个子</label>
+			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_7" name="answers[14314].value" value="12327" 	onclick="checkChanged('14314_7',3,0);  "/>		<label for="14314_7">尺寸更大，不怕孩子长个子</label>
 	</li>
 	<li>
-			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_8" name="answers[14314].value" value="12328" 	onclick=" "/>		<label for="14314_8">其他(请填写)</label>
+			<input group="14314" class="question_radio_14314 selection" type="checkbox" id="14314_8" name="answers[14314].value" value="12328" 	onclick="checkChanged('14314_8',3,0);  "/>		<label for="14314_8">其他(请填写)</label>
 	</li>
 </ul>
  </td>
@@ -405,6 +433,42 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+
+	
+		if(typeof previouslySelectedOptions == "undefined") {
+				var previouslySelectedOptions = new Array();
+		}
+				
+		if(typeof previouslySelectedOptions[14314]=="undefined") {		
+			 previouslySelectedOptions[14314] = new Array();
+						
+		}
+
+		if(typeof checkChanged=="undefined") {
+			checkChanged = function(id, max, min) {
+				var elementId = id.split("_")[0];
+				if($(id).checked == true) {				
+					previouslySelectedOptions[elementId].push(id);
+					// if there are now more elements in the array than allowed, delete the first one
+					if (previouslySelectedOptions[elementId].length > max && max != 0){
+						$(previouslySelectedOptions[elementId][0]).checked=false;
+						previouslySelectedOptions[elementId].shift();					
+					}	
+				} else {
+				   var newArray = new Array();
+				    // delete the now unselected checkbox from the array
+					for (var i = 0; i < previouslySelectedOptions[elementId].length; i++) {
+						if (previouslySelectedOptions[elementId][i] != id) {
+							newArray.push(previouslySelectedOptions[elementId][i]);
+						}
+					}
+					previouslySelectedOptions[elementId] = newArray;
+				}
+				if (previouslySelectedOptions[elementId].length < min  && min != 0) {
+					new Effect.Pulsate("hint_14314", {pulses:1, from:0.4});
+				}		
+			}
+		}
 	
 // ]]>
 -->
@@ -460,7 +524,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						你最喜欢的三个儿童时尚品牌是哪些？
+						你最喜欢的三个儿童时尚品牌是哪些？(最多选三项)
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
 							   
@@ -479,43 +543,44 @@
 
 
 <span id="hint_14316">
+    Please select at most  3 values.<br>
 </span>
 <ul>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_0" name="answers[14316].value" value="12329" 	onclick=" "/>		<label for="14316_0">Eland 童装系列</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_0" name="answers[14316].value" value="12329" 	onclick="checkChanged('14316_0',3,0);  "/>		<label for="14316_0">Eland 童装系列</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_1" name="answers[14316].value" value="12330" 	onclick=" "/>		<label for="14316_1">Paw in Paw 童装</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_1" name="answers[14316].value" value="12330" 	onclick="checkChanged('14316_1',3,0);  "/>		<label for="14316_1">Paw in Paw 童装</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_2" name="answers[14316].value" value="12331" 	onclick=" "/>		<label for="14316_2">Okadi 欧开蒂</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_2" name="answers[14316].value" value="12331" 	onclick="checkChanged('14316_2',3,0);  "/>		<label for="14316_2">Okadi 欧开蒂</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_3" name="answers[14316].value" value="12332" 	onclick=" "/>		<label for="14316_3">jacadi 亚卡迪</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_3" name="answers[14316].value" value="12332" 	onclick="checkChanged('14316_3',3,0);  "/>		<label for="14316_3">jacadi 亚卡迪</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_4" name="answers[14316].value" value="12333" 	onclick=" "/>		<label for="14316_4">Classic Teddy 精典泰迪</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_4" name="answers[14316].value" value="12333" 	onclick="checkChanged('14316_4',3,0);  "/>		<label for="14316_4">Classic Teddy 精典泰迪</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_5" name="answers[14316].value" value="12334" 	onclick=" "/>		<label for="14316_5">Tweenie Weenie 维尼熊</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_5" name="answers[14316].value" value="12334" 	onclick="checkChanged('14316_5',3,0);  "/>		<label for="14316_5">Tweenie Weenie 维尼熊</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_6" name="answers[14316].value" value="12335" 	onclick=" "/>		<label for="14316_6">Ivy House 常春藤</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_6" name="answers[14316].value" value="12335" 	onclick="checkChanged('14316_6',3,0);  "/>		<label for="14316_6">Ivy House 常春藤</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_7" name="answers[14316].value" value="12336" 	onclick=" "/>		<label for="14316_7">Mothercare 童装</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_7" name="answers[14316].value" value="12336" 	onclick="checkChanged('14316_7',3,0);  "/>		<label for="14316_7">Mothercare 童装</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_8" name="answers[14316].value" value="12337" 	onclick=" "/>		<label for="14316_8">ZARA 童装系列</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_8" name="answers[14316].value" value="12337" 	onclick="checkChanged('14316_8',3,0);  "/>		<label for="14316_8">ZARA 童装系列</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_9" name="answers[14316].value" value="12338" 	onclick=" "/>		<label for="14316_9">H&amp;M 童装系列</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_9" name="answers[14316].value" value="12338" 	onclick="checkChanged('14316_9',3,0);  "/>		<label for="14316_9">H&amp;M 童装系列</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_10" name="answers[14316].value" value="12339" 	onclick=" "/>		<label for="14316_10">Me&amp;City 童装系列</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_10" name="answers[14316].value" value="12339" 	onclick="checkChanged('14316_10',3,0);  "/>		<label for="14316_10">Me&amp;City 童装系列</label>
 	</li>
 	<li>
-			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_11" name="answers[14316].value" value="12340" 	onclick=" "/>		<label for="14316_11">其他(请填写)</label>
+			<input group="14316" class="question_radio_14316 selection" type="checkbox" id="14316_11" name="answers[14316].value" value="12340" 	onclick="checkChanged('14316_11',3,0);  "/>		<label for="14316_11">其他(请填写)</label>
 	</li>
 </ul>
  </td>
@@ -528,6 +593,42 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+
+	
+		if(typeof previouslySelectedOptions == "undefined") {
+				var previouslySelectedOptions = new Array();
+		}
+				
+		if(typeof previouslySelectedOptions[14316]=="undefined") {		
+			 previouslySelectedOptions[14316] = new Array();
+						
+		}
+
+		if(typeof checkChanged=="undefined") {
+			checkChanged = function(id, max, min) {
+				var elementId = id.split("_")[0];
+				if($(id).checked == true) {				
+					previouslySelectedOptions[elementId].push(id);
+					// if there are now more elements in the array than allowed, delete the first one
+					if (previouslySelectedOptions[elementId].length > max && max != 0){
+						$(previouslySelectedOptions[elementId][0]).checked=false;
+						previouslySelectedOptions[elementId].shift();					
+					}	
+				} else {
+				   var newArray = new Array();
+				    // delete the now unselected checkbox from the array
+					for (var i = 0; i < previouslySelectedOptions[elementId].length; i++) {
+						if (previouslySelectedOptions[elementId][i] != id) {
+							newArray.push(previouslySelectedOptions[elementId][i]);
+						}
+					}
+					previouslySelectedOptions[elementId] = newArray;
+				}
+				if (previouslySelectedOptions[elementId].length < min  && min != 0) {
+					new Effect.Pulsate("hint_14316", {pulses:1, from:0.4});
+				}		
+			}
+		}
 	
 // ]]>
 -->
@@ -646,7 +747,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						你一般上网做什么呢？
+						你一般上网做什么呢？(最多选三项)
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
 							   
@@ -665,28 +766,29 @@
 
 
 <span id="hint_14319">
+    Please select at most  3 values.<br>
 </span>
 <ul>
 	<li>
-			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_0" name="answers[14319].value" value="12341" 	onclick=" "/>		<label for="14319_0">在线聊天</label>
+			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_0" name="answers[14319].value" value="12341" 	onclick="checkChanged('14319_0',3,0);  "/>		<label for="14319_0">在线聊天</label>
 	</li>
 	<li>
-			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_1" name="answers[14319].value" value="12342" 	onclick=" "/>		<label for="14319_1">上微博</label>
+			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_1" name="answers[14319].value" value="12342" 	onclick="checkChanged('14319_1',3,0);  "/>		<label for="14319_1">上微博</label>
 	</li>
 	<li>
-			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_2" name="answers[14319].value" value="12343" 	onclick=" "/>		<label for="14319_2">泡论坛</label>
+			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_2" name="answers[14319].value" value="12343" 	onclick="checkChanged('14319_2',3,0);  "/>		<label for="14319_2">泡论坛</label>
 	</li>
 	<li>
-			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_3" name="answers[14319].value" value="12344" 	onclick=" "/>		<label for="14319_3">开心/人人 等社交网络</label>
+			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_3" name="answers[14319].value" value="12344" 	onclick="checkChanged('14319_3',3,0);  "/>		<label for="14319_3">开心/人人 等社交网络</label>
 	</li>
 	<li>
-			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_4" name="answers[14319].value" value="12345" 	onclick=" "/>		<label for="14319_4">查找资料信息</label>
+			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_4" name="answers[14319].value" value="12345" 	onclick="checkChanged('14319_4',3,0);  "/>		<label for="14319_4">查找资料信息</label>
 	</li>
 	<li>
-			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_5" name="answers[14319].value" value="12346" 	onclick=" "/>		<label for="14319_5">购物</label>
+			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_5" name="answers[14319].value" value="12346" 	onclick="checkChanged('14319_5',3,0);  "/>		<label for="14319_5">购物</label>
 	</li>
 	<li>
-			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_6" name="answers[14319].value" value="12347" 	onclick=" "/>		<label for="14319_6">其他(请填写)</label>
+			<input group="14319" class="question_radio_14319 selection" type="checkbox" id="14319_6" name="answers[14319].value" value="12347" 	onclick="checkChanged('14319_6',3,0);  "/>		<label for="14319_6">其他(请填写)</label>
 	</li>
 </ul>
  </td>
@@ -699,6 +801,42 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+
+	
+		if(typeof previouslySelectedOptions == "undefined") {
+				var previouslySelectedOptions = new Array();
+		}
+				
+		if(typeof previouslySelectedOptions[14319]=="undefined") {		
+			 previouslySelectedOptions[14319] = new Array();
+						
+		}
+
+		if(typeof checkChanged=="undefined") {
+			checkChanged = function(id, max, min) {
+				var elementId = id.split("_")[0];
+				if($(id).checked == true) {				
+					previouslySelectedOptions[elementId].push(id);
+					// if there are now more elements in the array than allowed, delete the first one
+					if (previouslySelectedOptions[elementId].length > max && max != 0){
+						$(previouslySelectedOptions[elementId][0]).checked=false;
+						previouslySelectedOptions[elementId].shift();					
+					}	
+				} else {
+				   var newArray = new Array();
+				    // delete the now unselected checkbox from the array
+					for (var i = 0; i < previouslySelectedOptions[elementId].length; i++) {
+						if (previouslySelectedOptions[elementId][i] != id) {
+							newArray.push(previouslySelectedOptions[elementId][i]);
+						}
+					}
+					previouslySelectedOptions[elementId] = newArray;
+				}
+				if (previouslySelectedOptions[elementId].length < min  && min != 0) {
+					new Effect.Pulsate("hint_14319", {pulses:1, from:0.4});
+				}		
+			}
+		}
 	
 // ]]>
 -->
@@ -1050,6 +1188,7 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+		 	mandatoryElements.push("14328");
 // ]]>
 -->
 </script>
@@ -1060,6 +1199,7 @@
 				<td width=50% valign="top">
 					<div class="question-title">
 						性别：
+							<span style="color:red">*</span>
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
 							   
@@ -1075,7 +1215,7 @@
 <input type="hidden" name="answers[14328].id" value="" id="answers[14328].id" />
 
 	<select group="14328" class="selection" id="question_14328" name="answers[14328].value" title="title"  size = "1" >
-	<option selected="selected" value="0">请选择</option>
+	<option selected="selected" value="0">Please choose</option>
 <option value="12348" style=""  >男</option>
 <option value="12349" style=""  >女</option>
 	</select> 
@@ -1135,6 +1275,7 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+		 	mandatoryElements.push("14330");
 // ]]>
 -->
 </script>
@@ -1145,6 +1286,7 @@
 				<td width=50% valign="top">
 					<div class="question-title">
 						城市：
+							<span style="color:red">*</span>
 					</div>
 				</td>
 				<td width=50% valign="top">
@@ -1248,7 +1390,7 @@
 <br/>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -1570,9 +1712,10 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = '提交失败：必填的题目不能为空';
-	        jQuery("#check-alert-dialog .content").html(html);
-	        jQuery("#check-alert-dialog").dialog('open');
+	    	var html = 'Mandatory questions must be filled out';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 	    }
 		return fillMandatory;
 	}
@@ -1601,9 +1744,10 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = '提交失败：不能提交空报告';
-		    jQuery("#check-alert-dialog .content").html(html);
-		    jQuery("#check-alert-dialog").dialog('open');
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 			return false;
 		}
 	}
@@ -1764,6 +1908,7 @@
 <!--
 // <![CDATA[
 
+Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
