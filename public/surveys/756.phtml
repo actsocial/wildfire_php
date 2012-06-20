@@ -1371,7 +1371,7 @@ jQuery(function(){
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						性别：
+						性别(必填)：
 							<span style="color:red">*</span>
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
@@ -1458,7 +1458,7 @@ jQuery(function(){
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						城市：
+						城市(必填)：
 							<span style="color:red">*</span>
 					</div>
 				</td>
@@ -1886,8 +1886,9 @@ jQuery(function(){
 	    }
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目不能为空';
-	        jQuery("#check-alert-dialog .content").html(html);
-	        jQuery("#check-alert-dialog").dialog('open');
+			var buttons = ["确定"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 	    }
 		return fillMandatory;
 	}
@@ -1917,8 +1918,9 @@ jQuery(function(){
 		    return true;
 		} else {
 			var html = '提交失败：不能提交空报告';
-		    jQuery("#check-alert-dialog .content").html(html);
-		    jQuery("#check-alert-dialog").dialog('open');
+			var buttons = ["确定"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 			return false;
 		}
 	}
@@ -2079,6 +2081,7 @@ jQuery(function(){
 <!--
 // <![CDATA[
 
+Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
