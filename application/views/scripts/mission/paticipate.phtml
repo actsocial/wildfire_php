@@ -1,7 +1,7 @@
 <img src="<?php echo $this->baseUrl();?>/images/popup-fillout-logo.gif" class="logo"/>
 <div class="top-content" >
 <h1><?php echo ' "'.$this->campaing_name.'" '; ?></h1>
-<!-- 想办法做成动态的 -->
+
 <?php if ($this->surveyId=='631'){?>
 <p>我们建议这个创意故事包含以下几个要素：<br/>
 参与的人<br/>
@@ -62,6 +62,7 @@
 享受一下呢~亲来和我们说说吧~<br><br>
 
 <p style="color:red">提交完成后可继续上传照片</p>
+<p style="color:red">本次活动报告暂时不支持IE、360浏览器，请使用其他浏览器(如火狐，谷歌，遨游等)。</p>
 </p>
 <?php }elseif ($this->surveyId == '752'){?>
 <p>
@@ -73,6 +74,7 @@
 <br><br>
 
 <p style="color:red">提交完成后可继续上传照片</p>
+<p style="color:red">本次活动报告暂时不支持IE、360浏览器，请使用其他浏览器(如火狐，谷歌，遨游等)。</p>
 </p>
 <?php }elseif ($this->surveyId == '753'){?>
 <p>
@@ -85,6 +87,7 @@
 <br><br>
 
 <p style="color:red">提交完成后可继续上传照片</p>
+<p style="color:red">本次活动报告暂时不支持IE、360浏览器，请使用其他浏览器(如火狐，谷歌，遨游等)。</p>
 </p>
 <?php }elseif ($this->surveyId == '754'){?>
 <p>
@@ -97,6 +100,7 @@
 <br><br>
 
 <p style="color:red">提交完成后可继续上传照片</p>
+<p style="color:red">本次活动报告暂时不支持IE、360浏览器，请使用其他浏览器(如火狐，谷歌，遨游等)提交报告。</p>
 </p>
 <?php } ?>
 
@@ -104,7 +108,7 @@
 <div class="clear"></div>
 
 <?php 
-include('../public/surveys/'.$this->file);
+require '../public/surveys/'.$this->file;
 ?>
 
 <?php if (isset($this->file)) { ?>
@@ -127,11 +131,3 @@ include('../public/surveys/'.$this->file);
   );
 </script>
 <?php } ?>
-
-<!-- 
-<div class="content" style="background:#fff;padding-top:0;">
-	<div class="buttons-bar">
-	<a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'description', 'id'=>$this->id));?>'>Back</a>
-	<div style="clear:both"></div>
-	</div>
-</div>
