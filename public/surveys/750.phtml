@@ -66,7 +66,7 @@
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -76,9 +76,9 @@
 <div id="mainzone-inner">
 
 
-<input type="hidden" name="id" value="" id="id" />
-<input type="hidden" name="theme" value="" id="theme" />
-<input type="hidden" name="surveyId" value=""/>
+<input type="hidden" name="id" value="lN1RJTLBW1Uh" id="id" />
+<input type="hidden" name="theme" value="wildfire" id="theme" />
+<input type="hidden" name="surveyId" value="lN1RJTLBW1Uh"/>
 
 <div class="page-bar-area">
 <span id="pageBar">Page:&nbsp;</span>
@@ -99,13 +99,17 @@
 	  	
 		<table class="question-table">
 			<tr>
-				
-				<td width=100% valign="top">
+				<td width=50% valign="top">
+					<div class="question-title">
+						内容：
+					</div>
+				</td>
+				<td width=50% valign="top">
 <table width="100%">
 <tr>
 <td>
 <input type="hidden" name="answers[14167].id" value="" id="answers[14167].id" />
-<textarea name="answers[14167].value" id="question_14167" cols="70" group="14167" rows="12" class="input-text" ></textarea>
+<textarea name="answers[14167].value" id="question_14167" cols="40" group="14167" rows="12" class="input-text" ></textarea>
 <span class="error-content" id="err_answers[14167].value"  class="redFieldError"></span>
 </td>
 
@@ -131,8 +135,8 @@
 </div>
 <br/>
 <div class="fillout-submit">
-<input id="nextPageButton" style="display:none" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit"  class="button" name="command.submit" value="提交" />
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -454,9 +458,10 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = '提交失败：必填的题目不能为空';
-    	    jQuery("#check-alert-dialog .content").html(html);
-    	    jQuery("#check-alert-dialog").dialog('open');
+	    	var html = 'Mandatory questions must be filled out';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 	    }
 		return fillMandatory;
 	}
@@ -485,9 +490,10 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = '提交失败：不能提交空报告';
-		    jQuery("#check-alert-dialog .content").html(html);
-		    jQuery("#check-alert-dialog").dialog('open');
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 			return false;
 		}
 	}
@@ -648,6 +654,7 @@
 <!--
 // <![CDATA[
 
+Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
