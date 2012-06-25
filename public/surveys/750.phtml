@@ -1,6 +1,5 @@
 	<script language="JavaScript" type="text/javascript">
-	<!--
-	// <![CDATA[
+
 	function msieversion() {
 		var ua = window.navigator.userAgent
 		var msie = ua.indexOf ( "MSIE " )
@@ -25,8 +24,7 @@
 		}
 		return !hasError;
 	}
-	// ]]>
-	-->
+
 	</script>
 <div class="main-container-outer" >
 	<div id="container">
@@ -55,18 +53,16 @@
 
 <div id="content" style="width:100%;">
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+
 	mandatoryElements = new Array(); 
-// ]]>
--->
+
 </script>
 <div class="fillout-container">
 <!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -89,12 +85,7 @@
 
 	
 	<div id="page_0">
-<script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
-</script>
+
 		  <div id="q_3153" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
@@ -164,8 +155,7 @@
 
 <div class="mask" id="mask" style="display:none;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+
 	var WebDialog = {
 		element : $('web-dialog'),
 		onok : function() {},
@@ -254,8 +244,7 @@
 			//$('mask').show();
 		}
 	}
-// ]]>
--->
+
 </script>
 </form>
 </div> 
@@ -264,8 +253,7 @@
 </div>
 
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+
   var pageNum=0;
  
   var noPage0 = false;
@@ -354,13 +342,11 @@
   }else{
   	showPage(0);
   }
-// ]]>
--->
+
 </script>
 
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+
     //do not include radio answers
 	if(typeof checkNoAnswer=="undefined") {
 		checkNoAnswer=function(index,checkbox) {
@@ -414,12 +400,10 @@
 		}
 		
 	}
-// ]]>
--->
+
 </script>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+
 	function loading() {
 		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
 		WebDialog.showMessageBox(html, "none", "center", 600);
@@ -458,7 +442,7 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
+	    	var html = '提交失败：必填的题目不能为空';
 			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
@@ -490,7 +474,7 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
+			var html = '提交失败：不能提交空报告';
 			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
@@ -627,9 +611,6 @@
   })();
 
 
-	
-// ]]>
--->
 </script>
 </div>
 </div> 
@@ -650,11 +631,4 @@
 	<div style="clear: both"></div>
 	
 </div> 
-<script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
 
-Framework.registerAjaxSensors();
-// ]]>
--->
-</script>

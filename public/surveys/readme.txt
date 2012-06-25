@@ -16,6 +16,9 @@ for wom report only:
 4. if it is wom report, delete "谢谢您的合作！"
 
 5. For report only
+	delete "<!-- // <![CDATA[ -"
+
+6. For report only
 onsubmit="return (loading(); checkMandatory() && checkAnswerSet() && checkCommentAnswers());"
  * remove loading();
  * In checkMandatory() method
