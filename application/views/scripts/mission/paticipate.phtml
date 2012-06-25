@@ -62,7 +62,6 @@
 享受一下呢~亲来和我们说说吧~<br><br>
 
 <p style="color:red">提交完成后可继续上传照片</p>
-<p style="color:red">本次活动报告暂时不支持IE、360浏览器，请使用其他浏览器(如火狐，谷歌，遨游等)。</p>
 </p>
 <?php }elseif ($this->surveyId == '752'){?>
 <p>
@@ -74,7 +73,6 @@
 <br><br>
 
 <p style="color:red">提交完成后可继续上传照片</p>
-<p style="color:red">本次活动报告暂时不支持IE、360浏览器，请使用其他浏览器(如火狐，谷歌，遨游等)。</p>
 </p>
 <?php }elseif ($this->surveyId == '753'){?>
 <p>
@@ -87,7 +85,6 @@
 <br><br>
 
 <p style="color:red">提交完成后可继续上传照片</p>
-<p style="color:red">本次活动报告暂时不支持IE、360浏览器，请使用其他浏览器(如火狐，谷歌，遨游等)。</p>
 </p>
 <?php }elseif ($this->surveyId == '754'){?>
 <p>
@@ -100,7 +97,6 @@
 <br><br>
 
 <p style="color:red">提交完成后可继续上传照片</p>
-<p style="color:red">本次活动报告暂时不支持IE、360浏览器，请使用其他浏览器(如火狐，谷歌，遨游等)提交报告。</p>
 </p>
 <?php } ?>
 
@@ -114,7 +110,6 @@ include('../public/surveys/'.$this->file);
 
 <?php if (isset($this->file)) { ?>
 <script language="JavaScript" type="text/javascript">
-  alert(1);
   $('id').value = '';
   $('submit').disabled='disabled';
   var url = "<?php echo $this->url(array('controller'=>'common','action'=>'getaccesscode'));?>";
