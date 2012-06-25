@@ -107,12 +107,14 @@
 </div>
 <div class="clear"></div>
 
+
 <?php 
 include('../public/surveys/'.$this->file);
 ?>
 
 <?php if (isset($this->file)) { ?>
 <script language="JavaScript" type="text/javascript">
+  alert(1);
   $('id').value = '';
   $('submit').disabled='disabled';
   var url = "<?php echo $this->url(array('controller'=>'common','action'=>'getaccesscode'));?>";
