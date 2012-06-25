@@ -108,7 +108,7 @@
 <div class="clear"></div>
 
 <?php 
-require '../public/surveys/'.$this->file;
+include('../public/surveys/'.$this->file);
 ?>
 
 <?php if (isset($this->file)) { ?>
@@ -131,3 +131,8 @@ require '../public/surveys/'.$this->file;
   );
 </script>
 <?php } ?>
+
+
+
+
+
