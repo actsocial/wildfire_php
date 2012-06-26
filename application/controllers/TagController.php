@@ -146,14 +146,7 @@ class TagController extends MyController {
 			$postsClient = new couchClient ($config->couchdb->uri.":".$config->couchdb->port,$config->couchdb->posts_users);
 			$posts = $postsClient->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->getView('socialmediathread','posts-by-topic');
 			$this->view->posts = $posts['rows'];
-			$return_posts = array();
-			foreach($posts['rows'] as $post):
-				$author = explode("@",$post['value']['author']);
-				$post['value']['author'] = $author[0];
-// 				$dateArr = $post['value']['date'];
-// 				$post['value']['date'] = date(DATE_RFC822,mktime($dateArr[3],$dateArr[4],$dateArr[5],$dateArr[1],$dateArr[2],$dateArr[0]));
-				array_push($return_posts,$post);
-			endforeach;
+			$return_posts = $posts['rows'];
 			$this->_helper->layout->disableLayout();
 			$this->_helper->json($return_posts);
 		}

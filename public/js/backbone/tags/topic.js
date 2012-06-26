@@ -50,6 +50,7 @@ window.Topic = Backbone.Model
 														index : i,
 														author : row.value.author,
 														username : row.value.userName,
+														profile_img_path : row.value.profile_img_path,
 														display : row.value.display
 													});
 											i++;
@@ -152,13 +153,13 @@ window.TopicView = Backbone.View.extend({
 				this.model.loadposts();
 			}
 			$(".topicPRR", this.$el).show();
-			$('.topic',this.$el).removeClass("span2");
-			$('.topic',this.$el).addClass("span61");
+//			$('.topic',this.$el).removeClass("span4");
+//			$('.topic',this.$el).addClass("span61");
 
 			this.resizeTopicDiv(100);
 		} else {
-			$('.topic',this.$el).removeClass("span61");
-			$('.topic',this.$el).addClass("span2");
+//			$('.topic',this.$el).removeClass("span61");
+//			$('.topic',this.$el).addClass("span4");
 			$(".topicPRR", this.$el).hide();
 			this.resizeTopicDiv(100);
 		}

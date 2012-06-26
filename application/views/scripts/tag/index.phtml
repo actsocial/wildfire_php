@@ -24,7 +24,7 @@
 </script>
 
 <script type="text/template" id="topic_template">
-	<div class="topic span2 isotope-item alert alert-<%= type %>" data="<%= id %>">
+	<div class="topic span4 isotope-item alert alert-<%= type %>" data="<%= id %>">
 		<div style="width:100%;" class="topic_head">
 			<div style="" class="title_td">
 				<div class="row-fluid">
@@ -70,9 +70,8 @@
 
 	<div class="head span1">
 		<div style="vertical-align: top; margin-left: 0px;">
-			<img style=""
-				src="<?php echo $this->baseUrl()."/images/unknown.jpg"?>
-				user="<%= post.get("author")%>">
+			<img src='<%= post.get("profile_img_path") %>' />
+			<a><%= post.get("username")%></a>
 		</div>
 	</div>
 	<div class="span10">
@@ -82,7 +81,11 @@
 			<table>
 				<tbody>
 					<tr>
+                        <% if (post.get("body").length<50) {%>
 						<td><%= post.get("body") %></td>
+                        <%}else{ %>
+						<td><%= post.get("body").substring(0,50) %>...</td>
+                        <%} %>                      
 					</tr>
 				</tbody>
 			</table>
