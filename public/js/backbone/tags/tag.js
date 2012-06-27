@@ -31,6 +31,7 @@ window.Tag = Backbone.Model
 							_.each(topicsArray,function(t){
 								var topic = new Topic({
 					                id:t['id'],
+					                read:t['value']['read'],
 					                title : t['value']['title'],
 									date : t['value']['date'],
 									lang : "zh-CN",
