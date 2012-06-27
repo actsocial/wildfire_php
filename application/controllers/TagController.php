@@ -78,6 +78,15 @@ class TagController extends MyController {
 				$this->view->totalCount = $totalCount;
 				$result = array();
 				$topics = array();
+				
+				
+				$topicIds = array();
+				foreach($view['rows'] as $topic):
+					array_push($topicIds,$topic['id']);
+				endforeach;
+				$user = $this->_currentUser->id;
+				$irrModel = new InboxReadRecord();
+				$readResult = $irrModel->findReadTopicByUserAndTopicIds($user,$topicIds);
 				foreach($view['rows'] as $topic):
 					if(!isset($topic['value']['title'])){
 						$topic['value']['title'] = "-";
@@ -122,6 +131,11 @@ class TagController extends MyController {
 					}
 					$topic['value']['comments'] = $comments;
 					$topic['value']['views'] = $views;
+					if(in_array($topic['id'],$readResult)){
+						$topic['value']['read'] = true;
+					}else{
+						$topic['value']['read'] = false;
+					}
 					array_push($topics,$topic);
 				endforeach;
 				$this->view->topics = $topics;
@@ -154,6 +168,13 @@ class TagController extends MyController {
 // 				$post['value']['date'] = date(DATE_RFC822,mktime($dateArr[3],$dateArr[4],$dateArr[5],$dateArr[1],$dateArr[2],$dateArr[0]));
 				array_push($return_posts,$post);
 			endforeach;
+			//save read record
+			$irrModel = new InboxReadRecord();
+			$row = $irrModel->createRow();
+			$row->topic = $topicId;
+			$row->consumer = $this->_currentUser->id;
+			$row->save();
+			
 			$this->_helper->layout->disableLayout();
 			$this->_helper->json($return_posts);
 		}
@@ -170,7 +191,6 @@ class TagController extends MyController {
 			$c = new SaeTClientV2( WB_AKEY , WB_SKEY , $token['access_token'] );
 			$content = $this->_request->getParam('content');
 			$result = $c->update($content,NULL,NULL,$annotations);
-			print_r($result);die;
 			if(isset($result['error_code'])){
 				print_r($result);
 			}else{
@@ -180,7 +200,7 @@ class TagController extends MyController {
 				$row = $irrModel->createRow();
 				$row->topic = $topicId;
 				$row->consumer = $userId;
-				$row->sns_type = "weibo";
+				$row->platform_type = "weibo";
 				$row->sns_reply_id = $result['idstr'];
 				$row->save();
 				$rewardPointTransactionRecordModel = new RewardPointTransactionRecord();
@@ -222,10 +242,10 @@ class TagController extends MyController {
 				$row = $irrModel->createRow();
 				$row->topic = $topicId;
 				$row->consumer = $userId;
-				$row->sns_type = "weibo";
+				$row->platform_type = "weibo";
 				$row->sns_reply_id = $result['idstr'];
 				$row->save();
-				$replyCount = $irrModel->findReplyCount(array('consumer' => $userId,'sns_type'=>'weibo','topic'=>$topicId));
+				$replyCount = $irrModel->findReplyCount(array('consumer' => $userId,'platform_type'=>'weibo','topic'=>$topicId));
 				if($replyCount<2){
 					$rewardPointTransactionRecordModel = new RewardPointTransactionRecord();
 					$rewardPointTransaction = array(

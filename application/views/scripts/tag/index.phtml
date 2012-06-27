@@ -17,7 +17,11 @@
 </script>
 
 <script type="text/template" id="topic_template">
-	<div class="topic span2 isotope-item alert alert-success" data="<%= id %>">
+<% if(read){ %>
+	<div class="topic span2 isotope-item alert alert-success read" data="<%= id %>">
+<%}else{ %>
+<div class="topic span2 isotope-item alert alert-success" data="<%= id %>">
+<%} %>
 		<div style="width:100%;" class="topic_head">
 			<div style="" class="title_td">
 				<div class="row-fluid">

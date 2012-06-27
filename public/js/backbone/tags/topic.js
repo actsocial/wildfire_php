@@ -13,7 +13,9 @@ window.Topic = Backbone.Model
 					nation : "",
 					id : "",
 					posts : null,
-					postLoaded : false
+					postLoaded : false,
+					postShowed : false,
+					read : false
 				};
 			},
 
@@ -57,6 +59,7 @@ window.Topic = Backbone.Model
 											posts.add(post);
 										});
 								topic.set("postLoaded", true);
+								topic.set("read", true);
 							}
 						});
 			}
@@ -95,6 +98,7 @@ window.TopicView = Backbone.View.extend({
 	// The TodoView listens for changes to its model, re-rendering.
 	initialize : function() {
 		this.model.bind("change:postLoaded", this.afterPostLoaded, this);
+		this.model.bind("change:read", this.markAsRead, this);
 		//this.model.bind('change', this.render, this);
 		//this.model.bind('destroy', this.remove, this);
 	},
@@ -107,14 +111,16 @@ window.TopicView = Backbone.View.extend({
 
 	toggle : function() {
 		//this.model.displayPost = "loading";
-		if ($(".topicPRR", this.$el).css("display") == "none") {
+		if(!this.model.get("postShowed")){
+			this.model.set("postShowed",true);
 			if (!this.model.get("postLoaded")) {
 				$(".posts", this.$el).html("Loading...");
 				this.model.loadposts();
 			}
 			$(".topicPRR", this.$el).show();
 			this.resizeTopicDiv(100);
-		} else {
+		}else{
+			this.model.set("postShowed",false);
 			$(".topicPRR", this.$el).hide();
 			this.resizeTopicDiv(100);
 		}
@@ -132,6 +138,11 @@ window.TopicView = Backbone.View.extend({
 		$(".posts", this.$el).html(view.render().el);
 	},
 
+	markAsRead : function(){
+		if(this.model.get("read"))
+			jQuery(this.el).find(".topic").addClass("read");
+	},
+	
 	resizeTopicDiv : function(adjust) {
 		var ll = 250;
 		if (adjust) {
