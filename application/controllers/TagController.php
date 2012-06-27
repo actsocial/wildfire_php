@@ -58,7 +58,7 @@ class TagController extends MyController {
 	
 	function ajaxtopicsAction(){
 		$this->_helper->layout->disableLayout();
-		define("PAGESIZE",10);
+		define("PAGESIZE",20);
 		$config = Zend_Registry::get('config');
 		$topicsClient = new couchClient ($config->couchdb->uri.":".$config->couchdb->port,$config->couchdb->topics);
 		try {
@@ -84,6 +84,7 @@ class TagController extends MyController {
 				foreach($view['rows'] as $topic):
 					array_push($topicIds,$topic['id']);
 				endforeach;
+				
 				$user = $this->_currentUser->id;
 				$irrModel = new InboxReadRecord();
 				$readResult = $irrModel->findReadTopicByUserAndTopicIds($user,$topicIds);

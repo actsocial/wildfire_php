@@ -8,9 +8,11 @@
 
 <div class="filters">
   <div><a><span class="badge filter" onclick="filter('');return false;">all</span></a></div>
-  <div><a><span class="badge badge-success filter" onclick="filter('.alert-success');return false;">conversation</span></a></div>
-  <div><a><span class="badge badge-warning filter" onclick="filter('.alert-warning');return false;">product</span></a></div>
-  <div><a><span class="badge badge-important filter" onclick="filter('.alert-error');return false;">mission</span></a></div>
+  <div><a><span class="badge badge-success filter" onclick="filter('.BBS');return false;">BBS</span></a></div>
+  <div><a><span class="badge badge-warning filter" onclick="filter('.Blog');return false;">Blog</span></a></div>
+  <div><a><span class="badge badge-info filter" onclick="filter('.Weibo');return false;">Weibo</span></a></div>
+  <div><a><span class="badge badge-important filter" onclick="filter('.SNS');return false;">SNS</span></a></div>
+  <div><a><span class="badge badge-inverse filter" onclick="filter('.ECOM');return false;">ECOM</span></a></div>
 </div>
 
 <div class="modal hide">
@@ -36,9 +38,9 @@
 
 <script type="text/template" id="topic_template">
 <% if(read){ %>
-	<div class="topic span4 isotope-item alert alert-<%= type %> read" data="<%= id %>">
+	<div class="topic span3 isotope-item alert <%= site.type %> read" data="<%= id %>">
 <%}else{ %>
-<div class="topic span4 isotope-item alert alert-<%= type %>" data="<%= id %>">
+<div class="topic span3 isotope-item alert <%= site.type %>" data="<%= id %>">
 <%} %>
 		<div style="width:100%;" class="topic_head">
 			<div style="" class="title_td">
@@ -54,6 +56,7 @@
               </a>
             </span>
             <br />           
+            来自: <%= site.name %>
           	<button class="btn reply_window">
 						  我要回复
 						</button>            
@@ -101,9 +104,9 @@
 <% } %>
 
 <% if (index==0) { %>
-	<div class="span12">
+	<div class="span11">
 <% }else{ %>
-	<div class="span10">
+	<div class="span9">
 	<div class=""><%= post.get("username")%></div>
 
 <% } %>

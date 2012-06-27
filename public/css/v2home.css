@@ -13,7 +13,7 @@
 
 .filters{  position: fixed;  left: 0;  top: 50%;  width: 8em;  margin-top: -2.5em;}
 
-.filter {float:right; margin:2px 0; }
+.filter {float:right; margin:2px 0; width: 6em;text-align: center;}
 
 .filter:hover {  cursor: pointer;}
 
@@ -21,3 +21,13 @@
 
 .title_td a{ color: #005580;font-size: 100;font: 12px/2 "微软雅黑",Arial;text-shadow: #DDD 0 1px 0;}
 .author {width:50px;float:left;margin-right:5px;overflow-x:hidden;}
+
+.BBS{  color: #468847;  background-color: #dff0d8;  border-color: #d6e9c6;}
+
+.Weibo {  color: #b94a48;  background-color: #f2dede;  border-color: #eed3d7;}
+
+.Blog {  color: #3a87ad;  background-color: #d9edf7;  border-color: #bce8f1;}
+
+.SNS {  color: #b93a38;  background-color: #f2cece;  border-color: #eec3c7;}
+
+.ECOM {  color: #3a779d;  background-color: #d9dde7;  border-color: #bcd8e1;}

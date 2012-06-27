@@ -6,7 +6,7 @@
 		"bbs.yoka.com"=>array("name"=>"YOKA时尚网","type"=>"BBS"),
 		"tieba.baidu.com"=>array("name"=>"百度贴吧","type"=>"BBS"),
 		"www.19lou.com"=>array("name"=>"杭州19楼","type"=>"BBS"),
-		"www.tianya.cn"=>array("name"=>"天涯社区","type"=>"SNS"),
+		"www.tianya.cn"=>array("name"=>"天涯社区","type"=>"BBS"),
 		"www.babytree.com"=>array("name"=>"宝宝树","type"=>"BBS"),
 		"search.19lou.com"=>array("name"=>"19楼搜索","type"=>"BBS"),
 		"www.dianping.com"=>array("name"=>"大众点评社区","type"=>"BBS"),

@@ -26,6 +26,11 @@
 .topics li{
     list-style: none;	
 }
+
+.row-fluid [class*="span"]:first-child {
+margin-left: 5px;
+}
+
 /**#tagCloudDiv li a{
     text-decoration:none;
     color:black;
