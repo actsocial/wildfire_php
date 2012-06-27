@@ -45,6 +45,7 @@
 				</div>
 				<div style="display: none;" class="topicPRR">
 			    	<div class="posts"><div>Loading...</div></div>
+                    <!--
 			        <div class="responses">
 			        </div>
 			        <div class="reply" id="reply_box_1">
@@ -54,29 +55,37 @@
 						<img id="submit_button_1" class="weibo-reply-img" style="cursor:pointer;padding-bottom: 10px;" src="<?php echo $this->baseUrl();?>/images/weiboreply.gif"></img>
 						</form>
 					</div>
+                    -->
 				</div>
 			</div>
 		</div>
 	</div>
 </script>
 <script type="text/template" id="posts_template">
+
 <% var length = models.length;var hiddenFormat=false;var index = 0;if(length>5){hiddenFormat=true}; %>
 <%  _.each(models, function(post){ %>
-<% if(hiddenFormat && index>0 && index< length-1){ %>
+<% if(hiddenFormat && index>1 && index< length-1){ %>
 <div class="post row-fluid" style="display:none">
 <%}else{ %>
 <div class="post row-fluid">
 <%} %>
 
-	<div class="head span1">
-		<div style="vertical-align: top; margin-left: 0px;">
-			<img src='<%= post.get("profile_img_path") %>' />
-			<a><%= post.get("username")%></a>
+<% if (index!=0) { %>
+	<div class="head span2">
+		<div style="vertical-align: top; margin-left: 0px; overflow-x:hidden;">
+        		<img style="width:35px; height:35px;" src='<%= post.get("profile_img_path") %>' /><br>
 		</div>
 	</div>
+<% } %>
+
+<% if (index==0) { %>
+	<div class="span12">
+<% }else{ %>
 	<div class="span10">
-		<div class="author"></div>
-		<br>
+	<div class=""><%= post.get("username")%></div>
+
+<% } %>
 		<div class="body">
 			<table>
 				<tbody>

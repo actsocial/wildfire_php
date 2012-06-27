@@ -39,14 +39,12 @@ window.Topic = Backbone.Model
 								var i = 0;
 								data.forEach(function(row) {
 											var d = row.value.date;
-											var date = new Date(d[0], d[1],
-													d[2], d[3], d[4], d[5]);
 											var post = new Post(
 													{
 														body : row.value.body,
 														id : encodeURIComponent(row.id),
 														topicId : encodeURIComponent(row.key[0]),
-														date : date.toLocaleString(),
+														date : row.value.date,
 														index : i,
 														author : row.value.author,
 														username : row.value.userName,

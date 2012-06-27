@@ -47,18 +47,19 @@
     width: 45%;
 }
 .post {
+	margin:10px 0;
 }
 .posthidden {
-    height: 5px;
+height: 1px;
+border-bottom: solid 1px #AAA;
 }
 .post .body {
     color: #666666;
 }
 .posthidden span {
     background-color: white;
-    border: 1px solid #FCC0D1;
+    border: 1px solid #AAA;
     border-radius: 5px 5px 5px 5px;
-    color: red;
     display: inline;
     padding: 5px;
     position: relative;
