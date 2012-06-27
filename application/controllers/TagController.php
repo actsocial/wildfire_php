@@ -1,6 +1,7 @@
 <?php 
 include_once('saetv2.ex.class.php');
 include_once('weibo.uri.utility.php');
+require_once 'site.php';
 require_once 'couch.php';
 require_once 'couchClient.php';
 require_once 'couchDocument.php';
@@ -79,7 +80,6 @@ class TagController extends MyController {
 				$result = array();
 				$topics = array();
 				
-				
 				$topicIds = array();
 				foreach($view['rows'] as $topic):
 					array_push($topicIds,$topic['id']);
@@ -136,6 +136,10 @@ class TagController extends MyController {
 					}else{
 						$topic['value']['read'] = false;
 					}
+					$url = $topic['value']['site'];
+					$site = getInfoBySiteUrl($url);
+					$site['url'] = $url;
+					$topic['value']['site'] = $site;
 					array_push($topics,$topic);
 				endforeach;
 				$this->view->topics = $topics;
