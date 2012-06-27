@@ -129,7 +129,8 @@ window.TopicView = Backbone.View.extend({
 	events : {
 		"click .title" : "toggle",
 		"click .add-url" : "addSourceUrl",
-		"click .weibo-reply-img" : "saveReply"
+		"click .weibo-reply-img" : "saveReply",
+		"click .reply_window" : "open_reply_window"
 	},
 
 	// The TodoView listens for changes to its model, re-rendering.
@@ -205,7 +206,14 @@ window.TopicView = Backbone.View.extend({
 				alert("系统忙,请稍后再试");
 			}
 		});
-	}
+	},
+	
+	open_reply_window: function(e){
+		$(".modal").modal("show");
+		uri = "http://"+this.model.id;
+		//$("#text").val(uri);
+		window.open(uri, "_blank");
+	},
 
 });
 
