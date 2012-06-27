@@ -1,7 +1,7 @@
 <img src="<?php echo $this->baseUrl();?>/images/popup-fillout-logo.gif" class="logo"/>
 <div class="top-content" >
 <h1><?php echo ' "'.$this->campaing_name.'" '; ?></h1>
-<!-- 想办法做成动态的 -->
+
 <?php if ($this->surveyId=='631'){?>
 <p>我们建议这个创意故事包含以下几个要素：<br/>
 参与的人<br/>
@@ -103,6 +103,7 @@
 </div>
 <div class="clear"></div>
 
+
 <?php 
 include('../public/surveys/'.$this->file);
 ?>
@@ -128,10 +129,7 @@ include('../public/surveys/'.$this->file);
 </script>
 <?php } ?>
 
-<!-- 
-<div class="content" style="background:#fff;padding-top:0;">
-	<div class="buttons-bar">
-	<a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'description', 'id'=>$this->id));?>'>Back</a>
-	<div style="clear:both"></div>
-	</div>
-</div>
+
+
+
+

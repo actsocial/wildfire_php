@@ -48,11 +48,11 @@ window.Topic = Backbone.Model
 														body : row.value.body,
 														id : encodeURIComponent(row.id),
 														topicId : encodeURIComponent(row.key[0]),
-														date : date
-																.toLocaleString(),
+														date : date.toLocaleString(),
 														index : i,
 														author : row.value.author,
 														username : row.value.userName,
+														profile_img_path : row.value.profile_img_path,
 														display : row.value.display
 													});
 											i++;
@@ -78,6 +78,46 @@ window.TopicList = Backbone.Collection.extend({
 
 window.topics = new TopicList;
 
+window.ContainerView = Backbone.View.extend({
+	tagName : "div",
+	
+	className: "span11 topics isotope",
+
+	// Cache the template function for a single item.
+	template : _.template($('#container_template').html()),
+
+	// The DOM events specific to an item.
+	events : {
+//		"click .title" : "toggle",
+//		"click .add-url" : "addSourceUrl",
+//		"click .weibo-reply-img" : "saveReply"
+	},
+
+	// The TodoView listens for changes to its model, re-rendering.
+	initialize : function() {
+//		this.model.bind("change:postLoaded", this.afterPostLoaded, this);
+		//this.model.bind('change', this.render, this);
+		//this.model.bind('destroy', this.remove, this);
+	},
+
+	// Re-render the contents of the todo item.
+	render : function() {
+		$(this.el).html(this.template());
+		return this;
+	},
+	
+	layout : function(){
+		$(this.el).isotope({
+			  itemSelector : '.topic',
+			  filter: '*'
+			});
+	},
+	
+	relayout : function(){
+		$(this.el).isotope("reLayout");
+	}
+});
+
 window.TopicView = Backbone.View.extend({
 
 	//... is a list tag.
@@ -92,7 +132,8 @@ window.TopicView = Backbone.View.extend({
 	events : {
 		"click .title" : "toggle",
 		"click .add-url" : "addSourceUrl",
-		"click .weibo-reply-img" : "saveReply"
+		"click .weibo-reply-img" : "saveReply",
+		"click .reply_window" : "open_reply_window"
 	},
 
 	// The TodoView listens for changes to its model, re-rendering.
@@ -118,13 +159,16 @@ window.TopicView = Backbone.View.extend({
 				this.model.loadposts();
 			}
 			$(".topicPRR", this.$el).show();
+//			$('.topic',this.$el).removeClass("span4");
+//			$('.topic',this.$el).addClass("span61");
+
 			this.resizeTopicDiv(100);
-		}else{
+		} else {
 			this.model.set("postShowed",false);
 			$(".topicPRR", this.$el).hide();
 			this.resizeTopicDiv(100);
 		}
-		$('.topics').isotope('reLayout');
+		App.container.relayout();
 
 	},
 
@@ -136,6 +180,8 @@ window.TopicView = Backbone.View.extend({
 			}
 		});
 		$(".posts", this.$el).html(view.render().el);
+		App.container.relayout();
+
 	},
 
 	markAsRead : function(){
@@ -169,7 +215,14 @@ window.TopicView = Backbone.View.extend({
 				alert("系统忙,请稍后再试");
 			}
 		});
-	}
+	},
+	
+	open_reply_window: function(e){
+		$(".modal").modal("show");
+		uri = "http://"+this.model.id;
+		//$("#text").val(uri);
+		window.open(uri, "_blank");
+	},
 
 });
 

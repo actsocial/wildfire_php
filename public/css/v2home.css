@@ -1,7 +1,23 @@
 @CHARSET "UTF-8";
 
+
+.logo {margin: 0 auto; width: 150px;}
+
+.row-fluid .span61 {width:61%;}
+
 .topbar{top:40px; }
 
 .topbar #searchDiv{padding:8px 5px 3px 0;}
 
 #folders li{display:inline; padding-right:8px;}
+
+.filters{  position: fixed;  left: 0;  top: 50%;  width: 8em;  margin-top: -2.5em;}
+
+.filter {float:right; margin:2px 0; }
+
+.filter:hover {  cursor: pointer;}
+
+
+
+.title_td a{ color: #005580;font-size: 100;font: 12px/2 "微软雅黑",Arial;text-shadow: #DDD 0 1px 0;}
+.author {width:50px;float:left;margin-right:5px;overflow-x:hidden;}

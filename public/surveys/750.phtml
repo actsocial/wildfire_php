@@ -1,6 +1,5 @@
 	<script language="JavaScript" type="text/javascript">
-	<!--
-	// <![CDATA[
+
 	function msieversion() {
 		var ua = window.navigator.userAgent
 		var msie = ua.indexOf ( "MSIE " )
@@ -25,8 +24,7 @@
 		}
 		return !hasError;
 	}
-	// ]]>
-	-->
+
 	</script>
 <div class="main-container-outer" >
 	<div id="container">
@@ -55,11 +53,9 @@
 
 <div id="content" style="width:100%;">
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+
 	mandatoryElements = new Array(); 
-// ]]>
--->
+
 </script>
 <div class="fillout-container">
 <!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
@@ -78,7 +74,7 @@
 
 <input type="hidden" name="id" value="" id="id" />
 <input type="hidden" name="theme" value="wildfire" id="theme" />
-<input type="hidden" name="surveyId" value="INYpbdS4g9VN"/>
+<input type="hidden" name="surveyId" value="lN1RJTLBW1Uh"/>
 
 <div class="page-bar-area">
 <span id="pageBar">Page:&nbsp;</span>
@@ -89,23 +85,22 @@
 
 	
 	<div id="page_0">
-<script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
-</script>
+
 		  <div id="q_3153" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
-				
-				<td width=100% valign="top">
+				<td width=50% valign="top">
+					<div class="question-title">
+						内容：
+					</div>
+				</td>
+				<td width=50% valign="top">
 <table width="100%">
 <tr>
 <td>
 <input type="hidden" name="answers[14167].id" value="" id="answers[14167].id" />
-<textarea name="answers[14167].value" id="question_14167" cols="70" group="14167" rows="12" class="input-text" ></textarea>
+<textarea name="answers[14167].value" id="question_14167" cols="40" group="14167" rows="12" class="input-text" ></textarea>
 <span class="error-content" id="err_answers[14167].value"  class="redFieldError"></span>
 </td>
 
@@ -131,8 +126,8 @@
 </div>
 <br/>
 <div class="fillout-submit">
-<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
+<input id="nextPageButton" type="button"  style="display:none"  class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" class="button" name="command.submit" value="提交" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -160,8 +155,7 @@
 
 <div class="mask" id="mask" style="display:none;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+
 	var WebDialog = {
 		element : $('web-dialog'),
 		onok : function() {},
@@ -250,8 +244,7 @@
 			//$('mask').show();
 		}
 	}
-// ]]>
--->
+
 </script>
 </form>
 </div> 
@@ -260,8 +253,7 @@
 </div>
 
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+
   var pageNum=0;
  
   var noPage0 = false;
@@ -350,13 +342,11 @@
   }else{
   	showPage(0);
   }
-// ]]>
--->
+
 </script>
 
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+
     //do not include radio answers
 	if(typeof checkNoAnswer=="undefined") {
 		checkNoAnswer=function(index,checkbox) {
@@ -410,12 +400,10 @@
 		}
 		
 	}
-// ]]>
--->
+
 </script>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
+
 	function loading() {
 		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
 		WebDialog.showMessageBox(html, "none", "center", 600);
@@ -455,8 +443,9 @@
 	    }
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目不能为空';
-    	    jQuery("#check-alert-dialog .content").html(html);
-    	    jQuery("#check-alert-dialog").dialog('open');
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 	    }
 		return fillMandatory;
 	}
@@ -486,8 +475,9 @@
 		    return true;
 		} else {
 			var html = '提交失败：不能提交空报告';
-		    jQuery("#check-alert-dialog .content").html(html);
-		    jQuery("#check-alert-dialog").dialog('open');
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 			return false;
 		}
 	}
@@ -598,14 +588,6 @@
 		}
 	}
 
-	/*
-	new PeriodicalExecuter(function() {
-		$('fillout').request({
-  			method: 'post',
-  			parameters: { 'command.pause':"Continue Later"}
-		});
-		}, 5);
-	*/
 
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-5436862-10']);
@@ -621,9 +603,6 @@
   })();
 
 
-	
-// ]]>
--->
 </script>
 </div>
 </div> 
@@ -644,10 +623,4 @@
 	<div style="clear: both"></div>
 	
 </div> 
-<script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
 
-// ]]>
--->
-</script>
