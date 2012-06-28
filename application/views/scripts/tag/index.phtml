@@ -8,11 +8,11 @@
 
 <div class="filters">
   <div><a><span class="badge filter" onclick="filter('');return false;">all</span></a></div>
-  <div><a><span class="badge badge-success filter" onclick="filter('.BBS');return false;">BBS</span></a></div>
-  <div><a><span class="badge badge-warning filter" onclick="filter('.Blog');return false;">Blog</span></a></div>
-  <div><a><span class="badge badge-info filter" onclick="filter('.Weibo');return false;">Weibo</span></a></div>
-  <div><a><span class="badge badge-important filter" onclick="filter('.SNS');return false;">SNS</span></a></div>
-  <div><a><span class="badge badge-inverse filter" onclick="filter('.ECOM');return false;">ECOM</span></a></div>
+  <div><a><span class="badge badge-success filter" onclick="filter('.BBS');return false;">论坛</span></a></div>
+  <div><a><span class="badge badge-info filter" onclick="filter('.Blog');return false;">博客</span></a></div>
+  <div><a><span class="badge badge-warning filter" onclick="filter('.Weibo');return false;">微博</span></a></div>
+  <div><a><span class="badge badge-important filter" onclick="filter('.SNS');return false;">社交网站</span></a></div>
+  <div><a><span style="background-color:#D9CDE7;" class="badge badge-inverse filter" onclick="filter('.ECOM');return false;">电子商务</span></a></div>
 </div>
 
 <div class="modal hide">
@@ -48,18 +48,17 @@
 					<div class="span11">
 						<i class="babytree" style=""></i>
 						<span class="title"> 
-              <div class="author">
-                <img style="width:50px;height:50px;" src="<%= author.profile_img %> "/><br> <%= author.name %>
-              </div>
-              <a href="javascript:void(0)">
-                <% if (_.isEmpty(title)) {%> <%= body %> <%} else { %><%= title %> <%} %>
-              </a>
-            </span>
-            <br />           
-            来自: <%= site.name %>
-          	<button class="btn reply_window">
-						  我要回复
-						</button>            
+              				<div class="author">
+                				<img style="width:50px;height:50px;" src="<%= author.profile_img %> "/><br> <%= author.name %>
+              				</div>
+              				<a href="javascript:void(0)">
+                				<% if (_.isEmpty(title)) {%> <%= body %> <%} else { %><%= title %> <%} %>
+              				</a><br>
+            				来自: <%= site.name %><br>
+          					<button class="btn reply_window">  我要回复	</button>    
+            			</span>
+            			<br />           
+        
 					</div>
 			        <div span="span2">
 			        	<i class="icon-zh-CN" style="float:right"></i>
