@@ -217,7 +217,12 @@ window.TopicView = Backbone.View.extend({
 	
 	open_reply_window: function(e){
 		$(".modal").modal("show");
-		uri = "http://"+this.model.id;
+		if(Sns.isSns(this.model.id)){
+			var sns = new Sns(this.model.id);
+			uri = sns.getSinglePage();
+		}else{
+			uri = "http://"+this.model.id;
+		}
 		//$("#text").val(uri);
 		window.open(uri, "_blank");
 	},
