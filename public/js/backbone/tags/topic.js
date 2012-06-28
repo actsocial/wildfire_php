@@ -217,9 +217,20 @@ window.TopicView = Backbone.View.extend({
 	
 	open_reply_window: function(e){
 		$(".modal").modal("show");
-		uri = "http://"+this.model.id;
-		//$("#text").val(uri);
-		window.open(uri, "_blank");
+		$("#reply").text("懂了，去回复");
+		$("#reply").attr("data", this.model.id);
+		$("#reply").bind('click', function(){
+			var uri = $(this).attr("data");
+			if(Sns.isSns(uri)){
+				var sns = new Sns(uri);
+				uri = sns.getSinglePage();
+			}else{
+				uri = "http://"+uri;
+			}
+			window.open(uri, '_blank');
+			$("#reply").text("已完成回复");
+			$('#reply').unbind('click');
+		});
 	},
 
 });

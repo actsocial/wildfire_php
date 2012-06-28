@@ -19,11 +19,16 @@
 <div class="modal hide">
 	<div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal">×</button>
-		<h3>Insert the image url</h3>
+		<h3>插入图片链接</h3>
 	</div>
-	<div class="modal-body">
-		<label class="control-label">亲，记得带上这个链接哦...</label>
-		<textarea class="input-xlarge" id="text" rows="2" style="width:500px;"></textarea>
+	<div class="modal-body" style="margin: 0 0 10px 50px">
+		<p>请在跳转到的网站登陆，并进行回复。</p>
+		<p><strong>记得在回复时【插入】您的专属图片链接。否则您的回复无法通过审核。</strong></p>
+		<textarea class="input-xlarge" id="text" rows="1" style="width:300px;"></textarea>
+		<button class="btn btn-large disable" id="copy" style="padding: 4px 14px">复制</button>
+		<p>完成后，记得回来确认“已完成回复”哦。</p>
+		<p>审核通过后24小时内将获得20积分，每周最多可获得200积分。</p>
+		<button data="" class="btn btn-large btn-primary disabled" id="reply" style="margin-top:30px;">懂了，去回复</button>
 	</div>
 </div>
 
@@ -138,7 +143,7 @@
 <script src="<?php echo $this->baseUrl();?>/js/backbone/tags/post.js"></script>
 <script src="<?php echo $this->baseUrl();?>/js/backbone/tags/topic.js"></script>
 <script src="<?php echo $this->baseUrl();?>/js/backbone/tags/tag.js"></script>
-
+<script src="<?php echo $this->baseUrl();?>/js/sns_utility.js"></script>
 <script type="text/javascript">
 
 function filter(category){
@@ -164,6 +169,53 @@ function getIssue(topic,issue){
 		});
 	});
 }
+
+// works in ie and firefox, but not in chrome
+$("#copy").bind("click", function(){
+	txt = $(this).prev().val();
+	if (window.clipboard) {
+    window.clipboard.clearData();
+    window.clipboard.setData("Text", txt);
+  } else if (navigator.userAgent.indexOf("Opera") != -1) {
+     // do nothing    
+  } else if (window.netscape) {
+  	alert("3333333");
+      try {
+          netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+      } catch (e) {
+          alert("被浏览器拒绝！\n请在浏览器地址栏输入'about:config'并回车\n然后将 'signed.applets.codebase_principal_support'设置为'true'");
+      }
+      var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
+      if (!clip)   return;
+      var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
+      if (!trans) return;
+      trans.addDataFlavor('text/unicode');
+      var str = new Object();
+      var len = new Object();
+      var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+      var copytext = txt;
+      str.data = copytext;
+      trans.setTransferData("text/unicode", str, copytext.length * 2);
+      var clipid = Components.interfaces.nsIClipboard;
+      if (!clip)   return false;
+      clip.setData(trans, null, clipid.kGlobalClipboard);
+  } else{
+  	alert("您的浏览器不支持，请手动复制");
+  }
+})
+
+
+// $("#reply").bind('click', function(){
+	// var uri = $(this).attr("data");
+	// window.setTimeout(
+		// function() {
+			// window.open('http://'+uri, '_blank');
+			// $("#reply").text("已完成回复");
+		// }, 
+		// 4000
+	// );
+	// $('#reply').unbind('click');
+// });
 
 
 
