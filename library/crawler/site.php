@@ -47,7 +47,7 @@
 		"weibo.com"=>array("name"=>"新浪微博","type"=>"Weibo"),
 		"bbs.zdface.com"=>array("name"=>"妆点网论坛","type"=>"BBS"),
 		"club.ellechina.com"=>array("name"=>"高端女性门户网站","type"=>"BBS"),
-		"9night.kimiss.com"=>array("name"=>"闺蜜网","type"=>"BBS"),
+		"9night.kimiss.com"=>array("name"=>"闺蜜网","type"=>"Blog"),
 		"bbs.mplife.com"=>array("name"=>"名品导购","type"=>"BBS"),
 		"bbs.koubei.com"=>array("name"=>"口碑网","type"=>"BBS"),
 		"www.haibao.cn"=>array("name"=>"海报网","type"=>"BBS"),
