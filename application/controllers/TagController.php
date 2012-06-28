@@ -89,9 +89,9 @@ class TagController extends MyController {
 				$irrModel = new InboxReadRecord();
 				$readResult = $irrModel->findReadTopicByUserAndTopicIds($user,$topicIds);
 				foreach($view['rows'] as $topic):
-					if(!isset($topic['value']['title'])){
-						$topic['value']['title'] = "-";
-					}
+//					if(!isset($topic['value']['title'])){
+//						$topic['value']['title'] = "-";
+//					}
 					if(isset($topic['key'][1])){
 						list($year,$month,$day,$hour,$minute,$second) = $topic['key'][1];
 						$month+=1;

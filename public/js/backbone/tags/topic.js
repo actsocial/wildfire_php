@@ -217,14 +217,26 @@ window.TopicView = Backbone.View.extend({
 	
 	open_reply_window: function(e){
 		$(".modal").modal("show");
-		if(Sns.isSns(this.model.id)){
-			var sns = new Sns(this.model.id);
-			uri = sns.getSinglePage();
-		}else{
-			uri = "http://"+this.model.id;
-		}
-		//$("#text").val(uri);
-		window.open(uri, "_blank");
+		$("#reply").text("懂了，去回复");
+		$("#reply").attr("data", this.model.id);
+		$("#reply").bind('click', function(){
+			var uri;
+			if(Sns.isSns(this.model.id)){
+				var sns = new Sns(this.model.id);
+				uri = sns.getSinglePage();
+			}else{
+				uri = "http://"+this.model.id;
+			}
+			window.setTimeout(
+				function() {
+					window.open('http://'+uri, '_blank');
+					$("#reply").text("已完成回复");
+				}, 
+				4000
+			);
+			$('#reply').unbind('click');
+		});
+>>>>>>> 1b29fec345a070e67d7ab229a17499b165b5ce06
 	},
 
 });
