@@ -17,7 +17,7 @@ window.Tag = Backbone.Model
 				if (this.get("topicloading") == false) {
 					this.set({"topicloading":true});
 					var self = this;
-					var typeArray = ["success","warning","error"];
+					//var typeArray = ["success","warning","error"];
 					jQuery.ajax({
 						type : "GET",
 						url : "tag/ajaxtopics",
@@ -31,14 +31,16 @@ window.Tag = Backbone.Model
 							_.each(topicsArray,function(t){
 								var topic = new Topic({
 					                id:t['id'],
+					                read:t['value']['read'],
 					                title : t['value']['title'],
 									date : t['value']['date'],
 									lang : "zh-CN",
 									body : t['value']['body'],
 									comment_count : t['value']['comments'],
 									view_count : t['value']['views'],
-									type: typeArray[~~(Math.random()*10/3)],
-									author: t['value']['author']
+									//type: typeArray[~~(Math.random()*10/3)],
+									author: t['value']['author'],
+									site: t['value']['site']
 					              });
 					        	var view = new TopicView({model: topic});
 //					        	jQuery(".topics .loadingtopic").before(view.render().el);

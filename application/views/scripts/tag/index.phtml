@@ -7,10 +7,13 @@
 </div>
 
 <div class="filters">
-  <div><a><span class="badge filter" onclick="filter('');return false;">all</span></a></div>
-  <div><a><span class="badge badge-success filter" onclick="filter('.alert-success');return false;">conversation</span></a></div>
-  <div><a><span class="badge badge-warning filter" onclick="filter('.alert-warning');return false;">product</span></a></div>
-  <div><a><span class="badge badge-important filter" onclick="filter('.alert-error');return false;">mission</span></a></div>
+  <div><a><span class="badge badge-inverse  filter " onclick="filter('');return false;">全部</span></a></div>
+  <div><a><span class="badge filter" onclick="filter('.read');return false;">已读</span></a></div>
+  <div><a><span class="badge badge-success filter" onclick="filter('.BBS');return false;">论坛</span></a></div>
+  <div><a><span class="badge badge-info filter" onclick="filter('.Blog');return false;">博客</span></a></div>
+  <div><a><span class="badge badge-warning filter" onclick="filter('.Weibo');return false;">微博</span></a></div>
+  <div><a><span class="badge badge-important filter" onclick="filter('.SNS');return false;">社交网站</span></a></div>
+  <div><a><span style="background-color:#D9ADC7;" class="badge filter" onclick="filter('.ECOM');return false;">电子商务</span></a></div>
 </div>
 
 <div class="modal hide">
@@ -40,24 +43,28 @@
 </script>
 
 <script type="text/template" id="topic_template">
-	<div class="topic span4 isotope-item alert alert-<%= type %>" data="<%= id %>">
+<% if(read){ %>
+	<div class="topic span3 isotope-item alert <%= site.type %> read" data="<%= id %>">
+<%}else{ %>
+<div class="topic span3 isotope-item alert <%= site.type %>" data="<%= id %>">
+<%} %>
 		<div style="width:100%;" class="topic_head">
 			<div style="" class="title_td">
 				<div class="row-fluid">
 					<div class="span11">
 						<i class="babytree" style=""></i>
 						<span class="title"> 
-              <div class="author">
-                <img style="width:50px;height:50px;" src="<%= author.profile_img %> "/><br> <%= author.name %>
-              </div>
-              <a href="javascript:void(0)">
-                <% if (_.isEmpty(title)) {%> <%= body %> <%} else { %><%= title %> <%} %>
-              </a>
-            </span>
-            <br />           
-          	<button class="btn reply_window">
-						  我要回复
-						</button>            
+              				<div class="author">
+                				<img style="width:50px;height:50px;" src="<%= author.profile_img %> "/><br> <%= author.name %>
+              				</div>
+              				<a href="javascript:void(0)">
+                				<% if (_.isEmpty(title)) {%> <%= body.substring(0,30) %> <%} else { %><%= title.substring(0,30) %> <%} %>
+              				</a><br>
+            				来自: <%= site.name %><br>
+          					<button class="btn reply_window">  我要回复	</button>    
+            			</span>
+            			<br />           
+        
 					</div>
 			        <div span="span2">
 			        	<i class="icon-zh-CN" style="float:right"></i>
@@ -65,6 +72,7 @@
 				</div>
 				<div style="display: none;" class="topicPRR">
 			    	<div class="posts"><div>Loading...</div></div>
+                    <!--
 			        <div class="responses">
 			        </div>
 			        <div class="reply" id="reply_box_1">
@@ -74,6 +82,7 @@
 						<img id="submit_button_1" class="weibo-reply-img" style="cursor:pointer;padding-bottom: 10px;" src="<?php echo $this->baseUrl();?>/images/weiboreply.gif"></img>
 						</form>
 					</div>
+                    -->
 				</div>
 			</div>
 		</div>
@@ -82,23 +91,30 @@
 	</div>
 </script>
 <script type="text/template" id="posts_template">
+
 <% var length = models.length;var hiddenFormat=false;var index = 0;if(length>5){hiddenFormat=true}; %>
 <%  _.each(models, function(post){ %>
-<% if(hiddenFormat && index>0 && index< length-1){ %>
+<% if(hiddenFormat && index>1 && index< length-1){ %>
 <div class="post row-fluid" style="display:none">
 <%}else{ %>
 <div class="post row-fluid">
 <%} %>
 
-	<div class="head span1">
-		<div style="vertical-align: top; margin-left: 0px;">
-			<img src='<%= post.get("profile_img_path") %>' />
-			<a><%= post.get("username")%></a>
+<% if (index!=0) { %>
+	<div class="head span2">
+		<div style="vertical-align: top; margin-left: 0px; overflow-x:hidden;">
+        		<img style="width:35px; height:35px;" src='<%= post.get("profile_img_path") %>' /><br>
 		</div>
 	</div>
-	<div class="span10">
-		<div class="author"></div>
-		<br>
+<% } %>
+
+<% if (index==0) { %>
+	<div class="span11">
+<% }else{ %>
+	<div class="span9">
+	<div class=""><%= post.get("username")%></div>
+
+<% } %>
 		<div class="body">
 			<table>
 				<tbody>
@@ -206,7 +222,7 @@ $("#copy").bind("click", function(){
 // backbone app
       window.AppView = Backbone.View.extend({
 
-        el: $("#inbox"),
+        el: jQuery("#inbox"),
 
         events: {
 

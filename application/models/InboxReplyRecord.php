@@ -15,7 +15,7 @@ class InboxReplyRecord extends Zend_Db_Table {
 		$select = $this->select();
 		$select->from('inbox_reply_record', array (
 					'topic',
-					'sns_type',
+					'platform_type',
 					'sns_reply_id',
 					'timestamp'
 		));
