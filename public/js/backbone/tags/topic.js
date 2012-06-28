@@ -220,23 +220,17 @@ window.TopicView = Backbone.View.extend({
 		$("#reply").text("懂了，去回复");
 		$("#reply").attr("data", this.model.id);
 		$("#reply").bind('click', function(){
-			var uri;
-			if(Sns.isSns(this.model.id)){
-				var sns = new Sns(this.model.id);
+			var uri = $(this).attr("data");
+			if(Sns.isSns(uri)){
+				var sns = new Sns(uri);
 				uri = sns.getSinglePage();
 			}else{
-				uri = "http://"+this.model.id;
+				uri = "http://"+uri;
 			}
-			window.setTimeout(
-				function() {
-					window.open('http://'+uri, '_blank');
-					$("#reply").text("已完成回复");
-				}, 
-				4000
-			);
+			window.open(uri, '_blank');
+			$("#reply").text("已完成回复");
 			$('#reply').unbind('click');
 		});
->>>>>>> 1b29fec345a070e67d7ab229a17499b165b5ce06
 	},
 
 });
