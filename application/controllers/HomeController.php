@@ -138,6 +138,15 @@ class HomeController extends MyController
 		if (empty($this->view->redeemPoints)){ 
 			$this->view->redeemPoints=0;
 		}
+		// new points 30天以内的积分
+		
+		$this->view->newPoints =  $db->fetchOne(
+    		"SELECT sum(point_amount) FROM reward_point_transaction_record WHERE (consumer_id = :temp and date >=:temp2 and transaction_id!=4) ",
+			array('temp' =>$consumer->id,'temp2'=>date("Y-m-d",strtotime("$today   -30   day")))
+		);
+		if (empty($this->view->newPoints)){ 
+			$this->view->newPoints=0;
+		}
 		
 		//get polls
 //		$profileSurveyModel = new ProfileSurvey();

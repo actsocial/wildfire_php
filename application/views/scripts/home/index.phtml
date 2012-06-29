@@ -19,7 +19,11 @@
             <p><?php echo $this->recentInvitation['invitation_description2']?></p>
         </div>
         <div class="buttons-bar">
+        <?php if ($this->recentInvitation["name"]=="美妆达人"){?>
+        	<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>" class="button"><?php echo $this->translate('Accept');?></a>
+        <?php }else {?>
             <a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Accept');?></a>
+        <?php }?>
         </div>
     </div>
 </div>
@@ -181,7 +185,7 @@
 		<div style="float: left;width:120px;">
 			<h3>&nbsp;&nbsp;<?php echo $this->translate("New_points")?></h3><br>
 			<div class="spark-status-content">
-				<h4><?php echo ($this->totalPoints-$this->redeemPoints); ?></h4>
+				<h4><?php echo $this->newPoints; ?></h4>
 			</div>
 		</div>
 		
@@ -204,7 +208,11 @@
 				<div style="border:1px dashed #3AB6EB;height:110px;width:630px">
 					<div style="float: left;">
 						<?php if($invitation['type'] == 'mission'){?>
-						<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
+							<?php if($invitation['name']=="美妆达人"){?>
+								<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
+							<?php }else{ ?>
+								<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
+							<?php }?>
 						<?php }else{?>
 						<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"  height="110"/></a>
 						<?php }?>
@@ -212,7 +220,14 @@
 					<div style="float: left; width:200px; padding:10px;">
 						<!--<?php echo $invitation["invitation_description"]."<br>".$invitation["invitation_description2"];?>
 					-->
-						<?php echo $invitation["invitation_description"];?>
+							<?php if($invitation['name']=="美妆达人"){?>
+									<?php echo "加入美妆活动，这里有你最想要了解的潮流资讯，也期待你留下自己的心得！<br><br>
+												活动时间：<br>
+												2012.7.1——2012.7.31";?>
+							<?php }else{ ?>
+									<?php echo $invitation["invitation_description"];?>
+							<?php }?>
+
 					</div>
 				</div>
 			</ul>

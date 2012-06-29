@@ -34,7 +34,7 @@
 
 
 <script type="text/template" id="container_template">
-	<div class="loadingtopic" style="display: none">读取中...</div>
+	<div class="loadingtopic" style="display: none"></div>
 </script>
 
 
@@ -229,19 +229,31 @@ $("#copy").bind("click", function(){
         },
 
         initialize: function() {
+
         	<?php foreach($this->topicsUntaggedSumByFolder as $topicsUntaggedByFolder):?>
-        	var tag = new Tag({
-                name:'<?php echo $topicsUntaggedByFolder['key']?>',
-                topic_num :'<?php echo $topicsUntaggedByFolder['value']?>'
-              });
-        	tags.add(tag);
-        	var view = new TagView({model: tag});
-        	jQuery("#folders").append(view.render().el);
-        	
+//        	var tag = new Tag({
+//                name:'<?php echo $topicsUntaggedByFolder['key']?>',
+//                topic_num :'<?php echo $topicsUntaggedByFolder['value']?>'
+//              });
+//        	tags.add(tag);
+//        	var view = new TagView({model: tag});
+//        	jQuery("#folders").append(view.render().el);        	
        		<?php endforeach;?>
-       		this.container = new ContainerView({});
+
+
+        	var tag = new Tag({
+                name:'skin_care',
+                topic_num :'0'
+              });
+        	var view = new TagView({model: tag});
+        	
+        	this.container = new ContainerView({});
        		jQuery(".filters").after(this.container.render().el);
        		this.container.layout();
+       		        	
+        	$('a',$(view.render().el)).click();
+
+
        		
         },
 
