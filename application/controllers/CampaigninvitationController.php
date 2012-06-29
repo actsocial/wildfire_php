@@ -971,7 +971,7 @@ class CampaignInvitationController extends MyController {
 	
 	function adminemailtemplatelistAction(){
 		if($this->_request->getParam ('id')){
-			Zend_Debug::dump($this->_request->getParam ('id'));die();
+			//Zend_Debug::dump($this->_request->getParam ('id'));die();
 			$this->_helper->layout->disableLayout();
 			$doValue = explode('&',$this->_request->getParam('do'));
 			$do = $doValue[0];
