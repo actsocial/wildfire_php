@@ -1,8 +1,8 @@
 <?PHP
 
 
-	function getInfoBySiteUrl($url){
-		$site_mapping = array(
+function getInfoBySiteUrl($url){
+	$site_mapping = array(
 		"bbs.yoka.com"=>array("name"=>"YOKA时尚网","type"=>"BBS"),
 		"tieba.baidu.com"=>array("name"=>"百度贴吧","type"=>"BBS"),
 		"www.19lou.com"=>array("name"=>"杭州19楼","type"=>"BBS"),
@@ -72,6 +72,7 @@
 		"www.mummysg.com"=>array("name"=>"Mummysg","type"=>"BBS"),
 		"forums.cozycot.com"=>array("name"=>"Cozycot","type"=>"BBS"),
 		"open.t.qq.com"=>array("name"=>"腾讯微博搜索","type"=>"Weibo"),
+		"t.qq.com"=>array("name"=>"腾讯微博","type"=>"Weibo"),
 		"www.360buy.com"=>array("name"=>"京东商城","type"=>"ECOM"),
 		"bbs.xmfish.com"=>array("name"=>"厦门小鱼网","type"=>"BBS"),
 		"www.dangdang.com"=>array("name"=>"当当网","type"=>"BBS"),
@@ -154,7 +155,7 @@
 		"bbs.rollerfun.net"=>array("name"=>"中国轮滑网","type"=>"BBS"),
 		"www.symbianize.com"=>array("name"=>"Symbianize","type"=>"BBS"),
 		"www.pinoyexchange.com"=>array("name"=>"PinoyExchange","type"=>"BBS"));
-		return $site_mapping[$url];
-	}
+	return $site_mapping[$url];
+}
 
 
