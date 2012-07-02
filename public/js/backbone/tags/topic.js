@@ -216,20 +216,26 @@ window.TopicView = Backbone.View.extend({
 	},
 	
 	open_reply_window: function(e){
-		$(".modal").modal("show");
-		$("#reply").text("懂了，去回复");
-		$("#reply").attr("data", this.model.id);
+		$(".modal").modal("show");	
+		$("#reply").attr("data", this.model.id);	  
 		$("#reply").bind('click', function(){
-			var uri = $(this).attr("data");
-			if(Sns.isSns(uri)){
-				var sns = new Sns(uri);
-				uri = sns.getSinglePage();
-			}else{
-				uri = "http://"+uri;
+			if($("#reply").text() === "已完成回复"){
+				var jqxhr = $.post('tag/complete', {topic_uri: $("#reply").attr("data")}, function(data){
+					
+				})
+				.success(function() { alert("success"); $(".modal").modal("hide"); $("#reply").text("懂了，去回复");})
+    		.error(function() { alert("error"); });    		
+			} else {
+				var uri = $(this).attr("data");
+				if(Sns.isSns(uri)){
+					var sns = new Sns(uri);
+					uri = sns.getSinglePage();
+				}else{
+					uri = "http://"+uri;
+				}
+				window.open(uri, '_blank');
+				$("#reply").text("已完成回复");
 			}
-			window.open(uri, '_blank');
-			$("#reply").text("已完成回复");
-			$('#reply').unbind('click');
 		});
 	},
 
