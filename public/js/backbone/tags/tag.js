@@ -55,7 +55,42 @@ window.Tag = Backbone.Model
 						}
 					});
 				}
-			}
+			},
+			
+//			loadNewTopic : function(){
+//				var self = this;
+//				//var typeArray = ["success","warning","error"];
+//				jQuery.ajax({
+//					type : "GET",
+//					url : "tag/ajaxtopics",
+//					data : key = "key=" + this.get("name")
+//							+ "&totalCount="
+//							+ this.get("topic_num") + "&page="
+//							+ this.get("page"),
+//					dataType : 'json',
+//					success : function(data) {
+//						var topicsArray = data['topics'];
+//						_.each(topicsArray,function(t){
+//							var topic = new Topic({
+//				                id:t['id'],
+//				                read:t['value']['read'],
+//				                title : t['value']['title'],
+//								date : t['value']['date'],
+//								lang : "zh-CN",
+//								body : t['value']['body'],
+//								comment_count : t['value']['comments'],
+//								view_count : t['value']['views'],
+//								//type: typeArray[~~(Math.random()*10/3)],
+//								author: t['value']['author'],
+//								site: t['value']['site']
+//				              });
+//				        	var view = new TopicView({model: topic});
+//				        	var newItems = $(view.render().el);
+//				        	$('.topics').prepend( $newItems).isotope( 'reloadItems').isotope({sortBy: 'original-order'});
+//						});
+//					}
+//				});
+//			}
 
 		});
 
@@ -118,8 +153,8 @@ window.TagView = Backbone.View.extend({
 				}
 			}
 		}
-		
 	},
+	
 	loadPage : function(e){
 		if (this.model.get("page")!=undefined){
 			this.model.loadTopics();
