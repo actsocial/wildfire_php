@@ -20,7 +20,7 @@
 
 
 .title_td a{ color: #005580;font-size: 100;font: 12px/2 "微软雅黑",Arial;text-shadow: #DDD 0 1px 0;}
-.author {width:50px;float:left;margin-right:5px;overflow-x:hidden;min-height: 80px;}
+.author {width:50px;float:left;margin-right:5px;overflow:hidden;min-height: 80px;}
 
 
 .BBS{  color: #468847;  background-color: #dff0d8;  border-color: #d6e9c6;}

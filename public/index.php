@@ -35,6 +35,8 @@ $include_path.= PATH_SEPARATOR . $applicationDir . 'library'. DIRECTORY_SEPARATO
 $include_path.= PATH_SEPARATOR . $applicationDir . 'library'. DIRECTORY_SEPARATOR .'qq'. DIRECTORY_SEPARATOR;
 $include_path.= PATH_SEPARATOR . $applicationDir . 'library'. DIRECTORY_SEPARATOR .'couch'. DIRECTORY_SEPARATOR;
 $include_path.= PATH_SEPARATOR . $applicationDir . 'library'. DIRECTORY_SEPARATOR .'crawler'. DIRECTORY_SEPARATOR;
+$include_path.= PATH_SEPARATOR . $applicationDir . 'library'. DIRECTORY_SEPARATOR .'HttpClient'. DIRECTORY_SEPARATOR;
+
 
 set_include_path($include_path);
 
