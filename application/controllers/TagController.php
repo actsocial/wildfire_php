@@ -284,6 +284,21 @@ class TagController extends MyController {
 	
 	function testAction(){
 		$this->_helper->layout->disableLayout();
-			}
+	}
+	
+	
+	function completeAction(){
+		$this->_helper->layout->disableLayout();
+		$topic_uri = urldecode($this->_request->getParam('topic_uri'));
+		$config = Zend_Registry::get('config');
+		$host = $config->ws->host;
+		$uri = $config->ws->uri;
+								
+	  $client = new HttpClient($host);
+		$client->post($uri, array(
+		  'topic_uri' => $topic_uri
+		));
+		
+	}
 	
 }
