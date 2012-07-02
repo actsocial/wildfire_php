@@ -5,6 +5,7 @@ require_once 'site.php';
 require_once 'couch.php';
 require_once 'couchClient.php';
 require_once 'couchDocument.php';
+require_once 'HttpClient.class.php';
 class TagController extends MyController {
 	
 	function indexAction(){
@@ -292,9 +293,10 @@ class TagController extends MyController {
 		$topic_uri = urldecode($this->_request->getParam('topic_uri'));
 		$config = Zend_Registry::get('config');
 		$host = $config->ws->host;
+		$port = $config->ws->port || 80;
 		$uri = $config->ws->uri;
 								
-	  $client = new HttpClient($host);
+	  $client = new HttpClient($host,$port);
 		$client->post($uri, array(
 		  'topic_uri' => $topic_uri
 		));
