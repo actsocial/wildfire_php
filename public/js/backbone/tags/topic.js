@@ -217,7 +217,8 @@ window.TopicView = Backbone.View.extend({
 	
 	open_reply_window: function(e){
 		$(".modal").modal("show");	
-		$("#reply").attr("data", this.model.id);	  
+		$("#reply").attr("data", this.model.id);
+		$("#text").val("http://"+this.model.id);	  
 		$("#reply").bind('click', function(){
 			if($("#reply").text() === "已完成回复"){
 				var jqxhr = $.post('tag/complete', {topic_uri: $("#reply").attr("data")}, function(data){
