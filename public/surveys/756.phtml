@@ -28,177 +28,6 @@
 	// ]]>
 	-->
 	</script>
-<script>
-
-function fuzhi(val){
-	jQuery("#question_14330").val(val);
-}
-
-function showOrHide(){
-	if(jQuery("#14311_4").attr("checked")=="checked"){
-		jQuery("#q_2646").css("display","");
-		
-	}else{
-		jQuery("#q_2646").css("display","none");
-	}
-}
-
-	function showOrHide2(){
-	if(jQuery("#14314_8").attr("checked")=="checked"){
-		jQuery("#q_3200").css("display","");
-	}else{
-		jQuery("#q_3200").css("display","none");
-	}
-}
-
-	function showOrHide3(){
-	if(jQuery("#14316_11").attr("checked")=="checked"){
-		jQuery("#q_3202").css("display","");
-	}else{
-		jQuery("#q_3202").css("display","none");
-	}
-}
-
-	function showOrHide4(){
-	if(jQuery("#14319_6").attr("checked")=="checked"){
-		jQuery("#q_2936").css("display","");
-	}else{
-		jQuery("#q_2936").css("display","none");
-	}
-}
-
-
-jQuery(function(){
-
-	jQuery("#q_2646").css("display","none");
-	jQuery("#q_3200").css("display","none");
-	jQuery("#q_3202").css("display","none");
-	jQuery("#q_2936").css("display","none");
-	
-	jQuery("#q_3205").css("display","none");
-	jQuery("#question_14326").val("null"); 
-	
-	jQuery("#q_3133").css("display","none");
-	jQuery("#question_14327").val("null"); 
-		
-		jQuery("#14311_4").bind("click",showOrHide);
-		jQuery("#14314_8").bind("click",showOrHide2);
-		jQuery("#14316_11").bind("click",showOrHide3);
-		jQuery("#14319_6").bind("click",showOrHide4);
-		
-	
-	
-	
-	jQuery("div .survey-intro").remove();
-	jQuery("#hint_14319").remove();
-	jQuery("#hint_14316").remove();
-	jQuery("#hint_14314").remove();
-	jQuery("#hint_14311").remove();
-	
-	
-	jQuery("#question_14330").css("display","none");
-	jQuery("#question_14330").before("<select id ='city' onchange='fuzhi(this.value)'> </select>");
-		jQuery("#city").append("<option value=''>请选择</option>");
-		jQuery("#city").append("<option value='上海市'>上海市</option>");
-		jQuery("#city").append("<option value='宁波市'>宁波市</option>");
-		jQuery("#city").append("<option value='无锡市'>无锡市</option>");
-		jQuery("#city").append("<option value='鞍山市'>鞍山市</option>");
-		jQuery("#city").append("<option value='蚌埠市'>蚌埠市</option>");
-		jQuery("#city").append("<option value='包头市'>包头市</option>");
-		jQuery("#city").append("<option value='宝鸡市'>宝鸡市</option>");
-		jQuery("#city").append("<option value='保定市'>保定市</option>");
-		jQuery("#city").append("<option value='北京市'>北京市</option>");
-		jQuery("#city").append("<option value='沧州市'>沧州市</option>");
-		jQuery("#city").append("<option value='长春市'>长春市</option>");
-		jQuery("#city").append("<option value='长沙市'>长沙市</option>");
-		jQuery("#city").append("<option value='常州市'>常州市</option>");
-		jQuery("#city").append("<option value='郴州市'>郴州市</option>");
-		jQuery("#city").append("<option value='成都市'>成都市</option>");
-		jQuery("#city").append("<option value='大理市'>大理市</option>");
-		jQuery("#city").append("<option value='大连市'>大连市</option>");
-		jQuery("#city").append("<option value='大庆市'>大庆市</option>");
-		jQuery("#city").append("<option value='大同市'>大同市</option>");
-		jQuery("#city").append("<option value='东莞市'>东莞市</option>");
-		jQuery("#city").append("<option value='佛山市'>佛山市</option>");
-		jQuery("#city").append("<option value='福州市'>福州市</option>");
-		jQuery("#city").append("<option value='抚顺市'>抚顺市</option>");
-		jQuery("#city").append("<option value='广州市'>广州市</option>");
-		jQuery("#city").append("<option value='贵阳市'>贵阳市</option>");
-		jQuery("#city").append("<option value='桂林市'>桂林市</option>");
-		jQuery("#city").append("<option value='哈尔滨市'>哈尔滨市</option>");
-		jQuery("#city").append("<option value='海口市'>海口市</option>");
-		jQuery("#city").append("<option value='杭州市'>杭州市</option>");
-		jQuery("#city").append("<option value='合肥市'>合肥市</option>");
-		jQuery("#city").append("<option value='衡阳市'>衡阳市</option>");
-		jQuery("#city").append("<option value='呼和浩特市'>呼和浩特市</option>");
-		jQuery("#city").append("<option value='惠州市'>惠州市</option>");
-		jQuery("#city").append("<option value='吉林市'>吉林市</option>");
-		jQuery("#city").append("<option value='济南市'>济南市</option>");
-		jQuery("#city").append("<option value='嘉兴市'>嘉兴市</option>");
-		jQuery("#city").append("<option value='江门市'>江门市</option>");
-		jQuery("#city").append("<option value='九江市'>九江市</option>");
-		jQuery("#city").append("<option value='开封市'>开封市</option>");
-		jQuery("#city").append("<option value='昆明市'>昆明市</option>");
-		jQuery("#city").append("<option value='兰州市'>兰州市</option>");
-		jQuery("#city").append("<option value='廊坊市'>廊坊市</option>");
-		jQuery("#city").append("<option value='连云港市'>连云港市</option>");
-		jQuery("#city").append("<option value='洛阳市'>洛阳市</option>");
-		jQuery("#city").append("<option value='马安山市'>马安山市</option>");
-		jQuery("#city").append("<option value='牡丹江市'>牡丹江市</option>");
-		jQuery("#city").append("<option value='南昌市'>南昌市</option>");
-		jQuery("#city").append("<option value='南京市'>南京市</option>");
-		jQuery("#city").append("<option value='南宁市'>南宁市</option>");
-		jQuery("#city").append("<option value='南通市'>南通市</option>");
-		jQuery("#city").append("<option value='攀枝花市'>攀枝花市</option>");
-		jQuery("#city").append("<option value='平顶山市'>平顶山市</option>");
-		jQuery("#city").append("<option value='齐齐哈尔'>齐齐哈尔</option>");
-		jQuery("#city").append("<option value='秦皇岛市'>秦皇岛市</option>");
-		jQuery("#city").append("<option value='青岛市'>青岛市</option>");
-		jQuery("#city").append("<option value='泉州市'>泉州市</option>");
-		jQuery("#city").append("<option value='汕头市'>汕头市</option>");
-		jQuery("#city").append("<option value='绍兴市'>绍兴市</option>");
-		jQuery("#city").append("<option value='深圳市'>深圳市</option>");
-		jQuery("#city").append("<option value='沈阳市'>沈阳市</option>");
-		jQuery("#city").append("<option value='石家庄市'>石家庄市</option>");
-		jQuery("#city").append("<option value='苏州市'>苏州市</option>");
-		jQuery("#city").append("<option value='太原市'>太原市</option>");
-		jQuery("#city").append("<option value='泰州市'>泰州市</option>");
-		jQuery("#city").append("<option value='唐山市'>唐山市</option>");
-		jQuery("#city").append("<option value='天津市'>天津市</option>");
-		jQuery("#city").append("<option value='威海市'>威海市</option>");
-		jQuery("#city").append("<option value='潍坊市'>潍坊市</option>");
-		jQuery("#city").append("<option value='温州市'>温州市</option>");
-		jQuery("#city").append("<option value='乌鲁木齐市'>乌鲁木齐市</option>");
-		jQuery("#city").append("<option value='武汉市'>武汉市</option>");
-		jQuery("#city").append("<option value='芜湖市'>芜湖市</option>");
-		jQuery("#city").append("<option value='西安市'>西安市</option>");
-		jQuery("#city").append("<option value='西宁市'>西宁市</option>");
-		jQuery("#city").append("<option value='厦门市'>厦门市</option>");
-		jQuery("#city").append("<option value='新乡市'>新乡市</option>");
-		jQuery("#city").append("<option value='徐州市'>徐州市</option>");
-		jQuery("#city").append("<option value='烟台市'>烟台市</option>");
-		jQuery("#city").append("<option value='延安市'>延安市</option>");
-		jQuery("#city").append("<option value='扬州市'>扬州市</option>");
-		jQuery("#city").append("<option value='宜宾市'>宜宾市</option>");
-		jQuery("#city").append("<option value='银川市'>银川市</option>");
-		jQuery("#city").append("<option value='玉林市'>玉林市</option>");
-		jQuery("#city").append("<option value='玉溪市'>玉溪市</option>");
-		jQuery("#city").append("<option value='湛江市'>湛江市</option>");
-		jQuery("#city").append("<option value='漳州市'>漳州市</option>");
-		jQuery("#city").append("<option value='镇江市'>镇江市</option>");
-		jQuery("#city").append("<option value='郑州市'>郑州市</option>");
-		jQuery("#city").append("<option value='中山市'>中山市</option>");
-		jQuery("#city").append("<option value='重庆市'>重庆市</option>");
-		jQuery("#city").append("<option value='珠海市'>珠海市</option>");
-		jQuery("#city").append("<option value='淄博市'>淄博市</option>");
-		jQuery("#city").append("<option value='自贡市'>自贡市</option>");
-		jQuery("#city").append("<option value='遵义市'>遵义市</option>");
-		jQuery("#city").append("<option value='其他'>其他</option>");
-
-
-	
-})
-</script>
 <div class="main-container-outer" >
 	<div id="container">
 		<div id="header" class="header" style="display: none;">
@@ -237,7 +66,7 @@ jQuery(function(){
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -247,7 +76,7 @@ jQuery(function(){
 <div id="mainzone-inner">
 
 
-<input type="hidden" name="id" value="" id="id" />
+<input type="hidden" name="id" value="hV5MuqXC5J5A" id="id" />
 <input type="hidden" name="theme" value="wildfire" id="theme" />
 
 <div class="mandatory"><span style="color: red;">* </span>- It is mandatory</div>
@@ -329,8 +158,6 @@ jQuery(function(){
 // <![CDATA[
 // ]]>
 -->
-
-
 </script>
 		  <div id="q_3207" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
@@ -357,7 +184,7 @@ jQuery(function(){
 
 
 <span id="hint_14311">
-    <br>
+    Please select at most  3 values.<br>
 </span>
 <ul>
 	<li>
@@ -373,7 +200,7 @@ jQuery(function(){
 			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_3" name="answers[14311].value" value="12318" 	onclick="checkChanged('14311_3',3,0);  "/>		<label for="14311_3">当地的小店</label>
 	</li>
 	<li>
-			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_4" name="answers[14311].value" value="12319" 	onclick="checkChanged('14311_3',3,0);  "/>		<label for="14311_4">其他(请填写)</label>
+			<input group="14311" class="question_radio_14311 selection" type="checkbox" id="14311_4" name="answers[14311].value" value="12319" 	onclick="checkChanged('14311_4',3,0);  "/>		<label for="14311_4">其他(请填写)</label>
 	</li>
 </ul>
  </td>
@@ -437,7 +264,7 @@ jQuery(function(){
 // ]]>
 -->
 </script>
-		  <div id="q_2646" style="margin-bottom:0px;display:none" class="question-even question-area">
+		  <div id="q_2646" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -505,7 +332,7 @@ jQuery(function(){
 			<input group="14313" type="radio" id="14313_3" name="answers[14313].value" value="12284"  class="selection question_radio_14313"  />		<label for="14313_3">宝大祥四川路店 上海市四川北路1661号</label>
 	</li>
 	<li>
-			<input group="14313" type="radio" id="14313_4" name="answers[14313].value" value="12285"  class="selection question_radio_14313"  />		<label for="14313_4">芮欧时尚百货  上海市南京西路1601号</label>
+			<input group="14313" type="radio" id="14313_4" name="answers[14313].value" value="12285"  class="selection question_radio_14313"  />		<label for="14313_4">芮欧时尚百货 上海市南京西路1601号</label>
 	</li>
 	<li>
 			<input group="14313" type="radio" id="14313_5" name="answers[14313].value" value="12286"  class="selection question_radio_14313"  />		<label for="14313_5">宁波来福士 宁波大庆南路</label>
@@ -1157,6 +984,7 @@ jQuery(function(){
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+		 	mandatoryElements.push("14324");
 // ]]>
 -->
 </script>
@@ -1167,7 +995,7 @@ jQuery(function(){
 				<td width=50% valign="top">
 					<div class="question-title">
 						你的家庭月收入是多少？
-						<span style="color:red">*</span>
+							<span style="color:red">*</span>
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
 							   
@@ -1204,7 +1032,6 @@ jQuery(function(){
  </td>
 
 <td valign="top" class="noanswer-td">
-		<input class="q_14324  qc_0 radio" type="radio" name="answers[14324].value" />
 </td>
 </tr>
 
@@ -1300,7 +1127,7 @@ jQuery(function(){
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						Email：
+						Email(必填)：
 							<span style="color:red">*</span>
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
@@ -1336,7 +1163,7 @@ jQuery(function(){
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						姓名：
+						姓名(必填)：
 							<span style="color:red">*</span>
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
@@ -1389,7 +1216,7 @@ jQuery(function(){
 <input type="hidden" name="answers[14328].id" value="" id="answers[14328].id" />
 
 	<select group="14328" class="selection" id="question_14328" name="answers[14328].value" title="title"  size = "1" >
-	<option selected="selected" value="0">请选择</option>
+	<option selected="selected" value="0">Please choose</option>
 <option value="12348" style=""  >男</option>
 <option value="12349" style=""  >女</option>
 	</select> 
@@ -1563,8 +1390,8 @@ jQuery(function(){
 </div>
 <br/>
 <div class="fillout-submit">
-<input id="nextPageButton" type="button" class="button"  style="display:none"  onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit"class="button" name="command.submit" value="提交" />
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -1886,8 +1713,8 @@ jQuery(function(){
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = '提交失败：必填的题目不能为空';
-			var buttons = ["确定"];
+	    	var html = 'Mandatory questions must be filled out';
+			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 	    }
@@ -1918,8 +1745,8 @@ jQuery(function(){
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = '提交失败：不能提交空报告';
-			var buttons = ["确定"];
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 			return false;
