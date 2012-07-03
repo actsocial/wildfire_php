@@ -242,6 +242,39 @@ class TagController extends MyController {
 		}
 	}
 	
+	function ajaxreplyAction(){
+		$this->_helper->layout->disableLayout();
+		$topicId = urldecode($this->_request->getParam('topicId'));
+		$platform = $this->_request->getParam('platform');
+		$config = Zend_Registry::get('config');
+		$host = $config->writer->host;
+		$port = $config->writer->port;
+		$client = new HttpClient($host,$port);
+// 		$client->post("path","data");
+// 		$content = $client->getContent();
+		$snsUserModel = new SnsUser();
+		$snsUser = $snsUserModel->loadByConsumerAndPlatform($this->_currentUser->id,$platform);
+		$param = $snsUser->toArray();
+		$param['text'] = $this->_request->getParam('text');
+		$client->post("sender/commets",$param);
+	}
+	
+	function ajaxpublicAction(){
+		$this->_helper->layout->disableLayout();
+		$platform = $this->_request->getParam('platform');
+		$config = Zend_Registry::get('config');
+		$host = $config->writer->host;
+		$port = $config->writer->port;
+		$client = new HttpClient($host,$port);
+		// 		$client->post("path","data");
+		// 		$content = $client->getContent();
+		$snsUserModel = new SnsUser();
+		$snsUser = $snsUserModel->loadByConsumerAndPlatform($this->_currentUser->id,$platform);
+		$param = $snsUser->toArray();
+		$param['text'] = $this->_request->getParam('text');
+		$client->post("sender/public_tweet",$param);
+	}
+	
 	function ajaxsaveweiboreplyAction(){
 		$this->_helper->layout->disableLayout();
 		$topicId = urldecode($this->_request->getParam('topicId'));
@@ -302,7 +335,7 @@ class TagController extends MyController {
 		$topic_uri = urldecode($this->_request->getParam('topic_uri'));
 		$config = Zend_Registry::get('config');
 		$host = $config->ws->host;
-		$port = $config->ws->port || 80;
+		$port = $config->ws->port;
 		$uri = $config->ws->uri;
 								
 	  $client = new HttpClient($host,$port);
