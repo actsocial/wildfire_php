@@ -12,6 +12,7 @@ window.Topic = Backbone.Model
 					img : null,
 					nation : "",
 					id : "",
+					key :null,
 					posts : null,
 					postLoaded : false,
 					postShowed : false,

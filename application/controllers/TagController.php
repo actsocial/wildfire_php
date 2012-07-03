@@ -70,8 +70,16 @@ class TagController extends MyController {
 			$this->view->page = $page;
 			if($key){
 				$endKey = array($key,array(0,0,0,0,0,0));
-				$startKey = array($key,array('{}','{}','{}','{}','{}','{}'));
-				$view = $topicsClient->skip($page*PAGESIZE)->limit(PAGESIZE)->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->descending(TRUE)->getView('bayers','topics-by-folder');
+				$startKey = $this->_request->getParam('start_key');
+				if(empty($startKey)){
+					$startKey = array($key,array('{}','{}','{}','{}','{}','{}'));
+				}else{
+					$startKey = array($key,array((int)$startKey[1][0],(int)$startKey[1][1],(int)$startKey[1][2],(int)$startKey[1][3],(int)$startKey[1][4],(int)$startKey[1][5]));
+				}
+				$startkey_docid = $this->_request->getParam('startkey_docid');
+				
+				$view = $topicsClient->limit(PAGESIZE)->startkey_docid($startkey_docid)->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->descending(TRUE)->getView('bayers','topics-by-folder');
+				
 				$this->view->key = $key;
 				if($totalCount>0){
 					$this->view->totalPage = ceil($totalCount/PAGESIZE);
