@@ -1,62 +1,88 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
-.Weibo_iframe{
-	width:600px;
-	overflow:hidden;
-}
-.Weibo_iframe .modal-body{
-	height:360px;
-}
-.sns-box{
-	background: -webkit-gradient(linear, 0% 0, 0% 100%, from(rgba(255, 255, 255, 0.75)), to(rgba(222, 231, 233, 0.7)));
-	background: -moz-linear-gradient(rgba(255, 255, 255, 0.75), rgba(222, 231, 233, 0.7));
-	border: 1px rgba(0, 0, 0, 0.24) solid;
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
-	box-sizing: border-box;
-	-webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 7px;
-	-moz-box-shadow: rgba(0, 0, 0, 0.25) 0px 1px 7px;
-	height:200px;
-	width:22%;
-	text-align:center;
-	vertical-align:middle;
-	margin:10px;
+.topic{
+	min-height:50px;
+	position:relative;
 	float:left;
-	cursor:pointer;
-	overflow:hidden;
+	margin:8px;
+	padding:10px 5px;
+	//-moz-border-radius:10px;
+	//-webkit-border-radius:10px;
+	//border-radius:10px;
+	border:1px solid ddd;
+	-webkit-box-shadow:0 0 2px #AAA;
+	-moz-box-shadow:0 0 2px black;
+	//border-bottom: 1px solid #FCC0D1;
 }
-#editSnsModal{
-	left:40% !important;
-	width:900px;
-	overflow:hidden;
+#tagCloudDiv {
+	width:150px;
+	margin-left:-150px;
+	float:left;
 }
-.snsico{
-	background: url("/assets/sns_ico.png") no-repeat scroll left center transparent;
-    cursor: pointer;
-    display: block !important;
-    height: 16px !important;
-    overflow: hidden;
-	margin-left:30px;
-}
-.Weibo_ico{
-	background-position: 0 -96px;
-}
-.Netease_ico{
-	background-position: 0 -128px;
-}
-.Tencent_ico{
-	background-position: 0 -144px;
-}
-.Renren_ico{
-	background-position: 0 -160px;
-}
-.Kaixin_ico{
-	background-position: 0 -176px;
-}
-.Douban_ico{
-	background-position: 0 -560px;
+.topics{
+	min-height:500px;
+	float:left;
+	width:100%;
 }
 
+.topics li{
+    list-style: none;	
+}
+
+.row-fluid [class*="span"]:first-child {
+margin-left: 5px;
+}
+
+/**#tagCloudDiv li a{
+    text-decoration:none;
+    color:black;
+}
+#tagCloudDiv li a:hover{
+    color:red !important;
+}
+#tagCloudDiv ul {list-style-type:none;}**/
+
+.topicTitle{
+	float:left;
+	width:100%;
+}
+	
+.post .author {
+    float: left;
+    font-size: 100%;
+    font-weight: bold;
+    width: 45%;
+}
+.post {
+	margin:10px 0;
+}
+.posthidden {
+height: 1px;
+border-bottom: solid 1px #AAA;
+}
+.post .body {
+    color: #666666;
+}
+.posthidden span {
+    background-color: white;
+    border: 1px solid #AAA;
+    border-radius: 5px 5px 5px 5px;
+    display: inline;
+    padding: 5px;
+    position: relative;
+    top: -7px;
+}
+.pageInfo{
+	padding-right: 50px;
+    text-align: right;
+}
+.nav{
+	margin-bottom: 0px !important;
+}
+.issuedetail{
+	min-height:100px;
+}
+.add-url{
+	height:24px !important;
+}
+.weibo-reply-img{
+	margin-bottom:-9px;
+}

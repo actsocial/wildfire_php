@@ -30,13 +30,13 @@
 	</div>
 	<div class="modal-body">
 		<ul class="thumbnails">
-			<% Sns.each do |k,v|%>
+			<?php foreach($this->sns_enabled_source as $sns) {?>
 	        <li class="span3" style="width:auto;">
-	          <a class="thumbnail" href="javascript:void(0);" onclick='requestToken("<%= v['name'] %>", "<%= Settings.writer_host %>");'>
-	            <img style="width:128px; height:128px;" alt="" src="/assets/<%= v['name'] %>.png">
+	          <a class="thumbnail" href="javascript:void(0);" onclick='requestToken("<?php echo $sns['name']?>", "<?php echo $this->writer_host?>");'>
+	            <img style="width:128px; height:128px;" alt="" src="<?php echo $this->baseUrl().'/images/sns/'.$sns['name']?>.png">
 	          </a>
 	        </li>
-			<% end %>
+			<?}?>
 	  </ul>
 		<iframe id="oauthWindow" style="display:none;border:none;overflow-y:auto;overflow-x:hidden;" width="100%" height="100%"></iframe>
 	</div>
