@@ -19,6 +19,37 @@ class SnsController extends MyController
 		$this->view->writer_host = $config->writer->host;
 
 	}
+	
+		
+	public function ajaxsave() {
+		$this->_helper->layout->disableLayout();
+		$sns_param = urldecode($this->_request->getParam('sns'));
+		if (isset($sns_param['source']))
+			$source = $sns_param['source'];
+		$sns = new Sns($source);
+		if (isset($sns_param['token']))
+			$token = $sns_param['token'];
+		if (isset($sns_param['secret']))
+			$secret = $sns_param['secret'];
+		if (isset($sns_param['expires_in']))
+			$expires_in = $sns_param['expires_in'];
+		if (isset($sns_param['expires_at']))
+			$expires_at = $sns_param['expires_at'];
+			
+		$sns.gen_access_token($oauth_verifier, $source, $oauth_token, $domain);
+		
+		$table = new Sns();
+		$data = array(
+			'access_token' => $token,
+			'access_token_secret' => $secret,
+			'expires_at' => $expires_at,
+			'expires_in' => $expires_in,
+			'consumer' => (int) $this->_currentUser->id,
+			'platform_type' => $source
+		);
+		$table->insert($data);
+
+	}
   
 	public function public_tweet()
 	{
