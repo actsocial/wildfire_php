@@ -7,6 +7,6 @@ class SnsUser extends Zend_Db_Table
 		$select = $this->select();
 		$select->where( 'consumer = ? ', $consumer);
 		$select->where( 'platform_type = ? ', $platform);
-		return $this->fetchOne($select);
+		return $this->fetchRow($select);
 	}
 }
