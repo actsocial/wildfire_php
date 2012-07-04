@@ -34,7 +34,7 @@
 
 
 <script type="text/template" id="container_template">
-	<div class="loadingtopic" style="display: none"></div>
+<div id="infscr-loading" style="display: none;"><img src="<?php echo $this->baseUrl();?>/images/loading-topics.gif" alt="Loading..."><div><em>Loading for more...</em></div></div>
 </script>
 
 
@@ -144,7 +144,6 @@
 <script src="<?php echo $this->baseUrl();?>/js/backbone/tags/topic.js"></script>
 <script src="<?php echo $this->baseUrl();?>/js/backbone/tags/tag.js"></script>
 <script src="<?php echo $this->baseUrl();?>/js/sns_utility.js"></script>
-<script src="<?php echo $this->baseUrl();?>/js/infinitescroll/jquery.infinitescroll.min.js"></script>
 <script type="text/javascript">
 
 function filter(category){

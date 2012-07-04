@@ -60,7 +60,7 @@ class TagController extends MyController {
 	
 	function ajaxtopicsAction(){
 		$this->_helper->layout->disableLayout();
-		define("PAGESIZE",20);
+		define("PAGESIZE",50);
 		$config = Zend_Registry::get('config');
 		$topicsClient = new couchClient ($config->couchdb->uri.":".$config->couchdb->port,$config->couchdb->topics);
 		try {
@@ -102,10 +102,21 @@ class TagController extends MyController {
 //					if(!isset($topic['value']['title'])){
 //						$topic['value']['title'] = "-";
 //					}
+					if(isset($topic['value']['date_posted'])){
+						list($pyear,$pmonth,$pday,$phour,$pminute,$psecond) = $topic['value']['date_posted'];
+						$pmonth+=1;
+						$pdate = date("Y-m-d H:i:s",mktime($phour,$pminute,$psecond,$pmonth,$pday,$pyear));
+						
+						$diff = time() - strtotime($pdate);
+						if($diff > 3600 * 24 *7){
+							continue;
+						}
+					}
+					
 					if(isset($topic['key'][1])){
 						list($year,$month,$day,$hour,$minute,$second) = $topic['key'][1];
 						$month+=1;
-						$date = date("Y-m-d g:i:s a",mktime($hour,$minute,$second,$month,$day,$year));
+						$date = date("Y-m-d H:i:s",mktime($hour,$minute,$second,$month,$day,$year));
 					}else{
 						$date = "-";
 					}

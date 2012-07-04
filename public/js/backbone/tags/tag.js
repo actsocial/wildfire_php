@@ -155,7 +155,6 @@ window.TagView = Backbone.View.extend({
         	$('.topics').append(newItems).isotope('addItems',newItems);
         	$('.topics').isotope( 'insert', newItems );
 		});
-		
 	},
 	
 	turnPage : function(e){
@@ -171,7 +170,6 @@ window.TagView = Backbone.View.extend({
 	
 	selectTag : function(e) {
 		jQuery(".topics").isotope( 'remove', $(".topic"));
-		jQuery(".topics").html(jQuery(".loadingtopic"));
 		jQuery(".topics").isotope( 'reloadItems' );
 		this.model.set({'name':jQuery(e.currentTarget).text(),'selected':true,'topic_num':jQuery(e.currentTarget).attr('rel')});
 		if(this.model.get("topics").length > 0){
@@ -186,9 +184,9 @@ window.TagView = Backbone.View.extend({
 	
 	loadingStatus : function(e){
 		if(this.model.get("topicloading")){
-			jQuery(".loadingtopic").show();
+			jQuery("#infscr-loading").show();
 		}else{
-			jQuery(".loadingtopic").hide();
+			jQuery("#infscr-loading").hide();
 	    	//$('.topics').isotope('reLayout');
 		}
 	}
