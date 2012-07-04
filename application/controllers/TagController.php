@@ -102,16 +102,16 @@ class TagController extends MyController {
 //					if(!isset($topic['value']['title'])){
 //						$topic['value']['title'] = "-";
 //					}
-					if(isset($topic['value']['date_posted'])){
-						list($pyear,$pmonth,$pday,$phour,$pminute,$psecond) = $topic['value']['date_posted'];
-						$pmonth+=1;
-						$pdate = date("Y-m-d H:i:s",mktime($phour,$pminute,$psecond,$pmonth,$pday,$pyear));
+// 					if(isset($topic['value']['date_posted'])){
+// 						list($pyear,$pmonth,$pday,$phour,$pminute,$psecond) = $topic['value']['date_posted'];
+// 						$pmonth+=1;
+// 						$pdate = date("Y-m-d H:i:s",mktime($phour,$pminute,$psecond,$pmonth,$pday,$pyear));
 						
-						$diff = time() - strtotime($pdate);
-						if($diff > 3600 * 24 *7){
-							continue;
-						}
-					}
+// 						$diff = time() - strtotime($pdate);
+// 						if($diff > 3600 * 24 *7){
+// 							continue;
+// 						}
+// 					}
 					
 					if(isset($topic['key'][1])){
 						list($year,$month,$day,$hour,$minute,$second) = $topic['key'][1];
