@@ -48,21 +48,21 @@
 <%}else{ %>
 <div class="topic span3 isotope-item alert <%= site.type %>" data="<%= id %>">
 <%} %>
+        <div class="box_head title" style="">
+              <a href="javascript:void(0)">
+              		<% if (_.isEmpty(title)) {%> <%= body.substring(0,30) %> <%} else { %><%= title.substring(0,30) %> <%} %>
+              </a>
+        </div>
 		<div style="width:100%;" class="topic_head">
 			<div style="" class="title_td">
 				<div class="row-fluid">
 					<div class="span11">
 						<i class="babytree" style=""></i>
-						<span class="title"> 
               				<div class="author">
                 				<img style="width:50px;height:50px;" src="<%= author.profile_img %> "/><br> <%= author.name %>
               				</div>
-              				<a href="javascript:void(0)">
-                				<% if (_.isEmpty(title)) {%> <%= body.substring(0,30) %> <%} else { %><%= title.substring(0,30) %> <%} %>
-              				</a><br>
             				来自: <%= site.name %><br>
           					<button class="btn reply_window">  我要回复	</button>    
-            			</span>
             			<br />           
         
 					</div>
