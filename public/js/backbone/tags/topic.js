@@ -209,9 +209,9 @@ window.TopicView = Backbone.View.extend({
 	saveReply: function(e){
 		jQuery.post('tag/ajaxsaveweiboreply',{topicId:this.model.id,content:jQuery(el).find(".reply-content").val()},function(data){
 			if(data=='ok'){
-				alert("回复成功");
+				//alert("回复成功");
 			}else{
-				alert("系统忙,请稍后再试");
+				//alert("系统忙,请稍后再试");
 			}
 		});
 	},
@@ -225,8 +225,8 @@ window.TopicView = Backbone.View.extend({
 				var jqxhr = $.post('tag/complete', {topic_uri: $("#reply").attr("data")}, function(data){
 					
 				})
-				.success(function() { alert("success"); $(".modal").modal("hide"); $("#reply").text("懂了，去回复");})
-    		.error(function() { alert("error"); });    		
+				.success(function() { $(".modal").modal("hide"); $("#reply").text("懂了，去回复");})
+    		.error(function() {  });    		
 			} else {
 				var uri = $(this).attr("data");
 				if(Sns.isSns(uri)){
