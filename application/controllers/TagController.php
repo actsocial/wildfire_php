@@ -23,7 +23,7 @@ class TagController extends MyController {
 			}
 		} catch (Exception $e) {
 		}
-		$this->view->image_uri = $config->image->host."/".(int)$this->_currentUser->id;
+		$this->view->image_uri = $config->image->host."/".(int)$this->_currentUser->id."ifmg";
 		$this->_helper->layout->setLayout("layout_isotope");
 		
 	}
