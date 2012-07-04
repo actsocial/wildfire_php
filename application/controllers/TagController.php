@@ -243,8 +243,6 @@ class TagController extends MyController {
 	}
 	
 	function ajaxreplyAction(){
-		$this->_helper->layout->disableLayout();
-		$topicId = urldecode($this->_request->getParam('topicId'));
 		$platform = $this->_request->getParam('platform');
 		$config = Zend_Registry::get('config');
 		$host = $config->writer->host;
@@ -254,13 +252,18 @@ class TagController extends MyController {
 // 		$content = $client->getContent();
 		$snsUserModel = new SnsUser();
 		$snsUser = $snsUserModel->loadByConsumerAndPlatform($this->_currentUser->id,$platform);
-		$param = $snsUser->toArray();
-		$param['text'] = $this->_request->getParam('text');
-		$client->post("sender/commets",$param);
+		if(empty($snsUser)){
+			$this->_redirect("/sns/index");
+		}else{
+			$this->_helper->layout->disableLayout();
+			$param = $snsUser->toArray();
+			$param['text'] = $this->_request->getParam('text');
+			$param['text'] = urldecode($this->_request->getParam('topicId'));
+			$client->post("/sender/commets",$param);
+		}
 	}
 	
 	function ajaxpublicAction(){
-		$this->_helper->layout->disableLayout();
 		$platform = $this->_request->getParam('platform');
 		$config = Zend_Registry::get('config');
 		$host = $config->writer->host;
@@ -270,9 +273,15 @@ class TagController extends MyController {
 		// 		$content = $client->getContent();
 		$snsUserModel = new SnsUser();
 		$snsUser = $snsUserModel->loadByConsumerAndPlatform($this->_currentUser->id,$platform);
-		$param = $snsUser->toArray();
-		$param['text'] = $this->_request->getParam('text');
-		$client->post("sender/public_tweet",$param);
+		if(empty($snsUser)){
+			$this->_redirect("/sns/index");
+		}else{
+			$this->_helper->layout->disableLayout();
+			$param = $snsUser->toArray();
+			$param['text'] = $this->_request->getParam('text');
+			$client->post("/sender/public_tweet",$param);
+		}
+		
 	}
 	
 	function ajaxsaveweiboreplyAction(){
