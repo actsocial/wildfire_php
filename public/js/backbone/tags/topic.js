@@ -222,11 +222,22 @@ window.TopicView = Backbone.View.extend({
 		$("#text").val($("#image_uri").attr("uri"));	  
 		$("#reply").die().live('click', function(){
 			if($("#reply").text() === "已完成回复"){
-				var jqxhr = $.post('tag/complete', {topic_uri: $("#reply").attr("data")}, function(data){
+				$.ajax({
+					type : "POST",
+					url : 'tag/complete',
+					dataType : 'json',
+					accepts :"json",
+					data : {topic_uri: $("#reply").attr("data")},
+					success : function(data) {
+						$(".modal").modal("hide"); $("#reply").text("懂了，去回复");
+					}
+				});
 					
-				})
-				.success(function() { $(".modal").modal("hide"); $("#reply").text("懂了，去回复");})
-    		.error(function() {  });    		
+//				var jqxhr = $.post('tag/complete', {topic_uri: $("#reply").attr("data")}, function(data){
+//					
+//				})
+//				.success(function() { $(".modal").modal("hide"); $("#reply").text("懂了，去回复");})
+//    		.error(function() {  });    		
 			} else {
 				var uri = $(this).attr("data");
 				if(Sns.isSns(uri)){

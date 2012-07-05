@@ -362,7 +362,8 @@ class TagController extends MyController {
 		$client->post($uri, array(
 		  'topic_uri' => $topic_uri
 		));
-		
+		print_r($client->getContent());die;
+		$this->_helper->json($client->getContent());
 	}
 	
 }
