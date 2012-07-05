@@ -78,7 +78,7 @@ class TagController extends MyController {
 				}
 				$startkey_docid = $this->_request->getParam('startkey_docid');
 				
-				$view = $topicsClient->limit(PAGESIZE)->startkey_docid($startkey_docid)->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->descending(TRUE)->getView('bayers','topics-by-folder');
+				$view = $topicsClient->limit(PAGESIZE)->startkey_docid($startkey_docid)->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->descending(TRUE)->getView('bayers','topics-by-folder-and-postdate');
 				
 				$this->view->key = $key;
 				if($totalCount>0){
