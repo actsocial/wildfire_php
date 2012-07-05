@@ -220,7 +220,7 @@ window.TopicView = Backbone.View.extend({
 		$(".modal").modal("show");	
 		$("#reply").attr("data", this.model.id);
 		$("#text").val($("#image_uri").attr("uri"));	  
-		$("#reply").bind('click', function(){
+		$("#reply").die().live('click', function(){
 			if($("#reply").text() === "已完成回复"){
 				var jqxhr = $.post('tag/complete', {topic_uri: $("#reply").attr("data")}, function(data){
 					
