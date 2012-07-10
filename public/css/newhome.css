@@ -133,11 +133,12 @@ img {
 	margin-top: 10px;
 }
 .header .navigator .language-selector {
-	/*float: right;*/
+	float: right;
 	text-align:right;
 	height: 36px;
 	line-height: 36px;
 	width: 90px;
+	display:none;
 }
 #jflanguageselection {
 	margin:0;
