@@ -1232,13 +1232,13 @@ ul.tabbed-buttons li.active a:visited {
 }
 .edit-profile dd {
 	width: 400px;
-	height: 30px;
+	height: auto;
 }
 .edit-profile dd input {
 	height: 16px;
 }
 .edit-profile dd select {
-	height: 20px;
+	height: 26px;
 }
 .edit-profile dd input,
 .edit-profile dd textarea,
@@ -2628,13 +2628,13 @@ a.list-orders:hover {
 	float:left;
 	width:308px;
 	font-size:12px;
-	margin:0px 10px;
-	background:transparent url(../images/spark-report-bk-308.gif) no-repeat scroll left bottom;
+	//margin:0px 10px;
+	//background:transparent url(../images/spark-report-bk-308.gif) no-repeat scroll left bottom;
 }
 #singapore  .spark-report-box-inner {
 	float:left;
 	width:308px;
-	background:transparent url(../images/spark-report-inner-bk-308.gif) no-repeat scroll left top
+	//background:transparent url(../images/spark-report-inner-bk-308.gif) no-repeat scroll left top
 	
 }
 

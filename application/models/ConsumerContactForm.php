@@ -18,11 +18,11 @@ class ConsumerContactForm extends Zend_Form
 		$qq->setLabel('QQ号码 :');
 		
 		$telephone = new Zend_Form_Element_Text('telephone');
-		$telephone->setLabel('campaign phone :');
+		$telephone->setLabel('公司电话 :');
 		if($options['relative']){
 			for($i = 1 ; $i <= $options['relative'] ; $i++){
 				${'friend_name_'.$i} = new Zend_Form_Element_Text('friend_name_'.$i);
-			    ${'friend_name_'.$i}->setLabel('Name :')
+			    ${'friend_name_'.$i}->setLabel('姓名 :')
 		        //->setRequired(true)
 			    ->addFilter('StripTags')
 		        ->addFilter('StringTrim')
@@ -32,7 +32,7 @@ class ConsumerContactForm extends Zend_Form
 				$this->addElement(${'friend_name_'.$i});
 				
 				${'friend_email_'.$i} = new Zend_Form_Element_Text('friend_email_'.$i);
-			    ${'friend_email_'.$i}->setLabel('Email :')
+			    ${'friend_email_'.$i}->setLabel('邮箱 :')
 			    //->setRequired(true)
 				->addFilter('StripTags')
 		        ->addFilter('StringTrim')
@@ -43,7 +43,7 @@ class ConsumerContactForm extends Zend_Form
 				$this->addElement(${'friend_email_'.$i});
 				
 				${'friend_message_'.$i} = new Zend_Form_Element_Text('friend_message_'.$i);
-			    ${'friend_message_'.$i}->setLabel('Message :')
+			    ${'friend_message_'.$i}->setLabel('留言:')
 				->addFilter('StripTags')
 		        ->addFilter('StringTrim');
 //		        ->addValidator('NotEmpty');

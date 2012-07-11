@@ -512,6 +512,9 @@ class CampaignController extends MyController
 		$consumer = $this->_currentUser;
 		$id = (int)$this->_request->getParam('id');
 
+		//precampaignsurvey的css使用的是layout_survey
+		$this->_helper->layout->setLayout("layout_survey");
+		
 		if ($id > 0) {
 			$this->view->id = $id;
 				
