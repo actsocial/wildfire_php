@@ -595,6 +595,8 @@ class CampaignController extends MyController
 		}else{
 			$this->view->visiable = true;
 		}
+		//precampaignsurvey的css使用的是layout_survey
+		$this->_helper->layout->setLayout("layout_survey");
 		
 		$this->view->campaign_id = $id;
 		$campaign = $campaignModel->fetchRow("id=".$id);

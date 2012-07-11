@@ -1589,10 +1589,10 @@
          <!-- EnglishFirst campaign -->
 		<tu tuid='Campaign_name_39'>
 			<tuv xml:lang="zh">
-				<seg>Sergent-Major童装</seg>
+				<seg>Sergent Major童装</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Sergent-Major童装</seg>
+				<seg>Sergent Major童装</seg>
 			</tuv>
 		</tu>		   
 		<tu tuid='Campaign_simple_description_39'>
