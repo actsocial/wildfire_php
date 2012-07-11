@@ -647,6 +647,9 @@ class CampaignController extends MyController
 		$this->view->activeTab = 'Campaign';
 		$this->view->title = $this->view->title = $this->view->translate("Wildfire")." - ".$this->view->translate("You_are_in");
 
+		//precampaignsurvey的css使用的是layout_survey
+		$this->_helper->layout->setLayout("layout_survey");
+		
 		$id = (int)$this->_request->getParam('survey');
 		$campaignModel = new Campaign();	
 		$this->view->campaign  = $campaignModel->fetchRow("pre_campaign_survey=".$id." or "."pre_campaign_survey_en=".$id);
