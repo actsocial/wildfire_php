@@ -22,7 +22,7 @@ class ConsumerContactForm extends Zend_Form
 		if($options['relative']){
 			for($i = 1 ; $i <= $options['relative'] ; $i++){
 				${'friend_name_'.$i} = new Zend_Form_Element_Text('friend_name_'.$i);
-			    ${'friend_name_'.$i}->setLabel('姓名 :')
+			    ${'friend_name_'.$i}->setLabel('朋友姓名 :')
 		        //->setRequired(true)
 			    ->addFilter('StripTags')
 		        ->addFilter('StringTrim')
@@ -48,7 +48,7 @@ class ConsumerContactForm extends Zend_Form
 		        ->addFilter('StringTrim');
 //		        ->addValidator('NotEmpty');
 //				${'friend_phone_'.$i}->setAttrib('onchange','relativeTest(this.value)');
-				$this->addElement(${'friend_message_'.$i});
+//				$this->addElement(${'friend_message_'.$i});
 				
 			}
 		}		

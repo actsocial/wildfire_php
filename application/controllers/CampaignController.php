@@ -785,8 +785,8 @@ class CampaignController extends MyController
 					$email= 'friend_email_'.$i;
 					$message = 'friend_message_'.$i;
 					$form->$name->setValue($friend->name);
-					$form->$email->setValue($friend->email);
-					$form->$message->setValue($friend->message);
+//					$form->$email->setValue($friend->email);
+//					$form->$message->setValue($friend->message);
 					$i++;
 				}
 			}		

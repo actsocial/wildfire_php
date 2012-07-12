@@ -66,7 +66,7 @@
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -76,7 +76,7 @@
 <div id="mainzone-inner">
 
 
-<input type="hidden" name="id" value="xXhT9Iw9BVck" id="id" />
+<input type="hidden" name="id" value="" id="id" />
 <input type="hidden" name="theme" value="wildfire" id="theme" />
 
 <div class="page-bar-area">
@@ -114,13 +114,13 @@
 <input type="hidden" name="answers[11370].id" value="" id="answers[11370].id" />
 
 	<select group="11370" class="selection" id="question_11370" name="answers[11370].value" title="title"  size = "1" onchange="showOtherValueInputInSelect(this)">
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="8707" style=""  >面对面交谈</option>
 <option value="8708" style=""  >网络(论坛，社交网络，博客)</option>
 <option value="8709" style=""  >电话或短信</option>
 <option value="8710" style=""  >聊天工具</option>
 <option value="8711" style=""  >其他</option>
-		<option id="11370_other" value="0"  >Other</option>
+		<option id="11370_other" value="0"  >其他</option>
 	</select> 
  </td>
 
@@ -172,7 +172,7 @@
 <input type="hidden" name="answers[11371].id" value="" id="answers[11371].id" />
 
 	<select group="11371" class="selection" id="question_11371" name="answers[11371].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="1198" style=""  >0</option>
 <option value="1199" style=""  >1</option>
 <option value="1200" style=""  >2</option>
@@ -236,7 +236,7 @@
 <input type="hidden" name="answers[12035].id" value="" id="answers[12035].id" />
 
 	<select group="12035" class="selection" id="question_12035" name="answers[12035].value" title="title"  size = "1" onchange="showOtherValueInputInSelect(this)">
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="9441" style=""  >0位</option>
 <option value="9442" style=""  >1位</option>
 <option value="9443" style=""  >2位</option>
@@ -248,7 +248,7 @@
 <option value="9449" style=""  >8位</option>
 <option value="9450" style=""  >9位</option>
 <option value="9451" style=""  >多于9位</option>
-		<option id="12035_other" value="0"  >Other</option>
+		<option id="12035_other" value="0"  >其他</option>
 	</select> 
  </td>
 
@@ -300,7 +300,7 @@
 <input type="hidden" name="answers[11372].id" value="" id="answers[11372].id" />
 
 	<select group="11372" class="selection" id="question_11372" name="answers[11372].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="1215" style=""  >0</option>
 <option value="1216" style=""  >1</option>
 <option value="1217" style=""  >2</option>
@@ -366,7 +366,7 @@
 <input type="hidden" name="answers[11373].id" value="" id="answers[11373].id" />
 
 	<select group="11373" class="selection" id="question_11373" name="answers[11373].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="1242" style=""  >没有表态</option>
 <option value="1243" style=""  >1分（完全没兴趣）</option>
 <option value="1244" style=""  >2分</option>
@@ -423,7 +423,7 @@
 <input type="hidden" name="answers[11374].id" value="" id="answers[11374].id" />
 
 	<select group="11374" class="selection" id="question_11374" name="answers[11374].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="1232" style=""  >少于1分钟</option>
 <option value="1233" style=""  >1-2分钟</option>
 <option value="1234" style=""  >3-4分钟</option>
@@ -667,7 +667,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_2509" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_2509" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -680,8 +680,8 @@
 <table width="100%">
 <tr>
 <td>
-<input type="hidden" name="answers[12049].id" value="" id="answers[12049].id" />
-<textarea name="answers[12049].value" id="question_12049" cols="40" group="12049" rows="2" class="input-text" ></textarea>
+<input type="hidden" name="answers[12049].id" value="null" id="answers[12049].id" />
+<textarea name="answers[12049].value" id="question_12049" cols="40" group="12049" rows="2" class="input-text" value="null" ></textarea>
 <span class="error-content" id="err_answers[12049].value"  class="redFieldError"></span>
 </td>
 
@@ -716,7 +716,7 @@
 <input type="hidden" name="answers[12052].id" value="" id="answers[12052].id" />
 
 	<select group="12052" class="selection" id="question_12052" name="answers[12052].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="9470" style=""  >今天</option>
 <option value="9471" style=""  >昨天</option>
 <option value="9472" style=""  >前天</option>
@@ -752,7 +752,6 @@
 <div class="header-section" id="h_119">
 	<h3></h3>
 <span class="header-title">
-<h2>谢谢您的合作！</h2>
 </span>
 	<h3></h3>
 </div>
@@ -771,7 +770,7 @@
 <br/>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="提交" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -1093,10 +1092,9 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    	var html = '提交失败：必填的题目不能为空';
+	        jQuery("#check-alert-dialog .content").html(html);
+	        jQuery("#check-alert-dialog").dialog('open');
 	    }
 		return fillMandatory;
 	}
@@ -1125,10 +1123,9 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			var html = '提交失败：不能提交空报告';
+		    jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
@@ -1298,7 +1295,6 @@ var myrules = {
 
 Behaviour.register(myrules);
 
-Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
