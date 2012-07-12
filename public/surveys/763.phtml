@@ -76,6 +76,7 @@
 <div id="mainzone-inner">
 
 
+
 <input type="hidden" name="id" value="IIbD5mJDeOQ2" id="id" />
 <input type="hidden" name="theme" value="wildfire" id="theme" />
 
@@ -1093,7 +1094,11 @@
 			}
 	    }
 	    if(!fillMandatory) {
+<<<<<<< HEAD
 	    	var html = 'Mandatory questions must be filled out';
+=======
+	    	var html = '提交失败：必填的题目不能为空';
+>>>>>>> 9eaf9ce1f41f91a93506091953cfc3c5f076de4b
 			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
@@ -1125,7 +1130,11 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
+<<<<<<< HEAD
 			var html = 'Can not submit empty questionnaire form';
+=======
+			var html = '提交失败：不能提交空报告';
+>>>>>>> 9eaf9ce1f41f91a93506091953cfc3c5f076de4b
 			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
