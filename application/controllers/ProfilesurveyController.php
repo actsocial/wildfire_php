@@ -45,6 +45,9 @@ class ProfilesurveyController extends MyController
 		$consumer = $this->_currentUser;
 		$surveyId = (int)$this->_request->getParam('id', 0);	
 		
+		//precampaignsurvey的css使用的是layout_survey
+		$this->_helper->layout->setLayout("layout_survey");
+		
 		//check history to prevent multiple participation
 		$db = Zend_Registry::get('db');
 		$select1 = $db->select();
