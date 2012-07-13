@@ -5,20 +5,16 @@
 </div>
 <div class="clear"></div>
 
-
 <?php 
 if (isset($this->file)) {  // if static file exist
-    include($this->file);
-} else {
-    readfile("$this->filloutPage");
-}
-
 ?>
-
-<?php if (isset($this->file)) { ?>
+<!--
+ajax的请求放前面
+-->
 <script language="JavaScript" type="text/javascript">
   $('id').value = '';
   $('submit').disabled='disabled';
+
   var url = "<?php echo $this->url(array('controller'=>'common','action'=>'getaccesscode'));?>";
   var params = 'surveyId='+ <?php echo $this->surveyId ;?>;
   new Ajax.Request(
@@ -34,9 +30,39 @@ if (isset($this->file)) {  // if static file exist
       }
   );
 </script>
-<?php } ?>
 
-<!-- 
+<?php
+ include($this->file); 
+} else {
+    readfile("$this->filloutPage");
+} ?>
+
+<!--<?php if (isset($this->file)) { ?>
+<script language="JavaScript" type="text/javascript">
+  $('id').value = '';
+  $('submit').disabled='disabled';
+  alert(3);
+  var url = "<?php echo $this->url(array('controller'=>'common','action'=>'getaccesscode'));?>";
+  var params = 'surveyId='+ <?php echo $this->surveyId ;?>;
+  new Ajax.Request(
+      url,
+      {
+      method: 'get',
+      parameters: params,
+      onSuccess: function(msg) {
+          var accessCode = msg.responseText;
+          $('id').value = accessCode.substring(1,accessCode.length-1);
+          $('submit').disabled='';
+          }
+      }
+  );
+</script>
+<?php }else { ?>
+<script language="JavaScript" type="text/javascript">
+alert(4);
+</script>
+<?php }?>
+--><!-- 
 <div class="content" style="background:#fff;padding-top:0;">
 	<div class="buttons-bar">
 	<a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'description', 'id'=>$this->id));?>'>Back</a>

@@ -37,7 +37,7 @@ class ReportController extends MyController
         $testEnv = Zend_Registry::get('testEnv');
         $file = "./surveys/".$surveyId.".phtml";
         // if static file not exist, go to the normal flow
-        if ($testEnv != 0 || file_exists($file) == false) { 
+        if ($testEnv == 0 || file_exists($file) == false) { 
             // connect to webservice, get the page
             $indicate2Connect = new Indicate2_Connect();
             $accesscode = $indicate2Connect->createParticipation($consumer->email, $surveyId);
