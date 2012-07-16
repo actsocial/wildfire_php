@@ -90,12 +90,12 @@
 					<?php 
 					for ($i = 1; $i <= $this->friendsLimit; $i++) {?>
 						<tr>
-						    <td><?php echo 'Friend No.'.$i;?></td>
-						 </tr>
+						    <!--<td><?php echo '朋友'.$i;?></td>
+						 --></tr>
 						 <tr><td><?php $field = 'friend_name_'.$i; echo $this->form->$field ?></td></tr>
-						 <tr><td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td></tr>
+						 <!--<tr><td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td></tr>
 						 <tr><td><?php $field = 'friend_message_'.$i; echo $this->form->$field ?></td></tr>
-					<?php }			
+					--><?php }			
 					?> 
 				</table>
 					</div>

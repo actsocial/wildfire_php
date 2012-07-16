@@ -23,7 +23,7 @@ class TagController extends MyController {
 			}
 		} catch (Exception $e) {
 		}
-		$this->view->image_uri = $config->image->host."/".(int)$this->_currentUser->id;
+		$this->view->image_uri = $config->image->host."/".(int)$this->_currentUser->id.".ifmg";
 		$this->_helper->layout->setLayout("layout_isotope");
 		
 	}
@@ -60,7 +60,7 @@ class TagController extends MyController {
 	
 	function ajaxtopicsAction(){
 		$this->_helper->layout->disableLayout();
-		define("PAGESIZE",20);
+		define("PAGESIZE",50);
 		$config = Zend_Registry::get('config');
 		$topicsClient = new couchClient ($config->couchdb->uri.":".$config->couchdb->port,$config->couchdb->topics);
 		try {
@@ -70,8 +70,16 @@ class TagController extends MyController {
 			$this->view->page = $page;
 			if($key){
 				$endKey = array($key,array(0,0,0,0,0,0));
-				$startKey = array($key,array('{}','{}','{}','{}','{}','{}'));
-				$view = $topicsClient->skip($page*PAGESIZE)->limit(PAGESIZE)->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->descending(TRUE)->getView('bayers','topics-by-folder');
+				$startKey = $this->_request->getParam('start_key');
+				if(empty($startKey)){
+					$startKey = array($key,array('{}','{}','{}','{}','{}','{}'));
+				}else{
+					$startKey = array($key,array((int)$startKey[1][0],(int)$startKey[1][1],(int)$startKey[1][2],(int)$startKey[1][3],(int)$startKey[1][4],(int)$startKey[1][5]));
+				}
+				$startkey_docid = $this->_request->getParam('startkey_docid');
+				
+				$view = $topicsClient->limit(PAGESIZE)->startkey_docid($startkey_docid)->reduce(FALSE)->startkey($startKey)->endkey($endKey)->stale("ok")->asArray()->descending(TRUE)->getView('bayers','topics-by-folder-and-postdate');
+				
 				$this->view->key = $key;
 				if($totalCount>0){
 					$this->view->totalPage = ceil($totalCount/PAGESIZE);
@@ -94,10 +102,21 @@ class TagController extends MyController {
 //					if(!isset($topic['value']['title'])){
 //						$topic['value']['title'] = "-";
 //					}
+// 					if(isset($topic['value']['date_posted'])){
+// 						list($pyear,$pmonth,$pday,$phour,$pminute,$psecond) = $topic['value']['date_posted'];
+// 						$pmonth+=1;
+// 						$pdate = date("Y-m-d H:i:s",mktime($phour,$pminute,$psecond,$pmonth,$pday,$pyear));
+						
+// 						$diff = time() - strtotime($pdate);
+// 						if($diff > 3600 * 24 *7){
+// 							continue;
+// 						}
+// 					}
+					
 					if(isset($topic['key'][1])){
 						list($year,$month,$day,$hour,$minute,$second) = $topic['key'][1];
 						$month+=1;
-						$date = date("Y-m-d g:i:s a",mktime($hour,$minute,$second,$month,$day,$year));
+						$date = date("Y-m-d H:i:s",mktime($hour,$minute,$second,$month,$day,$year));
 					}else{
 						$date = "-";
 					}
@@ -234,6 +253,48 @@ class TagController extends MyController {
 		}
 	}
 	
+	function ajaxreplyAction(){
+		$platform = $this->_request->getParam('platform');
+		$config = Zend_Registry::get('config');
+		$host = $config->writer->host;
+		$port = $config->writer->port;
+		$client = new HttpClient($host,$port);
+// 		$client->post("path","data");
+// 		$content = $client->getContent();
+		$snsUserModel = new SnsUser();
+		$snsUser = $snsUserModel->loadByConsumerAndPlatform($this->_currentUser->id,$platform);
+		if(empty($snsUser)){
+			$this->_redirect("/sns/index");
+		}else{
+			$this->_helper->layout->disableLayout();
+			$param = $snsUser->toArray();
+			$param['text'] = $this->_request->getParam('text');
+			$param['text'] = urldecode($this->_request->getParam('topicId'));
+			$client->post("/sender/commets",$param);
+		}
+	}
+	
+	function ajaxpublicAction(){
+		$platform = $this->_request->getParam('platform');
+		$config = Zend_Registry::get('config');
+		$host = $config->writer->host;
+		$port = $config->writer->port;
+		$client = new HttpClient($host,$port);
+		// 		$client->post("path","data");
+		// 		$content = $client->getContent();
+		$snsUserModel = new SnsUser();
+		$snsUser = $snsUserModel->loadByConsumerAndPlatform($this->_currentUser->id,$platform);
+		if(empty($snsUser)){
+			$this->_redirect("/sns/index");
+		}else{
+			$this->_helper->layout->disableLayout();
+			$param = $snsUser->toArray();
+			$param['text'] = $this->_request->getParam('text');
+			$client->post("/sender/public_tweet",$param);
+		}
+		
+	}
+	
 	function ajaxsaveweiboreplyAction(){
 		$this->_helper->layout->disableLayout();
 		$topicId = urldecode($this->_request->getParam('topicId'));
@@ -294,14 +355,15 @@ class TagController extends MyController {
 		$topic_uri = urldecode($this->_request->getParam('topic_uri'));
 		$config = Zend_Registry::get('config');
 		$host = $config->ws->host;
-		$port = $config->ws->port || 80;
+		$port = $config->ws->port;
 		$uri = $config->ws->uri;
 								
 	  $client = new HttpClient($host,$port);
 		$client->post($uri, array(
 		  'topic_uri' => $topic_uri
 		));
-		
+		print_r($client->getContent());die;
+		$this->_helper->json($client->getContent());
 	}
 	
 }

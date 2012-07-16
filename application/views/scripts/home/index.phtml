@@ -214,14 +214,18 @@
 								<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
 							<?php }?>
 						<?php }else{?>
+						<!--
 						<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"  height="110"/></a>
+						-->
+						<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'precampaign', 'id'=>$this->recentInvitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"  height="110"/></a>
+						
 						<?php }?>
 					</div>
 					<div style="float: left; width:200px; padding:10px;">
 						<!--<?php echo $invitation["invitation_description"]."<br>".$invitation["invitation_description2"];?>
 					-->
 							<?php if($invitation['name']=="美妆达人"){?>
-									<?php echo "加入美妆活动，这里有你最想要了解的潮流资讯，也期待你留下自己的心得！<br><br>
+									<?php echo "加入美妆活动，这里有你最想要了解的潮流资讯，也期待你留下自己的心得！<br>
 												活动时间：<br>
 												2012.7.1——2012.7.31";?>
 							<?php }else{ ?>

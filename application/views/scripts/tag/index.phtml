@@ -13,7 +13,7 @@
   <div><a><span class="badge badge-info filter" onclick="filter('.Blog');return false;">博客</span></a></div>
   <div><a><span class="badge badge-warning filter" onclick="filter('.Weibo');return false;">微博</span></a></div>
   <div><a><span class="badge badge-important filter" onclick="filter('.SNS');return false;">社交网站</span></a></div>
-  <div><a><span style="background-color:#D9ADC7;" class="badge filter" onclick="filter('.ECOM');return false;">电子商务</span></a></div>
+  <div><a><span style="background-color:#C99DB7;" class="badge filter" onclick="filter('.ECOM');return false;">电子商务</span></a></div>
 </div>
 
 <div class="modal hide">
@@ -34,7 +34,7 @@
 
 
 <script type="text/template" id="container_template">
-	<div class="loadingtopic" style="display: none"></div>
+<div id="infscr-loading" style="display: none;"><img src="<?php echo $this->baseUrl();?>/images/loading-topics.gif" alt="Loading..."><div><em>Loading for more...</em></div></div>
 </script>
 
 
@@ -48,21 +48,21 @@
 <%}else{ %>
 <div class="topic span3 isotope-item alert <%= site.type %>" data="<%= id %>">
 <%} %>
+        <div class="box_head title" style="">
+              <a href="javascript:void(0)">
+              		<% if (_.isEmpty(title)) {%> <%= body.substring(0,30) %> <%} else { %><%= title.substring(0,30) %> <%} %>
+              </a>
+        </div>
 		<div style="width:100%;" class="topic_head">
 			<div style="" class="title_td">
 				<div class="row-fluid">
 					<div class="span11">
 						<i class="babytree" style=""></i>
-						<span class="title"> 
               				<div class="author">
                 				<img style="width:50px;height:50px;" src="<%= author.profile_img %> "/><br> <%= author.name %>
               				</div>
-              				<a href="javascript:void(0)">
-                				<% if (_.isEmpty(title)) {%> <%= body.substring(0,30) %> <%} else { %><%= title.substring(0,30) %> <%} %>
-              				</a><br>
             				来自: <%= site.name %><br>
           					<button class="btn reply_window">  我要回复	</button>    
-            			</span>
             			<br />           
         
 					</div>

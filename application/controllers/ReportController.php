@@ -304,7 +304,8 @@ class ReportController extends MyController
 						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
 						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
 						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3);
+						$url_mission4 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2293";//童装
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3).file_get_contents($url_mission4);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -1551,7 +1552,8 @@ function adminreportbatchreplyAction(){
 						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
 						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
 						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3);
+						$url_mission4 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2293";//童装
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3).file_get_contents($url_mission4);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
