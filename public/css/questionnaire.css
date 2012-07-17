@@ -116,7 +116,7 @@ form .fillout-content .question-title a {
 	padding-bottom: 10px;
 }
 .fillout-content .fillout-container table td .question-title {
-	width: 240px;
+	width: 260px;
 	line-height: 16px;
 }
 .fillout-content .fillout-container table td .elementInfoText {
@@ -124,7 +124,7 @@ form .fillout-content .question-title a {
 	padding-left: 10px;
 	margin-top: 3px;
 	margin-bottom: 3px;
-	background: url(../images/list-style-line.gif) repeat-y 2px 8px;
+	/*background: url(../images/list-style-line.gif) repeat-y 2px 8px;*/
 }
 .fillout-content .fillout-container table td table.select-table ul {
 	padding:0;
