@@ -323,7 +323,7 @@ a.link {
 .buttons-bar a.big-button-blue {
 	background: url(../images/big-button-blue.gif) no-repeat center center;
 	display: block;
-	float: left;
+	/*float: left;*/
 	width: 160px;
 	height: 36px;
 	line-height: 36px;
