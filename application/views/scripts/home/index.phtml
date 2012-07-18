@@ -419,7 +419,11 @@
 									<?php echo "加入美妆活动，这里有你最想要了解的潮流资讯，也期待你留下自己的心得！<br>
 												活动时间：<br>
 												2012.7.1——2012.7.31";?>
-							<?php }else{ ?>
+							<?php }elseif ($invitation['name']=='电影大赏'){ ?>
+									<?php echo "夏日电影大赏，无论是记忆中的经典，还是正在热映的新片，来和星星火分享你的电影观感吧！<br>
+												活动时间：<br>
+												2012.7.15——2012.8.15";?>
+							<?php }else{?>
 									<?php echo $invitation["invitation_description"];?><br> <span style='color:red'>点击图片参加活动</span>
 							<?php }?>
 
