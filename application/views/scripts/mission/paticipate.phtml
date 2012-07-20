@@ -115,11 +115,6 @@
 </div>
 <div class="clear"></div>
 
-
-<?php 
-include('../public/surveys/'.$this->file);
-?>
-
 <?php if (isset($this->file)) { ?>
 <script language="JavaScript" type="text/javascript">
   $('id').value = '';
@@ -140,6 +135,12 @@ include('../public/surveys/'.$this->file);
   );
 </script>
 <?php } ?>
+
+<?php 
+include('../public/surveys/'.$this->file);
+?>
+
+
 
 
 
