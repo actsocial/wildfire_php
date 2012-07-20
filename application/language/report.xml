@@ -67,10 +67,10 @@
 
                 <tu tuid='Choose_file'>
 			<tuv xml:lang="zh">
-				<seg>如果你需要提交照片，请选择文件提交</seg>
+				<seg>如果你有和活动有关的照片，可点击提交与我们分享。如果不需要提交照片，可返回主页。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>If you need to upload pictures, please choose the files</seg>
+				<seg>如果你有和活动有关的照片，可点击提交与我们分享。如果不需要提交照片，可返回主页。</seg>
 			</tuv>
 		</tu>
 
