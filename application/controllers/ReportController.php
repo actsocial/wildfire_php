@@ -1838,8 +1838,8 @@ function adminreportbatchreplyAction(){
 					array_push($accessCodeList,$accessCode['accesscode']);
 					$reportInforArray[$accessCode['accesscode']]['consumer_id'] = $accessCode['consumer_id'];
 					$reportInforArray[$accessCode['accesscode']]['email'] = $accessCode['email'];
-					$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
-					$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
+//					$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
+//					$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
 					$reportInforArray[$accessCode['accesscode']]['createdate'] = $accessCode['create_date'];
 					$reportInforArray[$accessCode['accesscode']]['source'] = $accessCode['source'];
 					$reportInforArray[$accessCode['accesscode']]['point'] = $accessCode['point_amount'];
@@ -1915,8 +1915,8 @@ function adminreportbatchreplyAction(){
 							array_push($accessCodeList,$accessCode['accesscode']);
 							$reportInforArray[$accessCode['accesscode']]['consumer_id'] = $accessCode['consumer_id'];
 							$reportInforArray[$accessCode['accesscode']]['email'] = $accessCode['email'];
-							$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
-							$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
+//							$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
+//							$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
 							$reportInforArray[$accessCode['accesscode']]['createdate'] = $accessCode['create_date'];
 							$reportInforArray[$accessCode['accesscode']]['source'] = $accessCode['source'];
 							$reportInforArray[$accessCode['accesscode']]['point'] = $accessCode['point_amount'];
