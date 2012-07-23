@@ -1838,8 +1838,8 @@ function adminreportbatchreplyAction(){
 					array_push($accessCodeList,$accessCode['accesscode']);
 					$reportInforArray[$accessCode['accesscode']]['consumer_id'] = $accessCode['consumer_id'];
 					$reportInforArray[$accessCode['accesscode']]['email'] = $accessCode['email'];
-					$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
-					$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
+//					$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
+//					$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
 					$reportInforArray[$accessCode['accesscode']]['createdate'] = $accessCode['create_date'];
 					$reportInforArray[$accessCode['accesscode']]['source'] = $accessCode['source'];
 					$reportInforArray[$accessCode['accesscode']]['point'] = $accessCode['point_amount'];
@@ -1915,8 +1915,8 @@ function adminreportbatchreplyAction(){
 							array_push($accessCodeList,$accessCode['accesscode']);
 							$reportInforArray[$accessCode['accesscode']]['consumer_id'] = $accessCode['consumer_id'];
 							$reportInforArray[$accessCode['accesscode']]['email'] = $accessCode['email'];
-							$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
-							$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
+//							$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
+//							$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
 							$reportInforArray[$accessCode['accesscode']]['createdate'] = $accessCode['create_date'];
 							$reportInforArray[$accessCode['accesscode']]['source'] = $accessCode['source'];
 							$reportInforArray[$accessCode['accesscode']]['point'] = $accessCode['point_amount'];
@@ -1988,11 +1988,11 @@ function adminreportbatchreplyAction(){
 			$baseColumnNameArray = array('A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
 			$columnNameArray = array();
 			$i=0;
-			while($i < 30*9){
-				if($i < 30){
+			while($i < 26*9){
+				if($i < 26){
 					array_push($columnNameArray,$baseColumnNameArray[$i]);
 				}else{
-					array_push($columnNameArray,$baseColumnNameArray[$i/30-1].$baseColumnNameArray[$i % 30]);
+					array_push($columnNameArray,$baseColumnNameArray[$i/26-1].$baseColumnNameArray[$i % 26]);
 				}
 				$i ++;
 			}
