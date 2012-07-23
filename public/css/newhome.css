@@ -19,8 +19,9 @@ img {
 }
 .header {
 	width: 100%;
-	height:80px;
-	background: url(../images/background-top.jpg) repeat-x left top;
+	height: 60px;
+	background-color: #309BE4;
+	box-shadow: 1px 1px 5px #aaa;
 }
 .header .header-inner {
 	width: 680px;
@@ -244,12 +245,14 @@ td.article_column {
 */
 .footer {
 	width: 100%;
-	background: url(../images/background-footer.jpg) repeat-x left top;
-	padding-top: 36px;
+	background-color: #309BE4;
+	marging-top: 36px;
 	margin-bottom: 20px;
 }
 .footer-inner {
 	margin: 0 auto;
+    background-color: #309BE4;
+	box-shadow: 1px 1px 5px #aaa;
 	width: 680px;
 }
 
