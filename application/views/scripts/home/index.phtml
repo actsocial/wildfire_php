@@ -197,52 +197,8 @@
 </div>
 
 <div class="spark-report">
-<?php $i=1; foreach ($this->allInvitations as $invitation):?>
-	<div class="spark-report-box">
-		<div class="spark-report-box-inner">
-			<h2><?php echo $invitation["name"]?></h2>
-		
-            <div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:true;"<?php endif;?>>
-			<?php $i++;?>
-			<ul>
-				<div style="border:1px dashed #3AB6EB;height:110px;width:630px">
-					<div style="float: left;">
-						<?php if($invitation['type'] == 'mission'){?>
-							<?php if($invitation['name']=="美妆达人"){?>
-								<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
-							<?php }else{ ?>
-								<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
-							<?php }?>
-						<?php }else{?>
-						<!--
-						<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"  height="110"/></a>
-						-->
-						<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'precampaign', 'id'=>$this->recentInvitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"  height="110"/></a>
-						
-						<?php }?>
-					</div>
-					<div style="float: left; width:200px; padding:10px;">
-						<!--<?php echo $invitation["invitation_description"]."<br>".$invitation["invitation_description2"];?>
-					-->
-							<?php if($invitation['name']=="美妆达人"){?>
-									<?php echo "加入美妆活动，这里有你最想要了解的潮流资讯，也期待你留下自己的心得！<br>
-												活动时间：<br>
-												2012.7.1——2012.7.31";?>
-							<?php }else{ ?>
-									<?php echo $invitation["invitation_description"];?>
-							<?php }?>
 
-					</div>
-				</div>
-			</ul>
-			</div>
-		</div>
-	</div>
-<?php endforeach?>
-
-
-
-<?php $j = $i;foreach ($this->activeCampaigns as $activeCampaign):?>			
+<?php $j = 0;foreach ($this->activeCampaigns as $activeCampaign):?>			
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
 			<h2><?php echo $activeCampaign["name"]?></h2>
@@ -429,6 +385,57 @@
 		</div>
 	</div>
 <?php endforeach?>
+
+
+
+<?php $i=1; foreach ($this->allInvitations as $invitation):?>
+	<div class="spark-report-box">
+		<div class="spark-report-box-inner">
+			<h2><?php echo $invitation["name"]?></h2>
+		
+            <div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:true;"<?php endif;?>>
+			<?php $i++;?>
+			<ul>
+				<div style="border:1px dashed #3AB6EB;height:110px;width:630px">
+					<div style="float: left;">
+						<?php if($invitation['type'] == 'mission'){?>
+							<?php if($invitation['name']=="美妆达人"){?>
+								<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
+							<?php }else{ ?>
+								<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
+							<?php }?>
+						<?php }else{?>
+						<!--
+						<a href="<?php echo $this->url(array('controller'=>'campaigninvitation','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"  height="110"/></a>
+						-->
+						<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'precampaign', 'id'=>$this->recentInvitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg"  height="110"/></a>
+						
+						<?php }?>
+					</div>
+					<div style="float: left; width:200px; padding:10px;">
+						<!--<?php echo $invitation["invitation_description"]."<br>".$invitation["invitation_description2"];?>
+					-->
+							<?php if($invitation['name']=="美妆达人"){?>
+									<?php echo "加入美妆活动，这里有你最想要了解的潮流资讯，也期待你留下自己的心得！<br>
+												活动时间：<br>
+												2012.7.1——2012.7.31";?>
+							<?php }elseif ($invitation['name']=='电影大赏'){ ?>
+									<?php echo "夏日电影大赏，无论是记忆中的经典，还是正在热映的新片，来和星星火分享你的电影观感吧！<br>
+												活动时间：<br>
+												2012.7.15——2012.8.15";?>
+							<?php }else{?>
+									<?php echo $invitation["invitation_description"];?><br> <span style='color:red'>点击图片参加活动</span>
+							<?php }?>
+
+					</div>
+				</div>
+			</ul>
+			</div>
+		</div>
+	</div>
+<?php endforeach?>
+
+
 
 
 	

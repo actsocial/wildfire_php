@@ -98,15 +98,22 @@
 
 <p style="color:red">提交完成后可继续上传照片</p>
 </p>
+<?php }elseif ($this->surveyId == '768'){?>
+<p>
+那些记载在胶片上的故事哪些触动了你的灵魂，<br>
+哪些温暖了你的心房，<br>哪些消磨了你的时光，<br>又有哪些已被你遗忘？<br><br>
+无论是已经下档的还是正在热映的，星星火都期待你的分享。<br><br>
+关于社区，有任何疑问或问题，还可以通过新浪微博联系我们，<br>
+星星火社区新浪微博<a href="http://weibo.com/xxhuo">http://weibo.com/xxhuo</a><br>
+<br><br>
+
+<p style="color:red">提交完成后可继续上传照片</p>
+</p>
 <?php } ?>
+
 
 </div>
 <div class="clear"></div>
-
-
-<?php 
-include('../public/surveys/'.$this->file);
-?>
 
 <?php if (isset($this->file)) { ?>
 <script language="JavaScript" type="text/javascript">
@@ -128,6 +135,12 @@ include('../public/surveys/'.$this->file);
   );
 </script>
 <?php } ?>
+
+<?php 
+include('../public/surveys/'.$this->file);
+?>
+
+
 
 
 

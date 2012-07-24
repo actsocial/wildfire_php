@@ -1288,6 +1288,7 @@ QQ:   4006008707
 		</tu>
 		
 		<!-- 英孚教育 -->
+		
 		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_30'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[恭喜你成功参加星星火英孚教育口碑活动]]></seg>
@@ -1351,6 +1352,93 @@ Alice
 电话:  400 600 8707
 短信：15000895221
 QQ:   4006008707
+
+
+]]></seg>
+			</tuv>
+		</tu>
+		
+		<!-- 童装活动 -->
+		
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_39'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[你已成功参加星星火童装口碑活动]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[你已成功参加星星火童装口碑活动]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_39'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+亲爱的：
+
+感谢你参加星星火社区的Sergent Major（思佳美儿）童装口碑活动！来自法国Sergent Major利用舒适的面料、时尚的设计与易混搭的元素，对潮妈们来说，不容错过。
+
+如果你还没有提供详细的收件地址，请前往如下地址完成最后一步。
+http://home.xingxinghuo.cn/public/campaign/precampaignfinished/survey/765
+
+我们的体验分享礼包会在近期寄出，请确保你提供的地址到时能收到快递。
+
+无论是现在，还是在与好友分享礼包的惊喜时，或者结伴去Sergent Major门店后，记得在星星火网站提交体验分享报告哦！你与我们分享的报告越多内容越详细，你将会获得更多的活动邀请和更多精美实用的体验产品。(请参考活动手册上的介绍)
+
+关注新浪微博@星星火社区Wildfire，了解我们接下来举办的丰富活动，也会为你带来更多惊喜哦~ 
+现在就进入下面的链接，提交活动报告，与我们分享你的体验感受！
+http://home.xingxinghuo.cn/public/home
+
+祝你在星星火社区体验愉快！
+
+
+星星火社区
+
+有任何问题，你可以通过以下方式联系我们：
+电话：400 600 8707
+QQ：  400 600 8707
+邮箱：home@xingxinghuo.org
+微博：weibo.com/xxhuo
+
+星星火口碑活动是怎么进行的？
+第一步：接受活动邀请
+第二步：收到活动体验包
+第三步：和你们的亲友自由地谈论体验的产品，并让我们知道大家是怎么谈论的
+第四步：获得今后更多口碑活动的邀请以及更多免费产品
+
+
+]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+			<seg><![CDATA[
+亲爱的：
+
+感谢你参加星星火社区的Sergent Major（思佳美儿）童装口碑活动！来自法国Sergent Major利用舒适的面料、时尚的设计与易混搭的元素，对潮妈们来说，不容错过。
+
+如果你还没有提供详细的收件地址，请前往如下地址完成最后一步。
+http://home.xingxinghuo.cn/public/campaign/precampaignfinished/survey/765
+
+我们的体验分享礼包会在近期寄出，请确保你提供的地址到时能收到快递。
+
+无论是现在，还是在与好友分享礼包的惊喜时，或者结伴去Sergent Major门店后，记得在星星火网站提交体验分享报告哦！你与我们分享的报告越多内容越详细，你将会获得更多的活动邀请和更多精美实用的体验产品。(请参考活动手册上的介绍)
+
+关注新浪微博@星星火社区Wildfire，了解我们接下来举办的丰富活动，也会为你带来更多惊喜哦~ 
+现在就进入下面的链接，提交活动报告，与我们分享你的体验感受！
+http://home.xingxinghuo.cn/public/home
+
+祝你在星星火社区体验愉快！
+
+
+星星火社区
+
+有任何问题，你可以通过以下方式联系我们：
+电话：400 600 8707
+QQ：  400 600 8707
+邮箱：home@xingxinghuo.org
+微博：weibo.com/xxhuo
+
+星星火口碑活动是怎么进行的？
+第一步：接受活动邀请
+第二步：收到活动体验包
+第三步：和你们的亲友自由地谈论体验的产品，并让我们知道大家是怎么谈论的
+第四步：获得今后更多口碑活动的邀请以及更多免费产品
 
 
 ]]></seg>

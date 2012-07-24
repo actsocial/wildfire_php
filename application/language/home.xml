@@ -286,7 +286,7 @@ Each Report = Up to 500 Points]]></seg>
 		</tu>
 		<tu tuid='Bonus_Report'>
 			<tuv xml:lang="zh">
-				<seg>额外活动报告 </seg>
+				<seg>更多活动报告 </seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Bonus Report</seg>

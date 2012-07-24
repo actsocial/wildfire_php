@@ -304,7 +304,9 @@ class ReportController extends MyController
 						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
 						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
 						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3);
+						$url_mission4 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2293";//童装
+						$url_mission5 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3239";//电影大赏
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3).file_get_contents($url_mission4).file_get_contents($url_mission5);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -1551,7 +1553,9 @@ function adminreportbatchreplyAction(){
 						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
 						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
 						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3);
+						$url_mission4 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2293";//童装
+						$url_mission5 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3239";//电影大赏
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3).file_get_contents($url_mission4).file_get_contents($url_mission5);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -2035,6 +2039,8 @@ function adminreportbatchreplyAction(){
 			if($formData['submittype'] == 'report'){
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "ConsumerId");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "ConsumerEmail");
+				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "login_phone");
+				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "recipients_name");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Create_date");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Source");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Point");

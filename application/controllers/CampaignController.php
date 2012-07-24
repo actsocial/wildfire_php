@@ -512,6 +512,9 @@ class CampaignController extends MyController
 		$consumer = $this->_currentUser;
 		$id = (int)$this->_request->getParam('id');
 
+		//precampaignsurvey的css使用的是layout_survey
+		$this->_helper->layout->setLayout("layout_survey");
+		
 		if ($id > 0) {
 			$this->view->id = $id;
 				
@@ -595,6 +598,8 @@ class CampaignController extends MyController
 		}else{
 			$this->view->visiable = true;
 		}
+		//precampaignsurvey的css使用的是layout_survey
+		$this->_helper->layout->setLayout("layout_survey");
 		
 		$this->view->campaign_id = $id;
 		$campaign = $campaignModel->fetchRow("id=".$id);
@@ -642,6 +647,9 @@ class CampaignController extends MyController
 		$this->view->activeTab = 'Campaign';
 		$this->view->title = $this->view->title = $this->view->translate("Wildfire")." - ".$this->view->translate("You_are_in");
 
+		//precampaignsurvey的css使用的是layout_survey
+		$this->_helper->layout->setLayout("layout_survey");
+		
 		$id = (int)$this->_request->getParam('survey');
 		$campaignModel = new Campaign();	
 		$this->view->campaign  = $campaignModel->fetchRow("pre_campaign_survey=".$id." or "."pre_campaign_survey_en=".$id);
@@ -777,8 +785,8 @@ class CampaignController extends MyController
 					$email= 'friend_email_'.$i;
 					$message = 'friend_message_'.$i;
 					$form->$name->setValue($friend->name);
-					$form->$email->setValue($friend->email);
-					$form->$message->setValue($friend->message);
+//					$form->$email->setValue($friend->email);
+//					$form->$message->setValue($friend->message);
 					$i++;
 				}
 			}		
