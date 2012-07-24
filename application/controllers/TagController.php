@@ -98,6 +98,8 @@ class TagController extends MyController {
 				$user = $this->_currentUser->id;
 				$irrModel = new InboxReadRecord();
 				$readResult = $irrModel->findReadTopicByUserAndTopicIds($user,$topicIds);
+				$irerModel = new InboxRepliedRecord();
+				$repliedResult = $irerModel->findRepliedTopicByUserAndTopicIds($user,$topicIds);
 				foreach($view['rows'] as $topic):
 //					if(!isset($topic['value']['title'])){
 //						$topic['value']['title'] = "-";
@@ -157,6 +159,11 @@ class TagController extends MyController {
 						$topic['value']['read'] = true;
 					}else{
 						$topic['value']['read'] = false;
+					}
+					if(in_array($topic['id'],$repliedResult)){
+						$topic['value']['replied'] = true;
+					}else{
+						$topic['value']['replied'] = false;
 					}
 					$url = $topic['value']['site'];
 					$site = getInfoBySiteUrl($url);
@@ -341,8 +348,22 @@ class TagController extends MyController {
 	
 	function adminindexAction(){
 		$this->_helper->layout->setLayout("layout_admin");
-		$irrModel = new InboxReplyRecord();
-		$this->view->irrs = $irrModel->findReplyRecord();
+		$irrModel = new InboxRepliedRecord();
+		$this->view->irrs = $irrModel->findRepliedTopicOrderByUser();
+	}
+	
+	function adminajaxauditAction(){
+		$this->_helper->layout->disableLayout();
+		$rewardPointTransactionRecordModel = new RewardPointTransactionRecord();
+		$rewardPointTransaction = array(
+												"consumer_id" => $this->_request->getParam('consumer'),
+												"date" => date("Y-m-d H:i:s"),
+												"transaction_id" => "11",
+												"point_amount" => $this->_request->getParam('point')
+		);
+		$id = $rewardPointTransactionRecordModel->insert($rewardPointTransaction);
+		$irrModel = new InboxRepliedRecord();
+		$irrModel->updatePointTransaction($this->_request->getParam('irrId'),$id);
 	}
 	
 	function testAction(){
@@ -366,4 +387,8 @@ class TagController extends MyController {
 		$this->_helper->json($client->getContent());
 	}
 	
+	function replyhistoryAction(){
+		$irrModel = new InboxRepliedRecord();
+		$this->view->irrs = $irrModel->findRepliedTopicByUser($this->_currentUser->id);
+	}
 }
