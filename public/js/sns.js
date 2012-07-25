@@ -1,7 +1,6 @@
 jQuery(function(){
 	jQuery("#oauthWindow").attr("src","");
 	jQuery(".sns-box.new").bind("click",addAccount);
-	jQuery(".sns-box").not(".new").bind("click",loadSns);
 });
 function addAccount(){
 	jQuery("#oauthWindow").attr("src",'').hide();
@@ -9,27 +8,30 @@ function addAccount(){
 	jQuery("#editSnsModal .modal-body").css("height", '')
 	jQuery("#editSnsModal").removeClass("Weibo_iframe").modal('show');
 }
-function requestToken(name, writer_host){
-//	if(param['oauth_version']=='1'){
-		jQuery(".thumbnails").hide();
-		jQuery("#editSnsModal").addClass(name+"_iframe");
-		var domain = writer_host;
-		var base_uri = "http://" + writer_host + "/sender/dispatcher?"
-		console.log(domain);
-		jQuery("#oauthWindow").attr("src", base_uri + "source="+name+"&domain="+domain).show().ready(function(){
-			var height = jQuery(this).height();
-			if(height>300){
-				height = 300;
-			}
-			jQuery("#editSnsModal .modal-body").css("height", height);
-		});
-//	}
-}
-function closeModal(){
+function requestToken(name, writer_host, id){
 	jQuery("#editSnsModal").modal('hide');
-	location.reload();
-}
-function loadSns(){
-	location.href = "/sns/detail?sns_id="+jQuery(this).attr("sns-id");
+	jQuery("#authModal").modal({keyboard: false});
+	jQuery("#authModal").modal('show');
+	var domain = writer_host;
+	var code = parseInt(Date.now().toString() + id); 
+	var base_uri = "http://" + writer_host + "/sender/dispatcher?"
+	window.open(base_uri + "source="+name+"&domain="+domain+"&code="+code+"&from=community", '_blank');
+											  
+	jQuery.ajax({
+		type: "GET",
+		url: "sns/ajaxsave",
+		contentType: "application/json",
+	  dataType: "json",
+	  accept: "application/json",
+	  data: {"code": code},
+	  success: function(data){
+	  	jQuery("#authModal .waiting").text("授权成功，窗口即将关闭");
+	  	setTimeout("jQuery('#authModal').modal('hide');", 10000);
+	  	location.reload();
+		}
+ 	});							
 }
 
+jQuery("#close").bind('click', function(){
+	location.reload();
+});
