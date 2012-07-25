@@ -105,7 +105,8 @@ class MyController extends Zend_Controller_Action
 	                   'sms'    => array('sendcoupon'=>null),
 	                   'spam'   => array('index'=>null,'spam'=>null),
 	                   'gift'   => array('list'=>null),
-	                   'report' => array('saveuploaddata' => null),	  
+	                   'report' => array('saveuploaddata' => null),
+	                   'sns' => null,
 		               );
 	  return !(array_key_exists($controller, $exceptions) && (!isset($exceptions[$controller]) || array_key_exists($action, $exceptions[$controller])));
 	}
