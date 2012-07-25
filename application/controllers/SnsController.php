@@ -75,7 +75,7 @@ class SnsController extends MyController
             'access_token' => $rs->access_token
           );
           $where = $sns->getAdapter()->quoteInto('id = ?', $row->id);
-          $sns->update($data, $where);          
+          $sns->update($data, $where);        
         } else {       
           try {         
             $data = array(
@@ -99,8 +99,8 @@ class SnsController extends MyController
           } catch(Exception $e) {
             print_r($e);
           }
-          break;
         }
+        break;
       }
     }
     

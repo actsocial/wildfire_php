@@ -7,7 +7,7 @@ var KAIXIN_REG = /^www.kaixin001.com*/;
 var KAIXIN_SOURCE_ID_REG = /objid=\d*/;
 var KAIXIN_SOURCE_TYPE_REG = /objtype=\d*/;
 var KAIXIN_USER_ID_REG = /ouid=\d*/;
-var TENCENT_REG = /^t.qq.com\/\d{15}/;
+var TENCENT_REG = /^t.qq.com\/\d{14}/;
 var NETEASE_REG = /^t.163.com\/*/;
 var DOUBAN_REG = /^site.douban.com*/;
 

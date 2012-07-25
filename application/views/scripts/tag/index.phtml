@@ -49,53 +49,56 @@
 </script>
 
 <script type="text/template" id="topic_template">
-<% if(replied){ %>
-	<div class="topic span3 isotope-item alert <%= site.type %> replied" data="<%= id %>">
-<%}else{ %>
-<% if(read){ %>
-	<div class="topic span3 isotope-item alert <%= site.type %> read" data="<%= id %>">
-<%}else{ %>
-<div class="topic span3 isotope-item alert <%= site.type %>" data="<%= id %>">
-<%} %>
-<%} %>
-        <div class="box_head title" style="">
-              <a href="javascript:void(0)">
-              		<% if (_.isEmpty(title)) {%> <%= body.substring(0,30) %> <%} else { %><%= title.substring(0,30) %> <%} %>
-              </a>
+  <% if(replied){ %>
+  	<div class="topic span3 isotope-item alert <%= site.type %> replied" data="<%= id %>">
+  <%}else{ %>
+  <% if(read){ %>
+  	<div class="topic span3 isotope-item alert <%= site.type %> read" data="<%= id %>">
+  <%}else{ %>
+  <div class="topic span3 isotope-item alert <%= site.type %>" data="<%= id %>">
+  <%} %>
+  <%} %>
+  
+  <div class="box_head title" style="">
+    <a href="javascript:void(0)">
+    	<% if (_.isEmpty(title)) {%> <%= body.substring(0,30) %> <%} else { %><%= title.substring(0,30) %> <%} %>
+    </a>
+  </div>
+  
+	<div style="width:100%;" class="topic_head">
+		<div style="" class="title_td">
+			<div class="row-fluid">
+				<div class="span11">
+					<i class="babytree" style=""></i>
+    				<div class="author">
+      				<img style="width:50px;height:50px;" src="<%= author.profile_img %> "/><br> <%= author.name %>
+    				</div>
+    				来自: <%= site.name %><br>
+  					<button class="btn reply_window">  我要回复	</button>    
+    			  <br />           
+      
+				</div>
+        <div span="span2">
+        	<i class="icon-zh-CN" style="float:right"></i>
         </div>
-		<div style="width:100%;" class="topic_head">
-			<div style="" class="title_td">
-				<div class="row-fluid">
-					<div class="span11">
-						<i class="babytree" style=""></i>
-              				<div class="author">
-                				<img style="width:50px;height:50px;" src="<%= author.profile_img %> "/><br> <%= author.name %>
-              				</div>
-            				来自: <%= site.name %><br>
-          					<button class="btn reply_window">  我要回复	</button>    
-            			<br />           
-        
-					</div>
-			        <div span="span2">
-			        	<i class="icon-zh-CN" style="float:right"></i>
-			        </div>
-				</div>
-				<div style="display: none;" class="topicPRR">
-			    	<div class="posts"><div>Loading...</div></div>
-                    <!--
-			        <div class="responses">
-			        </div>
-			        <div class="reply" id="reply_box_1">
-						<form action="">
-						    <textarea placeholder="在这里填写您想回复的话" style="width:90%" rows="4" class="reply-content"></textarea>
-						    <button id="" class="btn btn-primary add-url">添加原帖链接</button>
-						<img id="submit_button_1" class="weibo-reply-img" style="cursor:pointer;padding-bottom: 10px;" src="<?php echo $this->baseUrl();?>/images/weiboreply.gif"></img>
-						</form>
-					</div>
-                    -->
-				</div>
+			</div>
+			
+			<div style="display: none;" class="topicPRR">
+	    	<div class="posts"><div>Loading...</div></div>     
+        <div class="responses"></div>
+        <div class="reply" id="reply_box_1"  style="display: none;">
+					<form action="">
+				    <textarea placeholder="在这里填写您想回复的话" style="width:90%" rows="4" class="reply-content"></textarea>
+				    <!--
+				    <button id="" class="btn btn-primary add-url">添加原帖链接</button>
+					  <img id="submit_button_1" class="weibo-reply-img" style="cursor:pointer;padding-bottom: 10px;" src="<?php echo $this->baseUrl();?>/images/weiboreply.gif"></img>
+					  !-->
+					  <button></button>
+					</form>
+			  </div>
 			</div>
 		</div>
+	</div>
 		
 		
 	</div>
@@ -113,7 +116,7 @@
 <% if (index!=0) { %>
 	<div class="head span2">
 		<div style="vertical-align: top; margin-left: 0px; overflow-x:hidden;">
-        		<img style="width:35px; height:35px;" src='<%= post.get("profile_img_path") %>' /><br>
+      <img style="width:35px; height:35px;" src='<%= post.get("profile_img_path") %>' /><br>
 		</div>
 	</div>
 <% } %>
@@ -178,6 +181,10 @@ function getIssue(topic,issue){
 			jQuery(".topics").html(data);
 		});
 	});
+}
+
+function show_reply(){
+  jQuery('.responses').show();
 }
 
 // works in ie and firefox, but not in chrome

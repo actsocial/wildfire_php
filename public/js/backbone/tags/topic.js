@@ -162,6 +162,12 @@ window.TopicView = Backbone.View.extend({
 			$(".topicPRR", this.$el).show();
 //			$('.topic',this.$el).removeClass("span4");
 //			$('.topic',this.$el).addClass("span61");
+			console.log(this.model.id);
+			if (Sns.isSns(this.model.id)) {
+				$("#reply_box_1", this.$el).show();
+			} else {
+				$("#reply_box_1", this.$el).hide();
+			}
 
 			this.resizeTopicDiv(100);
 		} else {
