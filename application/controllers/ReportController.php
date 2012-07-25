@@ -1934,9 +1934,15 @@ function adminreportbatchreplyAction(){
 						endforeach;
 						// get tag for report
 						$selectAllTag = $db->select();
-						$selectAllTag->from('tags', array('id', 'name'))
-						->where("tags.module ='REPORT'")
-						->where('tags.campaign_id is null or tags.campaign_id ='.$formData['campaign_id']);
+						if($formData['campaign_id']==13){
+							$selectAllTag->from('tags', array('id', 'name'))
+							->where("tags.module ='REPORT'")
+							->where('tags.campaign_id = 0 or tags.campaign_id ='.$formData['campaign_id']);
+						}else {
+							$selectAllTag->from('tags', array('id', 'name'))
+							->where("tags.module ='REPORT'")
+							->where('tags.campaign_id is null or tags.campaign_id ='.$formData['campaign_id']);
+						}
 						$allTagArray = $db->fetchAll($selectAllTag);
 						$selectReportTag = $db->select();
 						
