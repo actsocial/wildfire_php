@@ -42,6 +42,7 @@ window.Tag = Backbone.Model
 								var topic = new Topic({
 					                id:t['id'],
 					                read:t['value']['read'],
+					                replied:t['value']['replied'],
 					                title : t['value']['title'],
 									date : t['value']['date'],
 									lang : "zh-CN",

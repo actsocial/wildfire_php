@@ -2039,6 +2039,8 @@ function adminreportbatchreplyAction(){
 			if($formData['submittype'] == 'report'){
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "ConsumerId");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "ConsumerEmail");
+				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "login_phone");
+				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "recipients_name");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Create_date");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Source");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Point");
