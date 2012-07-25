@@ -12,7 +12,7 @@ body {background-color:#F6F6F6}
 
 #folders li{display:inline; padding-right:8px;}
 
-.filters{  position: fixed;  left: 0;  top: 50%;  width: 8em;  margin-top: -2.5em;}
+.filters{  position: fixed;  left: 0;  top: 30%;  width: 8em;  margin-top: -2.5em;}
 
 .filter {float:right; margin:2px 0; width: 6em;text-align: center;}
 

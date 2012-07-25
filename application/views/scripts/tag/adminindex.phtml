@@ -1,25 +1,40 @@
 <table>
 <thead>
 <th>用户</th>
+<th>邮箱</th>
 <th>原帖地址</th>
-<th>微博地址</th>
+<th>回复内容</th>
 <th>时间</th>
 <th>分数</th>
+<th>操作</th>
 </thead>
 <tbody>
 <?php foreach($this->irrs as $irr):
 ?>
 <tr>
 	<td><?php echo $irr['consumer_name']?></td>
+	<td><a href="mailto:<?php echo $irr['email']?>"><?php echo $irr['email']?></a></td>
 	<td><a href="<?php echo "http://".$irr['topic']?>" target="_blank"><?php echo "http://".$irr['topic']?></a></td>
-	<?php if($irr['sns_type']=='weibo'){?>
-	<td><a href="<?php echo "http://weibo.com/".$irr['weiboid']."/".mid2url($irr['sns_reply_id'])?>" target="_blank"><?php echo "http://weibo.com/".$irr['weiboid']."/".mid2url($irr['sns_reply_id'])?></a></td>
-	<?php }?>
+	<td><?php echo $irr['content']?></td>
 	<td><?php echo date($irr['timestamp'])?></td>
-	<td><?php echo date($irr['point_amount'])?></td>
+	<td>
+		<?php if($irr['point_amount']){?>
+			<?php echo $irr['point_amount']?>
+		<?php }else{?>
+			<input class="point" style="display: none;"></input>
+		<?php }?>
+	</td>
+	<td>
+		<?php if($irr['point_amount']){?>
+		已审核
+		<?php }else{?>
+		<input type="button" class="audit" irrId="<?php echo $irr['id']?>" consumer="<?php echo $irr['consumer']?>" topic="<?php echo $irr['topic']?>" value="审核" style="cursor: pointer"></input>
+		<span class="success" style="color: green;display: none;">审核成功</span>
+		<span class="fail" style="color: red;display:none;">审核失败</span>
+		<?php }?>
+	</td>
 </tr>
-<?php 
-endforeach;?>
+<?php endforeach;?>
 </tbody>
 </table>
 <style type="text/css">
@@ -27,3 +42,31 @@ endforeach;?>
 		padding-left:10px;
 	}
 </style>
+<script type="text/javascript">
+	jQuery(".audit").unbind('click').bind("click",function(){
+		jQuery(this).parent().parent().find(".point").show().end().end().end().val("确定").unbind('click').bind("click",function(){
+			var pointInput = jQuery(this).parent().parent().find(".point");
+			var re = new RegExp(/\d/);
+			if(re.test(pointInput.val())){
+				var consumer = jQuery(this).attr("consumer");
+				var topic = jQuery(this).attr("topic");
+				var irrId = jQuery(this).attr("irrId");
+				var self = this;
+				jQuery(".fail,.success").hide();
+				jQuery.ajax({
+						type : "POST",
+						url : "../tag/adminajaxaudit",
+						data:{point:pointInput.val(),consumer:consumer,topic:topic,irrId:irrId},
+						success :function(){
+							pointInput.parent().text(pointInput.val());
+							jQuery(self).hide().parent().find(".success").show();;
+						},
+						error : function(){
+							jQuery(self).parent().find(".fail").show();
+						}
+				});
+				
+			}
+		});
+	});
+</script>

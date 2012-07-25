@@ -16,7 +16,8 @@ window.Topic = Backbone.Model
 					posts : null,
 					postLoaded : false,
 					postShowed : false,
-					read : false
+					read : false,
+					replied : false
 				};
 			},
 
@@ -139,6 +140,7 @@ window.TopicView = Backbone.View.extend({
 	initialize : function() {
 		this.model.bind("change:postLoaded", this.afterPostLoaded, this);
 		this.model.bind("change:read", this.markAsRead, this);
+		this.model.bind("change:replied", this.markAsReplied, this);
 		//this.model.bind('change', this.render, this);
 		//this.model.bind('destroy', this.remove, this);
 	},
@@ -160,6 +162,12 @@ window.TopicView = Backbone.View.extend({
 			$(".topicPRR", this.$el).show();
 //			$('.topic',this.$el).removeClass("span4");
 //			$('.topic',this.$el).addClass("span61");
+			console.log(this.model.id);
+			if (Sns.isSns(this.model.id)) {
+				$("#reply_box_1", this.$el).show();
+			} else {
+				$("#reply_box_1", this.$el).hide();
+			}
 
 			this.resizeTopicDiv(100);
 		} else {
@@ -186,6 +194,11 @@ window.TopicView = Backbone.View.extend({
 	markAsRead : function(){
 		if(this.model.get("read"))
 			jQuery(this.el).find(".topic").addClass("read");
+	},
+	
+	markAsReplied :function(){
+		if(this.model.get("replied"))
+			jQuery(this.el).find(".topic").addClass("replied");
 	},
 	
 	resizeTopicDiv : function(adjust) {
@@ -219,26 +232,17 @@ window.TopicView = Backbone.View.extend({
 	open_reply_window: function(e){
 		$(".modal").modal("show");	
 		$("#reply").attr("data", this.model.id);
-		$("#text").val($("#image_uri").attr("uri"));	  
-		$("#reply").die().live('click', function(){
-			if($("#reply").text() === "已完成回复"){
-				$.ajax({
-					type : "POST",
-					url : 'tag/complete',
-					dataType : 'json',
-					accepts :"json",
-					data : {topic_uri: $("#reply").attr("data")},
-					success : function(data) {
-						$(".modal").modal("hide"); $("#reply").text("懂了，去回复");
-					}
-				});
+		$("#text").val($("#image_uri").attr("uri"));
+		$("#reply").text("懂了，去回复").die().live('click', function(){
+//			if($("#reply").text() === "已完成回复"){
+				
 					
 //				var jqxhr = $.post('tag/complete', {topic_uri: $("#reply").attr("data")}, function(data){
 //					
 //				})
 //				.success(function() { $(".modal").modal("hide"); $("#reply").text("懂了，去回复");})
 //    		.error(function() {  });    		
-			} else {
+//			} else {
 				var uri = $(this).attr("data");
 				if(Sns.isSns(uri)){
 					var sns = new Sns(uri);
@@ -248,7 +252,19 @@ window.TopicView = Backbone.View.extend({
 				}
 				window.open(uri, '_blank');
 				$("#reply").text("已完成回复");
-			}
+				$("#reply").die().live('click', function(){
+					$.ajax({
+						type : "POST",
+						url : 'tag/complete',
+						dataType : 'json',
+						accepts :"json",
+						data : {topic_uri: $("#reply").attr("data")},
+						success : function(data) {
+							$(".modal").modal("hide");
+						}
+					});
+				});
+//			}
 		});
 	},
 
