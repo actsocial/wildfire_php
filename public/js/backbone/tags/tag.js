@@ -65,7 +65,7 @@ window.Tag = Backbone.Model
 							self.set("topics",topics);
 							self.set({"topicloading":false});
 							
-							
+							App.showTutorial();
 						}
 					});
 				}

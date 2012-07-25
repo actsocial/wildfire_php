@@ -32,6 +32,33 @@
 	</div>
 </div>
 
+    <div id="tutorial" class="tutorial">
+        <div data-target=".topics" data-arrow="tc" data-location="tl">
+            <h1>Starting the Tutorial</h1>
+            <p>
+                Simply call $('#tutorial').tutorial() on the element you've set up and voila! 
+            </p>
+        </div>
+        <div data-target=".topic" data-arrow="ml" data-location="tr">
+            <h1>Set the Arrow Positions</h1>
+            <p>
+                You can set the arrow position to top center (tc), middle left (ml), middle right (mr), or bottom center (bc).
+            </p>
+        </div>
+        <div data-target=".filters" data-arrow="tc" data-location="br">
+            <h1>Set the Window Positions</h1>
+            <p>
+                You can set the window position to top left (tl), top right (tr), bottom left (bl), or bottom right (br).
+            </p>
+        </div>
+        <div data-target=".reply_window" data-arrow="bc" data-location="bl">
+            <h1>Target Any Page Element</h1>
+            <p>
+                This slide targets "ul#window-location li:last span". Any valid jQuery selector will work.
+            </p>
+        </div>
+    </div>
+
 
 <script type="text/template" id="container_template">
 <div id="infscr-loading" style="display: none;"><img src="<?php echo $this->baseUrl();?>/images/loading-topics.gif" alt="Loading..."><div><em>Loading for more...</em></div></div>
@@ -204,24 +231,13 @@ $("#copy").bind("click", function(){
 })
 
 
-// $("#reply").bind('click', function(){
-	// var uri = $(this).attr("data");
-	// window.setTimeout(
-		// function() {
-			// window.open('http://'+uri, '_blank');
-			// $("#reply").text("已完成回复");
-		// }, 
-		// 4000
-	// );
-	// $('#reply').unbind('click');
-// });
-
-
 
 // backbone app
       window.AppView = Backbone.View.extend({
 
         el: jQuery("#inbox"),
+
+        tutorial:true,
 
         events: {
 
@@ -251,12 +267,24 @@ $("#copy").bind("click", function(){
        		this.container.layout();
        		        	
         	$('a',$(view.render().el)).click();
-
-
-       		
         },
 
         render: function() {
+        },
+
+        showTutorial: function(){
+          if (tutorial) {
+         	options = {
+                    location:  'tl',
+                    width:     320,
+                    opacity:   0.4,
+                    returnTop: true
+                };
+            $('#tutorial').tutorial( options );
+
+
+            prettyPrint();
+          }
         }
 
       });
