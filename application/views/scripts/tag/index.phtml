@@ -5,15 +5,21 @@
 
   </div>
 </div>
-
+<div id="qq_online" style="position:absolute;top:75px;left:1100px">
+				<!-- WPA Button Begin -->
+				<iframe scrolling="no" frameborder="0" width="126" height="42" allowtransparency="true" src="https://id.b.qq.com/static/account/bizqq/wpa/wpa_a05.html?type=5&kfuin=4006008707&ws=http%3A%2F%2Fhome.xingxinghuo.cn&btn1=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D"></iframe>
+				<!-- WPA Button END -->
+			 </div>
 <div class="filters">
   <div><a><span class="badge badge-inverse  filter " onclick="filter('');return false;">全部</span></a></div>
-  <div><a><span class="badge filter" onclick="filter('.read');return false;">已读</span></a></div>
   <div><a><span class="badge badge-success filter" onclick="filter('.BBS');return false;">论坛</span></a></div>
   <div><a><span class="badge badge-info filter" onclick="filter('.Blog');return false;">博客</span></a></div>
   <div><a><span class="badge badge-warning filter" onclick="filter('.Weibo');return false;">微博</span></a></div>
   <div><a><span class="badge badge-important filter" onclick="filter('.SNS');return false;">社交网站</span></a></div>
   <div><a><span style="background-color:#C99DB7;" class="badge filter" onclick="filter('.ECOM');return false;">电子商务</span></a></div>
+  <div><a><span class="badge filter" onclick="filter('.read');return false;">已读</span></a></div>
+  <div><a><span class="badge filter" onclick="filter(':not(.read)');return false;">未读</span></a></div>
+  <div><a><span class="badge filter" onclick="filter('.replied');return false;">已回复</span></a></div>
 </div>
 
 <div class="modal hide">
@@ -34,7 +40,7 @@
 
 
 <script type="text/template" id="container_template">
-<div id="infscr-loading" style="display: none;"><img src="<?php echo $this->baseUrl();?>/images/loading-topics.gif" alt="Loading..."><div><em>Loading for more...</em></div></div>
+<div id="infscr-loading" style="display: none;"><img src="<?php echo $this->baseUrl();?>/images/loading-topics.gif" alt="Loading..."><div><em>加载中...</em></div></div>
 </script>
 
 
@@ -43,10 +49,14 @@
 </script>
 
 <script type="text/template" id="topic_template">
+<% if(replied){ %>
+	<div class="topic span3 isotope-item alert <%= site.type %> replied" data="<%= id %>">
+<%}else{ %>
 <% if(read){ %>
 	<div class="topic span3 isotope-item alert <%= site.type %> read" data="<%= id %>">
 <%}else{ %>
 <div class="topic span3 isotope-item alert <%= site.type %>" data="<%= id %>">
+<%} %>
 <%} %>
         <div class="box_head title" style="">
               <a href="javascript:void(0)">
