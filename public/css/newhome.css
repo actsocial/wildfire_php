@@ -648,7 +648,9 @@ table.spark-show td img {
 	float: left;
 	/*margin: 0 6px;*/
 	//width: 398px;
-	padding-top:16px;
+	/*
+		padding-top:16px;
+	*/
 	padding-bottom:16px;
 	padding-left:14px;
 	padding-right:8px;

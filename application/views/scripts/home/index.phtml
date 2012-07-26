@@ -396,16 +396,18 @@
             <div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:true;"<?php endif;?>>
 			<?php $i++;?>
 			<ul>
+				
 				<div style="border:1px dashed #3AB6EB;height:110px;width:630px">
 					<div style="float: left;">
 						<?php if($invitation['type'] == 'mission'){?>
 							<?php if($invitation['name']=="内测-美妆达人"){?>
 								<!--<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>-->
 								<div style='float:left;width:515px;'>
-									分享你的护肤、彩妆经验          赢取“我的美丽日记面膜*10片”<br>
-									市面上的美妆产品哪些是昙花一现，哪些又有经典口碑。	星星火为你搜罗了各大论坛的美妆贴，你是否同意她们的观点？<strong><a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>">点击此处</a>回复你感兴趣的帖子</strong>，说说你的美妆经验吧~！
+									<div style="margin-left:20px;"><strong>分享你的护肤、彩妆经验&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;赢取“我的美丽日记面膜*10片”</strong><br><br>
+									星星火在此处为你搜罗了各大论坛、网站最新的美妆贴，你是否同意她们的观点？<br><strong><a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>">点击此处</a></strong>回复你感兴趣的帖子，说说你的美妆经验吧~！
 									<br><br>
 									活动时间：2012.8.6——2012.8.19
+								    </div>
 								</div>
 								<div style="float:right;width:115px;height:110px;">
 									<img alt="" src="<?php echo $this->baseUrl();?>/images/campaign/testmission.jpg">
