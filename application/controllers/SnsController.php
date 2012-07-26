@@ -12,7 +12,7 @@ class SnsController extends MyController
 								 ->where('consumer = ?', (int)$this->_currentUser->id);
        
 	  $sns_users = $db->fetchAll($select);
-		$this->view->users = $sns_users;
+		$this->view->sns_users = $sns_users;
 		
 		$this->view->sns_enabled_source = Sns::$_enabled_source;
 
@@ -29,6 +29,7 @@ class SnsController extends MyController
     $config = Zend_Registry::get('config');
     $writer_host = $config->writer->host;
     $uri = "/sns/find_sns.json";
+    //TODO: use config.ini
     $client = new HttpClient("localhost", "4000");
     
     $access_token = NULL;

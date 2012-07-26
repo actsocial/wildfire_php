@@ -9,6 +9,7 @@ function addAccount(){
 	jQuery("#editSnsModal").removeClass("Weibo_iframe").modal('show');
 }
 function requestToken(name, writer_host, id){
+	//TODO: refactor
 	jQuery("#editSnsModal").modal('hide');
 	jQuery("#authModal").modal({keyboard: false});
 	jQuery("#authModal").modal('show');
@@ -16,7 +17,10 @@ function requestToken(name, writer_host, id){
 	var code = parseInt(Date.now().toString() + id); 
 	var base_uri = "http://" + writer_host + "/sender/dispatcher?"
 	window.open(base_uri + "source="+name+"&domain="+domain+"&code="+code+"&from=community", '_blank');
-											  
+	
+	//success里执行
+	//新建function
+	//改名叫ajaxCheckAndSave
 	jQuery.ajax({
 		type: "GET",
 		url: "sns/ajaxsave",
@@ -28,6 +32,8 @@ function requestToken(name, writer_host, id){
 	  	jQuery("#authModal .waiting").text("授权成功，窗口即将关闭");
 	  	setTimeout("jQuery('#authModal').modal('hide');", 10000);
 	  	location.reload();
+	  	//sleep(5);
+	  	//ajaxCheckAndSave();
 		}
  	});							
 }
