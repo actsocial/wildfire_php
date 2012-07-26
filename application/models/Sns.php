@@ -11,4 +11,11 @@ class Sns extends Zend_Db_Table
       'Kaixin' => array('name' => 'Kaixin'),
       'Netease' => array('name' => 'Netease'),
     );
+    
+  function loadByConsumerAndSource($consumer,$source){
+    $select = $this->select();
+    $select->where( 'consumer = ?', $consumer);
+    $select->where( 'source = ?', $source);
+    return $this->fetchRow($select);
+  }  
 }

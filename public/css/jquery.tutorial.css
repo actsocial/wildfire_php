@@ -116,3 +116,7 @@
 .tutorial-arrow.mr {
     background:url('tutorial/arrow-mr.png') no-repeat;
 }
+
+.tutorial-highlight{
+	border: 3px red solid;
+}
