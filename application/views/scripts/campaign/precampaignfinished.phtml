@@ -9,7 +9,7 @@
 		<form name="form" action="<?php echo $this->url(array('controller'=>'consumer','action'=>'editcontact','cid'=>$this->campaign->id));?>" method="post">
 		<dl>
 		<fieldset>
-			<div><?php echo $this->form->recipients_name ;?></div>
+			<div><dl><?php echo $this->form->recipients_name ;?></dl></div>
 			<div class="form-line not-text" ><?php echo $this->form->gender ;?></div>
 			<div class="form-line"><?php echo $this->form->education ;?></div>
 			<div class="form-line-long-title"><?php echo $this->form->income ;?></div>
@@ -83,15 +83,16 @@
 						<!-- </dt>
 					</div> -->
 
-				<div style="float:left;">
-					<?php echo $this->campaign['pre_campaign_friends'];?>
+				<div>
+					<!--<?php echo $this->campaign['pre_campaign_friends'];?>
 
-					<table align="center">
+					--><table>
 					<?php 
 					for ($i = 1; $i <= $this->friendsLimit; $i++) {?>
 						<tr>
 						    <!--<td><?php echo '朋友'.$i;?></td>
-						 --></tr>
+						 -->
+						 </tr>
 						 <tr><td><?php $field = 'friend_name_'.$i; echo $this->form->$field ?></td></tr>
 						 <!--<tr><td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td></tr>
 						 <tr><td><?php $field = 'friend_message_'.$i; echo $this->form->$field ?></td></tr>
@@ -111,6 +112,19 @@
 		</form>
 		<div style="clear:both"></div>
 </div>
+
+<script type="text/javascript">
+
+Calendar.setup(
+	{
+		inputField : "birthdate", // ID of the input field
+		ifFormat : "%Y-%m-%d", // the date format
+		input : "birthdate", // ID of the button
+		showsTime : true
+	}
+);
+
+</script>
 
 <script type="text/javascript">
 var total_relative="<?php echo $this->friendsLimit?>";
