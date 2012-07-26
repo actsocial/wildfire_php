@@ -39,30 +39,48 @@
 </div>
 
     <div id="tutorial" class="tutorial">
-        <div data-target=".topics" data-arrow="tc" data-location="tl">
-            <h1>Starting the Tutorial</h1>
+        <div data-target=".topic:eq(1)" data-highlight="class"  data-location="tl">
+            <h1>欢迎加入美妆达人活动</h1>
             <p>
-                Simply call $('#tutorial').tutorial() on the element you've set up and voila! 
+                在这里您可以看到许许多多网友关于美妆产品的谈论，每个小方块都是一篇论坛帖子、博客文章或微博。 
             </p>
         </div>
-        <div data-target=".topic" data-arrow="ml" data-location="tr">
-            <h1>Set the Arrow Positions</h1>
+        <div data-target=".topic:eq(1) .box_head" data-highlight="class" data-location="tl">
+            <h1>查看帖子内容</h1>
             <p>
-                You can set the arrow position to top center (tc), middle left (ml), middle right (mr), or bottom center (bc).
+              您可以通过点击标题栏来查看帖子及其回复的详细内容。
             </p>
         </div>
-        <div data-target=".filters" data-arrow="tc" data-location="br">
-            <h1>Set the Window Positions</h1>
+        <div data-target=".topic:eq(1) .reply_window"  data-highlight="class" data-location="tl">
+            <h1>回复贴子</h1>
             <p>
-                You can set the window position to top left (tl), top right (tr), bottom left (bl), or bottom right (br).
+                点击此处，您会跳转到该贴所在的网站。登陆后，您可以回复该贴，分享你的看法。
             </p>
         </div>
-        <div data-target=".reply_window" data-arrow="bc" data-location="bl">
-            <h1>Target Any Page Element</h1>
+                
+        <div data-target=".filters" data-highlight="class" data-location="bl">
+            <h1> 帖子来源</h1>
             <p>
-                This slide targets "ul#window-location li:last span". Any valid jQuery selector will work.
+                在这里，您可以选择帖子的网站来源，分类别进行浏览回复
             </p>
         </div>
+        
+        <div data-target=".badge-replied" data-highlight="class" data-location="bl">
+            <h1>回帖记录</h1>
+            <p>
+     “已回复”栏中的帖子都会即时获得50积分。        
+              回复后的帖子如果24小时后还没有出现在“已回复”栏中，请通过在线帮助联系我们。
+              
+            </p>
+        </div>
+        
+        <div data-target="#qq_online" data-highlight="class"  data-location="bl">
+            <h1>在线帮助</h1>
+            <p>
+              如您对本次内测活动有任何问题或建议，欢迎及时联系我们。
+            </p>
+        </div>
+
     </div>
 
 
@@ -273,24 +291,19 @@ $("#copy").bind("click", function(){
        		<?php endforeach;?>
 
 
-        	var tag = new Tag({
-                name:'skin_care',
-                topic_num :'0'
-              });
-        	var view = new TagView({model: tag});
+
         	
         	this.container = new ContainerView({});
        		jQuery(".filters").after(this.container.render().el);
        		this.container.layout();
        		        	
-        	$('a',$(view.render().el)).click();
         },
 
         render: function() {
         },
 
         showTutorial: function(){
-          if (tutorial) {
+          if (this.tutorial) {
          	options = {
                     location:  'tl',
                     width:     320,
@@ -298,15 +311,21 @@ $("#copy").bind("click", function(){
                     returnTop: true
                 };
             $('#tutorial').tutorial( options );
-
-
-            prettyPrint();
+            this.tutorial = false;
+           
+            //prettyPrint();
           }
         }
 
       });
 
       window.App = new AppView;
-
+      
+	  	var tag = new Tag({
+	        name:'skin_care',
+	        topic_num :'0'
+	      });
+		var view = new TagView({model: tag});
+	  	$('a',$(view.render().el)).click();
 
 </script>

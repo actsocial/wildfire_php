@@ -94,7 +94,8 @@ $.fn.tutorial = function( options )
         $this.data( 'properties', {
             target: ( $this.attr( 'data-target' ) ) ? $this.attr( 'data-target' ) : null,
             arrow: ( $this.attr( 'data-arrow' ) ) ? $this.attr( 'data-arrow' ) : options.arrow,
-            location: ( $this.attr( 'data-location' ) ) ? $this.attr( 'data-location' ) : options.location
+            location: ( $this.attr( 'data-location' ) ) ? $this.attr( 'data-location' ) : options.location,
+            highlight: ( $this.attr( 'data-highlight' ) ) ? $this.attr( 'data-highlight' ) : options.location,		
         });
     });
             
@@ -193,6 +194,21 @@ $.fn.tutorialNext = function()
 
 $.fn.tutorialCancel = function()
 {
+	
+    /*remove highlight*/
+    var last_step = this.find( 'div:last' );
+
+    var last_properties = last_step.data( 'properties' );
+    var last_target = last_properties.target;
+    var last_highlight = last_properties.highlight;
+    if (last_highlight){
+    	if (last_highlight=="class") {
+    	$(last_target).removeClass("tutorial-highlight");
+    	}else{
+    	}
+    }
+
+	
     this.hide();
     $( '#' + this.attr( 'id' ) + '-overlay' ).remove();
     $( '.tutorial-arrow' ).remove();
@@ -214,12 +230,27 @@ $.tutorialShowStep = function( el, index )
     $( '.tutorial-arrow' ).remove();
     options = el.data( 'options' );
     
+    /*remove highlight*/
+    if (index>1){
+        var last_step = el.find( 'div:nth-child(' + (index-1) + ')' );
+    
+	    var last_properties = last_step.data( 'properties' );
+	    var last_target = last_properties.target;
+	    var last_highlight = last_properties.highlight;
+	    if (last_highlight){
+	    	if (last_highlight=="class") {
+	    	$(last_target).removeClass("tutorial-highlight");
+	    	}else{
+	    	}
+	    }
+    }
     
     var step = el.find( 'div:nth-child(' + index + ')' );
     var properties = step.data( 'properties' );
     var target = properties.target;
     var arrow = properties.arrow;
     var location = properties.location;
+    var highlight = properties.highlight;
 
     if ( ! target ) {
         return this;
@@ -305,6 +336,14 @@ $.tutorialShowStep = function( el, index )
         if ( options.bounce ) {
             $.tutorialBounce( $('#tutorial-arrow-' + index ), 500, bounceTop, bounceDistance );
         }
+    }
+    
+    if (highlight){
+    	if (highlight=="class") {
+    	$(target).addClass("tutorial-highlight");
+    	}else{
+    	//$(target).effect(highlight,{"mode":"show","times":8,"duration":500},1000);
+    	}
     }
 }; 
 // end $.tutorialShowStep 
