@@ -260,27 +260,6 @@ class TagController extends MyController {
 		}
 	}
 	
-	function ajaxreplyAction(){
-		$platform = $this->_request->getParam('platform');
-		$config = Zend_Registry::get('config');
-		$host = $config->writer->host;
-		$port = $config->writer->port;
-		$client = new HttpClient($host,$port);
-// 		$client->post("path","data");
-// 		$content = $client->getContent();
-		$snsUserModel = new SnsUser();
-		$snsUser = $snsUserModel->loadByConsumerAndPlatform($this->_currentUser->id,$platform);
-		if(empty($snsUser)){
-			$this->_redirect("/sns/index");
-		}else{
-			$this->_helper->layout->disableLayout();
-			$param = $snsUser->toArray();
-			$param['text'] = $this->_request->getParam('text');
-			$param['text'] = urldecode($this->_request->getParam('topicId'));
-			$client->post("/sender/commets",$param);
-		}
-	}
-	
 	function ajaxpublicAction(){
 		$platform = $this->_request->getParam('platform');
 		$config = Zend_Registry::get('config');
@@ -298,8 +277,7 @@ class TagController extends MyController {
 			$param = $snsUser->toArray();
 			$param['text'] = $this->_request->getParam('text');
 			$client->post("/sender/public_tweet",$param);
-		}
-		
+		}	
 	}
 	
 	function ajaxsaveweiboreplyAction(){

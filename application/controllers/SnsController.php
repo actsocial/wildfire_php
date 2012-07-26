@@ -103,16 +103,39 @@ class SnsController extends MyController
         break;
       }
     }
-    
     $this->_helper-> json($res);
-
 	}
   
-	public function public_tweet()
-	{
-		
+	public function commentsAction() {
+    $config = Zend_Registry::get('config');
+    $host = $config->writer->host;
+    $client = new HttpClient("localhost", "4000");
+    
+    $snsModel = new Sns();
+    $source = urldecode($this->_request->getParam('source'));
+    $sns = $snsModel->loadByConsumerAndSource((int)$this->_currentUser->id,$source);
+    
+    if(empty($sns)){ 
+      $this->_helper-> json(0);
+    } else {
+      $this->_helper->layout->disableLayout();
+      $param['source'] = $this->request->getParam('source');
+      $param['source_id'] = $this->request->getParam('source_id');
+      $param['user_id'] = $this->request->getParam('user_id');
+      $param['source_type'] = $this->_request->getParam('source_type');
+      $param['content'] = urldecode($this->_request->getParam('content'));
+      
+      $param['access_token'] = $sns->access_token;
+      $param['access_token_secret'] = $sns->access_token_scret;
+      $param['refresh_access_token'] = $sns->refresh_access_token;
+      $param['expires_at'] = $sns->expires_in;
+      $param['expires_in'] = $sns->expires_at;
+      $client->post("/sender/comments", $param);
+      $this->_helper-> json(1);
+    }
+
 	}
-	
+	 
 }
 
 

@@ -1,6 +1,6 @@
 var WEIBO_REG = /^weibo.com\/\d{10}\/\d{16}/;
 var RENREN_REG = /^page.renren.com*/;
-var RENREN_USER_ID_REG = /\"page_id\":\d*/;
+var RENREN_PAGE_ID_REG = /\"page_id\":\d*/;
 var RENREN_STATUS_ID_REG = /\"status_id\":\d*/;
 var RENREN_BLOG_ID_REG = /\"blog_id\":\d*/;
 var KAIXIN_REG = /^www.kaixin001.com*/;
