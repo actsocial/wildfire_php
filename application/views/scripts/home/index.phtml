@@ -19,7 +19,7 @@
             <p><?php echo $this->recentInvitation['invitation_description2']?></p>
         </div>
         <div class="buttons-bar">
-        <?php if ($this->recentInvitation["name"]=="美妆达人"){?>
+        <?php if ($this->recentInvitation["name"]=="内测-美妆达人"){?>
         	<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>" class="button"><?php echo $this->translate('Accept');?></a>
         <?php }else {?>
             <a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Accept');?></a>
@@ -399,8 +399,17 @@
 				<div style="border:1px dashed #3AB6EB;height:110px;width:630px">
 					<div style="float: left;">
 						<?php if($invitation['type'] == 'mission'){?>
-							<?php if($invitation['name']=="美妆达人"){?>
-								<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
+							<?php if($invitation['name']=="内测-美妆达人"){?>
+								<!--<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>-->
+								<div style='float:left;width:515px;'>
+									分享你的护肤、彩妆经验          赢取“我的美丽日记面膜*10片”<br>
+									市面上的美妆产品哪些是昙花一现，哪些又有经典口碑。	星星火为你搜罗了各大论坛的美妆贴，你是否同意她们的观点？<strong><a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>">点击此处</a>回复你感兴趣的帖子</strong>，说说你的美妆经验吧~！
+									<br><br>
+									活动时间：2012.8.6——2012.8.19
+								</div>
+								<div style="float:right;width:115px;height:110px;">
+									<img alt="" src="<?php echo $this->baseUrl();?>/images/campaign/testmission.jpg">
+								</div>
 							<?php }else{ ?>
 								<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
 							<?php }?>
@@ -415,11 +424,13 @@
 					<div style="float: left; width:200px; padding:10px;">
 						<!--<?php echo $invitation["invitation_description"]."<br>".$invitation["invitation_description2"];?>
 					-->
-							<?php if($invitation['name']=="美妆达人"){?>
-									<?php echo "加入美妆活动，这里有你最想要了解的潮流资讯，也期待你留下自己的心得！<br>
-												活动时间：<br>
-												2012.7.1——2012.7.31";?>
-							<?php }elseif ($invitation['name']=='电影大赏'){ ?>
+							<?php if($invitation['name']=="内测-美妆达人"){?>
+										<!--<?php echo "加入美妆活动，这里有你最想要了解的潮流资讯，也期待你留下自己的心得！<br>
+													活动时间：<br>
+													2012.7.1——2012.7.31";?>
+										-->
+										
+								<?php }elseif ($invitation['name']=='电影大赏'){ ?>
 									<?php echo "夏日电影大赏，无论是记忆中的经典，还是正在热映的新片，来和星星火分享你的电影观感吧！<br>
 												活动时间：<br>
 												2012.7.15——2012.8.15";?>
