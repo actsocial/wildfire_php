@@ -188,7 +188,7 @@ window.TagView = Backbone.View.extend({
 			jQuery("#infscr-loading").show();
 		}else{
 			jQuery("#infscr-loading").hide();
-			  App.showTutorial();
+			  //App.showTutorial();
 	    	//$('.topics').isotope('reLayout');
 		}
 	}

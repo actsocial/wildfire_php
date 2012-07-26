@@ -132,7 +132,7 @@ window.TopicView = Backbone.View.extend({
 	events : {
 		"click .title" : "toggle",
 		"click .add-url" : "addSourceUrl",
-		"click .reply_btn" : "sendReply",
+	//	"click .reply_btn" : "sendReply",
 		"click .reply_window" : "open_reply_window",
 	},
 
