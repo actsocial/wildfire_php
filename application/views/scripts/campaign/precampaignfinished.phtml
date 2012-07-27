@@ -82,24 +82,24 @@
 						
 						<!-- </dt>
 					</div> -->
-
+					<!-- 童装问卷不用填写朋友姓名 -->
+			<?php if ($this->campaign['id']!=39){?>
 				<div>
 					<!--<?php echo $this->campaign['pre_campaign_friends'];?>
 
-					--><table>
+					<table>-->
 					<?php 
 					for ($i = 1; $i <= $this->friendsLimit; $i++) {?>
-						<tr>
-						    <!--<td><?php echo '朋友'.$i;?></td>
-						 -->
-						 </tr>
+						 <!--<tr>
+						   <td><?php echo '朋友'.$i;?></td>
+						 </tr>-->
 						 <tr><td><?php $field = 'friend_name_'.$i; echo $this->form->$field ?></td></tr>
 						 <!--<tr><td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td></tr>
 						 <tr><td><?php $field = 'friend_message_'.$i; echo $this->form->$field ?></td></tr>
-					--><?php }			
-					?> 
-				</table>
+					--><?php }	?> 
+				<!--</table>-->
 					</div>
+					<?php }?>
 			</fieldset>		
 				</dl>
 				<div style="float:left;color:red;"><?php echo $this->errMessage; ?></div>
