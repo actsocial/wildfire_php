@@ -36,7 +36,7 @@
 		<ul class="thumbnails">
 			<?php foreach($this->sns_enabled_source as $platform) {?>
 	        <li class="span3" style="width:auto;">
-	          <a class="thumbnail" href="javascript:void(0);" onclick='requestToken("<?php echo $platform['name']?>", "<?php echo $this->writer_host?>", "<?php echo $this->current_user_id?>");'>
+	          <a class="thumbnail" href="javascript:void(0);" onclick='action("<?php echo $platform['name']?>", "<?php echo $this->writer_host?>", "<?php echo $this->current_user_id?>");'>
 	            <img style="width:128px; height:128px;" alt="" src="<?php echo $this->baseUrl().'/images/sns/'.$platform['name']?>.png">
 	          </a>
 	        </li>

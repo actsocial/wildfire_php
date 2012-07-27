@@ -1,3 +1,5 @@
+<?php $id = (int)$this->_currentUser->id ?>
+
 (function($){
 window.Topic = Backbone.Model
 		.extend({
@@ -238,12 +240,11 @@ window.TopicView = Backbone.View.extend({
 			url: 'sns/comments',
 			data: data,
 			success: function(data){
-								 if(data==1){
+								 if(data['status' == 1]){
 									 alert("回复成功");
 								 }else{
-								 	 var code = parseInt(Date.now().toString() + id);
-								 	 var domain = "localhost:4000";
-									 window.open(base_uri + "source="+source+"&domain="+domain+"&code="+code+"&from=community", '_blank');
+								 	 var id = "<?php echo $id; ?>";
+								 	 requestToken(source, "localhost:4000", id);							 
 								 }
 							 }
 		 });						
