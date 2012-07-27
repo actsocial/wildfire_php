@@ -1831,6 +1831,7 @@ function adminreportbatchreplyAction(){
 				->join('consumer', 'consumer.id = report.consumer_id', array('email,login_phone,recipients_name'))
 				->where('report.accesscode in ('.substr($accessCodeString,0,strlen($accessCodeString)-1).")")
 				->where("report.state = 'APPROVED'")
+				->order(" create_date desc ")
 				->limit(0);
 				
 				$accessCodeArray = $db->fetchAll($selectAccessCode);
@@ -1908,6 +1909,7 @@ function adminreportbatchreplyAction(){
 						->join('consumer', 'consumer.id = report.consumer_id', array('email','login_phone','recipients_name'))
 						->where('report.campaign_id = ?',$formData['campaign_id'])
 						->where("report.state = 'APPROVED'")
+						->order("create_date desc")
 						->limit(0);
 						
 						$accessCodeArray = $db->fetchAll($selectAccessCode);

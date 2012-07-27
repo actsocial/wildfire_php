@@ -648,7 +648,9 @@ table.spark-show td img {
 	float: left;
 	/*margin: 0 6px;*/
 	//width: 398px;
-	padding-top:16px;
+	/*
+		padding-top:16px;
+	*/
 	padding-bottom:16px;
 	padding-left:14px;
 	padding-right:8px;
@@ -1210,7 +1212,9 @@ ul.tabbed-buttons li.active a:visited {
 	float: left;
 }
 .edit-profile fieldset {
+	/*
 	float: left;
+	*/
 	width: 660px;
 	margin:0 10px 20px 10px;
 }
@@ -1361,9 +1365,11 @@ ul.tabbed-buttons li.active a:visited {
 	margin-top: 4px;
 }
 .web-dialog .content-2column .main-column p {
+	/*
 	margin:0;
 	margin-top: 10px;
 	margin-left: 2px;
+	*/
 	font-size: 14px;
 	float: left;
 	clear: left;
