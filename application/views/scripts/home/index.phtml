@@ -1,6 +1,8 @@
 <div id="fillout-dialog">
     <div class="content"></div>
 </div>
+ <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />  
+
 <div id="check-alert-dialog">
     <p class="content"></p>
 </div>
@@ -9,8 +11,8 @@
 <div id="web-dialog" class="web-dialog" style="display:none;">
     <div class="content-2column">
 	<div class="images-column">
-            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
-            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
+            <img style="max-width:80px;" src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
+            <img style="max-width:80px;" src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
         </div>
         <div class="main-column">
             <h2><?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->recentInvitation['name'];?><?php if($this->recentInvitation['name']=="campaign"){ echo $this->translate('You_Are_Invited_2');} else {echo $this->translate('You_Are_Invited_3');}?></h2>
@@ -32,8 +34,8 @@
 <div id="web-dialog" class="web-dialog" style="display:none;">
     <div class="content-2column">
 	<div class="images-column">
-            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
-            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
+            <img  style="max-width:80px;"   src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
+            <img  style="max-width:80px;"   src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
 	</div>
         <div class="main-column">
             <h2>
