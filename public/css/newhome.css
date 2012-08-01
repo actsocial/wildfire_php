@@ -2573,7 +2573,8 @@ a.list-orders:hover {
 	height: 30px;
 }
 .consumer-edit fieldset .form-line-long-title .input-area input {
-	margin-top: 8px;
+	margin-top: -2px;
+	margin-right:4px;
 }
 .consumer-edit fieldset .form-line-long-title .input-area .text {
 	height: 16px;

@@ -73,12 +73,10 @@ class ConsumerContactForm extends Zend_Form
 		->addValidators(array(array('StringLength', false, array(0, 30)),));
 
 		$gender = new Zend_Form_Element_Radio('gender');
-		$gender->setLabel($this->getView()->translate('Consumer_gender'))
-		->addMultiOptions( array(
+		$gender->setLabel($this->getView()->translate('Consumer_gender'))->addMultiOptions(array(
 							'0' => $this->getView()->translate('Consumer_gender_Female'), 
-							'1' => $this->getView()->translate('Consumer_gender_Male'),
-		))
-		->setSeparator('&nbsp;&nbsp;');
+							'1' => $this->getView()->translate('Consumer_gender_Male')
+		))->setSeparator('&nbsp;&nbsp;');
 		
 		$education = new Zend_Form_Element_Select('education');
 		$education->setLabel($this->getView()->translate('Consumer_education'))
