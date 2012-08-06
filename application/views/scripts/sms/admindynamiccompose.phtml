@@ -138,7 +138,9 @@ function populate(){
 	</tr>
 	<tr>
 		<td align="left">
-		<div><select name="apitype" onChange="changeAPIType(this.value);";>
+		<div>
+		<!--
+		<select name="apitype" onChange="changeAPIType(this.value);";>
 							<option value="8" selected>
                              	 即时通道一       (客服类推荐)   (发送1条扣去  1.3条)
                             </option>
@@ -154,13 +156,46 @@ function populate(){
                              <option value="10" >
                               	通道三  (发送1条扣去 1   条)
                              </option>
-		</select></div>
+		</select>
+		-->
+		
+		<select name="apitype" id="apitype" onChange="changeAPIType(this.value);">
+
+																												<option value="2" selected>
+
+															通道二(发送1条扣去1条)
+
+														</option>
+
+																												<option value="3" >
+
+															即时通道二(发送1条扣去1.3条)
+
+														</option>
+
+																												<option value="9" >
+
+															即时通道三(发送1条扣去1.3条)
+
+														</option>
+
+																												<option value="10" >
+
+															通道三(发送1条扣去1条)
+
+														</option>
+
+																											</select>&nbsp;&nbsp;
+		
+		</div>
 		</td>
 	</tr>
 	
 	<td align="left" valign="middle"><br>
 	<table width="100%" border="1" cellspacing="0" cellpadding="1"
 		bordercolor="#CCCCCC">
+		
+		<!--
 		 <tr>
 
                               <td>通道二：会对短信内容进行严格审核，不允许发送含有任何营销内容的短信。</td>
@@ -175,9 +210,9 @@ function populate(){
 						  <tr>
 							<td >注：通道三群发时，只要用一条成功就会收款。</td>
 						  </tr>
-                            <!--<tr>
+                            <tr>
                               <td >营销通道：专为发送广告营销信息的客户开辟的通道，成功率达92%以上。</td>
-                            </tr>-->
+                            </tr>
                             <tr>
                               <td >注：在发送高峰期，通道接口可能会出现涌堵现象，这时建议您更换通道来发送。</td>
                             </tr>
@@ -188,6 +223,15 @@ function populate(){
                             <tr>
                               <td >注：通道二不支持发送全球通手机号码；如有全球通号码，请使用即时通道发送。</td>
                             </tr>
+	-->
+	<tr><td>即时通道二：专为需即时发送的客户开辟的绿色通道，发送速度快，支持回复短信，有固定号码.</td></tr>
+	<tr><td>即时通道一：发送速度快，支持回复短信，发送行业信息短信的用户建意使用</td></tr>
+	<tr><td>通道二：价格便宜，不支持回复，速度一般</td></tr>
+	<tr><td>通道三：价格便宜，不支持回复，速度一般，专为发广告短信的用户</td></tr>
+	<tr><td>注：即时通道二必须要加上后缀，短信内容若涉及广告或营销的不要选择该通道</td></tr>
+	<tr><td>注：通道三群发时请先测试，再大量发送</td></tr>
+	<tr><td>注：通道二在繁忙时段和节假日可能会出现涌堵现象而导致延时，若需要及时收到的请转用即时通道发送</td></tr>
+	
 	</table>
 	</td>
 	</tr>
