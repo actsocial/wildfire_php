@@ -250,7 +250,9 @@ class SmsController extends MyController {
 						}
 					}
 					$respxml = $newclient->sendSMS ( $mobile, $tempmsg, $time, $apitype );
+					Zend_Debug::dump($respxml.'===================');
 					$res =  $newclient->toArray ();
+					Zend_Debug::dump($res);
 					if(isset($res["successnum"][0])&&$res["successnum"][0]==1)
 					{
 						$successphone[]=$mobile;

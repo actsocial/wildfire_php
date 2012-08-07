@@ -80,7 +80,7 @@ class XMLClient
 
 			if($this->DEBUG) echo $this->responseXML;
 			if(!$this->responseXML) $this->responseXML="NO XML Error,please check the xml which post to Server.";
-			Zend_Debug::dump($this->responseXML);
+//			Zend_Debug::dump($this->responseXML);
 			return $this->responseXML;
 	}
 
