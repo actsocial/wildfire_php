@@ -23,6 +23,7 @@ class SMS extends XMLClient
 	//发送SMS短信接口
 	function sendSMS($mobile, $msg, $time="", $apitype=0)
 	{
+//		Zend_Debug::dump($mobile.'===='.base64_encode($msg).'===default time===='.$time.'-----default type-----'.$apitype);die();
 		$xml_command="<action>SMS:sendSMS</action>
 						<sms:mobile>$mobile</sms:mobile>
 						<sms:message>".base64_encode($msg)."</sms:message>
