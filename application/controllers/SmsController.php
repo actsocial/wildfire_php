@@ -251,7 +251,8 @@ class SmsController extends MyController {
 					}
 					$respxml = $newclient->sendSMS ( $mobile, $tempmsg, $time, $apitype );
 					$res =  $newclient->toArray ();
-					if(isset($res["successnum"][0]))
+					//共有四个发短信的通道 ,分别是:2,3,9,10
+					if(isset($res["successnum"][0])&&($res["successnum"][0]==2||$res["successnum"][0]==3||$res["successnum"][0]==9||$res["successnum"][0]==10))
 					{
 						$successphone[]=$mobile;
 					}
