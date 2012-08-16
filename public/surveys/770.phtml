@@ -117,10 +117,10 @@
 <input type="hidden" name="answers[14442].id" value="" id="answers[14442].id">
 <ul>
 	<li>
-			<input group="14442" type="radio" id="14442_0" name="answers[14442].value" value="12413" class="selection question_radio_14442">		<label for="14442_0">是</label>
+			<input group="14442" type="radio" id="14442_0" name="answers[14442].value" value="12413" class="selection question_radio_14442" onclick="showOrHide()">		<label for="14442_0">是</label>
 	</li>
 	<li>
-			<input group="14442" type="radio" id="14442_1" name="answers[14442].value" value="12414" class="selection question_radio_14442">		<label for="14442_1">否</label>
+			<input group="14442" type="radio" id="14442_1" name="answers[14442].value" value="12414" class="selection question_radio_14442" onclick="showOrHide()">		<label for="14442_1">否</label>
 	</li>
 </ul>
  </td>
@@ -144,12 +144,16 @@
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
+function showOrHide(){
+
+	if(document.getElementById("14442_0").checked){
+		document.getElementById("q_3254").style.display="";
+	}else{
+		document.getElementById("q_3254").style.display="none";
+	}	
+}
 </script>
-		  <div id="q_3254" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3254" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -237,6 +241,11 @@
 // ]]>
 -->
 </script>
+<div style="display:none;">						
+						<input type="hidden" name="answers[14445].id" value="null" id="answers[14445].id">
+						<input type="text" name="answers[14445].value" value="null" id="question_14445" group="14445" class="input-text">
+						<span class="error-content" id="err_answers[14445].value"></span>
+</div>
 		  <div id="q_3256" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
@@ -250,17 +259,28 @@
 							</div>
 				</td>
 				<td width="50%" valign="top">
-<table width="100%">
-<tbody><tr>
-<td>
-<input type="hidden" name="answers[14445].id" value="" id="answers[14445].id">
-<input type="text" name="answers[14445].value" value="" id="question_14445" group="14445" class="input-text">
-
-<span class="error-content" id="err_answers[14445].value"></span>
-</td>
-
-  </tr>
-  </tbody></table>				</td>
+					
+					<input type="hidden" name="answers[14446].id" value="" id="answers[14446].id">
+					<input type="text" name="answers[14446].value" value="" id="question_14446" group="14446" class="input-text">
+					
+					<span class="error-content" id="err_answers[14446].value"></span>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="hidden" name="answers[14447].id" value="" id="answers[14447].id">
+					<input type="text" name="answers[14447].value" value="" id="question_14447" group="14447" class="input-text">
+					<span class="error-content" id="err_answers[14447].value"></span>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type="hidden" name="answers[14448].id" value="" id="answers[14448].id">
+					<input type="text" name="answers[14448].value" value="" id="question_14448" group="14448" class="input-text">
+					<span class="error-content" id="err_answers[14448].value"></span>
+				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
@@ -271,7 +291,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3245" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3245" style="margin-bottom:0px; display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -287,10 +307,7 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" name="answers[14446].id" value="" id="answers[14446].id">
-<input type="text" name="answers[14446].value" value="" id="question_14446" group="14446" class="input-text">
 
-<span class="error-content" id="err_answers[14446].value"></span>
 </td>
 
   </tr>
@@ -305,7 +322,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3246" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3246" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -321,10 +338,7 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" name="answers[14447].id" value="" id="answers[14447].id">
-<input type="text" name="answers[14447].value" value="" id="question_14447" group="14447" class="input-text">
 
-<span class="error-content" id="err_answers[14447].value"></span>
 </td>
 
   </tr>
@@ -339,7 +353,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3247" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3247" style="margin-bottom:0px;display:none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -355,10 +369,7 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" name="answers[14448].id" value="" id="answers[14448].id">
-<input type="text" name="answers[14448].value" value="" id="question_14448" group="14448" class="input-text">
 
-<span class="error-content" id="err_answers[14448].value"></span>
 </td>
 
   </tr>
@@ -467,7 +478,7 @@
 			<input group="14450" class="question_radio_14450 selection" type="checkbox" id="14450_10" name="answers[14450].value" value="12427" onclick=" ">		<label for="14450_10">弘大/梨花女大</label>
 	</li>
 	<li>
-			<input group="14450" class="question_radio_14450 selection" type="checkbox" id="14450_11" name="answers[14450].value" value="12428" onclick=" ">		<label for="14450_11">其他</label>
+			<input group="14450" class="question_radio_14450 selection" type="checkbox" id="14450_11" name="answers[14450].value" value="12428" onclick="showOrHide2() ">		<label for="14450_11">其他</label>
 	</li>
 </ul>
  </td>
@@ -490,12 +501,16 @@
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
+function showOrHide2(){
+
+	if(document.getElementById("14450_11").checked){
+		document.getElementById("q_2646").style.display="";
+	}else{
+		document.getElementById("q_2646").style.display="none";
+	}	
+}
 </script>
-		  <div id="q_2646" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_2646" style="margin-bottom:0px; display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -602,7 +617,7 @@
 			<input group="14452" class="question_radio_14452 selection" type="checkbox" id="14452_14" name="answers[14452].value" value="12409" onclick=" ">		<label for="14452_14">IOPE</label>
 	</li>
 	<li>
-			<input group="14452" class="question_radio_14452 selection" type="checkbox" id="14452_15" name="answers[14452].value" value="12410" onclick=" ">		<label for="14452_15">其他</label>
+			<input group="14452" class="question_radio_14452 selection" type="checkbox" id="14452_15" name="answers[14452].value" value="12410" onclick="showOrHide3() ">		<label for="14452_15">其他</label>
 	</li>
 </ul>
  </td>
@@ -625,12 +640,16 @@
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
+function showOrHide3(){
+
+	if(document.getElementById("14452_15").checked){
+		document.getElementById("q_3202").style.display="";
+	}else{
+		document.getElementById("q_3202").style.display="none";
+	}	
+}
 </script>
-		  <div id="q_3202" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3202" style="margin-bottom:0px;display:none" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
