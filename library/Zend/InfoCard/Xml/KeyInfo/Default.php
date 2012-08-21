@@ -61,4 +61,12 @@ class Zend_InfoCard_Xml_KeyInfo_Default extends Zend_InfoCard_Xml_KeyInfo_Abstra
 
         return Zend_InfoCard_Xml_SecurityTokenReference::getInstance($sectokenref);
     }
+    
+    /** (non-PHPdoc)
+     * @see Zend_InfoCard_Xml_Element_Interface::asXML()
+     */
+    public function asXML() {
+        // TODO Auto-generated method stub
+    }
+
 }

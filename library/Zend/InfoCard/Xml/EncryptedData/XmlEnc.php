@@ -61,4 +61,12 @@ class Zend_InfoCard_Xml_EncryptedData_XmlEnc extends Zend_InfoCard_Xml_Encrypted
 
         return (string)$ciphervalue;
     }
+    
+    /** (non-PHPdoc)
+     * @see Zend_InfoCard_Xml_Element_Interface::asXML()
+     */
+    public function asXML() {
+        // TODO Auto-generated method stub
+    }
+
 }
