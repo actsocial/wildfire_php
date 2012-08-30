@@ -6,7 +6,7 @@ defined('APPLICATION_PATH') || define('APPLICATION_PATH', PUBLIC_PATH . '/../app
 error_reporting(E_ALL|E_STRICT);
 $testEnv = 0;
 if ($_SERVER['SERVER_NAME'] == 'localhost' || $_SERVER['SERVER_NAME']=='127.0.0.1'){
-	$testEnv = 0;
+	$testEnv = 1;
 }
 //ini_set("soap.wsdl_cache_enabled", "0");
 ini_set('display_errors', $testEnv);
