@@ -33,14 +33,15 @@ class WeiboLoginController extends Zend_Controller_Action{
 			$uid = $uid_get['uid'];
 			$db = Zend_Registry :: get('db');
 			
-			
 			$adapter = new WeiboLoginAuthAdapter($uid);
 			$auth = Zend_Auth :: getInstance();
 			$result = $auth->authenticate($adapter);
 			$consumerModel = new Consumer();
+			
 			$consumer_id = $db->fetchOne("SELECT id FROM consumer WHERE weiboid = :temp and state='ACTIVE'", array (
 							'temp' => $uid
 			));
+			
 			$consumer = $consumerModel->find($consumer_id)->current();
 			if($result->isValid()) {
 				$authNamespace = new Zend_Session_Namespace('Zend_Auth');
