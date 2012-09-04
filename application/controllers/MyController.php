@@ -94,8 +94,8 @@ class MyController extends Zend_Controller_Action
                        'index'       =>null, 
                        'site'        =>null, 
                        'training'    =>null,
-	  				   /*'weibologin'  =>null,
-	  				   'qqlogin'     =>null,*/ 
+	  				   'weibologin'  =>null,
+	  				   'qqlogin'     =>null, 
                        'language'    =>null, 
                        'register'    =>null,
                        'forgetpassword'        =>null,
