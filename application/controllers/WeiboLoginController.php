@@ -3,7 +3,7 @@ include_once( 'weiboconfig.php' );
 include_once( 'saetv2.ex.class.php' );
 require_once 'WeiboLoginAuthAdapter.php';
 require_once APPLICATION_PATH . '/models/Log.php';
-class WeiboLoginController extends MyController{
+class WeibologinController extends MyController{
 	
 	function indexAction(){
 		$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
