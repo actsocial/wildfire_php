@@ -88,7 +88,9 @@ class MyController extends Zend_Controller_Action
 	}
 	
 	private function filter($controller, $action) {
-	  $exceptions = array(
+		$controller = strtolower($controller); 
+		$action = strtolower($action); 
+	  	$exceptions = array(
 	  				   'useremail'   => null, 
                        'login'       => null,
                        'index'       =>null, 
