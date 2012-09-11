@@ -1,5 +1,3 @@
-<?php $id = (int)$this->_currentUser->id ?>
-
 (function($){
 window.Topic = Backbone.Model
 		.extend({

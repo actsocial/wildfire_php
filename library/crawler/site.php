@@ -108,6 +108,7 @@ function getInfoBySiteUrl($url){
 		"koubei.jumei.com"=>array("name"=>"聚美优品短评","type"=>"ECOM"),
 		"www.amazon.cn"=>array("name"=>"amazon","type"=>"BBS"),
 		"t.163.com"=>array("name"=>"网易微博","type"=>"Weibo"),
+		"s.weibo.com"=>array("name"=>"新浪微博","type"=>"Weibo"),
 		"club.china.com"=>array("name"=>"中华网","type"=>"BBS"),
 		"cs.rednet.cn"=>array("name"=>"长沙社区","type"=>"BBS"),
 		"ks.cn.yahoo.com"=>array("name"=>"雅虎知识堂搜索","type"=>"BBS"),
