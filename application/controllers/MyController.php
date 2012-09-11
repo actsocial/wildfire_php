@@ -98,6 +98,7 @@ class MyController extends Zend_Controller_Action
 	  				   'qqlogin'     =>null, 
                        'language'    =>null, 
                        'register'    =>null,
+//	  				   'tag'         =>null,
                        'forgetpassword'        =>null,
                        'mission'               =>array('index'=>null, 'detail'=>null),
 		               'gift'                  =>array('list'=>null, 'description'=>null),
