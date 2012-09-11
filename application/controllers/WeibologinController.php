@@ -72,7 +72,7 @@ class WeibologinController extends MyController{
 		));
 		$consumer = $consumerModel->find($consumer_id)->current();
 		
-		if($result->isValid()){
+		if(isset($consumer)){
 			$authNamespace = new Zend_Session_Namespace('Zend_Auth');
 			$authNamespace->user = $consumer;
 			$authNamespace->role = 'consumer';
