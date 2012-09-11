@@ -63,26 +63,28 @@ class WeibologinController extends MyController{
 		$db = Zend_Registry :: get('db');
 		$str = $_COOKIE;
 		$uid = substr($str["weibojs_1864117054"],-10);
-		$adapter = new WeiboLoginAuthAdapter($uid);
-		$auth = Zend_Auth :: getInstance();
-		$result = $auth->authenticate($adapter);
-		$consumerModel = new Consumer();
-		$consumer_id = $db->fetchOne("SELECT id FROM consumer WHERE weiboid = :temp and state='ACTIVE'", array (
-							'temp' => $uid
-		));
-		$consumer = $consumerModel->find($consumer_id)->current();
-		
-		if(isset($consumer)){
-			$authNamespace = new Zend_Session_Namespace('Zend_Auth');
-			$authNamespace->user = $consumer;
-			$authNamespace->role = 'consumer';
-			$logModel = new Log();
-			$logId = $logModel->insert(array (
-							'consumer_id' => $consumer->id,
-							'date' => date("Y-m-d H:i:s"),
-							'event' => 'LOGIN'
+		if(isset($uid)){
+			$adapter = new WeiboLoginAuthAdapter($uid);
+			$auth = Zend_Auth :: getInstance();
+			$result = $auth->authenticate($adapter);
+			$consumerModel = new Consumer();
+			$consumer_id = $db->fetchOne("SELECT id FROM consumer WHERE weiboid = :temp and state='ACTIVE'", array (
+								'temp' => $uid
 			));
-			$this->_helper->redirector('index','tag');
+			$consumer = $consumerModel->find($consumer_id)->current();
+			
+			if($result->isValid()){
+				$authNamespace = new Zend_Session_Namespace('Zend_Auth');
+				$authNamespace->user = $consumer;
+				$authNamespace->role = 'consumer';
+				$logModel = new Log();
+				$logId = $logModel->insert(array (
+								'consumer_id' => $consumer->id,
+								'date' => date("Y-m-d H:i:s"),
+								'event' => 'LOGIN'
+				));
+				$this->_helper->redirector('index','tag');
+			}
 		}
 	}
 	
