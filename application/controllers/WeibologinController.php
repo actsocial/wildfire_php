@@ -11,9 +11,8 @@ class WeibologinController extends MyController{
 		$login_url = $o->getAuthorizeURL( WB_CALLBACK_URL );
 		header("Location:$login_url");
 	}
-	
-	function callbackAction(){
-		$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
+
+	private function getToken($o){
 		$token = null;
 		if (isset($_REQUEST['code'])) {
 			$keys = array();
@@ -24,6 +23,29 @@ class WeibologinController extends MyController{
 			} catch (OAuthException $e) {
 			}
 		}
+		return $token;
+	}
+
+	function writerAction(){
+		if(isset($_REQUEST['state'])){
+			$state = json_decode(urldecode($_REQUEST['state']), true);
+			// Zend_Debug::dump(urldecode($_REQUEST['state']));die;
+			if($state['fromif']){
+				$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
+				$token = $this->getToken($o);
+				if ($token) {
+					// Zend_Debug::dump($state['callback']."?token=".json_encode($token));die;
+					$this->getResponse()->setRedirect($state['callback']."?token=".urlencode(json_encode($token)));
+				}else {
+					$this->getResponse()->setRedirect($state['default']);
+				}
+			}
+		}
+	}
+	
+	function callbackAction(){
+		$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
+		$token = getToken($o);
 		if ($token) {
 			$tokenNamespace = new Zend_Session_Namespace('token');
 			$tokenNamespace->token = $token;
