@@ -45,7 +45,7 @@ class WeibologinController extends MyController{
 	
 	function callbackAction(){
 		$o = new SaeTOAuthV2( WB_AKEY , WB_SKEY );
-		$token = getToken($o);
+		$token = $this->getToken($o);
 		if ($token) {
 			$tokenNamespace = new Zend_Session_Namespace('token');
 			$tokenNamespace->token = $token;
