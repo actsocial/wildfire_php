@@ -109,6 +109,11 @@ Sns.mid2url= function(mid) {
         var offset2 = i + 7;
         var num = mid.substring(offset1, offset2);
         num = this.int10to62(num);
+        if(offset1>0){
+            if(num.length == 3){
+                num = "0"+num;
+            }
+        }
         url = num + url;
     }
     return url;
