@@ -170,4 +170,10 @@ class Zend_InfoCard_Xml_SecurityTokenReference extends Zend_InfoCard_Xml_Element
 
         return $encoded;
     }
+    /** (non-PHPdoc)
+     * @see Zend_InfoCard_Xml_Element_Interface::asXML()
+     */
+    public function asXML() {
+        // TODO Auto-generated method stub
+    }
 }

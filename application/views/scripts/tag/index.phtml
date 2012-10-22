@@ -38,6 +38,51 @@
 	</div>
 </div>
 
+    <div id="tutorial" class="tutorial">
+        <div data-target=".topic:eq(1)" data-highlight="class"  data-location="tl">
+            <h1>欢迎加入美妆达人活动</h1>
+            <p>
+                在这里您可以看到许许多多网友关于美妆产品的谈论，每个小方块都是一篇论坛帖子、博客文章或微博。 
+            </p>
+        </div>
+        <div data-target=".topic:eq(1) .box_head" data-highlight="class" data-location="tl">
+            <h1>查看帖子内容</h1>
+            <p>
+              您可以通过点击标题栏来查看帖子及其回复的详细内容。
+            </p>
+        </div>
+        <div data-target=".topic:eq(1) .reply_window"  data-highlight="class" data-location="tl">
+            <h1>回复贴子</h1>
+            <p>
+                点击此处，您会跳转到该贴所在的网站。登陆后，您可以回复该贴，分享你的看法。
+            </p>
+        </div>
+                
+        <div data-target=".filters" data-highlight="class" data-location="bl">
+            <h1> 帖子来源</h1>
+            <p>
+                在这里，您可以选择帖子的网站来源，分类别进行浏览回复
+            </p>
+        </div>
+        
+        <div data-target=".badge-replied" data-highlight="class" data-location="bl">
+            <h1>回帖记录</h1>
+            <p>
+     “已回复”栏中的帖子都会即时获得50积分。        
+              回复后的帖子如果24小时后还没有出现在“已回复”栏中，请通过在线帮助联系我们。
+              
+            </p>
+        </div>
+        
+        <div data-target="#qq_online" data-highlight="class"  data-location="bl">
+            <h1>在线帮助</h1>
+            <p>
+              如您对本次内测活动有任何问题或建议，欢迎及时联系我们。
+            </p>
+        </div>
+
+    </div>
+
 
 <script type="text/template" id="container_template">
 <div id="infscr-loading" style="display: none;"><img src="<?php echo $this->baseUrl();?>/images/loading-topics.gif" alt="Loading..."><div><em>加载中...</em></div></div>
@@ -49,53 +94,56 @@
 </script>
 
 <script type="text/template" id="topic_template">
-<% if(replied){ %>
-	<div class="topic span3 isotope-item alert <%= site.type %> replied" data="<%= id %>">
-<%}else{ %>
-<% if(read){ %>
-	<div class="topic span3 isotope-item alert <%= site.type %> read" data="<%= id %>">
-<%}else{ %>
-<div class="topic span3 isotope-item alert <%= site.type %>" data="<%= id %>">
-<%} %>
-<%} %>
-        <div class="box_head title" style="">
-              <a href="javascript:void(0)">
-              		<% if (_.isEmpty(title)) {%> <%= body.substring(0,30) %> <%} else { %><%= title.substring(0,30) %> <%} %>
-              </a>
+  <% if(replied){ %>
+  	<div class="topic span3 isotope-item alert <%= site.type %> replied" data="<%= id %>">
+  <%}else{ %>
+  <% if(read){ %>
+  	<div class="topic span3 isotope-item alert <%= site.type %> read" data="<%= id %>">
+  <%}else{ %>
+  <div class="topic span3 isotope-item alert <%= site.type %>" data="<%= id %>">
+  <%} %>
+  <%} %>
+  
+  <div class="box_head title" style="">
+    <a href="javascript:void(0)">
+    	<% if (_.isEmpty(title)) {%> <%= body.substring(0,30) %> <%} else { %><%= title.substring(0,30) %> <%} %>
+    </a>
+  </div>
+  
+	<div style="width:100%;" class="topic_head">
+		<div style="" class="title_td">
+			<div class="row-fluid">
+				<div class="span11">
+					<i class="babytree" style=""></i>
+    				<div class="author">
+      				<img style="width:50px;height:50px;" src="<%= author.profile_img %> "/><br> <%= author.name %>
+    				</div>
+    				来自: <%= site.name %><br>
+  					<button class="btn reply_window">  我要回复	</button>    
+    			  <br />           
+      
+				</div>
+        <div span="span2">
+        	<i class="icon-zh-CN" style="float:right"></i>
         </div>
-		<div style="width:100%;" class="topic_head">
-			<div style="" class="title_td">
-				<div class="row-fluid">
-					<div class="span11">
-						<i class="babytree" style=""></i>
-              				<div class="author">
-                				<img style="width:50px;height:50px;" src="<%= author.profile_img %> "/><br> <%= author.name %>
-              				</div>
-            				来自: <%= site.name %><br>
-          					<button class="btn reply_window">  我要回复	</button>    
-            			<br />           
-        
-					</div>
-			        <div span="span2">
-			        	<i class="icon-zh-CN" style="float:right"></i>
-			        </div>
-				</div>
-				<div style="display: none;" class="topicPRR">
-			    	<div class="posts"><div>Loading...</div></div>
-                    <!--
-			        <div class="responses">
-			        </div>
-			        <div class="reply" id="reply_box_1">
-						<form action="">
-						    <textarea placeholder="在这里填写您想回复的话" style="width:90%" rows="4" class="reply-content"></textarea>
-						    <button id="" class="btn btn-primary add-url">添加原帖链接</button>
-						<img id="submit_button_1" class="weibo-reply-img" style="cursor:pointer;padding-bottom: 10px;" src="<?php echo $this->baseUrl();?>/images/weiboreply.gif"></img>
-						</form>
-					</div>
-                    -->
-				</div>
+			</div>
+			
+			<div style="display: none;" class="topicPRR">
+	    	<div class="posts"><div>Loading...</div></div>     
+        <div class="responses"></div>
+        <div class="reply" id="reply_box_1"  style="display: none;">
+					
+				    <textarea placeholder="在这里填写您想回复的话" style="width:90%; margin: 0 0 5px 5px;" rows="4" class="reply-content"></textarea>
+				    <!--
+				    <button id="" class="btn btn-primary add-url">添加原帖链接</button>
+					  <img id="submit_button_1" class="weibo-reply-img" style="cursor:pointer;padding-bottom: 10px;" src="<?php echo $this->baseUrl();?>/images/weiboreply.gif"></img>
+					  !-->
+					  <button class="btn btn-primary reply_btn" style="margin: 0 0 0 6px;">回复</button>
+		
+			  </div>
 			</div>
 		</div>
+	</div>
 		
 		
 	</div>
@@ -113,7 +161,7 @@
 <% if (index!=0) { %>
 	<div class="head span2">
 		<div style="vertical-align: top; margin-left: 0px; overflow-x:hidden;">
-        		<img style="width:35px; height:35px;" src='<%= post.get("profile_img_path") %>' /><br>
+      <img style="width:35px; height:35px;" src='<%= post.get("profile_img_path") %>' /><br>
 		</div>
 	</div>
 <% } %>
@@ -180,6 +228,10 @@ function getIssue(topic,issue){
 	});
 }
 
+function show_reply(){
+  jQuery('.responses').show();
+}
+
 // works in ie and firefox, but not in chrome
 $("#copy").bind("click", function(){
 	txt = $(this).prev().val();
@@ -214,24 +266,13 @@ $("#copy").bind("click", function(){
 })
 
 
-// $("#reply").bind('click', function(){
-	// var uri = $(this).attr("data");
-	// window.setTimeout(
-		// function() {
-			// window.open('http://'+uri, '_blank');
-			// $("#reply").text("已完成回复");
-		// }, 
-		// 4000
-	// );
-	// $('#reply').unbind('click');
-// });
-
-
 
 // backbone app
       window.AppView = Backbone.View.extend({
 
         el: jQuery("#inbox"),
+
+        tutorial:true,
 
         events: {
 
@@ -250,28 +291,41 @@ $("#copy").bind("click", function(){
        		<?php endforeach;?>
 
 
-        	var tag = new Tag({
-                name:'skin_care',
-                topic_num :'0'
-              });
-        	var view = new TagView({model: tag});
+
         	
         	this.container = new ContainerView({});
        		jQuery(".filters").after(this.container.render().el);
        		this.container.layout();
        		        	
-        	$('a',$(view.render().el)).click();
-
-
-       		
         },
 
         render: function() {
+        },
+
+        showTutorial: function(){
+          if (this.tutorial) {
+         	options = {
+                    location:  'tl',
+                    width:     320,
+                    opacity:   0.4,
+                    returnTop: true
+                };
+            $('#tutorial').tutorial( options );
+            this.tutorial = false;
+           
+            //prettyPrint();
+          }
         }
 
       });
 
       window.App = new AppView;
-
+      
+	  	var tag = new Tag({
+	        name:'skin_care',
+	        topic_num :'0'
+	      });
+		var view = new TagView({model: tag});
+	  	$('a',$(view.render().el)).click();
 
 </script>

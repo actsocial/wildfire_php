@@ -5,19 +5,20 @@
 		adminlang="en-us" srclang="de-de" o-tmf="abc" creationtool="XYZTool">
 	</header>
 	<body>
-
+	<!-- addy95558 = addy95558 + 'w&#105;ldf&#105;r&#101;' + '&#46;' + '&#97;s&#105;&#97;'; -->
 		<tu tuid='Site_Contactus'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[<h2>联系方式</h2>		
 <tr>
+
 <td valign="top">
 <p>我们很想听到你的意见。请把你的意见发送至：<strong>
  <script language='JavaScript' type='text/javascript'>
  <!--
- var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+ var prefix = 'mailto';
  var path = 'hr' + 'ef' + '=';
  var addy95558 = '&#105;nf&#111;' + '&#64;';
- addy95558 = addy95558 + 'w&#105;ldf&#105;r&#101;' + '&#46;' + '&#97;s&#105;&#97;';
+ addy95558 = "home@xingxinghuo.org";
  document.write( '<a ' + path + '\'' + prefix + ':' + addy95558 + '\'>' );
  document.write( addy95558 );
  document.write( '<\/a>' );
@@ -31,7 +32,7 @@
  document.write( '</' );
  document.write( 'span>' );
  //-->
- </script></strong>。</p><table border="0" width="618" height="126"><tbody><tr valign="top"><td><p><span style="font-weight: bold; font-size: 16px">北京:</span></p><p> 东直门外大街48号<br /> 东方银座 C座22D <br /> 北京, 中国  100027</p><p>电话: +86 400 600 8707<br />传真:  +86 21 5836 3217</p></td><td><p><span style="font-weight: bold; font-size: 16px">上海:</span></p><p> 浦东南路1101号<br />  远东大厦518室<br />  上海, 中国200120</p><p>电话: +86 400 600 8707<br />传真:  +86 21 5836 3217</p></td></tr><tr><td><p><span style="font-weight: bold; font-size: 16px">新加坡:</span> </p><p>星星火私人有限公司<br />Expara<br />1 George Street<br />#17-05 One George Street<br />新加坡 049145<br /><br />电话: +65 6435 5295<br />传真: +65 6536 7908</p></td><td> </td></tr></tbody></table>
+ </script></strong>。</p><table border="0" width="618" height="126"><tbody><tr valign="top"><td><p><span style="font-weight: bold; font-size: 16px">北京:</span></p><p> 东直门外大街48号<br /> 东方银座 C座22D <br /> 北京, 中国  100027</p><p>电话: +86 400 600 8707<br />传真:  +86 21 5836 3217</p></td><td><p><span style="font-weight: bold; font-size: 16px">上海:</span></p><p> 昌平路68号<br />  静安产业大厦512室<br />  上海, 中国200041</p><p>电话: +86 400 600 8707<br />传真:  +86 21 5836 3217</p></td></tr><tr><td><p><span style="font-weight: bold; font-size: 16px">新加坡:</span> </p><p>星星火私人有限公司<br />Expara<br />1 George Street<br />#17-05 One George Street<br />新加坡 049145<br /><br />电话: +65 6435 5295<br />传真: +65 6536 7908</p></td><td> </td></tr></tbody></table>
 
 </td>
 </tr>]]></seg>
@@ -39,10 +40,10 @@
 			<tuv xml:lang="en">
 				<seg><![CDATA[<h2>Contact Us</h2>
 <p>We'd love to talk to you. Contact us at <a
-	href="mailto:info@wildfire.asia">info@wildfire.asia</a>, or give us a
+	href="mailto:home@xingxinghuo.org">home@xingxinghuo.org</a>, or give us a
 ring:</p>
 <table border="0" width="618" height="126"><tbody>
-<tr valign="top"><td><p><span style="font-weight: bold; font-size: 16px">Beijing:</span></p><p> DongZhiMenWaiDaJie #48<br /> Oriental Kenzo Building (DongFangYinZuo)<br /> Tower C, 22D<br /> Beijing, China 100027<br /> </p></td><td><p><span style="font-weight: bold; font-size: 16px">Shanghai:</span></p><p>  South Pudong Road #1101<br />  YuanDong Building (YuanDongDaSha)<br />  Room 518<br />  Shanghai, China 200120</p><p>Telephone: +86 21 5836 3216<br />Fax:  +86 21 5836 3217</p></td></tr><tr><td><p><span style="font-weight: bold; font-size: 16px">Singapore:</span> </p><p>Wildfire Pte Ltd<br />Expara<br />1 George Street<br />#17-05 One George Street<br />Singapore 049145<br /><br />Telephone: +65 6435 5295<br />Fax: +65 6536 7908</p></td><td> </td></tr></tbody></table><p>&nbsp;</p>
+<tr valign="top"><td><p><span style="font-weight: bold; font-size: 16px">Beijing:</span></p><p> DongZhiMenWaiDaJie #48<br /> Oriental Kenzo Building (DongFangYinZuo)<br /> Tower C, 22D<br /> Beijing, China 100027<br /> </p></td><td><p><span style="font-weight: bold; font-size: 16px">Shanghai:</span></p><p>  Chang Ping Road #68<br />  JingAn Chanye Building (jingan chanye dasha)<br />  Room 528<br />  Shanghai, China 200041</p><p>Telephone: +86 21 5836 3216<br />Fax:  +86 21 5836 3217</p></td></tr><tr><td><p><span style="font-weight: bold; font-size: 16px">Singapore:</span> </p><p>Wildfire Pte Ltd<br />Expara<br />1 George Street<br />#17-05 One George Street<br />Singapore 049145<br /><br />Telephone: +65 6435 5295<br />Fax: +65 6536 7908</p></td><td> </td></tr></tbody></table><p>&nbsp;</p>
 </td>
 </tr></table>]]></seg>
 			</tuv>

@@ -1,7 +1,7 @@
 function loadNotification(container){
 	var defaultContent;
 	jQuery.ajax({
-		  url: 'notification/ajaxpop',
+		  url: '/notification/ajaxpop',
 		  success: function(data) {
 		  	if (data=="False"){
 				//close(container);

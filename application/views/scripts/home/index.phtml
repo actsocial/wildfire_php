@@ -1,6 +1,8 @@
 <div id="fillout-dialog">
     <div class="content"></div>
 </div>
+ <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />  
+
 <div id="check-alert-dialog">
     <p class="content"></p>
 </div>
@@ -9,8 +11,8 @@
 <div id="web-dialog" class="web-dialog" style="display:none;">
     <div class="content-2column">
 	<div class="images-column">
-            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
-            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
+            <img style="max-width:80px;" src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
+            <img style="max-width:80px;" src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
         </div>
         <div class="main-column">
             <h2><?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->recentInvitation['name'];?><?php if($this->recentInvitation['name']=="campaign"){ echo $this->translate('You_Are_Invited_2');} else {echo $this->translate('You_Are_Invited_3');}?></h2>
@@ -19,7 +21,7 @@
             <p><?php echo $this->recentInvitation['invitation_description2']?></p>
         </div>
         <div class="buttons-bar">
-        <?php if ($this->recentInvitation["name"]=="美妆达人"){?>
+        <?php if ($this->recentInvitation["name"]=="内测-美妆达人"){?>
         	<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>" class="button"><?php echo $this->translate('Accept');?></a>
         <?php }else {?>
             <a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description', 'id'=>$this->recentInvitation['campaign_id']));?>" class="button"><?php echo $this->translate('Accept');?></a>
@@ -32,8 +34,8 @@
 <div id="web-dialog" class="web-dialog" style="display:none;">
     <div class="content-2column">
 	<div class="images-column">
-            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
-            <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
+            <img  style="max-width:80px;"   src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
+            <img  style="max-width:80px;"   src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
 	</div>
         <div class="main-column">
             <h2>
@@ -396,11 +398,22 @@
             <div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:true;"<?php endif;?>>
 			<?php $i++;?>
 			<ul>
+				
 				<div style="border:1px dashed #3AB6EB;height:110px;width:630px">
 					<div style="float: left;">
 						<?php if($invitation['type'] == 'mission'){?>
-							<?php if($invitation['name']=="美妆达人"){?>
-								<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
+							<?php if($invitation['name']=="内测-美妆达人"){?>
+								<!--<a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>-->
+								<div style='float:left;width:515px;'>
+									<div style="margin-left:20px;"><strong>分享你的护肤、彩妆经验&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;赢取“我的美丽日记面膜*10片”</strong><br><br>
+									星星火在此处为你搜罗了各大论坛、网站最新的美妆贴，你是否同意她们的观点？<br><strong><a href="<?php echo $this->url(array('controller'=>'tag','action'=>'index'));?>">点击此处</a></strong>回复你感兴趣的帖子，说说你的美妆经验吧~！
+									<br><br>
+									活动时间：2012.8.6——2012.8.19
+								    </div>
+								</div>
+								<div style="float:right;width:115px;height:110px;">
+									<img alt="" src="<?php echo $this->baseUrl();?>/images/campaign/testmission.jpg">
+								</div>
 							<?php }else{ ?>
 								<a href="<?php echo $this->url(array('controller'=>'mission','action'=>'description','id'=>$invitation['campaign_id']));?>"><img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_invitation_tab_<?php echo $this->lang; ?>_<?php echo $invitation['campaign_id'];?>.jpg" height="110"/></a>
 							<?php }?>
@@ -415,11 +428,13 @@
 					<div style="float: left; width:200px; padding:10px;">
 						<!--<?php echo $invitation["invitation_description"]."<br>".$invitation["invitation_description2"];?>
 					-->
-							<?php if($invitation['name']=="美妆达人"){?>
-									<?php echo "加入美妆活动，这里有你最想要了解的潮流资讯，也期待你留下自己的心得！<br>
-												活动时间：<br>
-												2012.7.1——2012.7.31";?>
-							<?php }elseif ($invitation['name']=='电影大赏'){ ?>
+							<?php if($invitation['name']=="内测-美妆达人"){?>
+										<!--<?php echo "加入美妆活动，这里有你最想要了解的潮流资讯，也期待你留下自己的心得！<br>
+													活动时间：<br>
+													2012.7.1——2012.7.31";?>
+										-->
+										
+								<?php }elseif ($invitation['name']=='电影大赏'){ ?>
 									<?php echo "夏日电影大赏，无论是记忆中的经典，还是正在热映的新片，来和星星火分享你的电影观感吧！<br>
 												活动时间：<br>
 												2012.7.15——2012.8.15";?>

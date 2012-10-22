@@ -132,8 +132,8 @@ window.TopicView = Backbone.View.extend({
 	events : {
 		"click .title" : "toggle",
 		"click .add-url" : "addSourceUrl",
-		"click .weibo-reply-img" : "saveReply",
-		"click .reply_window" : "open_reply_window"
+	//	"click .reply_btn" : "sendReply",
+		"click .reply_window" : "open_reply_window",
 	},
 
 	// The TodoView listens for changes to its model, re-rendering.
@@ -162,6 +162,11 @@ window.TopicView = Backbone.View.extend({
 			$(".topicPRR", this.$el).show();
 //			$('.topic',this.$el).removeClass("span4");
 //			$('.topic',this.$el).addClass("span61");
+			if (Sns.isSns(this.model.id)) {
+				$("#reply_box_1", this.$el).show();
+			} else {
+				$("#reply_box_1", this.$el).hide();
+			}
 
 			this.resizeTopicDiv(100);
 		} else {
@@ -210,17 +215,37 @@ window.TopicView = Backbone.View.extend({
 	},
 	
 	addSourceUrl : function(e){
-		jQuery(el).find(".reply-content").val(jQuery(el).find(".reply-content").val()+'\r\n http://'+this.model.id);
+		$(this.el).find(".reply-content").val($(this.el).find(".reply-content").val()+'\r\n http://'+this.model.id);
 	},
 	
-	saveReply: function(e){
-		jQuery.post('tag/ajaxsaveweiboreply',{topicId:this.model.id,content:jQuery(el).find(".reply-content").val()},function(data){
-			if(data=='ok'){
-				//alert("回复成功");
-			}else{
-				//alert("系统忙,请稍后再试");
-			}
-		});
+	sendReply: function(e){
+		sns = new Sns(this.model.id);
+		var source = sns.getType();
+		var source_id = sns.getSourceId();
+		var user_id = sns.getUserId();
+		var source_type = sns.getSourceType();
+		
+		var data = {
+			source: source, 
+			source_id: source_id, 
+			user_id: user_id, 
+			source_type: source_type, 
+			content: $(this.el).find(".reply-content").val()
+		};
+		
+		$.ajax({
+			type: "POST",
+			url: 'sns/comments',
+			data: data,
+			success: function(data){
+								 if(data['status' == 1]){
+									 alert("回复成功");
+								 }else{
+								 	 var id = "<?php echo $id; ?>";
+								 	 requestToken(source, "localhost:4000", id);							 
+								 }
+							 }
+		 });						
 	},
 	
 	open_reply_window: function(e){

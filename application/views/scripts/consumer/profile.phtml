@@ -41,7 +41,7 @@
 		<table>
 		<tr><td>用户名:</td><td><div id="name" class="editable3" title="双击修改"><?php echo $this->profile->name;?></div></td></tr>
 		<tr><td>实际姓名:</td><td><?php echo $this->profile->recipients_name;?></td></tr>
-		<tr><td>性别:</td><td><div id="gender" class="editable3" title="双击修改"><?php if($this->profile->gender=='male')echo '男';if($this->profile->gender=='female')echo '女';if($this->profile->gender!='male'&&$this->profile->gender!='female')echo '未定义';?></div>(男:male,女:female)</td></tr>
+		<tr><td>性别:</td><td><div id="gender" class="editable3" title="双击修改"><?php if($this->profile->gender=='male'||$this->extra_profile->gender==1 )echo '男';if($this->profile->gender=='female'|| $this->extra_profile->gender==0 )echo '女';if($this->profile->gender!='male'&&$this->profile->gender!='female'&&$this->extra_profile->gender!=0&&$this->extra_profile->gender!=1)echo '未定义';?></div>(男:male,女:female)</td></tr>
 		<tr><td>出生日期:</td><td><div id="birthdate" class="editable3"><?php echo $this->extra_profile->birthdate;?></div></td></tr>
 		<tr><td>学历:</td><td><div id="education" class="editable3"><?php echo $this->extra_profile->education;?></div></td></tr>
 		<tr><td>是否有孩子:</td><td><div id="have_children" class="editable3"><?php if ($this->extra_profile->have_children==""){ echo "未知";}elseif ($this->extra_profile->have_children=="0"){echo "无";}elseif ($this->extra_profile->have_children=="1"){echo "有";} ?></div></td></tr>

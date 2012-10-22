@@ -306,7 +306,8 @@ class ReportController extends MyController
 						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
 						$url_mission4 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2293";//童装
 						$url_mission5 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3239";//电影大赏
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3).file_get_contents($url_mission4).file_get_contents($url_mission5);
+						$url_mission6 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3257";//印象韩国
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3).file_get_contents($url_mission4).file_get_contents($url_mission5).file_get_contents($url_mission6);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -1555,7 +1556,8 @@ function adminreportbatchreplyAction(){
 						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
 						$url_mission4 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2293";//童装
 						$url_mission5 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3239";//电影大赏
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3).file_get_contents($url_mission4).file_get_contents($url_mission5);
+						$url_mission6 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3257";//印象韩国
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3).file_get_contents($url_mission4).file_get_contents($url_mission5).file_get_contents($url_mission6);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -1831,6 +1833,7 @@ function adminreportbatchreplyAction(){
 				->join('consumer', 'consumer.id = report.consumer_id', array('email,login_phone,recipients_name'))
 				->where('report.accesscode in ('.substr($accessCodeString,0,strlen($accessCodeString)-1).")")
 				->where("report.state = 'APPROVED'")
+				->order(" create_date desc ")
 				->limit(0);
 				
 				$accessCodeArray = $db->fetchAll($selectAccessCode);
@@ -1908,6 +1911,7 @@ function adminreportbatchreplyAction(){
 						->join('consumer', 'consumer.id = report.consumer_id', array('email','login_phone','recipients_name'))
 						->where('report.campaign_id = ?',$formData['campaign_id'])
 						->where("report.state = 'APPROVED'")
+						->order("create_date desc")
 						->limit(0);
 						
 						$accessCodeArray = $db->fetchAll($selectAccessCode);
@@ -1934,9 +1938,15 @@ function adminreportbatchreplyAction(){
 						endforeach;
 						// get tag for report
 						$selectAllTag = $db->select();
-						$selectAllTag->from('tags', array('id', 'name'))
-						->where("tags.module ='REPORT'")
-						->where('tags.campaign_id is null or tags.campaign_id ='.$formData['campaign_id']);
+						if($formData['campaign_id']==13){
+							$selectAllTag->from('tags', array('id', 'name'))
+							->where("tags.module ='REPORT'")
+							->where('tags.campaign_id = 0 or tags.campaign_id ='.$formData['campaign_id']);
+						}else {
+							$selectAllTag->from('tags', array('id', 'name'))
+							->where("tags.module ='REPORT'")
+							->where('tags.campaign_id is null or tags.campaign_id ='.$formData['campaign_id']);
+						}
 						$allTagArray = $db->fetchAll($selectAllTag);
 						$selectReportTag = $db->select();
 						

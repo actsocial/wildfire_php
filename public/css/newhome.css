@@ -253,8 +253,10 @@ td.article_column {
 .footer-inner {
 	margin: 0 auto;
     background-color: #309BE4;
+	/*
 	box-shadow: 1px 1px 5px #aaa;
-	width: 680px;
+	*/
+    width: 680px;
 }
 
 .footer-inner table a {
@@ -648,7 +650,9 @@ table.spark-show td img {
 	float: left;
 	/*margin: 0 6px;*/
 	//width: 398px;
-	padding-top:16px;
+	/*
+		padding-top:16px;
+	*/
 	padding-bottom:16px;
 	padding-left:14px;
 	padding-right:8px;
@@ -1210,7 +1214,9 @@ ul.tabbed-buttons li.active a:visited {
 	float: left;
 }
 .edit-profile fieldset {
+	/*
 	float: left;
+	*/
 	width: 660px;
 	margin:0 10px 20px 10px;
 }
@@ -1361,9 +1367,11 @@ ul.tabbed-buttons li.active a:visited {
 	margin-top: 4px;
 }
 .web-dialog .content-2column .main-column p {
+	/*
 	margin:0;
 	margin-top: 10px;
 	margin-left: 2px;
+	*/
 	font-size: 14px;
 	float: left;
 	clear: left;
@@ -2567,7 +2575,8 @@ a.list-orders:hover {
 	height: 30px;
 }
 .consumer-edit fieldset .form-line-long-title .input-area input {
-	margin-top: 8px;
+	margin-top: -2px;
+	margin-right:4px;
 }
 .consumer-edit fieldset .form-line-long-title .input-area .text {
 	height: 16px;

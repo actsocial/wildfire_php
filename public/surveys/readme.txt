@@ -1,3 +1,15 @@
+
+在重新Checkout一个新版本后要修改的config.ini的内容如下
+
+joomla.home = http://www.xingxinghuo.com
+joomla.loginFailed = "http://www.xingxinghuo.com/index.php?option=com_content&view=article&id=92&Itemid=92"
+app.home = http://home.xingxinghuo.com
+
+添加
+
+image.host=http://image.influencerforce.com
+
+
 NOTE: generate static page on server on current language!
 
 Static Page Configure Steps:

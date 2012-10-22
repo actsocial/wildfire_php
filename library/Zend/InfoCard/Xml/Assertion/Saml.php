@@ -281,4 +281,12 @@ class Zend_InfoCard_Xml_Assertion_Saml
 
         return $retval;
     }
+    
+    /** (non-PHPdoc)
+     * @see Zend_InfoCard_Xml_Element_Interface::asXML()
+     */
+    public function asXML() {
+        // TODO Auto-generated method stub
+    }
+
 }

@@ -914,6 +914,7 @@
 					<seg><![CDATA[Me&City]]></seg>
 				</tuv>
 			</tu>
+			<!--
 			
 			<tu tuid='Report_Tag_Others'>
 				<tuv xml:lang="zh">
@@ -923,7 +924,8 @@
 					<seg>Others</seg>
 				</tuv>
 			</tu>
-			<tu tuid='Report_Tag_Others'>
+			-->
+			<tu tuid='Report_Tag_Others Brand'>
 				<tuv xml:lang="zh">
 					<seg>其他童装品牌</seg>
 				</tuv>

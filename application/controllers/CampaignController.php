@@ -759,6 +759,15 @@ class CampaignController extends MyController
 	    $friends  = $consumerFriend->fetchAll('consumer= '.$consumer->id .' and campaign='.$this->view->campaign->id);		
 		$this->view->friendsNum = count($friends);
 		
+		//consumer_extra_info 
+		/*$consumer_extra_info = new ConsumerExtraInfo();
+		$consumerextra = $consumer_extra_info->fetchAll("consumer_id= ".$consumer->id);*/
+		
+		$select_consumer_extra_info = $db->select();
+		$select_consumer_extra_info->from('consumer_extra_info','*')
+		->where('consumer_extra_info.consumer_id = ?', $consumer->id);
+		$consumerextra = $db->fetchAll($select_consumer_extra_info);
+		
 		if ($this->_request->getPost ()){
 			$formData = $this->_request->getPost ();
 			$form->populate($formData);	
@@ -768,6 +777,12 @@ class CampaignController extends MyController
 			
 		}else{
 			$form->populate($consumer->toArray());
+			
+			$form->birthdate->setValue($consumerextra[0]['birthdate']);
+			$form->gender->setValue($consumerextra[0]['gender']);
+			$form->education->setValue($consumerextra[0]['education']);
+			$form->income->setValue($consumerextra[0]['income']);
+			$form->telephone->setValue($consumer->company_phone);
 			// zh city
 			if($consumer["city"]!= NULL && $consumer["province"]!= NULL ){
 				$this->view->city = $consumer["city"];

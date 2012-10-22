@@ -11,6 +11,10 @@ class WeiboLoginAuthAdapter implements Zend_Auth_Adapter_Interface {
 		if (count ( $rs ) > 0) {
 			return new Zend_Auth_Result(Zend_Auth_Result :: SUCCESS, $this->_weiboid);
 		} else {
+			if(isset($this->_weiboid)&&''!=$this->_weiboid){
+				$consumerModel = new Consumer();
+				$consumerModel->insert(array('name'=>'微博用户','weiboid'=>$this->_weiboid,'state'=>'ACTIVE'));
+			}
 			return new Zend_Auth_Result(Zend_Auth_Result :: FAILURE, $this->_weiboid);
 		}
 	}

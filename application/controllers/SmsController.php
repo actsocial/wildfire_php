@@ -213,14 +213,12 @@ class SmsController extends MyController {
 			$time = $currentTime;
 			$apitype = $formData ['apitype']; // $apitype 通道选择 0：默认通道； 2：通道2； 3：即时通道；
 			$msg = iconv ( "UTF-8", "GB2312", $message );
-			
 
 //				$respxml = $newclient->sendSMS ( $dorrlar[], $msg, $time, $apitype );
 			$dollar = array ();
 			$newclient = new SMS ();
 			if ($newclient->ConfNull == "1") {
 				$data = $formData ['data'];
-				
 				$rows = explode ( "\n", $data );
 				$i = 0;
 				foreach ( $rows as $row ) {
@@ -253,7 +251,8 @@ class SmsController extends MyController {
 					}
 					$respxml = $newclient->sendSMS ( $mobile, $tempmsg, $time, $apitype );
 					$res =  $newclient->toArray ();
-					if(isset($res["successnum"][0])&&$res["successnum"][0]==1)
+					//共有四个发短信的通道 ,分别是:2,3,9,10 
+					if(isset($res["successnum"][0]))
 					{
 						$successphone[]=$mobile;
 					}

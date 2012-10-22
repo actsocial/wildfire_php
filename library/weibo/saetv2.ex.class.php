@@ -193,7 +193,6 @@ class SaeTOAuthV2 {
 		} else {
 			throw new OAuthException("wrong auth type");
 		}
-
 		$response = $this->oAuthRequest($this->accessTokenURL(), 'POST', $params);
 		$token = json_decode($response, true);
 		if ( is_array($token) && !isset($token['error']) ) {
@@ -356,7 +355,6 @@ class SaeTOAuthV2 {
 		curl_setopt($ci, CURLOPT_SSL_VERIFYPEER, $this->ssl_verifypeer);
 		curl_setopt($ci, CURLOPT_HEADERFUNCTION, array($this, 'getHeader'));
 		curl_setopt($ci, CURLOPT_HEADER, FALSE);
-
 		switch ($method) {
 			case 'POST':
 				curl_setopt($ci, CURLOPT_POST, TRUE);
@@ -379,7 +377,6 @@ class SaeTOAuthV2 {
 		curl_setopt($ci, CURLOPT_URL, $url );
 		curl_setopt($ci, CURLOPT_HTTPHEADER, $headers );
 		curl_setopt($ci, CURLINFO_HEADER_OUT, TRUE );
-
 		$response = curl_exec($ci);
 		$this->http_code = curl_getinfo($ci, CURLINFO_HTTP_CODE);
 		$this->http_info = array_merge($this->http_info, curl_getinfo($ci));

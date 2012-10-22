@@ -65,8 +65,6 @@ window.Tag = Backbone.Model
 							});
 							self.set("topics",topics);
 							self.set({"topicloading":false});
-							
-							
 						}
 					});
 				}
@@ -190,6 +188,7 @@ window.TagView = Backbone.View.extend({
 			jQuery("#infscr-loading").show();
 		}else{
 			jQuery("#infscr-loading").hide();
+			  //App.showTutorial();
 	    	//$('.topics').isotope('reLayout');
 		}
 	}

@@ -40,7 +40,7 @@ $_SESSION["appkey"]   = "d14e5a18ff8b0468dbe9ef4ecfc822da";
 
 //QQ登录成功后跳转的地址,请确保地址真实可用，否则会导致登录失败。
 //$_SESSION["callback"] = "http://your domain/oauth/get_access_token.php"; 
-$_SESSION["callback"] = "http://local.xingxinghuo.cn/public/qqlogin/callback";
+$_SESSION["callback"] = "http://home.xingxinghuo.com/public/qqlogin/callback";
 
 //QQ授权api接口.按需调用
 $_SESSION["scope"] = "get_user_info,add_weibo";

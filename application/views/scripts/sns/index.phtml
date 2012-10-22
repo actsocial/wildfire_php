@@ -1,20 +1,24 @@
 <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/sns.js"></script>
-<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/sns.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<?php echo $this->baseUrl();?>/css/redirect.css" />
 
 <div style="padding-left: 15px;font-size: 16px;">
 	Manage your sns accounts
 </div>
 
 <div id="snss-panel">
-	<?php if(isset($this->users)) {?>
-		<? foreach ($this->users as $user) { ?>
-			<div class="sns-box" sns-id="<?php echo $user.id ?>" source="<?php echo $user.source ?>">
-        <img src="<?php echo $user.big_profile_img_path ?>" style="width:150px;margin:10px;"/>
+	<?php if(isset($this->sns_users)) {?>
+		<? foreach ($this->sns_users as $sns) { ?>
+			<div class="sns-box" sns-id="<?php echo $sns['id'] ?>" source="<?php echo $sns['source'] ?>">
+        <?php if($sns['big_profile_img_path'] != NULL){ ?>
+          <img src="<?php echo $use['big_profile_img_path'] ?>" style='width:150px;margin:10px;'/>
+        <?php } else { ?>
+          <img src="<?php echo $this->baseUrl().'/images/sns/avatar_default.png' ?>"  style='width:150px;margin:10px;'/>
+        <?php }?>  
 				<div style="font-size:120%;font-weight:bold;">
-					<span class="snsico <?php echo $user.source ?>_ico"><?php echo $user.nick ?></span>
+					<span class="snsico <?php echo $sns['source'] ?>_ico"><?php echo $sns['nick'] ?></span>
 				</div>
 			</div>
-		<?}
+		<?php }
 		}
 	?>	
 	<div class="sns-box new">
@@ -30,17 +34,22 @@
 	</div>
 	<div class="modal-body">
 		<ul class="thumbnails">
-			<?php foreach($this->sns_enabled_source as $sns) {?>
+			<?php foreach($this->sns_enabled_source as $platform) {?>
 	        <li class="span3" style="width:auto;">
-	          <a class="thumbnail" href="javascript:void(0);" onclick='requestToken("<?php echo $sns['name']?>", "<?php echo $this->writer_host?>");'>
-	            <img style="width:128px; height:128px;" alt="" src="<?php echo $this->baseUrl().'/images/sns/'.$sns['name']?>.png">
+	          <a class="thumbnail" href="javascript:void(0);" onclick='action("<?php echo $platform['name']?>", "<?php echo $this->writer_host?>", "<?php echo $this->current_user_id?>");'>
+	            <img style="width:128px; height:128px;" alt="" src="<?php echo $this->baseUrl().'/images/sns/'.$platform['name']?>.png">
 	          </a>
 	        </li>
 			<?}?>
 	  </ul>
-		<iframe id="oauthWindow" style="display:none;border:none;overflow-y:auto;overflow-x:hidden;" width="100%" height="100%"></iframe>
 	</div>
 	<div class="modal-footer">
-	    <a data-dismiss="modal" class="btn" href="#">Close</a>
+	    <a data-dismiss="modal" class="btn" id="close" href="#">Close</a>
 	</div>
+</div>
+
+<div id="authModal" class="modal hide fade">
+  <div class="modal-body">
+    <h1 class="waiting">正在验证中，请稍候...</h1>
+  </div>
 </div>

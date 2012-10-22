@@ -2,7 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!--<meta property="qc:admins" content="354343062556016701670576375" />
+-->
 <meta property="qc:admins" content="126001440270167057636" />
+
 <meta property="wb:webmaster" content="99b15dd409d73c6e" />
 <meta name="robots" content="index, follow" />
 <meta name="keywords" content="word-of-mouth marketing" />
@@ -87,7 +90,7 @@
 	<tr>
             <td><?php echo $this->form->email?></td>
             <td>&nbsp;</td>
-        </tr>
+    </tr>
 	<tr>
             <td><?php echo $this->form->password?></td>
         </tr>
@@ -97,20 +100,23 @@
                 <a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>"><?php echo $this->translate("Common_Inactive_Account")?></a>
             </td>
         </tr>
+        
 </table>
-
+<div>
+	<div>
+	<br>
+		<a href="<?php echo $this->baseUrl();?>/weibologin"><img src="<?php echo $this->baseUrl();?>/images/loginButton_24.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a>
+	</div>
+	<div style="display:none">
+		<a href="<?php echo $this->baseUrl();?>/qqlogin"><img src="<?php echo $this->baseUrl();?>/images/qqLoginButton_24.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a>
+	</div>
+</div>
   <div style="clear:both"></div>  <br/>
 </div>
 <div class="buttons-bar">
 <?php echo $this->form->login?>
 <input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>
 </div>
-<!-- div>
-<a href="<?php echo $this->baseUrl();?>/weibologin"><img src="<?php echo $this->baseUrl();?>/images/loginButton_24.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a>
-</div>
-<div>
-	<a href="<?php echo $this->baseUrl();?>/qqlogin"><img src="<?php echo $this->baseUrl();?>/images/qqLoginButton_24.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a>
-</div-->
 <input type="hidden" name="url" id="url" value="<?php echo $this->url?>"></input>
 </form>
 			

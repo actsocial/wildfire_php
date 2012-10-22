@@ -41,7 +41,7 @@ class MyController extends Zend_Controller_Action
 		$controller = $this->getRequest()->getControllerName();
 		$action = $this->getRequest()->getActionName();
 		$authNamespace = new Zend_Session_Namespace('Zend_Auth');
-		//print_r($authNamespace->role);die;
+		// print_r($controller);die;
 		if($this->filter($controller, $action)) {
 		  if (!Zend_Auth::getInstance()->hasIdentity()) {
 		    $config = Zend_Registry::get('config');
@@ -88,14 +88,17 @@ class MyController extends Zend_Controller_Action
 	}
 	
 	private function filter($controller, $action) {
-	  $exceptions = array(
+	  	$exceptions = array(
 	  				   'useremail'   => null, 
                        'login'       => null,
                        'index'       =>null, 
                        'site'        =>null, 
-                       'training'    =>null, 
+                       'training'    =>null,
+	  				   'weibologin'  =>null,
+	  				   'qqlogin'     =>null, 
                        'language'    =>null, 
                        'register'    =>null,
+//	  				   'tag'         =>null,
                        'forgetpassword'        =>null,
                        'mission'               =>array('index'=>null, 'detail'=>null),
 		               'gift'                  =>array('list'=>null, 'description'=>null),
@@ -108,6 +111,6 @@ class MyController extends Zend_Controller_Action
 	                   'report' => array('saveuploaddata' => null),
 	                   'sns' => null,
 		               );
-	  return !(array_key_exists($controller, $exceptions) && (!isset($exceptions[$controller]) || array_key_exists($action, $exceptions[$controller])));
+		return !(array_key_exists($controller, $exceptions) && (!isset($exceptions[$controller]) || array_key_exists($action, $exceptions[$controller])));
 	}
 }
