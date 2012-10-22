@@ -9,7 +9,7 @@
 <?php 
 if(!$this->visiable){
 	echo '<div class="article-box">
-	<div class="article-box-inner"><font color="red">由于你已经参加或者拒绝了邀请<br/><b>无法填写调查前问卷</b></font></div></div>';
+	<div class="article-box-inner"><font color="red">'.$this->translate('Because_Your_Have_Joined').'<br/><b>'.$this->translate('You_Can_Not_Fill').'</b></font></div></div>';
 }else{
 	if (isset($this->file)) {  // if static file exist
 	    include($this->file);

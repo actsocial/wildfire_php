@@ -334,12 +334,15 @@ class ConsumerController extends MyController {
 	}
 
 	function editcontactAction() {
-		$form = new ConsumerContactForm ();
 		$campaign = $this->_request->getParam('cid');
+		$campaignModel = new Campaign();	
+		$cam = $campaignModel->find($campaign)->current();
+		$form = new ConsumerContactForm (array('relative' =>$cam->relative));
 		
 		$consumerModel = new Consumer ();
 		if ($this->_request->isPost ()) { //POST
 			$formData = $this->_request->getPost ();
+			//Zend_Debug::dump($form->isValid ( $formData ));die;
 			if ($form->isValid ( $formData )) {
 				$id = $this->_currentUser->id;
 				$consumer = $consumerModel->find ( $id )
@@ -359,6 +362,9 @@ class ConsumerController extends MyController {
 				if ($formData ['englishcity'] != null) {
 					$consumer->city = $formData ['englishcity'];
 					$consumer->province = null;
+				}
+				if ($formData ['birthdate'] != null) {
+					$consumer->birthdate = $formData ['birthdate'];
 				}
 				if ($formData ['qq'] != null) {
 					$consumer->qq = $formData ['qq'];
@@ -383,15 +389,17 @@ class ConsumerController extends MyController {
 				$consumerextra->birthdate = $formData ['birthdate'] != null ? $formData ['birthdate'] : null;
 				$consumerextra->education = $formData ['education'];
 				$consumerextra->income = $formData ['income'];
-				$consumerextra->save ();
+				$consumerextra->save();
 				
 				
 				//2011-05-03 ham.bao add the related friends 
 				$consumerFriend = new ConsumerFriend();
 				$consumerFriend->delete('consumer ='.$consumer->id.' and campaign='.$campaign);
-				foreach ( $formData as $key =>$val ){
+				
+				//delete
+				/*foreach ( $formData as $key =>$val ){
 					$consumerFriend = new ConsumerFriend();
-					if((substr($key, 0,8) == 'relative')&& ($val != '')){
+					if((substr($key, 0,6) == 'friend')&& ($val != '')){
 						$friend = $consumerFriend->createRow();
 						$friend->consumer = $id;
 						$friend->campaign = $campaign;
@@ -399,13 +407,39 @@ class ConsumerController extends MyController {
 						$friend->date = date('m-d-Y H:i:s');
 						$friend->save();
 					}
-				}
+				}*/
 				//2011-05-03 ham.bao add the related friends 
+				$campaign_model = new Campaign();
+				$campaign_campaign=$campaign_model->find($campaign)->current();
+//				Zend_Debug::dump($campaign_campaign->relative);die;
+				//new
+				for ($i=1;$i<=$campaign_campaign->relative;$i++){
+					if ($formData['friend_name_'.$i] || $formData['friend_phone_'.$i]!=''|| $formData['friend_email_'.$i]!='' ){
+						$consumerFriend = new ConsumerFriend();
+						$friend = $consumerFriend->createRow();
+					    $friend->consumer = $id;
+					    $friend->campaign = $campaign;
+						$friend->name = $formData['friend_name_'.$i]; //change column name in db
+						$friend->email = $formData['friend_email_'.$i]; //add column in db
+						$friend->message = $formData['friend_message_'.$i];//add column in db
+						$friend->phone = $formData['friend_phone_'.$i];//add column in db
+						$friend->address = $formData['friend_address_'.$i];//add column in db
+						$friend->date = date('Y-m-d H:i:s');
+						$friend->save();
+					}
+				} 
+				
 				
 				$this->_helper->redirector ( 'index', 'campaigninvitation' );
+			}else{
+				$this->view->errMessage = "Please fill out all mandatory fields and make sure your emails are correct!";
+				$this->_forward('precampaignfinished',
+                                       'campaign',
+                                       null,
+                                       array('survey' => $cam->pre_campaign_survey_en));		
 			}
 		} else {
-
+			
 		}
 	}
 

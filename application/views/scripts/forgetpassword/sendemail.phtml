@@ -15,34 +15,34 @@
 <title><?php echo $this->translate('Login_Title');?></title>
 <link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <link rel="stylesheet"
-	href="<?php echo $this->joomlahome;?>/modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css"
+	href="<?php echo $this->baseUrl();?>/mod_jflanguageselection.css"
 	type="text/css" />
 <link rel="stylesheet"
-	href="<?php echo $this->joomlahome;?>/modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css"
+	href="<?php echo $this->baseUrl();?>/mod_jflanguageselection.css"
 	type="text/css" />
 <script type="text/javascript" media="screen"
 	src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>
 
 
 <link rel="stylesheet"
-	href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/general.css"
+	href="<?php echo $this->baseUrl();?>/css/newhome.css"
 	type="text/css" />
 <!--[if lte IE 6]>
-<link href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/ieonly.css"  rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->baseUrl();?>/css/ieonly.css"  rel="stylesheet" type="text/css" />
 <![endif]-->
 </head>
 
 <body>
 	<div class="header"><div class="header-inner">
 		<div class="logo">
-			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/images/mainlogo.gif" /></a>
+			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.gif" /></a>
 		</div>
 		<div class="login-panel">
 			<form action="<?php echo $this->url(array('controller'=>'login','action'=>'login'));?>" method="post">
 				<div class="user-info">
 					<label for="username" style='width:65px;'><?php echo $this->translate("Common_Username")?></label>
 
-					<input type="text" name="username" id="username"/>
+					<input type="text" name="email" id="username"/>
 					<label for="password"><?php echo $this->translate("Common_Password")?></label>
 					<input type="password" name="password" id="password"/>
 				</div>

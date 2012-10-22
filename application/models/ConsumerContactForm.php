@@ -18,16 +18,53 @@ class ConsumerContactForm extends Zend_Form
 		$qq->setLabel('QQ号码 :');
 		
 		$telephone = new Zend_Form_Element_Text('telephone');
-		$telephone->setLabel('公司电话 :');
+		$telephone->setLabel('campaign phone :');
 		if($options['relative']){
 			for($i = 1 ; $i <= $options['relative'] ; $i++){
-				${'relative'.$i} = new Zend_Form_Element_Text('relative'.$i);
-			    ${'relative'.$i}->setLabel('好友姓名 '.$i.':')
+				${'friend_name_'.$i} = new Zend_Form_Element_Text('friend_name_'.$i);
+			    ${'friend_name_'.$i}->setLabel('Name :')
+		        //->setRequired(true)
+			    ->addFilter('StripTags')
+		        ->addFilter('StringTrim')
+              //  ->addValidator('NotEmpty', true)
+                ->addErrorMessage('Value is empty, but a non-empty value is required.');
+//				${'friend_name_'.$i}->setAttrib('onchange','relativeTest(this.value)');
+				$this->addElement(${'friend_name_'.$i});
+				
+				${'friend_email_'.$i} = new Zend_Form_Element_Text('friend_email_'.$i);
+			    ${'friend_email_'.$i}->setLabel('Email :')
+			    //->setRequired(true)
 				->addFilter('StripTags')
 		        ->addFilter('StringTrim')
-		        ->addValidator('NotEmpty');
-				${'relative'.$i}->setAttrib('onchange','relativeTest(this.value)');
-				$this->addElement(${'relative'.$i});
+               // ->addValidator('NotEmpty', true)
+		        ->addValidator('EmailAddress')
+		        ->addErrorMessage($this->getView()->translate('Register_email_is_invalid'));
+		        		        //				${'friend_email_'.$i}->setAttrib('onchange','relativeTest(this.value)');
+				$this->addElement(${'friend_email_'.$i});
+				
+				${'friend_message_'.$i} = new Zend_Form_Element_Text('friend_message_'.$i);
+			    ${'friend_message_'.$i}->setLabel('Message :')
+				->addFilter('StripTags')
+		        ->addFilter('StringTrim');
+//		        		->addValidator('NotEmpty');
+//				${'friend_phone_'.$i}->setAttrib('onchange','relativeTest(this.value)');
+				$this->addElement(${'friend_message_'.$i});
+				
+				${'friend_phone_'.$i} = new Zend_Form_Element_Text('friend_phone_'.$i);
+			    ${'friend_phone_'.$i}->setLabel('Phone :')
+				->addFilter('StripTags')
+		        ->addFilter('StringTrim');
+//		        		->addValidator('NotEmpty');
+//				${'friend_phone_'.$i}->setAttrib('onchange','relativeTest(this.value)');
+				$this->addElement(${'friend_phone_'.$i});
+				
+				${'friend_address_'.$i} = new Zend_Form_Element_Text('friend_address_'.$i);
+			    ${'friend_address_'.$i}->setLabel('Address :')
+				->addFilter('StripTags')
+		        ->addFilter('StringTrim');
+//		        		->addValidator('NotEmpty');
+//				${'friend_phone_'.$i}->setAttrib('onchange','relativeTest(this.value)');
+				$this->addElement(${'friend_address_'.$i});
 			}
 		}		
 
@@ -35,7 +72,7 @@ class ConsumerContactForm extends Zend_Form
 		$recipients_name->setLabel($this->getView()->translate('CONTACT INFORMATION_RECIPIENTS_NAME'))
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
-		->addValidators(array(array('StringLength', false, array(1, 20)),));
+		->addValidators(array(array('StringLength', false, array(1, 50)),));
 
 		$address1 = new Zend_Form_Element_Textarea('address1');
 		$address1->setLabel($this->getView()->translate('CONTACT INFORMATION_ADDRESS1'))
@@ -89,9 +126,9 @@ class ConsumerContactForm extends Zend_Form
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->setLabel($this->getView()->translate('CONTACT_INFORMATION_EDIT_AND_RERURN'))
 		->setAttrib('id', 'edit');
-		if($options['relative'] >0){
+	/*	if($options['relative'] >0){
 			$submit->setAttrib('disabled','disabled');
-		}
+		}*/
 		$this->addElements(array($id, $recipients_name, $phone, $address1, $postalcode, $submit,$qq,$telephone,$income,$birthdate,$education,$gender));
 		
 	}

@@ -1033,7 +1033,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>但是，大部分的会员都会在加入星星火几周内收到活动邀请！请记得完成在你首页上出现的问卷，让我们更了解你，我们会及时通知你参加你感兴趣的活动。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>However, most new members are invited to a campaign within two weeks of joining. Be sure to tell us about yourself (by answering polls) so we know which campaigns to invite you to!</seg>
+				<seg>The participation is on a first come, first serve basis and as it’s currently full, we won’t be able to admit you to the campaign and apologize for any inconvenience caused.</seg>
 			</tuv>
 		</tu>
 		
@@ -1066,7 +1066,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>你已提交成功，请等待审核</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Submit successfully, pending...</seg>
+				<seg>Submit successfully.Thank you!</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Home_URL_Report_Introduction'>

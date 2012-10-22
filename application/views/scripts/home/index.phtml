@@ -13,7 +13,7 @@
             <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_02.jpg" />
         </div>
         <div class="main-column">
-            <h2><?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->recentInvitation['name'];?><?php echo $this->translate('You_Are_Invited_2')?></h2>
+            <h2><?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->recentInvitation['name'];?><?php if($this->recentInvitation['name']=="campaign"){ echo $this->translate('You_Are_Invited_2');} else {echo $this->translate('You_Are_Invited_3');}?></h2>
             <a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
             <p><?php echo $this->recentInvitation['invitation_description']?></p>
             <p><?php echo $this->recentInvitation['invitation_description2']?></p>
@@ -416,15 +416,16 @@
 				<?php endforeach;?>
 				<?php if ($flag=="new") :?>
 				<li>
-					<?php if ($this->lang=='en'):?> 
+					<?php if ($this->lang=='en'):?>
 						<a href="<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'participate', 'id'=>$survey['id']));?>">
-							 <?php echo $survey->english_name;?> 
+							 <?php echo $survey['english_name'];?> 
 						</a>
 					<?php else:?>
 						<a href="<?php echo $this->url(array('controller'=>'profilesurvey','action'=>'participate', 'id'=>$survey['id']));?>">
 							 <?php echo $survey['name'];?> 
 						</a>
-					<?php endif;?>			 
+					<?php endif;?>	
+							 
 				( <?php echo $survey['points']?> <?php echo $this->translate("points")?> )
 				</li>
 				<?php endif;?>	

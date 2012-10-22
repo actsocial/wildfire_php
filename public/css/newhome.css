@@ -1194,7 +1194,7 @@ ul.tabbed-buttons li.active a:visited {
 }
 .edit-profile dd {
 	width: 400px;
-	/*height: 30px;*/
+	height: 30px;
 }
 .edit-profile dd input {
 	height: 16px;
@@ -1281,7 +1281,7 @@ ul.tabbed-buttons li.active a:visited {
 .web-dialog .content-2column {
 	width: 580px;
 	height: 220px;
-	margin-top: 15px;
+	margin-top: 10px;
 	margin-left: 15px;
 }
 .web-dialog .content-2column .images-column {
@@ -1303,12 +1303,12 @@ ul.tabbed-buttons li.active a:visited {
 	float: left;
 	margin-left: 13px;
 	width: 460px;
-	height: 175px;
+	min-height: 175px;
 }
 .web-dialog .content-2column .main-column h2 {
 	margin:0;
 	margin-top: 6px;
-	margin-bottom: 10px;
+	margin-bottom: 5px;
 	padding:0;
 	font-size: 16px;
 	color: #f00;
@@ -1385,7 +1385,8 @@ ul.tabbed-buttons li.active a:visited {
 	float: left;
 	margin-left: 13px;
 	width: 460px;
-	height: 75px;
+	min-height: 75px;
+
 }
 .post-campaign-dialog .content-2column .main-column h2 {
 	margin:0;
@@ -1715,7 +1716,7 @@ ul.steps li a img {
 	line-height: 18px;
 	border-top: 1px solid #eee;
 	display: inline;
-	height: 18px;
+	
 }
 .gift-description .product-description h2 {
 	font-size: 14px;

@@ -278,7 +278,7 @@
 				<seg>电话号码无效或已被使用</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>It is not a valid phone number.</seg>
+				<seg>  The number is invalid or occupied .</seg>
 			</tuv>
 		</tu>
 

@@ -523,7 +523,7 @@ class CampaignController extends MyController
 		}
 		//whether participate in the campaign 2011-05-19 ham.bao
 		$campaigninvitationModel = new CampaignInvitation();
-		$campaigninvitation = $campaigninvitationModel->fetchRow('campaign_id = '.$id.' and consumer_id'.' ='.$consumer->id);
+		$campaigninvitation = $campaigninvitationModel->fetchRow('campaign_id = '.$id.' and consumer_id'.' ='.$consumer->id);	
 		if($campaigninvitation == null){
 			$this->_helper->redirector('index','home');
 		}
@@ -600,42 +600,45 @@ class CampaignController extends MyController
 		$campaign = $campaignModel->fetchRow("id=".$id);
 		$this->view->title = $this->view->title = $this->view->translate("Wildfire")." - ".$campaign->name;
 		$this->view->name = $campaign->name;
-
-		$langNamespace = new Zend_Session_Namespace('Lang');
-		$lang = $langNamespace->lang;
-		if ($lang=='en'){
-			$surveyId =	$campaign->pre_campaign_survey_en;
-		}else{
-			$surveyId =	$campaign->pre_campaign_survey;
-		}
-
-		//check static file
-		$testEnv = Zend_Registry::get('testEnv');
-		$file = "./surveys/".$surveyId.".phtml";
-		// if static file not exist, go to the normal flow
-		if ($testEnv != 0 || file_exists($file) == false) {
-			// connect to webservice, get the page
-			$indicate2Connect = new Indicate2_Connect();
-			$accesscode = $indicate2Connect->createParticipation($consumer->email, $surveyId);
-
-			$config = Zend_Registry::get('config');
-			$this->view->filloutPage = $config->indicate2->home."/c/".$accesscode."/theme/wildfire";
-			if ($testEnv == 0) {
-    			//save the page to static file
-    			if ($data = @file_get_contents($this->view->filloutPage)) {
-    				set_time_limit(10);
-    				ignore_user_abort(true);
-    				Zend_Debug::dump(file_put_contents($file, $data));
-    			} else {
-    				Zend_Debug::dump('Get remote page error!');
-    			}
+		if($campaign->id != 103){
+			$langNamespace = new Zend_Session_Namespace('Lang');
+			$lang = $langNamespace->lang;
+			if ($lang=='en'){
+				$surveyId =	$campaign->pre_campaign_survey_en;
+			}else{
+				$surveyId =	$campaign->pre_campaign_survey;
 			}
-		} else {
-			$this->view->file = $file;
-			$this->view->surveyId = $surveyId;
+
+			//check static file
+			$testEnv = Zend_Registry::get('testEnv');
+			$file = "./surveys/".$surveyId.".phtml";
+			// if static file not exist, go to the normal flow
+			if ($testEnv != 0 || file_exists($file) == false) {
+				// connect to webservice, get the page
+				$indicate2Connect = new Indicate2_Connect();
+				$accesscode = $indicate2Connect->createParticipation($consumer->email, $surveyId);
+
+				$config = Zend_Registry::get('config');
+				$this->view->filloutPage = $config->indicate2->home."/c/".$accesscode."/theme/wildfire";
+				if ($testEnv == 0) {
+					//save the page to static file
+					if ($data = @file_get_contents($this->view->filloutPage)) {
+						set_time_limit(10);
+						ignore_user_abort(true);
+						Zend_Debug::dump(file_put_contents($file, $data));
+					} else {
+						Zend_Debug::dump('Get remote page error!');
+					}
+				}
+			} else {
+				$this->view->file = $file;
+				$this->view->surveyId = $surveyId;
+			}
+			$this->view->campaign=$campaign;
+			$this->view->includeCrystalCss = true;
+		}else{
+			$this->_redirect ( 'campaign/precampaignfinished/survey/0' );
 		}
-		$this->view->campaign=$campaign;
-		$this->view->includeCrystalCss = true;
 	}
 
 	function precampaignfinishedAction(){
@@ -644,14 +647,23 @@ class CampaignController extends MyController
 
 		$id = (int)$this->_request->getParam('survey');
 		$campaignModel = new Campaign();	
-		$this->view->campaign  = $campaignModel->fetchRow("pre_campaign_survey=".$id." or "."pre_campaign_survey_en=".$id);
+		if($id == 0 ){
+			$this->view->campaign  = $campaignModel->fetchRow("id = 103");
+		}else{
+			$this->view->campaign  = $campaignModel->fetchRow("pre_campaign_survey=".$id." or "."pre_campaign_survey_en=".$id);	
+		}
 
 		$db = Zend_Registry::get('db');
 		if($this->view->campaign != null){
 			$campaignId = $this->view->campaign->id;
 		}
 		$consumer = $this->_currentUser;
-		//		Zend_Debug::dump($this->view->campaign->id);
+		$select_extra_info = $db->select ();
+		$select_extra_info->from ( "consumer",array ('consumer.*', 'consumer_extra_info.gender as gender','consumer_extra_info.education as education','consumer_extra_info.income as income'  ));
+		$select_extra_info->joinLeft ( "consumer_extra_info","consumer.id = consumer_extra_info.consumer_id",null); 
+		$select_extra_info->where("consumer.id = ".$this->_currentUser->id );
+		$consumer2 = $db->fetchRow ( $select_extra_info );
+		//Zend_Debug::dump($consumer2);die;
 		if ($this->view->campaign != null && $campaignId != null && $campaignId > 0) {
 				
 			// check if precampaign poll is finished
@@ -665,28 +677,31 @@ class CampaignController extends MyController
 			//			$wsResult = $indicate2Connect->getAnswerSetCount($consumer->email,$ids);
 			//
 			//			if ($wsResult==0){
-			//				$this->_redirect('campaign/precampaign/survey/'.$previewCamSurvey);
+			//				$this->_redirect('http://community.wildfire.asia/public/home');
 			//			}else{
 
 			$campaignInvitationModel = new CampaignInvitation();
 			$campaignInvitation = $campaignInvitationModel->fetchRow("campaign_id=".$campaignId." and consumer_id=".$consumer->id);
-			
+			if($campaignInvitation==null){
+				$this->_redirect('http://community.wildfire.asia/public/home');
+
+			}
 			$id = $campaignInvitation->id;
 			//Zend_Debug::dump($campaignInvitation);
 			$campaignInvitation->state = "ACCEPTED";
 			$campaignInvitation->save();
              
 			//2011-05-19 ham.bao add the badge
-			$consumerBadgeModel = new ConsumerBadge();
-			$consumerBadgeData  = $consumerBadgeModel->fetchRow('badge='.$this->view->campaign->badge .' and consumer='.$consumer->id);
-			if(!count($consumerBadgeData)){
-				$row = $consumerBadgeModel->createRow();
-				$row->consumer = $consumer->id;
-				$row->badge    = $this->view->campaign->badge;
-				$row->create_date = date("Y-m-d H:i:s");
-				$row->save();
-
-			}
+//			$consumerBadgeModel = new ConsumerBadge();
+//			$consumerBadgeData  = $consumerBadgeModel->fetchRow('badge='.$this->view->campaign->badge .' and consumer='.$consumer->id);
+//			if(!count($consumerBadgeData)){
+//				$row = $consumerBadgeModel->createRow();
+//				$row->consumer = $consumer->id;
+//				$row->badge    = $this->view->campaign->badge;
+//				$row->create_date = date("Y-m-d H:i:s");
+//				$row->save();
+//
+//			}
 			//2011-05-19 ham.bao add the badge
 			
 			$result = $db->fetchOne(
@@ -743,38 +758,59 @@ class CampaignController extends MyController
 		//edit ConsumerContactForm();
 		$form = new ConsumerContactForm( array('relative' =>$this->view->campaign->relative));
 		$consumer = $this->_currentUser;
-		$form->populate($consumer->toArray());
-		
+		$order = new Zend_Db_Expr(' id ');
+
 		$consumerFriend = new ConsumerFriend();
-		$friends  = $consumerFriend->fetchAll('consumer= '.$consumer->id .' and campaign='.$this->view->campaign->id);
-		
-		if(count($friends)){
-			$i = 1;
-			foreach ($friends as $friend){
-				$n = 'relative'.$i ;
-				$form->$n->setValue($friend->friend);
-				$i++;
-			}
-		}
-		
+	        $friends  = $consumerFriend->fetchAll('consumer= '.$consumer->id .' and campaign='.$this->view->campaign->id,$order);
 		$this->view->friendsNum = count($friends);
+		
+		if ($this->_request->getPost ()){
+			$formData = $this->_request->getPost ();
+			$form->populate($formData);	
+			$this->view->city = $formData["city"];
+			$this->view->province = $formData["province"];	
+			$this->view->encity = $formData["city"];		
+			
+		}else{
+			$form->populate($consumer2);
+			// zh city
+			if($consumer["city"]!= NULL && $consumer["province"]!= NULL ){
+				$this->view->city = $consumer["city"];
+				$this->view->province = $consumer["province"];
+			}
+			// en city
+			if($consumer["city"]!= NULL && $consumer["province"]== NULL ){
+				$this->view->encity = $consumer["city"];
+			}		
+						
+			if(count($friends)){
+				$i = 1;
+				foreach ($friends as $friend){
+					$name = 'friend_name_'.$i ;
+					$email= 'friend_email_'.$i;
+					$phone= 'friend_phone_'.$i;
+					$address= 'friend_address_'.$i;
+					$message = 'friend_message_'.$i;
+					$form->$name->setValue($friend->name);
+					$form->$email->setValue($friend->email);
+					$form->$phone->setValue($friend->phone);
+					$form->$address->setValue($friend->address);
+					$form->$message->setValue($friend->message);
+					$i++;
+				}
+			}		
+		}
 		
 		//var_dump($form);die;
 
 		$langNamespace = new Zend_Session_Namespace('Lang');
 		$this->view->language = $langNamespace->lang;
-		// zh city
-		if($consumer["city"]!= NULL && $consumer["province"]!= NULL ){
-			$this->view->city = $consumer["city"];
-			$this->view->province = $consumer["province"];
-		}
-		// en city
-		if($consumer["city"]!= NULL && $consumer["province"]== NULL ){
-			$this->view->encity = $consumer["city"];
-		}
 
 		$this->view->form = $form;
-		$this->view->relative = $this->view->campaign->relative;
+		$this->view->friendsLimit = $this->view->campaign->relative;
+		//Zend_Debug::dump($this->_request->getPost ());
+		
+		//Zend_Debug::dump($this->view->friendsLimit);
 	}
 
 	function postcampaignAction(){
@@ -950,7 +986,7 @@ class CampaignController extends MyController
 		$campaigninfomation_xml=new DOMDocument('1.0','utf-8');
 				$bool=$campaigninfomation_xml->load(APPLICATION_PATH.'/language/campaigninformation.xml');
 				if($bool){
-					//获得根节点
+					//获得根节�?
 					$root=$campaigninfomation_xml->documentElement;
 					$body=$root->getElementsByTagName("body");
 					//设置可以输出操作

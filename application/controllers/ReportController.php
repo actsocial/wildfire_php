@@ -300,7 +300,9 @@ class ReportController extends MyController
 				    	$config = Zend_Registry::get('config');
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en);
+                                                $url_other = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/77";
+
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_other);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -823,12 +825,12 @@ class ReportController extends MyController
 			if(!preg_match('/^image\//i', $type)?true:false) {
 				$this->view->error = "璇蜂笂浼犳纭殑鍥剧墖";
 			} else if($size > 2000000) {
-				$this->view->error = "鍥剧墖涓嶅緱瓒呰繃2M";
+				$this->view->error = "鍥剧墖涓嶅緱瓒呰�?M";
 			} else {
 				$tmpfile = $imgfile['tmp_name'];
 							  if ($tmpfile && is_uploaded_file($tmpfile)) {
 				$file = fopen($tmpfile, "rb");
-				//$imgdata = bin2hex(fread($file,$size)); //bin2hex()灏嗕簩杩涘埗鏁版嵁杞崲鎴愬崄鍏繘鍒惰〃绀�
+				//$imgdata = bin2hex(fread($file,$size)); //bin2hex()灏嗕簩杩涘埗鏁版嵁杞崲鎴愬崄鍏繘鍒惰〃绀�?
 				$imgdata = fread($file,$size);
 				fclose($file);
 				// save to db
@@ -1531,7 +1533,8 @@ function adminreportbatchreplyAction(){
 				    	$config = Zend_Registry::get('config');
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
-						$contents = file_get_contents($url_zh).file_get_contents($url_en);
+                                                $url_other = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/77";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_other);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -1782,14 +1785,18 @@ function adminreportbatchreplyAction(){
 	}
 	
 	public function admindownloadreportAction(){
+		ini_set('display_errors', 1);
+		$frontController = Zend_Controller_Front::getInstance();
+		$frontController->throwExceptions(true);
 		$this->_helper->layout->disableLayout();
+		$reportInforArray = array();
 		//post
 		if($this->_request->isPost()){
 			$formData = $this->_request->getPost();
 			$accessCodeList = array();
 			// get access code from post
 			if(isset($formData['accessCode'])){
-//				Zend_Debug::dump($formData['accessCode']);
+				Zend_Debug::dump($formData['accessCode']);
 				$accessCodeArray = preg_split('/[;\s]+[\n\r\t]*/', trim($formData['accessCode']));
 				$accessCodeString = '';
 				foreach($accessCodeArray as $accessCode){
@@ -1804,7 +1811,7 @@ function adminreportbatchreplyAction(){
 				->where('report.accesscode in ('.substr($accessCodeString,0,strlen($accessCodeString)-1).")")
 				->where("report.state = 'APPROVED'")
 				->limit(0);
-				$reportInforArray = array();
+				
 				$accessCodeArray = $db->fetchAll($selectAccessCode);
 				foreach($accessCodeArray as $accessCode):
 					array_push($accessCodeList,$accessCode['accesscode']);
@@ -1877,11 +1884,11 @@ function adminreportbatchreplyAction(){
 						$selectAccessCode = $db->select();
 						$selectAccessCode->from('report', array('consumer_id','accesscode', 'create_date', 'source'))
 						->joinLeft('reward_point_transaction_record', 'report.reward_point_transaction_record_id = reward_point_transaction_record.id', 'point_amount')
-						->join('consumer', 'consumer.id = report.consumer_id', array('email,login_phone,recipients_name'))
+						->join('consumer', 'consumer.id = report.consumer_id', array('email','login_phone','recipients_name'))
 						->where('report.campaign_id = ?',$formData['campaign_id'])
 						->where("report.state = 'APPROVED'")
 						->limit(0);
-						$reportInforArray = array();
+						
 						$accessCodeArray = $db->fetchAll($selectAccessCode);
 						foreach($accessCodeArray as $accessCode):
 							array_push($accessCodeList,$accessCode['accesscode']);
@@ -1932,7 +1939,7 @@ function adminreportbatchreplyAction(){
 			$this->view->surveyQuestionArray = $response->QuestionType;
 			$this->view->surveyArray = $response->AnswerSetType;
 			//Zend_Debug::dump($response);
-			//return;
+			//die;
 
 			// create phpexcel obj.
 			require_once 'PHPExcel.php';
@@ -2062,13 +2069,22 @@ function adminreportbatchreplyAction(){
 							}
 						}
 					}
+                    
+
 					// print answers from ws
 					for($i = 0; $i<count($tag); $i++){
-						if(isset($temp[$tag[$i]])){
-							$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, $temp[$tag[$i]]);
+						if(isset($temp[$tag[$i]])){ 
+                            if($temp[$tag[$i]]=="1" ||$temp[$tag[$i]]=="0" )
+                                $objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, $temp[$tag[$i]]);
+                            else
+                                $objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, "\"".$temp[$tag[$i]]."\"");
+                            //Zend_Debug::dump($i); 
+                            //Zend_Debug::dump($temp[$tag[$i]]);
+                            //Zend_Debug::dump("\"".$temp[$tag[$i]]."\"");
 						}
 						$columnNumber++;
 					}
+                    //die;
 					// print user extra info
 					foreach($this->view->reportExtraInfoArray[$surveys->AccessCode] as $reportExtraInfo):
 						if(isset($reportExtraInfo)){
@@ -2115,6 +2131,7 @@ function adminreportbatchreplyAction(){
 					if(isset($survey->AnswerType->AnswerText) && is_array($survey->AnswerType->AnswerText) && !empty($survey->AnswerType->AnswerText)){
 						foreach($surveys->AnswerType->AnswerText as $text):
 							$temp[$text] =  "1";
+
 						endforeach;
 					}else{
 						if(array_key_exists($surveys->AnswerType->QuestionId, $textQuestionArray)){
@@ -2128,7 +2145,7 @@ function adminreportbatchreplyAction(){
 				// print answers from ws
 				for($i = 0; $i<count($tag); $i++){
 					if(isset($temp[$tag[$i]])){
-						$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, $temp[$tag[$i]]);
+						$objActSheet->setCellValue($columnNameArray[$columnNumber].$lineNumber, "\"".$temp[$tag[$i]]."\"");
 					}
 					$columnNumber++;
 				}
@@ -2496,7 +2513,7 @@ function adminreportbatchreplyAction(){
    	    $row->state = 'COMPLETED';
    	    $row->save();
    	    $this->_helper->layout->disableLayout();
-   	    die('鎴愬姛璁剧疆');
+   	    die('结束');
    	    
    	    
    }
