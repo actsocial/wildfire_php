@@ -13,7 +13,7 @@
 <title><?php echo $this->translate('Register_Title');?></title>
 <link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <link rel="stylesheet"
-	href="<?php echo $this->joomlahome;?>/modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css"
+	href="<?php echo $this->baseUrl();?>/mod_jflanguageselection.css"
 	type="text/css" />
 <script type="text/javascript" media="screen"  src="<?php echo $this->baseUrl();?>/js/jquery-1.7.1.min.js" ></script>
 <script type="text/javascript">
@@ -37,7 +37,7 @@
 <!-- use CDN -->
 
 <link rel="stylesheet"
-	href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/general.css"
+	href="<?php echo $this->baseUrl();?>/general.css"
 	type="text/css" /> 
 
 <!--[if IE]>
@@ -47,7 +47,7 @@
 <body>
 	<div class="header"><div class="header-inner">
 		<div class="logo">
-			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/images/mainlogo.gif" /></a>
+			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.gif" /></a>
 		</div>
 		<div class="login-panel">
 			<form action="<?php echo $this->url(array('controller'=>'login','action'=>'login'));?>" method="post">
@@ -64,10 +64,10 @@
 		</div>
 
 		<div class="navigator">
-			<ul id="mainlevel-nav"><li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=frontpage&amp;Itemid=1&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_home")?></a></li>
-			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=53&amp;lang=zh" class="mainlevel-nav" id="active_menu-nav"><?php echo $this->translate("Common_about_us")?></a></li>
-			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=49&amp;Itemid=54&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_about_Sparks")?></a></li>
-			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=56&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_hire_us")?></a></li></ul>
+			<ul id="mainlevel-nav"><li><a href="http://www.wildfire.asia/index.html" class="mainlevel-nav" ><?php echo $this->translate("Common_home")?></a></li>
+			<li><a href="http://www.wildfire.asia/about/about-wildfire.html" class="mainlevel-nav" id="active_menu-nav"><?php echo $this->translate("Common_about_us")?></a></li>
+			<li><a href="http://www.wildfire.asia/spark/member-profiles.html" class="mainlevel-nav" ><?php echo $this->translate("Common_about_Sparks")?></a></li>
+			<li><a href="http://www.wildfire.asia/head/let-us-talk.html" class="mainlevel-nav" ><?php echo $this->translate("Common_hire_us")?></a></li></ul>
 			<div class="language-selector">
 			<div id="jflanguageselection">
 				<ul class="jflanguageselection"><li id="active_language"><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>"><span lang="zh" xml:lang="zh">中文&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li><li><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>" ><span lang="en" xml:lang="en">English</span></a></li></ul></div>		
@@ -137,7 +137,7 @@
 
 		</table>
 		</fieldset>
-		<fieldset><legend><?php echo $this->translate('Register_Contact_Privacy_Policy');?></legend>
+		<fieldset><!-- <legend><?php echo $this->translate('Register_Contact_Privacy_Policy');?></legend>-->
 		<table>
 
 			<colgroup>
@@ -145,7 +145,8 @@
 				<col class="value" />
 				<col class="other" />
 			</colgroup>
-			<tr>
+		<!--	
+                       <tr>
 				<td colspan="3"><input onclick="allowSubmit();" type="checkbox"
 					name="agree" id="agree" class="agreement" disabled="disabled" /><?php echo $this->translate('Register_Contact_Privacy_Policy_Content1');?>
 				<a
@@ -156,13 +157,13 @@
 					href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=60"
 					target="_blank"><?php echo $this->translate('Register_Contact_Privacy_Policy_Content4');?></a></td>
 
-			</tr>
+			</tr>-->
 		</table>
 		</fieldset>
 		<div>
                     <?php echo $this->errMessage; ?>
                 </div>
-                <div id="err" style="color:red">Please accept the privacy policy.</div>
+                <!--<div id="err" style="color:red">Please accept the privacy policy.</div>-->
                 <br/>
 		<div class="buttons-bar" style="float: left;"><?php echo $this->registerForm->submit ;?><div class="clear"></div></div>
 		</form>
@@ -179,14 +180,14 @@
 </div></div>
 	<div class="footer"><div class="footer-inner">
 	<div class="moduletable bottom_menu">
-		<table width="100%" border="0" cellpadding="0" cellspacing="1">
+		<!--<table width="100%" border="0" cellpadding="0" cellspacing="1">
 		<tr><td nowrap="nowrap"><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=51&amp;Itemid=58&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Contacts');?></a>
 		<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=87&amp;Itemid=59&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Privacy_Policy');?></a>
 		<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=60&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Terms_and_Conditions');?></a>
 		<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=89&amp;Itemid=61&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Jobs');?></a>
 		<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=90&amp;Itemid=62&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Investors');?></a></td>
 		</tr>
-		</table>		
+		</table>		-->
 	</div>
 	
         </div></div>
@@ -289,10 +290,10 @@ function allowInput(){
 	$("name").className="input-enabled";
 	$("registerPassword").className="input-enabled";
 	$("repeat").className="input-enabled";
-	if ($("agree").checked == true){
-		$("register").disabled=false;
-		$("register").className="input-enabled";
-	}
+//	if ($("agree").checked == true){
+//		$("register").disabled=false;
+//		$("register").className="input-enabled";
+//	}
 }
 
 function forbidInput(){
@@ -328,4 +329,3 @@ function allowSubmit(){
 
 </body>
 </html>
-

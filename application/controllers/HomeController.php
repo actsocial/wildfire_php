@@ -170,7 +170,7 @@ class HomeController extends MyController
 		// add expire_date by Bruce.Liu 
 		$select3 = $db->select();
 		$select3->from('campaign_invitation','*');
-		$select3->join('campaign', 'campaign.id = campaign_invitation.campaign_id ', array('name','type','product_name','simple_description','invitation_description','invitation_description2'));
+		$select3->join('campaign', 'campaign.id = campaign_invitation.campaign_id ', array('pre_campaign_survey','name','type','product_name','simple_description','invitation_description','invitation_description2'));
 		$select3->where('campaign_invitation.consumer_id = ?', $this->_currentUser->id);
 		$select3->where('campaign_invitation.state = ?', 'NEW');
 		$select3->where('campaign.expire_date > ?', $currentTime);

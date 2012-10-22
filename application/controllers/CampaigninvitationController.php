@@ -726,11 +726,12 @@ class CampaignInvitationController extends MyController {
 							$invitationEmail = $invitationEmailModel->createRow ();
 							$invitationEmail->subject = $subject;
 							$invitationEmail->content = $body;
-							$invitationEmail->consumer_id = 173;
+							$invitationEmail->consumer_id = 16693;
 							$invitationEmail->to = $emailAddress[0];
 							$invitationEmail->signup_auth_code_id = $signupAuthCode->id;
 							$invitationEmail->date = $currentTime;
-							$invitationEmail->save ();
+                                                        $invitationEmail->save ();
+                                                   
 						}
 						if ($emailCategory == 'Invite sparks to join campaign') {
 							//save into spark email
@@ -765,6 +766,7 @@ class CampaignInvitationController extends MyController {
 						$isSentSuccessfully = true;
 					} catch ( Exception $e ) {
 						//roll back...
+                                               
 						$this->view->showMessage = 'System Error!';
 					}
 				}

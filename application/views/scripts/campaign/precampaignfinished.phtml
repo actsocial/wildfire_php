@@ -1,4 +1,4 @@
-<div class="article-box" style="padding-bottom:10px;">
+<<<<<<< HEAD<div class="article-box" style="padding-bottom:10px;">
 	<div class="article-box-inner">
 		<h1><?php echo $this->translate("You_are_in")?></h1>
 		<p><?php echo $this->campaign['pre_campaign_info']?></p>
@@ -15,10 +15,10 @@
 			<div class="form-line-long-title"><?php echo $this->form->income ;?></div>
 			<div class="form-line"><?php echo $this->form->birthdate ;?></div>
 			<div><?php echo $this->form->phone ;?></div>
-			<div><?php echo $this->form->telephone;?></div>
+			<!--div><?php echo $this->form->telephone;?></div-->
 			
 		
-			<div><?php echo $this->form->qq;?></div>
+			<!--div><?php echo $this->form->qq;?></div-->
 			<div>
 				<dt><label><?php echo $this->translate('CONTACT CITY')?></label></dt>
 				<dd><input type="text" id="englishcity" name="englishcity" /> <select
@@ -82,24 +82,25 @@
 						
 						<!-- </dt>
 					</div> -->
-					<!-- 童装问卷不用填写朋友姓名 -->
-			<?php if ($this->campaign['id']!=39){?>
-				<div>
-					<!--<?php echo $this->campaign['pre_campaign_friends'];?>
 
-					<table>-->
+				<div style="float:left;">
+					<?php echo $this->campaign['pre_campaign_friends'];?>
+
+					<table align="center">
 					<?php 
 					for ($i = 1; $i <= $this->friendsLimit; $i++) {?>
-						 <!--<tr>
-						   <td><?php echo '朋友'.$i;?></td>
-						 </tr>-->
+						<tr>
+						    <td><?php echo 'Friend No.'.$i;?></td>
+						 </tr>
 						 <tr><td><?php $field = 'friend_name_'.$i; echo $this->form->$field ?></td></tr>
-						 <!--<tr><td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td></tr>
-						 <tr><td><?php $field = 'friend_message_'.$i; echo $this->form->$field ?></td></tr>
-					--><?php }	?> 
-				<!--</table>-->
+						 <tr><td><?php $field = 'friend_email_'.$i; echo $this->form->$field ?></td></tr>
+						 <tr><td><?php $field = 'friend_phone_'.$i; echo $this->form->$field ?></td></tr>
+						 <tr><td><?php $field = 'friend_address_'.$i; echo $this->form->$field ?></td></tr>
+						 <tr height="80px" valign="top"><td><?php $field = 'friend_message_'.$i; echo $this->form->$field ?></td></tr>
+					<?php }			
+					?> 
+				</table>
 					</div>
-					<?php }?>
 			</fieldset>		
 				</dl>
 				<div style="float:left;color:red;"><?php echo $this->errMessage; ?></div>
@@ -115,14 +116,14 @@
 
 <script type="text/javascript">
 
-Calendar.setup(
-	{
-		inputField : "birthdate", // ID of the input field
-		ifFormat : "%Y-%m-%d", // the date format
-		input : "birthdate", // ID of the button
-		showsTime : true
-	}
-);
+//Calendar.setup(
+//	{
+//		inputField : "birthdate", // ID of the input field
+//		ifFormat : "%Y-%m-%d", // the date format
+//		input : "birthdate", // ID of the button
+//		showsTime : true
+//	}
+//);
 
 </script>
 
@@ -130,7 +131,9 @@ Calendar.setup(
 var total_relative="<?php echo $this->friendsLimit?>";
 var friendsNum = <?php echo $this->friendsNum?>;
 if(total_relative>0){
+	if(document.getElementById("show_warn")){
 	document.getElementById("show_warn").innerHTML="在确认前请将好友名称填写完成";
+}
 }else{
 	document.form.elements['edit'].disabled=false;	
 }
@@ -257,4 +260,5 @@ if (typeof window.onload != 'function') {
 		  init();
 	 	}
 	}
+	jQuery("#birthdate").datepicker({dateFormat: 'yy-mm-dd', maxDate: '0',changeYear: true,yearRange: '1900:2012' });
 </script>

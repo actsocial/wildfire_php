@@ -1,0 +1,2282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<META NAME="ROBOTS" CONTENT="NOINDEX,NOFOLLOW">
+	<title>Indicate - Fill out survey</title>
+	<link href="/css/crystal.css" rel="stylesheet" type="text/css" media="screen, print" />
+	<!--[if IE]>
+	<link href="/css/crystal-ie.css" rel="stylesheet" type="text/css" media="screen" />
+	<![endif]-->
+	<link href="/css/fillout_default.css" rel="stylesheet" type="text/css" media="screen" />
+	<!--[if IE]>
+	<link href="/css/fillout_default-ie.css" rel="stylesheet" type="text/css" media="screen" />
+	<![endif]-->
+	<link href="/css/niftyCorners.css" rel="stylesheet" type="text/css" media="screen" />
+	<script src="/js/all.js" language="JavaScript" type="text/javascript"></script>
+	<script src="/js/jquery.js" language="JavaScript" type="text/javascript"></script>
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	// <![CDATA[
+	
+	
+
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie > 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length > MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+	// ]]>
+	-->
+	</script>
+<script language="JavaScript" type="text/javascript">
+
+	function loadAdd2(){
+		
+		document.getElementById("question_936").value="none";
+		document.getElementById("question_937").value="none";
+		document.getElementById("question_938").value="none";
+		document.getElementById("question_939").value="none";
+		
+		document.getElementById("q_92").style.display="none";
+		document.getElementById("q_86").style.display="none";
+		document.getElementById("q_122").style.display="none";
+		document.getElementById("q_123").style.display="none";
+		
+		document.getElementById("q_42").style.display="none";
+		document.getElementById("q_43").style.display="none";
+		document.getElementById("q_119").style.display="none";
+		document.getElementById("q_120").style.display="none";
+		
+		document.getElementById("q_129").style.display="none";
+		document.getElementById("q_130").style.display="none";
+		
+		document.getElementById("q_63").style.display="none";
+		document.getElementById("q_61").style.display="none";		
+	}
+
+</script>
+</head>
+
+<body onload="javascript:loadAdd2()">
+<div class="main-container-outer">
+	<div id="container">
+		<div id="header" class="header">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div> <!-- header -->
+		<div id="nav" class="navigation">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content">
+ 		
+
+<div id="content">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	mandatoryElements = new Array(); 
+// ]]>
+-->
+</script>
+<div class="fillout-container">
+<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
+<div class="mainOneContent">
+
+<div style="margin-top:10px;"></div>
+<form id="fillout" method="post" action="http://i2.wildfire.asia/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
+  <div id="mainzone-top-left">
+    <div id="mainzone-top-right"></div>
+  </div>
+</div>
+<div id="mainzone">
+<div id="mainzone-inner">
+<div class="questionnaire-title"></div>
+
+<div class="survey-intro">The NAN MOM&amp;me campaign is nearing final stage. Thank you for filling out the post campaign survey. Based on the results provided, you may be selected to receive two complimentary packs of NAN MOM&amp;me with no further obligation.
+<br/></div>
+<br/>
+
+<input type="hidden" name="id" value="RHk9EUhJIIvt" id="id" />
+<input type="hidden" name="theme" value="default" id="theme" />
+<input type="hidden" name="surveyId" value="RHk9EUhJIIvt"/>
+
+<div class="mandatory"><span style="color: red;">* </span>- It is mandatory</div>
+<div class="page-bar-area">
+
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+
+	
+	<div id="">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_118" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How likely are you to recommend NAN MOM&amp;me to your family, colleagues or friends?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<span class="error-content" id="err_answers[909].value" ></span>
+<input type="hidden" name="answers[909].id" value="" id="answers[909].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">0:will not recommend</div>
+	<table class="rating-table">
+		<tr class="radio-line">
+
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[909].value" value="0" id="909_0" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[909].value" value="1" id="909_1" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[909].value" value="2" id="909_2" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[909].value" value="3" id="909_3" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[909].value" value="4" id="909_4" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[909].value" value="5" id="909_5" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[909].value" value="6" id="909_6" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[909].value" value="7" id="909_7" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[909].value" value="8" id="909_8" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[909].value" value="9" id="909_9" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[909].value" value="10" id="909_10" group="909" class="question_radio_909 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+		</tr>
+	</table> <div class="right-label">10:will recommend</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[909].value" value="" id="answers[909].value" class="q_909 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_133" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						why?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[910].id" value="" id="answers[910].id" />
+<input type="text" name="answers[910].value" value="" id="question_910" group="910" class="input-text" style="height:50px" />
+
+<span class="error-content" id="err_answers[910].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_100" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						During the past 3 months, how many times have you mentioned NAN MOM&amp;me?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[911].id" value="" id="answers[911].id" />
+<input type="text" name="answers[911].value" value="" id="question_911" group="911" class="input-text" />
+
+<span class="error-content" id="err_answers[911].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_101" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						In total, to how many people did you mention NAN MOM&amp;me?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[912].id" value="" id="answers[912].id" />
+<input type="text" name="answers[912].value" value="" id="question_912" group="912" class="input-text" />
+
+<span class="error-content" id="err_answers[912].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_102" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How many of these people were pregnant at the time or had just delivered a baby?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[913].id" value="" id="answers[913].id" />
+<input type="text" name="answers[913].value" value="" id="question_913" group="913" class="input-text" />
+
+<span class="error-content" id="err_answers[913].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_103" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						What spurred you to talk about NAN MOM&amp;me?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[914].id" value="" id="answers[914].id" />
+<input type="text" name="answers[914].value" value="" id="question_914" group="914" class="input-text" />
+
+<span class="error-content" id="err_answers[914].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_117" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						In your mind, what are the most important, key benefits of NAN MOM&amp;me?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[915].id" value="" id="answers[915].id" />
+<input type="text" name="answers[915].value" value="" id="question_915" group="915" class="input-text" style="height:50px" />
+
+<span class="error-content" id="err_answers[915].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_104" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Have you bought NAN MOM&amp;me in the past 3 months?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[916].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[916].id" value="" id="answers[916].id" />
+<ul>
+	<li>
+          <input group="916" type="radio" id="916_0" name="answers[916].value" value="299"  class="selection question_radio_916"  onclick="showOrHide1()" />		<label for="916_0">Yes</label>
+	</li>
+	<li>
+			<input group="916" type="radio" id="916_1" name="answers[916].value" value="300"  class="selection question_radio_916"  onclick="showOrHide1()"  />		<label for="916_1">No</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_916  qc_0 radio" type="radio" name="answers[916].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+function showOrHide1(){
+	if(document.getElementById("916_0").checked){
+		document.getElementById("q_42").style.display="";	
+		document.getElementById("q_43").style.display="";
+		document.getElementById("q_119").style.display="";
+	}else{
+		document.getElementById("q_42").style.display="none";	
+		document.getElementById("q_43").style.display="none";
+		document.getElementById("q_119").style.display="none";	
+	}
+}
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_42" style="margin-bottom:0px; display:;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How often have you bought NAN MOM&amp;me in the past 3 months?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[917].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[917].id" value="" id="answers[917].id" />
+<ul>
+	<li>
+			<input group="917" type="radio" id="917_0" name="answers[917].value" value="150"  class="selection question_radio_917"  />		<label for="917_0">Once</label>
+	</li>
+	<li>
+			<input group="917" type="radio" id="917_1" name="answers[917].value" value="151"  class="selection question_radio_917"  />		<label for="917_1">About once per month</label>
+	</li>
+	<li>
+			<input group="917" type="radio" id="917_2" name="answers[917].value" value="152"  class="selection question_radio_917"  />		<label for="917_2">About twice per month</label>
+	</li>
+	<li>
+			<input group="917" type="radio" id="917_3" name="answers[917].value" value="153"  class="selection question_radio_917"  />		<label for="917_3">About three times per month</label>
+	</li>
+	<li>
+			<input group="917" type="radio" id="917_4" name="answers[917].value" value="154"  class="selection question_radio_917"  />		<label for="917_4">More than three times per month</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_917  qc_0 radio" type="radio" name="answers[917].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_43" style="margin-bottom:0px; display:;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How many packs do you usually buy together?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[918].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[918].id" value="" id="answers[918].id" />
+<ul>
+	<li>
+			<input group="918" type="radio" id="918_0" name="answers[918].value" value="155"  class="selection question_radio_918"  />		<label for="918_0">One</label>
+	</li>
+	<li>
+			<input group="918" type="radio" id="918_1" name="answers[918].value" value="156"  class="selection question_radio_918"  />		<label for="918_1">Two</label>
+	</li>
+	<li>
+			<input group="918" type="radio" id="918_2" name="answers[918].value" value="157"  class="selection question_radio_918"  />		<label for="918_2">Three</label>
+	</li>
+	<li>
+			<input group="918" type="radio" id="918_3" name="answers[918].value" value="158"  class="selection question_radio_918"  />		<label for="918_3">Four</label>
+	</li>
+	<li>
+			<input group="918" type="radio" id="918_4" name="answers[918].value" value="159"  class="selection question_radio_918"  />		<label for="918_4">More than four</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_918  qc_0 radio" type="radio" name="answers[918].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_119" style="margin-bottom:0px; display:;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Where did you buy the product?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[919].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[919].id" value="" id="answers[919].id" />
+
+
+
+
+<span id="hint_919">
+</span>
+<ul>
+	<li>
+			<input group="919" class="question_radio_919 selection" type="checkbox" id="919_0" name="answers[919].value" value="324" 	onclick=" "/>		<label for="919_0">FairPrice</label>
+	</li>
+	<li>
+			<input group="919" class="question_radio_919 selection" type="checkbox" id="919_1" name="answers[919].value" value="325" 	onclick=" "/>		<label for="919_1">ColdStorage</label>
+	</li>
+	<li>
+			<input group="919" class="question_radio_919 selection" type="checkbox" id="919_2" name="answers[919].value" value="326" 	onclick=" "/>		<label for="919_2">Giant</label>
+	</li>
+	<li>
+			<input group="919" class="question_radio_919 selection" type="checkbox" id="919_3" name="answers[919].value" value="327" 	onclick=" "/>		<label for="919_3">ShengSiong</label>
+	</li>
+	<li>
+			<input group="919" class="question_radio_919 selection" type="checkbox" id="919_4" name="answers[919].value" value="328" 	onclick=" "/>		<label for="919_4">Carrefour</label>
+	</li>
+	<li>
+			<input group="919" class="question_radio_919 selection" type="checkbox" id="919_5" name="answers[919].value" value="329" 	onclick="showOrHide2() "/>		<label for="919_5">Other</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+function showOrHide2(){
+	if(document.getElementById("919_5").checked){
+			document.getElementById("q_120").style.display="";
+	}else{
+			document.getElementById("q_120").style.display="none";
+	}
+}
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_120" style="margin-bottom:0px; display:;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Other:
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[920].id" value="" id="answers[920].id" />
+<input type="text" name="answers[920].value" value="" id="question_920" group="920" class="input-text" />
+
+<span class="error-content" id="err_answers[920].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_121" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How likely are you to buy NAN MOM&amp;me in the coming three months?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<span class="error-content" id="err_answers[921].value" ></span>
+<input type="hidden" name="answers[921].id" value="" id="answers[921].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">will not buy</div>
+	<table class="rating-table">
+		<tr class="radio-line">
+
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[921].value" value="1" id="921_1" group="921" class="question_radio_921 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[921].value" value="2" id="921_2" group="921" class="question_radio_921 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[921].value" value="3" id="921_3" group="921" class="question_radio_921 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[921].value" value="4" id="921_4" group="921" class="question_radio_921 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[921].value" value="5" id="921_5" group="921" class="question_radio_921 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+		</tr>
+	</table> <div class="right-label">will definitely buy</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[921].value" value="" id="answers[921].value" class="q_921 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_107" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						In the past 3 months, have you tried NAN MOM&amp;me?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[922].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[922].id" value="" id="answers[922].id" />
+<ul>
+	<li>
+			<input group="922" type="radio" id="922_0" name="answers[922].value" value="307"  class="selection question_radio_922" onclick="showOrHide3()"  />		<label for="922_0">Yes</label>
+	</li>
+	<li>
+			<input group="922" type="radio" id="922_1" name="answers[922].value" value="308"  class="selection question_radio_922" onclick="showOrHide3()"  />		<label for="922_1">No</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_922  qc_0 radio" type="radio" name="answers[922].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+function showOrHide3(){
+	if(document.getElementById("922_0").checked){
+		document.getElementById("q_129").style.display="";
+		document.getElementById("q_130").style.display="";
+	}else{
+		document.getElementById("q_129").style.display="none";
+		document.getElementById("q_130").style.display="none";
+	}
+}
+</script>
+		  <div id="q_129" style="margin-bottom:0px; display:;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						When do you typically consume NAN MOM&amp;me?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[923].id" value="" id="answers[923].id" />
+<input type="text" name="answers[923].value" value="" id="question_923" group="923" class="input-text" />
+
+<span class="error-content" id="err_answers[923].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_130" style="margin-bottom:0px; display:;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						How often do you consume NAN MOM&amp;me?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[924].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[924].id" value="" id="answers[924].id" />
+<ul>
+	<li>
+			<input group="924" type="radio" id="924_0" name="answers[924].value" value="342"  class="selection question_radio_924"  />		<label for="924_0">more than twice daily</label>
+	</li>
+	<li>
+			<input group="924" type="radio" id="924_1" name="answers[924].value" value="343"  class="selection question_radio_924"  />		<label for="924_1">twice daily</label>
+	</li>
+	<li>
+			<input group="924" type="radio" id="924_2" name="answers[924].value" value="344"  class="selection question_radio_924"  />		<label for="924_2">once daily</label>
+	</li>
+	<li>
+			<input group="924" type="radio" id="924_3" name="answers[924].value" value="345"  class="selection question_radio_924"  />		<label for="924_3">4-5 times per week</label>
+	</li>
+	<li>
+			<input group="924" type="radio" id="924_4" name="answers[924].value" value="346"  class="selection question_radio_924"  />		<label for="924_4">2-3 times per week</label>
+	</li>
+	<li>
+			<input group="924" type="radio" id="924_5" name="answers[924].value" value="347"  class="selection question_radio_924"  />		<label for="924_5">less than twice a week</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_924  qc_0 radio" type="radio" name="answers[924].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+
+<div style="font-size:18px;color:black;" class="question-title"><p>How would you rate NAN MOM&me on the following attributes? </p></div>
+		  <div id="q_53" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div >
+						NAN MOM&amp;me is high in folic acid, which supports the foetus’s  overall growth &amp; development
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<span class="error-content" id="err_answers[925].value" ></span>
+<input type="hidden" name="answers[925].id" value="" id="answers[925].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">completely disagree</div>
+	<table class="rating-table" style="width:70px;">
+		<tr class="radio-line">
+
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[925].value" value="1" id="925_1" group="925" class="question_radio_925 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[925].value" value="2" id="925_2" group="925" class="question_radio_925 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[925].value" value="3" id="925_3" group="925" class="question_radio_925 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[925].value" value="4" id="925_4" group="925" class="question_radio_925 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[925].value" value="5" id="925_5" group="925" class="question_radio_925 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+		</tr>
+	</table> <div class="right-label">completely agree</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[925].value" value="" id="answers[925].value" class="q_925 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_54" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="">
+						NAN MOM&amp;me is the highest in DHA compared to all other maternal milks in Singapore
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<span class="error-content" id="err_answers[926].value" ></span>
+<input type="hidden" name="answers[926].id" value="" id="answers[926].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">completely disagree</div>
+	<table class="rating-table" style="width:70px;">
+		<tr class="radio-line">
+
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[926].value" value="1" id="926_1" group="926" class="question_radio_926 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[926].value" value="2" id="926_2" group="926" class="question_radio_926 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[926].value" value="3" id="926_3" group="926" class="question_radio_926 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[926].value" value="4" id="926_4" group="926" class="question_radio_926 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[926].value" value="5" id="926_5" group="926" class="question_radio_926 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+		</tr>
+	</table> <div class="right-label">completely agree</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[926].value" value="" id="answers[926].value" class="q_926 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_55" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="">
+						NAN MOM&amp;me contains calcium for strong bones&amp; teeth
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<span class="error-content" id="err_answers[927].value" ></span>
+<input type="hidden" name="answers[927].id" value="" id="answers[927].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">completely disagree</div>
+	<table class="rating-table" style="width:70px;">
+		<tr class="radio-line">
+
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[927].value" value="1" id="927_1" group="927" class="question_radio_927 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[927].value" value="2" id="927_2" group="927" class="question_radio_927 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[927].value" value="3" id="927_3" group="927" class="question_radio_927 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[927].value" value="4" id="927_4" group="927" class="question_radio_927 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[927].value" value="5" id="927_5" group="927" class="question_radio_927 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+		</tr>
+	</table> <div class="right-label">completely agree</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[927].value" value="" id="answers[927].value" class="q_927 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_56" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="">
+						NAN MOM&amp;me is lower in fat than other brands of maternal milk
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<span class="error-content" id="err_answers[928].value" ></span>
+<input type="hidden" name="answers[928].id" value="" id="answers[928].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">completely disagree</div>
+	<table class="rating-table" style="width:70px;">
+		<tr class="radio-line">
+
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[928].value" value="1" id="928_1" group="928" class="question_radio_928 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[928].value" value="2" id="928_2" group="928" class="question_radio_928 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[928].value" value="3" id="928_3" group="928" class="question_radio_928 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[928].value" value="4" id="928_4" group="928" class="question_radio_928 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[928].value" value="5" id="928_5" group="928" class="question_radio_928 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+		</tr>
+	</table> <div class="right-label">completely agree</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[928].value" value="" id="answers[928].value" class="q_928 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_57" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="">
+						NAN MOM&amp;me provides additional nutrients to support pregnancy &amp; breastfeeding
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<span class="error-content" id="err_answers[929].value" ></span>
+<input type="hidden" name="answers[929].id" value="" id="answers[929].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">completely disagree</div>
+	<table class="rating-table" style="width:70px;">
+		<tr class="radio-line">
+
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[929].value" value="1" id="929_1" group="929" class="question_radio_929 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[929].value" value="2" id="929_2" group="929" class="question_radio_929 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[929].value" value="3" id="929_3" group="929" class="question_radio_929 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[929].value" value="4" id="929_4" group="929" class="question_radio_929 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[929].value" value="5" id="929_5" group="929" class="question_radio_929 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+		</tr>
+	</table> <div class="right-label">completely agree</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[929].value" value="" id="answers[929].value" class="q_929 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_58" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="">
+						NAN MOM&amp;me provides important vitamins and minerals (iron, zinc, vitamin A,D,E,C)
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<span class="error-content" id="err_answers[930].value" ></span>
+<input type="hidden" name="answers[930].id" value="" id="answers[930].id" />
+<table>
+<tr>
+
+<td>
+
+<div class="left-label">completely disagree</div>
+	<table class="rating-table" style="width:70px;">
+		<tr class="radio-line">
+
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[930].value" value="1" id="930_1" group="930" class="question_radio_930 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[930].value" value="2" id="930_2" group="930" class="question_radio_930 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[930].value" value="3" id="930_3" group="930" class="question_radio_930 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" >
+<input type="radio" name="answers[930].value" value="4" id="930_4" group="930" class="question_radio_930 rating" style="background-color: #ffffff" />
+					</td>
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[930].value" value="5" id="930_5" group="930" class="question_radio_930 rating" style="background-color: #ffffff" />
+					</td>
+		</tr>
+		<tr class="number">
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+		</tr>
+	</table> <div class="right-label">completely agree</div>
+
+</td>
+<td valign="top" class="noanswer-td">
+<input type="radio" name="answers[930].value" value="" id="answers[930].value" class="q_930 qc_0 radio" />
+</td>
+</tr>
+</table>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_114" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Whose advice would you trust most when recommending maternal supplements?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[931].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[931].id" value="" id="answers[931].id" />
+<ul>
+	<li>
+			<input group="931" type="radio" id="931_0" name="answers[931].value" value="309"  class="selection question_radio_931" onclick="showOrHide4()" />		<label for="931_0">Gynecologist or doctor</label>
+	</li>
+	<li>
+			<input group="931" type="radio" id="931_1" name="answers[931].value" value="310"  class="selection question_radio_931" onclick="showOrHide4()" />		<label for="931_1">Friends</label>
+	</li>
+	<li>
+			<input group="931" type="radio" id="931_2" name="answers[931].value" value="311"  class="selection question_radio_931" onclick="showOrHide4()" />		<label for="931_2">Relatives</label>
+	</li>
+	<li>
+			<input group="931" type="radio" id="931_3" name="answers[931].value" value="312"  class="selection question_radio_931" onclick="showOrHide4()" />		<label for="931_3">Husband</label>
+	</li>
+	<li>
+			<input group="931" type="radio" id="931_4" name="answers[931].value" value="313"  class="selection question_radio_931" onclick="showOrHide4()" />		<label for="931_4">Hospital/clinic nurses</label>
+	</li>
+	<li>
+			<input group="931" type="radio" id="931_5" name="answers[931].value" value="314"  class="selection question_radio_931" onclick="showOrHide4()" />		<label for="931_5">Pharmacist</label>
+	</li>
+	<li>
+			<input group="931" type="radio" id="931_6" name="answers[931].value" value="315"  class="selection question_radio_931"  onclick="showOrHide4()" />		<label for="931_6">Online sources(please specify)</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_931  qc_0 radio" type="radio" name="answers[931].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+function showOrHide4(){
+	if(document.getElementById("931_6").checked)	{
+		document.getElementById("q_63").style.display="";
+	}else{
+		document.getElementById("q_63").style.display="none";
+	}
+}
+</script>
+		  <div id="q_63" style="margin-bottom:0px; display:;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Online sources
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[932].id" value="" id="answers[932].id" />
+<input type="text" name="answers[932].value" value="" id="question_932" group="932" class="input-text" />
+
+<span class="error-content" id="err_answers[932].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_115" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Which is your most preferred form of prenatal/ maternal supplement?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+
+<table width="100%" class="select-table">
+<tr>
+<td>
+<span class="error-content" id="err_answers[933].value"  class="redFieldError" style="display:block"></span>
+
+<input type="hidden" name="answers[933].id" value="" id="answers[933].id" />
+<ul>
+	<li>
+			<input group="933" type="radio" id="933_0" name="answers[933].value" value="316"  class="selection question_radio_933" onclick="showOrHide5()"  />		<label for="933_0">Pills</label>
+	</li>
+	<li>
+			<input group="933" type="radio" id="933_1" name="answers[933].value" value="317"  class="selection question_radio_933"  onclick="showOrHide5()" />		<label for="933_1">Cereal bar</label>
+	</li>
+	<li>
+			<input group="933" type="radio" id="933_2" name="answers[933].value" value="318"  class="selection question_radio_933"  onclick="showOrHide5()" />		<label for="933_2">Milk-based beverage</label>
+	</li>
+	<li>
+			<input group="933" type="radio" id="933_3" name="answers[933].value" value="319"  class="selection question_radio_933"  onclick="showOrHide5()" />		<label for="933_3">Non-dairy beverage (fruit based)</label>
+	</li>
+	<li>
+			<input group="933" type="radio" id="933_4" name="answers[933].value" value="320"  class="selection question_radio_933"  onclick="showOrHide5()" />		<label for="933_4">Snack (biscuit, oatmeal, etc)</label>
+	</li>
+	<li>
+			<input group="933" type="radio" id="933_5" name="answers[933].value" value="321"  class="selection question_radio_933"  onclick="showOrHide5()" />		<label for="933_5">Other</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+		<input class="q_933  qc_0 radio" type="radio" name="answers[933].value" />
+</td>
+</tr>
+
+  </table>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
+</script>
+				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+function showOrHide5(){
+	if(document.getElementById("933_5").checked)	{
+		document.getElementById("q_61").style.display="";
+	}else{
+		document.getElementById("q_61").style.display="none";
+	}
+}
+</script>
+		  <div id="q_61" style="margin-bottom:0px; display:;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Other
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[934].id" value="" id="answers[934].id" />
+<input type="text" name="answers[934].value" value="" id="question_934" group="934" class="input-text" />
+
+<span class="error-content" id="err_answers[934].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+		  <div id="q_131" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Which other brands of pre-natal milk have you tried?
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[935].id" value="" id="answers[935].id" />
+<input type="text" name="answers[935].value" value="" id="question_935" group="935" class="input-text" />
+
+<span class="error-content" id="err_answers[935].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+		 	mandatoryElements.push("936");
+// ]]>
+-->
+</script>
+		  <div id="q_92" style="margin-bottom:0px;display:none;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Name
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[936].id" value="" id="answers[936].id" />
+<input type="text" name="answers[936].value" value="" id="question_936" group="936" class="input-text" />
+
+<span class="error-content" id="err_answers[936].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+		 	mandatoryElements.push("937");
+// ]]>
+-->
+</script>
+		  <div id="q_86" style="margin-bottom:0px;display:none;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Email
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[937].id" value="" id="answers[937].id" />
+<input type="text" name="answers[937].value" value="" id="question_937" group="937" class="input-text" />
+
+<span class="error-content" id="err_answers[937].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+		 	mandatoryElements.push("938");
+// ]]>
+-->
+</script>
+		  <div id="q_122" style="margin-bottom:0px; display:none;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Phone
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[938].id" value="" id="answers[938].id" />
+<input type="text" name="answers[938].value" value="" id="question_938" group="938" class="input-text" />
+
+<span class="error-content" id="err_answers[938].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+		 	mandatoryElements.push("939");
+// ]]>
+-->
+</script>
+		  <div id="q_123" style="margin-bottom:0px; display:none;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Singapore Shipping Address
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout" >
+							   
+							</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[939].id" value="" id="answers[939].id" />
+<input type="text" name="answers[939].value" value="" id="question_939" group="939" class="input-text" />
+
+<span class="error-content" id="err_answers[939].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+	
+
+
+</div> 
+<br/>
+<div style="clear:both"></div>
+</div> 
+</div> 
+
+<div id="mainzone-bottom-wrapper">
+	<div id="mainzone-bottom-left">
+		<div id="mainzone-bottom-right">&nbsp;</div>
+	</div>
+</div>
+<br/>
+<div class="fillout-submit">
+
+<input id="submit" type="submit" style="display:" class="button" name="command.submit" value="Submit" />
+</div>
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
+	<tr>
+		<td width="9" height="9"><img src="http://i2.wildfire.asia/images/web_dialog_l_t.gif"/></td>
+		<td height="9" background="http://i2.wildfire.asia/images/web_dialog_m_t.gif"><img src="http://i2.wildfire.asia/images/web_dialog_m_t.gif"/></td>
+		<td width="9" height="9"><img src="http://i2.wildfire.asia/images/web_dialog_r_t.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" background="http://i2.wildfire.asia/images/web_dialog_l_m.gif"><img src="http://i2.wildfire.asia/images/web_dialog_l_m.gif"/></td>
+		<td bgcolor="#ffffff">
+			<div class="web-dialog-message">
+				<p id="web-dialog-message-text" class=""></p>
+			</div>
+			<div class="buttons" id="web-dialog-buttons">
+			</div>
+		</td>
+		<td width="9" background="http://i2.wildfire.asia/images/web_dialog_r_m.gif"><img src="http://i2.wildfire.asia/images/web_dialog_r_m.gif"/></td>
+	</tr>
+	<tr>
+		<td width="9" height="9"><img src="http://i2.wildfire.asia/images/web_dialog_l_b.gif"/></td>
+		<td height="9" background="http://i2.wildfire.asia/images/web_dialog_m_b.gif"><img src="http://i2.wildfire.asia/images/web_dialog_m_b.gif"/></td>
+		<td width="9" height="9"><img src="http://i2.wildfire.asia/images/web_dialog_r_b.gif"/></td>
+	</tr>
+</table>
+
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	var WebDialog = {
+		element : $('web-dialog'),
+		onok : function() {},
+		oncancel : function() {},
+		show : function() {
+			var width = document.body.clientWidth;
+			var height = document.body.offsetHeight;
+			var left = (width - this.element.offsetWidth) / 2;
+			var top = (height - this.element.offsetHeight) / 2;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+		},
+		alert : function(msg,agree,disagree,onok,oncancel) {
+			var buttons = ["OK","Cancel"];
+			var callbacks = [onok, oncancel];
+			this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+		},
+		ok : function() {
+			this.onok();
+		},
+		close : function() {
+			this.element.hide();
+			$('mask').hide();
+			this.oncancel();
+		},
+		showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions) {
+			// icon_type : "none", "alert", "question"
+			// msg_align : "left", "center", "right"
+			// width : -1 means auto
+			
+			var width = document.body.clientWidth;
+			var height = window.screen.availHeight;
+			var left = (width - window_width) / 2;
+			var top = (height - 300) / 2;
+			var pos = 0;
+			if (window.innerHeight) {
+		    	pos = window.pageYOffset
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
+		    	pos = document.documentElement.scrollTop
+		    } else if (document.body) {
+		    	pos = document.body.scrollTop;
+		    }
+		    top += pos;
+			if (top < 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+			$('mask').style.height = document.body.scrollHeight + "px";
+			
+			if (width != undefined) {
+				this.element.style.width = window_width + "px";
+			}
+			if (msg != undefined) {
+				$('web-dialog-message-text').innerHTML = msg;
+			}
+			if (icon_type != undefined && msg_align != undefined) {
+				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
+			} else if (icon_type == undefined && msg_align == undefined) {
+				$('web-dialog-message-text').className = "icon-none left";
+			} else if (icon_type == undefined) {
+				$('web-dialog-message-text').className = msg_align;
+			} else {
+				$('web-dialog-message-text').className = "icon-"+icon_type;
+			}
+			
+			$('web-dialog-buttons').innerHTML = "";
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
+					if (buttons[i]==undefined || callback_functions[i]==undefined) {
+						continue;
+					}
+					var e = document.createElement('a');
+					e.setAttribute('href', '#');
+					e.innerHTML = buttons[i];
+					e.onclick = callback_functions[i];
+					$('web-dialog-buttons').appendChild(e);
+				}
+			}
+			
+			
+			this.element.show();
+			//$('mask').show();
+		}
+	}
+// ]]>
+-->
+</script>
+</form>
+</div> 
+<div class="clear"></div>
+<br/>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+  var pageNum=0;
+ 
+  var noPage0 = false;
+  var currentPage=0;
+  
+
+  function showPage(_pageIndex) {
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex == pageNum) {
+    	Element.hide("nextPageButton");
+    } else {
+    	Element.show("nextPageButton");
+    }
+    
+    if (_pageIndex <1 && noPage0) return ;
+  	var _pageElement = $("page_"+_pageIndex);
+  	var _currElement = $("page_"+currentPage);
+  	
+  	Element.hide(_currElement);
+  	Element.show(_pageElement);
+	
+	if($("pageNum" + _pageIndex) != undefined) {
+		$("pageNum" + _pageIndex).style.fontWeight = "bolder"; 
+		$("pageNum" + _pageIndex).style.textDecoration = "underline";
+	}
+    if($("pageNum" + currentPage) != undefined) {		
+  		$("pageNum" + currentPage).style.fontWeight = "normal"; 
+		$("pageNum" + currentPage).style.textDecoration = "none";
+	}
+	
+
+  	currentPage = _pageIndex;
+	
+	if(_pageIndex == pageNum) {
+		Element.show($('submit'));
+	} else if ( _pageIndex < pageNum) {
+		Element.hide($('submit'));
+	}
+  }
+  
+  function showNextPage(){
+  	showPage(currentPage+1);
+  }
+  
+  function showPrevPage(){
+  	showPage(currentPage-1);
+  }
+  
+  function initPages() {
+  	var i;
+
+  	for (i=0; i<=pageNum; i++) {
+  		Element.hide($("page_"+i));
+  	}
+  	
+ 
+  	var _pageBar = document.getElementById("pageBar");
+  	if (pageNum==0) {
+  		_pageBar.innerHTML = "";
+  	} else {
+	  	for (i=0; i<=pageNum; i++) {
+			var s ="";
+			if( i == 0 ) {
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
+			}
+
+			if (noPage0){
+	  		 if (i!=0){ 
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
+	  		  }
+	  		}else{
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
+	  		}
+	  		
+			if( i == pageNum ) {
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
+			}
+	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  	}		
+  	}
+  }
+  
+  initPages();
+  if (noPage0){
+  	showPage(1);
+  }else{
+  	showPage(0);
+  }
+// ]]>
+-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+    //do not include radio answers
+	if(typeof checkNoAnswer=="undefined") {
+		checkNoAnswer=function(index,checkbox) {
+			var question = $("question_" + index);
+			var checked = checkbox.checked;
+			if( checked) {
+				question.disabled="disabled";
+				checkbox.value=false;
+			} else {
+				question.disabled="";
+				checkbox.value=true;
+			}
+		};
+	};
+	
+		if(typeof checkRadioNoAnswer=="undefined") {
+		checkRadioNoAnswer = function(index,checkbox) {
+			var clazz = "question_radio_" +index;
+			var radios = document.getElementsByClassName(clazz).each(function(radio) {
+				var checked = checkbox.checked;
+			    if( checked) {
+					if(radio.checked="checked")radio.checked="";
+					radio.disabled="disabled";
+					checkbox.value=false;
+			    } else {
+					radio.disabled="";
+					checkbox.value=true;
+			    }
+			});
+		};
+	}
+	
+	if(typeof checkSubboxes=="undefined") {
+		checkSubboxes = function(qc_id) {
+			//get the question context checkbox's value
+			var qc_value = $("qc_checkbox_" + qc_id).checked;
+			//get the checkBoxed belongs to the above question context
+			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
+			for(var i = 0; i < checkBoxes.length;i++) {
+				var checkBox = checkBoxes[i];
+				//to reuse checkRadioNoAnswer and checkNoAnswer
+				checkBox.checked=qc_value;
+				var clazzName = checkBox.className;
+				var question_id = clazzName.split(" ")[0].split("_")[1];
+				if( clazzName.indexOf("radio") != -1) {
+					checkRadioNoAnswer(question_id,checkBox);
+				} else {
+					checkNoAnswer(question_id,checkBox);
+				}
+			}
+		}
+		
+	}
+// ]]>
+-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function loading() {
+		var html = "<img src='http://i2.wildfire.asia/images/spinner.gif' />Please wait...";
+		WebDialog.showMessageBox(html, "none", "center", 600);
+	}
+	
+	function checkMandatory() {
+	    var fillMandatory = true;
+	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+			if(elements.length > 1) {
+			  var filled = false;
+			  for(var i=0; i < elements.length; i++) {
+			  	var element = elements[i];
+				if(element.checked) {
+				  filled = true;
+				  break;
+				}
+			  }
+			  if(!filled) {
+			  	fillMandatory = false;
+			  	break;
+			  }
+			} else {
+			  var element = elements[0];
+			  if(element.hasClassName("selection")) {
+			  	if(element.value.strip() == '') {
+	    			fillMandatory =  false;
+	    			break;                                  
+	    		}
+			  } else if (element.hasClassName("input-text")) {
+			 	if(element.value == 0) {
+					fillMandatory = false;
+					break;
+				}
+			  }
+			}
+	    }
+	    if(!fillMandatory) {
+	    	var html = '<span style="color:red">*&nbsp;&nbsp;</span>Mandatory questions must be filled out';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    }
+		return fillMandatory;
+	}
+	
+	function checkMandatoryOfSelectionQuestion() {
+	 var mandatory = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+
+
+	function checkAnswerSet() {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
+		    return true;
+		} else {
+			var html = '<span style="color:red">*&nbsp;&nbsp;</span>Can not submit empty questionnaire form';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			return false;
+		}
+	}
+	
+	function checkAnswersOfSelectionQuestions() {
+	 var filled = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+	
+	function checkAnswersOfRatingQuestions() {
+	    var filled = false;
+	    $$('input.rating').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;  
+										}
+	                                });
+
+		 return filled;
+	}
+	
+	function checkAnswersOfCommentQuestions() {
+	    var filled = false;
+	    $$('.input-text').each(function(element) {
+	                                    if(element.value.strip() != '') {
+	                                        filled = true;
+	                                    	throw $break;                                 
+	                                    }
+	                                });
+		 return filled;
+	}
+	
+	function locateErrorPage() {
+		var errorElements = $$('span.error-content') ;
+		var hasError = false;
+		var errorElementsPointer = 0;
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+			var html = errorElements[errorElementsPointer].innerHTML;
+			if (html != "") {
+				hasError = true;
+				break;
+			}
+		}
+		if( hasError ) {
+			var errorParentElement = errorElements[errorElementsPointer].up('div');
+			while (errorParentElement != undefined) {
+			var elementId = errorParentElement.id;
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
+				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
+				showPage(errorPageNum);
+				break;
+		}
+		errorParentElement = errorParentElement.up('div');
+		}
+		}
+	}
+	locateErrorPage();
+	
+	function showOtherValueInputInSelect(element) {
+	    var options = element.options;
+	    var selectedOption;
+	    for( var i = 0; i < options.length; i++) {
+	       if( options[i].selected) {
+	       	 selectedOption = options[i];
+	       }
+	    }
+	    var selectedOptionId = selectedOption.id;
+	    if( selectedOptionId.indexOf("other") != -1) {
+	    	$(element.id + "_other").show();
+	    } else {
+	        $(element.id + "_other").value = "";
+	    	$(element.id + "_other").hide();
+	    }
+	}
+	
+	function showOtherValueInputInRadio(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( value == 0 ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+	function showOtherValueInputInCheckBox(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( element.checked ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5436862-10']);
+  _gaq.push(['_setDomainName', '.marketing-research.cn']);
+  _gaq.push(['setAllowHash', 'false']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+	
+// ]]>
+-->
+</script>
+</div>
+</div> 
+</div>
+
+<div class="footer">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+						
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow"></div>
+	<div style="clear: both"></div>
+	
+</div> 
+</body>
+</html>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+
+Framework.registerAjaxSensors();
+// ]]>
+-->
+</script>

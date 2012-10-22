@@ -8,7 +8,7 @@
 
             <tu tuid='Invitation_Email_subject'>
 		<tuv xml:lang="zh">
-                    <seg><![CDATA[你的朋友邀请你加入星星火社区！]]></seg>
+                    <seg><![CDATA[你的朋友 ?EMAIL?，邀请你加入星星火社区]]></seg>
 		</tuv>
 		<tuv xml:lang="en">
                     <seg><![CDATA[Invitation to Wildfire from ?EMAIL?]]></seg>
@@ -25,17 +25,17 @@
 
 "?MESSAGE?"
 
-成为星星火社区的一员，你将会被邀请参加各种非常棒的口碑活动。在这些活动中你可以：
+成为星星火社区的一员，你将会被邀请参加其他各种非常棒的口碑活动。在这些活动中你可以：
 
-  - 根据你的兴趣得到最新的产品和服务 
-  - 任意的体验我们提供的产品
-  - 与朋友谈论你的体验感受
+  - 根据你的兴趣可以得到最新的产品和服务 
+  - 你可以任意的使用我们提供的产品
+  - 与朋友谈论你的体验
   - 让我们了解你们的需要
 
-星星火为你提供最自然的、真实的口碑！同时我们将保护你的隐私，不会公开你的个人信息。
+星星火为你提供最自然的、真实的口碑！同时我们将保护你的个人隐私，不会公开你的个人信息。
 
 请打开如下地址进行注册：
-http://home.xingxinghuo.cn/public/register/register/a/?AUTHCODE?
+http://community.wildfire.asia/public/register/register/a/?AUTHCODE?
 
 期待你加入我们！
 
@@ -69,14 +69,13 @@ As a Wildfire Member, you'll also be invited to other natural word-of-mouth camp
 Wildfire is all about natural, authentic word-of-mouth - no pyramid schemes or spamming. And don't worry, we respect you privacy and won't share your personal information or spam you.
 
 Just click the following link to join: 
-http://home.xingxinghuo.cn/public/register/register/a/?AUTHCODE?
+http://community.wildfire.asia/public/register/register/a/?AUTHCODE?
 
 We hope to see you soon!
 
 - Your friends at Wildfire.
 
 ----------------------------------------------
-
 Contact us if you have any questions:
 Phone：400 600 8707
 QQ：    400 600 8707
@@ -127,7 +126,7 @@ Thank you!
 
 
 星星火 Wildfire
-www.xingxinghuo.cn
+http://community.wildfire.asia
 ----------------------------------------------
 Contact us if you have any questions:
 Phone：400 600 8707
@@ -189,7 +188,7 @@ If this is a wrong email, please ignore it or contact with us.
 Thank you!
 
 星星火 Wildfire
-www.xingxinghuo.cn
+http://community.wildfire.asia
 ----------------------------------------------
 Contact us if you have any questions:
 Phone：400 600 8707
@@ -227,7 +226,7 @@ Weibo：weibo.com/xxhuo
 
 ----------------------------------------------------------------------------------
 有新的口碑报告要提交了吗？快来这里提交赢取更多积分吧！
-http://home.xingxinghuo.cn/public/home
+http://community.wildfire.asia
 
 有任何问题，你可以通过以下方式联系我们：
 电话：400 600 8707
@@ -259,16 +258,70 @@ Wildfire Community
 
 ----------------------------------------------------------------------------------
 Do you have new WOM report? Upload it to win more points!
-http://home.xingxinghuo.cn/public/home
+http://community.wildfire.asia
+
+Take part in more activties to win more gift. Our community:
+Wildfire Community
+http://community.wildfire.asia
 
 Please do not heritate to contact us if you have any questions!
-Phone：400 600 8707
-QQ：    400 600 8707
-Email：home@xingxinghuo.org
-Weibo：weibo.com/xxhuo
-]]></seg>
+400-600-8707
+home@wildfire.asia]]></seg>
 			</tuv>
-			
+		</tu>
+
+
+<tu tuid='Admin_Reply_WOM_Report_Body_en'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Your Story:
+
+?YOURSTORY?
+
+Our Response:
+
+?MYRESPONSE?
+
+Sincerely,
+Alice
+
+----------------------------------------------------------------------------------------------------------------------
+If you’ve recently talked to your friends about the product, you can submit a Spark Report here and earn more points!
+http://community.wildfire.asia
+
+Contact us if you have any questions:
+400-600-8707
+home@wildfire.asia
+
+星星火 Wildfire
+http://community.wildfire.asia]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Dear ?USERNAME?,
+
+Your Story:
+
+?YOURSTORY?
+
+Our Response:
+
+?MYRESPONSE?
+
+Sincerely,
+Alice
+
+----------------------------------------------------------------------------------------------------------------------
+If you’ve recently talked to your friends about the product, you can submit a Spark Report here and earn more points!
+http://community.wildfire.asia
+
+Contact us if you have any questions:
+400-600-8707
+home@wildfire.asia
+
+星星火 Wildfire
+http://community.wildfire.asia]]></seg>
+			</tuv>
 		</tu>
 		
 		
@@ -308,7 +361,7 @@ Weibo：weibo.com/xxhuo
 ----------------------------------------------------------------------------------
 参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
 Wildfire 星星火社区 
-http://www.xingxinghuo.cn
+http://community.wildfire.asia
 
 有任何问题，你可以通过以下方式联系我们：
 电话：400 600 8707
@@ -335,7 +388,7 @@ QQ：  400 600 8707
 ----------------------------------------------------------------------------------
 参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
 Wildfire 星星火社区 
-http://www.xingxinghuo.cn
+http://community.wildfire.asia
 
 有任何问题，你可以通过以下方式联系我们：
 电话：400 600 8707
@@ -363,7 +416,7 @@ Wildfire Community
 
 ----------------------------------------------------------------------------------------------------------------------
 Do you have new WOM report? Upload it to win more points!
-http://home.xingxinghuo.cn/public/home
+http://community.wildfire.asia
 
 Please do not heritate to contact us if you have any questions!
 Phone：400 600 8707
@@ -388,7 +441,7 @@ Wildfire Community
 
 ----------------------------------------------------------------------------------------------------------------------
 Do you have new WOM report? Upload it to win more points!
-http://home.xingxinghuo.cn/public/home
+http://community.wildfire.asia
 
 Please do not heritate to contact us if you have any questions!
 Phone：400 600 8707
@@ -432,7 +485,7 @@ Weibo：weibo.com/xxhuo
 ----------------------------------------------------------------------------------
 参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
 Wildfire 星星火社区 
-http://www.xingxinghuo.cn
+http://community.wildfire.asia
 
 有任何问题，你可以通过以下方式联系我们：
 电话：400 600 8707
@@ -454,7 +507,7 @@ QQ：  400 600 8707
 ----------------------------------------------------------------------------------
 参加更多活动，得到更多免费产品，了解有趣超酷的活动方式，欢迎随时登录：
 Wildfire 星星火社区 
-http://www.xingxinghuo.cn
+http://community.wildfire.asia
 
 有任何问题，你可以通过以下方式联系我们：
 电话：400 600 8707
@@ -477,7 +530,7 @@ Wildfire Community
 
 ----------------------------------------------------------------------------------------------------------------------
 Do you have new WOM report? Upload it to win more points!
-http://home.xingxinghuo.cn/public/home
+http://community.wildfire.asia
 
 Please do not heritate to contact us if you have any questions!
 Phone：400 600 8707
@@ -497,7 +550,7 @@ Wildfire Community
 
 ----------------------------------------------------------------------------------------------------------------------
 Do you have new WOM report? Upload it to win more points!
-http://home.xingxinghuo.cn/public/home
+http://community.wildfire.asia
 
 Please do not heritate to contact us if you have any questions!
 Phone：400 600 8707
@@ -511,4 +564,3 @@ Weibo：weibo.com/xxhuo]]></seg>
 		
 		
 	</body>
-</tmx>

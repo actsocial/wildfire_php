@@ -659,7 +659,13 @@ class CampaignController extends MyController
 			$campaignId = $this->view->campaign->id;
 		}
 		$consumer = $this->_currentUser;
-		//		Zend_Debug::dump($this->view->campaign->id);
+    //TOCHECK
+		//$select_extra_info = $db->select ();
+		//$select_extra_info->from ( "consumer",array ('consumer.*', 'consumer_extra_info.gender as gender','consumer_extra_info.education as education','consumer_extra_info.income as income'  ));
+		//$select_extra_info->joinLeft ( "consumer_extra_info","consumer.id = consumer_extra_info.consumer_id",null); 
+		//$select_extra_info->where("consumer.id = ".$this->_currentUser->id );
+		//$consumer2 = $db->fetchRow ( $select_extra_info );
+		//Zend_Debug::dump($consumer2);die;
 		if ($this->view->campaign != null && $campaignId != null && $campaignId > 0) {
 				
 			// check if precampaign poll is finished
@@ -678,7 +684,10 @@ class CampaignController extends MyController
 
 			$campaignInvitationModel = new CampaignInvitation();
 			$campaignInvitation = $campaignInvitationModel->fetchRow("campaign_id=".$campaignId." and consumer_id=".$consumer->id);
-			
+			if($campaignInvitation==null){
+				$this->_redirect('http://community.wildfire.asia/public/home');
+
+			}
 			$id = $campaignInvitation->id;
 			//Zend_Debug::dump($campaignInvitation);
 			$campaignInvitation->state = "ACCEPTED";
@@ -754,13 +763,15 @@ class CampaignController extends MyController
 		//edit ConsumerContactForm();
 		$form = new ConsumerContactForm( array('relative' =>$this->view->campaign->relative));
 		$consumer = $this->_currentUser;
-		
+		$order = new Zend_Db_Expr(' id ');
+
 		$consumerFriend = new ConsumerFriend();
-	    $friends  = $consumerFriend->fetchAll('consumer= '.$consumer->id .' and campaign='.$this->view->campaign->id);		
+	        $friends  = $consumerFriend->fetchAll('consumer= '.$consumer->id .' and campaign='.$this->view->campaign->id,$order);
 		$this->view->friendsNum = count($friends);
 		
 		//consumer_extra_info 
 		/*$consumer_extra_info = new ConsumerExtraInfo();
+    //TOCHECK
 		$consumerextra = $consumer_extra_info->fetchAll("consumer_id= ".$consumer->id);*/
 		
 		$select_consumer_extra_info = $db->select();
@@ -798,10 +809,14 @@ class CampaignController extends MyController
 				foreach ($friends as $friend){
 					$name = 'friend_name_'.$i ;
 					$email= 'friend_email_'.$i;
+					$phone= 'friend_phone_'.$i;
+					$address= 'friend_address_'.$i;
 					$message = 'friend_message_'.$i;
 					$form->$name->setValue($friend->name);
-//					$form->$email->setValue($friend->email);
-//					$form->$message->setValue($friend->message);
+					$form->$email->setValue($friend->email);
+					$form->$phone->setValue($friend->phone);
+					$form->$address->setValue($friend->address);
+					$form->$message->setValue($friend->message);
 					$i++;
 				}
 			}		
@@ -1029,5 +1044,3 @@ class CampaignController extends MyController
 	}
 
 }
-
-
