@@ -20,6 +20,7 @@ class GiftController extends MyController
 		$today = date("Y-m-d" , time());
 		
 		if($this->_request->getParam('t') != null && $this->_request->getParam('t') == 'mine'){
+
 			$db = Zend_Registry::get('db');
 //			$selectAmountPoint = $db->select();
 //	    	$selectAmountPoint->from('reward_point_transaction_record', 'SUM(point_amount)')
@@ -74,6 +75,7 @@ class GiftController extends MyController
         //paging
         $this->view->controller = $this->_request->getControllerName();
         $this->view->action = $this->_request->getActionName();
+//Zend_Debug::dump($products);die;
 		$paginator = new Zend_Paginator(new Zend_Paginator_Adapter_Array($products));
 		$paginator->setCurrentPageNumber($this->_curPage)
 		->setItemCountPerPage($this->_rowsPerPage); 

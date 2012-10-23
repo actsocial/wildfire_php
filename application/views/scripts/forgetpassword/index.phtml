@@ -13,20 +13,21 @@
 <title><?php echo $this->translate('Login_Title');?></title>
 <link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <link rel="stylesheet"
-	href="<?php echo $this->joomlahome;?>/modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css"
+	href="<?php echo $this->baseUrl();?>/mod_jflanguageselection.css"
 	type="text/css" />
 <link rel="stylesheet"
-	href="<?php echo $this->joomlahome;?>/modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css"
+	href="<?php echo $this->baseUrl();?>/mod_jflanguageselection.css"
 	type="text/css" />
 <script type="text/javascript" media="screen"
 	src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>
 
 
 <link rel="stylesheet"
-	href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/general.css"
+	href="<?php echo $this->baseUrl();?>/css/newhome.css"
 	type="text/css" />
+<!--href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/general.css"-->
 <!--[if lte IE 6]>
-<link href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/ieonly.css"  rel="stylesheet" type="text/css" />
+<link href="<?php echo $this->baseUrl();?>obsidian/css/ieonly.css"  rel="stylesheet" type="text/css" />
 <![endif]-->
 </head>
 
@@ -65,7 +66,7 @@
 	</div></div>
 	<div class="container"><div class="container-inner">
 		<div class="banner">
-			<img src="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/images/banner-sample.jpg"/>
+			<img src="<?php echo $this->baseUrl();?>/images/banner-sample.jpg"/>
 		</div>
 		
 		<div class="contents-3-col">
@@ -89,7 +90,7 @@
 				 </div>
 				</form>
 				<p>
-				<?php echo $this->translate('Or');?>
+				<!--?php echo $this->translate('Or');?>
 				</p>
 				<form id="f2"
 					action="<?php echo $this->url(array('controller'=>'forgetpassword', 'action'=>'sendsms'));?>"
@@ -107,7 +108,7 @@
 				<div class="buttons-bar">
 				<input id='submit2' type="submit" value = <?php echo $this->translate('Submit');?> name="submit" id="changepassword"/>
 				 </div>
-				</form>
+				</form-->
 			</div>
 		</div>
 		<div class="clear"></div>

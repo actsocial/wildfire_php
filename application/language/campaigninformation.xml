@@ -6,120 +6,31 @@
 		creationtool="XYZTool">
 	</header>
 	<body>
-	<!-- Eden Juice Bar -->
-		<tu tuid='Campaign_name_1'>
+		<tu tuid='Campaign_name_101'>
 			<tuv xml:lang="zh">
-				<seg>益等水果吧</seg>
+				<seg>Nestle</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Eden Juice</seg>
+				<seg>Nestle</seg>
 			</tuv>
 		</tu>		   
-		<tu tuid='Campaign_simple_description_1'>
+		<tu tuid='Campaign_simple_description_101'>
 			<tuv xml:lang="zh">
-				<seg>北京的新鲜果汁和食物</seg>
+				<seg>simple</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Beijing’s spot for fresh food and juice, fast!</seg>
+				<seg>simple</seg>
 			</tuv>
 		</tu>		
-		<tu tuid='Campaign_invitation_description_1'>
+		<tu tuid='Campaign_invitation_description_101'>
 			<tuv xml:lang="zh">
-				<seg>益等水果吧是你在匆忙生活中品尝新鲜饮食的最好去处！</seg>
+				<seg><![CDATA[NAN MOM&me contains vital nutrients to ensure a well-balanced diet during pregnancy and nursing.]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>
-				Eden Juice is the best new place in Beijing to get fresh food when you’re on the go!
-				</seg>
+				<seg><![CDATA[NAN MOM&me contains vital nutrients to ensure a well-balanced diet during pregnancy and nursing.]]></seg>
 			</tuv>
 		</tu>	
-		<tu tuid='Campaign_invitation_description2_1'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-				<br/>
-					<p>你将获得:</p>
-					<ul>
-						<li>一次免费餐饮 (三明治和鲜榨果汁)</li>
-						<li>两份免费的鲜榨果汁</li>
-						<li>10张给你朋友的50%折扣券</li>
-					</ul>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-				<br/>
-					<p>You’ll get:</p>
-					<ul>
-						<li>A free meal (sandwich and juice)</li>
-						<li>Two free juices</li>
-						<li>Ten 50% off coupons for your friends</li>
-					</ul>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_1'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[<p>非常感谢你参加益等果汁吧星星火活动！</p>]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[<p>Thank you for participating in the Eden Juice Bar Spark Campaign!</p>]]></seg>
-			</tuv>
-		</tu>
-		
-		<tu tuid='Pre_campaign_intro_1'>
-			<tuv xml:lang="zh">
-				<seg>在我们把含有免费餐券和折扣券的星星火礼包发送给你之前，请回答几个简单的问题:</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Just a few quick questions before we send out your Spark Kit, which contains your vouchers for free meal and juices. </seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_1'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成“益等水果吧”星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the Eden Juice Spark Campaign.</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_1'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu> 
-		
-		
-	<!-- Blue Fountain -->
-		<tu tuid='Campaign_name_2'>
-			<tuv xml:lang="zh">
-				<seg>蓝泉外文书店</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Blue Fountain</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_2'>
-			<tuv xml:lang="zh">
-				<seg>中国最专业的原版外文图书网上书店</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>China’s exciting new English language online bookstore</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_2'>
-			<tuv xml:lang="zh">
-				<seg>蓝泉书店为你提供超过50万种送货便捷、价格实惠的图书。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>
-				Blue Fountain Online Bookstore is fast, affordable, and has a selection of over 500,000 titles.
-				</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_2'>
+		<tu tuid='Campaign_invitation_image_name_101'>
 			<tuv xml:lang="zh">
 				<seg>campaign_invitation_bk_zh_2.png</seg>
 			</tuv>
@@ -127,889 +38,100 @@
 				<seg>campaign_invitation_bk_en_2.png</seg>
 			</tuv>
 		</tu>	
-		<tu tuid='Campaign_invitation_description2_2'>
+		<tu tuid='Campaign_invitation_description2_101'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[
-					<p>你将得到：</p>
-					<ul>
-						<li>一张价值150元可购买任意图书的代金券</li>
-						<li>五张给你朋友使用的40%折扣优惠券</li>
-						<li>十五张给你朋友使用的20%折扣优惠券</li>
-					</ul>
+					<p>You will get:<br/>
+						<em>Two NAN MOM&me products, for you to experience and enjoy</em><br/>
+						<em>An insulated nutrition bag</em><br/>
+						<em>Five NAN MOM&me vouchers for $3 off</em><br/>
+					</p>
 				]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg><![CDATA[
-					<p>You’ll get:</P>
-					<ul>
-						<li>One RMB 150 voucher valid for any title and shipping</li>
-						<li>Five 40% coupons for your friends</li>
-						<li>Fifteen 20% off coupons for your friends</li>
-					</ul>
+					<p>You will get:<br/>
+						<em>Two NAN MOM&me products, for you to experience and enjoy</em><br/>
+						<em>An insulated nutrition bag</em><br/>
+						<em>Five NAN MOM&me vouchers for $3 off</em><br/>
+					</p>
 				]]></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Pre_campaign_intro_2'>
+		<tu tuid='Pre_campaign_intro_101'>
 			<tuv xml:lang="zh">
-				<seg>在我们把含有150元代金券（可用于购买任意图书以及支付快递费）的星星火礼包发送给你之前，请回答几个简单的问题:</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Just a few quick questions before we send out your Spark Kit, which contains your 150 RMB voucher for a free book and shipping, and coupons for your friends.</seg>
+				<seg></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_2'>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_101'>
 			<tuv xml:lang="zh">
-				<seg>你已经完成“蓝泉书店”星星火活动。</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>You’ve completed the Blue Fountain Campaign.</seg>
+				<seg></seg>
 			</tuv>
 		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_2'>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_101'>
 			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
+				<seg></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Campaign_post_survey_notice_2'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[<p>非常感谢你参加蓝泉书店星星火活动！</p>]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[<p>Thank you for participating in the Blue Fountain Spark Campaign!</p>]]></seg>
-			</tuv>
-		</tu>
-		
-		
-	<!-- Bugslock -->
-		<tu tuid='Campaign_name_3'>
-			<tuv xml:lang="zh">
-				<seg>BugsLock驱蚊环</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>BugsLock</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_3'>
-			<tuv xml:lang="zh">
-				<seg>BugsLock-“100%纯天然，创新设计的驱蚊环”</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>BugsLock – “It’s 100% Natural, and it’s a Bracelet!”</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_3'>
-			<tuv xml:lang="zh">
-				<seg>BugsLock是一个创新设计的手环，在任何地方使用它都会使你免受蚊虫的困扰——它是100%纯天然的，并且简单易用可反复使用。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>
-				BugsLock is an innovative bracelet that can be worn anywhere to protect you against mosquitoes - its 100% natural and can be easily removed and re-used.
-				</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_3'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_3'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>加入活动后，你将得到：</p>
-					<ul>
-						<li>5个BugsLock驱蚊环</li>
-						<li>15张给你朋友使用的6折优惠券</li>
-						<li>BugsLock星星火活动手册</li>
-					</ul>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>By joining, you’ll receive:</P>
-					<ul>
-						<li>Five BugsLock Mosquito Repellant Bands</li>
-						<li>Fifteen 40% off coupons for your friends</li>
-						<li>BugsLock Spark Guide</li>
-					</ul>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_3'>
-			<tuv xml:lang="zh">
-				<seg>在我们向你发送星星火礼包前，请花几分钟时间填写活动前问卷，以帮助我们了解你目前对于BugsLock的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Before we send you your Spark Kit, please take just a few moments to complete the pre-campaign survey, to help us to understand your current opinion of BugsLock</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_3'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成“BugsLock”星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the BugsLock Campaign.</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_3'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_3'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[<p>非常感谢你参加"Bugslock"星星火活动！</p>]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[<p>Thank you for participating in the "Bugslock" Spark Campaign!</p>]]></seg>
-			</tuv>
-		</tu>
-		
-		
-		<!-- PURELL -->
-		<tu tuid='Campaign_name_4'>
-			<tuv xml:lang="zh">
-				<seg>PURELL净手消毒液</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>PURELL</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_4'>
-			<tuv xml:lang="zh">
-				<seg>PURELL净手消毒液 ——15秒钟杀死99.99%的细菌</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>PURELL Hand Sanitizer - Kills 99.99% of germs in 15 seconds.</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_4'>
-			<tuv xml:lang="zh">
-				<seg>PURELL是美国销量第一净手消毒液，它能在15秒内杀死99.99%的细菌。在任何时间和地方，使用PURELL将会让你与家人远离手部病菌传染。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>The #1 hand sanitizer in the USA, PURELL kills 99.99% of germs in 15 seconds. PURELL is an effective way to protect you and your family from hand-borne infections - anytime, anyplace.</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_4'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_4'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>加入活动后，你将得到：</p>
-					<ul>
-						<li>1瓶250毫升PURELL净手消毒液</li>
-						<li>3瓶15毫升与你好友分享的便携PURELL净手消毒液</li>
-						<li>25张与朋友分享的7折优惠券</li>
-					</ul>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>By joining, you’ll receive:</P>
-					<ul>
-						<li>One 250 ml bottle of PURELL</li>
-						<li>Three 15 ml travel bottles, to share with your friends</li>
-						<li>30% off coupons, to share with your friends</li>
-					</ul>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_4'>
-			<tuv xml:lang="zh">
-				<seg>在我们向你快递星星火活动体验包前，请花几分钟时间填写活动前问卷，以帮助我们了解你目前对于PURELL净手消毒液的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Before we send you your Spark Kit, please take just a few moments to complete the pre-campaign survey. It helps us to understand your current opinion of PURELL.</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_4'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成“PURELL”星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the PURELL Campaign.</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_4'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_4'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[<p>非常感谢你参加"PURELL"星星火活动！</p>]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[<p>Thank you for participating in the "PURELL" Spark Campaign!</p>]]></seg>
-			</tuv>
-		</tu>
-		
-		
-		
-		<!-- PURELL2 -->
-		<tu tuid='Campaign_name_5'>
-			<tuv xml:lang="zh">
-				<seg>PURELL净手消毒液</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>PURELL</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_5'>
-			<tuv xml:lang="zh">
-				<seg>PURELL净手消毒液 ——15秒钟杀死99.99%的细菌</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>PURELL Hand Sanitizer - Kills 99.99% of germs in 15 seconds.</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_5'>
-			<tuv xml:lang="zh">
-				<seg>PURELL是美国销量第一净手消毒液，它能在15秒内杀死99.99%的细菌。在任何时间和地方，使用PURELL将会让你与家人远离手部病菌传染。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>The #1 hand sanitizer in the USA, PURELL kills 99.99% of germs in 15 seconds. PURELL is an effective way to protect you and your family from hand-borne infections - anytime, anyplace.</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_5'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_5'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>加入活动后，你将得到：</p>
-					<ul>
-						<li>1瓶250毫升PURELL净手消毒液</li>
-						<li>3瓶15毫升与你好友分享的便携PURELL净手消毒液</li>
-						<li>25张与朋友分享的7折优惠券</li>
-					</ul>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>By joining, you’ll receive:</P>
-					<ul>
-						<li>One 250 ml bottle of PURELL</li>
-						<li>Three 15 ml travel bottles, to share with your friends</li>
-						<li>30% off coupons, to share with your friends</li>
-					</ul>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_5'>
-			<tuv xml:lang="zh">
-				<seg>在我们向你快递星星火活动体验包前，请花几分钟时间填写活动前问卷，以帮助我们了解你目前对于PURELL净手消毒液的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Before we send you your Spark Kit, please take just a few moments to complete the pre-campaign survey. It helps us to understand your current opinion of PURELL.</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_5'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成“PURELL”星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the PURELL Campaign.</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_5'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_5'>
+		<tu tuid='Campaign_post_survey_notice_101'>
             <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加"PURELL"星星火活动！</p>]]></seg>
+                <seg><![CDATA[<p></p>]]></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the "PURELL" Spark Campaign!</p>]]></seg>
+                <seg><![CDATA[<p>Thank you for participating in the Nestle Spark Campaign!</p>]]></seg>
             </tuv>
         </tu>
-		
-		
-		<!-- KRAFT -->
-		<tu tuid='Campaign_name_6'>
+        <tu tuid='pre_campaign_info_101'>
 			<tuv xml:lang="zh">
-				<seg>卡夫优冠早餐馅饼</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>卡夫优冠早餐馅饼</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_6'>
-			<tuv xml:lang="zh">
-				<seg>卡夫优冠早餐馅饼 ——营养早餐好搭档</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>卡夫优冠早餐馅饼 ——营养早餐好搭档</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_6'>
-			<tuv xml:lang="zh">
-				<seg>优冠早餐馅饼是卡夫推出的中国第一个儿童营养早餐产品。它的质地松软美味，帮助早晨忙碌的您方便地保证孩子从早餐中摄入足够的营养。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>优冠早餐馅饼是卡夫推出的中国第一个儿童营养早餐产品。它的质地松软美味，帮助早晨忙碌的您方便地保证孩子从早餐中摄入足够的营养。</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_6'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_6'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>加入活动后，你将得到：</p>
-					<ul>
-						<li>2包50克给你孩子的优冠早餐馅饼</li>
-						<li>4包50克与你好友分享的优冠早餐馅饼</li>
-						<li>1盒给你孩子的彩色蜡笔</li>
-					</ul>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>By joining, you’ll receive:</P>
-					<ul>
-						<li>2包50克给你孩子的优冠早餐馅饼</li>
-						<li>4包50克与你好友分享的优冠早餐馅饼s</li>
-						<li>1盒给你孩子的彩色蜡笔</li>
-					</ul>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_6'>
-			<tuv xml:lang="zh">
-				<seg>在我们向你快递星星火活动体验包前，请花几分钟时间填写活动前问卷，以帮助我们了解你目前对于卡夫优冠早餐馅饼的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Before we send you your Spark Kit, please take just a few moments to complete the pre-campaign survey. It helps us to understand your current opinion of KRAFT.</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_6'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成“优冠早餐馅饼”星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the KRAFT Campaign.</seg>
+				<seg></seg>
 			</tuv>
 		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_6'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_6'>
-            <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加“优冠早餐馅饼”星星火活动！</p>]]></seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the "KRAFT" Spark Campaign!</p>]]></seg>
-            </tuv>
+        <tu tuid="pre_campaign_thankyou_101">
+        	<tuv xml:lang="zh">
+        		        		<seg></seg>
+        	</tuv>
         </tu>
-        
-        <!-- Campbells -->
-		<tu tuid='Campaign_name_7'>
-			<tuv xml:lang="zh">
-				<seg>美国金宝汤</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>美国金宝汤</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_7'>
-			<tuv xml:lang="zh">
-				<seg>金宝汤 ——浓汤真肉，开饭早！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>金宝汤 ——浓汤真肉，开饭早！</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_7'>
-			<tuv xml:lang="zh">
-				<seg>金宝汤是中国第一个成品原汤产品。它帮你省去所有烧汤步骤 －买，汰，烧，让你手不沾菜就能和家人一起享受美味好汤！ 享受更多好时光！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>金宝汤是中国第一个成品原汤产品。它帮你省去所有烧汤步骤 －买，汰，烧，让你手不沾菜就能和家人一起享受美味好汤！ 享受更多好时光！</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_7'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_7'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>加入活动后，你将得到：</p>
-					<table style='float:left;'>
-						<tr> <td> - 金宝汤（口味可选）		</td><td>2  袋</td></tr>
-						<tr> <td> - 金宝汤“全家福”餐具7件套	</td><td>1  套</td></tr>
-						<tr> <td> - 活动介绍DVD(内附90”广告珍藏版)	</td><td>1  张</td></tr>
-						<tr> <td> - 给朋友的店内试吃礼券		</td><td>10  张</td></tr>
-
-					</table>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>By joining, you’ll receive:</P>
-					<table style='float:left;'>
-						<tr> <td> - 金宝汤（口味可选）		</td><td>2  袋</td></tr>
-						<tr> <td> - 金宝汤“全家福”餐具7件套	</td><td>1  套</td></tr>
-						<tr> <td> - 活动介绍DVD(内附90”广告珍藏版)	</td><td>1  张</td></tr>
-						<tr> <td> - 给朋友的店内试吃礼券		</td><td>10  张</td></tr>
-					</table>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_7'>
-			<tuv xml:lang="zh">
-				<seg>在我们派送金宝汤“家庭上汤礼包”之前，请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于金宝汤的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Before we send you your Spark Kit, please take just a few moments to complete the pre-campaign survey. It helps us to understand your current opinion of Campbells.</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_7'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成“美国金宝汤”星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the Campbells Campaign.</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_7'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_7'>
-            <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加“美国金宝汤”星星火活动！</p>
-                			  <p>请帮助我们完成活动结束问卷，并获得你的200积分！</p>]]></seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the Campbells Spark Campaign!</p>]]></seg>
-            </tuv>
-        </tu>
-        <!-- Campbells second period-->
-		<tu tuid='Campaign_name_9'>
-			<tuv xml:lang="zh">
-				<seg>美国金宝汤</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>美国金宝汤</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_9'>
-			<tuv xml:lang="zh">
-				<seg>金宝汤 ——浓汤真肉，开饭早！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>金宝汤 ——浓汤真肉，开饭早！</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_9'>
-			<tuv xml:lang="zh">
-				<seg>金宝汤是中国第一个成品原汤产品。它帮你省去所有烧汤步骤 －买，汰，烧，让你手不沾菜就能和家人一起享受美味好汤！ 享受更多好时光！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>金宝汤是中国第一个成品原汤产品。它帮你省去所有烧汤步骤 －买，汰，烧，让你手不沾菜就能和家人一起享受美味好汤！ 享受更多好时光！</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_9'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_9'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>加入活动后，你将得到：</p>
-					<table style='float:left;'>
-						<tr> <td> - 金宝汤（口味可选）		</td><td>2  袋</td></tr>
-						<tr> <td> - 金宝汤“全家福”餐具7件套	</td><td>1  套</td></tr>
-						<tr> <td> - 活动介绍DVD(内附90”广告珍藏版)	</td><td>1  张</td></tr>
-						<tr> <td> - 给朋友的店内试吃礼券		</td><td>10  张</td></tr>
-
-					</table>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>By joining, you’ll receive:</P>
-					<table style='float:left;'>
-						<tr> <td> - 金宝汤（口味可选）		</td><td>2  袋</td></tr>
-						<tr> <td> - 金宝汤“全家福”餐具7件套	</td><td>1  套</td></tr>
-						<tr> <td> - 活动介绍DVD(内附90”广告珍藏版)	</td><td>1  张</td></tr>
-						<tr> <td> - 给朋友的店内试吃礼券		</td><td>10  张</td></tr>
-					</table>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_9'>
-			<tuv xml:lang="zh">
-				<seg>在我们派送金宝汤“家庭上汤礼包”之前，请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于金宝汤的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Before we send you your Spark Kit, please take just a few moments to complete the pre-campaign survey. It helps us to understand your current opinion of Campbells.</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_9'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成“美国金宝汤”星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the Campbells Campaign.</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_9'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_9'>
-            <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加“美国金宝汤”星星火活动！</p>
-                			  <p>请帮助我们完成活动结束问卷，并获得你的200积分！</p>]]></seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the Campbells Spark Campaign!</p>]]></seg>
-            </tuv>
+	    <tu tuid="pre_campaign_friends_101">
+        	<tuv xml:lang="zh">
+        		<seg></seg>
+        	</tuv>
         </tu>
 	
-        <!-- Lux -->
-		<tu tuid='Campaign_name_8'>
-			<tuv xml:lang="zh">
-				<seg>力士洗护发产品</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>力士洗护发产品</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_8'>
-			<tuv xml:lang="zh">
-				<seg>力士 —— 直至发梢最后1厘米，水润光芒尽绽放!</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>力士 —— 直至发梢最后1厘米，水润光芒尽绽放!</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_8'>
-			<tuv xml:lang="zh">
-				<seg>“没有不美的女人, 只有还未觉醒的女人”, 力士相信美丽不只是属于少数人的奢侈品，而是一种生活态度，是一种不断进取、追求美丽的精神。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>“没有不美的女人, 只有还未觉醒的女人”, 力士相信美丽不只是属于少数人的奢侈品，而是一种生活态度，是一种不断进取、追求美丽的精神。</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_8'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_8'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>加入活动后，你将得到：</p>
-					<table style='float:left;'>
-						<tr> <td> - 力士柔亮洗发乳（200ml)	</td><td>1  瓶</td></tr>
-						<tr> <td> - 力士柔亮润发精华素（200ml) 	</td><td>1  瓶</td></tr>
-						<tr> <td> - 力士柔亮洗发乳（50ml)和润发精华素（50ml)）		</td><td>10 套</td></tr>
-					</table>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>By joining, you’ll receive:</P>
-					<table style='float:left;'>
-						<tr> <td> - 力士柔亮洗发乳（200ml)	</td><td>1  瓶</td></tr>
-						<tr> <td> - 力士柔亮润发精华素（200ml) 	</td><td>1  瓶</td></tr>
-						<tr> <td> - 力士柔亮洗发乳（50ml)和润发精华素（50ml)）		</td><td>10 套</td></tr>
-					</table>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_8'>
-			<tuv xml:lang="zh">
-				<seg>在我们派送力士洗护发礼包之前，请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于力士洗护发产品的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Before we send you your Spark Kit, please take just a few moments to complete the pre-campaign survey. It helps us to understand your current opinion of LUX.</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_8'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成“力士洗护发产品”星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the LUX Campaign.</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_8'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_8'>
-            <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加“力士洗护发产品”星星火活动！</p>]]></seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the LUX Spark Campaign!</p>]]></seg>
-            </tuv>
-        </tu>
-        
-         <!-- Rexona -->
-		<tu tuid='Campaign_name_10'>
-			<tuv xml:lang="zh">
-				<seg>舒耐抑汗香体产品</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>舒耐抑汗香体产品</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_10'>
-			<tuv xml:lang="zh">
-				<seg>舒耐 —— 一整天都保持沐浴后的干净清爽!</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>舒耐 —— 一整天都保持沐浴后的干净清爽!</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_10'>
-			<tuv xml:lang="zh">
-				<seg>一整天都保持沐浴后的干净清爽,呈现自己自信优雅的一面,从容面对繁忙的工作,是每个时尚白领早上出门前必备的功课。拥有百年历史的全球最大抑汗香体品牌 – 舒耐,必不负你所望。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>一整天都保持沐浴后的干净清爽,呈现自己自信优雅的一面,从容面对繁忙的工作,是每个时尚白领早上出门前必备的功课。拥有百年历史的全球最大抑汗香体品牌 – 舒耐,必不负你所望。</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_10'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_10'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>加入活动后，你将得到：</p>
-					<table style='float:left;'>
-						<tr> <td> - 给你的舒耐体验大礼包:  2 瓶150ml的舒耐抑汗清新喷雾	 </td></tr>
-						<tr> <td> - 给您与同事的体验大礼包: 1份精美礼物及10瓶150ml的舒耐抑汗清新喷雾</td></tr>
-					</table>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>By joining, you’ll receive:</P>
-					<table style='float:left;'>
-						<tr> <td> - 给你的舒耐体验大礼包:  2 瓶150ml的舒耐抑汗清新喷雾	 </td></tr>
-						<tr> <td> - 给您与同事的体验大礼包: 1份精美礼物及10瓶150ml的舒耐抑汗清新喷雾</td></tr>
-					</table>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_10'>
-			<tuv xml:lang="zh">
-				<seg>在我们派送舒耐洗抑汗香体礼包之前，请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于舒耐抑汗香体产品的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Before we send you your Spark Kit, please take just a few moments to complete the pre-campaign survey. It helps us to understand your current opinion of LUX.</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_10'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成“舒耐抑汗香体产品”星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the LUX Campaign.</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_10'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_10'>
-            <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加“舒耐抑汗香体产品”星星火活动！</p>]]></seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the LUX Spark Campaign!</p>]]></seg>
-            </tuv>
-        </tu>
-	
-	   <!-- Spring Festival -->
-		<tu tuid='Campaign_name_11'>
-			<tuv xml:lang="zh">
-				<seg>农历新年“闹新春”活动</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>农历新年“闹新春”活动</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_11'>
-			<tuv xml:lang="zh">
-				<seg>欢迎你参与星星火农历新年“闹新春”活动，来秀秀你心爱的品牌吧！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>欢迎你参与星星火农历新年“闹新春”活动，来秀秀你心爱的品牌吧！</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_11'>
-			<tuv xml:lang="zh">
-				<seg>你有着自己热爱的品牌么？为了一份钟爱，和难以割舍的习惯，不离不弃，只因为它是那个品牌。。。那么来晒晒你的宝物吧，它必须是带有你最爱的品牌LOGO，并且为你所持有。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>你有着自己热爱的品牌么？为了一份钟爱，和难以割舍的习惯，不离不弃，只因为它是那个品牌。。。那么来晒晒你的宝物吧，它必须是带有你最爱的品牌LOGO，并且为你所持有。</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_11'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_11'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>所有这些，让星星火和你更亲近。你中意的品牌，你的分享，你的创意，将为你获得免费礼品。<br/>
 
-						<em>- 一等奖 10名  奖品  价值300元的电子相册一个</em><br/>
-						<em>- 二等奖 30名  奖品  价值100元的个性U盘一个</em><br/>
-						
-					</p>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>所有这些，让星星火和你更亲近。你中意的品牌，你的分享，你的创意，将为你获得免费礼品。<br/>
-						<i>- 一等奖 10名  奖品  价值300元的电子相册一个</i><br/>
-						<i>- 二等奖 30名  奖品  价值100元的个性U盘一个</i><br/>
-					</p>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_11'>
+		<tu tuid='Campaign_name_102'>
 			<tuv xml:lang="zh">
-				<seg>在我们抽奖之前，请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于品牌的看法。</seg>
+				<seg>NESTLE</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>.</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_11'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成农历新年“闹新春”星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the Spring Festival Campaign.</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_11'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_11'>
-            <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加农历新年“闹新春”星星火活动！</p>]]></seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the LUX Spark Campaign!</p>]]></seg>
-            </tuv>
-        </tu>
-	
-	   <!-- Singapore -->
-		<tu tuid='Campaign_name_12'>
-			<tuv xml:lang="zh">
-				<seg>联系新加坡为职场添金</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>联系新加坡为职场添金</seg>
+				<seg>NESTLE</seg>
 			</tuv>
 		</tu>		   
-		<tu tuid='Campaign_simple_description_12'>
+		<tu tuid='Campaign_simple_description_102'>
 			<tuv xml:lang="zh">
-				<seg>发现新加坡 探索不一样的未来 为职场添金</seg>
+				<seg>simple</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>发现新加坡 探索不一样的未来 为职场添金</seg>
+				<seg>simple</seg>
 			</tuv>
 		</tu>		
-		<tu tuid='Campaign_invitation_description_12'>
+		<tu tuid='Campaign_invitation_description_102'>
 			<tuv xml:lang="zh">
-				<seg>前往新加坡工作，加入世界顶尖企业与各国精英合作，成为真正的国际专业人士。</seg>
+				<seg><![CDATA[NAN MOM&me contains vital nutrients to ensure a well-balanced diet during pregnancy and nursing.]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>前往新加坡工作，加入世界顶尖企业与各国精英合作，成为真正的国际专业人士。</seg>
+				<seg><![CDATA[NAN MOM&me contains vital nutrients to ensure a well-balanced diet during pregnancy and nursing.]]></seg>
 			</tuv>
 		</tu>	
-		<tu tuid='Campaign_invitation_image_name_12'>
+		<tu tuid='Campaign_invitation_image_name_102'>
 			<tuv xml:lang="zh">
 				<seg>campaign_invitation_bk_zh_2.png</seg>
 			</tuv>
@@ -1017,91 +139,100 @@
 				<seg>campaign_invitation_bk_en_2.png</seg>
 			</tuv>
 		</tu>	
-		<tu tuid='Campaign_invitation_description2_12'>
+		<tu tuid='Campaign_invitation_description2_102'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[
-					<p>参加活动后,  你将收到:<br/>
+					<p>You will get:<br/>
+						<em>Two NAN MOM&me products, for you to experience and enjoy</em><br/>
+						<em>An insulated nutrition bag</em><br/>
+						<em>Five NAN MOM&me vouchers for $3 off</em><br/>
+					</p>
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+					<p>You will get:<br/>
+						<em>Two NAN MOM&me products, for you to experience and enjoy</em><br/>
+						<em>An insulated nutrition bag</em><br/>
+						<em>Five NAN MOM&me vouchers for $3 off</em><br/>
+					</p>
+				]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Pre_campaign_intro_102'>
+			<tuv xml:lang="zh">
+				<seg></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_102'>
+			<tuv xml:lang="zh">
+				<seg></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg></seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_102'>
+			<tuv xml:lang="zh">
+				<seg></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Campaign_post_survey_notice_102'>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[<p></p>]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[<p>Thank you for participating in the Nestle Spark Campaign!</p>]]></seg>
+            </tuv>
+        </tu>
+        <tu tuid='pre_campaign_info_102'>
+			<tuv xml:lang="zh">
+				<seg></seg>
+			</tuv>
+		</tu> 
+        <tu tuid="pre_campaign_thankyou_102">
+        	<tuv xml:lang="zh">
+        		        		<seg></seg>
+        	</tuv>
+        </tu>
+	    <tu tuid="pre_campaign_friends_102">
+        	<tuv xml:lang="zh">
+        		<seg></seg>
+        	</tuv>
+        </tu>
 
-						<em>- 前往新加坡工作，未来职业生涯发展的潜力介绍 </em><br/>
-						<em>- 新加坡工作及生活环境介绍  		2册 </em><br/>
-						<em>- 分享家指南                                 		1册 </em><br/>
-						<em>- 案例分享及环境介绍DVD			1片 </em><br/>
-						
-					</p>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>参加活动后,  你将收到:<br/>
-
-						<em>- 前往新加坡工作，未来职业生涯发展的潜力介绍 </em><br/>
-						<em>- 新加坡工作及生活环境介绍  		2册 </em><br/>
-						<em>- 分享家指南                                 		1册 </em><br/>
-						<em>- 案例分享及环境介绍DVD			1片 </em><br/>
-						
-					</p>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_12'>
+		<!-- G1-->
+		<tu tuid='Campaign_name_103'>
 			<tuv xml:lang="zh">
-				<seg>在我们抽奖之前，请花2分钟时间填写活动前问卷，以帮助我们了解你目前状况。</seg>
+				<seg>Nestle</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>.</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_12'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成联系新加坡为职场添金体验活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>You’ve completed the Spring Festival Campaign.</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_12'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Thank you for the post-campaign survey, you've earned 200 Spark Points!</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_12'>
-            <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加联系新加坡为职场添金体验活动！</p>]]></seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the LUX Spark Campaign!</p>]]></seg>
-            </tuv>
-        </tu>
-        
-       	<!-- Bailey -->
-		<tu tuid='Campaign_name_13'>
-			<tuv xml:lang="zh">
-				<seg>百利甜酒产品</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>百利甜酒产品</seg>
+				<seg>Nestle</seg>
 			</tuv>
 		</tu>		   
-		<tu tuid='Campaign_simple_description_13'>
+		<tu tuid='Campaign_simple_description_103'>
 			<tuv xml:lang="zh">
-				<seg>百利-威士忌与奶油带来的全新饮酒体验</seg>
+				<seg>simple</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>百利-威士忌与奶油带来的全新饮酒体验</seg>
+				<seg>simple</seg>
 			</tuv>
 		</tu>		
-		<tu tuid='Campaign_invitation_description_13'>
+		<tu tuid='Campaign_invitation_description_103'>
 			<tuv xml:lang="zh">
-				<seg>威士忌与奶油的融合，带给你全新的饮酒体验，都市女性白领结束了繁忙的工作后，打开百利甜酒，尽情享受与朋友的聚会吧。 </seg>
+				<seg><![CDATA[NAN MOM&me contains vital nutrients to ensure a well-balanced diet during pregnancy and nursing.]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>威士忌与奶油的融合，带给你全新的饮酒体验，都市女性白领结束了繁忙的工作后，打开百利甜酒，尽情享受与朋友的聚会吧。 </seg>
+				<seg><![CDATA[NAN MOM&me contains vital nutrients to ensure a well-balanced diet during pregnancy and nursing.]]></seg>
 			</tuv>
 		</tu>	
-		<tu tuid='Campaign_invitation_image_name_13'>
+		<tu tuid='Campaign_invitation_image_name_103'>
 			<tuv xml:lang="zh">
 				<seg>campaign_invitation_bk_zh_2.png</seg>
 			</tuv>
@@ -1109,101 +240,98 @@
 				<seg>campaign_invitation_bk_en_2.png</seg>
 			</tuv>
 		</tu>	
-		<tu tuid='Campaign_invitation_description2_13'>
+		<tu tuid='Campaign_invitation_description2_103'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[
-					<p>所有这些，让星星火和你更亲近。你的分享，你的创意，将为你获得免费礼品。<br/>
-
-						<em>- 1瓶375毫升百利甜酒 </em><br/>
-						<em>- 10瓶50毫升百利甜酒</em><br/>
-						
+					<p>You will get:<br/>
+						<em>One pack of MOM&me product for you to experience and enjoy</em><br/>
 					</p>
 				]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg><![CDATA[
-					<p>所有这些，让星星火和你更亲近。你的分享，你的创意，将为你获得免费礼品。<br/>
-						<i>- 1瓶375毫升百利甜酒 </i><br/>
-						<i>- 10瓶50毫升百利甜酒</i><br/>
+					<p>You will get:<br/>
+						<em>One pack of MOM&me product for you to experience and enjoy</em><br/>
 					</p>
 				]]></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Pre_campaign_intro_13'>
+		<tu tuid='Pre_campaign_intro_103'>
 			<tuv xml:lang="zh">
-				<seg>在我们抽奖之前，请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该品牌的看法。</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>.</seg>
+				<seg></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_13'>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_103'>
 			<tuv xml:lang="zh">
-				<seg>你已经完成百利甜酒的星星火活动。</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>你已经完成百利甜酒的星星火活动。</seg>
+				<seg></seg>
 			</tuv>
 		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_13'>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_103'>
 			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+				<seg></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Campaign_post_survey_notice_13'>
+		<tu tuid='Campaign_post_survey_notice_103'>
             <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加百利甜酒的星星火活动！</p>]]></seg>
+                <seg><![CDATA[<p></p>]]></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the Baily Spark Campaign!</p>]]></seg>
+                <seg><![CDATA[<p>Thank you for participating in the Nestle Spark Campaign!</p>]]></seg>
             </tuv>
         </tu>
-        <tu tuid='pre_campaign_info_13'>
+        <tu tuid='pre_campaign_info_103'>
 			<tuv xml:lang="zh">
-				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址并提交6至10位好友姓名，我们会尽快给你发出星星火体验礼包。</seg>
+				<seg></seg>
 			</tuv>
 		</tu> 
-        <tu tuid="pre_campaign_thankyou_13">
+        <tu tuid="pre_campaign_thankyou_103">
         	<tuv xml:lang="zh">
-        		<!--<seg>请填写上海地区的办公地址</seg>-->
-        		<seg>本次活动只接受上海地区办公室地址</seg>
+    
+        		<seg></seg>
         	</tuv>
         </tu>
-	    <tu tuid="pre_campaign_friends_13">
+	    <tu tuid="pre_campaign_friends_103">
         	<tuv xml:lang="zh">
-        		<seg>请你在下面的空格处填入最少6位最多10位年纪在25-30岁的女性好友姓名（最好是办公室女性同事）， 我们将为她们提供特别定制的礼物。因为礼品含有少量酒精成分，所以请你确保你和你的朋友都不在怀孕期内。</seg>
+        		<seg></seg>
         	</tuv>
         </tu>
-        
-        <!-- BluBlocker -->
-		<tu tuid='Campaign_name_21'>
+		
+		<!-- campaign test -->
+		
+		<tu tuid='Campaign_name_104'>
 			<tuv xml:lang="zh">
-				<seg>BluBlocker</seg>
+				<seg>Nestle_test</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>BluBlocker</seg>
+				<seg>Nestle_test</seg>
 			</tuv>
 		</tu>		   
-		<tu tuid='Campaign_simple_description_21'>
+		<tu tuid='Campaign_simple_description_104'>
 			<tuv xml:lang="zh">
-				<seg>BluBlocker-让你拥有夏季时尚中最夺目的光彩</seg>
+				<seg>simple</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>BluBlocker-让你拥有夏季时尚中最夺目的光彩</seg>
+				<seg>simple</seg>
 			</tuv>
 		</tu>		
-		<tu tuid='Campaign_invitation_description_21'>
+		<tu tuid='Campaign_invitation_description_104'>
 			<tuv xml:lang="zh">
-				<seg>美国进口的BluBlocker太阳镜结合了时尚与技术，100%紫外线防护，让你拥有夏季时尚中最夺目的震撼效果！ </seg>
+				<seg><![CDATA[NAN MOM&me contains vital nutrients to ensure a well-balanced diet during pregnancy and nursing.]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>美国进口的BluBlocker太阳镜结合了时尚与技术，100%紫外线防护，让你拥有夏季时尚中最夺目的震撼效果！ </seg>
+				<seg><![CDATA[NAN MOM&me contains vital nutrients to ensure a well-balanced diet during pregnancy and nursing.]]></seg>
 			</tuv>
 		</tu>	
-		<tu tuid='Campaign_invitation_image_name_21'>
+		<tu tuid='Campaign_invitation_image_name_104'>
 			<tuv xml:lang="zh">
 				<seg>campaign_invitation_bk_zh_2.png</seg>
 			</tuv>
@@ -1211,103 +339,101 @@
 				<seg>campaign_invitation_bk_en_2.png</seg>
 			</tuv>
 		</tu>	
-		<tu tuid='Campaign_invitation_description2_21'>
+		<tu tuid='Campaign_invitation_description2_104'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[
-					<p>如果你确认参加这次活动，你将会收到：<br/>
-						<em>－ BluBlocker太阳镜（为你准备的）                                                                     1 副 </em><br/>
-						<em>－ 特别的礼物（为你准备的）                                                                                      1 份 </em><br/>
-						<em>－ 活动宣传卡片及BluBlocker优惠券（为你的朋友们准备的）            10份  </em><br/>
-						<em>－ 紫外线小手电（用于紫外线防护测试）                                                              1 支 </em><br/>
+					<p>You will get:<br/>
+						<em>Two NAN MOM&me products, for you to experience and enjoy</em><br/>
+						<em>An insulated nutrition bag</em><br/>
+						<em>Five NAN MOM&me vouchers for $3 off</em><br/>
 					</p>
 				]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg><![CDATA[
-					<p>如果你确认参加这次活动，你将会收到：<br/>
-						<em>－ BluBlocker太阳镜（为你准备的）                                                                     1 副 </em><br/>
-						<em>－ 特别的礼物（为你准备的）                                                                                      1 份 </em><br/>
-						<em>－ 活动宣传卡片及BluBlocker优惠券（为你的朋友们准备的）            10份  </em><br/>
-						<em>－ 紫外线小手电（用于紫外线防护测试）                                                              1 支 </em><br/>
+					<p>You will get:<br/>
+						<em>Two NAN MOM&me products, for you to experience and enjoy</em><br/>
+						<em>An insulated nutrition bag</em><br/>
+						<em>Five NAN MOM&me vouchers for $3 off</em><br/>
 					</p>
 				]]></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Pre_campaign_intro_21'>
+		<tu tuid='Pre_campaign_intro_104'>
 			<tuv xml:lang="zh">
-				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该品牌的看法。</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>.</seg>
+				<seg></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_21'>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_104'>
 			<tuv xml:lang="zh">
-				<seg>你已经完成BluBlocker的星星火活动。</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>你已经完成BluBlocker的星星火活动。</seg>
+				<seg></seg>
 			</tuv>
 		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_21'>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_104'>
 			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+				<seg></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Campaign_post_survey_notice_21'>
+		<tu tuid='Campaign_post_survey_notice_104'>
             <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加BluBlocker的星星火活动！</p>]]></seg>
+                <seg><![CDATA[<p></p>]]></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the Baily Spark Campaign!</p>]]></seg>
+                <seg><![CDATA[<p>Thank you for participating in the Nestle Spark Campaign!</p>]]></seg>
             </tuv>
         </tu>
-        <tu tuid='pre_campaign_info_21'>
+        <tu tuid='pre_campaign_info_104'>
 			<tuv xml:lang="zh">
-				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址并提交6至10位好友姓名，我们会尽快给你发出星星火体验礼包。</seg>
+				<seg></seg>
 			</tuv>
 		</tu> 
-        <tu tuid="pre_campaign_thankyou_21">
+        <tu tuid="pre_campaign_thankyou_104">
         	<tuv xml:lang="zh">
-        		<!--<seg>请填写上海地区的办公地址</seg>-->
+        		        		<seg></seg>
+        	</tuv>
+        </tu>
+	    <tu tuid="pre_campaign_friends_104">
+        	<tuv xml:lang="zh">
         		<seg></seg>
         	</tuv>
         </tu>
-	    <tu tuid="pre_campaign_friends_21">
-        	<tuv xml:lang="zh">
-        		<seg></seg>
-        	</tuv>
-        </tu>
-        
-        <!-- Karft campaign I  -->
-		<tu tuid='Campaign_name_28'>
+		
+		<!-- Campaign 105 DSM -->
+		
+				<tu tuid='Campaign_name_105'>
 			<tuv xml:lang="zh">
-				<seg>儿童零食</seg>
+				<seg>DSM</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>儿童零食</seg>
+				<seg>DSM</seg>
 			</tuv>
 		</tu>		   
-		<tu tuid='Campaign_simple_description_28'>
+		<tu tuid='Campaign_simple_description_105'>
 			<tuv xml:lang="zh">
-				<seg>description页面简单描述</seg>
+				<seg>simple</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>description页面简单描述</seg>
+				<seg>simple</seg>
 			</tuv>
 		</tu>		
-		<tu tuid='Campaign_invitation_description_28'>
+		<tu tuid='Campaign_invitation_description_105'>
 			<tuv xml:lang="zh">
-				<seg>倾听孩子对零食的真实想法，星星火与你共同关注他们的成长</seg>
+				<seg><![CDATA[Quality for Life<sup>TM</sup> improves your education on vitamins and gives you peace of mind when choosing the right food and beverage products.]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>倾听孩子对零食的真实想法，星星火与你共同关注他们的成长</seg>
+				<seg><![CDATA[Quality for Life<sup>TM</sup> improves your education on vitamins and gives you peace of mind when choosing the right food and beverage products.]]></seg>
 			</tuv>
 		</tu>	
-		<tu tuid='Campaign_invitation_image_name_2'>
+		<tu tuid='Campaign_invitation_image_name_105'>
 			<tuv xml:lang="zh">
 				<seg>campaign_invitation_bk_zh_2.png</seg>
 			</tuv>
@@ -1315,394 +441,92 @@
 				<seg>campaign_invitation_bk_en_2.png</seg>
 			</tuv>
 		</tu>	
-		<tu tuid='Campaign_invitation_description2_28'>
+		<!-- 
+		<tu tuid='Campaign_invitation_description2_105'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[
-					<p>如果你确认参加，将会收到：<br/>
-						<em>－ 零食礼包            1份（为你的孩子及玩伴们准备的） </em><br/>
-						<em>－ 活动手册            1份（为你准备的） </em><br/>
+					<p>You will get:<br/>
+						<em>Two NAN MOM&me products, for you to experience and enjoy</em><br/>
+						<em>An insulated nutrition bag</em><br/>
+						<em>Five NAN MOM&me vouchers for $3 off</em><br/>
 					</p>
 				]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg><![CDATA[
-					<p>如果你确认参加，将会收到：<br/>
-						<em>－ 零食礼包            1份（为你的孩子及玩伴们准备的） </em><br/>
-						<em>－ 活动手册            1份（为你准备的） </em><br/>
+					<p>You will get:<br/>
+						<em>Two NAN MOM&me products, for you to experience and enjoy</em><br/>
+						<em>An insulated nutrition bag</em><br/>
+						<em>Five NAN MOM&me vouchers for $3 off</em><br/>
 					</p>
 				]]></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Pre_campaign_intro_28'>
+		
+		-->
+		
+		<tu tuid='Campaign_invitation_description2_105'>
 			<tuv xml:lang="zh">
-				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该品牌的看法。</seg>
+				<seg><![CDATA[
+					<p>You will receive an exclusive kit that will enhance your vitamin knowledge with a few sample products that contain high-quality ingredients.
+					</p>
+				]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>.</seg>
+				<seg><![CDATA[
+					<p>You will receive an exclusive kit that will enhance your vitamin knowledge with a few sample products that contain high-quality ingredients.
+					</p>
+				]]></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_28'>
+		
+		<tu tuid='Pre_campaign_intro_105'>
 			<tuv xml:lang="zh">
-				<seg>你已经完成儿童零食的星星火活动。</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>你已经完成儿童零食的星星火活动。</seg>
+				<seg></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_105'>
+			<tuv xml:lang="zh">
+				<seg></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg></seg>
 			</tuv>
 		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_28'>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_105'>
 			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+				<seg></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+				<seg></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Campaign_post_survey_notice_28'>
+		<tu tuid='Campaign_post_survey_notice_105'>
             <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加儿童零食的星星火活动！</p>]]></seg>
+                <seg><![CDATA[<p></p>]]></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the Baily Spark Campaign!</p>]]></seg>
+                <seg><![CDATA[<p>Thank you for participating in the Nestle Spark Campaign!</p>]]></seg>
             </tuv>
         </tu>
-        <tu tuid='pre_campaign_info_28'>
+        <tu tuid='pre_campaign_info_105'>
 			<tuv xml:lang="zh">
-				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
+				<seg></seg>
 			</tuv>
 		</tu> 
-        <tu tuid="pre_campaign_thankyou_28">
+        <tu tuid="pre_campaign_thankyou_105">
         	<tuv xml:lang="zh">
-        		<!--<seg>请填写上海地区的办公地址</seg>-->
-        		<seg></seg>
+        		        		<seg></seg>
         	</tuv>
         </tu>
-	    <tu tuid="pre_campaign_friends_28">
-        	<tuv xml:lang="zh">
-        		<seg></seg>
-        	</tuv>
-        </tu>
-        
-         <!-- Karft campaign II  -->
-		<tu tuid='Campaign_name_29'>
-			<tuv xml:lang="zh">
-				<seg>儿童零食</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>儿童零食</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_29'>
-			<tuv xml:lang="zh">
-				<seg>description页面简单描述</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>description页面简单描述</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_29'>
-			<tuv xml:lang="zh">
-				<seg>倾听孩子对零食的真实想法，星星火与你共同关注他们的成长</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>倾听孩子对零食的真实想法，星星火与你共同关注他们的成长</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_2'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_29'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>如果你确认参加，将会收到：<br/>
-						<em>－ 零食礼包            1份（为你的孩子及玩伴们准备的） </em><br/>
-						<em>－ 活动手册            1份（为你准备的） </em><br/>
-					</p>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>如果你确认参加，将会收到：<br/>
-						<em>－ 零食礼包            1份（为你的孩子及玩伴们准备的） </em><br/>
-						<em>－ 活动手册            1份（为你准备的） </em><br/>
-					</p>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_29'>
-			<tuv xml:lang="zh">
-				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该品牌的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>.</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_29'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成儿童零食的星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>你已经完成儿童零食的星星火活动。</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_29'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_29'>
-            <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加儿童零食的星星火活动！</p>]]></seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the Baily Spark Campaign!</p>]]></seg>
-            </tuv>
-        </tu>
-        <tu tuid='pre_campaign_info_29'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
-			</tuv>
-		</tu> 
-        <tu tuid="pre_campaign_thankyou_29">
-        	<tuv xml:lang="zh">
-        		<!--<seg>请填写上海地区的办公地址</seg>-->
-        		<seg></seg>
-        	</tuv>
-        </tu>
-	    <tu tuid="pre_campaign_friends_29">
+	    <tu tuid="pre_campaign_friends_105">
         	<tuv xml:lang="zh">
         		<seg></seg>
         	</tuv>
         </tu>
-        
-           <!-- EnglishFirst campaign -->
-		<tu tuid='Campaign_name_30'>
-			<tuv xml:lang="zh">
-				<seg>英孚教育</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>英孚教育</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_30'>
-			<tuv xml:lang="zh">
-				<seg>description页面简单描述</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>description页面简单描述</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_30'>
-			<tuv xml:lang="zh">
-				<seg>英孚青少儿英语教育针对不同年龄段孩子的成长特点设计了不同的儿童英语课程，以迎合不同年龄段孩子的学习需要，在中国取得了卓越的教学成果。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>英孚青少儿英语教育针对不同年龄段孩子的成长特点设计了不同的儿童英语课程，以迎合不同年龄段孩子的学习需要，在中国取得了卓越的教学成果。</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_2'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_30'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>此次首批体验分享家仅100名，如果你确认参加，将会收到：<br/>
-						<em>－ 贵宾卡    	    1张（为你准备的） </em><br/>
-						<em>－ 贵宾卡			若干 张（为你的好友们准备的） </em><br/>
-						<em>－ 活动手册                 1份（为你准备的）</em><br/>
-						<em>－ 英孚DVD       1份（为你准备的）</em><br/>
-					</p>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>此次首批体验分享家仅100名，如果你确认参加，将会收到：<br/>
-						<em>－ 贵宾卡    	    1张（为你准备的） </em><br/>
-						<em>－ 贵宾卡			若干 张（为你的好友们准备的） </em><br/>
-						<em>－ 活动手册                 1份（为你准备的）</em><br/>
-						<em>－ 英孚DVD       1份（为你准备的）</em><br/>
-					</p>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_30'>
-			<tuv xml:lang="zh">
-				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该教育品牌的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该教育品牌的看法。</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_30'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成英孚教育的星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>你已经完成英孚教育的星星火活动。</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_30'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_30'>
-            <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加英孚教育的星星火活动！</p>]]></seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the Baily Spark Campaign!</p>]]></seg>
-            </tuv>
-        </tu>
-        <tu tuid='pre_campaign_info_30'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
-			</tuv>
-		</tu> 
-        <tu tuid="pre_campaign_thankyou_30">
-        	<tuv xml:lang="zh">
-        		<!--<seg>请填写上海地区的办公地址</seg>-->
-        		<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
-        	</tuv>
-        </tu>
-	    <tu tuid="pre_campaign_friends_30">
-        	<tuv xml:lang="zh">
-        		<seg></seg>
-        	</tuv>
-        </tu>
-        
-         <!-- EnglishFirst campaign -->
-		<tu tuid='Campaign_name_39'>
-			<tuv xml:lang="zh">
-				<seg>Sergent Major童装</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Sergent Major童装</seg>
-			</tuv>
-		</tu>		   
-		<tu tuid='Campaign_simple_description_39'>
-			<tuv xml:lang="zh">
-				<seg>description页面简单描述</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>description页面简单描述</seg>
-			</tuv>
-		</tu>		
-		<tu tuid='Campaign_invitation_description_39'>
-			<tuv xml:lang="zh">
-				<seg>法国童装品牌Sergent Major(思佳美儿)作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>法国童装品牌Sergent Major(思佳美儿)作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_image_name_2'>
-			<tuv xml:lang="zh">
-				<seg>campaign_invitation_bk_zh_2.png</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>campaign_invitation_bk_en_2.png</seg>
-			</tuv>
-		</tu>	
-		<tu tuid='Campaign_invitation_description2_39'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-					<p>如果你确认参加活动，将会收到：<br/>
-						－ Sergent Major 专卖店 VIP卡1张 及代金券5张   (活动期间，你和五位朋友可凭卡或代金券享受童装买一送一)<br/>
-						－ 彩页、羽毛及折纸玩具6份      (可至门店兑换礼物)<br/>
-					</p>
-				]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[
-					<p>如果你确认参加活动，将会收到：<br/>
-						－ Sergent Major 专卖店 VIP卡1张 及代金券5张   (活动期间，你和五位朋友可凭卡或代金券享受童装买一送一)<br/>
-						－ 彩页、羽毛及折纸玩具6份      (可至门店兑换礼物)<br/>
-					</p>
-				]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Pre_campaign_intro_39'>
-			<tuv xml:lang="zh">
-				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该童装品牌的看法。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该童装品牌的看法。</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Thanks_For_Post_Campaign_Survey_39'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成Sergent-Major童装的星星火活动。</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>你已经完成Sergent-Major童装的星星火活动。</seg>
-			</tuv>
-		</tu> 
-		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_39'>
-			<tuv xml:lang="zh">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Campaign_post_survey_notice_39'>
-            <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加Sergent-Major童装星星火活动！</p>]]></seg>
-            </tuv>
-            <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the Sergent-Major Campaign!</p>]]></seg>
-            </tuv>
-        </tu>
-        <tu tuid='pre_campaign_info_39'>
-			<tuv xml:lang="zh">
-				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
-			</tuv>
-		</tu> 
-        <tu tuid="pre_campaign_thankyou_39">
-        	<tuv xml:lang="zh">
-        		<!--<seg>请填写上海地区的办公地址</seg>-->
-        		<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
-        	</tuv>
-        </tu>
-	    <tu tuid="pre_campaign_friends_39">
-        	<tuv xml:lang="zh">
-        		<seg></seg>
-        	</tuv>
-        </tu>
-        
-        <!-- fixbug campaign -->
-		<tu tuid='Campaign_name_17'>
-			<tuv xml:lang="zh">
-				<seg>我是品牌控</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>我是品牌控</seg>
-			</tuv>
-		</tu>
-        <tu tuid='Campaign_name_20'>
-			<tuv xml:lang="zh">
-				<seg>百利甜酒</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>百利甜酒</seg>
-			</tuv>
-		</tu>
 		
 	</body>
 </tmx>

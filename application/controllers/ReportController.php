@@ -2,7 +2,6 @@
 include_once 'Indicate2Connect.php';
 class ReportController extends MyController
 {
-	 
 	function createAction()
 	{
 		
@@ -211,7 +210,6 @@ class ReportController extends MyController
     	$url = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']; 
 		$contents = file_get_contents($url); 
 	    $this->view->report_content = $contents;
- 	    
 		$this->view->title = "Reply Reports";
 		$this->view->activeTab = "Reply Reports";
 		$this->view->mailForm = new ReplyReportForm();
@@ -300,14 +298,9 @@ class ReportController extends MyController
 				    	$config = Zend_Registry::get('config');
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
-						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
-						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
-						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
-						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
-						$url_mission4 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2293";//童装
-						$url_mission5 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3239";//电影大赏
-						$url_mission6 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3257";//印象韩国
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3).file_get_contents($url_mission4).file_get_contents($url_mission5).file_get_contents($url_mission6);
+                                                $url_other = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/77";
+
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_other);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -340,7 +333,6 @@ class ReportController extends MyController
 //						$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
 						//send!
 						$mail->send();
-		 									
 						//4.save "reply email" into DB		
 						$replyModel = new Reply();
 						$reply = $replyModel->fetchRow('report_id = '.$this->_request->getParam('report_id'));
@@ -441,9 +433,6 @@ class ReportController extends MyController
 			}
 			$row->reward_point_transaction_record_id = $rewardReocrd->id;
 			$row->save();
-			// add notification
-//			$notificationModel = new Notification();
-//			$notificationModel->createRecord("REPORT_REPLY",$row->consumer_id,$points);
 	}
 	
 	function saveTags($report_id,$tagArray){
@@ -540,11 +529,9 @@ class ReportController extends MyController
 		}else{
 			$select->where('consumer.pest = 1');
 		}
-
 		$select->order('report.create_date desc');
 		$this->view->AllReports = $db->fetchAll($select);
 		// add adminname to AllReports 
-		
 		//campagin 
 		$campaignModel = new Campaign();
 		$this->view->campaign = $campaignModel->fetchRow('id = '.$this->view->campaign_id);
@@ -1550,14 +1537,8 @@ function adminreportbatchreplyAction(){
 				    	$config = Zend_Registry::get('config');
 				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
-						$url_mission =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3153";
-						$url_mission1 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2769";
-						$url_mission2 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3166";
-						$url_mission3 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3171";
-						$url_mission4 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2293";//童装
-						$url_mission5 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3239";//电影大赏
-						$url_mission6 =$config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/3257";//印象韩国
-						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_mission).file_get_contents($url_mission1).file_get_contents($url_mission2).file_get_contents($url_mission3).file_get_contents($url_mission4).file_get_contents($url_mission5).file_get_contents($url_mission6);
+                                                $url_other = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/77";
+						$contents = file_get_contents($url_zh).file_get_contents($url_en).file_get_contents($url_other);
 				    	$contents = trim($contents);
 						$contents = preg_replace('/\s(?=\s)/', '', $contents);
 						$contents = preg_replace('/[\n\r\t]/', ' ', $contents);
@@ -1819,7 +1800,6 @@ function adminreportbatchreplyAction(){
 			$accessCodeList = array();
 			// get access code from post
 			if(isset($formData['accessCode'])){
-//				Zend_Debug::dump($formData['accessCode']);
 				$accessCodeArray = preg_split('/[;\s]+[\n\r\t]*/', trim($formData['accessCode']));
 				$accessCodeString = '';
 				foreach($accessCodeArray as $accessCode){
@@ -1938,15 +1918,9 @@ function adminreportbatchreplyAction(){
 						endforeach;
 						// get tag for report
 						$selectAllTag = $db->select();
-						if($formData['campaign_id']==13){
-							$selectAllTag->from('tags', array('id', 'name'))
-							->where("tags.module ='REPORT'")
-							->where('tags.campaign_id = 0 or tags.campaign_id ='.$formData['campaign_id']);
-						}else {
-							$selectAllTag->from('tags', array('id', 'name'))
-							->where("tags.module ='REPORT'")
-							->where('tags.campaign_id is null or tags.campaign_id ='.$formData['campaign_id']);
-						}
+						$selectAllTag->from('tags', array('id', 'name'))
+						->where("tags.module ='REPORT'")
+						->where('tags.campaign_id is null or tags.campaign_id ='.$formData['campaign_id']);
 						$allTagArray = $db->fetchAll($selectAllTag);
 						$selectReportTag = $db->select();
 						
@@ -2049,8 +2023,9 @@ function adminreportbatchreplyAction(){
 			if($formData['submittype'] == 'report'){
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "ConsumerId");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "ConsumerEmail");
-				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "login_phone");
-				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "recipients_name");
+				//TOCHECK
+// 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "login_phone");
+// 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "recipients_name");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Create_date");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Source");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Point");

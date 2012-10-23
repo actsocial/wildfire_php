@@ -165,7 +165,6 @@ img {
 	font-size: 12px;
 	font-weight: normal;
 }
-
 .container {
 	width: 100% !important;
 	//background: url(../images/background-banner-short.jpg) repeat-x left top;
@@ -302,8 +301,6 @@ a.link {
   color:#006BC4;
   text-decoration:underline;
 }
-
-
 .article-box h1,
 .article-box h2 {
 	font-size: 14px;
@@ -913,7 +910,6 @@ table.spark-show td img {
 	//overflow-y: scroll;
 	//width: 384px;
 }
-
 .help-button {
 	display: block;
 	float: right;
@@ -1435,7 +1431,8 @@ ul.tabbed-buttons li.active a:visited {
 	float: left;
 	margin-left: 13px;
 	width: 460px;
-	height: 75px;
+	min-height: 75px;
+
 }
 .post-campaign-dialog .content-2column .main-column h2 {
 	margin:0;

@@ -2,11 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<!--<meta property="qc:admins" content="354343062556016701670576375" />
--->
-<meta property="qc:admins" content="126001440270167057636" />
-
-<meta property="wb:webmaster" content="99b15dd409d73c6e" />
 <meta name="robots" content="index, follow" />
 <meta name="keywords" content="word-of-mouth marketing" />
 <meta name="title" content="Sign Up" />
@@ -18,10 +13,11 @@
 <title><?php echo $this->translate('Login_Title');?></title>
 <link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <link rel="stylesheet"
-	href="<?php echo $this->joomlahome;?>/modules/mod_jflanguageselection/tmpl/mod_jflanguageselection.css"
+	href="<?php echo $this->baseUrl();?>/mod_jflanguageselection.css"
 	type="text/css" />
 <script type="text/javascript" media="screen"
 	src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>
+
 
 <link rel="stylesheet" href="<?php echo $this->baseUrl();?>/css/newhome.css" type="text/css"/>
 <!--[if lte IE 6]>
@@ -50,10 +46,10 @@
 		</div>
 
 		<div class="navigator">
-			<ul id="mainlevel-nav"><li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=frontpage&amp;Itemid=1&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_home")?></a></li>
-			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=53&amp;lang=zh" class="mainlevel-nav" id="active_menu-nav"><?php echo $this->translate("Common_about_us")?></a></li>
-			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=49&amp;Itemid=54&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_about_Sparks")?></a></li>
-			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=56&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_hire_us")?></a></li></ul>
+			<ul id="mainlevel-nav"><li><a href="http://www.wildfire.asia/index.html" class="mainlevel-nav" ><?php echo $this->translate("Common_home")?></a></li>
+			<li><a href="http://www.wildfire.asia/about/about-wildfire.html" class="mainlevel-nav" id="active_menu-nav"><?php echo $this->translate("Common_about_us")?></a></li>
+			<li><a href="http://www.wildfire.asia/spark/member-profiles.html" class="mainlevel-nav" ><?php echo $this->translate("Common_about_Sparks")?></a></li>
+			<li><a href="http://www.wildfire.asia/head/let-us-talk.html" class="mainlevel-nav" ><?php echo $this->translate("Common_hire_us")?></a></li></ul>
 			<div class="language-selector">
 			<div id="jflanguageselection">
 				<ul class="jflanguageselection"><li id="active_language"><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>"><span lang="zh" xml:lang="zh">中文&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li><li><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>" ><span lang="en" xml:lang="en">English</span></a></li></ul></div>
@@ -100,17 +96,8 @@
                 <a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>"><?php echo $this->translate("Common_Inactive_Account")?></a>
             </td>
         </tr>
-        
 </table>
-<div>
-	<div>
-	<br>
-		<a href="<?php echo $this->baseUrl();?>/weibologin"><img src="<?php echo $this->baseUrl();?>/images/loginButton_24.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a>
-	</div>
-	<div style="display:none">
-		<a href="<?php echo $this->baseUrl();?>/qqlogin"><img src="<?php echo $this->baseUrl();?>/images/qqLoginButton_24.png" title="点击进入授权页面" alt="点击进入授权页面" border="0" /></a>
-	</div>
-</div>
+
   <div style="clear:both"></div>  <br/>
 </div>
 <div class="buttons-bar">
@@ -130,13 +117,13 @@
 	  <div class="footer-inner">
 		<div class="moduletable bottom_menu">
 	
-			<table width="100%" border="0" cellpadding="0" cellspacing="1">
+			<!--<table width="100%" border="0" cellpadding="0" cellspacing="1">
 			<tr><td nowrap="nowrap"><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=51&amp;Itemid=58&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Contacts');?></a>
 			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=87&amp;Itemid=59&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Privacy_Policy');?></a>
 			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=60&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Terms_and_Conditions');?></a>
 			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=89&amp;Itemid=61&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Jobs');?></a>
 			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=90&amp;Itemid=62&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Investors');?></a></td>
-			</tr></table>		
+			</tr></table>	-->	
 		</div>
       </div>
     </div>

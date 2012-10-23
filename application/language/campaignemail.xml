@@ -1143,307 +1143,218 @@ QQ:   4006008707
 			</tuv>
 		</tu>
 		
-		<!-- 儿童零食campaign I -->
-		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_28'>
+		<!-- Nestle -->
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_101'>
 			<tuv xml:lang="zh">
-				<seg><![CDATA[恭喜你成功参加星星火儿童零食口碑活动]]></seg>
+				<seg><![CDATA[Welcome to the Wildfire Community]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg><![CDATA[恭喜你成功参加星星火儿童零食口碑活动]]></seg>
+				<seg><![CDATA[Welcome to the Wildfire Community]]></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_28'>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_101'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[
-亲爱的：
+Dear,
 
-欢迎你参加星星火社区的儿童零食体验分享活动！
+Welcome to the Wildfire Community, and thanks for participating in this maternal milk experiencing and sharing campaign.]
+If you haven’t already given us your mailing address, please click the link below and finish the last step.
+http://community.wildfire.asia/public/campaign/precampaignfinished/survey/13
 
-如果你还没有提供详细的收件地址，请点击下面的链接填写并完成最后一步。
-http://home.xingxinghuo.com/public/campaign/precampaignfinished/survey/709
+Since we’ll be sending you our word-of-mouth kit very soon, please make sure the address you give is correct, to make sure you receive the kit in time to participate. 
 
-我们的体验分享礼包会在近期寄出，请确保你提供的地址到时能收到快递。
+While you’re trying out the products in your word-of-mouth kit, log into the Wildfire website to submit your conversation reports.
 
-在试用的同时，请不要忘了登录星星火网站，提交体验分享报告哦！
-你现在就可以开始和大家谈论，并通过星星火网站提交你们的分享内容。你与我们分享的报告越多内容越详细(请参考活动手册上的介绍)，你将会获得更多的活动邀请和更多精美实用的体验产品。
+Your conversation reports are what you and your friends, family, and coworkers have talked about after trying our product. We want to hear what the people in your life have to say, so be sure to share your conversations with us on the Wildfire website. The more detailed and accurate your conversation reports, the more campaign invitations and rewards you’ll get. 
 
-祝你在星星火社区体验愉快！
+We hope you have a great experience with the Wildfire community; we’re happy to have you on board! 
 
-现在就进入下面的链接，点击“提交活动报告”，与我们分享你及你的孩子的体验感受！
-http://home.xingxinghuo.cn
+To send us your conversation report, click on the link below, then go to “Submit Campaign Report,” and share with us your experiences. 
+http://community.wildfire.asia/public/home
 
-Your friend,
+Best Regards,
+Wildfire Community
+]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+			<seg><![CDATA[
+Dear,
+
+Welcome to the Wildfire Community, and thanks for participating in this maternal milk experiencing and sharing campaign.]
+If you haven’t already given us your mailing address, please click the link below and finish the last step.
+http://community.wildfire.asia/public/campaign/precampaignfinished/survey/13
+
+Since we’ll be sending you our word-of-mouth kit very soon, please make sure the address you give is correct, to make sure you receive the kit in time to participate. 
+
+While you’re trying out the products in your word-of-mouth kit, log into the Wildfire website to submit your conversation reports.
+
+Your conversation reports are what you and your friends, family, and coworkers have talked about after trying our product. We want to hear what the people in your life have to say, so be sure to share your conversations with us on the Wildfire website. The more detailed and accurate your conversation reports, the more campaign invitations and rewards you’ll get. 
+
+We hope you have a great experience with the Wildfire community; we’re happy to have you on board! 
+
+To send us your conversation report, click on the link below, then go to “Submit Campaign Report,” and share with us your experiences. 
+http://community.wildfire.asia/public/home
+
+Best Regards,
+Wildfire Community
+]]></seg>
+			</tuv>
+		</tu>
+	
+			<!-- Nestle II -->
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_102'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[Welcome to the Wildfire Community]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Welcome to the Wildfire Community]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_102'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+Dear,
+
+Welcome to the Wildfire Community, and thanks for participating in this maternal milk experiencing and sharing campaign.]
+If you haven’t already given us your mailing address, please click the link below and finish the last step.
+http://community.wildfire.asia/public/campaign/precampaignfinished/survey/19
+
+Since we’ll be sending you our word-of-mouth kit very soon, please make sure the address you give is correct, to make sure you receive the kit in time to participate. 
+
+While you’re trying out the products in your word-of-mouth kit, log into the Wildfire website to submit your conversation reports.
+
+Your conversation reports are what you and your friends, family, and coworkers have talked about after trying our product. We want to hear what the people in your life have to say, so be sure to share your conversations with us on the Wildfire website. The more detailed and accurate your conversation reports, the more campaign invitations and rewards you’ll get. 
+
+We hope you have a great experience with the Wildfire community; we’re happy to have you on board! 
+
+To send us your conversation report, click on the link below, then go to “Submit Campaign Report,” and share with us your experiences. 
+http://community.wildfire.asia/public/home
+
+Best Regards,
+Wildfire Community
+]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+			<seg><![CDATA[
+Dear,
+
+Welcome to the Wildfire Community, and thanks for participating in this maternal milk experiencing and sharing campaign.]
+If you haven’t already given us your mailing address, please click the link below and finish the last step.
+http://community.wildfire.asia/public/campaign/precampaignfinished/survey/19
+
+Since we’ll be sending you our word-of-mouth kit very soon, please make sure the address you give is correct, to make sure you receive the kit in time to participate. 
+
+While you’re trying out the products in your word-of-mouth kit, log into the Wildfire website to submit your conversation reports.
+
+Your conversation reports are what you and your friends, family, and coworkers have talked about after trying our product. We want to hear what the people in your life have to say, so be sure to share your conversations with us on the Wildfire website. The more detailed and accurate your conversation reports, the more campaign invitations and rewards you’ll get. 
+
+We hope you have a great experience with the Wildfire community; we’re happy to have you on board! 
+
+To send us your conversation report, click on the link below, then go to “Submit Campaign Report,” and share with us your experiences. 
+http://community.wildfire.asia/public/home
+
+Best Regards,
+Wildfire Community
+]]></seg>
+			</tuv>
+		</tu>
+		<!-- G1 -->
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_103'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[Welcome to the Wildfire Community]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Welcome to the Wildfire Community]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_103'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+Dear,
+
+Welcome to the Wildfire Community, and thanks for participating in this maternal milk experiencing campaign.
+
+Since we’ll be sending you the pack very soon, please make sure the address you give is correct, to make sure you receive the kit in time. 
+
+If you haven’t already given us your mailing address, please click the link below and finish the last step.
+http://community.wildfire.asia/public/campaign/precampaignfinished/survey/0
+
+Have a great day and talk to you soon!
+
+Best Regards,
+
 Alice
-
-
-邮箱：alice@xingxinghuo.com
-电话:  400 600 8707
-短信：15000895221
-QQ:   4006008707
+Wildfire Community
 
 ]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
 			<seg><![CDATA[
-亲爱的：
+Dear,
 
-欢迎你参加星星火社区的儿童零食体验分享活动！
+Welcome to the Wildfire Community, and thanks for participating in this maternal milk experiencing campaign.
 
-如果你还没有提供详细的收件地址，请点击下面的链接填写并完成最后一步。
-http://home.xingxinghuo.com/public/campaign/precampaignfinished/survey/709
+Since we’ll be sending you the pack very soon, please make sure the address you give is correct, to make sure you receive the kit in time. 
 
-我们的体验分享礼包会在近期寄出，请确保你提供的地址到时能收到快递。
+If you haven’t already given us your mailing address, please click the link below and finish the last step.
+http://community.wildfire.asia/public/campaign/precampaignfinished/survey/0
 
-在试用的同时，请不要忘了登录星星火网站，提交体验分享报告哦！
-你现在就可以开始和大家谈论，并通过星星火网站提交你们的分享内容。你与我们分享的报告越多内容越详细(请参考活动手册上的介绍)，你将会获得更多的活动邀请和更多精美实用的体验产品。
+Have a great day and talk to you soon!
 
-祝你在星星火社区体验愉快！
+Best Regards,
 
-现在就进入下面的链接，点击“提交活动报告”，与我们分享你及你的孩子的体验感受！
-http://home.xingxinghuo.cn
-
-Your friend,
 Alice
-
-
-邮箱：alice@xingxinghuo.com
-电话:  400 600 8707
-短信：15000895221
-QQ:   4006008707
+Wildfire Community
 
 ]]></seg>
 			</tuv>
 		</tu>
-		
-		<!-- 儿童零食campaign II -->
-		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_29'>
+
+
+<!-- DSM welcome eamil -->
+		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_105'>
 			<tuv xml:lang="zh">
-				<seg><![CDATA[恭喜你成功参加星星火儿童零食口碑活动]]></seg>
+				<seg><![CDATA[Welcome to the Wildfire Community]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg><![CDATA[恭喜你成功参加星星火儿童零食口碑活动]]></seg>
+				<seg><![CDATA[Welcome to the Wildfire Community]]></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_29'>
+		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_105'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[
-亲爱的：
+Dear,
 
-欢迎你参加星星火社区的儿童零食体验分享活动！
+Welcome to the Wildfire Community and thank you for participating in this Quality for Life campaign.
 
-如果你还没有提供详细的收件地址，请点击下面的链接填写并完成最后一步。
-http://home.xingxinghuo.com/public/campaign/precampaignfinished/survey/711
+We will be sending you your experience kit soon. Please confirm your complete delivery address by clicking http://community.wildfire.asia/public/campaign/precampaignfinished/survey/46 or by going to profile > Edit your spark profile.
 
-我们的体验分享礼包会在近期寄出，请确保你提供的地址到时能收到快递。
+Thank you for your cooperation and we hope to keep in touch with you.
 
-在试用的同时，请不要忘了登录星星火网站，提交体验分享报告哦！
-你现在就可以开始和大家谈论，并通过星星火网站提交你们的分享内容。你与我们分享的报告越多内容越详细(请参考活动手册上的介绍)，你将会获得更多的活动邀请和更多精美实用的体验产品。
-
-祝你在星星火社区体验愉快！
-
-现在就进入下面的链接，点击“提交活动报告”，与我们分享你及你的孩子的体验感受！
-http://home.xingxinghuo.cn
-
-Your friend,
-Alice
-
-
-邮箱：alice@xingxinghuo.com
-电话:  400 600 8707
-短信：15000895221
-QQ:   4006008707
-
-]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-			<seg><![CDATA[
-亲爱的：
-
-欢迎你参加星星火社区的儿童零食体验分享活动！
-
-如果你还没有提供详细的收件地址，请点击下面的链接填写并完成最后一步。
-http://home.xingxinghuo.com/public/campaign/precampaignfinished/survey/711
-
-我们的体验分享礼包会在近期寄出，请确保你提供的地址到时能收到快递。
-
-在试用的同时，请不要忘了登录星星火网站，提交体验分享报告哦！
-你现在就可以开始和大家谈论，并通过星星火网站提交你们的分享内容。你与我们分享的报告越多内容越详细(请参考活动手册上的介绍)，你将会获得更多的活动邀请和更多精美实用的体验产品。
-
-祝你在星星火社区体验愉快！
-
-现在就进入下面的链接，点击“提交活动报告”，与我们分享你及你的孩子的体验感受！
-http://home.xingxinghuo.cn
-
-Your friend,
-Alice
-
-
-邮箱：alice@xingxinghuo.com
-电话:  400 600 8707
-短信：15000895221
-QQ:   4006008707
-
-]]></seg>
-			</tuv>
-		</tu>
-		
-		<!-- 英孚教育 -->
-		
-		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_30'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[恭喜你成功参加星星火英孚教育口碑活动]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[恭喜你成功参加星星火英孚教育口碑活动]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_30'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-亲爱的：
-
-欢迎你参加星星火社区的英孚青少儿英语教育口碑活动！
-
-希望你和你的孩子能体验到英孚优质的青少儿英语课程!
-
-如果你还没有提供详细的收件地址及好友姓名，请点击下面的链接填写并完成最后一步。
-http://home.xingxinghuo.com/public/campaign/precampaignfinished/survey/712
-
-我们的体验分享装会在近期寄出，请确保你提供的地址到时能收到快递。
-
-请在试用的同时，不要忘了登录星星火网站，提交体验分享报告哦！当然，你现在就可以开始和大家谈论，并通过星星火网站提交你们的分享内容。你与我们分享的报告越多内容越详细，你将会获得更多的活动邀请和更多精美实用的体验产品及服务。
-
-祝你在星星火社区体验愉快！
-
-现在就进入下面的链接，点击“点击提交活动报告”，与我们分享你的体验感受！
-http://home.xingxinghuo.com/public/home
-
-Alice
-邮箱：alice@xingxinghuo.com
-电话:  400 600 8707
-短信：15000895221
-QQ:   4006008707
-
-
-]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-			<seg><![CDATA[
-亲爱的：
-
-欢迎你参加星星火社区的英孚青少儿英语教育口碑活动！
-
-希望你和你的孩子能体验到英孚优质的青少儿英语课程!
-
-如果你还没有提供详细的收件地址及好友姓名，请点击下面的链接填写并完成最后一步。
-http://home.xingxinghuo.com/public/campaign/precampaignfinished/survey/712
-
-我们的体验分享装会在近期寄出，请确保你提供的地址到时能收到快递。
-
-请在试用的同时，不要忘了登录星星火网站，提交体验分享报告哦！当然，你现在就可以开始和大家谈论，并通过星星火网站提交你们的分享内容。你与我们分享的报告越多内容越详细，你将会获得更多的活动邀请和更多精美实用的体验产品及服务。
-
-祝你在星星火社区体验愉快！
-
-现在就进入下面的链接，点击“点击提交活动报告”，与我们分享你的体验感受！
-http://home.xingxinghuo.com/public/home
-
-Alice
-邮箱：alice@xingxinghuo.com
-电话:  400 600 8707
-短信：15000895221
-QQ:   4006008707
-
-
-]]></seg>
-			</tuv>
-		</tu>
-		
-		<!-- 童装活动 -->
-		
-		<tu tuid='Welcome_to_Spark_Campaign_Email_subject_campaign_39'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[你已成功参加星星火童装口碑活动]]></seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg><![CDATA[你已成功参加星星火童装口碑活动]]></seg>
-			</tuv>
-		</tu>
-		<tu tuid='Welcome_to_Spark_Campaign_Email_body_campaign_39'>
-			<tuv xml:lang="zh">
-				<seg><![CDATA[
-亲爱的：
-
-感谢你参加星星火社区的Sergent Major（思佳美儿）童装口碑活动！来自法国Sergent Major利用舒适的面料、时尚的设计与易混搭的元素，对潮妈们来说，不容错过。
-
-如果你还没有提供详细的收件地址，请前往如下地址完成最后一步。
-http://home.xingxinghuo.com/public/campaign/precampaignfinished/survey/765
-
-我们的体验分享礼包会在近期寄出，请确保你提供的地址到时能收到快递。
-
-无论是现在，还是在与好友分享礼包的惊喜时，或者结伴去Sergent Major门店后，记得在星星火网站提交体验分享报告哦！你与我们分享的报告越多内容越详细，你将会获得更多的活动邀请和更多精美实用的体验产品。(请参考活动手册上的介绍)
-
-关注新浪微博@星星火社区Wildfire，了解我们接下来举办的丰富活动，也会为你带来更多惊喜哦~ 
-现在就进入下面的链接，提交活动报告，与我们分享你的体验感受！
-http://home.xingxinghuo.com/public/home
-
-祝你在星星火社区体验愉快！
-
-
-星星火社区
-
-有任何问题，你可以通过以下方式联系我们：
-电话：400 600 8707
-QQ：  400 600 8707
-邮箱：home@xingxinghuo.org
-微博：weibo.com/xxhuo
-
-星星火口碑活动是怎么进行的？
-第一步：接受活动邀请
-第二步：收到活动体验包
-第三步：和你们的亲友自由地谈论体验的产品，并让我们知道大家是怎么谈论的
-第四步：获得今后更多口碑活动的邀请以及更多免费产品
+Best regards,
+Wildfire Community
 
 
 ]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
 			<seg><![CDATA[
-亲爱的：
+Dear,
 
-感谢你参加星星火社区的Sergent Major（思佳美儿）童装口碑活动！来自法国Sergent Major利用舒适的面料、时尚的设计与易混搭的元素，对潮妈们来说，不容错过。
+Welcome to the Wildfire Community and thank you for participating in this Quality for Life campaign.
 
-如果你还没有提供详细的收件地址，请前往如下地址完成最后一步。
-http://home.xingxinghuo.com/public/campaign/precampaignfinished/survey/765
-
-我们的体验分享礼包会在近期寄出，请确保你提供的地址到时能收到快递。
-
-无论是现在，还是在与好友分享礼包的惊喜时，或者结伴去Sergent Major门店后，记得在星星火网站提交体验分享报告哦！你与我们分享的报告越多内容越详细，你将会获得更多的活动邀请和更多精美实用的体验产品。(请参考活动手册上的介绍)
-
-关注新浪微博@星星火社区Wildfire，了解我们接下来举办的丰富活动，也会为你带来更多惊喜哦~ 
-现在就进入下面的链接，提交活动报告，与我们分享你的体验感受！
-http://home.xingxinghuo.com/public/home
-
-祝你在星星火社区体验愉快！
+We will be sending you your experience kit soon. Please confirm your complete delivery address by clicking http://community.wildfire.asia/public/campaign/precampaignfinished/survey/46 or by going to profile > Edit your spark profile.
 
 
-星星火社区
+Thank you for your cooperation and we hope to keep in touch with you.
 
-有任何问题，你可以通过以下方式联系我们：
-电话：400 600 8707
-QQ：  400 600 8707
-邮箱：home@xingxinghuo.org
-微博：weibo.com/xxhuo
-
-星星火口碑活动是怎么进行的？
-第一步：接受活动邀请
-第二步：收到活动体验包
-第三步：和你们的亲友自由地谈论体验的产品，并让我们知道大家是怎么谈论的
-第四步：获得今后更多口碑活动的邀请以及更多免费产品
+Best regards,
+Wildfire Community
 
 
 ]]></seg>
 			</tuv>
 		</tu>
-		
+
 	</body>
 </tmx>

@@ -363,6 +363,9 @@ class ConsumerController extends MyController {
 					$consumer->city = $formData ['englishcity'];
 					$consumer->province = null;
 				}
+				if ($formData ['birthdate'] != null) {
+					$consumer->birthdate = $formData ['birthdate'];
+				}
 				if ($formData ['qq'] != null) {
 					$consumer->qq = $formData ['qq'];
 				}
@@ -386,7 +389,7 @@ class ConsumerController extends MyController {
 				$consumerextra->birthdate = $formData ['birthdate'] != null ? $formData ['birthdate'] : null;
 				$consumerextra->education = $formData ['education'];
 				$consumerextra->income = $formData ['income'];
-				$consumerextra->save ();
+				$consumerextra->save();
 				
 				
 				//2011-05-03 ham.bao add the related friends 
