@@ -18,8 +18,10 @@ class FacebookloginController extends MyController {
 	  	if($token) {
 	  		$facebook->setAccessToken($token);
 	  		$user = $facebook->getUserInfoFromAccessToken($params = array('access_token' => $token));
+//	  		var_dump($user);die();
 	  		if(!$user){
-	  			$this->first();
+//	  			$this->first();
+				$this->_helper->redirector('index','index');
 	  		}
 	  		$uid = $user['id'];
 	  		$uname = $user['name'];

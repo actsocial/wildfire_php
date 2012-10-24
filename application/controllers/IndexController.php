@@ -7,6 +7,7 @@ class IndexController extends MyController
 	{
 		//2011-05-24 redirect to home if consumer login already
 		if (isset($this->_currentUser)){
+//			var_dump($this->_currentUser);die;
 			$this->_helper->redirector->gotoUrl('home/index');		
 		}
 		//2011-05-24 redirect to home if consumer login already
