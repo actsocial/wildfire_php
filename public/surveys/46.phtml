@@ -45,31 +45,6 @@
 	// ]]>
 	-->
 	</script>
-
-<script type="text/javascript">
-
-function showOrHide(){
-	if(jQuery("#1257_0").attr("checked")){
-		jQuery("#q_182").css("display","");
-		
-	}else{
-		jQuery("#q_182").css("display","none");
-		
-	}
-}
-
-function showOrHide1(){
-	if(jQuery("#1260_0").attr("checked")){
-		jQuery("#q_185").css("display","");
-		
-	}else{
-		jQuery("#q_185").css("display","none");
-		
-	}
-}
-
-</script>
-
 </head>
 
 <body>
@@ -82,7 +57,7 @@ function showOrHide1(){
 			<div class="header-right"></div><div class="logo">
 			<div class="main-logo" id="main-logo">
 				<a href="http://www.wildfire.asia" target="_blank">
-					<!-- <img src="/survey/logoImage/46" style="height:70px; width:301px" /> -->
+					<img src="/survey/logoImage/46" style="height:70px; width:301px" />
 				</a>
 			</div>
 			<div class="image-banner"></div>
@@ -111,7 +86,7 @@ function showOrHide1(){
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://i2.wildfire.asia/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://i2.wildfire.asia/fillout" onsubmit="loading();return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -122,9 +97,9 @@ function showOrHide1(){
 <div class="questionnaire-title">DSM PreCampaignSurvey</div>
 
 
-<input type="hidden" name="id" value="" id="id" />
+<input type="hidden" name="id" value="xaVaETwtmh48" id="id" />
 <input type="hidden" name="theme" value="default" id="theme" />
-<input type="hidden" name="surveyId" value="OOD1g39uo8L8"/>
+<input type="hidden" name="surveyId" value="xaVaETwtmh48"/>
 
 <div class="page-bar-area">
 <span id="pageBar">Page:&nbsp;</span>
@@ -279,13 +254,13 @@ function showOrHide1(){
 <input type="hidden" name="answers[1257].id" value="" id="answers[1257].id" />
 <ul>
 	<li>
-			<input group="1257" type="radio" id="1257_0" name="answers[1257].value" value="459"  class="selection question_radio_1257" onclick="showOrHide()" />		<label for="1257_0">Yes</label>
+			<input group="1257" type="radio" id="1257_0" name="answers[1257].value" value="459"  class="selection question_radio_1257"  />		<label for="1257_0">Yes</label>
 	</li>
 	<li>
-			<input group="1257" type="radio" id="1257_1" name="answers[1257].value" value="460"  class="selection question_radio_1257" onclick="showOrHide()" />		<label for="1257_1">No</label>
+			<input group="1257" type="radio" id="1257_1" name="answers[1257].value" value="460"  class="selection question_radio_1257"  />		<label for="1257_1">No</label>
 	</li>
 	<li>
-			<input group="1257" type="radio" id="1257_2" name="answers[1257].value" value="461"  class="selection question_radio_1257" onclick="showOrHide()" />		<label for="1257_2">Don't know</label>
+			<input group="1257" type="radio" id="1257_2" name="answers[1257].value" value="461"  class="selection question_radio_1257"  />		<label for="1257_2">Don't know</label>
 	</li>
 </ul>
  </td>
@@ -309,9 +284,12 @@ function showOrHide1(){
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div id="q_182" style="margin-bottom:0px;display:none;" class="question-odd question-area">
+		  <div id="q_182" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -456,10 +434,10 @@ function showOrHide1(){
 <input type="hidden" name="answers[1260].id" value="" id="answers[1260].id" />
 <ul>
 	<li>
-			<input group="1260" type="radio" id="1260_0" name="answers[1260].value" value="468"  class="selection question_radio_1260" onclick="showOrHide1()" />		<label for="1260_0">Yes</label>
+			<input group="1260" type="radio" id="1260_0" name="answers[1260].value" value="468"  class="selection question_radio_1260"  />		<label for="1260_0">Yes</label>
 	</li>
 	<li>
-			<input group="1260" type="radio" id="1260_1" name="answers[1260].value" value="469"  class="selection question_radio_1260" onclick="showOrHide1()" />		<label for="1260_1">No</label>
+			<input group="1260" type="radio" id="1260_1" name="answers[1260].value" value="469"  class="selection question_radio_1260"  />		<label for="1260_1">No</label>
 	</li>
 </ul>
  </td>
@@ -483,9 +461,12 @@ function showOrHide1(){
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div id="q_185" style="margin-bottom:0px;display:none;" class="question-even question-area">
+		  <div id="q_185" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -998,8 +979,9 @@ function showOrHide1(){
 	    }
 	    if(!fillMandatory) {
 	    	var html = '<span style="color:red">*&nbsp;&nbsp;</span>Mandatory questions must be filled out';
-		    jQuery("#check-alert-dialog .content").html(html);
-		    jQuery("#check-alert-dialog").dialog('open');
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 	    }
 		return fillMandatory;
 	}
@@ -1029,8 +1011,9 @@ function showOrHide1(){
 		    return true;
 		} else {
 			var html = '<span style="color:red">*&nbsp;&nbsp;</span>Can not submit empty questionnaire form';
-		    jQuery("#check-alert-dialog .content").html(html);
-		    jQuery("#check-alert-dialog").dialog('open');
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 			return false;
 		}
 	}
@@ -1176,12 +1159,10 @@ function showOrHide1(){
 	<div class="footer-left"></div>
 	<div class="footer-content">
 		<div class="footer-logo"></div>
-		<!-- 
 		<div class="footer-link">
 			<p>ostrakon indicate version 2.0</p>
 			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/c/methodName/c"  target="_blank">Help</a> | <a href="http://www.ostrakon.org"  target="_blank">Ostrakon.org</a></p>
 		</div>
-		-->
 	</div>
 	<div class="footer-right"></div>
 </div>
@@ -1196,7 +1177,7 @@ function showOrHide1(){
 <!--
 // <![CDATA[
 
-
+Framework.registerAjaxSensors();
 // ]]>
 -->
 </script>
