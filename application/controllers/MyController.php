@@ -23,7 +23,7 @@ class MyController extends Zend_Controller_Action
 		$this->view->joomlahome = $config->joomla->home;
 		if (Zend_Auth::getInstance()->hasIdentity()){
 			$authNamespace = new Zend_Session_Namespace('Zend_Auth');
-			var_dump($authNamespace->user);die();
+//			var_dump($authNamespace->user);die();
 			$this->_currentUser  = $authNamespace->user;
 			//2011-04-08 ham.bao separate the sessions with admin
 			$this->_currentAdmin = $authNamespace->admin;
