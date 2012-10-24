@@ -1,5 +1,6 @@
 <?php
-
+require 'facebook-php-sdk/facebook.php';
+include_once( 'facebook-php-sdk/facebookconfig.php' );
 class IndexController extends MyController
 {
 	function indexAction()
@@ -21,6 +22,12 @@ class IndexController extends MyController
 		
 		$this->view->url = $this->getRequest()->getParam('url');
 		$this->_helper->layout->disableLayout();
+		$facebook = new Facebook(array(
+		  'appId'  => FB_AKEY,
+		  'secret' => FB_SKEY,
+		  'authorizationRedirectUrl' => FB_CALLBACK_URL,
+		));
+		$this->view->facebook_login_url = $facebook->getLoginUrl();
 		
 		$lang = $this->_request->getParam('lang');
 		if (isset($lang)){
