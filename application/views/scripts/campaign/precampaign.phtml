@@ -33,6 +33,7 @@ if(!$this->visiable){
       method: 'get',
       parameters: params,
       onSuccess: function(msg) {
+          alert('success'+msg.responseText);
           var accessCode = msg.responseText;
           $('id').value = accessCode.substring(1,accessCode.length-1);
           $('submit').disabled='';

@@ -76,6 +76,7 @@ img {
 	width: 210px;
 	height: 27px;
 	margin-top: 20px;
+	display:none;
 }
 .header .logout-panel a {
 	width: 96px;

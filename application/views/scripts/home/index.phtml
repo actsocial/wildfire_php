@@ -437,7 +437,11 @@
 												活动时间：<br>
 												2012.7.15——2012.8.15";?>
 							<?php }else{?>
-									<?php echo $invitation["invitation_description"];?><br> <span style='color:red'>点击图片参加活动</span>
+									<!--<?php echo $invitation["invitation_description"];?><br> <span style='color:red'>点击图片参加活动</span>
+							-->
+									<?php echo $this->translate('Campaign_simple_description_'.$invitation['campaign_id']);?><br> <span style='color:red'>点击图片参加活动</span>
+							
+							
 							<?php }?>
 
 					</div>
