@@ -98,7 +98,7 @@ class ReportController extends MyController
 			$consumer_id = $consumer->id;
 
 
-//		$id = 267;
+		$id = 266;
 		
 		if ($consumer->getTableClass() == 'Admin') { // if admin get report from session (sms report)
 		    if (Zend_Session::namespaceIsset("AgentReports")) {
@@ -2549,5 +2549,21 @@ function adminreportbatchreplyAction(){
    	    die('结束');
    	    
    	    
+   }
+
+   function recordsnsAction() {
+   	 $this->_helper->layout->disableLayout();
+   	 $post_id = urldecode($this->_request->getParam('post_id'));
+   	 $platform = urldecode($this->_request->getParam('platform'));
+
+   	 $snsShare = new SnsShare();
+   	 $data = array( 'post_id' => $post_id,
+   	 				'platform' => $platform,
+	 	    		'timestamp' => date("Y-m-d H:i:s"));
+   	 try {
+	 	$response = $snsShare->insert($data);
+	 }catch(Exception $e)  {
+	 	Zend_Debug::dump($e);die();
+	 }
    }
 }
