@@ -97,6 +97,11 @@
 </table>
   <div style="clear:both"></div>  <br/>
 </div>
+<div style="padding-left:3px;">
+	<a href="<?php echo $this->facebook_login_url;?>">
+	  <img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">
+	</a>
+</div>
 <div class="buttons-bar">
 <?php echo $this->form->login?>
 <input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>

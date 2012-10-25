@@ -204,14 +204,14 @@ class ConsumerController extends MyController {
 					$consumer->city = $formData ['city'];
 					$consumer->province = $formData ['province'];
 				}
-				if ($formData ['englishcity'] != null) {
+				/*if ($formData ['englishcity'] != null) {
 					$consumer->city = $formData ['englishcity'];
 					$consumer->province = null;
 				}
 				if ($formData ['province'] == '' && $formData ['englishcity'] == null) {
 					$consumer->city = null;
 					$consumer->province = null;
-				}
+				}*/
 				$consumer->save ();
 				// consumer_extra_info table
 				if ($consumerextra == null) {
