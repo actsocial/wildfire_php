@@ -248,7 +248,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>确定</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Confirm</seg>
+				<seg>Save</seg>
 			</tuv>
 		</tu>
 		<tu tuid='CONTACT_INFORMATION_EDIT_AND_RERURN'>
