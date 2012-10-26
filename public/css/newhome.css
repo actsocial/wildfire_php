@@ -1598,7 +1598,7 @@ ul.steps li a img {
 .article-box .main-column ul.invited {
 	padding-left: 18px;
 	margin:0;
-	margin-top: 10px;
+	margin-top: 1px;
 }
 .article-box .main-column ul.invited li a {
 	color:#006BC4;
