@@ -68,7 +68,7 @@
 				<seg>这是你的星星火主页，告诉我们你与朋友谈话或是参与问卷，你就可以获得积分。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>This is your Spark home page, where you earn points for telling us the word on the street, and for taking polls.</seg>
+				<seg>Welcome to your Spark homepage. This is where you can let us know what people say about the brand and take polls to earn points that you can exchange for items.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Home_head_content_2_1'>
@@ -76,7 +76,7 @@
 				<seg>你如果想了解更多内容，可以查看下面的问号提示，或是点击</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Roll-over the question marks to learn more, or click training above to </seg>
+				<seg>To learn more about the process, click on the training tab above. </seg>
 			</tuv>
 		</tu>
 		<tu tuid='Home_head_content_2_2'>
