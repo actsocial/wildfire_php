@@ -407,7 +407,10 @@
         	</tuv>
         </tu>
 		
-		<!-- Campaign 105 DSM -->
+		<!-- Campaign 105 DSM
+
+ improves your education on vitamins and gives you peace of mind when choosing the right food and beverage products.
+		 -->
 		
 				<tu tuid='Campaign_name_105'>
 			<tuv xml:lang="zh">
@@ -419,18 +422,18 @@
 		</tu>		   
 		<tu tuid='Campaign_simple_description_105'>
 			<tuv xml:lang="zh">
-				<seg>Quality for Life<sup style='font-size:8px'>TM</sup> will teach you about various vitamins and give you peace of mind when choosing the right food and beverage products.</seg>
+				<seg>Quality for Life<sup style='font-size:8px'>TM</sup> improves your education on vitamins and gives you peace of mind when choosing the right food and beverage products.</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Quality for Life<sup style='font-size:8px'>TM</sup> will teach you about various vitamins and give you peace of mind when choosing the right food and beverage products.</seg>
+				<seg>Quality for Life<sup style='font-size:8px'>TM</sup> improves your education on vitamins and gives you peace of mind when choosing the right food and beverage products.</seg>
 			</tuv>
 		</tu>		
 		<tu tuid='Campaign_invitation_description_105'>
 			<tuv xml:lang="zh">
-				<seg><![CDATA[Quality for Life<sup style='font-size:8px'>TM</sup> improves your education on vitamins and gives you peace of mind when choosing the right food and beverage products.]]></seg>
+				<seg><![CDATA[Quality for Life<sup style='font-size:8px'>TM</sup>will teach you about various vitamins and give you peace of mind when choosing the right food and beverage products.]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg><![CDATA[Quality for Life<sup style='font-size:8px'>TM</sup> improves your education on vitamins and gives you peace of mind when choosing the right food and beverage products.]]></seg>
+				<seg><![CDATA[Quality for Life<sup style='font-size:8px'>TM</sup>will teach you about various vitamins and give you peace of mind when choosing the right food and beverage products.]]></seg>
 			</tuv>
 		</tu>	
 		<tu tuid='Campaign_invitation_image_name_105'>
