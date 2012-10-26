@@ -16,6 +16,7 @@
 	<link href="/css/niftyCorners.css" rel="stylesheet" type="text/css" media="screen" />
 	<script src="/js/all.js" language="JavaScript" type="text/javascript"></script>
 	<script type="text/javascript" src="<?php echo $this->baseUrl();?>/uploadify/jquery.uploadify.v2.1.4.min.js"></script>
+	<script src="http://malsup.github.com/jquery.form.js"></script>
 	<script language="JavaScript" type="text/javascript">
 
 
@@ -196,9 +197,13 @@ function showOrHide(val){
 	if(val=="1278_0"){
 		jQuery("#question_statement").css("display","block");
 		jQuery("#upload_statement").css("display","none");
+		jQuery("#submit").css("display","block");
+		jQuery("#submit_two").css("display","none");
 	}else{
 		jQuery("#question_statement").css("display","none");
 		jQuery("#upload_statement").css("display","block");
+		jQuery("#submit").css("display","none");
+		jQuery("#submit_two").css("display","block");
 	}
 }
 </script>
@@ -861,31 +866,7 @@ function showOrHide(val){
 
 </div> 
 
-<div id = "upload_statement" style="display:none;">
-		<!-- <p><?php echo $this->translate('Choose_file')?></p> -->
-                <form  id="uploadImage" action="" method="post" enctype="multipart/form-data">
-                    <table>
-                        <tr>
-                            <td><input id="image" type="file" name="image"></td>
-                            <td style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $this->translate('Upload_hint');?></td>
-                        </tr>
-                        <tr>
-                            <td><input type="submit" value="Submit" id="submit" name="submit"></td>
-                        <tr>
-                    </table>
-                </form>
-                <?php if($this->saved == 1){?>
-                <h3><?php echo $this->translate('Successful_upload')?></h3>
-                <?php }?>
-                <?php if($this->saved == -1){?>
-                <h3><?php echo $this->translate('Unsuccessful_upload');?></h3>
-                <?php }?>
 
-                <div class="buttons-bar" style="padding-top: 10px;">
-			<a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>">
-                            <?php echo $this->translate('Take_Me_Home')?>
-                        </a>
-</div>
 </div>
 
 </div>
@@ -903,7 +884,7 @@ function showOrHide(val){
 <br/>
 <div class="fillout-submit">
 <!-- <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' /> -->
-<input id="submit" type="submit"  class="button" name="command.submit" value="Submit" />
+<input id="submit" type="submit"  class="button" style="display:none" name="command.submit" value="Submit" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -1025,12 +1006,50 @@ function showOrHide(val){
 -->
 </script>
 </form>
+<div id = "upload_statement" style="display:none;">
+		<!-- <p><?php echo $this->translate('Choose_file')?></p> -->
+                <form  id="uploadImage" action="report/thankyou" method="post" enctype="multipart/form-data">
+                    <table>
+                        <tr>
+                            <td><input id="image" type="file" name="image"></td>
+                            <td style="color:red;font-size:10px">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $this->translate('Upload_hint');?></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="Submit" id="submit_photo" name="submit"></td>
+                        <tr>
+                    </table>
+                </form>
+                
+<!--                 <h3><?php echo $this->translate('Successful_upload')?></h3>
+                <h3><?php echo $this->translate('Unsuccessful_upload');?></h3> -->
+
+                <!-- <div class="buttons-bar" style="padding-top: 10px;">
+			<a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>">
+                            <?php echo $this->translate('Take_Me_Home')?>
+                        </a> -->
+</div>
 </div> 
+<div class="fillout-submit">
+<input id="submit_two" type="button"  class="button" style="display:none;margin-left: 130px;" name="command.submit" value="Submit" />
+</div>
 <div class="clear"></div>
 <br/>
 </div>
 
 <script language="JavaScript" type="text/javascript">
+jQuery(function(){
+	jQuery("#submit_photo").bind("click",function(){
+		jQuery('#uploadImage').ajaxSubmit(function() { 
+                alert("Thank you for your comment!"); 
+            });
+	});
+});
+jQuery(function(){
+	jQuery("#submit_two").bind("click",function(){
+		jQuery("#submit").submit;
+	})
+
+});
 <!--
 // <![CDATA[
  /* var pageNum=0;
@@ -1258,9 +1277,8 @@ function showOrHide(val){
 		    return true;
 		} else {
 			var html = '<span style="color:red">*&nbsp;&nbsp;</span>Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
