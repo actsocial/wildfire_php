@@ -287,6 +287,9 @@ a.link {
 .article-box-inner {
 	background: white;
 	padding: 10px ;
+	color: gray;
+    font-family: bold;
+    font-size: 12px;
 	/*margin-bottom: 40px;*/
 	-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.3),-2px -2px 30px rgba(100,100,100,0.2) inset;
 	-moz-box-shadow: 0 4px 4px rgba(0,0,0,0.3),-2px -2px 30px rgba(100,100,100,0.2) inset;
@@ -1135,7 +1138,7 @@ ul.tabbed-buttons li.active a:visited {
 }
 .tip-box h2 {
 	float:none;
-	margin: 25px 20px 10px 20px;
+	margin: 5px 2px 2px;
 	text-align: center;
 	color: #fff;
 }
@@ -1147,7 +1150,7 @@ ul.tabbed-buttons li.active a:visited {
 }
 #tip1 {
 	width:258px;
-	height:400px;
+	height:420px;
 	margin-left:-280px;
 	margin-top:-83px;
 	background:url("../images/tip_bk.gif") left top no-repeat;
@@ -1527,6 +1530,8 @@ ul.tabbed-buttons li.active a:visited {
 .guide-box .guide-content h3 {
 	color: #f00;
 	margin:10px 0;
+	margin-top: 1px;
+	margin-bottom:1px;
 	font-size: 12px;
 }
 .guide-box .guide-content h4 {

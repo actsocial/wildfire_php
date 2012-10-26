@@ -28,7 +28,7 @@ class IndexController extends MyController
 		  'secret' => FB_SKEY,
 		  'authorizationRedirectUrl' => FB_CALLBACK_URL,
 		));
-		$this->view->facebook_login_url = $facebook->getLoginUrl();
+		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email'));
 		
 		$lang = $this->_request->getParam('lang');
 		if (isset($lang)){
@@ -50,6 +50,8 @@ class IndexController extends MyController
 		$this->view->title = '星星火 - Wildfire';
 		$this->view->messages = $this->_flashMessenger->getMessages();
 		
+		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email'));
+
 		$this->view->url = $this->getRequest()->getParam('url');
 		$this->_helper->layout->disableLayout();
 		

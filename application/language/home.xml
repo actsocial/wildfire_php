@@ -215,7 +215,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>可用兑换积分：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Can be Used:</seg>
+				<seg>Convertible Points:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='New_points'>

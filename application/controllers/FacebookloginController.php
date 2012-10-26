@@ -25,8 +25,9 @@ class FacebookloginController extends MyController {
 	  		}
 	  		$uid = $user['id'];
 	  		$uname = $user['name'];
+	  		$email = $user['email'];
 				$db = Zend_Registry :: get('db');
-				$adapter = new FacebookLoginAuthAdapter($uid, $uname);
+				$adapter = new FacebookLoginAuthAdapter($uid, $uname,$email);
 				$auth = Zend_Auth :: getInstance();
 				$result = $auth->authenticate($adapter);
 				$consumerModel = new Consumer();

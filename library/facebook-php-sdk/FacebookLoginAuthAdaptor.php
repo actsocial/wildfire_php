@@ -1,9 +1,10 @@
 <?php
 class FacebookLoginAuthAdapter implements Zend_Auth_Adapter_Interface {
-	protected $_facebookid, $_facebookname;
-	public function __construct($_facebookid, $_facebookname) {
+	protected $_facebookid, $_facebookname,$_facebookemail;
+	public function __construct($_facebookid, $_facebookname,$_facebookemail) {
 		$this->_facebookid = $_facebookid;
 		$this->_facebookname = $_facebookname;
+		$this->_facebookemail = $_facebookemail;
 	}
 	
 	public function authenticate() {
@@ -14,7 +15,7 @@ class FacebookLoginAuthAdapter implements Zend_Auth_Adapter_Interface {
 		} else {
 			if(isset($this->_facebookid)&&''!=$this->_facebookid){
 				$consumerModel = new Consumer();
-				$consumerModel->insert(array('name'=>$this->_facebookname,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));
+				$consumerModel->insert(array('name'=>$this->_facebookname,'email'=>$this->_facebookemail,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));
 			}
 			return new Zend_Auth_Result(Zend_Auth_Result :: FAILURE, $this->_facebookid);
 		}
