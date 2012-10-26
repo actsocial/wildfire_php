@@ -172,6 +172,7 @@ class ReportController extends MyController
 		$this->view->form = $form;
 		
 		if( $this->_request->isPost() ){
+			
 				$image         = $form->getValue ( 'image' );
 				if ( $image !='') {
 					$reportImage   = new ReportImages();
@@ -182,6 +183,7 @@ class ReportController extends MyController
 					$row->crdate   = date('Y-m-d H:i:s');
 					$row->save();
 					$this->view->saved = 1;
+					
 				}else{
 					$this->view->saved = -1;
 				}
