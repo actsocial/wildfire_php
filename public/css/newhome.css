@@ -621,7 +621,7 @@ table.spark-show td img {
 	font-size: 14px;
 	margin: 12px 0px;
 	color: #006bc4;
-	float: left;
+	/*float: left;*/
 }
 .spark-report {
 	/*width: 430px*/
@@ -629,15 +629,17 @@ table.spark-show td img {
 }
 .spark-report-box {
 	/*width: 430px;*/
+	width: 100%;
 	//background: url(../images/spark-report-bk.gif) no-repeat left bottom;
 	float: left;
 }
 .spark-report-box-inner {
-	width: 660px;
+	/*width: 660px;*/
+	width: 100%;
 	//background: url(../images/spark-report-inner-bk.gif) no-repeat left top;
 	float: left;
 	background: white;
-	padding: 10px;
+	/*padding: 10px;*/
 	margin-bottom: 15px;
 	-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.3),-2px -2px 30px rgba(100,100,100,0.2) inset;
 	-moz-box-shadow: 0 4px 4px rgba(0,0,0,0.3),-2px -2px 30px rgba(100,100,100,0.2) inset;
@@ -652,8 +654,8 @@ table.spark-show td img {
 		padding-top:16px;
 	*/
 	padding-bottom:16px;
-	padding-left:14px;
-	padding-right:8px;
+	/*padding-left:14px;*/
+	/*padding-right:8px;*/
 	padding-right:0px;
 }
 .spark-report-box .li-wrapper {
@@ -665,7 +667,7 @@ table.spark-show td img {
 .spark-report-box ul.updates li {
 	margin:0;
 }
-.spark-report-box ul {
+.spark-report-box .report-panel ul {
 	//width: 398px;
 	//height: 110px;
 	margin: 0px 0px;
@@ -675,7 +677,7 @@ table.spark-show td img {
 	float: left;
 	list-style-type: none;
 }
-.spark-report-box ul li {
+.spark-report-box .report-panel ul li {
 	font-size: 12px;
 	padding: 4px 0px 4px 0px;
 	line-height: 18px;
@@ -685,12 +687,12 @@ table.spark-show td img {
 	float: left;
 	clear: left;
 }
-.spark-report-box ul li a {
+.spark-report-box .report-panel ul li a {
 	color: #f00;
 	text-decoration: none;
 	line-height: 18px;
 }
-.spark-report-box ul li .points {
+.spark-report-box .report-panel ul li .points {
 	font-style: italic;
 	padding-left: 4px;
 }
@@ -734,14 +736,14 @@ table.spark-show td img {
 	padding-top: 5px;
 	padding-bottom: 4px;
 	line-height: 18px;
-	width: 240px;
-	float: right;
-	clear: right;
+	/*width: 240px;*/
+	/*float: left;
+	clear: right;*/
 	color: #666;
 	}
 .spark-report-box .report-panel .uploading-image .link-buttons {
 	width: 240px;
-	float: right;
+	float: left;
 	clear: right;
 	text-align: left;
 	}
@@ -816,9 +818,9 @@ table.spark-show td img {
 	background: url(../images/button_grey.gif) no-repeat left top;
 	}
 .spark-report-box .report-panel .submit-url .intro-text {
-	width: 320px;
-	float: left;
-	clear: left;
+	/*width: 320px;*/
+	/*float: left;*/
+	/*clear: left;*/
 	text-align: left;
 	margin-top: 5px;
 	}
@@ -836,6 +838,12 @@ table.spark-show td img {
 	padding:0;
 	padding-left: 14px;
 	margin:0;
+}
+.spark-report-box .report-panel .contact-text {
+	/*width: 320px;*/
+	height: auto;
+	line-height: 18px;
+	padding-left: 14px;
 }
 .spark-report-box .report-task-bar {
 	float: right;
@@ -2230,10 +2238,10 @@ a.list-orders:hover {
 }
 .campaign-content .submit-report {
 	padding: 10px 0;
-	float: right;
-	clear: right;
+	/*float: right;
+	clear: right;*/
 	margin:0;
-	width: 143px;
+	/*width: 143px;*/
 }
 .campaign-content .submit-report a {
 	display: block;
@@ -2630,7 +2638,7 @@ a.list-orders:hover {
 }
 #campbells  .spark-report-box-inner {
 	float:left;
-	width:320px;
+	width:100%;
 	background:transparent url(../images/spark-report-inner-bk-320.gif) no-repeat scroll left top
 	
 }
@@ -2644,7 +2652,7 @@ a.list-orders:hover {
 }
 #singapore  .spark-report-box-inner {
 	float:left;
-	width:308px;
+	width:100%;
 	//background:transparent url(../images/spark-report-inner-bk-308.gif) no-repeat scroll left top
 	
 }
@@ -2684,3 +2692,10 @@ label.error {
   color: red;display: none;   
 }
 */
+#tip-div {
+	float: right;
+}
+#tabs {
+	float: left;
+	border: none;
+}
