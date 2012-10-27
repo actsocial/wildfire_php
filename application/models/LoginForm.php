@@ -7,7 +7,8 @@ class LoginForm extends Zend_Form
 		array('filters' => array('StringTrim', 'StringToLower'),
 		'validators' => array(array('StringLength', false, array(3,50)),),
 		'required' => true,
-		'label' => $this->getView()->translate('Email'),
+		// 'label' => $this->getView()->translate('Email'),
+		'placeholder' => "Email/Phone",
 		'class' => 'inputtext'
 		));
 		
@@ -15,7 +16,8 @@ class LoginForm extends Zend_Form
 		array('filters' => array('StringTrim'),
 		'validators' => array(	array('StringLength', false, array(6, 20)),	),
 		'required' => true,
-		'label' => $this->getView()->translate('Password'),
+		// 'label' => $this->getView()->translate('Password'),
+		'placeholder' => "Password",
 		'class' => 'inputtext'
 		));
 

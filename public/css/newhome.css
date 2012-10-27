@@ -449,6 +449,7 @@ form fieldset table td input#agree {
 }
 .login_form dd input {
 	float:left;
+	width: 185px;
 }
 form input#register,
 form dd input#login{

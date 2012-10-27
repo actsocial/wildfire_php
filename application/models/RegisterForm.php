@@ -12,6 +12,7 @@ class RegisterForm extends Zend_Form
 		$auth_code
 		//->setRequired(true)
 		->addFilter('StripTags')
+		->setAttrib('style','width:140px;')
 		->addFilter('StringTrim');
 		//->addValidator('NotEmpty');
 		
