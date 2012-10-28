@@ -52,8 +52,7 @@
 				<seg>邀请码(可以为空)：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Enter Code:
-					(Leave it blank if you have no invitation code)
+				<seg>Got an invitation code? Enter it now!
 				</seg>
 			</tuv>
 		</tu>

@@ -30,11 +30,14 @@ jQuery(document).ready(function() {
 <div class="article-box" style="height:120px;">
 	<div class="article-box-inner">
 		<h2><?php echo $this->translate('Thanks_For_report')?></h2>
-		<p style="padding-top: 10px;"><?php echo $this->translate('Thanks_For_Report_Content1')?>
+        <p style="padding-top:10px">
+            We will be checking your report then contact you at your registered email address. Please note that our reply may go to your Spam mailbox. Have a nice day!
+        </p>
+		<!-- <p style="padding-top: 10px;"><?php echo $this->translate('Thanks_For_Report_Content1')?>
 		<br/>
 		</p>
-		<p><?php echo $this->translate('Choose_file')?></p>
-                <form  id="uploadImage" action="" method="post" enctype="multipart/form-data">
+		<p><?php echo $this->translate('Choose_file')?></p> -->
+               <!--  <form  id="uploadImage" action="" method="post" enctype="multipart/form-data">
                     <table>
                         <tr>
                             <td><?php echo $this->form->image;?></td>
@@ -51,7 +54,8 @@ jQuery(document).ready(function() {
                 <?php if($this->saved == -1){?>
                 <h3><?php echo $this->translate('Unsuccessful_upload');?></h3>
                 <?php }?>
-                <br/>
+                <br/> -->
+
                 <div class="buttons-bar" style="padding-top: 10px;">
 			<a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>">
                             <?php echo $this->translate('Take_Me_Home')?>

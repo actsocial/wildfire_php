@@ -45,7 +45,7 @@
 <![endif]-->
 </head>
 <body>
-	<div class="header"><div class="header-inner">
+	<!-- <div class="header"><div class="header-inner">
 		<div class="logo">
 			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.gif" /></a>
 		</div>
@@ -76,7 +76,7 @@
 		</div>
 
 		<div class="clear"></div>
-	</div></div>
+	</div></div> -->
 	<div class="container"><div class="container-inner">
 		<div class="banner">
 			<img src="<?php echo $this->baseUrl();?>/images/text-banner2.jpg"/>
@@ -94,7 +94,7 @@
 <?php if(!$this->registered){?>
 <form id="registerForm" 
 			action="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>"
-			method="post">
+			method="post" style="width:300px;float:left;margin-left:20px;" >
 		<fieldset><legend><?php echo $this->translate('Invitation_Code');?></legend>
 		<table border="0" cellspacing="0" cellpadding="0">
 			<colgroup>
@@ -167,6 +167,14 @@
                 <br/>
 		<div class="buttons-bar" style="float: left;"><?php echo $this->registerForm->submit ;?><div class="clear"></div></div>
 		</form>
+		<div style="float:left;margin-top:150px;margin-left:50px;width:20px;"><span style="font-size:18px">OR</span></div>
+		<div style="float:left;margin-top:150px;margin-left:50px;">
+			<p style="font-size:18px">Login With</p>
+			<a href="<?php echo $this->facebook_login_url;?>">
+		   		<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
+		  		<img src="<?php echo $this->baseUrl();?>/images/facebook_login.png"> 
+				</a><br>
+		</div>
 <?php }else{?>
 <div class="article-box">
 <div class="article-box-inner">

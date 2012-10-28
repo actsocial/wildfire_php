@@ -1,3 +1,11 @@
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.1/themes/base/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.js"></script>
+<script>
+  $(function() {
+      $( "#tabs" ).tabs();
+  });
+</script>
 <div id="fillout-dialog">
     <div class="content"></div>
 </div>
@@ -201,8 +209,6 @@
 <?php $j = 0;foreach ($this->activeCampaigns as $activeCampaign):?>			
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
-			<h2><?php echo $activeCampaign["name"]?></h2>
-			<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
 			<div class="tip-wrapper">
 				<div id="tip1" class="tip-box" style="display:none;">
 						<h2><?php echo $this->translate("What’s_a_Spark_Report?")?></h2>
@@ -215,9 +221,21 @@
 			<div class="clear"></div>
 			<div class="ul-wrapper" id="ul_tab_<?php echo $j?>"<?php if ($j>1):?> style="display:true;"<?php endif;?>>
 			<?php if($activeCampaign['type'] == 'campaign'){?>
-			<div class="report-area">
-				<div class="report-panel">
-					<div class="uploading-image" style="display:none;">					
+			<!-- <div class="report-area"> -->
+				<div id="tip-div">
+					<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+				</div>
+				<div id="tabs">
+					<ul>
+			      <li><a href="#tabs-report">Submit a Spark Report</a></li>
+			      <li><a href="#tabs-url">Submit a URL</a></li>
+			      <li><a href="#tabs-photo">Upload a photo/video</a></li>
+			      <li><a href="#tabs-contact">Contact Us</a></li>
+			      
+			    </ul>
+				<div id="tabs-photo" class="report-panel">
+					<h2><?php echo $activeCampaign["name"]?></h2>
+					<div class="uploading-image">					
 					      <?php foreach($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']] as $imageReport) { ?>
 					      <?php $is_first = ($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']][0]['id'] == $imageReport['id'])?>
                           <div style="text-align:center;<?php if(!$is_first) {echo 'display:none;';}?>" class="image" >
@@ -244,13 +262,13 @@
 						</div>
 					    
 					</div>
-					<div class="submit-url submit-url-done" style="display:none;">
+				</div>
+				<div id="tabs-url" class="report-panel">
+					<h2><?php echo $activeCampaign["name"]?></h2>
+					<div class="submit-url submit-url-done">
 						<div class="status"><?php echo $this->translate("Home_Submit_URL_Report")?></div>
 						<div class="input-url">
 				        <input id="url_<?php echo $activeCampaign['campaign_id'];?>" type="text" name="url" class="text-box" value=""/>
-				        
-
-
 						<?php //if($activeCampaign['url'] == null || $activeCampaign['url'] == ''){?>
 						<input id = "url_report_submit_<?php echo $activeCampaign['campaign_id'];?>" type="button" value="<?php echo $this->translate("Home_URL_Report_Submit")?>" class="button" onclick="submitURL(<?php echo $activeCampaign['campaign_id'];?>);"/>
 						<?php //}?>
@@ -293,84 +311,97 @@
 							</ul>
 						</div>
 					</div>
-			<ul class="submit-report">
-				<?php $reportCount=1?>
-				<?php foreach ($this->allCampaignReports as $report):?>
-					<?php if ($report['campaign_id']==$activeCampaign['campaign_id'] && $reportCount<=3):?>
+				</div>
+				<div id="tabs-report" class="report-panel">
+					<h2><?php echo $activeCampaign["name"]?></h2>
+					<ul class="submit-report">
+						<?php $reportCount=1?>
+						<?php foreach ($this->allCampaignReports as $report):?>
+							<?php if ($report['campaign_id']==$activeCampaign['campaign_id'] && $reportCount<=3):?>
+								<div class="li-wrapper">
+								<li><?php echo $this->translate("Spark_Report")?>#<?php echo $reportCount?> (0-500 <?php echo $this->translate("points")?>)
+									<?php if(array_key_exists($report['id'], $this->approvedCampaignReportPoint)) {?>
+									<img src="<?php echo $this->baseUrl();?>/images/action_check.gif" align="absmiddle"/>
+									<?php echo $this->translate('earned');?> <?php echo $this->approvedCampaignReportPoint[$report['id']]?> <?php echo $this->translate("points")?>
+									<?php } else{?>
+									<?php echo $this->translate("Submit_successfully_and_pedding")?>
+									<?php }?>
+								</li>
+								</div>
+								<?php $reportCount++?>
+							<?php endif;?>
+						<?php endforeach;?>
+						<?php if ($reportCount == 1):?>
 						<div class="li-wrapper">
-						<li><?php echo $this->translate("Spark_Report")?>#<?php echo $reportCount?> (0-500 <?php echo $this->translate("points")?>)
-							<?php if(array_key_exists($report['id'], $this->approvedCampaignReportPoint)) {?>
-							<img src="<?php echo $this->baseUrl();?>/images/action_check.gif" align="absmiddle"/>
-							<?php echo $this->translate('earned');?> <?php echo $this->approvedCampaignReportPoint[$report['id']]?> <?php echo $this->translate("points")?>
-							<?php } else{?>
-							<?php echo $this->translate("Submit_successfully_and_pedding")?>
-							<?php }?>
+						<li>
+							<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#1</a> (0-500 <?php echo $this->translate("points")?>)
+							
 						</li>
 						</div>
-						<?php $reportCount++?>
-					<?php endif;?>
-				<?php endforeach;?>
-				<?php if ($reportCount == 1):?>
-				<div class="li-wrapper">
-				<li>
-					<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#1</a> (0-500 <?php echo $this->translate("points")?>)
-					
-				</li>
-				</div>
-				<div class="li-wrapper">
-				<li>
-					<?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)
-					
-				</li>
-				</div>
-				<div class="li-wrapper">
-				<li>
-					<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
+						<div class="li-wrapper">
+						<li>
+							<?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)
+							
+						</li>
+						</div>
+						<div class="li-wrapper">
+						<li>
+							<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
 
-				</li>
-				</div>
-				<?php endif;?>
-				
-				<?php if ($reportCount ==2):?>
-				<div class="li-wrapper">
-				<li>
-					<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)</a>
-				</li>
-				</div>
-				<div class="li-wrapper">
-				<li>
-					<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
+						</li>
+						</div>
+						<?php endif;?>
+						
+						<?php if ($reportCount ==2):?>
+						<div class="li-wrapper">
+						<li>
+							<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)</a>
+						</li>
+						</div>
+						<div class="li-wrapper">
+						<li>
+							<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
 
-				</li>
+						</li>
+						</div>
+						<?php endif;?>
+						
+						<?php if ($reportCount ==3):?>
+						<div class="li-wrapper">
+						<li>
+							<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)</a>
+						</li>
+						</div>
+						<?php endif;?>
+						
+						<?php if ($reportCount <=3){?>
+						<div class="li-wrapper">
+						<li>								
+							<?php echo $this->translate("Bonus_Report")?> (0-500 <?php echo $this->translate("points")?>)
+						</li>
+						</div>
+						<?php }else{?>
+						<div class="li-wrapper">
+						<li>						
+						<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;">
+							<? echo $this->translate('Click_here_and_submit_more'); ?> (0-500 <?php echo $this->translate("points")?>)
+						</a>
+						</li>
+						</div>
+						<?php }?>
+						</ul>
 				</div>
-				<?php endif;?>
-				
-				<?php if ($reportCount ==3):?>
-				<div class="li-wrapper">
-				<li>
-					<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)</a>
-				</li>
+				<div id="tabs-contact" class="report-panel">
+					<h2><?php echo $activeCampaign["name"]?></h2>
+					<div class="contact-text">
+						<p>Do you have questions to ask? Please do not hesitate to contact us. We are glad to be of assistance!<p>
+				    <p> Yahoo Messenger: wildfire.asia@yahoo.com</p>
+				    <p> Facebook: http://www.facebook.com/Wildfire.Shanghai  *cuse the HQ’s in the mean tme
+				    <p>Mobile (SMS only): +63 9XX XXXXXXX</p>
+				  </div>
 				</div>
-				<?php endif;?>
-				
-				<?php if ($reportCount <=3){?>
-				<div class="li-wrapper">
-				<li>								
-					<?php echo $this->translate("Bonus_Report")?> (0-500 <?php echo $this->translate("points")?>)
-				</li>
-				</div>
-				<?php }else{?>
-				<div class="li-wrapper">
-				<li>						
-				<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;">
-					<? echo $this->translate('Click_here_and_submit_more'); ?> (0-500 <?php echo $this->translate("points")?>)
-				</a>
-				</li>
-				</div>
-				<?php }?>
-				</ul>
-				</div> <?php //report-panel ?>
-				<div class="report-task-bar">
+				 <?php //report-panel ?>
+				<div class="report-task-bar" style="display:none;">
 					<a href="#" onclick="showReportPanel(0);return false;" class="button-submit-report"><img src="<?php echo $this->baseUrl();?>/images/tab_button_report_blue.png"/></a>
 					<!-- <a href="#" onclick="showReportPanel(1);return false;" class="button-upload-image" ><img src="<?php echo $this->baseUrl();?>/images/tab_button_photo_grey.png"/></a> -->
 					<a href="#" onclick="showReportPanel(2);return false;" class="button-submit-url"><img src="<?php echo $this->baseUrl();?>/images/tab_button_url_grey.png"/></a>
