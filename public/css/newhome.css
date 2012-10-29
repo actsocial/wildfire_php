@@ -2705,3 +2705,7 @@ label.error {
 	float: left;
 	border: none;
 }
+.contact-text>p>img{
+	width: 19px;
+	height: 19px;
+}
