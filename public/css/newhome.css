@@ -110,6 +110,7 @@ img {
 	font-weight: bold;
 	height: 36px;
 	border: 0px solid #0f0;
+	font-family: Lucida grande;
 }
 .header .navigator ul li {
 	float: left;
@@ -287,8 +288,9 @@ a.link {
 .article-box-inner {
 	background: white;
 	padding: 10px ;
+	font-family: Lucida grande;
 	color: gray;
-    font-family: bold;
+    /*font-family: bold;*/
     font-size: 12px;
 	/*margin-bottom: 40px;*/
 	-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.3),-2px -2px 30px rgba(100,100,100,0.2) inset;
@@ -2298,6 +2300,7 @@ a.list-orders:hover {
 	padding: 3px 0;
 	position: absolute;
 	float:none;
+	margin-left:169px;
 }
 .campaign-content .submit-menu ul {
 	float: none;
@@ -2668,7 +2671,7 @@ a.list-orders:hover {
 	list-style:none;
 }
 #singapore  .spark-report-box .ul-wrapper {
-	width:310px;
+	width:390px;
 }
 #singapore  li a{
 	color:#404040;
