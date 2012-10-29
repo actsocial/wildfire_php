@@ -23,6 +23,38 @@
 				<seg>Your info completeness: </seg>
 			</tuv>
 		</tu>
+		<tu tuid='Tabs_Report'>
+			<tuv xml:lang="zh">
+				<seg> 提交报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit a Spark Report</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Tabs_Url'>
+			<tuv xml:lang="zh">
+				<seg>分享网址</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Submit a URL</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Tabs_Photo'>
+			<tuv xml:lang="zh">
+				<seg>上传照片/视频</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Upload a photo/video</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Tabs_Contact'>
+			<tuv xml:lang="zh">
+				<seg>联系我们</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Contact Us</seg>
+			</tuv>
+		</tu>
 		<tu tuid='Upload_Photo_Text'>
 			<tuv xml:lang="zh">
 				<seg>上传图片，赚取更多积分！</seg>

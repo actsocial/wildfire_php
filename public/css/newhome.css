@@ -2709,3 +2709,19 @@ label.error {
 	width: 19px;
 	height: 19px;
 }
+
+#tabs .ui-widget-content { border: none; background: none; }
+#tabs .ui-widget-header { border: none; background: none; }
+
+#tabs .ui-tabs .ui-tabs-panel {
+	background: #FFF5AA; /* <------------------------ background of tab content area */
+	border: 1px solid #38402D; /* <------------------------ border of tab content area */
+	position: relative;
+	min-height: 200px;
+	height: auto !important;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-khtml-border-radius: 10px;
+	border-radius: 10px;
+	padding-top: 20px;	
+}

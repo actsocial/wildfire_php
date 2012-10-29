@@ -1,5 +1,5 @@
 <?php
-include_once 'Indicate2Connect.php';
+// include_once 'Indicate2Connect.php';
 
 class HomeController extends MyController
 {
