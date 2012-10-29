@@ -23,6 +23,46 @@
 				<seg>Your info completeness: </seg>
 			</tuv>
 		</tu>
+		<tu tuid='Upload_Photo_Text'>
+			<tuv xml:lang="zh">
+				<seg>上传图片，赚取更多积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Upload photos about your Spark report and earn extra points!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Contact_Text_Title'>
+			<tuv xml:lang="zh">
+				<seg>如有任何问题，请与我们联系。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Do you have questions to ask? Please do not hesitate to contact us.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Contact_Text_Yahoo'>
+			<tuv xml:lang="zh">
+				<seg>雅虎通：wildfire.asia@yahoo.com</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Yahoo Messenger: wildfire.asia@yahoo.com</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Contact_Text_Facebook'>
+			<tuv xml:lang="zh">
+				<seg>Facebook: http://www.facebook.com/Wildfire</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Facebook: http://www.facebook.com/Wildfire</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Contact_Text_Mobile'>
+			<tuv xml:lang="zh">
+				<seg>手机号码（仅接收短信）：+63 9XX XXXXXXX</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Mobile (SMS only): +63 9XX XXXXXXX</seg>
+			</tuv>
+		</tu>
                 <tu tuid='Account_Info_Pic'>
 			<tuv xml:lang="zh">
 				<seg>/images/lb_ac_inf.gif</seg>

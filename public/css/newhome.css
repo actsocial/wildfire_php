@@ -2497,7 +2497,7 @@ a.list-orders:hover {
 }
 .consumer-edit fieldset .form-line label {
 	float: left;
-	width: 80px;
+	width: 110px;
 	padding-right: 10px;
 	height: 30px;
 	line-height: 30px;
@@ -2704,4 +2704,8 @@ label.error {
 #tabs {
 	float: left;
 	border: none;
+}
+.contact-text>p>img{
+	width: 19px;
+	height: 19px;
 }

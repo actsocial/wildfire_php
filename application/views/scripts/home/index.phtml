@@ -230,86 +230,7 @@
 			      <li><a href="#tabs-contact">Contact Us</a></li>
 			      
 			    </ul>
-				<div id="tabs-photo" class="report-panel">
-					<h2><?php echo $activeCampaign["name"]?></h2>
-					<div class="uploading-image">					
-					      <?php foreach($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']] as $imageReport) { ?>
-					      <?php $is_first = ($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']][0]['id'] == $imageReport['id'])?>
-                          <div style="text-align:center;<?php if(!$is_first) {echo 'display:none;';}?>" class="image" >
-                            <a onclick="move_up(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_up.png" /></a>
-                            <a href="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>" title="<?php echo $this->translate('Uplaod_Photo_Url_Title')?>" class="thickbox"> 
-                             <img id="image_thumb_<?php echo $imageReport['id'];?>" width='<?php if (isset($imageReport['thumb_width'])){ echo $imageReport['thumb_width']; }else{ echo 80;}?>' height='<?php if (isset($imageReport['thumb_height'])){ echo $imageReport['thumb_height']; }else{ echo 80;}?>' src="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>"/>
-                            </a>
-                            <a onclick="move_down(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_down.png" /></a>
-                          </div>
-						  <div class="status" style="<?php if(!$is_first) {echo 'display:none';}?>">
-						  <?php if($imageReport['state'] == 'APPROVED' && isset($imageReport['point_amount'])) { ?>
-							图片已审核, 您已获得<strong><?php echo $imageReport['point_amount'] ?></strong>分
-						  <?php } else if($imageReport['state'] == 'NEW') { ?>
-							图片需要审核, 请等待
-						  <?php } else if($imageReport['state'] == 'UNAPPROVED') { ?>
-						  	图片审核未通过
-						  <?php }?>
-						  </div>
-                          <?php }?>
-						<div class="intro-text">是你的星星火主页，告诉我们你与朋友谈话或是你的</div>
-						<div class="link-buttons">
-						  <a href="#" id="uploadFile_<?php echo $activeCampaign['campaign_id'];?>"><?php echo $this->translate('Uplaod_Photo')?></a>
-						  <div id="error" style="color:red;"></div>
-						</div>
-					    
-					</div>
-				</div>
-				<div id="tabs-url" class="report-panel">
-					<h2><?php echo $activeCampaign["name"]?></h2>
-					<div class="submit-url submit-url-done">
-						<div class="status"><?php echo $this->translate("Home_Submit_URL_Report")?></div>
-						<div class="input-url">
-				        <input id="url_<?php echo $activeCampaign['campaign_id'];?>" type="text" name="url" class="text-box" value=""/>
-						<?php //if($activeCampaign['url'] == null || $activeCampaign['url'] == ''){?>
-						<input id = "url_report_submit_<?php echo $activeCampaign['campaign_id'];?>" type="button" value="<?php echo $this->translate("Home_URL_Report_Submit")?>" class="button" onclick="submitURL(<?php echo $activeCampaign['campaign_id'];?>);"/>
-						<?php //}?>
-				        <?php 
-				            $i = 0;
-				            foreach ($this->urlreport as $url){
-				            	if($i == 2){
-				            	   break;	
-				            	}
-				            	if($url['campaign_id'] == $activeCampaign['campaign_id']){
-				            		if($url['state'] == 'APPROVED'){
-				            			$state = '审核成功';
-				            		}elseif($url['state'] == 'NEW'){
-				            			$state = '等待审核';
-				            		}else{
-				            			$state = '审核失败';
-				            		}
-				            		echo '<i>'.$url['url'].'</i>'.$state.'<br/>';
-				            	}	
-				            	$i++;			            	
-				            }				        
-				        ?>
-						</div>
-
-						<div class="intro-text">
-							<ul>
-							<!--  
-							<?php if($activeCampaign['url_state'] != null && $activeCampaign['url_state'] == 'APPROVED'){?>
-								<img src="<?php echo $this->baseUrl();?>/images/action_check.gif" align="absmiddle"/>&nbsp;<?php echo $this->translate("Home_URL_Report_Approved")?>
-							<?php }else{?>
-								<?php if($activeCampaign['url_state'] != null && $activeCampaign['url_state'] == 'NEW'){?>
-									<li><?php echo $this->translate("Home_URL_Report_Wait_For")?></li>
-								<?php }else{?>
-									<li id='url_report_notice_<?php echo $activeCampaign['campaign_id'];?>'><?php echo $this->translate("Home_URL_Report_Introduction")?></li>
-								<?php }?>
-								<li><?php echo $this->translate("Home_URL_Report_Introduction2")?></li>
-							<?php }?>
-							-->
-							<li id='url_report_notice_<?php echo $activeCampaign['campaign_id'];?>'></li>							
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div id="tabs-report" class="report-panel">
+			    <div id="tabs-report" class="report-panel">
 					<h2><?php echo $activeCampaign["name"]?></h2>
 					<ul class="submit-report">
 						<?php $reportCount=1?>
@@ -388,13 +309,92 @@
 						<?php }?>
 						</ul>
 				</div>
+				<div id="tabs-photo" class="report-panel">
+					<h2><?php echo $activeCampaign["name"]?></h2>
+					<div class="uploading-image">					
+					      <?php foreach($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']] as $imageReport) { ?>
+					      <?php $is_first = ($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']][0]['id'] == $imageReport['id'])?>
+                          <div style="text-align:center;<?php if(!$is_first) {echo 'display:none;';}?>" class="image" >
+                            <a onclick="move_up(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_up.png" /></a>
+                            <a href="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>" title="<?php echo $this->translate('Uplaod_Photo_Url_Title')?>" class="thickbox"> 
+                             <img id="image_thumb_<?php echo $imageReport['id'];?>" width='<?php if (isset($imageReport['thumb_width'])){ echo $imageReport['thumb_width']; }else{ echo 80;}?>' height='<?php if (isset($imageReport['thumb_height'])){ echo $imageReport['thumb_height']; }else{ echo 80;}?>' src="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>"/>
+                            </a>
+                            <a onclick="move_down(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_down.png" /></a>
+                          </div>
+						  <div class="status" style="<?php if(!$is_first) {echo 'display:none';}?>">
+						  <?php if($imageReport['state'] == 'APPROVED' && isset($imageReport['point_amount'])) { ?>
+							图片已审核, 您已获得<strong><?php echo $imageReport['point_amount'] ?></strong>分
+						  <?php } else if($imageReport['state'] == 'NEW') { ?>
+							图片需要审核, 请等待
+						  <?php } else if($imageReport['state'] == 'UNAPPROVED') { ?>
+						  	图片审核未通过
+						  <?php }?>
+						  </div>
+                          <?php }?>
+						<div class="intro-text"><?php echo $this->translate('Upload_Photo_Text')?></div>
+						<div class="link-buttons">
+						  <a href="#" id="uploadFile_<?php echo $activeCampaign['campaign_id'];?>"><?php echo $this->translate('Uplaod_Photo')?></a>
+						  <div id="error" style="color:red;"></div>
+						</div>
+					    
+					</div>
+				</div>
+				<div id="tabs-url" class="report-panel">
+					<h2><?php echo $activeCampaign["name"]?></h2>
+					<div class="submit-url submit-url-done">
+						<div class="status"><?php echo $this->translate("Home_Submit_URL_Report")?></div>
+						<div class="input-url">
+				        <input id="url_<?php echo $activeCampaign['campaign_id'];?>" type="text" name="url" class="text-box" value=""/>
+						<?php //if($activeCampaign['url'] == null || $activeCampaign['url'] == ''){?>
+						<input id = "url_report_submit_<?php echo $activeCampaign['campaign_id'];?>" type="button" value="<?php echo $this->translate("Home_URL_Report_Submit")?>" class="button" onclick="submitURL(<?php echo $activeCampaign['campaign_id'];?>);"/>
+						<?php //}?>
+				        <?php 
+				            $i = 0;
+				            foreach ($this->urlreport as $url){
+				            	if($i == 2){
+				            	   break;	
+				            	}
+				            	if($url['campaign_id'] == $activeCampaign['campaign_id']){
+				            		if($url['state'] == 'APPROVED'){
+				            			$state = '审核成功';
+				            		}elseif($url['state'] == 'NEW'){
+				            			$state = '等待审核';
+				            		}else{
+				            			$state = '审核失败';
+				            		}
+				            		echo '<i>'.$url['url'].'</i>'.$state.'<br/>';
+				            	}	
+				            	$i++;			            	
+				            }				        
+				        ?>
+						</div>
+
+						<div class="intro-text">
+							<ul>
+							<!--  
+							<?php if($activeCampaign['url_state'] != null && $activeCampaign['url_state'] == 'APPROVED'){?>
+								<img src="<?php echo $this->baseUrl();?>/images/action_check.gif" align="absmiddle"/>&nbsp;<?php echo $this->translate("Home_URL_Report_Approved")?>
+							<?php }else{?>
+								<?php if($activeCampaign['url_state'] != null && $activeCampaign['url_state'] == 'NEW'){?>
+									<li><?php echo $this->translate("Home_URL_Report_Wait_For")?></li>
+								<?php }else{?>
+									<li id='url_report_notice_<?php echo $activeCampaign['campaign_id'];?>'><?php echo $this->translate("Home_URL_Report_Introduction")?></li>
+								<?php }?>
+								<li><?php echo $this->translate("Home_URL_Report_Introduction2")?></li>
+							<?php }?>
+							-->
+							<li id='url_report_notice_<?php echo $activeCampaign['campaign_id'];?>'></li>							
+							</ul>
+						</div>
+					</div>
+				</div>
 				<div id="tabs-contact" class="report-panel">
 					<h2><?php echo $activeCampaign["name"]?></h2>
 					<div class="contact-text">
-						<p>Do you have questions to ask? Please do not hesitate to contact us. We are glad to be of assistance!<p>
-				    <p> Yahoo Messenger: wildfire.asia@yahoo.com</p>
-				    <p> Facebook: http://www.facebook.com/Wildfire.Shanghai  *cuse the HQ’s in the mean tme
-				    <p>Mobile (SMS only): +63 9XX XXXXXXX</p>
+						<p><?php echo $this->translate('Contact_Text_Title')?><p>
+				    <p><img src='image/yahoo_message.png'/><?php echo $this->translate('Contact_Text_Yahoo')?></p>
+				    <p><img src='image/facebook_icon.png'/><?php echo $this->translate('Contact_Text_Facebook')?></p>
+				    <p><img src='image/mobile_icon.png'/><?php echo $this->translate('Contact_Text_Mobile')?></p>
 				  </div>
 				</div>
 				 <?php //report-panel ?>
