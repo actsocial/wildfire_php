@@ -45,6 +45,16 @@
 	// ]]>
 	-->
 	</script>
+	<script type="text/javascript">
+		function showOrHide(val){
+			if(val==199){
+				jQuery("#q_69").css("display","block");
+			}else{
+				jQuery("#q_69").css("display","none");
+			}
+
+		}
+	</script>
 </head>
 
 <body>
@@ -138,12 +148,12 @@
 <input type="hidden" name="answers[141].id" value="" id="answers[141].id" />
 
 	<select group="141" class="selection" id="question_141" name="answers[141].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
-<option value="195" style=""  >face-to-face</option>
-<option value="196" style=""  >Web (Forum, social media, blog)</option>
-<option value="197" style=""  >Telephone or SMS</option>
-<option value="198" style=""  >Instant Messenger Service</option>
-<option value="199" style=""  >Other</option>
+	<option selected="selected" value="0" onclick="showOrHide(this.value)" >Please choose</option>
+<option value="195" style=""  onclick="showOrHide(this.value)" >face-to-face</option>
+<option value="196" style=""  onclick="showOrHide(this.value)" >Web (Forum, social media, blog)</option>
+<option value="197" style=""  onclick="showOrHide(this.value)" >Telephone or SMS</option>
+<option value="198" style=""  onclick="showOrHide(this.value)" >Instant Messenger Service</option>
+<option value="199" style=""  onclick="showOrHide(this.value)" >Other</option>
 	</select> 
  </td>
 
@@ -170,7 +180,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_69" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_69" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
@@ -549,7 +559,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						your conversation contents (or chatting records)<a href='http://community.wildfire.asia/public/training/samplereport' target='_blank'>(please check the example report)</a>
+						Your conversation contents (or chatting records)<a href='http://community.wildfire.asia/public/training/samplereport' target='_blank'>(please check the example report)</a>
 					</div>
 				</td>
 				<td width=50% valign="top">
@@ -579,7 +589,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						Does Each person whom you've talked with know that you are a member of Wildfire Community?
+						Does each person whom you've talked with know that you are a member of Wildfire Community?
 					</div>
 				</td>
 				<td width=50% valign="top">

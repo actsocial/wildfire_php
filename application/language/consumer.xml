@@ -96,7 +96,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>收件人姓名：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Recipient: </seg>
+				<seg>Name of Recipient: </seg>
 			</tuv>
 		</tu>
 		<tu tuid='CONTACT INFORMATION_ADDRESS'>
@@ -147,6 +147,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>Country: </seg>
 			</tuv>
 		</tu>
+		
 		<tu tuid='CONTACT INFORMATION_PHONE'>
 			<tuv xml:lang="zh">
 				<seg>电话：</seg>
@@ -155,6 +156,16 @@ You can also update your contact information and preferences.</seg>
 				<seg>Phone: </seg>
 			</tuv>
 		</tu>
+
+		<tu tuid='CONTACT INFORMATION_CONTACT_NUMBER'>
+			<tuv xml:lang="zh">
+				<seg>电话：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Contact number: </seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='CONTACT INFORMATION_EMAIL'>
 			<tuv xml:lang="zh">
 				<seg>邮箱：</seg>
@@ -857,7 +868,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>大专</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Junior college</seg>
+                <seg>Associate</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_education_Bachelor'>
@@ -898,7 +909,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>你目前有孩子吗？</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Do you have children now?</seg>
+                <seg>Do you have children?</seg>
             </tuv>
         </tu>
         
@@ -907,7 +918,8 @@ You can also update your contact information and preferences.</seg>
                 <seg>你的孩子出生年份？</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>What's the birth year of your child? </seg>
+                <!-- <seg>What's the birth year of your child? </seg> -->
+                <seg>How old is/are your child/children?</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_children_birth_year_Before 1980'>
@@ -941,7 +953,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>你经常在网上购物吗？</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Do your often make some online shopping?</seg>
+                <seg>Do your often shop online?</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_do_your_often_go_shopping_online_Never'>
@@ -982,7 +994,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>如果你得到一笔意外的奖金，会倾向于拿它做哪些事？</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>If you get an unexpected bonus, what will you use it for?</seg>
+                <seg>If you're get a bonus, what will you use it for?</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_What_will_you_use_extra_bouns_for_Traveling'>
