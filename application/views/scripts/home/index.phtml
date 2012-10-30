@@ -483,16 +483,21 @@
 	
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
-		  <h2><?php echo $this->translate("Quick_Polls:_Tell_Us_About_Yourself!")?></h2>
-		  <img  onmouseover="showtip(3);" onmouseout="hidetip(3);"  class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
-			<div class="tip-wrapper">
-				<div id="tip3" class="tip-box" style="display:none;">
-					<h2><?php echo $this->translate("What_are_Quick_Polls?")?></h2>
-					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_1")?></p>
-					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_2")?></p>
-					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_3")?></p>
-					<p><?php echo $this->translate("What_are_Quick_Polls?_Content_4")?></p>
+			<div class='quick-poll-header'>
+				<div class='quick-poll-name-container'>
+					<span class="quick-poll-name"><?php echo $this->translate("Quick_Polls:_Tell_Us_About_Yourself!")?></span>
 				</div>
+				<div class='quick-poll-helper-container'>
+					<div id="tip3" class="tip-box" style="display:none;">
+						<h2><?php echo $this->translate("What_are_Quick_Polls?")?></h2>
+						<p><?php echo $this->translate("What_are_Quick_Polls?_Content_1")?></p>
+						<p><?php echo $this->translate("What_are_Quick_Polls?_Content_2")?></p>
+						<p><?php echo $this->translate("What_are_Quick_Polls?_Content_3")?></p>
+						<p><?php echo $this->translate("What_are_Quick_Polls?_Content_4")?></p>
+					</div>
+					<img  onmouseover="showtip(3);" onmouseout="hidetip(3);" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+				</div>
+				<div class='clear'></div>
 			</div>
 			<div class="clear"></div>
 			<div class="ul-wrapper">

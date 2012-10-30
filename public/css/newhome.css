@@ -2740,7 +2740,7 @@ label.error {
 
 .report-panel .report-panel-header .campaign-name{
 	font-size: 1.3em;
-	color: blue;
+	color: #006BC4;
 }
 
 .upload-photo-button-container {
@@ -2766,4 +2766,23 @@ label.error {
 
 .submit-url-input {
 	margin-bottom: 0px !important;
+}
+
+.quick-poll-header {
+	margin: 12px 0px;
+}
+
+.quick-poll-header .quick-poll-name{
+	font-size: 1.4em;
+	color: #006BC4;
+	font-weight: bold;
+}
+
+.quick-poll-header .quick-poll-name-container {
+	float: left;
+	margin-top: 5px;
+}
+
+.quick-poll-header .quick-poll-helper-container {
+	float: right;
 }
