@@ -4,7 +4,8 @@
 	src="<?php echo $this->baseUrl();?>/images/training_campaign.gif"
 	style="padding: 0; border: 0; margin-right: 10px;background:none;" /></div>
 <div class="main-column" style="width:450px;">
-<h2><?php echo $this->translate('Active_Campaign');?></h2>
+<!-- <h2><?php echo $this->translate('Active_Campaign');?></h2> -->
+<h2>Quality for Life™ Philippines Campaign</h2>
 <ul class="invited">
 <?php foreach($this->activeCampaigns as $campaign) : ?>
 	<li><a
@@ -12,8 +13,9 @@
 		'action'=>'description', 'id'=>$campaign['campaign_id']));?>"> <!--<?php echo $campaign['name']?>
 		--><!--
 		- <?php echo $this->translate("Campaign_simple_description_".$campaign['campaign_id'])?>
-		-->
 		<?php echo $campaign['simple_description']?>
+		-->
+		A globally recognized brand that supplies high-quality vitamins ingredients to companies worldwide. It aims at improving your education about vitamins to give you peace of mind when you choose food and beverage products.
 	</a></li>
 	<?php endforeach; ?>
 </ul>
@@ -29,7 +31,7 @@
 	src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $campaignInvitation['campaign_id']?>_03.jpg" /><img
 	src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $campaignInvitation['campaign_id']?>_04.jpg" /></div>
 <div class="main-column" style="width: 320px;">
-<h2><?php echo $this->translate('INDEX_YOU_ARE_INVITED')?> <?php echo $campaignInvitation['name']?>
+<h2><?php echo $this->translate('INDEX_YOU_ARE_INVITED')?> <?php echo $campaignInvitation['name']?> Philippines
 </h2>
 <br/>
 <p><?php echo $campaignInvitation['invitation_description']?>

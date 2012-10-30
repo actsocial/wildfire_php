@@ -632,6 +632,7 @@ table.spark-show td img {
 .spark-report {
 	/*width: 430px*/
 	float: right;
+	width: 100%;
 }
 .spark-report-box {
 	/*width: 430px;*/
