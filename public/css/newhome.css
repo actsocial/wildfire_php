@@ -2710,8 +2710,8 @@ label.error {
 	height: 19px;
 }
 
-#tabs .ui-widget-content { border: none; background: none; }
-#tabs .ui-widget-header { border: none; background: none; }
+/*#tabs .ui-widget-content { border: none; background: none; }
+#tabs .ui-widget-header { border: none; background: none; }*/
 
 #tabs .ui-tabs .ui-tabs-panel {
 	background: #FFF5AA; /* <------------------------ background of tab content area */
@@ -2724,4 +2724,9 @@ label.error {
 	-khtml-border-radius: 10px;
 	border-radius: 10px;
 	padding-top: 20px;	
+}
+
+#tabs .ui-tabs-nav li {
+	border-bottom-width: 1px !important;
+	margin: 0px;
 }
