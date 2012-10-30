@@ -229,7 +229,10 @@
 			      <li><a href="#tabs-contact"><?php echo $this->translate('Tabs_Contact')?></a></li>
 			    </ul>
 			    <div id="tabs-report" class="report-panel">
-						<h2><?php echo $activeCampaign["name"]?></h2>
+						<div class='report-panel-header'>
+							<span class="campaign-name"><?php echo $activeCampaign["name"]?></span>
+							<span class="tab-description"><?php echo $this->translate('Report_Submit_Description');?><span>
+						</div>
 						<ul class="submit-report">
 							<?php $reportCount=1?>
 							<?php foreach ($this->allCampaignReports as $report):?>
@@ -308,7 +311,10 @@
 						</ul>
 					</div>
 					<div id="tabs-photo" class="report-panel">
-						<h2><?php echo $activeCampaign["name"]?></h2>
+						<div class='report-panel-header'>
+							<span class="campaign-name"><?php echo $activeCampaign["name"]?></span>
+							<span class="tab-description"> <?php echo $this->translate('Upload_Photo_Text')?><span>
+						</div>
 						<div class="uploading-image">					
 						      <?php foreach($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']] as $imageReport) { ?>
 						      <?php $is_first = ($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']][0]['id'] == $imageReport['id'])?>
@@ -329,22 +335,25 @@
 							  <?php }?>
 							  </div>
 	                          <?php }?>
-							<div class="intro-text"><?php echo $this->translate('Upload_Photo_Text')?></div>
-							<div class="link-buttons">
-							  <a href="#" id="uploadFile_<?php echo $activeCampaign['campaign_id'];?>"><?php echo $this->translate('Uplaod_Photo')?></a>
-							  <div id="error" style="color:red;"></div>
+							<!-- <div class="intro-text"><?php echo $this->translate('Upload_Photo_Text')?></div> -->
+							<div class="upload-photo-button-container">
+							  <a href="#" class="btn btn-primary" id="uploadFile_<?php echo $activeCampaign['campaign_id'];?>"><?php echo $this->translate('Uplaod_Photo')?></a>
+							  <!-- <div id="error" style="color:red;"></div> -->
 							</div>
 						    
 						</div>
 					</div>
 					<div id="tabs-url" class="report-panel">
-						<h2><?php echo $activeCampaign["name"]?></h2>
-						<div class="submit-url submit-url-done">
-							<div class="status"><?php echo $this->translate("Home_Submit_URL_Report")?></div>
-							<div class="input-url">
-					        <input id="url_<?php echo $activeCampaign['campaign_id'];?>" type="text" name="url" class="text-box" value=""/>
+						<div class='report-panel-header'>
+							<span class="campaign-name"><?php echo $activeCampaign["name"]?></span>
+							<span class="tab-description"> <?php echo $this->translate('Report_Url_Description')?><span>
+						</div>
+						<div class="submit-url submit-url-done submit-url-container">
+							<!-- <div class="status"><?php echo $this->translate("Home_Submit_URL_Report")?></div> -->
+							<div class="submit-url-input-container">
+					        <input class="submit-url-input" id="url_<?php echo $activeCampaign['campaign_id'];?>" type="text" name="url" class="text-box" value=""/>
 							<?php //if($activeCampaign['url'] == null || $activeCampaign['url'] == ''){?>
-							<input id = "url_report_submit_<?php echo $activeCampaign['campaign_id'];?>" type="button" value="<?php echo $this->translate("Home_URL_Report_Submit")?>" class="button" onclick="submitURL(<?php echo $activeCampaign['campaign_id'];?>);"/>
+							<input class="btn btn-primary" id = "url_report_submit_<?php echo $activeCampaign['campaign_id'];?>" type="button" value="<?php echo $this->translate("Home_URL_Report_Submit")?>" class="button" onclick="submitURL(<?php echo $activeCampaign['campaign_id'];?>);"/>
 				        <?php 
 				            $i = 0;
 				            foreach ($this->urlreport as $url){
@@ -374,9 +383,12 @@
 						</div>
 					</div>
 					<div id="tabs-contact" class="report-panel">
-						<h2><?php echo $activeCampaign["name"]?></h2>
+						<div class='report-panel-header'>
+							<span class="campaign-name"><?php echo $activeCampaign["name"]?></span>
+							<span class="tab-description"> <?php echo $this->translate('Report_Contact_Description')?><span>
+						</div>
 						<div class="contact-text">
-							<p><?php echo $this->translate('Contact_Text_Title')?><p>
+							<!-- <p><?php echo $this->translate('Contact_Text_Title')?><p> -->
 					    <p><img src='image/yahoo_message.png'/><?php echo $this->translate('Contact_Text_Yahoo')?></p>
 					    <p><img src='image/facebook_icon.png'/><?php echo $this->translate('Contact_Text_Facebook')?></p>
 					    <p><img src='image/mobile_icon.png'/><?php echo $this->translate('Contact_Text_Mobile')?></p>

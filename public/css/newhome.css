@@ -2720,7 +2720,7 @@ label.error {
 	background: #FFF5AA; /* <------------------------ background of tab content area */
 	border: 1px solid #38402D; /* <------------------------ border of tab content area */
 	position: relative;
-	min-height: 200px;
+	/*min-height: 200px;*/
 	height: auto !important;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
@@ -2732,4 +2732,38 @@ label.error {
 #tabs .ui-tabs-nav li {
 	border-bottom-width: 1px !important;
 	margin: 0px;
+}
+
+.report-panel .report-panel-header {
+	margin-bottom: 8px;
+}
+
+.report-panel .report-panel-header .campaign-name{
+	font-size: 1.3em;
+	color: blue;
+}
+
+.upload-photo-button-container {
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.upload-photo-button-container .btn {
+	color: white !important;
+}
+
+.submit-url-container {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.submit-url-input-container {
+	position: relative;
+	width: 60%;
+	left: 15%;
+}
+
+.submit-url-input {
+	margin-bottom: 0px !important;
 }

@@ -57,10 +57,10 @@
 		</tu>
 		<tu tuid='Upload_Photo_Text'>
 			<tuv xml:lang="zh">
-				<seg>上传图片，赚取更多积分！</seg>
+				<seg>上传你与朋友分享这次活动的图片就能额外赚取100分哦！</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Upload photos about your Spark report and earn extra points!</seg>
+				<seg>Upload photos of you speaking with your friends about this campaign to earn extra 100 points.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Contact_Text_Title'>
@@ -93,6 +93,30 @@
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Mobile (SMS only): +63 9XX XXXXXXX</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Report_Url_Description'>
+			<tuv xml:lang="zh">
+				<seg>你可以提交一个你和你朋友谈话的网址，我们将会浏览这个页面并尽早的通知你如果你可以提交下一个报告。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You may submit a URL of your conversation with your friends. We will review it as soon as possible then inform you once you can submit the next report.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Report_Contact_Description'>
+			<tuv xml:lang="zh">
+				<seg>如有任何疑问，请联系我们！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Do you have questions to ask? Please do not hesitate to contact us!</seg>
+			</tuv>
+		</tu>		
+		<tu tuid='Report_Submit_Description'>
+			<tuv xml:lang="zh">
+				<seg>发送你与朋友的对话内容给我们。诚实详尽的内容会为你赚来更多的积分和活动。只有在我们批准了你当前的这个报告之后才可以提交下一个报告。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Start sending us your conversation with your friends. Honest and detailed ones will earn you more points and more campaigns. You may submit the next report once we have approved the previous one.</seg>
 			</tuv>
 		</tu>
                 <tu tuid='Account_Info_Pic'>
