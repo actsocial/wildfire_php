@@ -34,7 +34,7 @@ You will get:</br>
 				<br/>
 				<!-- <li ><a href="http://blog.xingxinghuo.com " target="blank">Wildfire Blog</a></li> -->
 				<div class="campaign-content" >
-					<div class="submit-report"><a  onmouseover="openSubMenu();" onmouseout="closeSubMenu();" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>" class="standard-report-button">Report</a>
+					<div class="submit-report"><a  onmouseover="openSubMenu();" onmouseout="closeSubMenu();" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>" class="standard-report-button"><span style="font-size:11px;">Submit New Report</span></a>
 
 					</div>
 					<div class="submit-menu" style="display:none;margin-top:28px;margin-left: 248px;" onmouseover="openSubMenu();" onmouseout="closeSubMenu();">
@@ -63,10 +63,10 @@ You will get:</br>
 				</div>
 
 				<div style="float:left;align:center;margin-left:50px;margin-top:50px;">
-					<li style="padding-top:4px;">Reports Submitted: <strong><?php echo $this->reportCount?></strong> </li>
-					<li style="padding-top:4px;">Spark Points Earned: <strong><?php echo $this->campaignPoint?></strong> </li><br>
-					<li><h1 style="font-size:16px;color:#3461ad;">More Information</h1></li>
-					<li><a href="http://blog.xingxinghuo.com " target="blank">Wildfire Blog</a></li>
+					<li style="padding-top:4px;">No. of Reports Submitted:<strong><?php echo $this->reportCount?></strong> </li>
+					<li style="padding-top:4px;">Total Spark points Earned:<strong><?php echo $this->campaignPoint?></strong> </li><br>
+					<!-- <li><h1 style="font-size:16px;color:#3461ad;">More Information</h1></li>
+					<li><a href="http://blog.xingxinghuo.com " target="blank">Wildfire Blog</a></li> -->
 				</div><div class="clear"></div>
 			
 			<!--<a href="<?php echo $this->baseUrl();?>/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>-->

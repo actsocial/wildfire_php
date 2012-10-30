@@ -12,7 +12,7 @@ class RegisterForm extends Zend_Form
 		$auth_code
 		//->setRequired(true)
 		->addFilter('StripTags')
-		->setAttrib('style','width:140px;')
+		->setAttrib('style','width:70px;')
 		->addFilter('StringTrim');
 		//->addValidator('NotEmpty');
 		
@@ -21,8 +21,8 @@ class RegisterForm extends Zend_Form
 		->setRequired(true)
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
-		//->addValidator('NotEmpty')
-		->addValidator('EmailAddress')
+		->addValidator('NotEmpty')
+		//->addValidator('EmailAddress')
 		->addErrorMessage($this->getView()->translate('Register_email_is_invalid'));
 		
 		$login_phone = new Zend_Form_Element_Text('loginPhone');

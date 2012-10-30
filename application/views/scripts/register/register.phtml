@@ -22,12 +22,12 @@
 <script type="text/javascript" media="screen" src="<?php echo $this->baseUrl();?>/js/prototype-1.6.0.2.js"></script>
 <script type="text/javascript" src="<?php echo $this->baseUrl();?>/js/jquery.validate.min.js"></script>
 <STYLE TYPE="text/css" MEDIA=screen>
-<!-- 
+ 
   label.error {   
     padding-left:10px;
     color: red;display: none;   
   }
--->
+
 </STYLE>
 <!-- 
 <link rel="stylesheet"
@@ -92,23 +92,36 @@
 		<?php endforeach?>
 	</div>
 <?php if(!$this->registered){?>
+
+
+
+		<div style="float:left;margin-top:75px;margin-left:5px;width:230px;">
+			<table border="0" cellspacing="0" cellpadding="0" style="width:230px;">
+				<colgroup>
+					<col class="label" />
+					<col class="value" />
+				</colgroup>
+				<tr>
+					<td style="font-size:10px;width:130px;"><?php echo $this->translate('Enter_Code');?></td>
+					<td style="text-align:left;"><?php echo $this->registerForm->auth_code ;?></td>
+				</tr>
+			</table>
+			<!-- <p style="font-size:18px">Sign Up</p> -->
+			<a href="<?php echo $this->facebook_login_url;?>">
+		   		<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
+		  		<img src="<?php echo $this->baseUrl();?>/images/signupfacebook.jpg" style="margin-left:25px;">
+			</a>
+		</div>
+
+		<div style="float:left;margin-top:75px;margin-left:50px;width:20px;"><span style="font-size:18px">OR</span></div>
+
 <form id="registerForm" 
 			action="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>"
-			method="post" style="width:300px;float:left;margin-left:20px;" >
-		<fieldset><legend><?php echo $this->translate('Invitation_Code');?></legend>
-		<table border="0" cellspacing="0" cellpadding="0">
-			<colgroup>
-				<col class="label" />
-				<col class="value" />
-			</colgroup>
-			<tr>
-				<td><?php echo $this->translate('Enter_Code');?></td>
-				<td><?php echo $this->registerForm->auth_code ;?></td>
-			</tr>
-		</table>
-
-		</fieldset>
-		<fieldset><legend><?php echo $this->translate('Register_Contact_Information');?></legend>
+			method="post" style="width:300px;float:left;margin-left:50px;" >
+<!-- 		<fieldset><legend><?php echo $this->translate('Invitation_Code');?></legend>
+		</fieldset> -->
+		<fieldset><!-- <legend><?php echo $this->translate('Register_Contact_Information');?></legend> -->
+		Sign up with your email address:
 		<table border="0" cellspacing="0" cellpadding="0">
 			<colgroup>
 				<col class="label" />
@@ -145,8 +158,7 @@
 				<col class="value" />
 				<col class="other" />
 			</colgroup>
-		<!--	
-                       <tr>
+			<tr style="display:none;">
 				<td colspan="3"><input onclick="allowSubmit();" type="checkbox"
 					name="agree" id="agree" class="agreement" disabled="disabled" /><?php echo $this->translate('Register_Contact_Privacy_Policy_Content1');?>
 				<a
@@ -157,7 +169,7 @@
 					href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=88&amp;Itemid=60"
 					target="_blank"><?php echo $this->translate('Register_Contact_Privacy_Policy_Content4');?></a></td>
 
-			</tr>-->
+			</tr>
 		</table>
 		</fieldset>
 		<div>
@@ -167,15 +179,7 @@
                 <br/>
 		<div class="buttons-bar" style="float: left;"><?php echo $this->registerForm->submit ;?><div class="clear"></div></div>
 		</form>
-		<div style="float:left;margin-top:150px;margin-left:50px;width:20px;"><span style="font-size:18px">OR</span></div>
-		<div style="float:left;margin-top:150px;margin-left:50px;">
-			<!-- <p style="font-size:18px">Sign Up</p> -->
-
-			<a href="<?php echo $this->facebook_login_url;?>">
-		   		<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
-		  		<img src="<?php echo $this->baseUrl();?>/images/signupfacebook.jpg">
-				</a>
-		</div>
+				
 <?php }else{?>
 <div class="article-box">
 <div class="article-box-inner">
@@ -205,6 +209,13 @@
 
 jQuery().ready(function() {
 // validate signup form on keyup and submit
+
+registerEmail_isnotnull=false;
+name_isnotnull=false;
+loginPhone_isnotnull=false;
+registerPassword_isnotnull=false;
+repeat_isnotnull=false;
+
 	jQuery("#registerForm").validate({
 		rules: {
 			registerEmail: {
@@ -253,6 +264,57 @@ jQuery().ready(function() {
 			}
 		}
 	});
+
+	/*jQuery("#registerEmail").bind("blur",function(){
+		
+		if(jQuery("#registerEmail").value!=""&&jQuery("#name").value!=""&&jQuery("#loginPhone").value!=""&&jQuery("#registerPassword").value!=""&&jQuery("#repeat").value!=""){
+			$("register").disabled=false;
+			$("register").className="input-enabled";
+		}else{
+			$("register").disabled=true;
+			$("register").className="";
+		}
+
+	});
+
+	jQuery("#name").bind("blur",function(){
+		if(jQuery("#registerEmail").value!=""&&jQuery("#name").value!=""&&jQuery("#loginPhone").value!=""&&jQuery("#registerPassword").value!=""&&jQuery("#repeat").value!=""){
+			$("register").disabled=false;
+			$("register").className="input-enabled";
+		}else{
+			$("register").disabled=true;
+			$("register").className="";
+		}
+	});
+
+	jQuery("#loginPhone").bind("blur",function(){
+		if(jQuery("#registerEmail").value!=""&&jQuery("#name").value!=""&&jQuery("#loginPhone").value!=""&&jQuery("#registerPassword").value!=""&&jQuery("#repeat").value!=""){
+			$("register").disabled=false;
+			$("register").className="input-enabled";
+		}else{
+			$("register").disabled=true;
+			$("register").className="";
+		}
+	});
+
+	jQuery("#registerPassword").bind("blur",function(){
+		if(jQuery("#registerEmail").value!=""&&jQuery("#name").value!=""&&jQuery("#loginPhone").value!=""&&jQuery("#registerPassword").value!=""&&jQuery("#repeat").value!=""){
+			$("register").disabled=false;
+			$("register").className="input-enabled";
+		}else{
+			$("register").disabled=true;
+			$("register").className="";
+		}
+	});
+
+	jQuery("#repeat").bind("blur",function(){
+		if(jQuery("#registerEmail").value!=""&&jQuery("#name").value!=""&&jQuery("#loginPhone").value!=""&&jQuery("#registerPassword").value!=""&&jQuery("#repeat").value!=""){
+			$("register").disabled=false;
+			$("register").className="input-enabled";
+		}else{
+			$("register").disabled=true;
+			$("register").className="";
+		}*/
 });
 
 <?php if (true):?>
@@ -300,14 +362,14 @@ function allowInput(){
 	$("registerPassword").className="input-enabled";
 	$("repeat").className="input-enabled";
 //	if ($("agree").checked == true){
-//		$("register").disabled=false;
+	// $("register").disabled=false;
 //		$("register").className="input-enabled";
 //	}
 }
 
 function forbidInput(){
 	$("registerEmail").disabled=true;
-		$("loginPhone").disabled=true;
+	$("loginPhone").disabled=true;
 	$("name").disabled=true;
 	$("registerPassword").disabled=true;
 	$("repeat").disabled=true;
