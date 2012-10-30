@@ -39,7 +39,7 @@
 				<seg>主页</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>my home</seg>
+				<seg>My Home</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Index_HOME'>
@@ -242,7 +242,7 @@
 				<seg>活动</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>campaigns</seg>
+				<seg>Campaigns</seg>
 			</tuv>
 		</tu>
 		<tu tuid='TRAINING'>
@@ -250,7 +250,7 @@
 				<seg>培训</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>training</seg>
+				<seg>Training</seg>
 			</tuv>
 		</tu>
 		<tu tuid='POLLS'>
@@ -258,7 +258,7 @@
 				<seg>问卷</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>polls</seg>
+				<seg>Polls</seg>
 			</tuv>
 		</tu>
 		<tu tuid='PROFILE'>

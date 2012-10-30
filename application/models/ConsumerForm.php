@@ -25,7 +25,7 @@ class ConsumerForm extends Zend_Form
 							));
 
 		$phone = new Zend_Form_Element_Text('phone');
-		$phone->setLabel($this->getView()->translate('CONTACT INFORMATION_PHONE'))
+		$phone->setLabel($this->getView()->translate('CONTACT INFORMATION_CONTACT_NUMBER'))
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
 		->addValidators(array(array('StringLength', false, array(0, 50)),))
@@ -127,8 +127,9 @@ class ConsumerForm extends Zend_Form
 		$gender = new Zend_Form_Element_Radio('gender');
 		$gender->setLabel($this->getView()->translate('Consumer_gender'))
 		->addMultiOptions( array(
-							'0' => $this->getView()->translate('Consumer_gender_Female'), 
 							'1' => $this->getView()->translate('Consumer_gender_Male'),
+							'0' => $this->getView()->translate('Consumer_gender_Female'), 
+							
 		))
 		->setSeparator('&nbsp;&nbsp;')
 		->addDecorators(array(
@@ -205,18 +206,21 @@ class ConsumerForm extends Zend_Form
 		));
 		$have_children->setSeparator('&nbsp;');
 		//
-		$children_birth_year = new Zend_Form_Element_Select('children_birth_year');
+
+		$children_birth_year = new Zend_Form_Element_Text('children_birth_year');
+		// $children_birth_year->setLabel($this->getView()->translate('Consumer_children_birth_year'));
+		// $children_birth_year->addMultiOption('', '');
+		// $children_birth_year->addMultiOption('<1980', $this->getView()->translate('Consumer_children_birth_year_Before 1980'));
+		// for($i = 1980; $i<=2010; $i++){
+			// $children_birth_year->addMultiOption($i, $i);
+		// }
+		// $children_birth_year->addMultiOption('>2010', $this->getView()->translate('Consumer_children_birth_year_After 2010'))
+		// ->addDecorators(array(
+		    // array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'children_birth_year_value')),
+		    // array('Label')
+		// ));
 		$children_birth_year->setLabel($this->getView()->translate('Consumer_children_birth_year'));
-		$children_birth_year->addMultiOption('', '');
-		$children_birth_year->addMultiOption('<1980', $this->getView()->translate('Consumer_children_birth_year_Before 1980'));
-		for($i = 1980; $i<=2010; $i++){
-			$children_birth_year->addMultiOption($i, $i);
-		}
-		$children_birth_year->addMultiOption('>2010', $this->getView()->translate('Consumer_children_birth_year_After 2010'))
-		->addDecorators(array(
-		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'children_birth_year_value')),
-		    array('Label')
-		));
+
 		//
 		$income = new Zend_Form_Element_Select('income');
 		$income->setLabel($this->getView()->translate('Consumer_income_level_per_month'));

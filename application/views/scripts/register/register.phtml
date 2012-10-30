@@ -119,12 +119,12 @@
 				<td><?php echo $this->registerForm->registerEmail ;?></td>
 			</tr>
 			<tr>
-				<td><?php echo $this->translate('Register_Contact_Phone');?></td>
-				<td><?php echo $this->registerForm->loginPhone ;?></td>
-			</tr>
-			<tr>
 				<td><?php echo $this->translate('Register_Contact_Name');?></td>
 				<td><?php echo $this->registerForm->name ;?></td>
+			</tr>
+			<tr>
+				<td><?php echo $this->translate('Register_Contact_Phone');?></td>
+				<td><?php echo $this->registerForm->loginPhone ;?></td>
 			</tr>
 			<tr>
 				<td><?php echo $this->translate('Register_Contact_Password');?></td>
@@ -168,11 +168,12 @@
 		<div class="buttons-bar" style="float: left;"><?php echo $this->registerForm->submit ;?><div class="clear"></div></div>
 		</form>
 		<div style="float:left;margin-top:150px;margin-left:50px;width:20px;"><span style="font-size:18px">OR</span></div>
-		<div style="float:left;margin-top:130px;margin-left:50px;">
-			<p style="font-size:18px">Sign Up</p>
+		<div style="float:left;margin-top:150px;margin-left:50px;">
+			<!-- <p style="font-size:18px">Sign Up</p> -->
+
 			<a href="<?php echo $this->facebook_login_url;?>">
 		   		<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
-		  		<img src="<?php echo $this->baseUrl();?>/images/facebook_login.png"> 
+		  		<img src="<?php echo $this->baseUrl();?>/images/signupfacebook.jpg">
 				</a>
 		</div>
 <?php }else{?>

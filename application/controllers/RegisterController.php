@@ -1,5 +1,6 @@
 <?php
-
+require 'facebook-php-sdk/facebook.php';
+include_once( 'facebook-php-sdk/facebookconfig.php' );
 class RegisterController extends MyController
 {
 	function registerAction()
@@ -23,6 +24,13 @@ class RegisterController extends MyController
 
 		$loginform = new LoginForm();
 		$this->view->form =$loginform;
+
+		$facebook = new Facebook(array(
+		  'appId'  => FB_AKEY,
+		  'secret' => FB_SKEY,
+		  'authorizationRedirectUrl' => FB_CALLBACK_URL,
+		));
+		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email'));
 
 		$form = new RegisterForm();
 		$form->setAttrib('id', 'registerForm');
