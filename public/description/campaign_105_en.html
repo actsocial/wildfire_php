@@ -5,26 +5,14 @@
 <div class="main-column campaign-content" style="width:430px;margin-left:80px;padding-top:5px;">
 	<span style="width:280px;float:left;margin-top:10px;">Quality for Life™, a globally recognized brand, supplies high-quality vitamins ingredients to companies worldwide. It aims at improving your education about vitamins to give you peace of mind when you choose food and beverage products
 </span>
-	<div class="submit-report"><a  onmouseover="openSubMenu();" onmouseout="closeSubMenu();" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>" class="standard-report-button">Report</a>
-		<div class="submit-menu" style="display:none;" onmouseover="openSubMenu();" onmouseout="closeSubMenu();">
-			<ul>
-				<li><a onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>">Submit Report</a></li>
-
-				<li><a href="#" onclick="submitUrlDialogOpen();">Submit URL</a></li>
-			</ul>
-	</div>
-	</div>
+	
 
 	
 	
 	
 </div>
 <div class="campaign-content">
-
-	<p class="zh" style="width:640px;line-height:15px">Thank you very much for participating in this campaign. The more reports you submit to us, the more chances of getting points that you can exchange for gifts from Wildfire.</p>
 	
-
-
 <!-- <p>
 You will get:</br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;－ One pack of NAN® MOM&me product for you to experience and enjoy</br>
@@ -35,15 +23,43 @@ You will get:</br>
 <div class="campaign-summary campaign-campbells">
          <!-- <div>&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'precampaignfinished', 'survey'=>0));?>" target='_blank'>Update Campaign Personal Information</a></div> -->
 	<div id="singapore">
+
+<!-- add panel for submit report -->
+
+<div class="spark-report-box">
+		<div class="spark-report-box-inner" style="height:150px;">
+			<div class="ul-wrapper" style="font-size:12px;color:gray">
+				<!-- <h1 style="font-size:16px;color:#3461ad;">More Information</h1> -->
+				<p class="zh" style="width:640px;line-height:15px;margin-top:15px;font-family:Lucida grande;font-size:12px;">Thank you very much for participating in this campaign. The more reports you submit to us, the more chances of getting points that you can exchange for gifts from Wildfire.</p>
+				<br/>
+				<!-- <li ><a href="http://blog.xingxinghuo.com " target="blank">Wildfire Blog</a></li> -->
+				<div class="campaign-content" >
+					<div class="submit-report"><a  onmouseover="openSubMenu();" onmouseout="closeSubMenu();" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>" class="standard-report-button">Report</a>
+
+					</div>
+					<div class="submit-menu" style="display:none;margin-top:28px;margin-left: 248px;" onmouseover="openSubMenu();" onmouseout="closeSubMenu();">
+					<ul>
+						<li><a onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>">Submit Report</a></li>
+
+						<li><a href="#" onclick="submitUrlDialogOpen();">Submit URL</a></li>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
 	<div class="spark-report-box" style="margin-bottom:15px;">
-		<div class="spark-report-box-inner">
-			<div class="ul-wrapper" style="font-size:14px;width:100%;">
+		<div class="spark-report-box-inner" >
+			<div class="ul-wrapper" style="font-size:14px;width:100%; margin-left:15px;">
 				<h1 style="font-size:16px;color:#309BE4;">Quality for Life<sup style="font-size:8px">TM</sup> WOM Campaign
 </h1>
 				<br/>
 				<div style="float:left;margin-left:50px;">
 					<strong style="color:#309BE4;font-size:8em"><?php echo $this->dayCount?></strong>
-					<br>Days Remaining
+					<br>days left for the  <?php echo $this->campaign["name"]; ?> <br>WOM Campaign.
 				</div>
 
 				<div style="float:left;align:center;margin-left:50px;margin-top:50px;">
@@ -57,6 +73,7 @@ You will get:</br>
 			</div>
 		</div>
 	</div>
+
 	<div class="spark-report-box" style="display:none">
 		<div class="spark-report-box-inner">
 			<div class="ul-wrapper" style="font-size:14px;">
