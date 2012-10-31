@@ -104,8 +104,8 @@
 <div class="article-box" style="margin-bottom: 15px;" >
     <div class="article-box-inner" >
 		<?php if ($this->consumer!=null){ ?>
-			<p style="margin: 10px 0 5px 0;font-size:120%;font-weight: gray;"><?php echo $this->translate("Home_head_content_1")?></p>
-			<p style="margin: 0 0 5px 0;font-size:120%;font-weight: gray;"><?php echo $this->translate("Home_head_content_2_1")?>
+			<p style="margin: 10px 0 5px 0;font-size:120%;"><?php echo $this->translate("Home_head_content_1")?></p>
+			<p style="margin: 0 0 5px 0;font-size:120%;"><?php echo $this->translate("Home_head_content_2_1")?>
 			<!-- <a href="<?php echo $this->url(array('controller'=>'training',	'action'=>'howitworks','id'=>'0'));?>"><?php echo $this->translate("Home_head_content_2_2")?></a> -->
 			</p>
 			<div class="clear"></div>
@@ -164,7 +164,7 @@
 				<?php if ($this->consumerextrainfo>=90): ?>
 				<div class="progressbar-blu">
 				<?php endif;?>
-				<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" class="progressbar"><div style="width:<?php echo $this->consumerextrainfo ?>px"></div></a></div>
+				<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" class="progressbar"><div style="width:<?php echo $this->consumerextrainfo ?>px"></div></a><br><a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" tyle="font-size:10px;">Edit Your Profile</a></div>
 				<span><a href='<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>'><?php echo $this->consumerextrainfo ?>%</a></span>
 			</div>
 		</div>
@@ -414,13 +414,13 @@
 <?php $i=1; foreach ($this->allInvitations as $invitation):?>
 	<div class="spark-report-box">
 		<div class="spark-report-box-inner">
-			<h2><?php echo $invitation["name"]?></h2>
+			<!-- <h2><?php echo $invitation["name"]?></h2> -->
 		
             <div class="ul-wrapper"  id="ul_tab_<?php echo $i?>"<?php if ($i>1):?> style="display:true;"<?php endif;?>>
 			<?php $i++;?>
 			<ul>
 				
-				<div style="border:1px dashed #3AB6EB;height:110px;width:630px">
+				<div style="border:1px dashed #3AB6EB;height:110px;width:630px;margin-top:25px;">
 					<div style="float: left;">
 						<?php if($invitation['type'] == 'mission'){?>
 							<?php if($invitation['name']=="内测-美妆达人"){?>
