@@ -1,4 +1,4 @@
-<div class="article-box">
+<!-- <div class="article-box">
     <div class="article-box-inner">
         <h1 style="margin-left:0;">
             <?php echo $this->
@@ -9,8 +9,8 @@
                 translate('INVITATION_MAIL_INTRODUCTION_CONTENT'); ?>
         </p>
     </div>
-</div>
-<div class="article-box" style="background:#fff;padding-top:0;">
+</div> -->
+<!-- <div class="article-box" style="background:#fff;padding-top:0;">
     <div class="article-box-inner" style="background:#fff;">
         <?php if ($this->notSendMailAmont > 0) { ?>
             <table>
@@ -54,8 +54,8 @@
                                         </div>
                                         <div class="">
                                             <?php echo $this->sendMailForm->message; ?>
-                                                <!--<textarea rows="5" cols="100"> Hello. I'm a member of Wildfire, the Chinese word-of-mouth consumer community.Wildfire helps its members spread word of mouth about products and services naturally and honestly through free products, coupons and more. Joining is totally free and there is no obligation involved. Interested in learning more and signing up?
-                                                </textarea>-->
+                                                <textarea rows="5" cols="100"> Hello. I'm a member of Wildfire, the Chinese word-of-mouth consumer community.Wildfire helps its members spread word of mouth about products and services naturally and honestly through free products, coupons and more. Joining is totally free and there is no obligation involved. Interested in learning more and signing up?
+                                                </textarea>
                                         </div>
                                         <div id="notice" style="padding-bottom: 10px; display: none; font-size: 14px; color: #f00; font-weight: bold;">
                                             <?php echo $this->translate('INVITATION_MAIL_SEND_NOTICE') ?>
@@ -79,7 +79,7 @@
                                                 justone - 1; $i++): ?>
                                                 <?php $temp="email" . $i ?>
                                                     <li style="width: 150px; overflow: hidden;">
-                                                        <!--<?php echo $this->to_str ?>-->
+                                                        <?php echo $this->to_str ?>
                                                         <?php echo $this->receivers[$i]['to']; ?>
                                                     </li>
                                                     <?php endfor; ?>
@@ -89,7 +89,7 @@
                             </table>
                             <dl>
                                 <div class="invite-emails-include" style="display:none;" id="preview">
-                                    <!-- <h2><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_HINT'); ?></h2>
+                                     <h2><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_HINT'); ?></h2>
                                     <p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_1'); ?></p>
                                     <ul>
                                     <li><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_2'); ?></li>
@@ -99,7 +99,136 @@
                                     <p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_5'); ?></p>
                                     <p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_6'); ?></p>
                                     <p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_7'); ?></p>
-                                    -->
+                                    
+                                    <img alt="" src="../public/image/demo.png" >
+                                </div>
+                            </dl>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+            <?php } else { ?>
+                <h1>
+                    <?php echo $this->
+                        translate('You_currently_have_no_remaining'); ?>
+                </h1>
+                <p>
+                    <?php echo $this->
+                        translate('You_can_receive_more_invitations'); ?>
+                </p>
+                <?php } ?>
+    </div>
+</div> -->
+
+<div class="article-box">
+    <div class="article-box-inner">
+        <h1 style="margin-left:0;">
+            <?php echo $this->
+                translate('INVITATION_MAIL_CAMPAIGN_INTRODUCTION_HEAD'); ?>
+        </h1>
+        <p>
+            <form>
+                <table>
+                    <tr>
+                        <td>Select a campaign:</td>
+                        <td></td>
+                    </tr>
+                </table>
+            </form>
+        </p>
+    </div>
+</div>
+
+<div class="article-box" style="background:#fff;padding-top:0;">
+    <div class="article-box-inner" style="background:#fff;">
+        <?php if ($this->notSendMailAmont > 0) { ?>
+            <table>
+                <tr>
+                    <td>
+                        <h2>
+                            <?php echo $this->translate('INVITATION_MAIL_LIST_PART1'); ?>
+                            <?php echo $this->notSendMailAmont; ?>
+                            <?php echo $this->translate('INVITATION_MAIL_LIST_PART2'); ?>
+                        </h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <form id='f' action="<?php echo $this->url(array('controller' => 'invitation', 'action' => 'send')); ?>"
+                        method="post">
+                            <table>
+                                <tr>
+                                    <td valign="top">
+                                        <div align="left">
+                                            <?php echo $this->translate("INVITATION_FRIEND"); ?>
+                                        </div>
+                                        <div>
+                                            <?php $temp1="email" . $this->justone ?>
+                                            <?php echo $this->sendMailForm->$temp1; ?>
+                                        </div>
+                                        <div style="clear:both; ">
+                                        </div>
+                                        <div>
+                                            <p style="margin-top:0px; margin-bottom:0px; padding-top:5px; padding-bottom:0px;">
+                                                <?php echo $this->translate("INVITATION_MAIL_SUBJECT"); ?>
+                                            </p>
+                                        </div>
+                                        <div class="">
+                                            <?php echo $this->sendMailForm->subject; ?>
+                                        </div>
+                                        <div>
+                                            <p style="margin-top:0px; margin-bottom:0px; padding-top:5px; padding-bottom:0px;">
+                                                <?php echo $this->translate("INVITATION_MAIL_CONTENT"); ?>
+                                            </p>
+                                        </div>
+                                      <!--   <div class="">
+                                            <?php echo $this->sendMailForm->message; ?>
+                                                <textarea rows="5" cols="100"> Hello. I'm a member of Wildfire, the Chinese word-of-mouth consumer community.Wildfire helps its members spread word of mouth about products and services naturally and honestly through free products, coupons and more. Joining is totally free and there is no obligation involved. Interested in learning more and signing up?
+                                                </textarea>
+                                        </div> -->
+                                        <div id="notice" style="padding-bottom: 10px; display: none; font-size: 14px; color: #f00; font-weight: bold;">
+                                            <?php echo $this->translate('INVITATION_MAIL_SEND_NOTICE') ?>
+                                        </div>
+                                        <div class="send-invitation">
+                                            <input id="submit" type="submit" value="<?php echo $this->translate('INVITATION_MAIL_SEND') ?>"
+                                            onclick="onSend();return true;">
+                                        </div>
+                                        <?php echo $this->sendMailForm->sentMailAmount; ?>
+                                            <a tyle='cursor:hand;' id="preview_hide" onclick="show_info()">
+                                                <div id="changeable_text" style="width:500px;">
+                                                    <img id="img_change" alt="" src="../public/image/colsed.png">
+                                                    <?php echo $this->translate('MAIL_PREVIEW') ?>
+                                                </div>
+                                            </a>
+                                    </td>
+                                    <td valign="top" width="30%">
+                                        <?php echo $this->translate("INVITED_FRIENDS"); ?>
+                                        <ul>
+                                            <?php for ($i=1 ; $i < $this->
+                                                justone - 1; $i++): ?>
+                                                <?php $temp="email" . $i ?>
+                                                    <li style="width: 150px; overflow: hidden;">
+                                                        <?php echo $this->to_str ?>
+                                                        <?php echo $this->receivers[$i]['to']; ?>
+                                                    </li>
+                                                    <?php endfor; ?>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                            <dl>
+                                <div class="invite-emails-include" style="display:none;" id="preview">
+                                     <h2><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_HINT'); ?></h2>
+                                    <p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_1'); ?></p>
+                                    <ul>
+                                    <li><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_2'); ?></li>
+                                    <li><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_3'); ?></li>
+                                    <li><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_4'); ?></li>
+                                    </ul>
+                                    <p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_5'); ?></p>
+                                    <p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_6'); ?></p>
+                                    <p><?php echo $this->translate('INVITATION_MAIL_CONTENT_ADD_7'); ?></p>
+                                    
                                     <img alt="" src="../public/image/demo.png" >
                                 </div>
                             </dl>
@@ -119,6 +248,8 @@
                 <?php } ?>
     </div>
 </div>
+
+
 <script language="javascript">
     function show_info() {
         var previe_text = document.getElementById("preview");

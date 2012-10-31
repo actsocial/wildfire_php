@@ -102,11 +102,11 @@
 					<col class="value" />
 				</colgroup>
 				<tr>
-					<td style="font-size:10px;width:130px;"><?php echo $this->translate('Enter_Code');?></td>
+					<td style="font-size:10px;width:130px;text-align:right;"><?php echo $this->translate('Enter_Code');?></td>
 					<td style="text-align:left;"><?php echo $this->registerForm->auth_code ;?></td>
 				</tr>
 			</table>
-			<!-- <p style="font-size:18px">Sign Up</p> -->
+			<!-- <p style="font-size:18px">Sign Up</p> --><br>
 			<a href="<?php echo $this->facebook_login_url;?>">
 		   		<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
 		  		<img src="<?php echo $this->baseUrl();?>/images/signupfacebook.jpg" style="margin-left:25px;">
@@ -121,7 +121,7 @@
 <!-- 		<fieldset><legend><?php echo $this->translate('Invitation_Code');?></legend>
 		</fieldset> -->
 		<fieldset><!-- <legend><?php echo $this->translate('Register_Contact_Information');?></legend> -->
-		Sign up with your email address:
+		<p style="line-height:20px;font-size:16px;">Sign up with your email address:</p>
 		<table border="0" cellspacing="0" cellpadding="0">
 			<colgroup>
 				<col class="label" />

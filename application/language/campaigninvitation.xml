@@ -215,7 +215,17 @@
 			<tuv xml:lang="en">
 				<seg>How else would you expect us to grow besides by word-of-mouth? Help your friends out by sending them an invitation to become a Spark. They'll be sure to thank you later when you're participating in great campaigns together.</seg>
 			</tuv>
-		</tu>		
+		</tu>
+
+		<tu tuid='INVITATION_MAIL_CAMPAIGN_INTRODUCTION_HEAD'>
+			<tuv xml:lang="zh">
+				<seg>让你的朋友加入星星火活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invite your friends to join a campaign!</seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='INVITATION_MAIL_LIST_PART1_Sucessful'>
 			<tuv xml:lang="zh">
 				<seg>你已成功发送邀请邮件，请继续！</seg>

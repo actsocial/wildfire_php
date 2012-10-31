@@ -1137,7 +1137,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>暂时没有可供您参加的星星活动！</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>All campaigns are currently full!</seg>
+				<seg>Sorry, all campaigns are full.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='This_Spark_Campaign_is_Full_Content'>
