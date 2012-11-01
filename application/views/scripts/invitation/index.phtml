@@ -120,7 +120,7 @@
     </div>
 </div> -->
 
-<div class="article-box">
+<div class="article-box" id="selectCampaigns">
     <div class="article-box-inner">
         <h1 style="margin-left:0;">
             <?php echo $this->
@@ -131,13 +131,42 @@
                 <table>
                     <tr>
                         <td>Select a campaign:</td>
-                        <td></td>
+                        <td>
+                            <select onchange="changeMailTemplate(this.value)">
+                                <option >Please Choose</option>
+                                <?php  foreach ($this->allCampaigns as $activeCampaign): ?>
+                                <option id="<?php echo $activeCampaign['id'] ?>" value="<?php echo $activeCampaign['id'] ?>"><?php echo $activeCampaign['name']?></option>
+                                <?php endforeach ?>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enter your friends’ email address:</td>
+                        <td><?php echo $this->sendMailForm->$temp1; ?></td>
                     </tr>
                 </table>
             </form>
         </p>
     </div>
 </div>
+
+<!-- 
+ <?php  foreach ($this->allCampaigns as $activeCampaign): ?>
+    <div class="article-box" style="background:#fff;padding-top:0;" id="<?php echo $activeCampaign; ?>" style="display:none">
+        <div class="article-box-inner" style="background:#fff;">
+            <?php echo $this->translate("INVITE_FRIENDS_TEMPLATE_".$activeCampaign['id']); ?>
+        </div>
+    </div>
+<?php endforeach ?> -->
+
+
+<div class="article-box" style="background:#fff;padding-top:0;" style="display:none">
+    <div class="article-box-inner" style="background:#fff;">
+        <h2>Invite Email Template</h2>
+        <?php echo $this->translate("INVITE_FRIENDS_TEMPLATE_105"); ?>
+    </div>
+</div>
+
 
 <div class="article-box" style="background:#fff;padding-top:0;">
     <div class="article-box-inner" style="background:#fff;">
@@ -249,6 +278,13 @@
     </div>
 </div>
 
+<script type="text/javascript">
+
+function changeMailTemplate(val){
+
+}
+
+</script>
 
 <script language="javascript">
     function show_info() {

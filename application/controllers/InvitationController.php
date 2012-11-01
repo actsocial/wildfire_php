@@ -8,9 +8,12 @@ class InvitationController extends MyController
 
 	function indexAction()
 	{
+		// error_reporting(0);
+
 		$this->view->title = $this->view->translate("Wildfire")." - ".$this->view->translate("Friend_Invitations");
 
 		$consumer = $this->_currentUser;
+
 		//selcet the email address which has been invited
 		$db = Zend_Registry::get('db');
 		$select = $db->select();
@@ -18,8 +21,18 @@ class InvitationController extends MyController
 		$select->where('consumer_id = ?',$this->_currentUser->id);
 		$receivers = $db->fetchAll($select);
 		
-		$select2=$db->select();
+		//select campaigns which were this consumer joined in.
+				
+		$select3 = $db->select();
+		$select3->from('campaign','campaign.*')
+				->join('campaign_invitation','campaign.id=campaign_invitation.campaign_id','campaign_invitation.state')
+				->where("campaign_invitation.state !='NEW' ")
+				->where("campaign_invitation.consumer_id = ?",$this->_currentUser->id);
+
+		$allCampaigns = $db->fetchAll($select3);
+		// print_r($allCampaigns);die();
 		
+		$select2=$db->select();
 		$select2->from('consumer','invitation_limit');
 		$select2->where('id =?',$this->_currentUser->id);
 		$default_count=$db->fetchAll($select2);
@@ -51,6 +64,7 @@ class InvitationController extends MyController
 			$this->view->Invitation_limit = $this->_maxInvitation;
 		}
 		$this->view->sendMailForm->sentMailAmount->setValue(count($receivers));
+		$this->view->allCampaigns = $allCampaigns;
 		//		Zend_Debug::dump($row->create_date);
 	}
 	

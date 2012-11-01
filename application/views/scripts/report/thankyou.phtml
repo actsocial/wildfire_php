@@ -29,9 +29,9 @@ jQuery(document).ready(function() {
 </script>
 <div class="article-box" style="height:120px;">
 	<div class="article-box-inner">
-		<h2><?php echo $this->translate('Thanks_For_report')?></h2>
+		<h2  style="text-align:center;"><?php echo $this->translate('Thanks_For_report')?></h2>
         <p style="padding-top:10px">
-            We will be checking your report then contact you at your registered email address. Please note that our reply may go to your Spam mailbox. Have a nice day!
+           We will check your report then contact you at your registered email address to inform you when you can submit the next one. Please note that our reply may go to your Spam mailbox. Have a nice day!
         </p>
 		<!-- <p style="padding-top: 10px;"><?php echo $this->translate('Thanks_For_Report_Content1')?>
 		<br/>
@@ -57,10 +57,10 @@ jQuery(document).ready(function() {
                 <br/> -->
 
                 <div class="buttons-bar" style="padding-top: 10px;">
-			<a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>">
+		             <a class="big-button-blue" style="margin-left:260px;" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>">
                             <?php echo $this->translate('Take_Me_Home')?>
-                        </a>
-		</div>
+                         </a>
+		        </div>
 	</div>
 </div>
 
