@@ -2,8 +2,8 @@
 <div class="campaign-images">
 	 <img src="<?php echo $this->baseUrl();?>/images/campaign/campaign_105_04.jpg" style="wildth:110px;height:110px"/>
 </div>
-<div class="main-column campaign-content" style="width:430px;margin-left:80px;padding-top:5px;">
-	<span style="width:280px;float:left;margin-top:10px;">Quality for Life™, a globally recognized brand, supplies high-quality vitamins ingredients to companies worldwide. It aims at improving your education about vitamins to give you peace of mind when you choose food and beverage products
+<div class="main-column campaign-content" style="width:430px;margin-left:20px;padding-top:5px;">
+	<span style="width:430px;float:left;margin-top:10px;"><span style="!important font-size:14px;font-family:arial;">Quality for Life™</span>, a globally recognized brand, supplies high-quality vitamins ingredients to companies worldwide. It aims at improving your education about vitamins to give you peace of mind when you choose food and beverage products
 </span>
 	
 
@@ -28,13 +28,14 @@ You will get:</br>
 
 <div class="spark-report-box">
 		<div class="spark-report-box-inner" style="height:150px;">
-			<div class="ul-wrapper" style="font-size:12px;color:gray">
+			<div class="ul-wrapper" style="font-size:12px;">
 				<!-- <h1 style="font-size:16px;color:#3461ad;">More Information</h1> -->
-				<p class="zh" style="width:640px;line-height:15px;margin-top:15px;font-family:Lucida grande;font-size:12px;">Thank you very much for participating in this campaign. The more reports you submit to us, the more chances of getting points that you can exchange for gifts from Wildfire.</p>
+				<p class="zh" style="width:640px;line-height:15px;margin-top:15px;font-family:Lucida grande;font-size:12px;margin-left:10px;">Thank you very much for participating in this campaign. The more reports you submit to us, the more chances of getting points that you can exchange for gifts from Wildfire.</p>
 				<br/>
 				<!-- <li ><a href="http://blog.xingxinghuo.com " target="blank">Wildfire Blog</a></li> -->
 				<div class="campaign-content" >
-					<div class="submit-report"><a  onmouseover="openSubMenu();" onmouseout="closeSubMenu();" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>" class="standard-report-button">Report</a>
+					<!-- remove a function onmouseover="openSubMenu();" onmouseout="closeSubMenu();" -->
+					<div class="submit-report"><a style="TEXT-DECORATION:none" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>" class="standard-report-button"><span style="font-size:11px;">Submit New Report</span></a>
 
 					</div>
 					<div class="submit-menu" style="display:none;margin-top:28px;margin-left: 248px;" onmouseover="openSubMenu();" onmouseout="closeSubMenu();">
@@ -54,19 +55,20 @@ You will get:</br>
 	<div class="spark-report-box" style="margin-bottom:15px;">
 		<div class="spark-report-box-inner" >
 			<div class="ul-wrapper" style="font-size:14px;width:100%; margin-left:15px;">
-				<h1 style="font-size:16px;color:#309BE4;">Quality for Life<sup style="font-size:8px">TM</sup> WOM Campaign
-</h1>
+				<!-- <h1 style="font-size:16px;color:#309BE4;">Quality for Life<sup style="font-size:8px">TM</sup> WOM Campaign
+</h1> -->
 				<br/>
-				<div style="float:left;margin-left:50px;">
-					<strong style="color:#309BE4;font-size:8em"><?php echo $this->dayCount?></strong>
-					<br>days left for the  <?php echo $this->campaign["name"]; ?> <br>WOM Campaign.
+				<div style="float:left;margin-left:2px;height:60%">
+					<div style="height:135px;"><strong style="color:#309BE4;font-size:8em;">&nbsp;&nbsp;&nbsp;<?php echo $this->dayCount?></strong></div>
+					<div>days left for the  <?php echo $this->campaign["name"]; ?> WOM Campaign.</div>
 				</div>
 
 				<div style="float:left;align:center;margin-left:50px;margin-top:50px;">
-					<li style="padding-top:4px;">Reports Submitted: <strong><?php echo $this->reportCount?></strong> </li>
-					<li style="padding-top:4px;">Spark Points Earned: <strong><?php echo $this->campaignPoint?></strong> </li><br>
-					<li><h1 style="font-size:16px;color:#3461ad;">More Information</h1></li>
-					<li><a href="http://blog.xingxinghuo.com " target="blank">Wildfire Blog</a></li>
+					<li style="padding-top:4px;">No. of Reports Submitted:<strong><?php echo $this->reportCount?></strong> </li>
+					<li style="padding-top:4px;">Total Spark points Earned:<strong><?php echo $this->campaignPoint?></strong> </li>
+					<li style="padding-top:4px;">Spark Points to Spend:<strong><?php echo $this->spendPoint?></strong> </li><br>
+					<!-- <li><h1 style="font-size:16px;color:#3461ad;">More Information</h1></li>
+					<li><a href="http://blog.xingxinghuo.com " target="blank">Wildfire Blog</a></li> -->
 				</div><div class="clear"></div>
 			
 			<!--<a href="<?php echo $this->baseUrl();?>/download/campaign_6.pdf" class="standard-bandbook-button" target="_blank">下载活动手册(PDF)</a>-->

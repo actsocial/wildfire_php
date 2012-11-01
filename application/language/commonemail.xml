@@ -6,6 +6,36 @@
 	</header>
 	<body>
 
+		<tu tuid='INVITE_FRIENDS_TEMPLATE_105'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[Hi!<br><br>
+
+				&nbsp;&nbsp;Join me in the word-of-mouth campaign for Quality for Life Philippines.<br><br>
+
+				&nbsp;&nbsp;Kindly answer the survey by clicking the link below. Once you are selected, Wildfire will contact you directly to formally invite you to join this campaign: <a href="https://www.facebook.com/QualityForLifePhilippines/app_127709503932081">https://www.facebook.com/QualityForLifePhilippines/app_127709503932081 <br><br><br>
+
+				&nbsp;&nbsp;For more information about Quality for Life Philippines, you can visit the official Facebook page at www.facebook.com/QualityForLifePhilippines. Please do not forget to click the Like button to receive updates about health, vitamins, and nutrition!<br><br>
+
+				Have a great day!<br>
+
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Hi!<br><br>
+
+				&nbsp;&nbsp;Join me in the word-of-mouth campaign for Quality for Life Philippines.<br><br>
+
+				&nbsp;&nbsp;Kindly answer the survey by clicking the link below. Once you are selected, Wildfire will contact you directly to formally invite you to join this campaign: https://www.facebook.com/QualityForLifePhilippines/app_127709503932081 <br>
+
+				&nbsp;&nbsp;For more information about Quality for Life Philippines, you can visit the official Facebook page at www.facebook.com/QualityForLifePhilippines. Please do not forget to click the Like button to receive updates about health, vitamins, and nutrition!<br>
+
+				Have a great day!<br>
+
+				]]></seg>
+			</tuv>
+		</tu>
+
+
             <tu tuid='Invitation_Email_subject'>
 		<tuv xml:lang="zh">
                     <seg><![CDATA[你的朋友 ?EMAIL?，邀请你加入星星火社区]]></seg>
@@ -14,8 +44,6 @@
                     <seg><![CDATA[Invitation to Wildfire from ?EMAIL?]]></seg>
 		</tuv>
             </tu>
-
-		
 
 		<tu tuid='Invitation_Email_body'>
 			<tuv xml:lang="zh">

@@ -288,9 +288,9 @@ a.link {
 .article-box-inner {
 	background: white;
 	padding: 10px ;
-	font-family: Lucida grande;
-	color: gray;
-    /*font-family: bold;*/
+	/*font-family: Lucida grande;*/
+	/*color: gray;*/
+    font-family: bold;
     font-size: 12px;
 	/*margin-bottom: 40px;*/
 	-webkit-box-shadow: 0 4px 4px rgba(0,0,0,0.3),-2px -2px 30px rgba(100,100,100,0.2) inset;
@@ -632,6 +632,7 @@ table.spark-show td img {
 .spark-report {
 	/*width: 430px*/
 	float: right;
+	width: 100%;
 }
 .spark-report-box {
 	/*width: 430px;*/
@@ -982,7 +983,8 @@ table.profile td {
 }
 .article-box .main-column {
 	float: left;
-	width: 500px;
+	width: 420px;
+	font-size:14px;
 }
 .article-box .main-column h2 a {
 	font-weight: bold;
@@ -1369,7 +1371,7 @@ ul.tabbed-buttons li.active a:visited {
 	margin-top: 6px;
 	margin-bottom: 7px;
 	padding:0;
-	font-size: 16px;
+	font-size: 14px;
 	color: #f00;
 	float: left;
 }
