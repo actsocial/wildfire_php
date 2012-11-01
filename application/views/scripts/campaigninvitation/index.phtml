@@ -1,12 +1,12 @@
 <?php if (count($this->activeCampaigns)>0):?>
 <div class="article-box"><div class="article-box-inner">
 <div class="images-column"><img
-	src="<?php echo $this->baseUrl();?>/images/training_campaign.gif"
+	src="<?php echo $this->baseUrl();?>/images/campaign/campaign_105_03.jpg"
 	style="padding: 0; border: 0; margin-right: 10px;background:none;" /></div>
 <div class="main-column" style="width:450px;">
 <!-- <h2><?php echo $this->translate('Active_Campaign');?></h2> -->
 <?php foreach($this->activeCampaigns as $campaign) : ?>
-<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'description','id'=>$campaign['campaign_id'])); ?>"><h2>Quality for Life<sup style="font-size:8px;">TM</sup> Philippines Campaign</h2></a>
+<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'description','id'=>$campaign['campaign_id'])); ?>"><h2 style="color:#000000">Quality for Life<sup style="font-size:8px;">TM</sup> Philippines Campaign</h2></a>
 <ul class="invited">
 
 	<li><span> <!--<?php echo $campaign['name']?>
@@ -30,7 +30,7 @@
 	src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $campaignInvitation['campaign_id']?>_03.jpg" /><img
 	src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $campaignInvitation['campaign_id']?>_04.jpg" /></div>
 <div class="main-column">
-<h2><?php echo $this->translate('INDEX_YOU_ARE_INVITED')?> <?php echo $campaignInvitation['name']?> Philippines
+<h2  style="color:#000000"><?php echo $this->translate('INDEX_YOU_ARE_INVITED')?> <?php echo $campaignInvitation['name']?> Philippines
 </h2>
 <br/>
 <p><?php echo $campaignInvitation['invitation_description']?>
@@ -53,7 +53,7 @@
 	src="<?php echo $this->baseUrl();?>/images/campaign-invitations.gif"
 	style="padding: 0; border: 0; margin-right: 10px;" /></div>
 <div class="main-column" style="width:500px">
-<h2><?php if (count($this->activeCampaigns)>0):?><?php echo $this->translate('INDEX_SPARK_CAMPAIGN_INVITATION_OTHER');?><?php endif?><?php echo $this->translate('INDEX_SPARK_CAMPAIGN_INVITATION_HEADER');?></h2>
+<h2  style="color:#000000"><?php if (count($this->activeCampaigns)>0):?><?php echo $this->translate('INDEX_SPARK_CAMPAIGN_INVITATION_OTHER');?><?php endif?><?php echo $this->translate('INDEX_SPARK_CAMPAIGN_INVITATION_HEADER');?></h2>
 <p style=""><?php echo $this->translate('INDEX_SPARK_CAMPAIGN_INVITATION_CONTENT1');?><?php if (count($this->activeCampaigns)>0):?><?php echo $this->translate('INDEX_SPARK_CAMPAIGN_INVITATION_OTHER_NotCapital');?><?php endif?><?php echo $this->translate('INDEX_SPARK_CAMPAIGN_INVITATION_CONTENT2');?>
 </p>
 </div>

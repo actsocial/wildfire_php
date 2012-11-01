@@ -105,101 +105,15 @@
     <div class="article-box-inner" >
 		<?php if ($this->consumer!=null){ ?>
 			<p style="margin: 10px 0 5px 0;font-size:120%;"><?php echo $this->translate("Home_head_content_1")?></p>
-			<p style="margin: 0 0 5px 0;font-size:120%;"><?php echo $this->translate("Home_head_content_2_1")?>
-			<!-- <a href="<?php echo $this->url(array('controller'=>'training',	'action'=>'howitworks','id'=>'0'));?>"><?php echo $this->translate("Home_head_content_2_2")?></a> -->
-			</p>
+			<!--<p style="margin: 0 0 5px 0;font-size:120%;"><?php echo $this->translate("Home_head_content_2_1")?>
+			 <a href="<?php echo $this->url(array('controller'=>'training',	'action'=>'howitworks','id'=>'0'));?>"><?php echo $this->translate("Home_head_content_2_2")?></a> 
+			</p>-->
 			<div class="clear"></div>
 		<?php }?>
 	</div>
 </div>
 
-<div class="spark-status">
-	<!--  Tip  -->
-	<div class="spark-status-box">
-		<img onmouseover="showtip(2);" onmouseout="hidetip(2);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
-		<div class="tip-wrapper">
-			<div id="tip2" class="tip-box" style="display:none; ">
-				<div class="top"></div>
-				<div class="middle">
-				<h2><?php echo $this->translate("What_is_Status_Header")?></h2>
-				<p><?php echo $this->translate("What_is_Status_Content_1")?></p>
-				<p><?php echo $this->translate("What_is_Status_Content_2")?></p>
-				<p><?php echo $this->translate("What_is_Status_Content_3")?></p>
-				<p><?php echo $this->translate("What_is_Status_Content_4")?></p>
-				<p><?php echo $this->translate("What_is_Status_Content_5")?></p>
-				</div>
-				<div class="bottom"></div>
-			</div>
-		</div>
-		<div class="avatar">
-			<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>">
-				<img src="">
-			</a>
-		</div>
-	    <!--  info bar  -->
-		<div class="yourinfo">
-			<span><?php echo $this->translate("Rank")?><a href="#"><?php  echo $this->consumer[0]['rname']; ?></a></span>
-			<!--  Badge  -->
-			<div>
-				<?php if(count($this->badges)){?>	     
-					<?php echo $this->translate("Your_badge")?><br>
-				<?php
-					foreach($this->badges as $badge){
-						echo "<a class='thickbox' style='margin-right:5px' href='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg'><img src='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg' width=30 height = 30 style='border:1px solid #ccc'></a>";
-					}
-				?>
-				<?php }?>
-			</div><br/>
-		    <div>
-				<?php echo $this->translate("Home_Your_Info_Completeness")?>
-				<?php if ($this->consumerextrainfo<40): ?>
-				<div class="progressbar-red">
-				<?php endif;?>
-				<?php if ($this->consumerextrainfo>=40 && $this->consumerextrainfo<70): ?>
-				<div class="progressbar-yel">
-				<?php endif;?>
-				<?php if ($this->consumerextrainfo>=70 && $this->consumerextrainfo<90): ?>
-				<div class="progressbar-grey">
-				<?php endif;?>
-				<?php if ($this->consumerextrainfo>=90): ?>
-				<div class="progressbar-blu">
-				<?php endif;?>
-				<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" class="progressbar"><div style="width:<?php echo $this->consumerextrainfo ?>px"></div></a><br><a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" tyle="font-size:10px;">Edit Your Profile</a></div>
-				<span><a href='<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>'><?php echo $this->consumerextrainfo ?>%</a></span>
-			</div>
-		</div>
 
-        
-	
-	    <!--  Points  -->
-        <div style="float: left;width:120px;">
-			<h3>&nbsp;&nbsp;<?php echo $this->translate("Home_Spark_Points_Earned")?></h3><br>	
-			<div class="spark-status-content">
-				<h4><?php echo $this->totalPoints; ?></h4>
-				<p><?php echo $this->translate("Spark_Points_Earned_Content_1")?>two<?php echo $this->translate("Spark_Points_Earned_Content_2")?>20<?php echo $this->translate("Spark_Points_Earned_Content_3")?></p>
-			</div>
-		</div>
-		
-		<div style="float: left;width:120px;">
-			<h3>&nbsp;&nbsp;<?php echo $this->translate("Rewards_Ready_to_Redeem")?></h3><br>
-			<div class="spark-status-content">
-				<h4><?php echo $this->redeemPoints; ?></h4>
-			</div>
-		</div>
-		
-		<div style="float: left;width:120px;">
-			<h3>&nbsp;&nbsp;<?php echo $this->translate("New_points")?></h3><br>
-			<div class="spark-status-content">
-				<h4><?php echo $this->newPoints; ?></h4>
-			</div>
-		</div>
-		
-		<div style="float: right; padding-right:35px;">
-			<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'point',	'action'=>'show'));?>" style=""><?php echo $this->translate("Redeem_Points")?></a></div>
-			<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'history',	'action'=>'stuff'));?>" style=""><?php echo $this->translate("Check_Points") ?></a></div>
-		</div>
-	</div>
-</div>
 
 <div class="spark-report">
 
@@ -477,7 +391,93 @@
 
 
 
+<div class="spark-status">
+	<!--  Tip  -->
+	<div class="spark-status-box">
+		<img onmouseover="showtip(2);" onmouseout="hidetip(2);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+		<div class="tip-wrapper">
+			<div id="tip2" class="tip-box" style="display:none; ">
+				<div class="top"></div>
+				<div class="middle">
+				<h2><?php echo $this->translate("What_is_Status_Header")?></h2>
+				<p><?php echo $this->translate("What_is_Status_Content_1")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_2")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_3")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_4")?></p>
+				<p><?php echo $this->translate("What_is_Status_Content_5")?></p>
+				</div>
+				<div class="bottom"></div>
+			</div>
+		</div>
+		<div class="avatar">
+			<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>">
+				<img src="">
+			</a>
+		</div>
+	    <!--  info bar  -->
+		<div class="yourinfo">
+			<span><?php echo $this->translate("Rank")?><a href="#"><?php  echo $this->consumer[0]['rname']; ?></a></span>
+			<!--  Badge  -->
+			<div>
+				<?php if(count($this->badges)){?>	     
+					<?php echo $this->translate("Your_badge")?><br>
+				<?php
+					foreach($this->badges as $badge){
+						echo "<a class='thickbox' style='margin-right:5px' href='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg'><img src='".$this->baseUrl()."/images/mission/badge_$badge->badge.jpg' width=30 height = 30 style='border:1px solid #ccc'></a>";
+					}
+				?>
+				<?php }?>
+			</div><br/>
+		    <div>
+				<!--<?php echo $this->translate("Home_Your_Info_Completeness")?>-->
+				<?php if ($this->consumerextrainfo<40): ?>
+				<div class="progressbar-red">
+				<?php endif;?>
+				<?php if ($this->consumerextrainfo>=40 && $this->consumerextrainfo<70): ?>
+				<div class="progressbar-yel">
+				<?php endif;?>
+				<?php if ($this->consumerextrainfo>=70 && $this->consumerextrainfo<90): ?>
+				<div class="progressbar-grey">
+				<?php endif;?>
+				<?php if ($this->consumerextrainfo>=90): ?>
+				<div class="progressbar-blu">
+				<?php endif;?>
+				<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" class="progressbar"><div style="width:<?php echo $this->consumerextrainfo ?>px"></div></a><br><a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" tyle="font-size:10px;">Edit Your Profile</a></div>
+				<span><a href='<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>'><?php echo $this->consumerextrainfo ?>%</a></span>
+			</div>
+		</div>
 
+        
+	
+	    <!--  Points  -->
+        <div style="float: left;width:120px;">
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("Home_Spark_Points_Earned")?></h3><br>	
+			<div class="spark-status-content">
+				<h4><?php echo $this->totalPoints; ?></h4>
+				<p><?php echo $this->translate("Spark_Points_Earned_Content_1")?>two<?php echo $this->translate("Spark_Points_Earned_Content_2")?>20<?php echo $this->translate("Spark_Points_Earned_Content_3")?></p>
+			</div>
+		</div>
+		
+		<div style="float: left;width:120px;">
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("Rewards_Ready_to_Redeem")?></h3><br>
+			<div class="spark-status-content">
+				<h4><?php echo $this->redeemPoints; ?></h4>
+			</div>
+		</div>
+		
+		<div style="float: left;width:120px;">
+			<h3>&nbsp;&nbsp;<?php echo $this->translate("New_points")?></h3><br>
+			<div class="spark-status-content">
+				<h4><?php echo $this->newPoints; ?></h4>
+			</div>
+		</div>
+		
+		<div style="float: right; padding-right:35px;">
+			<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'point',	'action'=>'show'));?>" style=""><?php echo $this->translate("Redeem_Points")?></a></div>
+			<div class="buttons-bar"><a class="big-button-blue" href="<?php echo $this->url(array('controller'=>'history',	'action'=>'stuff'));?>" style=""><?php echo $this->translate("Check_Points") ?></a></div>
+		</div>
+	</div>
+</div>
 	
 	
 	

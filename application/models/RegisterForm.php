@@ -1,6 +1,15 @@
 <?php
 class RegisterForm extends Zend_Form
 {
+
+/*	public $elementDecorators = array(
+        'ViewHelper',
+        'Errors',
+        array(array('data' => 'HtmlTag'), array('tag' => 'dd','style'=>'margin-left:1px')),
+        array('Label', array('tag' => 'dt','style'=>'margin-left:1px'),
+    ));
+*/
+
 	public function __construct($options = null)
 	{
 		parent::__construct($options);
@@ -8,17 +17,20 @@ class RegisterForm extends Zend_Form
 
 		$id = new Zend_Form_Element_Hidden('id');
 
+
 		$auth_code = new Zend_Form_Element_Text('auth_code');
 		$auth_code
 		//->setRequired(true)
 		->addFilter('StripTags')
 		->setAttrib('style','width:70px;')
 		->addFilter('StringTrim');
+		// ->addDecorators(array(array('data' => 'HtmlTag'), array('tag' => 'dd','style'=>'margin-left:1px')));
+
 		//->addValidator('NotEmpty');
 		
 		$email = new Zend_Form_Element_Text('registerEmail');
 		$email
-		->setRequired(true)
+		// ->setRequired(true)
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
 		->addValidator('NotEmpty')
