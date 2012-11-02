@@ -1,19 +1,24 @@
-var WEIBO_REG = /^weibo.com\/\d{10}\/\d{16}/;
-var RENREN_REG = /^page.renren.com*/;
+var WEIBO_REG = /^(http:\/\/)?weibo.com\/\d{10}\/\d{16}/;
+var RENREN_REG = /^(http:\/\/)?page.renren.com*/;
 var RENREN_PAGE_ID_REG = /\"page_id\":\d*/;
 var RENREN_STATUS_ID_REG = /\"status_id\":\d*/;
 var RENREN_BLOG_ID_REG = /\"blog_id\":\d*/;
-var KAIXIN_REG = /^www.kaixin001.com*/;
+var KAIXIN_REG = /^(http:\/\/)?www.kaixin001.com*/;
 var KAIXIN_SOURCE_ID_REG = /objid=\d*/;
 var KAIXIN_SOURCE_TYPE_REG = /objtype=\d*/;
 var KAIXIN_USER_ID_REG = /ouid=\d*/;
-var TENCENT_REG = /^t.qq.com\/\d{14}/;
-var NETEASE_REG = /^t.163.com\/*/;
-var DOUBAN_REG = /^site.douban.com*/;
+var TENCENT_REG = /^(http:\/\/)?t.qq.com\/\d{14}/;
+var NETEASE_REG = /^(http:\/\/)?t.163.com\/*/;
+var DOUBAN_REG = /^(http:\/\/)?site.douban.com*/;
 
 //TODO: convert to backbone model
 Sns = function(url){
     if(typeof(url)=="string"){
+    	if(url.indexOf("http://")==0){
+    		url = url.substring(7);
+    	}else if(url.indexOf("https://")==0){
+    		url = url.substring(8);
+    	}
 		this._url= url;
 		if(Sns.isWeibo(url)){
 			this._type = "Weibo";
