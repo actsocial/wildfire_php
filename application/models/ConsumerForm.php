@@ -82,6 +82,31 @@ class ConsumerForm extends Zend_Form
 										array('Label')
 										));
 
+		$city = new Zend_Form_Element_Text('city');
+		$city->setLabel($this->getView()->translate('CONTACT INFORMATION_RECIPIENTS_CITY'))
+		->addFilter('StripTags')
+		->addFilter('StringTrim')
+		->addValidators(array(array('StringLength', false, array(1, 30)),));
+		$city->setDecorators(array(
+										'ViewHelper',
+										'Errors',
+										array('HtmlTag', array('tag'=>'div', 'class'=>'input-area')),
+										array('Label')
+										));
+
+		$country = new Zend_Form_Element_Text('country');
+		$country->setLabel($this->getView()->translate('CONTACT INFORMATION_RECIPIENTS_COUNTRY'))
+		->addFilter('StripTags')
+		->addFilter('StringTrim')
+		->addValidators(array(array('StringLength', false, array(1, 30)),));
+		// ->addErrorMessage($this->getView()->translate('Please_enter_your_recipients_name'));
+		$country->setDecorators(array(
+										'ViewHelper',
+										'Errors',
+										array('HtmlTag', array('tag'=>'div', 'class'=>'input-area')),
+										array('Label')
+										));
+
 		$address1 = new Zend_Form_Element_Text('address1');
 		$address1->setLabel($this->getView()->translate('CONTACT INFORMATION_ADDRESS1'))
 		->setAttribs(array('rows'=>3,'cols'=>80))
@@ -274,7 +299,7 @@ class ConsumerForm extends Zend_Form
 		$submit->setLabel($this->getView()->translate('CONTACT INFORMATION_EDIT'))
 		->setAttrib('id', 'edit');
 		
-		$this->addElements(array($id, $email, $login_phone, $name, $recipients_name, $phone, $address1, $postalcode, $birthdate, 
+		$this->addElements(array($id, $email, $login_phone, $name, $recipients_name, $phone, $city,$country,$address1, $postalcode, $birthdate, 
 		$gender, $profession, $education, $have_children, $children_birth_year, $income, $online_shopping, $use_extra_bonus_for, 
 		$submit));
 
