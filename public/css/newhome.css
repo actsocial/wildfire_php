@@ -984,7 +984,7 @@ table.profile td {
 .article-box .main-column {
 	float: left;
 	width: 420px;
-	font-size:14px;
+	/*font-size:14px;*/
 }
 .article-box .main-column h2 a {
 	font-weight: bold;
@@ -2709,6 +2709,8 @@ label.error {
 #tabs {
 	float: left;
 	border: none;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+	font-size: 12px;
 }
 .contact-text>p>img{
 	width: 19px;

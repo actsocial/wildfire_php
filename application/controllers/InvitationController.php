@@ -10,6 +10,13 @@ class InvitationController extends MyController
 	{
 		// error_reporting(0);
 
+		$fc = Zend_Controller_Front::getInstance ();
+		$this->view->oFCKeditor = new FCKeditor ( 'htmlmessage' );
+		$this->view->oFCKeditor->BasePath = $fc->getBaseUrl () . "/js/fckeditor/";
+		$this->view->oFCKeditor->Height = "500px";
+		$this->view->oFCKeditor->width = "580px";
+		$this->view->oFCKeditor->Value =$this->view->translate("INVITE_FRIENDS_TEMPLATE_105");
+
 		$this->view->title = $this->view->translate("Wildfire")." - ".$this->view->translate("Friend_Invitations");
 
 		$consumer = $this->_currentUser;
@@ -82,6 +89,7 @@ class InvitationController extends MyController
 			$isSentSuccessfully = true;
 			return;
 		}
+
 		if ($this->_request->isPost()) {//POST
 			$formData = $this->_request->getPost();
 			if ($form->isValid($formData)) {
@@ -106,8 +114,15 @@ class InvitationController extends MyController
 							$signup_auth_code = $signup_auth_code.$codePattern{mt_rand(0,35)};
 						}
 						//send mail
-						$emailSubject = $this->view->translate('Invitation_Email_subject');
-						$emailBody = $this->view->translate('Invitation_Email_body');
+
+						// $emailSubject = $this->view->translate('Invitation_Email_subject');
+						// $emailBody = $this->view->translate('Invitation_Email_body');
+						// fix email contents 2012-11-02 
+
+						$emailSubject = "test invitation email title";
+						$emailBody = $this->_request->getPost('htmlmessage');
+						
+
 						$stringChange = array(
 							'?USERNAME?' => $this->_currentUser['name'],
 							'?EMAIL?' => $this->_currentUser['email'],
@@ -129,6 +144,7 @@ class InvitationController extends MyController
 //														'username'=>'yun_simon@163.com',
 //																			'password'=>'19990402',
 //																			'auth'=>'login'));
+
 						Zend_Mail::setDefaultTransport($smtpSender);
 						$mail = new Zend_Mail('utf-8');
 						$langNamespace = new Zend_Session_Namespace('Lang');
@@ -142,6 +158,7 @@ class InvitationController extends MyController
 						$mail->addHeader('Reply-To', $consumer->email);
 //						$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
 						$mail->addTo($form->getValue('email'.(string)$i));
+						// var_dump($form->getValue('email'.(string)$i));die();
 						//save into DB					
 						try{
 							$currentTime = date("Y-m-d H:i:s");

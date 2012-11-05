@@ -127,7 +127,8 @@
                 translate('INVITATION_MAIL_CAMPAIGN_INTRODUCTION_HEAD'); ?>
         </h1>
         <p>
-            <form>
+        <form action="<?php echo $this->url(array('controller' => 'invitation', 'action' => 'send')); ?>"
+                        method="post">
                 <table>
                     <tr>
                         <td>Select a campaign:</td>
@@ -145,39 +146,37 @@
                         <td><?php echo $this->sendMailForm->$temp1; ?></td>
                     </tr>
                 </table>
-            </form>
+            
         </p>
+
+            <h2>Invite Email Template</h2>
+            <!--<?php echo $this->translate("INVITE_FRIENDS_TEMPLATE_105"); ?>-->
+
+           <!--  <iframe width="100%" scrolling="no" height="500px" frameborder="0" src="/public/js/fckeditor/editor/fckeditor.html?InstanceName=htmlmessage&amp;Toolbar=Default" id="htmlmessage___Frame" style="margin: 0px; padding: 0px; border: 0px none; background-color: transparent; background-image: none; width: 100%; height: 500px;"></iframe>
+            <div id='htmlMessage' style="padding: 20px; padding-top:0px; margin-left: 20px; width:770px; display:none;"> -->
+                <div id='htmlMessage' style="padding: 20px; padding-top:0px; margin-left: 20px; width:580px; " >
+                    <?php $this->oFCKeditor->create();?>
+                      <!-- Hi!<br><br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;Join me in the word-of-mouth campaign for Quality for Life Philippines.
+                      <br><br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;Kindly answer the survey by clicking the link below. Once you are selected, Wildfire will contact you directly to formally invite you to join this campaign: <a href="https://www.facebook.com/QualityForLifePhilippines/app_127709503932081">https://www.facebook.com/QualityForLifePhilippines/app_127709503932081</a><br><br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;For more information about Quality for Life Philippines, you can visit the official Facebook page at <a href="www.facebook.com/QualityForLifePhilippines">www.facebook.com/QualityForLifePhilippines</a>. Please do not forget to click the Like button to receive updates about health, vitamins, and nutrition!<br><br>
+                      Have a great day!<br><br> -->
+                </div>
+                
+                 <div class="send-invitation">
+                    <input id="submit" type="submit" value="<?php echo $this->translate('INVITATION_MAIL_SEND') ?>"
+                    onclick="onSend();return true;">
+                 </div>
+         </form>
     </div>
 </div>
 
-<!-- 
- <?php  foreach ($this->allCampaigns as $activeCampaign): ?>
-    <div class="article-box" style="background:#fff;padding-top:0;" id="<?php echo $activeCampaign; ?>" style="display:none">
-        <div class="article-box-inner" style="background:#fff;">
-            <?php echo $this->translate("INVITE_FRIENDS_TEMPLATE_".$activeCampaign['id']); ?>
-        </div>
-    </div>
-<?php endforeach ?> -->
-
-
-<div class="article-box" style="background:#fff;padding-top:0;" style="display:none">
+<!-- <div class="article-box" style="background:#fff;padding-top:0;" style="display:none">
     <div class="article-box-inner" style="background:#fff;">
-        <h2>Invite Email Template</h2>
-        <!--<?php echo $this->translate("INVITE_FRIENDS_TEMPLATE_105"); ?>-->
-            <div>
-                  Hi!<br><br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;Join me in the word-of-mouth campaign for Quality for Life Philippines.
-                  <br><br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;Kindly answer the survey by clicking the link below. Once you are selected, Wildfire will contact you directly to formally invite you to join this campaign: <a href="https://www.facebook.com/QualityForLifePhilippines/app_127709503932081">https://www.facebook.com/QualityForLifePhilippines/app_127709503932081</a><br><br>
-                  &nbsp;&nbsp;&nbsp;&nbsp;For more information about Quality for Life Philippines, you can visit the official Facebook page at <a href="www.facebook.com/QualityForLifePhilippines">www.facebook.com/QualityForLifePhilippines</a>. Please do not forget to click the Like button to receive updates about health, vitamins, and nutrition!<br><br>
-                  Have a great day!<br><br>
-            </div>
-             <div class="send-invitation">
-                <input id="submit" type="submit" value="<?php echo $this->translate('INVITATION_MAIL_SEND') ?>"
-                onclick="onSend();return true;">
-             </div>
+
     </div>
-</div>
+</div> -->
 
 <!--
 <div class="article-box" style="background:#fff;padding-top:0;">
