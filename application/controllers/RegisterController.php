@@ -56,7 +56,7 @@ class RegisterController extends MyController
 			$toEmail = $db->fetchOne($select1);
 			$form->registerEmail->setValue($toEmail);
 
-			$this->view->facebook_login_url = $this->view->facebook_login_url."&state=".$code->id
+			$this->view->facebook_login_url = $this->view->facebook_login_url."&state=".$code->id;
 
 			$code->view_date = $currentTime;
 			$code->save();
