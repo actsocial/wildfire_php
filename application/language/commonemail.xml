@@ -41,7 +41,7 @@
                     <seg><![CDATA[你的朋友 ?EMAIL?，邀请你加入星星火社区]]></seg>
 		</tuv>
 		<tuv xml:lang="en">
-                    <seg><![CDATA[Invitation to Wildfire from ?EMAIL?]]></seg>
+                    <seg><![CDATA[Invitation to Wildfire from your friend]]></seg>
 		</tuv>
             </tu>
 
