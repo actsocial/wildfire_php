@@ -26,8 +26,23 @@ class FacebookloginController extends MyController {
 	  		$uid = $user['id'];
 	  		$uname = $user['name'];
 	  		$email = $user['email'];
-				$db = Zend_Registry :: get('db');
-				$adapter = new FacebookLoginAuthAdapter($uid, $uname,$email);
+	  		$db = Zend_Registry :: get('db');
+	  		//if state param is not null, then the value is invite code, get email from database by invite code
+	  		$code_id = $_REQUEST['state'];
+	  		if($code_id)
+	  		{
+	  			$code_id = intval($code_id);
+	  			$signupAuthCodeModel = new SignupAuthCode();
+	  			$code =	$signupAuthCodeModel->find($code_id);
+	  			if (isset($code) && $code->id) {
+	  				$select1 = $db->select();
+						$select1->from("invitation_email","to");
+						$select1->where("invitation_email.signup_auth_code_id = ?",$code->id);
+						$email = $db->fetchOne($select1);
+	  			}
+	  		}
+				
+				$adapter = new FacebookLoginAuthAdaptor($uid, $uname,$email);
 				$auth = Zend_Auth :: getInstance();
 				$result = $auth->authenticate($adapter);
 				$consumerModel = new Consumer();

@@ -1,5 +1,5 @@
 <?php
-class FacebookLoginAuthAdapter implements Zend_Auth_Adapter_Interface {
+class FacebookLoginAuthAdaptor implements Zend_Auth_Adapter_Interface {
 	protected $_facebookid, $_facebookname,$_facebookemail;
 	public function __construct($_facebookid, $_facebookname,$_facebookemail) {
 		$this->_facebookid = $_facebookid;
