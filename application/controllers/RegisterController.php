@@ -1,6 +1,8 @@
 <?php
 require 'facebook-php-sdk/facebook.php';
 include_once( 'facebook-php-sdk/facebookconfig.php' );
+include_once('SignupAuthCode.php');
+
 class RegisterController extends MyController
 {
 	function registerAction()
@@ -38,11 +40,12 @@ class RegisterController extends MyController
 		$signupAuthCodeModel = new SignupAuthCode();
 		
 		$auth_code = $this->_request->getParam('a');
-		
+		// var_dump($auth_code);die();
 		if ($auth_code){
 			$form->auth_code->setValue($auth_code);			
 			$code =	$signupAuthCodeModel->fetchRow("use_date is null and auth_code = '".$auth_code."'");
 		}
+		$this->view->auto_code = $auth_code ;
 
 		// auto-fill code and email address
 		if (isset($code) && $code->id){

@@ -18,12 +18,12 @@ class RegisterForm extends Zend_Form
 		$id = new Zend_Form_Element_Hidden('id');
 
 
-		// $auth_code = new Zend_Form_Element_Text('auth_code');
-		// $auth_code
-		// //->setRequired(true)
-		// ->addFilter('StripTags')
-		// ->setAttrib('style','width:70px;')
-		// ->addFilter('StringTrim');
+		$auth_code = new Zend_Form_Element_Text('auth_code');
+		$auth_code
+		//->setRequired(true)
+		->addFilter('StripTags')
+		->setAttrib('style','width:70px;')
+		->addFilter('StringTrim');
 		// ->addDecorators(array(array('data' => 'HtmlTag'), array('tag' => 'dd','style'=>'margin-left:1px')));
 
 		//->addValidator('NotEmpty');
@@ -70,7 +70,7 @@ class RegisterForm extends Zend_Form
 		$submit->setLabel($this->getView()->translate("Register"))
 		->setAttrib('id', 'register');
 
-		$this->addElements(array( $id, $email, $login_phone, $name, $password, $repeat, $submit));
+		$this->addElements(array( $id, $email, $auth_code,$login_phone, $name, $password, $repeat, $submit));
 	}
 }
 ?>
