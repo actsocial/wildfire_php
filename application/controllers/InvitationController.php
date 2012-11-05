@@ -1,6 +1,7 @@
 <?php
 require_once 'Zend/Mail/Transport/Smtp.php';
 require_once 'Zend/Mail.php';
+include_once 'fckeditor_php5.php';
 
 class InvitationController extends MyController
 {
@@ -121,7 +122,7 @@ class InvitationController extends MyController
 
 						$emailSubject = "test invitation email title";
 						$emailBody = $this->_request->getPost('htmlmessage');
-						
+
 
 						$stringChange = array(
 							'?USERNAME?' => $this->_currentUser['name'],
