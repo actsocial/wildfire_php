@@ -1,6 +1,7 @@
 <?php
 require_once 'Zend/Mail/Transport/Smtp.php';
 require_once 'Zend/Mail.php';
+include_once 'fckeditor_php5.php';
 
 class InvitationController extends MyController
 {
@@ -119,9 +120,10 @@ class InvitationController extends MyController
 						// $emailBody = $this->view->translate('Invitation_Email_body');
 						// fix email contents 2012-11-02 
 
-						$emailSubject = "test invitation email title";
+						// $emailSubject = "test invitation email title";
+						$emailSubject = $this->view->translate('Invitation_Email_subject');
 						$emailBody = $this->_request->getPost('htmlmessage');
-						
+
 
 						$stringChange = array(
 							'?USERNAME?' => $this->_currentUser['name'],
@@ -130,6 +132,7 @@ class InvitationController extends MyController
 							'?AUTHCODE?' => (string)$signup_auth_code);
 						$emailSubject = strtr($emailSubject,$stringChange);
 						$emailBody = strtr($emailBody,$stringChange);
+						// var_dump($emailBody);die();
 						$config = Zend_Registry::get('config');
 						$smtpSender = new Zend_Mail_Transport_Smtp(
 								$config->smtp->friend->mail->server,
@@ -153,12 +156,12 @@ class InvitationController extends MyController
 						}else{
 							$mail->setSubject("=?UTF-8?B?".base64_encode($emailSubject)."?=");
 						}
-						$mail->setBodyText($emailBody);
+						$mail->setBodyText((string)$emailBody);
 						$mail->setFrom($config->smtp->friend->mail->username, $consumer->name);
 						$mail->addHeader('Reply-To', $consumer->email);
 //						$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
 						$mail->addTo($form->getValue('email'.(string)$i));
-						// var_dump($form->getValue('email'.(string)$i));die();
+						// var_dump($mail);die();
 						//save into DB					
 						try{
 							$currentTime = date("Y-m-d H:i:s");
