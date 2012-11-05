@@ -1,7 +1,7 @@
 <?php
 require 'facebook-php-sdk/facebook.php';
 include_once( 'facebook-php-sdk/facebookconfig.php' );
-include_once('SignupAuthCode.php');
+include_once('models/SignupAuthCode.php');
 
 class RegisterController extends MyController
 {
