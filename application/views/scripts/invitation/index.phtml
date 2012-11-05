@@ -163,11 +163,23 @@
 <div class="article-box" style="background:#fff;padding-top:0;" style="display:none">
     <div class="article-box-inner" style="background:#fff;">
         <h2>Invite Email Template</h2>
-        <?php echo $this->translate("INVITE_FRIENDS_TEMPLATE_105"); ?>
+        <!--<?php echo $this->translate("INVITE_FRIENDS_TEMPLATE_105"); ?>-->
+            <div>
+                  Hi!<br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;Join me in the word-of-mouth campaign for Quality for Life Philippines.
+                  <br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;Kindly answer the survey by clicking the link below. Once you are selected, Wildfire will contact you directly to formally invite you to join this campaign: <a href="https://www.facebook.com/QualityForLifePhilippines/app_127709503932081">https://www.facebook.com/QualityForLifePhilippines/app_127709503932081</a><br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;For more information about Quality for Life Philippines, you can visit the official Facebook page at <a href="www.facebook.com/QualityForLifePhilippines">www.facebook.com/QualityForLifePhilippines</a>. Please do not forget to click the Like button to receive updates about health, vitamins, and nutrition!<br><br>
+                  Have a great day!<br><br>
+            </div>
+             <div class="send-invitation">
+                <input id="submit" type="submit" value="<?php echo $this->translate('INVITATION_MAIL_SEND') ?>"
+                onclick="onSend();return true;">
+             </div>
     </div>
 </div>
 
-
+<!--
 <div class="article-box" style="background:#fff;padding-top:0;">
     <div class="article-box-inner" style="background:#fff;">
         <?php if ($this->notSendMailAmont > 0) { ?>
@@ -210,11 +222,11 @@
                                                 <?php echo $this->translate("INVITATION_MAIL_CONTENT"); ?>
                                             </p>
                                         </div>
-                                      <!--   <div class="">
+                                      <div class="">
                                             <?php echo $this->sendMailForm->message; ?>
                                                 <textarea rows="5" cols="100"> Hello. I'm a member of Wildfire, the Chinese word-of-mouth consumer community.Wildfire helps its members spread word of mouth about products and services naturally and honestly through free products, coupons and more. Joining is totally free and there is no obligation involved. Interested in learning more and signing up?
                                                 </textarea>
-                                        </div> -->
+                                        </div>
                                         <div id="notice" style="padding-bottom: 10px; display: none; font-size: 14px; color: #f00; font-weight: bold;">
                                             <?php echo $this->translate('INVITATION_MAIL_SEND_NOTICE') ?>
                                         </div>
@@ -277,7 +289,7 @@
                 <?php } ?>
     </div>
 </div>
-
+-->
 <script type="text/javascript">
 
 function changeMailTemplate(val){

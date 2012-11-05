@@ -99,6 +99,22 @@ You can also update your contact information and preferences.</seg>
 				<seg>Name of Recipient: </seg>
 			</tuv>
 		</tu>
+		<tu tuid='CONTACT INFORMATION_RECIPIENTS_CITY'>
+			<tuv xml:lang="zh">
+				<seg>城市：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>City: </seg>
+			</tuv>
+		</tu>
+		<tu tuid='CONTACT INFORMATION_RECIPIENTS_COUNTRY'>
+			<tuv xml:lang="zh">
+				<seg>国家：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Country: </seg>
+			</tuv>
+		</tu>
 		<tu tuid='CONTACT INFORMATION_ADDRESS'>
 			<tuv xml:lang="zh">
 				<seg>地址：</seg>
@@ -153,7 +169,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>电话：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Phone: </seg>
+				<seg>Phone Number: </seg>
 			</tuv>
 		</tu>
 
@@ -919,7 +935,7 @@ You can also update your contact information and preferences.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <!-- <seg>What's the birth year of your child? </seg> -->
-                <seg>How old is/are your child/children?</seg>
+                <seg>How old are they?</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_children_birth_year_Before 1980'>
@@ -944,7 +960,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>你现在的月收入水平？</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Monthly Income:</seg>
+                <seg>Monthly Family Income:</seg>
             </tuv>
         </tu>
         

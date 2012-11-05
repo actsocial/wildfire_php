@@ -229,7 +229,8 @@
 							<span class="campaign-name"><?php echo $activeCampaign["name"]?></span>
 							<span class="tab-description"> <?php echo $this->translate('Upload_Photo_Text')?><span>
 						</div>
-						<div class="uploading-image">					
+						<div class="uploading-image">
+											
 						      <?php foreach($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']] as $imageReport) { ?>
 						      <?php $is_first = ($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']][0]['id'] == $imageReport['id'])?>
 	                          <div style="text-align:center;<?php if(!$is_first) {echo 'display:none;';}?>" class="image" >

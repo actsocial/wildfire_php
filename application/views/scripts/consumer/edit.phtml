@@ -14,7 +14,7 @@
 	<?php endif;?>
 	<?php if ($this->consumerextrainfo>=90): ?>
 	<div class="progressbar-blu">
-	<?php endif;?>`
+	<?php endif;?>
 	<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>" class="progressbar"><div style="width:<?php echo $this->consumerextrainfo ?>px"></div></a></div>
 	<span><a href='<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>'><?php echo $this->consumerextrainfo ?>%</a></span>
 </div>
@@ -88,19 +88,21 @@
 		</div>
 	</div>-->
 	<div class="form-line long-text"><?php echo $this->form->address1 ;?></div>
+	<div class="form-line"><?php echo $this->form->city ;?></div>
+	<div class="form-line"><?php echo $this->form->country ;?></div>
 	<div class="form-line"><?php echo $this->form->postalcode ;?></div>
 </fieldset>
 
 <fieldset>
 	<legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Personal_Info_Pic');?>"/></legend>
 	<div class="form-line"><?php echo $this->form->birthdate ;?></div>
-	<div class="form-line not-text" style="height:55px;"><?php echo $this->form->gender;?></div>
-	<div class="form-line"><?php echo $this->form->birth_year;?></div>
+	<div class="form-line not-text" style="height:50px;"><?php echo $this->form->gender;?></div>
+	
 	<div class="form-line"><?php echo $this->form->profession;?></div>
 	<div class="form-line"><?php echo $this->form->education;?></div>
-	<div class="form-line-long-title" style="height:75px;"><?php echo $this->form->have_children;?></div>
-	<div class="form-line-long-title"><?php echo $this->form->children_birth_year;?></div>
-	<div class="form-line-long-title"><?php echo $this->form->income;?></div>
+	<div class="form-line-long-title" style="height:50px;"><?php echo $this->form->have_children;?></div>
+	<div class="form-line-long-title" style=""><?php echo $this->form->children_birth_year;?></div>
+	<div class="form-line-long-title" style=""><?php echo $this->form->income;?></div>
 	<!-- <div class="form-line-long-title" style="height:100px;"><?php echo $this->form->online_shopping;?></div>
 	<div class="form-line-long-title"><?php echo $this->form->use_extra_bonus_for;?></div> -->
 </fieldset>
@@ -242,7 +244,7 @@ function init(){
 	var p = $("province");
 	var c = $("city");
 	if('en' == lang || 'EN' == lang){
-		c.style.display = "none"; 
+		// c.style.display = "none"; 
 		p.style.display = "none";
 		$("englishcity").value = encity;
 	}else{

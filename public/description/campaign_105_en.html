@@ -30,14 +30,20 @@ You will get:</br>
 		<div class="spark-report-box-inner" style="height:150px;">
 			<div class="ul-wrapper" style="font-size:12px;">
 				<!-- <h1 style="font-size:16px;color:#3461ad;">More Information</h1> -->
-				<p class="zh" style="width:640px;line-height:15px;margin-top:15px;font-family:Lucida grande;font-size:12px;margin-left:10px;">Thank you very much for participating in this campaign. The more reports you submit to us, the more chances of getting points that you can exchange for gifts from Wildfire.</p>
+				<p class="zh" style="width:640px;line-height:15px;margin-top:15px;font-family:arial;font-size:14px;margin-left:10px;">Thank you very much for participating in this campaign. The more reports you submit to us, the more chances of getting points that you can exchange for gifts from Wildfire.</p>
 				<br/>
 				<!-- <li ><a href="http://blog.xingxinghuo.com " target="blank">Wildfire Blog</a></li> -->
 				<div class="campaign-content" >
 					<!-- remove a function onmouseover="openSubMenu();" onmouseout="closeSubMenu();" -->
-					<div class="submit-report"><a style="TEXT-DECORATION:none" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>" class="standard-report-button"><span style="font-size:11px;">Submit New Report</span></a>
+					<!-- <div class="submit-report"><a style="TEXT-DECORATION:none" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>" class="standard-report-button"><span style="font-size:11px;">Submit New Report</span></a>
 
-					</div>
+					</div> -->
+
+					<div class="buttons-bar" style="padding-top: 10px;">
+		             <a class="big-button-blue" style="margin-left:260px;" target="_parent"  onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>">
+		             	<span style="font-size:11px;">Submit New Report</span>
+		             </a>
+		        	</div>
 					<div class="submit-menu" style="display:none;margin-top:28px;margin-left: 248px;" onmouseover="openSubMenu();" onmouseout="closeSubMenu();">
 					<ul>
 						<li><a onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>">Submit Report</a></li>
@@ -59,7 +65,7 @@ You will get:</br>
 </h1> -->
 				<br/>
 				<div style="float:left;margin-left:2px;height:60%">
-					<div style="height:135px;"><strong style="color:#309BE4;font-size:8em;">&nbsp;&nbsp;&nbsp;<?php echo $this->dayCount?></strong></div>
+					<div style="height:110px;"><strong style="color:#309BE4;font-size:8em;line-height:normal;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">&nbsp;&nbsp;&nbsp;<?php echo $this->dayCount?></strong></div>
 					<div>days left for the  <?php echo $this->campaign["name"]; ?> WOM Campaign.</div>
 				</div>
 
