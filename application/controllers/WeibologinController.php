@@ -43,7 +43,11 @@ class WeibologinController extends MyController{
 				}else {
 					$this->getResponse()->setRedirect($state['default']);
 				}
+			}else {
+				$this->_helper->redirector('index','index');
 			}
+		}else {
+			$this->_helper->redirector('index','index');
 		}
 	}
 	
