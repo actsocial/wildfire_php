@@ -156,7 +156,7 @@ class InvitationController extends MyController
 						}else{
 							$mail->setSubject("=?UTF-8?B?".base64_encode($emailSubject)."?=");
 						}
-						$mail->setBodyText((string)$emailBody);
+						$mail->setBodyHtml((string)$emailBody);
 						$mail->setFrom($config->smtp->friend->mail->username, $consumer->name);
 						$mail->addHeader('Reply-To', $consumer->email);
 //						$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
