@@ -333,7 +333,7 @@ a.link {
 	background: url(../images/big-button-blue.gif) no-repeat center center;
 	display: block;
 	/*float: left;*/
-	width: 160px;
+	/*width: 160px;*/
 	height: 36px;
 	line-height: 36px;
 	text-align: center;
