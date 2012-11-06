@@ -2753,6 +2753,9 @@ label.error {
 #tabs  .ui-tabs-nav .ui-tabs-selected {
 	border-bottom-width: 0px !important;
 }
+#tabs .ui-widget-header {
+	border-bottom: 1px solid #AAA;
+}
 .report-panel .report-panel-header {
 	margin-bottom: 8px;
 }
