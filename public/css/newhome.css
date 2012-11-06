@@ -2706,6 +2706,19 @@ label.error {
 #tip-div {
 	float: right;
 }
+
+.spark-report-box-inner .ul-wrapper {
+	margin-top: 10px;
+}
+
+.spark-report-box-inner .ui-tabs-nav {
+	background: #FFF;
+}
+
+.spark-report-box-inner .ui-widget-header {
+	border: 0px;
+}
+
 #tabs {
 	float: left;
 	border: none;
@@ -2733,11 +2746,13 @@ label.error {
 	padding-top: 20px;	
 }
 
-#tabs .ui-tabs-nav li {
+#tabs .ui-tabs-nav .ui-state-default {
 	border-bottom-width: 1px !important;
-	margin: 0px;
+	/*margin: -1px;*/
 }
-
+#tabs  .ui-tabs-nav .ui-tabs-selected {
+	border-bottom-width: 0px !important;
+}
 .report-panel .report-panel-header {
 	margin-bottom: 8px;
 }
