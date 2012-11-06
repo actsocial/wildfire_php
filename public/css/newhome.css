@@ -2746,13 +2746,16 @@ label.error {
 	padding-top: 20px;	
 }
 
-#tabs .ui-tabs-nav li {
+#tabs .ui-tabs-nav .ui-state-default {
 	border-bottom-width: 1px !important;
 	/*margin: -1px;*/
 }
-/*#tabs  .ui-tabs-nav .ui-tabs-selected {
-	border-bottom-width: 1px !important;
-}*/
+#tabs  .ui-tabs-nav .ui-tabs-selected {
+	border-bottom-width: 0px !important;
+}
+#tabs .ui-widget-header {
+	border-bottom: 1px solid #AAA;
+}
 .report-panel .report-panel-header {
 	margin-bottom: 8px;
 }
