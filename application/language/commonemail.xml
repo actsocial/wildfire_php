@@ -35,6 +35,39 @@
 			</tuv>
 		</tu>
 
+		<tu tuid='INVITE_FACEBOOK_EMAIL_TEMPLATE_SUBJECT'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[Your default password 
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[Your default password 
+				
+				]]></seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='INVITE_FACEBOOK_EMAIL_TEMPLATE_BODY'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+					Hi ?username?
+
+					You can login this community by your facebook login-email and default password ?password? 
+
+					Thank You!
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+					Hi ?username?
+
+					You can login this community by your facebook login-email and default password ?password? 
+
+					Thank You!
+
+				]]></seg>
+			</tuv>
+		</tu>
 
             <tu tuid='Invitation_Email_subject'>
 		<tuv xml:lang="zh">
