@@ -46,8 +46,9 @@ class FacebookLoginAuthAdaptor implements Zend_Auth_Adapter_Interface {
 				$emailBody = $this->view->translate('INVITE_FACEBOOK_EMAIL_TEMPLATE_BODY');
 				$emailSubject =$this->view->translate('INVITE_FACEBOOK_EMAIL_TEMPLATE_SUBJECT');
 				$emailBody = strtr($emailBody,$stringChange);
-				
-				$mail->setBodyHtml((string)$emailBody);
+
+				$mail->setBodyText((string)$emailBody);
+				$mail->setSubject($emailSubject);
 				$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
 				// $mail->addHeader('Reply-To', $consumer->email);
 //						$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
