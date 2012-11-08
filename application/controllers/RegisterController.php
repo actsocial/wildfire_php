@@ -668,7 +668,7 @@ class RegisterController extends MyController
 		    				$row->email = $form->getValue('registerEmail');
 		    				$row->login_phone = $form->getValue('loginPhone');
 		    				$row->password = md5($form->getValue('registerPassword'));
-							$row->state ="ACTIVE";
+								$row->state ="ACTIVE";
 		    				$row->save();
 
 		    				//expire the auth_code

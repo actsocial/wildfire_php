@@ -137,7 +137,36 @@ class FacebookloginController extends MyController {
 	  			}else {
 	  				$pass = $this->create_password();
 	  				$consumerModel = new Consumer();
-						$consumerModel->insert(array('name'=>$this->_facebookname,'password'=>md5($pass),'email'=>$this->_facebookemail,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));		
+						// $consumerModel->insert(array('name'=>$this->_facebookname,'password'=>md5($pass),'email'=>$this->_facebookemail,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));		
+    				$row = $consumerModel->createRow();
+    				$row->name = $this->_facebookname;
+    				$row->email = $this->_facebookemail;
+    				// $row->login_phone = $form->getValue('loginPhone');
+    				$row->password = md5($pass);
+						$row->state ="ACTIVE";
+						$row->facebookid = $this->$this->_facebookid ;
+		    		$row->save();
+
+		    		$currentTime = date("Y-m-d H:i:s");
+
+		  			$invitation_code_id = intval($invitation_code_id);
+		  			$signupAuthCodeModel = new SignupAuthCode();
+		  			$invitation_code =	$signupAuthCodeModel->find($invitation_code_id);
+						$invitation_code->receiver = $row->id;
+    				$invitation_code->use_date= $currentTime;
+    				$invitation_code->save();
+
+		  			if (!empty($invitation_code->auto_invitation) && $invitation_code->auto_invitation!=0){
+		    					$campaignInvitationModel = new CampaignInvitation();
+		    					$ci = $campaignInvitationModel->createRow();
+		    					$ci->consumer_id = $row->id;
+		    					$ci->campaign_id = $invitation_code->auto_invitation;
+		    					$ci->create_date = $currentTime;
+		    					$ci->state = "NEW";
+		    					$ci->save();
+		    				}
+
+		    		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
 		  				$config = Zend_Registry::get('config');
 							$smtpSender = new Zend_Mail_Transport_Smtp(
 							$config->smtp->friend->mail->server,
@@ -147,32 +176,32 @@ class FacebookloginController extends MyController {
 								'auth'=> $config->smtp->friend->mail->auth,
 								'ssl' => $config->smtp->friend->mail->ssl,
 	         			'port' => $config->smtp->friend->mail->port));
-	  				Zend_Mail::setDefaultTransport($smtpSender);
-						$mail = new Zend_Mail('utf-8');
-						// $langNamespace = new Zend_Session_Namespace('Lang');
+		  				Zend_Mail::setDefaultTransport($smtpSender);
+							$mail = new Zend_Mail('utf-8');
+							// $langNamespace = new Zend_Session_Namespace('Lang');
 
-						$stringChange = array(
-									'?USERNAME?' => $this->_facebookname,
-									// '?EMAIL?' =>$this->_facebookemail,
-									'?password?'=>$pass
-									// '?MESSAGE?' => $form->getValue('message'),
-									// '?AUTHCODE?' => (string)$signup_auth_code
-									);
+							$stringChange = array(
+										'?USERNAME?' => $this->_facebookname,
+										// '?EMAIL?' =>$this->_facebookemail,
+										'?password?'=>$pass
+										// '?MESSAGE?' => $form->getValue('message'),
+										// '?AUTHCODE?' => (string)$signup_auth_code
+										);
 
-						$emailBody = "Hi ?username?
-													You can login this community by your facebook login-email and default password ?password? 
-													Thank You! ";
-						$emailSubject ="Your default password ";
+							$emailBody = "Hi ?username?
+														You can login this community by your facebook login-email and default password ?password? 
+														Thank You! ";
+							$emailSubject ="Your default password ";
 
-						$emailBody = strtr($emailBody,$stringChange);
-						$mail->addHeader('Reply-To', $consumer->email);
-						$mail->setBodyText((string)$emailBody);
-						$mail->setSubject($emailSubject);
-						$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
-						// $mail->addHeader('Reply-To', $consumer->email);
-		//						$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
-						$mail->addTo($this->_facebookemail);
-						$mail->send();
+							$emailBody = strtr($emailBody,$stringChange);
+							$mail->addHeader('Reply-To', $consumer->email);
+							$mail->setBodyText((string)$emailBody);
+							$mail->setSubject($emailSubject);
+							$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
+							//	$mail->addHeader('Reply-To', $consumer->email);
+							//	$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
+							$mail->addTo($this->_facebookemail);
+							$mail->send();
 	  			}
 	  		}else {
 	  			$this->_helper->redirector('index','index');
