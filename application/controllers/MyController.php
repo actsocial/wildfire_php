@@ -44,7 +44,7 @@ class MyController extends Zend_Controller_Action
 		$authNamespace = new Zend_Session_Namespace('Zend_Auth');
 		// Zend_Debug::dump($controller.$action);die;
 		if($this->filter($controller, $action)) {
-			// print_r("need auth");die;
+			// print_r("need auth");
 		  if (!Zend_Auth::getInstance()->hasIdentity()) {
 		    $config = Zend_Registry::get('config');
 	    	$lang = $this->_request->getParam('lang');
