@@ -3,6 +3,8 @@ require 'facebook-php-sdk/facebook.php';
 require_once APPLICATION_PATH . '/models/Log.php';
 require 'facebook-php-sdk/FacebookLoginAuthAdaptor.php';
 include_once( 'facebook-php-sdk/facebookconfig.php' );
+require_once 'Zend/Mail/Transport/Smtp.php';
+require_once 'Zend/Mail.php';
 
 class FacebookloginController extends MyController {
 	function indexAction() {
@@ -28,7 +30,7 @@ class FacebookloginController extends MyController {
 		  		$email = $user['email'];
 		  		$db = Zend_Registry :: get('db');
 		  		//if state param is not null, then the value is invite code, get email from database by invite code
-		  		$invitation_code_id = $_REQUEST['state'];
+		  		/*$invitation_code_id = $_REQUEST['state'];
 		  		if($invitation_code_id)
 		  		{
 		  			$invitation_code_id = intval($invitation_code_id);
@@ -43,7 +45,7 @@ class FacebookloginController extends MyController {
 								$email = $db->fetchOne($select1);
 			  			}
 		  			}
-		  		}
+		  		}*/
 					
 					$adapter = new FacebookLoginAuthAdaptor($uid, $uname,$email);
 					$auth = Zend_Auth :: getInstance();
@@ -69,6 +71,16 @@ class FacebookloginController extends MyController {
 					}
 	  		}
 		  }
+	}
+
+	function create_password()
+	{
+	    $randpwd = '';
+	    for ($i = 0; $i < 6; $i++)
+	    {
+	        $randpwd .= chr(mt_rand(0, 9));
+	    }
+	    return $randpwd;
 	}
 
 	function registerAction() {
@@ -123,8 +135,45 @@ class FacebookloginController extends MyController {
 							$consumerModel.update(array("facebookid"=>$this->facebookid), array('id'=>$consumer['id']));
 	  				}
 	  			}else {
+	  				$pass = $this->create_password();
 	  				$consumerModel = new Consumer();
-						$consumerModel->insert(array('name'=>$uname,'email'=>$email,'facebookid'=>$uid,'state'=>'ACTIVE'));		
+						$consumerModel->insert(array('name'=>$uname,'email'=>$email,'password'=>md5($pass),'facebookid'=>$uid,'state'=>'ACTIVE'));		
+						// $consumerModel->insert(array('name'=>$this->_facebookname,'password'=>md5($pass),'email'=>$this->_facebookemail,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));		
+	  				$config = Zend_Registry::get('config');
+						$smtpSender = new Zend_Mail_Transport_Smtp(
+						$config->smtp->friend->mail->server,
+						array(
+							'username'=> $config->smtp->friend->mail->username,
+							'password'=> $config->smtp->friend->mail->password,
+							'auth'=> $config->smtp->friend->mail->auth,
+							'ssl' => $config->smtp->friend->mail->ssl,
+         			'port' => $config->smtp->friend->mail->port));
+	  				Zend_Mail::setDefaultTransport($smtpSender);
+						$mail = new Zend_Mail('utf-8');
+						// $langNamespace = new Zend_Session_Namespace('Lang');
+
+						$stringChange = array(
+									'?USERNAME?' => $this->_facebookname,
+									// '?EMAIL?' =>$this->_facebookemail,
+									'?password?'=>$pass
+									// '?MESSAGE?' => $form->getValue('message'),
+									// '?AUTHCODE?' => (string)$signup_auth_code
+									);
+
+						$emailBody = "Hi ?username?
+													You can login this community by your facebook login-email and default password ?password? 
+													Thank You! ";
+						$emailSubject ="Your default password ";
+
+						$emailBody = strtr($emailBody,$stringChange);
+						$mail->addHeader('Reply-To', $consumer->email);
+						$mail->setBodyText((string)$emailBody);
+						$mail->setSubject($emailSubject);
+						$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
+						// $mail->addHeader('Reply-To', $consumer->email);
+		//						$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
+						$mail->addTo($this->_facebookemail);
+						$mail->send();
 	  			}
 	  		}else {
 	  			$this->_helper->redirector('index','index');
