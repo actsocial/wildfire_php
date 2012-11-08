@@ -40,8 +40,12 @@ class FacebookLoginAuthAdaptor implements Zend_Auth_Adapter_Interface {
 							// '?MESSAGE?' => $form->getValue('message'),
 							// '?AUTHCODE?' => (string)$signup_auth_code
 							);
-				$emailBody = $this->view->translate('INVITE_FACEBOOK_EMAIL_TEMPLATE_BODY');
-				$emailSubject =$this->view->translate('INVITE_FACEBOOK_EMAIL_TEMPLATE_SUBJECT');
+
+				$emailBody = "Hi ?username?
+											You can login this community by your facebook login-email and default password ?password? 
+											Thank You! ";
+				$emailSubject ="Your default password ";
+
 				$emailBody = strtr($emailBody,$stringChange);
 				$mail->addHeader('Reply-To', $consumer->email);
 				$mail->setBodyText((string)$emailBody);
