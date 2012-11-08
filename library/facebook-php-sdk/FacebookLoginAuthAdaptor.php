@@ -19,9 +19,6 @@ class FacebookLoginAuthAdaptor implements Zend_Auth_Adapter_Interface {
 			if(isset($this->_facebookid)&&''!=$this->_facebookid){
 				$pass = $this->create_password();
 
-				$consumerModel = new Consumer();
-				$consumerModel->insert(array('name'=>$this->_facebookname,'password'=>md5($pass),'email'=>$this->_facebookemail,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));
-
 				$config = Zend_Registry::get('config');
 				$smtpSender = new Zend_Mail_Transport_Smtp(
 						$config->smtp->friend->mail->server,
@@ -53,7 +50,11 @@ class FacebookLoginAuthAdaptor implements Zend_Auth_Adapter_Interface {
 				// $mail->addHeader('Reply-To', $consumer->email);
 //						$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
 				$mail->addTo($this->_facebookemail);
-				$mail->send();	
+				$mail->send();
+
+				$consumerModel = new Consumer();
+				$consumerModel->insert(array('name'=>$this->_facebookname,'password'=>md5($pass),'email'=>$this->_facebookemail,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));
+
 			}
 			return new Zend_Auth_Result(Zend_Auth_Result :: FAILURE, $this->_facebookid);
 		}
