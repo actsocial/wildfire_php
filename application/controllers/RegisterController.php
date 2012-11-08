@@ -29,7 +29,7 @@ class RegisterController extends MyController
 		$facebook = new Facebook(array(
 		  'appId'  => FB_AKEY,
 		  'secret' => FB_SKEY,
-		  'authorizationRedirectUrl' => FB_CALLBACK_URL,
+		  'authorizationRedirectUrl' => FB_REGISTER_CALLBACK_URL,
 		));
 		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email'));
 

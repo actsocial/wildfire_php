@@ -8,3 +8,4 @@ define( "WB_CALLBACK_URL" , 'http://home.xingxinghuo.com/public/weibologin/callb
 define( "FB_AKEY" , '234132663359597' );
 define( "FB_SKEY" , '1886a959cd90f54b377613f8140a5669' );
 define( "FB_CALLBACK_URL" , 'http://community.wildfire.asia/public/facebooklogin/index' );
+define( "FB_REGISTER_CALLBACK_URL" , 'http://community.wildfire.asia/public/facebooklogin/register' );
