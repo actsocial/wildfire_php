@@ -21,6 +21,27 @@
     <script type="text/javascript" src="<?php echo $this->baseUrl();?>/css/bootstrap/js/bootstrap-popover.js"></script>
     <link type="text/css" href="<?php echo $this->baseUrl();?>/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+    <script type='text/javascript'>
+    jQuery.fn.collapse.Constructor.prototype.transition = function (method, startEvent, completeEvent) {
+      var that = this
+        , complete = function () {
+            if (startEvent.type == 'show') that.reset();
+            that.transitioning = 0;
+            that.$element.trigger(completeEvent);
+          }
+
+      //this.$element.trigger(startEvent);
+      //if (startEvent.isDefaultPrevented()) return;
+      this.transitioning = 1;
+      this.$element[method]('in');
+      (jQuery.support.transition && this.$element.hasClass('collapse')) ?
+    this.$element.one(jQuery.support.transition.end, complete) :
+        complete();
+    };
+    
+    jQuery.noConflict();
+</script>
+
 	<script src="/js/all.js" language="JavaScript" type="text/javascript"></script>
 	<script language="JavaScript" type="text/javascript">
 	<!--

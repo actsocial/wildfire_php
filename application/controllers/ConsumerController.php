@@ -202,10 +202,14 @@ class ConsumerController extends MyController {
 				$consumer->birthdate = $form->getValue("birthdate");
 				$consumer->gender=$form->getValue("gender");
 				$consumer->qq = $form->getValue ( 'qq' );
-				if (isset ( $formData ['city'] ) && $formData ['city'] != null && $formData ['province'] != null) {
+				$consumer->city = $formData['city'] ;
+				$consumer->country = $formData['country'];
+
+				/*if (isset ( $formData ['city'] ) && $formData ['city'] != null && $formData ['province'] != null) {
 					$consumer->city = $formData ['city'];
 					$consumer->province = $formData ['province'];
-				}
+				}*/
+				// no need province 2012-11-07
 				/*if ($formData ['englishcity'] != null) {
 					$consumer->city = $formData ['englishcity'];
 					$consumer->province = null;
