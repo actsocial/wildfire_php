@@ -20,7 +20,7 @@ class FacebookloginController extends MyController {
 		  	if($token) {
 		  		$facebook->setAccessToken($token);
 		  		$user = $facebook->getUserInfoFromAccessToken($params = array('access_token' => $token));
-	//	  		var_dump($user);die();
+		  		// var_dump($user);die();
 		  		if(!$user){
 	//	  			$this->first();
 					$this->_helper->redirector('index','index');
@@ -87,12 +87,12 @@ class FacebookloginController extends MyController {
 		$facebook = new Facebook(array(
 		  'appId'  => FB_AKEY,
 		  'secret' => FB_SKEY,
-		  'authorizationRedirectUrl' => FB_CALLBACK_URL,
+		  'authorizationRedirectUrl' => FB_REGISTER_CALLBACK_URL,
 		));
 
 		$code = $_REQUEST['code'];
   	if($code) {
-	  	$token = $facebook->getAccessTokenFromCode($code, FB_CALLBACK_URL);
+	  	$token = $facebook->getAccessTokenFromCode($code, FB_REGISTER_CALLBACK_URL);
 	  	if($token) {
 	  		$facebook->setAccessToken($token);
 	  		$user = $facebook->getUserInfoFromAccessToken($params = array('access_token' => $token));
@@ -127,7 +127,7 @@ class FacebookloginController extends MyController {
 
 	  		if($is_invitation_code_valid) {
 	  			$consumer = $db->fetchOne("SELECT *  FROM consumer WHERE email=:email", array('email'=>$email));
-	  			if(isset($consumer)) {
+	  			if($consumer) {
 	  				if($consumer['facebookid'] == $uid) {
 
 	  				}else {
@@ -137,6 +137,7 @@ class FacebookloginController extends MyController {
 	  			}else {
 	  				$pass = $this->create_password();
 	  				$consumerModel = new Consumer();
+
 						// $consumerModel->insert(array('name'=>$this->_facebookname,'password'=>md5($pass),'email'=>$this->_facebookemail,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));		
     				$row = $consumerModel->createRow();
     				$row->name = $this->_facebookname;
@@ -179,7 +180,6 @@ class FacebookloginController extends MyController {
 		  				Zend_Mail::setDefaultTransport($smtpSender);
 							$mail = new Zend_Mail('utf-8');
 							// $langNamespace = new Zend_Session_Namespace('Lang');
-
 							$stringChange = array(
 										'?USERNAME?' => $this->_facebookname,
 										// '?EMAIL?' =>$this->_facebookemail,
@@ -212,16 +212,21 @@ class FacebookloginController extends MyController {
 								'temp' => $uid
 				));
 				$consumer = $consumerModel->find($consumer_id)->current();
-				$authNamespace = new Zend_Session_Namespace('Zend_Auth');
-				$authNamespace->user = $consumer;
-				$authNamespace->role = 'consumer';
-				$logModel = new Log();
-				$logId = $logModel->insert(array (
-								'consumer_id' => $consumer->id,
-								'date' => date("Y-m-d H:i:s"),
-								'event' => 'LOGIN'
-				));
-				$this->_helper->redirector('index','index');
+				$adapter = new FacebookLoginAuthAdaptor($uid,$uname,$email);
+				$auth = Zend_Auth :: getInstance();
+				$result = $auth->authenticate($adapter);
+				if($result->isValid()){
+					$authNamespace = new Zend_Session_Namespace('Zend_Auth');
+					$authNamespace->user = $consumer;
+					$authNamespace->role = 'consumer';
+					$logModel = new Log();
+					$logId = $logModel->insert(array (
+									'consumer_id' => $consumer->id,
+									'date' => date("Y-m-d H:i:s"),
+									'event' => 'LOGIN'
+					));
+				}
+				$this->_helper->redirector('home','index');
   		}else {
   			$this->_helper->redirector('index','index');
   		}
