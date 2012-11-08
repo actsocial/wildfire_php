@@ -28,7 +28,8 @@
 </head>
 
 <body>
-	<div class="header"><div class="header-inner">
+	<div class="header">
+		<!-- <div class="header-inner">
 		<div class="logo">
 			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.png" /></a>
 		</div>
@@ -57,14 +58,16 @@
 				<div id="jflanguageselection"></div>
 			</div>
 			   <div id="qq_online" style="position:absolute;top:75px;left:1100px">
-				<!-- WPA Button Begin -->
+				 WPA Button Begin 
 				<iframe scrolling="no" frameborder="0" width="126" height="42" allowtransparency="true" src="https://id.b.qq.com/static/account/bizqq/wpa/wpa_a05.html?type=5&kfuin=4006008707&ws=http%3A%2F%2Fhome.xingxinghuo.cn&btn1=%E5%9C%A8%E7%BA%BF%E5%AE%A2%E6%9C%8D"></iframe>
-				<!-- WPA Button END -->
+				 WPA Button END 
 			 </div>			
 		</div>
 
 		<div class="clear"></div>
-	</div></div>
+	</div> -->
+
+</div>
 	<div class="container"><div class="container-inner">
 		<div class="banner">
 			<img src="<?php echo $this->baseUrl();?>/images/text-banner1.jpg"/>
@@ -75,49 +78,68 @@
 		<h1><?php echo $this->translate("Incorrect_login_title")?></h1>
 		<p class="warning"><?php echo $this->translate("Incorrect_login")?></p>
 		</div></div>
-<form enctype="application/x-www-form-urlencoded" action="<?php echo $this->url(array('controller'=>'login',
+<form enctype="application/x-www-form-urlencoded" style="width:300px;float:left;margin-left:20px;" action="<?php echo $this->url(array('controller'=>'login',
 		'action'=>'login'));?>" method="post" target="_parent">
 		
 <div class="login_form">
 <br/>
+
 <table>
 	<tr>
             <td><?php echo $this->form->email?></td>
             <td>&nbsp;</td>
-        </tr>
+    </tr>
 	<tr>
             <td><?php echo $this->form->password?></td>
         </tr>
-        <tr>
+        <!-- <tr>
             <td>
                 <a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>"><?php echo $this->translate("Common_Forget_Password")?></a>&nbsp;&nbsp;&nbsp;
                 <a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>"><?php echo $this->translate("Common_Inactive_Account")?></a>
             </td>
-        </tr>
+        </tr> -->
 </table>
+
   <div style="clear:both"></div>  <br/>
 </div>
-<div style="padding-left:3px;">
+<!-- <div style="padding-left:3px;">
 	<a href="<?php echo $this->facebook_login_url;?>">
 	  <img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">
+	  <img src="../public/imags/facebook_login.png">
 	</a>
-</div>
-<div class="buttons-bar">
-<?php echo $this->form->login?>
-<input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>
-</div>
+</div> -->
+		<div class="buttons-bar">
+			<!--<?php echo $this->form->login?>
+			<input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>-->
+
+			<input type="submit" id="login" value="Login"> 
+			<!-- <?php echo $this->translate("Common_Forget_Password")?> -->
+			<a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:10px;">Forgot your password?</a>
+		</div>
 <input type="hidden" name="url" id="url" value="<?php echo $this->url?>"></input>
 </form>
-			
+			<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
+		<a href="<?php echo $this->facebook_login_url;?>">
+		   
+		  <img src="<?php echo $this->baseUrl();?>/images/facebook_login.png">
+		</a>
+		<!-- Not a member yet? Click  
+		<a href="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>">
+			here
+		</a> to sign-up! -->
+
+<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
+
+</div>
 
 
 		</div>
 		<div class="clear"></div>
 	</div></div>
 
-	<div class="footer">
+<!-- 	<div class="footer">
 	<div class="footer-inner">
-		<div class="moduletable bottom_menu">
+		<div class="moduletable bottom_menu"> -->
 	<!--
 			<table width="100%" border="0" cellpadding="0" cellspacing="1">
 			<tr><td nowrap="nowrap"><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=51&amp;Itemid=58&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Contacts');?></a>
@@ -126,7 +148,7 @@
 			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=89&amp;Itemid=61&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Jobs');?></a>
 			<a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=90&amp;Itemid=62&amp;lang=zh" class="mainlevel" ><?php echo $this->translate('Common_Investors');?></a></td>
 			</tr></table>	-->	
-		</div>
-    </div></div>
+<!-- 		</div>
+    </div></div> -->
 </body>
 </html>
