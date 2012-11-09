@@ -32,38 +32,40 @@
 </head>
 
 <body>
-	<div class="header"><div class="header-inner">
-		<div class="logo">
-			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.png" /></a>
-		</div>
-		<div class="login-panel">
-			<form action="<?php echo $this->url(array('controller'=>'login','action'=>'login'));?>" method="post">
-				<div class="user-info">
-					<label for="username" style='width:65px;'><?php echo $this->translate("Common_Username")?></label>
-
-					<input type="text" name="email" id="username"/>
-					<label for="password"><?php echo $this->translate("Common_Password")?></label>
-					<input type="password" name="password" id="password"/>
+	<div class="header">
+				<!-- <div class="header-inner">
+				<div class="logo">
+					<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.png" /></a>
 				</div>
-				<input type="submit" name="login" value=<?php echo $this->translate("Common_login")?> />
-				<input type="button" name="help" value=<?php echo $this->translate("Common_help")?> />
-			</form>
-		</div>
+				<div class="login-panel">
+					<form action="<?php echo $this->url(array('controller'=>'login','action'=>'login'));?>" method="post">
+						<div class="user-info">
+							<label for="username" style='width:65px;'><?php echo $this->translate("Common_Username")?></label>
 
-		<div class="navigator">
-			<ul id="mainlevel-nav"><li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=frontpage&amp;Itemid=1&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_home")?></a></li>
-			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=53&amp;lang=zh" class="mainlevel-nav" id="active_menu-nav"><?php echo $this->translate("Common_about_us")?></a></li>
-			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=49&amp;Itemid=54&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_about_Sparks")?></a></li>
-			<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=56&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_hire_us")?></a></li></ul>
-			<div class="language-selector">
-			<div id="jflanguageselection">
-				<ul class="jflanguageselection"><li id="active_language"><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>"><span lang="zh" xml:lang="zh">中文&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li><li><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>" ><span lang="en" xml:lang="en">English</span></a></li></ul></div>		
-				<div id="jflanguageselection"></div>
-			</div>
-		</div>
+							<input type="text" name="email" id="username"/>
+							<label for="password"><?php echo $this->translate("Common_Password")?></label>
+							<input type="password" name="password" id="password"/>
+						</div>
+						<input type="submit" name="login" value=<?php echo $this->translate("Common_login")?> />
+						<input type="button" name="help" value=<?php echo $this->translate("Common_help")?> />
+					</form>
+				</div>
 
-		<div class="clear"></div>
-	</div></div>
+				<div class="navigator">
+					<ul id="mainlevel-nav"><li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=frontpage&amp;Itemid=1&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_home")?></a></li>
+					<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=48&amp;Itemid=53&amp;lang=zh" class="mainlevel-nav" id="active_menu-nav"><?php echo $this->translate("Common_about_us")?></a></li>
+					<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=49&amp;Itemid=54&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_about_Sparks")?></a></li>
+					<li><a href="<?php echo $this->joomlahome;?>/index.php?option=com_content&amp;view=article&amp;id=50&amp;Itemid=56&amp;lang=zh" class="mainlevel-nav" ><?php echo $this->translate("Common_hire_us")?></a></li></ul>
+					<div class="language-selector">
+					<div id="jflanguageselection">
+						<ul class="jflanguageselection"><li id="active_language"><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>"><span lang="zh" xml:lang="zh">中文&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li><li><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>" ><span lang="en" xml:lang="en">English</span></a></li></ul></div>		
+						<div id="jflanguageselection"></div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+			</div> -->
+	</div>
 	<div class="container"><div class="container-inner">
 		<div class="banner">
 			<img src="<?php echo $this->baseUrl();?>/images/banner-sample.jpg"/>

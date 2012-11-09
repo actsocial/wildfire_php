@@ -18,7 +18,7 @@ class IndexController extends MyController
 			));
 		
 		$this->view->form = $form;
-		$this->view->title = '星星火 - Wildfire';
+		$this->view->title = 'Wildfire';
 		$this->view->messages = $this->_flashMessenger->getMessages();
 		
 		$this->view->url = $this->getRequest()->getParam('url');
@@ -45,10 +45,11 @@ class IndexController extends MyController
 			'action' => $fc->getBaseUrl().'/login/login',
 			'method' => 'post',
 			));
-		
+	
 		$this->view->form = $form;
-		$this->view->title = '星星火 - Wildfire';
-		$this->view->messages = $this->_flashMessenger->getMessages();
+		$this->view->title = 'Wildfire';
+		$this->_helper->layout->disableLayout();
+		/*$this->view->messages = $this->_flashMessenger->getMessages();
 		
 		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email'));
 
@@ -56,10 +57,11 @@ class IndexController extends MyController
 		$this->_helper->layout->disableLayout();
 		
 		$lang = $this->_request->getParam('lang');
+
 		if (isset($lang)){
 			$langNamespace = new Zend_Session_Namespace('Lang');
 			$langNamespace->lang =$lang;
 			$this->_helper->redirector->gotoUrl('index/index');
-		}
+		}*/
 	}
 }
