@@ -4,3 +4,4 @@ public/csv/*
 public/uploads/*
 public/userfiles/*
 public/cache
+*.swp
