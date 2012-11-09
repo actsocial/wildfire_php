@@ -23,7 +23,7 @@ class FacebookloginController extends MyController {
 		  		// var_dump($user);die();
 		  		if(!$user){
 	//	  			$this->first();
-					$this->_helper->redirector('index','index');
+					$this->_helper->redirector('loginfailed','index');
 		  		}
 		  		$uid = $user['id'];
 		  		$uname = $user['name'];
