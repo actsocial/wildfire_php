@@ -173,7 +173,7 @@ class FacebookloginController extends MyController {
 							$mail->setBodyText((string)$emailBody);
 							$mail->setSubject($emailSubject);
 							$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
-							$mail->addTo($uname);
+							$mail->addTo($uname,$uname);
 							$mail->send();
 	  			}
 	  		}else {
