@@ -67,7 +67,8 @@ class FacebookloginController extends MyController {
 						));
 						$this->_helper->redirector('index','index');
 					}else {
-						$this->first();
+						// $this->first();
+						$this->_helper->redirector('loginfailed','index');
 					}
 	  		}
 		  }else{
