@@ -209,4 +209,43 @@ class FacebookloginController extends MyController {
 	  	$this->_helper->redirector('index','index');
 	  }
 	}
+	function testAction(){
+		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
+		  				
+		  				$config = Zend_Registry::get('config');
+							$smtpSender = new Zend_Mail_Transport_Smtp(
+								$config->smtp->friend->mail->server,
+								array(
+									'username'=> $config->smtp->friend->mail->username,
+									'password'=> $config->smtp->friend->mail->password,
+									'auth'=> $config->smtp->friend->mail->auth,
+									'ssl' => $config->smtp->friend->mail->ssl,
+		         			'port' => $config->smtp->friend->mail->port
+		         			)
+							);
+		  				Zend_Mail::setDefaultTransport($smtpSender);
+							$mail = new Zend_Mail('utf-8');
+
+							$stringChange = array(
+										'?username?' => "testAction",
+										'?password?'=>"aaaaaa"
+										);
+
+							$emailBody = "Hi ?username?
+														You can login this community by your facebook login-email and default password ?password? 
+														Thank You! ";
+							$emailSubject ="Your default password ";
+
+							$emailBody = strtr($emailBody,$stringChange);
+							
+							// $mail->addHeader('Reply-To',"liuhuazeng@gmail.com");
+							$mail->setBodyText((string)$emailBody);
+							$mail->setSubject($emailSubject);
+							$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
+							$mail->addTo("liuhuazeng@xingxinghuo.com","liuhuazeng");
+// var_dump($mail);die();
+							$mail->send();
+							echo "he";
+							$this->_helper->viewRenderer->setNoRender(true);
+	}
 }
