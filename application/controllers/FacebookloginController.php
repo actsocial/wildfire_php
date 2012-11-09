@@ -76,15 +76,14 @@ class FacebookloginController extends MyController {
 		  }
 	}
 
-	function create_password()
-	{
-	    $randpwd = '';
-	    for ($i = 0; $i < 6; $i++)
-	    {
-	        $randpwd .= chr(mt_rand(0, 9));
-	    }
-	    return $randpwd;
-	}
+	private	function create_password($length = 6) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+    }
+    return $randomString;
+}
 
 	function registerAction() {
 		$facebook = new Facebook(array(
@@ -135,24 +134,23 @@ class FacebookloginController extends MyController {
 
 	  				}else {
 	  					$consumerModel = new Consumer();
-							$consumerModel.update(array("facebookid"=>$this->facebookid), array('id'=>$consumer['id']));
+							$consumerModel.update(array("facebookid"=>$uid), array('id'=>$consumer['id']));
 	  				}
 	  			}else {
-	  				$pass = $this->create_password();
+	  				$pass = $this->create_password();var_dump($pass);
 	  				$consumerModel = new Consumer();
 
 						// $consumerModel->insert(array('name'=>$this->_facebookname,'password'=>md5($pass),'email'=>$this->_facebookemail,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));		
     				$row = $consumerModel->createRow();
-    				$row->name = $this->_facebookname;
-    				$row->email = $this->_facebookemail;
+    				$row->name = $uname;
+    				$row->email = $email;
     				// $row->login_phone = $form->getValue('loginPhone');
     				$row->password = md5($pass);
 						$row->state ="ACTIVE";
-						$row->facebookid = $this->_facebookid ;
+						$row->facebookid = $uid;
 		    		$row->save();
 
 		    		$currentTime = date("Y-m-d H:i:s");
-
 		  			$invitation_code_id = intval($invitation_code_id);
 		  			$signupAuthCodeModel = new SignupAuthCode();
 		  			$invitation_code =	$signupAuthCodeModel->find($invitation_code_id);
@@ -169,7 +167,6 @@ class FacebookloginController extends MyController {
 		    					$ci->state = "NEW";
 		    					$ci->save();
 		    				}
-
 		    		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
 		  				$config = Zend_Registry::get('config');
 							$smtpSender = new Zend_Mail_Transport_Smtp(
