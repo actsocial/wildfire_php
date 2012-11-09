@@ -145,7 +145,7 @@ class FacebookloginController extends MyController {
     				// $row->login_phone = $form->getValue('loginPhone');
     				$row->password = md5($pass);
 						$row->state ="ACTIVE";
-						$row->facebookid = $this->$this->_facebookid ;
+						$row->facebookid = $this->_facebookid ;
 		    		$row->save();
 
 		    		$currentTime = date("Y-m-d H:i:s");
