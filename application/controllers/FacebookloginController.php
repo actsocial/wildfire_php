@@ -170,10 +170,10 @@ class FacebookloginController extends MyController {
 							$emailSubject ="Your default password ";
 
 							$emailBody = strtr($emailBody,$stringChange);
-							$mail->setBodyText((string)$emailBody);
+							$mail->setBodyHtml((string)$emailBody);
 							$mail->setSubject($emailSubject);
 							$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
-							$mail->addTo($uname,$uname);
+							$mail->addTo($email,$uname);
 							$mail->send();
 	  			}
 	  		}else {
