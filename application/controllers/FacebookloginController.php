@@ -137,7 +137,7 @@ class FacebookloginController extends MyController {
 							$consumerModel.update(array("facebookid"=>$uid), array('id'=>$consumer['id']));
 	  				}
 	  			}else {
-	  				$pass = $this->create_password();var_dump($pass);
+	  				$pass = $this->create_password();
 	  				$consumerModel = new Consumer();
 
 						// $consumerModel->insert(array('name'=>$this->_facebookname,'password'=>md5($pass),'email'=>$this->_facebookemail,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));		
