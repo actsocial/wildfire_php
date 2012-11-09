@@ -161,21 +161,19 @@ class FacebookloginController extends MyController {
 							$mail = new Zend_Mail('utf-8');
 
 							$stringChange = array(
-										'?USERNAME?' => $this->_facebookname,
+										'?username?' => $uname,
 										'?password?'=>$pass
 										);
 
-							$emailBody = "Hi ?username?
-														You can login this community by your facebook login-email and default password ?password? 
+							$emailBody = "Hi ?username?<br><br>You can login this community by your facebook login-email and default password ?password?<br><br>
 														Thank You! ";
 							$emailSubject ="Your default password ";
 
 							$emailBody = strtr($emailBody,$stringChange);
-							$mail->addHeader('Reply-To', $consumer->email);
 							$mail->setBodyText((string)$emailBody);
 							$mail->setSubject($emailSubject);
 							$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
-							$mail->addTo($this->_facebookemail);
+							$mail->addTo($uname);
 							$mail->send();
 	  			}
 	  		}else {
@@ -209,7 +207,7 @@ class FacebookloginController extends MyController {
 	  	$this->_helper->redirector('index','index');
 	  }
 	}
-	function testAction(){
+	/*function testAction(){
 		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
 		  				
 		  				$config = Zend_Registry::get('config');
@@ -247,5 +245,5 @@ class FacebookloginController extends MyController {
 							$mail->send();
 							echo "he";
 							$this->_helper->viewRenderer->setNoRender(true);
-	}
+	}*/
 }
