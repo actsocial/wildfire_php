@@ -20,33 +20,15 @@ class FacebookloginController extends MyController {
 		  	if($token) {
 		  		$facebook->setAccessToken($token);
 		  		$user = $facebook->getUserInfoFromAccessToken($params = array('access_token' => $token));
-		  		// var_dump($user);die();
 		  		if(!$user){
-	//	  			$this->first();
-					$this->_helper->redirector('loginfailed','index');
+						$this->_helper->redirector('loginfailed','index');
 		  		}
 		  		$uid = $user['id'];
 		  		$uname = $user['name'];
 		  		$email = $user['email'];
 		  		$db = Zend_Registry :: get('db');
 		  		//if state param is not null, then the value is invite code, get email from database by invite code
-		  		/*$invitation_code_id = $_REQUEST['state'];
-		  		if($invitation_code_id)
-		  		{
-		  			$invitation_code_id = intval($invitation_code_id);
-		  			$signupAuthCodeModel = new SignupAuthCode();
-		  			$invitation_code =	$signupAuthCodeModel->find($invitation_code_id);
-		  			if(isset($invitation_code)) {
-		  				$invitation_code = $invitation_code[0];
-		  				if ($invitation_code->id) {
-			  				$select1 = $db->select();
-								$select1->from("invitation_email","to");
-								$select1->where("invitation_email.signup_auth_code_id = ?",$invitation_code->id);
-								$email = $db->fetchOne($select1);
-			  			}
-		  			}
-		  		}*/
-					
+		  		
 					$adapter = new FacebookLoginAuthAdaptor($uid, $uname,$email);
 					$auth = Zend_Auth :: getInstance();
 					$result = $auth->authenticate($adapter);
@@ -67,7 +49,6 @@ class FacebookloginController extends MyController {
 						));
 						$this->_helper->redirector('index','index');
 					}else {
-						// $this->first();
 						$this->_helper->redirector('loginfailed','index');
 					}
 	  		}
@@ -139,23 +120,22 @@ class FacebookloginController extends MyController {
 	  			}else {
 	  				$pass = $this->create_password();
 	  				$consumerModel = new Consumer();
-
-						// $consumerModel->insert(array('name'=>$this->_facebookname,'password'=>md5($pass),'email'=>$this->_facebookemail,'facebookid'=>$this->_facebookid,'state'=>'ACTIVE'));		
     				$row = $consumerModel->createRow();
     				$row->name = $uname;
     				$row->email = $email;
-    				// $row->login_phone = $form->getValue('loginPhone');
     				$row->password = md5($pass);
 						$row->state ="ACTIVE";
 						$row->facebookid = $uid;
 		    		$row->save();
+		    		
 
 		    		$currentTime = date("Y-m-d H:i:s");
 		  			$invitation_code_id = intval($invitation_code_id);
 		  			$signupAuthCodeModel = new SignupAuthCode();
 		  			$invitation_code =	$signupAuthCodeModel->find($invitation_code_id);
+		  			$invitation_code = $invitation_code[0];
 						$invitation_code->receiver = $row->id;
-    				$invitation_code->use_date= $currentTime;
+    				$invitation_code->use_date= (string)$currentTime;
     				$invitation_code->save();
 
 		  			if (!empty($invitation_code->auto_invitation) && $invitation_code->auto_invitation!=0){
@@ -166,7 +146,7 @@ class FacebookloginController extends MyController {
 		    					$ci->create_date = $currentTime;
 		    					$ci->state = "NEW";
 		    					$ci->save();
-		    				}
+    				}
 		    		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
 		  				$config = Zend_Registry::get('config');
 							$smtpSender = new Zend_Mail_Transport_Smtp(
@@ -179,13 +159,10 @@ class FacebookloginController extends MyController {
 	         			'port' => $config->smtp->friend->mail->port));
 		  				Zend_Mail::setDefaultTransport($smtpSender);
 							$mail = new Zend_Mail('utf-8');
-							// $langNamespace = new Zend_Session_Namespace('Lang');
+
 							$stringChange = array(
 										'?USERNAME?' => $this->_facebookname,
-										// '?EMAIL?' =>$this->_facebookemail,
 										'?password?'=>$pass
-										// '?MESSAGE?' => $form->getValue('message'),
-										// '?AUTHCODE?' => (string)$signup_auth_code
 										);
 
 							$emailBody = "Hi ?username?
@@ -198,8 +175,6 @@ class FacebookloginController extends MyController {
 							$mail->setBodyText((string)$emailBody);
 							$mail->setSubject($emailSubject);
 							$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
-							//	$mail->addHeader('Reply-To', $consumer->email);
-							//	$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
 							$mail->addTo($this->_facebookemail);
 							$mail->send();
 	  			}
@@ -226,7 +201,7 @@ class FacebookloginController extends MyController {
 									'event' => 'LOGIN'
 					));
 				}
-				$this->_helper->redirector('home','index');
+				$this->_helper->redirector('index','home');
   		}else {
   			$this->_helper->redirector('index','index');
   		}
