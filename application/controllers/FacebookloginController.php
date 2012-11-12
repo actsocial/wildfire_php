@@ -177,7 +177,7 @@ class FacebookloginController extends MyController {
 							$mail->send();
 	  			}
 	  		}else {
-	  			$this->_helper->redirector('index','index');
+	  			$this->_helper->redirector('loginfailed','index');
 	  		}
 				
 				$consumerModel = new Consumer();
@@ -201,10 +201,10 @@ class FacebookloginController extends MyController {
 				}
 				$this->_helper->redirector('index','home');
   		}else {
-  			$this->_helper->redirector('index','index');
+  			$this->_helper->redirector('loginfailed','index');
   		}
 	  }else {
-	  	$this->_helper->redirector('index','index');
+	  	$this->_helper->redirector('loginfailed','index');
 	  }
 	}
 	/*function testAction(){
