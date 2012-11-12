@@ -505,7 +505,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>请你输入你在星星火注册的电子邮件，我们将发送重置密码的邮件给你。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Type in the email associated with your wildfire account and we'll send you an email with instructions to reset your password.</seg>
+				<seg>Enter the email address associated with your Wildfire account and we'll send you the instructions to access your account.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Check_you_email'>
@@ -577,7 +577,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>该邮件地址在星星火中并不存在，请输入你在星星火注册的邮箱地址。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>This email is not existed in Wildfire! Please enter a valid email.</seg>
+				<seg>We’re sorry! The email address you entered is not registered in the Wildfire platform.  Please try again.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Your_reset_passwrod_link'>

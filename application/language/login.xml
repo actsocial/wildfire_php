@@ -21,7 +21,7 @@
 				<seg>对不起，你输入的登录信息不正确。请重新输入，如果你还是无法登录，请点击下面的“忘记密码”链接。我们将给你发送重置密码邮件。如果你的账户仍未激活，请先从邮箱中激活你的账户。如果确认邮件失效，请点击下面的“未激活账户”按钮。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Oops! Looks like you’ve mistyped your user information. Please try again, and if you still can’t login, click on “forget password” below. And we’ll send you a new password. If your account is inactive, please active it from email first. And If your confirm email is invalid, click on "inactive account" below.</seg>
+				<seg>Oops Looks like you’ve mistyped your user information. Please try again, and if you still can’t login, click on “forget password” below. And we’ll send you a new password. If your account is inactive, please active it from email first. And If your confirm email is invalid, click on "inactive account" below.</seg>
 			</tuv>
 		</tu>
 		
