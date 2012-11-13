@@ -6,7 +6,6 @@ class ForgetpasswordController extends MyController
 	function indexAction(){
 		$this->_helper->layout->disableLayout();
 //		$this->viewresetPasswordLink = Zend_Controller_Front::getInstance()->getBaseUrl();
-	
 	}
 	
 	function sendsmsAction() {

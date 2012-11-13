@@ -412,7 +412,17 @@
 		</div>
 		<div class="avatar">
 			<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>">
-				<img src="">
+				<?php if($this->consumer[0]['gender']=="1") {?>
+				<img src="images/MALE.png">
+				<?php }?> 
+
+				<?php if($this->consumer[0]['gender']=="0") {?>
+				<img src="images/FEMALE.png">
+				<?php }?>
+
+				<?php if($this->consumer[0]['gender']==""){ ?>
+				<img src="images/anonymous.jpeg">
+				<?php } ?>
 			</a>
 		</div>
 	    <!--  info bar  -->

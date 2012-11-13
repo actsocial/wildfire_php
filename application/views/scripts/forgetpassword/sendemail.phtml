@@ -75,7 +75,10 @@
 			<h1 style="margin-left:0;"><?php echo $this->translate("Check_you_email")?></h1>
 			<div style="clear: both;"></div>
 			<p><?php echo $this->translate("Check_you_email_Content1")?><?php echo $this->email;?><?php echo $this->translate("Check_you_email_Content2")?></p>
-			
+			<div class="buttons-bar" style="margin-left:245px;">
+				<input id="changepassword" target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'forgetpassword', 'action'=>'index'));?>'" type='button'  value='<?php echo $this->translate("Back")?>'></input>
+			</div>
+			<div style="clear: both;"></div>
 			<?php } else{?>
 					<h1 style="margin-left:0;"><?php echo $this->emailErr; ?></h1>
 			

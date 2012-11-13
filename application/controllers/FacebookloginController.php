@@ -165,8 +165,22 @@ class FacebookloginController extends MyController {
 										'?password?'=>$pass
 										);
 
-							$emailBody = "Hi ?username?<br><br>You can login this community by your facebook login-email and default password ?password?<br><br>
-														Thank You! ";
+							$emailBody = "Dear ?username?
+														<br><br>Since you signed up on the Wildfire Community Platform with your Facebook account, did you know that you can also login with your Facebook email address?
+														<br><br>Follow the steps below to access your Wildfire Community Platform profile through your Facebook email address:
+														<br>1. Go to http://community.wildfire.asia/public
+														<br>2. Enter your Facebook email address.
+														<br>3. Enter your password. Your default password is ?password?
+														<br>4. Click Login.
+														<br><br>To change your password:
+														<br>1. Click Edit your Profile
+														<br>2. Click Change Password
+														<br>3. Key in your account's default password
+														<br>4. Enter your desired password and click Save
+														<br><br>Please do not hesitate to contact us if you need any assistance in the future. Thank you very much and have a great day!
+														<br><br>Best regards,
+														<br>Wildfire Community";
+														
 							$emailSubject ="Your default password ";
 
 							$emailBody = strtr($emailBody,$stringChange);

@@ -37,7 +37,7 @@ class PasswordForm extends Zend_Form
 		
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->setLabel($this->getView()->translate('CONTACT INFORMATION_CHANGEPASSWORD'))
-		->setAttrib('id', 'changepassword');
+		->setAttrib('id', 'changepassword2');
 		
 		$this->addElements(array($email, $oldpassword, $newpassword, $repeat, $submit));
 	}

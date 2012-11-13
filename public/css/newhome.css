@@ -1314,6 +1314,23 @@ ul.tabbed-buttons li.active a:visited {
 	border: 0;
 	cursor: pointer;
 }
+
+.buttons-bar input#changepassword2 {
+	background: url(../images/big-button.gif) no-repeat center center;
+	display: block;
+	float: left;
+	width: 210px;
+	height: 36px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	border: 0;
+	cursor: pointer;
+}
+
 .buttons-2lines {
 	float: right;
 }
@@ -2396,7 +2413,7 @@ a.list-orders:hover {
 	display:block;
 	height:100px;
 	height:100px;
-	background:url(../images/anonymous.jpeg) no-repeat;
+	/*background:url(../images/anonymous.jpeg) no-repeat;*/
 }
 .avatar img{
 	vertical-align:middle;
