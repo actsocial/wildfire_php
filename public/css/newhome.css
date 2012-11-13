@@ -1248,7 +1248,8 @@ ul.tabbed-buttons li.active a:visited {
 	padding:0;
 }
 .edit-profile dt {
-	width: 110px;
+/*	width: 110px;*/
+	width: 30%;
 	height: 30px;
 	clear: left;
 	padding-left: 10px;
