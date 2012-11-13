@@ -27,9 +27,9 @@ class ConsumerForm extends Zend_Form
 		$phone = new Zend_Form_Element_Text('phone');
 		$phone->setLabel($this->getView()->translate('CONTACT INFORMATION_CONTACT_NUMBER'))
 		->addFilter('StripTags')
-		->addFilter('StringTrim')
-		->addValidators(array(array('StringLength', false, array(0, 50)),))
-		->addErrorMessage($this->getView()->translate('Please_enter_your_phone'));
+		->addFilter('StringTrim');
+/*		->addValidators(array(array('StringLength', false, array(0, 50)),))
+		->addErrorMessage($this->getView()->translate('Please_enter_your_phone'));*/
 		$phone->setDecorators(array('ViewHelper',
 								'Errors',
 								array('HtmlTag', array('tag'=>'div', 'class'=>'input-area')),
@@ -40,8 +40,8 @@ class ConsumerForm extends Zend_Form
 		$login_phone->setLabel($this->getView()->translate('CONTACT INFORMATION_PHONE'))
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
-		->setAttrib('readOnly', true)
-		->addValidators(array(array('StringLength', false, array(0, 50)),))
+/*		->setAttrib('readOnly', true)*/
+/*		->addValidators(array(array('StringLength', false, array(0, 50)),))*/
 		->addErrorMessage($this->getView()->translate('Please_enter_your_phone'));
 		$login_phone->setDecorators(array('ViewHelper',
 									array('Description', array('color' => 'red','tag' => 'font')),
