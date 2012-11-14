@@ -97,7 +97,7 @@ class ReportController extends MyController
 			$consumer_id = $consumer->id;
 
 
-		$id = 266;
+		// $id = 266;
 		
 		if ($consumer->getTableClass() == 'Admin') { // if admin get report from session (sms report)
 		    if (Zend_Session::namespaceIsset("AgentReports")) {
