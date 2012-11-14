@@ -249,15 +249,21 @@ class ConsumerForm extends Zend_Form
 		//
 		$income = new Zend_Form_Element_Select('income');
 		$income->setLabel($this->getView()->translate('Consumer_income_level_per_month'));
-		$income->addMultiOption('', '');
+/*		$income->addMultiOption('', '');
 		for($i = 0; $i < 20000; $i = $i+2000){
 			$income->addMultiOption($i."-".($i+2000), $i."-".($i+2000));
-		}
-		$income->addMultiOption('>20000', '>20000')
+		}*/
+		$income->addMultiOptions( array(
+			'' => '',
+			'Php 30,000 and above'=> 'Php 30,000 and above',
+			'Php 15,000 – Php 29,999'=>'Php 15,000 – Php 29,999',
+			'Php 14,999 and below'=>'Php 14,999 and below'
+		));
+	/*	$income->addMultiOption('>20000', '>20000')
 		->addDecorators(array(
 		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'income_value')),
 		    array('Label')
-		));
+		));*/
 		//
 		$online_shopping = new Zend_Form_Element_Radio('online_shopping');
 		$online_shopping->setLabel($this->getView()->translate('Consumer_do_your_often_go_shopping_online'))
