@@ -207,7 +207,7 @@ class ConsumerForm extends Zend_Form
 		$education->setLabel($this->getView()->translate('Consumer_education'))
 		->addMultiOptions( array(
 		'' => '',
-		'High-School' => $this->getView()->translate('Consumer_education_High-School'), 
+		'High School' => $this->getView()->translate('Consumer_education_High-School'), 
 		'Junior college' => $this->getView()->translate('Consumer_education_Junior_college'),
 		'Bachelor' => $this->getView()->translate('Consumer_education_Bachelor'),
 		'Master' => $this->getView()->translate('Consumer_education_Master'),

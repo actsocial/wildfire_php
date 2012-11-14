@@ -579,7 +579,7 @@ table.spark-show td img {
 .spark-status-box .spark-status-content h4{
 	font-size: 32px;
 	margin:0;
-	margin-top: 10px;
+	margin-top: 20px;
 	color: #006bc4;
 	font-family: Tahoma, Geneva, sans-serif;
 	text-align: center;
@@ -1248,8 +1248,8 @@ ul.tabbed-buttons li.active a:visited {
 	padding:0;
 }
 .edit-profile dt {
-/*	width: 110px;*/
-	width: 30%;
+	width: 190px;
+/*	width: 30%;*/
 	height: 30px;
 	clear: left;
 	padding-left: 10px;
@@ -2589,6 +2589,7 @@ a.list-orders:hover {
 	float: left;
 	clear: left;
 	margin-top: 10px;
+	margin-left:60px;
 	width: 600px;
 }
 .consumer-edit fieldset .form-line-long-title label {

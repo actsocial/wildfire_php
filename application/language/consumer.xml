@@ -649,7 +649,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>女</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Female</seg>
+                <seg> Female</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_gender_Male'>
@@ -657,7 +657,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>男</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Male</seg>
+                <seg> Male</seg>
             </tuv>
         </tu>
         
@@ -876,7 +876,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>高中</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>High-School</seg>
+                <seg>High School</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_education_Junior_college'>
