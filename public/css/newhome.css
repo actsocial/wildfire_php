@@ -565,6 +565,7 @@ table.spark-show td img {
 	font-size: 12px;
 	color: #006bc4;
 	float: left;
+	margin-left:10px;
 	/*width: 193px;*/
 }
 .spark-status-box .spark-status-content {
@@ -2566,6 +2567,7 @@ a.list-orders:hover {
 .consumer-edit fieldset .not-text .input-area input {
 	width: auto;
 	height: auto;
+	margin-top: -2px;
 }
 .consumer-edit fieldset .long-text .input-area input {
 	width: 400px;

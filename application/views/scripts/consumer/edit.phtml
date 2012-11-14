@@ -117,16 +117,16 @@
 </form>
 </div>
 </div><!-- consumer edit -->
-<script>
-    Calendar.setup(
-		{
-			inputField : "birthdate", // ID of the input field
-			ifFormat : "%Y-%m-%d", // the date format
-			input : "birthdate", // ID of the button
-			showsTime : true
-		}
-	);
-</script>
+ <script>
+//     Calendar.setup(
+// 		{
+// 			inputField : "birthdate", // ID of the input field
+// 			ifFormat : "%Y-%m-%d", // the date format
+// 			input : "birthdate", // ID of the button
+// 			showsTime : true
+// 		}
+// 	);
+ </script>
 <script type="text/javascript">
 jQuery().ready(function() {
 // validate signup form on keyup and submit
@@ -296,4 +296,5 @@ if (typeof window.onload != 'function') {
 		  init();
 	 	}
 	}
+	jQuery("#birthdate").datepicker({dateFormat: 'yy-mm-dd', maxDate: '0',changeYear: true,yearRange: '1900:2012' });
 </script>
