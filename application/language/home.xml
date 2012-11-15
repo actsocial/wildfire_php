@@ -89,10 +89,10 @@
 		</tu>
 		<tu tuid='Contact_Text_Mobile'>
 			<tuv xml:lang="zh">
-				<seg>手机号码（仅接收短信）：+63 9XX XXXXXXX</seg>
+				<seg>手机号码（仅接收短信）：09156768666 (Globe) / 09982007891 (Smart)</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Mobile (SMS only): +63 9XX XXXXXXX</seg>
+				<seg>Mobile (SMS only): 09156768666 (Globe) / 09982007891 (Smart)</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Report_Url_Description'>

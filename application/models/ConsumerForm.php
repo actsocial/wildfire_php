@@ -156,7 +156,6 @@ class ConsumerForm extends Zend_Form
 							'0' => $this->getView()->translate('Consumer_gender_Female'), 
 							
 		))
-		->setSeparator('&nbsp;&nbsp;')
 		->addDecorators(array(
 		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'gender_value')),
 		    array('Label')
@@ -244,8 +243,11 @@ class ConsumerForm extends Zend_Form
 		    // array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'children_birth_year_value')),
 		    // array('Label')
 		// ));
-		$children_birth_year->setLabel($this->getView()->translate('Consumer_children_birth_year'));
-
+		$children_birth_year->setLabel($this->getView()->translate('Consumer_children_birth_year'))
+		->addDecorators(array(
+		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'child_birthdate_value')),
+		    array('Label')
+		));
 		//
 		$income = new Zend_Form_Element_Select('income');
 		$income->setLabel($this->getView()->translate('Consumer_income_level_per_month'));
@@ -258,7 +260,26 @@ class ConsumerForm extends Zend_Form
 			'Php 30,000 and above'=> 'Php 30,000 and above',
 			'Php 15,000 – Php 29,999'=>'Php 15,000 – Php 29,999',
 			'Php 14,999 and below'=>'Php 14,999 and below'
+		))
+		->addDecorators(array(
+		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'income_value')),
+		    array('Label')
 		));
+
+		$status = new Zend_Form_Element_Select('status');
+		$status ->setLabel("Relationship Status:");
+		$status -> addMultiOptions( array(
+			'' => '',
+			'Single'=> 'Single',
+			'Married'=>'Married',
+			'Separated'=>'Separated',
+			'Widowed'=>'Widowed'
+		))
+		->addDecorators(array(
+		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'status_value')),
+		    array('Label')
+		));
+
 	/*	$income->addMultiOption('>20000', '>20000')
 		->addDecorators(array(
 		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'income_value')),
@@ -273,7 +294,6 @@ class ConsumerForm extends Zend_Form
 		'Less then once a month' => $this->getView()->translate('Consumer_do_your_often_go_shopping_online_Less then once a month'),  
 		'Never' => $this->getView()->translate('Consumer_do_your_often_go_shopping_online_Never'),
 		))
-		->setSeparator('')
 		->addDecorators(array(
 		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'onlineShopping_value')),
 		    array('Label')
@@ -306,7 +326,7 @@ class ConsumerForm extends Zend_Form
 		->setAttrib('id', 'edit');
 		
 		$this->addElements(array($id, $email, $login_phone, $name, $recipients_name, $phone, $city,$country,$address1, $postalcode, $birthdate, 
-		$gender, $profession, $education, $have_children, $children_birth_year, $income, $online_shopping, $use_extra_bonus_for, 
+		$gender, $profession, $education, $have_children, $children_birth_year, $income,$status, $online_shopping, $use_extra_bonus_for, 
 		$submit));
 
 	}

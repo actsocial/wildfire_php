@@ -935,7 +935,8 @@ You can also update your contact information and preferences.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <!-- <seg>What's the birth year of your child? </seg> -->
-                <seg>How old are they?</seg>
+                <!-- <seg>How old are they?</seg> -->
+                <seg>No. of children:</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_children_birth_year_Before 1980'>
