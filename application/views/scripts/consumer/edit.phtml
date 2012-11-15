@@ -96,7 +96,7 @@
 <fieldset>
 	<legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Personal_Info_Pic');?>"/></legend>
 	<div class="form-line"><?php echo $this->form->birthdate ;?></div>
-	<div class="form-line not-text" style="height:50px;"><?php echo $this->form->gender;?></div>
+	<div class="form-line not-text"><?php echo $this->form->gender;?></div>
 	
 	<div class="form-line"><?php echo $this->form->profession;?></div>
 	<div class="form-line"><?php echo $this->form->education;?></div>
@@ -198,6 +198,7 @@ jQuery().ready(function() {
 		// 	}
 		// }
 	});
+	jQuery("#gender_value br").remove();
 });
 function GetObjID(ObjName)
 { for (var ObjID=0; ObjID < document.form.elements.length; ObjID++)
