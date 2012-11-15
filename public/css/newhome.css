@@ -313,7 +313,7 @@ a.link {
 	font-weight: bold;
 	color: #f00;
 	margin:0;
-	margin-top: 5px;
+	margin-top: -1px;
 }
 .buttons-bar a.button {
 	background: url(../images/button.gif) no-repeat center center;
