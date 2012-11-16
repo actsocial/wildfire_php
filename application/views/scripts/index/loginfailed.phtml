@@ -82,27 +82,42 @@
 			Please login with the correct email address and password. If you still cannot access the Wildfire Community platform, kindly click “Forgot your password” below and we’ll send you your login details to access your profile.
 		</p>
 		</div></div>
+
+<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
+		<a href="<?php echo $this->facebook_login_url;?>">
+		   
+		  <img src="<?php echo $this->baseUrl();?>/images/facebook_login.png">
+		</a>
+		<!-- Not a member yet? Click  
+		<a href="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>">
+			here
+		</a> to sign-up! -->
+
+<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
+
+</div>
+
 <form enctype="application/x-www-form-urlencoded" style="width:300px;float:left;margin-left:20px;" action="<?php echo $this->url(array('controller'=>'login',
 		'action'=>'login'));?>" method="post" target="_parent">
 		
 <div class="login_form">
-<br/>
+		<br/>
 
-<table>
-	<tr>
-            <td><?php echo $this->form->email?></td>
-            <td>&nbsp;</td>
-    </tr>
-	<tr>
-            <td><?php echo $this->form->password?></td>
-        </tr>
-        <!-- <tr>
-            <td>
-                <a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>"><?php echo $this->translate("Common_Forget_Password")?></a>&nbsp;&nbsp;&nbsp;
-                <a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>"><?php echo $this->translate("Common_Inactive_Account")?></a>
-            </td>
-        </tr> -->
-</table>
+	<table>
+		<tr>
+	            <td><?php echo $this->form->email?></td>
+	            <td>&nbsp;</td>
+	    </tr>
+		<tr>
+	            <td><?php echo $this->form->password?></td>
+	        </tr>
+	        <!-- <tr>
+	            <td>
+	                <a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>"><?php echo $this->translate("Common_Forget_Password")?></a>&nbsp;&nbsp;&nbsp;
+	                <a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>"><?php echo $this->translate("Common_Inactive_Account")?></a>
+	            </td>
+	        </tr> -->
+	</table>
 
   <div style="clear:both"></div>  <br/>
 </div>
@@ -122,21 +137,7 @@
 		</div>
 <input type="hidden" name="url" id="url" value="<?php echo $this->url?>"></input>
 </form>
-			<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
-		<a href="<?php echo $this->facebook_login_url;?>">
-		   
-		  <img src="<?php echo $this->baseUrl();?>/images/facebook_login.png">
-		</a>
-		<!-- Not a member yet? Click  
-		<a href="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>">
-			here
-		</a> to sign-up! -->
-
-<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
-
-</div>
-
-
+			
 		</div>
 		<div class="clear"></div>
 	</div></div>
