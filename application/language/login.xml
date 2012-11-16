@@ -12,7 +12,7 @@
 				<seg>Email/电话或密码不正确,或者未激活账户</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Oops Looks like you’ve mistyped your user information.</seg>
+				<seg>Ooops! Looks like you’ve mistyped your login information.</seg>
 			</tuv>
 		</tu>
 		
