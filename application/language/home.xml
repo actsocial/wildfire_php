@@ -28,7 +28,7 @@
 				<seg> 提交报告</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Submit a Spark Report</seg>
+				<seg> Submit a word-of-mouth report</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Tabs_Url'>
@@ -36,7 +36,7 @@
 				<seg>分享网址</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Submit a URL</seg>
+				<seg>Share your opinion on Facebook</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Tabs_Photo'>
@@ -44,7 +44,7 @@
 				<seg>上传照片/视频</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Upload a photo/video</seg>
+				<seg>Upload photos/videos</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Tabs_Contact'>
