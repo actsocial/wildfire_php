@@ -2801,6 +2801,7 @@ label.error {
 .quick-poll-header .quick-poll-name-container {
 	float: left;
 	margin-top: 5px;
+	margin-left: 15px;
 }
 
 .quick-poll-header .quick-poll-helper-container {
