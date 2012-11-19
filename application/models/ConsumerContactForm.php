@@ -115,11 +115,19 @@ class ConsumerContactForm extends Zend_Form
 		
 		$income = new Zend_Form_Element_Select('income');
 		$income->setLabel($this->getView()->translate('Consumer_income_level_per_month'));
-		$income->addMultiOption('', '');
-		for($i = 0; $i < 20000; $i = $i+2000){
-			$income->addMultiOption($i."-".($i+2000), $i."-".($i+2000));
-		}
-		$income->addMultiOption('>20000', '>20000');
+
+		$income->addMultiOptions( array(
+			'' => '',
+			'Php 30,000 and above'=> 'Php 30,000 and above',
+			'Php 15,000 – Php 29,999'=>'Php 15,000 – Php 29,999',
+			'Php 14,999 and below'=>'Php 14,999 and below'
+		));
+
+		// $income->addMultiOption('', '');
+		// for($i = 0; $i < 20000; $i = $i+2000){
+		// 	$income->addMultiOption($i."-".($i+2000), $i."-".($i+2000));
+		// }
+		// $income->addMultiOption('>20000', '>20000');
 		
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->setLabel($this->getView()->translate('CONTACT_INFORMATION_EDIT_AND_RERURN'))

@@ -49,6 +49,12 @@ class IndexController extends MyController
 		$this->view->form = $form;
 		$this->view->title = 'Wildfire';
 		$this->_helper->layout->disableLayout();
+		$facebook = new Facebook(array(
+		  'appId'  => FB_AKEY,
+		  'secret' => FB_SKEY,
+		  'authorizationRedirectUrl' => FB_CALLBACK_URL,
+		));
+		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email'));
 		/*$this->view->messages = $this->_flashMessenger->getMessages();
 		
 		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email'));

@@ -28,7 +28,7 @@
 				<seg> 提交报告</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Submit a Spark Report</seg>
+				<seg> Submit a word-of-mouth report</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Tabs_Url'>
@@ -36,7 +36,7 @@
 				<seg>分享网址</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Submit a URL</seg>
+				<seg>Share your opinion on Facebook</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Tabs_Photo'>
@@ -44,7 +44,7 @@
 				<seg>上传照片/视频</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Upload a photo/video</seg>
+				<seg>Upload photos/videos</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Tabs_Contact'>
@@ -89,10 +89,10 @@
 		</tu>
 		<tu tuid='Contact_Text_Mobile'>
 			<tuv xml:lang="zh">
-				<seg>手机号码（仅接收短信）：+63 9XX XXXXXXX</seg>
+				<seg>手机号码（仅接收短信）：09156768666 (Globe) / 09982007891 (Smart)</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Mobile (SMS only): +63 9XX XXXXXXX</seg>
+				<seg>Mobile (SMS only): 09156768666 (Globe) / 09982007891 (Smart)</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Report_Url_Description'>
@@ -311,7 +311,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>可用兑换积分：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Convertible Points:</seg>
+				<seg>Points to Spend:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='New_points'>
@@ -795,7 +795,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>口碑活动</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Spark Campaign </seg>
+				<seg>Spark Campaign</seg>
 			</tuv>
 		</tu>
 		

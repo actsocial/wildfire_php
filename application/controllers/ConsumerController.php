@@ -195,6 +195,7 @@ class ConsumerController extends MyController {
 				$consumer = $consumerModel->find ( $id )
 				->current ();
 				$consumer->name = $form->getValue ( 'name' );
+				$consumer->login_phone = $form->getValue('login_phone');
 				$consumer->phone = $form->getValue ( 'phone' );
 				$consumer->address1 = $form->getValue ( 'address1' );
 				$consumer->postalcode = $form->getValue ( 'postalcode' );
@@ -231,6 +232,7 @@ class ConsumerController extends MyController {
 				$consumerextra->have_children = isset ( $formData ['have_children'] ) ? $formData ['have_children'] : null;
 				$consumerextra->children_birth_year = $formData ['children_birth_year'];
 				$consumerextra->income = $formData ['income'];
+				$consumerextra->status = $formData['status'];
 				$consumerextra->online_shopping = isset ( $formData ['online_shopping'] ) ? $formData ['online_shopping'] : null;
 				if (isset ( $formData ['use_extra_bonus_for'] )) {
 					$use_extra_bonus_forstr = '';
@@ -395,6 +397,7 @@ class ConsumerController extends MyController {
 				$consumerextra->birthdate = $formData ['birthdate'] != null ? $formData ['birthdate'] : null;
 				$consumerextra->education = $formData ['education'];
 				$consumerextra->income = $formData ['income'];
+				$consumerextra->status = $formData ['status'];
 				$consumerextra->save();
 				
 				
@@ -821,7 +824,7 @@ class ConsumerController extends MyController {
 		$postData = $this->_request->getPost ();
 		$consumerModel = new Consumer ();
 		$consumerExtraModel = new ConsumerExtraInfo();
-		if ($postData ['field']== "birthdate" || $postData ['field']== "education" || $postData ['field']== "have_children"|| $postData ['field']== "children_birth_year"|| $postData ['field']== "income" ){
+		if ($postData ['field']== "birthdate" || $postData ['field']== "education" || $postData ['field']== "have_children"|| $postData ['field']== "children_birth_year"|| $postData ['field']== "income" || $postData['field']=="status" ){
 			$consumerExtraModel->update (array($postData ['field'] => $postData ['value'] ), 'consumer_id = ' . $uid );
 		}else {
 			$consumerModel->update ( array ($postData ['field'] => $postData ['value'] ), 'id = ' . $uid );

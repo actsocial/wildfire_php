@@ -33,11 +33,14 @@
 
 <body>
 	<div class="header">
-				<!-- <div class="header-inner">
+				 <div class="header-inner">
 				<div class="logo">
-					<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.png" /></a>
+					<a href="<?php echo $this->joomlahome;?>">
+						<!-- <img style="width:110px;margin-top:-13px;" src="<?php echo $this->baseUrl();?>/images/popup-fillout-logo.gif"  /> -->
+						<img style="width:110px;height: 60px;margin-top:-4px;" src="<?php echo $this->baseUrl();?>/images/logo_wildfire.png"  />
+					</a>
 				</div>
-				<div class="login-panel">
+				<!--<div class="login-panel">
 					<form action="<?php echo $this->url(array('controller'=>'login','action'=>'login'));?>" method="post">
 						<div class="user-info">
 							<label for="username" style='width:65px;'><?php echo $this->translate("Common_Username")?></label>
@@ -63,8 +66,8 @@
 					</div>
 				</div>
 
-				<div class="clear"></div>
-			</div> -->
+				<div class="clear"></div>-->
+			</div> 
 	</div>
 	<div class="container"><div class="container-inner">
 		<div class="banner">
@@ -73,6 +76,9 @@
 		
 		<div class="contents-3-col">
 			<div class="edit-profile">
+				<!-- <form id="f1"
+					action="<?php echo $this->url(array('controller'=>'forgetpassword', 'action'=>'sendemail'));?>"
+					method="post" target="_parent" > -->
 				<form id="f1"
 					action="<?php echo $this->url(array('controller'=>'forgetpassword', 'action'=>'sendemail'));?>"
 					method="post" target="_parent" >

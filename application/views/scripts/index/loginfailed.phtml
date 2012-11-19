@@ -10,7 +10,8 @@
 	content="Wildfire XingXingHuo - Asias Word-of-Mouth Community" />
 <meta name="generator"
 	content="Joomla! 1.5 - Open Source Content Management" />
-<title><?php echo $this->translate('Incorrect_login_title');?></title>
+<!-- <title><?php echo $this->translate('Incorrect_login_title');?></title> -->
+<title>Loginfailed</title>
 <link href="/public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 <link rel="stylesheet"
 	href="<?php echo $this->baseUrl();?>/mod_jflanguageselection.css"
@@ -76,49 +77,13 @@
 		<div class="contents-3-col">
 		<div class="article-box"><div class="article-box-inner">
 		<h1><?php echo $this->translate("Incorrect_login_title")?></h1>
-		<p class="warning"><?php echo $this->translate("Incorrect_login")?></p>
+		<!-- <p class="warning"><?php echo $this->translate("Incorrect_login")?></p> -->
+		<p class="warning">
+			Please login with the correct email address and password. If you still cannot access the Wildfire Community platform, kindly click “Forgot your password” below and we’ll send you your login details to access your profile.
+		</p>
 		</div></div>
-<form enctype="application/x-www-form-urlencoded" style="width:300px;float:left;margin-left:20px;" action="<?php echo $this->url(array('controller'=>'login',
-		'action'=>'login'));?>" method="post" target="_parent">
-		
-<div class="login_form">
-<br/>
 
-<table>
-	<tr>
-            <td><?php echo $this->form->email?></td>
-            <td>&nbsp;</td>
-    </tr>
-	<tr>
-            <td><?php echo $this->form->password?></td>
-        </tr>
-        <!-- <tr>
-            <td>
-                <a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>"><?php echo $this->translate("Common_Forget_Password")?></a>&nbsp;&nbsp;&nbsp;
-                <a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>"><?php echo $this->translate("Common_Inactive_Account")?></a>
-            </td>
-        </tr> -->
-</table>
-
-  <div style="clear:both"></div>  <br/>
-</div>
-<!-- <div style="padding-left:3px;">
-	<a href="<?php echo $this->facebook_login_url;?>">
-	  <img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">
-	  <img src="../public/imags/facebook_login.png">
-	</a>
-</div> -->
-		<div class="buttons-bar">
-			<!--<?php echo $this->form->login?>
-			<input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>-->
-
-			<input type="submit" id="login" value="Login"> 
-			<!-- <?php echo $this->translate("Common_Forget_Password")?> -->
-			<a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:10px;">Forgot your password?</a>
-		</div>
-<input type="hidden" name="url" id="url" value="<?php echo $this->url?>"></input>
-</form>
-			<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
+<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
 		<a href="<?php echo $this->facebook_login_url;?>">
 		   
 		  <img src="<?php echo $this->baseUrl();?>/images/facebook_login.png">
@@ -132,7 +97,47 @@
 
 </div>
 
+<form enctype="application/x-www-form-urlencoded" style="width:300px;float:left;margin-left:20px;" action="<?php echo $this->url(array('controller'=>'login',
+		'action'=>'login'));?>" method="post" target="_parent">
+		
+<div class="login_form">
+		<br/>
 
+	<table>
+		<tr>
+	            <td><?php echo $this->form->email?></td>
+	            <td>&nbsp;</td>
+	    </tr>
+		<tr>
+	            <td><?php echo $this->form->password?></td>
+	        </tr>
+	        <!-- <tr>
+	            <td>
+	                <a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>"><?php echo $this->translate("Common_Forget_Password")?></a>&nbsp;&nbsp;&nbsp;
+	                <a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>"><?php echo $this->translate("Common_Inactive_Account")?></a>
+	            </td>
+	        </tr> -->
+	</table>
+
+  <div style="clear:both"></div>  <br/>
+</div>
+<!-- <div style="padding-left:3px;">
+	<a href="<?php echo $this->facebook_login_url;?>">
+	  <img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">
+	  <img src="../public/imags/facebook_login.png">
+	</a>
+</div> -->
+		<div class="buttons-bar">
+			<!--<?php echo $this->form->login?>
+			<input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>-->
+
+			<input type="submit" id="login" value="Login" style="margin-left: -30px;"> 
+			<!-- <?php echo $this->translate("Common_Forget_Password")?> -->
+			<a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:10px;">Forgot your password?</a>
+		</div>
+<input type="hidden" name="url" id="url" value="<?php echo $this->url?>"></input>
+</form>
+			
 		</div>
 		<div class="clear"></div>
 	</div></div>

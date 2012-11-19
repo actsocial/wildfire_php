@@ -315,7 +315,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>旧密码：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>OldPassword:</seg>
+				<seg>Old Password:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='CONTACT INFORMATION_NEWPASSWORD'>
@@ -323,7 +323,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>新密码：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>NewPassword:</seg>
+				<seg>New Password:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='CONTACT INFORMATION_CONFIRMNEWPASSWORD'>
@@ -505,7 +505,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>请你输入你在星星火注册的电子邮件，我们将发送重置密码的邮件给你。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Type in the email associated with your wildfire account and we'll send you an email with instructions to reset your password.</seg>
+				<seg>Enter the email address associated with your Wildfire account and we'll send you the instructions to access your account.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Check_you_email'>
@@ -577,7 +577,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>该邮件地址在星星火中并不存在，请输入你在星星火注册的邮箱地址。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>This email is not existed in Wildfire! Please enter a valid email.</seg>
+				<seg>We’re sorry! The email address you entered is not registered in the Wildfire platform.  Please try again.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Your_reset_passwrod_link'>
@@ -649,7 +649,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>女</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Female</seg>
+                <seg> Female</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_gender_Male'>
@@ -657,7 +657,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>男</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>Male</seg>
+                <seg> Male</seg>
             </tuv>
         </tu>
         
@@ -876,7 +876,7 @@ You can also update your contact information and preferences.</seg>
                 <seg>高中</seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg>High-School</seg>
+                <seg>High School</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_education_Junior_college'>
@@ -935,7 +935,8 @@ You can also update your contact information and preferences.</seg>
             </tuv>
             <tuv xml:lang="en">
                 <!-- <seg>What's the birth year of your child? </seg> -->
-                <seg>How old are they?</seg>
+                <!-- <seg>How old are they?</seg> -->
+                <seg>No. of children:</seg>
             </tuv>
         </tu>
         <tu tuid='Consumer_children_birth_year_Before 1980'>
@@ -1123,7 +1124,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>填写下面问题有助于我们了解你，从而为你提供合适的口碑活动。星星火尊重会员的隐私，严格保密会员的个人资料。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Filling in the following questions will help us understand you, so we will invite you to join more campaigns.
+				<seg>We highly suggest you to complete your profile below so we can invite you to join more campaigns in the future.
 				</seg>
 			</tuv>
 		</tu>

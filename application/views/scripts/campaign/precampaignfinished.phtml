@@ -1,11 +1,11 @@
 <div class="article-box" style="padding-bottom:10px;">
 	<div class="article-box-inner">
-		<h1><?php echo $this->translate("You_are_in")?></h1>
+		<h1><?php echo $this->translate("You_are_in")?> <?php echo $this->translate('Confirm_shipping_address');?></h1>
 		<p><?php echo $this->campaign['pre_campaign_info']?></p>
 	</div>
 </div>
 <div class="edit-profile" >
-		<h1 style="margin-left: 10px; padding-top: 10px;"><?php echo $this->translate('Confirm_shipping_address');?></h1>
+		<!-- <h1 style="margin-left: 10px; padding-top: 10px;"></h1> -->
 		<form name="form" action="<?php echo $this->url(array('controller'=>'consumer','action'=>'editcontact','cid'=>$this->campaign->id));?>" method="post">
 		<dl>
 		<fieldset>

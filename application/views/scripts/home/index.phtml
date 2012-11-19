@@ -140,7 +140,7 @@
 			      <li><a href="#tabs-report"><?php echo $this->translate('Tabs_Report')?></a></li>
 			      <li><a href="#tabs-url"><?php echo $this->translate('Tabs_Url')?></a></li>
 			      <li><a href="#tabs-photo"><?php echo $this->translate('Tabs_Photo')?></a></li>
-			      <li><a href="#tabs-contact"><?php echo $this->translate('Tabs_Contact')?></a></li>
+			      <!-- <li><a href="#tabs-contact"><?php echo $this->translate('Tabs_Contact')?></a></li> -->
 			    </ul>
 			    <div id="tabs-report" class="report-panel">
 						<div class='report-panel-header'>
@@ -297,18 +297,18 @@
 							</div>
 						</div>
 					</div>
-					<div id="tabs-contact" class="report-panel">
+					<!-- <div id="tabs-contact" class="report-panel">
 						<div class='report-panel-header'>
 							<span class="campaign-name"><?php echo $activeCampaign["name"]?></span>
 							<span class="tab-description"> <?php echo $this->translate('Report_Contact_Description')?><span>
 						</div>
 						<div class="contact-text">
-							<!-- <p><?php echo $this->translate('Contact_Text_Title')?><p> -->
+							<!-- <p><?php echo $this->translate('Contact_Text_Title')?><p> 
 					    <p><img src='image/yahoo_message.png'/><?php echo $this->translate('Contact_Text_Yahoo')?></p>
 					    <p><img src='image/facebook_icon.png'/><?php echo $this->translate('Contact_Text_Facebook')?></p>
 					    <p><img src='image/mobile_icon.png'/><?php echo $this->translate('Contact_Text_Mobile')?></p>
 					  </div>
-					</div>
+					</div> -->
 					<div class="report-task-bar" style="display:none;">
 						<a href="#" onclick="showReportPanel(0);return false;" class="button-submit-report"><img src="<?php echo $this->baseUrl();?>/images/tab_button_report_blue.png"/></a>
 						<a href="#" onclick="showReportPanel(2);return false;" class="button-submit-url"><img src="<?php echo $this->baseUrl();?>/images/tab_button_url_grey.png"/></a>
@@ -412,7 +412,17 @@
 		</div>
 		<div class="avatar">
 			<a href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>">
-				<img src="">
+				<?php if($this->consumer[0]['gender']=="1") {?>
+				<img src="images/MALE.png">
+				<?php }?> 
+
+				<?php if($this->consumer[0]['gender']=="0") {?>
+				<img src="images/FEMALE.png">
+				<?php }?>
+
+				<?php if($this->consumer[0]['gender']==""){ ?>
+				<img src="images/anonymous.jpeg">
+				<?php } ?>
 			</a>
 		</div>
 	    <!--  info bar  -->
@@ -451,8 +461,8 @@
         
 	
 	    <!--  Points  -->
-        <div style="float: left;width:120px;">
-			<h3>&nbsp;&nbsp;<?php echo $this->translate("Home_Spark_Points_Earned")?></h3><br>	
+    <div style="float: left;width:120px;">
+			<h3 style="margin-left:10px;">&nbsp;&nbsp;<?php echo $this->translate("Home_Spark_Points_Earned")?></h3><br>	
 			<div class="spark-status-content">
 				<h4><?php echo $this->totalPoints; ?></h4>
 				<p><?php echo $this->translate("Spark_Points_Earned_Content_1")?>two<?php echo $this->translate("Spark_Points_Earned_Content_2")?>20<?php echo $this->translate("Spark_Points_Earned_Content_3")?></p>
@@ -460,14 +470,14 @@
 		</div>
 		
 		<div style="float: left;width:120px;">
-			<h3>&nbsp;&nbsp;<?php echo $this->translate("Rewards_Ready_to_Redeem")?></h3><br>
+			<h3 style="margin-left:10px;">&nbsp;&nbsp;<?php echo $this->translate("Rewards_Ready_to_Redeem")?></h3><br>
 			<div class="spark-status-content">
 				<h4><?php echo $this->redeemPoints; ?></h4>
 			</div>
 		</div>
 		
 		<div style="float: left;width:120px;">
-			<h3>&nbsp;&nbsp;<?php echo $this->translate("New_points")?></h3><br>
+			<h3 style="margin-left:10px;">&nbsp;&nbsp;<?php echo $this->translate("New_points")?></h3><br>
 			<div class="spark-status-content">
 				<h4><?php echo $this->newPoints; ?></h4>
 			</div>
@@ -825,7 +835,7 @@ new AjaxUpload(button_<?php echo $activeCampaign['campaign_id'];?>,{
         }
     
         // change button text, when user selects file           
-        button_<?php echo $activeCampaign['campaign_id'];?>.text('正在上传中');
+        button_<?php echo $activeCampaign['campaign_id'];?>.text('uploading');
         
         // If you want to allow uploading only 1 file at time,
         // you can disable upload button

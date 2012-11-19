@@ -33,6 +33,12 @@
 		-->
 
 	 <div class="header"><div class="header-inner">
+ 				<div class="logo">
+					<a href="http://community.wildfire.asia">
+						<!-- <img style="width:110px;margin-top:-13px;" src="/public/images/popup-fillout-logo.gif"  /> -->
+						<img src="/public/images/logo_wildfire.png" style="width:110px;height: 60px;margin-top:-4px;">
+					</a>
+				</div>
 		<!-- <div class="login-panel">
 			<form action="<?php echo $this->url(array('controller'=>'login','action'=>'login'));?>" method="post">
 				<div class="user-info">
@@ -90,6 +96,19 @@
 		</div> -->
 
 	</div>
+	<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
+						<a href="<?php echo $this->facebook_login_url;?>">
+						   
+						  <img src="<?php echo $this->baseUrl();?>/images/facebook_login.png">
+						</a>
+						<!-- Not a member yet? Click  
+						<a href="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>">
+							here
+						</a> to sign-up! -->
+
+				<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
+
+				</div>
 <form enctype="application/x-www-form-urlencoded" style="width:300px;float:left;margin-left:20px;" action="<?php echo $this->url(array('controller'=>'login',
 		'action'=>'login'));?>" method="post" target="_parent">
 		
@@ -131,19 +150,7 @@
 <input type="hidden" name="url" id="url" value="<?php echo $this->url?>"></input>
 </form>
 			
-				<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
-						<a href="<?php echo $this->facebook_login_url;?>">
-						   
-						  <img src="<?php echo $this->baseUrl();?>/images/facebook_login.png">
-						</a>
-						<!-- Not a member yet? Click  
-						<a href="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>">
-							here
-						</a> to sign-up! -->
-
-				<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
-
-				</div>
+				
 
 		</div>
 		<div class="clear"></div>

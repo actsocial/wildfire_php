@@ -313,7 +313,7 @@ a.link {
 	font-weight: bold;
 	color: #f00;
 	margin:0;
-	margin-top: 5px;
+	margin-top: -1px;
 }
 .buttons-bar a.button {
 	background: url(../images/button.gif) no-repeat center center;
@@ -565,6 +565,7 @@ table.spark-show td img {
 	font-size: 12px;
 	color: #006bc4;
 	float: left;
+	margin-left:10px;
 	/*width: 193px;*/
 }
 .spark-status-box .spark-status-content {
@@ -579,7 +580,7 @@ table.spark-show td img {
 .spark-status-box .spark-status-content h4{
 	font-size: 32px;
 	margin:0;
-	margin-top: 10px;
+	margin-top: 20px;
 	color: #006bc4;
 	font-family: Tahoma, Geneva, sans-serif;
 	text-align: center;
@@ -1246,7 +1247,8 @@ ul.tabbed-buttons li.active a:visited {
 	padding:0;
 }
 .edit-profile dt {
-	width: 110px;
+	width: 190px;
+/*	width: 30%;*/
 	height: 30px;
 	clear: left;
 	padding-left: 10px;
@@ -1312,6 +1314,23 @@ ul.tabbed-buttons li.active a:visited {
 	border: 0;
 	cursor: pointer;
 }
+
+.buttons-bar input#changepassword2 {
+	background: url(../images/big-button.gif) no-repeat center center;
+	display: block;
+	float: left;
+	width: 210px;
+	height: 36px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	border: 0;
+	cursor: pointer;
+}
+
 .buttons-2lines {
 	float: right;
 }
@@ -2394,7 +2413,7 @@ a.list-orders:hover {
 	display:block;
 	height:100px;
 	height:100px;
-	background:url(../images/anonymous.jpeg) no-repeat;
+	/*background:url(../images/anonymous.jpeg) no-repeat;*/
 }
 .avatar img{
 	vertical-align:middle;
@@ -2406,6 +2425,14 @@ a.list-orders:hover {
 	padding-left: 10px;
 	width:150px;
 }
+
+.yourinfo2 {
+	float: left;
+	margin-top: 6px;
+	padding-left: 10px;
+	width:50%;
+}
+
 .yourinfo span {
 	display: block;
 	/*float: left;*/
@@ -2500,7 +2527,7 @@ a.list-orders:hover {
 }
 .consumer-edit fieldset .form-line label {
 	float: left;
-	width: 110px;
+	width: 30%;
 	padding-right: 10px;
 	height: 30px;
 	line-height: 30px;
@@ -2538,6 +2565,7 @@ a.list-orders:hover {
 .consumer-edit fieldset .not-text .input-area input {
 	width: auto;
 	height: auto;
+	margin-top: -2px;
 }
 .consumer-edit fieldset .long-text .input-area input {
 	width: 400px;
@@ -2561,6 +2589,7 @@ a.list-orders:hover {
 	float: left;
 	clear: left;
 	margin-top: 10px;
+	margin-left:60px;
 	width: 600px;
 }
 .consumer-edit fieldset .form-line-long-title label {
