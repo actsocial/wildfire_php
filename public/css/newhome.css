@@ -716,7 +716,6 @@ table.spark-show td img {
 	width: 600px;
 }
 .spark-report-box .report-panel .uploading-image {
-	height: 111px;
 	padding-left: 15px;
 }
 
@@ -776,7 +775,6 @@ table.spark-show td img {
 }
 .spark-report-box .report-panel .submit-url,
 #submit-url {
-	height: 111px;
 	padding-left: 15px;
 }
 .spark-report-box .report-panel .submit-url .status,
