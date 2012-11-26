@@ -1,11 +1,12 @@
 <?php if (count($this->activeCampaigns)>0):?>
+	<?php foreach($this->activeCampaigns as $campaign) : ?>
 <div class="article-box"><div class="article-box-inner">
 <div class="images-column"><img
 	src="<?php echo $this->baseUrl();?>/images/campaign/campaign_105_03.jpg"
 	style="padding: 0; border: 0; margin-right: 10px;background:none;" /></div>
 <div class="main-column" style="width:450px;">
 <!-- <h2><?php echo $this->translate('Active_Campaign');?></h2> -->
-<?php foreach($this->activeCampaigns as $campaign) : ?>
+
 <a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'description','id'=>$campaign['campaign_id'])); ?>"><h2 style="color:#000000">Quality for Life™ Philippines Campaign</h2></a>
 <!-- <ul class="invited"> -->
 
@@ -16,11 +17,13 @@
 		-->
 		A globally recognized brand that supplies high-quality vitamins ingredients to companies worldwide. It aims at improving your education about vitamins to give you peace of mind when you choose food and beverage products.
 	</span>
-	<?php endforeach; ?>
+
 <!-- </ul> -->
 </div>
 <div style="clear: both;"></div>
 </div></div>
+
+	<?php endforeach; ?>
 	<?php endif?>
 
 	<?php if (count($this->campaignInvitations)):?>

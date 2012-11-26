@@ -55,6 +55,16 @@
 				<seg>Contact Us</seg>
 			</tuv>
 		</tu>
+
+		<tu tuid='Tabs_brandinfo'>
+			<tuv xml:lang="zh">
+				<seg>联系我们</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Brand Information</seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='Upload_Photo_Text'>
 			<tuv xml:lang="zh">
 				<seg>上传你与朋友分享这次活动的图片就能额外赚取100分哦！</seg>
@@ -100,7 +110,8 @@
 				<seg>你可以提交一个你和你朋友谈话的网址，我们将会浏览这个页面并尽早的通知你如果你可以提交下一个报告。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>You may submit a URL of your conversation with your friends. We will review it as soon as possible then contact you so you can submit your next report.</seg>
+				<seg>What do you think about the brand? How about after trying the product? Share your thoughts with your friends on Facebook. Let them know what you have to say!
+				</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Report_Contact_Description'>
@@ -336,7 +347,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>什么是星星火报告？</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>What’s a Spark Report?</seg>
+				<seg>What’s a Word-of-mouth Report?</seg>
 			</tuv>
 		</tu>
 		<tu tuid='What’s_a_Spark_Report?_Content_1'>
@@ -344,7 +355,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>我们根据你的兴趣提供给你喜欢的产品，同时我们也希望听到你和朋友间关于产品的谈论。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Wildfire works by giving you products that you love (based on your interests) and by listening to what your friends have to say.</seg>
+				<seg>A word-of-mouth (WOM) report is a summary of what you and your friends have talked about a brand.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='What’s_a_Spark_Report?_Content_2'>
@@ -352,7 +363,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>当你与朋友谈论我们给你的产品时，请花几分钟来填写活动报告来记录下你们的谈话。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>When you mention a product you received from Wildfire to a friend, take a second to submit a Spark Report!</seg>
+				<seg>It all works by learning everything about it in the WOM kit, trying a sample product, sharing your opinion and then listening to what they have to say.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='What’s_a_Spark_Report?_Content_3'>
@@ -360,7 +371,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>人们总是到处谈论产品，所以希望你每次谈论起星星火的活动时，都能提交报告来告诉我们。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>People talk about products all the time, so we don’t expect you to tell us EVERY time you mention a product from Wildfire.</seg>
+				<seg>You are always welcome to come back to our Community Platform to send your WOM report and earn points!</seg>
 			</tuv>
 		</tu>
 		<tu tuid='What’s_a_Spark_Report?_Content_4'>
@@ -368,7 +379,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>你提交的报告越多，你将获得越多的积分，同时你将会收到更多其它有意思的活动产品。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>However, the more you report, the more points you’ll earn. With more points, you’ll be invited to receive more products!</seg>
+				<seg>If you have questions, please let us know and we’ll keep in touch with you!</seg>
 			</tuv>
 		</tu>
 		

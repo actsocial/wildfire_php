@@ -102,6 +102,7 @@
 </div>
 
 <div class="article-box" style="margin-bottom: 15px;" >
+	<div class="article-box-title">&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-style:blod;">WELCOME TO WILDFIRE!</span></div>
     <div class="article-box-inner" >
 		<?php if ($this->consumer!=null){ ?>
 			<p style="margin: 10px 0 5px 0;"><?php echo $this->translate("Home_head_content_1")?></p>
@@ -113,202 +114,253 @@
 	</div>
 </div>
 
+<!-- 		<?php if($j==0) { ?>
+			<div class="article-box-title">&nbsp;&nbsp;&nbsp;&nbsp;MY ACTIVITIES</div>
+		<?php } ?> -->
 
+<div class="article-box-title">&nbsp;&nbsp;&nbsp;&nbsp;MY ACTIVITIES</div>
 
 <div class="spark-report">
 
-<?php $j = 0;foreach ($this->activeCampaigns as $activeCampaign):?>			
+<?php $j = 0;foreach ($this->activeCampaigns as $activeCampaign):?>		
+
+	<script>
+	jQuery(function() {
+      jQuery( "#tabs<?php echo $j?>").tabs();
+  });
+</script>
 	<div class="spark-report-box">
+
 		<div class="spark-report-box-inner">
 			<div class="ul-wrapper" id="ul_tab_<?php echo $j?>"<?php if ($j>1):?> style="display:true;"<?php endif;?>>
 			<?php if($activeCampaign['type'] == 'campaign'){?>
 			<!-- <div class="report-area"> -->
 				<div id="tip-div">
-					<img onmouseover="showtip(1);" onmouseout="hidetip(1);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
+					<img onmouseover="showtip(<?php echo $j?>);" onmouseout="hidetip(<?php echo $j?>);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
 				</div>
 				<div class="tip-wrapper">
-					<div id="tip1" class="tip-box" style="display:none;">
-							<h2><?php echo $this->translate("What’s_a_Spark_Report?")?></h2>
+					<div id="tip<?php echo $j?>" class="tip-box tip1" style="display:none;">
+							<h2 class="tip-box-title" style="font-size:11px;margin-left:38px;"><?php echo $this->translate("What’s_a_Spark_Report?")?></h2>
 							<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_1")?></p>
 							<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_2")?></p>
 							<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_3")?></p>
 							<p><?php echo  $this->translate("What’s_a_Spark_Report?_Content_4")?></p>
 					</div>
 				</div>
-				<div id="tabs">
+				<div id="tabs<?php echo $j?>" class="tabs">
 					<ul>
-			      <li><a href="#tabs-report"><?php echo $this->translate('Tabs_Report')?></a></li>
-			      <li><a href="#tabs-url"><?php echo $this->translate('Tabs_Url')?></a></li>
-			      <li><a href="#tabs-photo"><?php echo $this->translate('Tabs_Photo')?></a></li>
-			      <!-- <li><a href="#tabs-contact"><?php echo $this->translate('Tabs_Contact')?></a></li> -->
+						<li style="width:120px;"><a href="#tabs-contact<?php echo $j?>"><?php echo $this->translate('Tabs_brandinfo')?></a></li>
+			      <li style="width:200px;"><a href="#tabs-report<?php echo $j?>"><?php echo $this->translate('Tabs_Report')?></a></li>
+			      <li style="width:180px;"><a href="#tabs-url<?php echo $j?>"><?php echo $this->translate('Tabs_Url')?></a></li>
+			      <li style="width:120px;"><a href="#tabs-photo<?php echo $j?>"><?php echo $this->translate('Tabs_Photo')?></a></li>
 			    </ul>
-			    <div id="tabs-report" class="report-panel">
-						<div class='report-panel-header'>
-							<span class="campaign-name"><?php echo $activeCampaign["name"]?></span>
-							<span class="tab-description"><?php echo $this->translate('Report_Submit_Description');?><span>
-						</div>
-						<ul class="submit-report">
-							<?php $reportCount=1?>
-							<?php foreach ($this->allCampaignReports as $report):?>
-								<?php if ($report['campaign_id']==$activeCampaign['campaign_id'] && $reportCount<=3):?>
-									<div class="li-wrapper">
-									<li><?php echo $this->translate("Spark_Report")?>#<?php echo $reportCount?> (0-500 <?php echo $this->translate("points")?>)
-										<?php if(array_key_exists($report['id'], $this->approvedCampaignReportPoint)) {?>
-										<img src="<?php echo $this->baseUrl();?>/images/action_check.gif" align="absmiddle"/>
-										<?php echo $this->translate('earned');?> <?php echo $this->approvedCampaignReportPoint[$report['id']]?> <?php echo $this->translate("points")?>
-										<?php } else{?>
-										<?php echo $this->translate("Submit_successfully_and_pedding")?>
-										<?php }?>
-									</li>
-									</div>
-									<?php $reportCount++?>
-								<?php endif;?>
-							<?php endforeach;?>
-							<?php if ($reportCount == 1):?>
-								<div class="li-wrapper">
-									<li>
-										<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#1</a> (0-500 <?php echo $this->translate("points")?>)
-										
-									</li>
-								</div>
-								<div class="li-wrapper">
-									<li>
-										<?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)
-										
-									</li>
-								</div>
-								<div class="li-wrapper">
-									<li>
-										<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
 
-									</li>
-								</div>
-							<?php endif;?>
-						
-							<?php if ($reportCount ==2):?>
-								<div class="li-wrapper">
-									<li>
-										<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)</a>
-									</li>
-								</div>
-								<div class="li-wrapper">
-									<li>
-										<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
-
-									</li>
-								</div>
-							<?php endif;?>
-						
-							<?php if ($reportCount ==3):?>
-								<div class="li-wrapper">
-									<li>
-										<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)</a>
-									</li>
-								</div>
-							<?php endif;?>
-							
-							<?php if ($reportCount <=3){?>
-								<div class="li-wrapper">
-									<li>								
-										<?php echo $this->translate("Bonus_Report")?> (0-500 <?php echo $this->translate("points")?>)
-									</li>
-								</div>
-							<?php }else{?>
-								<div class="li-wrapper">
-									<li>						
-										<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;">
-										<? echo $this->translate('Click_here_and_submit_more'); ?> (0-500 <?php echo $this->translate("points")?>)
-										</a>
-									</li>
-								</div>
-							<?php }?>
-						</ul>
-					</div>
-					<div id="tabs-photo" class="report-panel">
-						<div class='report-panel-header'>
-							<span class="campaign-name"><?php echo $activeCampaign["name"]?></span>
-							<span class="tab-description"> <?php echo $this->translate('Upload_Photo_Text')?><span>
-						</div>
-						<div class="uploading-image">
-											
-						      <?php foreach($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']] as $imageReport) { ?>
-						      <?php $is_first = ($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']][0]['id'] == $imageReport['id'])?>
-	                          <div style="text-align:center;<?php if(!$is_first) {echo 'display:none;';}?>" class="image" >
-	                            <a onclick="move_up(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_up.png" /></a>
-	                            <a href="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>" title="<?php echo $this->translate('Uplaod_Photo_Url_Title')?>" class="thickbox"> 
-	                             <img id="image_thumb_<?php echo $imageReport['id'];?>" width='<?php if (isset($imageReport['thumb_width'])){ echo $imageReport['thumb_width']; }else{ echo 80;}?>' height='<?php if (isset($imageReport['thumb_height'])){ echo $imageReport['thumb_height']; }else{ echo 80;}?>' src="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>"/>
-	                            </a>
-	                            <a onclick="move_down(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_down.png" /></a>
-	                          </div>
-							  <div class="status" style="<?php if(!$is_first) {echo 'display:none';}?>">
-							  <?php if($imageReport['state'] == 'APPROVED' && isset($imageReport['point_amount'])) { ?>
-								图片已审核, 您已获得<strong><?php echo $imageReport['point_amount'] ?></strong>分
-							  <?php } else if($imageReport['state'] == 'NEW') { ?>
-								图片需要审核, 请等待
-							  <?php } else if($imageReport['state'] == 'UNAPPROVED') { ?>
-							  	图片审核未通过
-							  <?php }?>
-							  </div>
-	                          <?php }?>
-							<!-- <div class="intro-text"><?php echo $this->translate('Upload_Photo_Text')?></div> -->
-							<div class="upload-photo-button-container">
-							  <a href="#" class="btn btn-primary" id="uploadFile_<?php echo $activeCampaign['campaign_id'];?>"><?php echo $this->translate('Uplaod_Photo')?></a>
-							  <!-- <div id="error" style="color:red;"></div> -->
-							</div>
-						    
-						</div>
-					</div>
-					<div id="tabs-url" class="report-panel">
-						<div class='report-panel-header'>
-							<span class="campaign-name"><?php echo $activeCampaign["name"]?></span>
-							<span class="tab-description"> <?php echo $this->translate('Report_Url_Description')?><span>
-						</div>
-						<div class="submit-url submit-url-done submit-url-container">
-							<!-- <div class="status"><?php echo $this->translate("Home_Submit_URL_Report")?></div> -->
-							<div class="submit-url-input-container">
-					        <input class="submit-url-input" id="url_<?php echo $activeCampaign['campaign_id'];?>" type="text" name="url" class="text-box" value=""/>
-							<?php //if($activeCampaign['url'] == null || $activeCampaign['url'] == ''){?>
-							<input class="btn btn-primary" id = "url_report_submit_<?php echo $activeCampaign['campaign_id'];?>" type="button" value="<?php echo $this->translate("Home_URL_Report_Submit")?>" class="button" onclick="submitURL(<?php echo $activeCampaign['campaign_id'];?>);"/>
-				        <?php 
-				            $i = 0;
-				            foreach ($this->urlreport as $url){
-				            	if($i == 2){
-				            	   break;	
-				            	}
-				            	if($url['campaign_id'] == $activeCampaign['campaign_id']){
-				            		if($url['state'] == 'APPROVED'){
-				            			$state = '审核成功';
-				            		}elseif($url['state'] == 'NEW'){
-				            			$state = '等待审核';
-				            		}else{
-				            			$state = '审核失败';
-				            		}
-				            		echo '<i>'.$url['url'].'</i>'.$state.'<br/>';
-				            	}	
-				            	$i++;			            	
-				            }				        
-				        ?>
-							</div>
-
-							<div class="intro-text">
-								<ul>
-									<li id='url_report_notice_<?php echo $activeCampaign['campaign_id'];?>'></li>							
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- <div id="tabs-contact" class="report-panel">
+					 <div id="tabs-contact<?php echo $j?>" class="report-panel">
+						<!-- 
 						<div class='report-panel-header'>
 							<span class="campaign-name"><?php echo $activeCampaign["name"]?></span>
 							<span class="tab-description"> <?php echo $this->translate('Report_Contact_Description')?><span>
 						</div>
 						<div class="contact-text">
-							<!-- <p><?php echo $this->translate('Contact_Text_Title')?><p> 
+							<p><?php echo $this->translate('Contact_Text_Title')?><p> 
 					    <p><img src='image/yahoo_message.png'/><?php echo $this->translate('Contact_Text_Yahoo')?></p>
 					    <p><img src='image/facebook_icon.png'/><?php echo $this->translate('Contact_Text_Facebook')?></p>
 					    <p><img src='image/mobile_icon.png'/><?php echo $this->translate('Contact_Text_Mobile')?></p>
-					  </div>
-					</div> -->
+					  </div> 
+						-->
+
+						<div class="images-column" style="float:left;margin-top:15px;"><img
+							src="<?php echo $this->baseUrl();?>/images/campaign/campaign_105_03.jpg"
+							style="padding: 0; border: 0; margin-right: 10px;background:none;" />
+						</div>
+						<div class="main-column" style="width:450px;float:left;margin-top:-4px;">
+							<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'description','id'=>$activeCampaign['campaign_id'])); ?>"><h2 style="color:#000000">Quality for Life™ Philippines Campaign</h2></a>
+
+							<span>
+								A globally recognized brand that supplies high-quality vitamins ingredients to companies worldwide. It aims at improving your education about vitamins to give you peace of mind when you choose food and beverage products.
+							</span>
+
+							<!-- </ul> -->
+						</div>
+						<div style="clear: both;"></div>
+
+					</div>
+
+			    <div id="tabs-report<?php echo $j?>" class="report-panel">
+			    	<div class="images-column" style="float:left;margin-top:15px;"><img
+							src="<?php echo $this->baseUrl();?>/images/campaign/campaign_105_03.jpg"
+							style="padding: 0; border: 0; margin-right: 10px;background:none;" />
+						</div>
+						<div class="main-column" style="width:450px;float:left;margin-top:11px;">
+							<div class='report-panel-header'>
+								<!-- <span class="campaign-name"><?php echo $activeCampaign["name"]?></span> -->
+								<span class="tab-description"><?php echo $this->translate('Report_Submit_Description');?><span>
+							</div>
+							<ul class="submit-report">
+								<?php $reportCount=1?>
+								<?php foreach ($this->allCampaignReports as $report):?>
+									<?php if ($report['campaign_id']==$activeCampaign['campaign_id'] && $reportCount<=3):?>
+										<div class="li-wrapper">
+										<li><?php echo $this->translate("Spark_Report")?>#<?php echo $reportCount?> (0-500 <?php echo $this->translate("points")?>)
+											<?php if(array_key_exists($report['id'], $this->approvedCampaignReportPoint)) {?>
+											<img src="<?php echo $this->baseUrl();?>/images/action_check.gif" align="absmiddle"/>
+											<?php echo $this->translate('earned');?> <?php echo $this->approvedCampaignReportPoint[$report['id']]?> <?php echo $this->translate("points")?>
+											<?php } else{?>
+											<?php echo $this->translate("Submit_successfully_and_pedding")?>
+											<?php }?>
+										</li>
+										</div>
+										<?php $reportCount++?>
+									<?php endif;?>
+								<?php endforeach;?>
+								<?php if ($reportCount == 1):?>
+									<div class="li-wrapper">
+										<li>
+											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#1</a> (0-500 <?php echo $this->translate("points")?>)
+											
+										</li>
+									</div>
+									<div class="li-wrapper">
+										<li>
+											<?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)
+											
+										</li>
+									</div>
+									<div class="li-wrapper">
+										<li>
+											<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
+
+										</li>
+									</div>
+								<?php endif;?>
+							
+								<?php if ($reportCount ==2):?>
+									<div class="li-wrapper">
+										<li>
+											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)</a>
+										</li>
+									</div>
+									<div class="li-wrapper">
+										<li>
+											<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
+
+										</li>
+									</div>
+								<?php endif;?>
+							
+								<?php if ($reportCount ==3):?>
+									<div class="li-wrapper">
+										<li>
+											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)</a>
+										</li>
+									</div>
+								<?php endif;?>
+								
+								<?php if ($reportCount <=3){?>
+									<div class="li-wrapper">
+										<li>								
+											<?php echo $this->translate("Bonus_Report")?> (0-500 <?php echo $this->translate("points")?>)
+										</li>
+									</div>
+								<?php }else{?>
+									<div class="li-wrapper">
+										<li>						
+											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;">
+											<? echo $this->translate('Click_here_and_submit_more'); ?> (0-500 <?php echo $this->translate("points")?>)
+											</a>
+										</li>
+									</div>
+								<?php }?>
+							</ul>
+						</div>
+					</div>
+					<div id="tabs-photo<?php echo $j?>" class="report-panel">
+						<div class="images-column" style="float:left;margin-top:15px;"><img
+							src="<?php echo $this->baseUrl();?>/images/campaign/campaign_105_03.jpg"
+							style="padding: 0; border: 0; margin-right: 10px;background:none;" />
+						</div>
+						<div class="main-column" style="width:450px;float:left;margin-top:11px;">					
+							<div class='report-panel-header'>
+								<!-- <span class="campaign-name"><?php echo $activeCampaign["name"]?></span> -->
+								<span class="tab-description"> <?php echo $this->translate('Upload_Photo_Text')?><span>
+							</div>
+							<div class="uploading-image">
+												
+							      <?php foreach($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']] as $imageReport) { ?>
+							      <?php $is_first = ($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']][0]['id'] == $imageReport['id'])?>
+		                          <div style="text-align:center;<?php if(!$is_first) {echo 'display:none;';}?>" class="image" >
+		                            <a onclick="move_up(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_up.png" /></a>
+		                            <a href="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>" title="<?php echo $this->translate('Uplaod_Photo_Url_Title')?>" class="thickbox"> 
+		                             <img id="image_thumb_<?php echo $imageReport['id'];?>" width='<?php if (isset($imageReport['thumb_width'])){ echo $imageReport['thumb_width']; }else{ echo 80;}?>' height='<?php if (isset($imageReport['thumb_height'])){ echo $imageReport['thumb_height']; }else{ echo 80;}?>' src="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>"/>
+		                            </a>
+		                            <a onclick="move_down(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_down.png" /></a>
+		                          </div>
+								  <div class="status" style="<?php if(!$is_first) {echo 'display:none';}?>">
+								  <?php if($imageReport['state'] == 'APPROVED' && isset($imageReport['point_amount'])) { ?>
+									图片已审核, 您已获得<strong><?php echo $imageReport['point_amount'] ?></strong>分
+								  <?php } else if($imageReport['state'] == 'NEW') { ?>
+									图片需要审核, 请等待
+								  <?php } else if($imageReport['state'] == 'UNAPPROVED') { ?>
+								  	图片审核未通过
+								  <?php }?>
+								  </div>
+		                          <?php }?>
+								<!-- <div class="intro-text"><?php echo $this->translate('Upload_Photo_Text')?></div> -->
+								<div class="upload-photo-button-container">
+								  <a href="#" class="btn btn-primary" id="uploadFile_<?php echo $activeCampaign['campaign_id'];?>"><?php echo $this->translate('Uplaod_Photo')?></a>
+								  <!-- <div id="error" style="color:red;"></div> -->
+								</div>
+							    
+							</div>
+						</div>
+					</div>
+					<div id="tabs-url<?php echo $j?>" class="report-panel">
+						<div class="images-column" style="float:left;margin-top:15px;"><img
+							src="<?php echo $this->baseUrl();?>/images/campaign/campaign_105_03.jpg"
+							style="padding: 0; border: 0; margin-right: 10px;background:none;" />
+						</div>
+						<div class="main-column" style="width:450px;float:left;margin-top:11px;">
+							<div class='report-panel-header'>
+								<!-- <span class="campaign-name"><?php echo $activeCampaign["name"]?></span> -->
+								<span class="tab-description"> <?php echo $this->translate('Report_Url_Description')?><span>
+							</div>
+							<div class="submit-url submit-url-done submit-url-container">
+								<!-- <div class="status"><?php echo $this->translate("Home_Submit_URL_Report")?></div> -->
+								<div class="submit-url-input-container">
+						        <input class="submit-url-input" id="url_<?php echo $activeCampaign['campaign_id'];?>" type="text" name="url" class="text-box" value=""/>
+								<?php //if($activeCampaign['url'] == null || $activeCampaign['url'] == ''){?>
+								<input class="btn btn-primary" id = "url_report_submit_<?php echo $activeCampaign['campaign_id'];?>" type="button" value="<?php echo $this->translate("Home_URL_Report_Submit")?>" class="button" onclick="submitURL(<?php echo $activeCampaign['campaign_id'];?>);"/>
+					        <?php 
+					            $i = 0;
+					            foreach ($this->urlreport as $url){
+					            	if($i == 2){
+					            	   break;	
+					            	}
+					            	if($url['campaign_id'] == $activeCampaign['campaign_id']){
+					            		if($url['state'] == 'APPROVED'){
+					            			$state = '审核成功';
+					            		}elseif($url['state'] == 'NEW'){
+					            			$state = '等待审核';
+					            		}else{
+					            			$state = '审核失败';
+					            		}
+					            		echo '<i>'.$url['url'].'</i>'.$state.'<br/>';
+					            	}	
+					            	$i++;			            	
+					            }				        
+					        ?>
+								</div>
+
+								<div class="intro-text">
+									<ul>
+										<li id='url_report_notice_<?php echo $activeCampaign['campaign_id'];?>'></li>							
+									</ul>
+								</div>
+							</div>
+							<div>Your Wildfire account is not associated with a Facebook account. Link now?</div>
+						</div>
+					</div>
+
 					<div class="report-task-bar" style="display:none;">
 						<a href="#" onclick="showReportPanel(0);return false;" class="button-submit-report"><img src="<?php echo $this->baseUrl();?>/images/tab_button_report_blue.png"/></a>
 						<a href="#" onclick="showReportPanel(2);return false;" class="button-submit-url"><img src="<?php echo $this->baseUrl();?>/images/tab_button_url_grey.png"/></a>
@@ -393,12 +445,13 @@
 
 
 <div class="spark-status">
+		<div class="article-box-title">&nbsp;&nbsp;&nbsp;&nbsp;MY PROFILE</div>
 	<!--  Tip  -->
 	<div class="spark-status-box">
 		<img onmouseover="showtip(2);" onmouseout="hidetip(2);" class="help-button" src="<?php echo $this->baseUrl();?>/images/help-button.gif"/>
 		<div class="tip-wrapper">
 			<div id="tip2" class="tip-box" style="display:none; ">
-				<div class="top"></div>
+				<!-- <div class="top"></div> -->
 				<div class="middle">
 				<h2><?php echo $this->translate("What_is_Status_Header")?></h2>
 				<p><?php echo $this->translate("What_is_Status_Content_1")?></p>
@@ -407,7 +460,7 @@
 				<p><?php echo $this->translate("What_is_Status_Content_4")?></p>
 				<p><?php echo $this->translate("What_is_Status_Content_5")?></p>
 				</div>
-				<div class="bottom"></div>
+				<!-- <div class="bottom"></div> -->
 			</div>
 		</div>
 		<div class="avatar">
@@ -491,8 +544,9 @@
 </div>
 	
 	
-	
-	<div class="spark-report-box">
+<!-- delete polls 2012.11.21 Bruce.Liu -->
+	<!-- <div class="spark-report-box">
+		<div class="article-box-title">&nbsp;&nbsp;&nbsp;&nbsp;MY POLLS</div>		
 		<div class="spark-report-box-inner">
 			<div class='quick-poll-header'>
 				<div class='quick-poll-name-container'>
@@ -556,7 +610,8 @@
 			</ul>
 			</div>
 		</div>
-	</div>
+	</div> -->
+
 	<!--<?php if(count($this->activeMissions) || count($this->publicMissions)){?>
 	<h2>完成任务，获得礼物和积分奖励！</h2>
 	<div class="spark-report-box">
