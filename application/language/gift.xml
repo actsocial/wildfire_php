@@ -530,7 +530,7 @@
 				<seg>我的订单</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>My Order</seg>
+				<seg>My Orders:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Gift_Cancel_the_Order?'>
@@ -574,7 +574,7 @@
 		<p><strong>FINISHED：</strong>Your rewards have been sent.</p>
 		<p><strong>CANCELED：</strong>You have canceled the order.</p>
 		<p><strong>UNAPPROVED：</strong>The order is not approved.</p>
-		<p>If you have any questions, please contact with 021-58363216-0 update。</p>]]></seg>
+		<p>For questions, please do not hesitate to <a href='../site/contactus'>contact us</a>!</p>]]></seg>
 			</tuv>
 		</tu>
 		<tu tuid='Gift_Description_Product_ID'>
@@ -623,7 +623,7 @@ Remember, you must have completed at least one campaign to redeem your Spark poi
 				<seg>你当前没有订单。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>There are no orders now.</seg>
+				<seg>You currently do not have orders. To place one, please click the back button.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Gift_Are_you_sure_delete_gift_cart?'>

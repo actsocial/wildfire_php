@@ -55,6 +55,37 @@
 				<seg>Trade Your Spark Points for Stuff</seg>
 			</tuv>
 		</tu>
+
+		<tu tuid='You_Have'>
+			<tuv xml:lang="zh">
+				<seg>你有 </seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You have </seg>
+			</tuv>
+		</tu>
+
+		
+		<tu tuid='How_Many_Points'>
+			<tuv xml:lang="zh">
+				<seg> 积分</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> word-of-mouth report points!</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Gift_Desc'>
+			<tuv xml:lang="zh">
+				<seg> Word-of-mouth report points are earned whenever you submit a report to us. The more you submit, the more points you get that you can exchange for gifts.  Kindly click on the Check Gifts button below to see the list of items that your points can be traded for!
+</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Word-of-mouth report points are earned whenever you submit a report to us. The more you submit, the more points you get that you can exchange for gifts.  Kindly click on the Check Gifts button below to see the list of items that your points can be traded for!
+</seg>
+			</tuv>
+		</tu>		
+
 		<tu tuid='Total_Spark_Points'>
 			<tuv xml:lang="zh">
 				<seg>总共星火积分：</seg>

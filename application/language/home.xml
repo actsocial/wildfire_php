@@ -78,31 +78,53 @@
 				<seg>如有任何问题，请与我们联系。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Do you have questions to ask? Please do not hesitate to contact us.</seg>
+				<seg>Contact us!</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_desc'>
+			<tuv xml:lang="zh">
+				<seg>If you do have questions about the Wildfire community website,
+Please do not hesitate to let us know and we’ll get back to you within 48 business hours.</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>If you do have questions about the Wildfire community website,
+Please do not hesitate to let us know and we’ll get back to you within 48 business hours.</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_email'>
+			<tuv xml:lang="zh">
+				<seg>Email：<a href="home@wildfire.asia">home@wildfire.asia</a></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email：<a href="home@wildfire.asia">home@wildfire.asia</a></seg>
 			</tuv>
 		</tu>
 		<tu tuid='Contact_Text_Yahoo'>
 			<tuv xml:lang="zh">
-				<seg>雅虎通：wildfire.asia@yahoo.com</seg>
+				<seg>雅虎通：<a href="wildfire.asia@yahoo.com">wildfire.asia@yahoo.com</a></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Yahoo Messenger: wildfire.asia@yahoo.com</seg>
+				<seg>Yahoo Messenger: <a href="wildfire.asia@yahoo.com">wildfire.asia@yahoo.com</a></seg>
 			</tuv>
 		</tu>
 		<tu tuid='Contact_Text_Facebook'>
 			<tuv xml:lang="zh">
-				<seg>Facebook: http://www.facebook.com/Wildfire</seg>
+				<seg>Facebook: <a href="http://www.facebook.com/Wildfire">http://www.facebook.com/Wildfire</a></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Facebook: http://www.facebook.com/Wildfire</seg>
+				<seg>Facebook: <a href="http://www.facebook.com/Wildfire">http://www.facebook.com/Wildfire</a></seg>
 			</tuv>
 		</tu>
 		<tu tuid='Contact_Text_Mobile'>
 			<tuv xml:lang="zh">
-				<seg>手机号码（仅接收短信）：09156768666 (Globe) / 09982007891 (Smart)</seg>
+				<seg>Mobile (SMS only): 09156768666 or 09982007891 
+</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Mobile (SMS only): 09156768666 (Globe) / 09982007891 (Smart)</seg>
+				<seg>Mobile (SMS only): 09156768666 or 09982007891 
+</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Report_Url_Description'>

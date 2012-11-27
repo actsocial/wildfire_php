@@ -1,40 +1,54 @@
 <div class="order-list">
-	<h1><?php echo $this->translate('Gift_My_Order');?></h1>
-	<?php if($this->orders == null){?>
-		<div><p><?php echo $this->translate('Gift_There_are_no_orders_now');?></p></div>
-	<?php }else{?>
-		<table>
-			<tr>
-				<th>No.</th>
-				<th><?php echo $this->translate('Gift_gift_name');?></th>
-				<th><?php echo $this->translate('Gift_Flow_Qty');?></th>
-				<th><?php echo $this->translate('Gift_Gift_Price');?></th>
-				<th><?php echo $this->translate('Gift_Order_create_date');?></th>
-				<th><?php echo $this->translate('Gift_Order_State');?></th>
-			</tr>
-		<?php $i = 1; foreach ($this->orders as $order):?>
-			<tr>
-				<td><?php echo $i++;?></td>
-				<td><?php echo $order['name'];?></td>
-				<td><?php echo $order['amount'];?></td>
-				<td><?php echo -$order['point'];?></td>
-				<td><?php echo $order['create_date'];?></td>
-			<?php if($order['state'] == 'NEW'): ?>
-				<td><strong><?php echo $this->translate('Admin_Product_'.$order['state']);?></strong>
-				<a href="<?php echo $this->url(array('controller'=>'gift','action'=>'deleteorder', 'orderid'=>$order['id']));?>" onclick="return confirm('<?php echo $this->translate('Gift_Cancel_the_Order?');?>');">
-				<?php echo $this->translate('Gift_Order_Cancel');?></a></td>
-			<?php else: ?> 
-				<td><strong><?php echo $this->translate('Admin_Product_'.$order['state']);?></strong></td>
-			<?php endif; ?>
-			</tr>
-		<?php endforeach;?>
-		</table>
-	<?php }?>
-	<div class="intro">
-		<?php echo $this->translate('Gift_Order_Intro');?>
-	</div>	<div style="clear: both;"></div>
-	<div class="buttons-bar center1btn" style="margin-top: 20px;">
-		<a class="button" href="<?php echo $this->url(array('controller'=>'gift','action'=>'list'));?>">
-		<?php echo $this->translate('Gift_See_more_gifts');?></a>
+
+	<div class="article-box">
+		<div class="article-box-inner">
+
+		<h1><?php echo $this->translate('Gift_My_Order');?></h1>
+		<?php if($this->orders == null){?>
+			<p><?php echo $this->translate('Gift_There_are_no_orders_now');?></p>
+		<?php }else{?>
+			<table>
+				<tr>
+					<th>No.</th>
+					<th><?php echo $this->translate('Gift_gift_name');?></th>
+					<th><?php echo $this->translate('Gift_Flow_Qty');?></th>
+					<th><?php echo $this->translate('Gift_Gift_Price');?></th>
+					<th><?php echo $this->translate('Gift_Order_create_date');?></th>
+					<th><?php echo $this->translate('Gift_Order_State');?></th>
+				</tr>
+			<?php $i = 1; foreach ($this->orders as $order):?>
+				<tr>
+					<td><?php echo $i++;?></td>
+					<td><?php echo $order['name'];?></td>
+					<td><?php echo $order['amount'];?></td>
+					<td><?php echo -$order['point'];?></td>
+					<td><?php echo $order['create_date'];?></td>
+				<?php if($order['state'] == 'NEW'): ?>
+					<td><strong><?php echo $this->translate('Admin_Product_'.$order['state']);?></strong>
+					<a href="<?php echo $this->url(array('controller'=>'gift','action'=>'deleteorder', 'orderid'=>$order['id']));?>" onclick="return confirm('<?php echo $this->translate('Gift_Cancel_the_Order?');?>');">
+					<?php echo $this->translate('Gift_Order_Cancel');?></a></td>
+				<?php else: ?> 
+					<td><strong><?php echo $this->translate('Admin_Product_'.$order['state']);?></strong></td>
+				<?php endif; ?>
+				</tr>
+			<?php endforeach;?>
+			</table>
+		<?php }?>
+		
+		</div>
 	</div>
+
+		<div class="article-box">
+			<div class="article-box-inner">
+				<div class="intro">
+					<?php echo $this->translate('Gift_Order_Intro');?>
+				</div>
+				<div class="buttons-bar center1btn" style="margin-top: -20px;">
+					<a class="button" href="<?php echo $this->url(array('controller'=>'gift','action'=>'list'));?>">
+					<?php echo $this->translate('Gift_See_more_gifts');?></a>
+				</div>
+				<div style="clear: both;"></div>
+			</div>
+		</div>
+
 </div>
