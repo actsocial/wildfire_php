@@ -285,26 +285,27 @@
 								<span class="tab-description"> <?php echo $this->translate('Upload_Photo_Text')?><span>
 							</div>
 							<div class="uploading-image">
-												
-							      <?php foreach($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']] as $imageReport) { ?>
-							      <?php $is_first = ($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']][0]['id'] == $imageReport['id'])?>
-		                          <div style="text-align:center;<?php if(!$is_first) {echo 'display:none;';}?>" class="image" >
-		                            <a onclick="move_up(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_up.png" /></a>
-		                            <a href="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>" title="<?php echo $this->translate('Uplaod_Photo_Url_Title')?>" class="thickbox"> 
-		                             <img id="image_thumb_<?php echo $imageReport['id'];?>" width='<?php if (isset($imageReport['thumb_width'])){ echo $imageReport['thumb_width']; }else{ echo 80;}?>' height='<?php if (isset($imageReport['thumb_height'])){ echo $imageReport['thumb_height']; }else{ echo 80;}?>' src="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>"/>
-		                            </a>
-		                            <a onclick="move_down(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_down.png" /></a>
-		                          </div>
-								  <div class="status" style="<?php if(!$is_first) {echo 'display:none';}?>">
-								  <?php if($imageReport['state'] == 'APPROVED' && isset($imageReport['point_amount'])) { ?>
-									图片已审核, 您已获得<strong><?php echo $imageReport['point_amount'] ?></strong>分
-								  <?php } else if($imageReport['state'] == 'NEW') { ?>
-									图片需要审核, 请等待
-								  <?php } else if($imageReport['state'] == 'UNAPPROVED') { ?>
-								  	图片审核未通过
-								  <?php }?>
-								  </div>
-		                          <?php }?>
+									<?php if(isset($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']])) {?>			
+								     <?php foreach($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']] as $imageReport) { ?>
+								      <?php $is_first = ($this->activeImageReportsForCampaign[$activeCampaign['campaign_id']][0]['id'] == $imageReport['id'])?>
+			                          <div style="text-align:center;<?php if(!$is_first) {echo 'display:none;';}?>" class="image" >
+			                            <a onclick="move_up(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_up.png" /></a>
+			                            <a href="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>" title="<?php echo $this->translate('Uplaod_Photo_Url_Title')?>" class="thickbox"> 
+			                             <img id="image_thumb_<?php echo $imageReport['id'];?>" width='<?php if (isset($imageReport['thumb_width'])){ echo $imageReport['thumb_width']; }else{ echo 80;}?>' height='<?php if (isset($imageReport['thumb_height'])){ echo $imageReport['thumb_height']; }else{ echo 80;}?>' src="<?php echo $this->url(array('controller'=>'image','action'=>'getimage', 'id'=>$imageReport['id']));?>"/>
+			                            </a>
+			                            <a onclick="move_down(this);"><img src="<?php echo $this->baseUrl();?>/images/arrow_blue_down.png" /></a>
+			                          </div>
+									  <div class="status" style="<?php if(!$is_first) {echo 'display:none';}?>">
+									  <?php if($imageReport['state'] == 'APPROVED' && isset($imageReport['point_amount'])) { ?>
+										图片已审核, 您已获得<strong><?php echo $imageReport['point_amount'] ?></strong>分
+									  <?php } else if($imageReport['state'] == 'NEW') { ?>
+										图片需要审核, 请等待
+									  <?php } else if($imageReport['state'] == 'UNAPPROVED') { ?>
+									  	图片审核未通过
+									  <?php }?>
+									  </div>
+	                  <?php }?>
+                  <?php }?>
 								<!-- <div class="intro-text"><?php echo $this->translate('Upload_Photo_Text')?></div> -->
 								<div class="upload-photo-button-container">
 								  <a href="#" class="btn btn-primary" id="uploadFile_<?php echo $activeCampaign['campaign_id'];?>"><?php echo $this->translate('Uplaod_Photo')?></a>
