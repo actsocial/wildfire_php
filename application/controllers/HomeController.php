@@ -252,4 +252,8 @@ class HomeController extends MyController
 		$this->view->title = "Account Setting";
 	}
 	
+	function sharefailedAction(){
+		$this->view->title = "facebook share failed ";
+	}
+
 }

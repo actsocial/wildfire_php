@@ -252,12 +252,40 @@
 				<seg>Others</seg>
 			</tuv>
 		</tu>
+
+		<tu tuid='Gift_list_category_globe'>
+			<tuv xml:lang="zh">
+				<seg>Globe Network</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Globe Network</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Gift_list_category_smart'>
+			<tuv xml:lang="zh">
+				<seg>Smart Network</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Smart Network</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Gift_list_category_sun'>
+			<tuv xml:lang="zh">
+				<seg>Sun Network</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Sun Network</seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='Gift_list_available_gifts'>
 			<tuv xml:lang="zh">
 				<seg>可兑换的奖品</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Available rewards</seg>
+				<seg>All</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Gift_list_show_details'>

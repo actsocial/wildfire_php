@@ -658,13 +658,16 @@ function submitShare(campaignId){
       jQuery("#campaign_description_"+campaignId).text()
    ),
    link: 'https://developers.facebook.com/docs/reference/javascript/',
-   picture: 'http://www.fbrell.com/public/f8.jpg'
+   // picture: 'http://www.fbrell.com/public/f8.jpg'
+   picture:'http://community.wildfire.asia/public/images/campaign/campaign_105_03.jpg'
   },
   function(response) {
     if (response && response.post_id) {
-      alert('Post was published.');
+      // alert('Post was published.');
+      window.location.href="http://community.wildfire.asia"
     } else {
-      alert('Post was not published.');
+      // alert('Post was not published.');
+      window.location.href="http://community.wildfire.asia/public/home/sharefailed"
     }
   }
 );

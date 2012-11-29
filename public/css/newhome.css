@@ -106,7 +106,7 @@ img {
 	list-style-type:none;
 	padding:0;
 	margin:0;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: bold;
 	height: 36px;
 	border: 0px solid #0f0;
@@ -1315,6 +1315,7 @@ ul.tabbed-buttons li.active a:visited {
 .edit-profile .buttons-bar {
 	float: left;
 	width: 600px;
+	margin-left:70px;
 }
 .edit-profile .buttons-bar dt {
 	display:none;
@@ -2537,10 +2538,10 @@ a.list-orders:hover {
 	margin:0;
 	padding:0;
 	border:0;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 	padding-bottom: 20px;
 	padding-left: 10px;
-	border-bottom: 1px dotted #ddd;
+	border-bottom: 0px dotted #ddd;
 }
 .consumer-edit fieldset legend {
 	margin:0;
@@ -2552,6 +2553,7 @@ a.list-orders:hover {
 	clear: left;
 	height: 30px;
 	margin-top: 10px;
+	margin-left:70px;
 	width: 600px;
 }
 .consumer-edit fieldset .form-line label {
@@ -2560,7 +2562,7 @@ a.list-orders:hover {
 	padding-right: 10px;
 	height: 30px;
 	line-height: 30px;
-	text-align: right;
+	text-align: left;
 	/*font-weight: bold;*/
 	color: #666;
 }
@@ -2891,4 +2893,5 @@ label.error {
 	font-family: Lucida Grande;
 	font-size:16px;
 	color:#ffffff;
+	font-weight:bold;
 }

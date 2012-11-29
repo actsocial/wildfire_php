@@ -27,15 +27,19 @@
 	action="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>"
 	method="post">
 <fieldset>
-  <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Account_Info_Pic');?>" /></legend>
+  <!-- <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Account_Info_Pic');?>" /></legend> -->
+  <div class="article-box-title"><div style="margin-left:70px;">Account Information</div></div>
+  <div style="height:1px;"></div>
   <div class="form-line"><?php echo $this->form->email ;?></div>
   <div class="form-line"><?php echo $this->form->login_phone ;?></div>
   <div class="form-line"><?php echo $this->form->name ;?></div>
 </fieldset>
 
 <fieldset>
-  <legend><div><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Post_Address_Pic');?>" /></div>
-  	<div>*We will be sending your Word-of-Mouth kit soon. Please provide us with your correct information. </div></legend>
+<!--   <legend><div><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Post_Address_Pic');?>" /></div>
+  	<div>*We will be sending your Word-of-Mouth kit soon. Please provide us with your correct information. </div></legend> -->
+	<div class="article-box-title"><div style="margin-left:70px;">Post Address</div></div>
+	<div style="margin-left:70px;color:blue;">*We will be sending your Word-of-Mouth kit soon. Please provide us with your correct information. </div>
 	<div class="form-line"><?php echo $this->form->recipients_name ;?></div>
 	<div class="form-line"><?php echo $this->form->phone ;?></div>
 	<!--
@@ -94,7 +98,8 @@
 </fieldset>
 
 <fieldset>
-	<legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Personal_Info_Pic');?>"/></legend>
+	<!-- <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Personal_Info_Pic');?>"/></legend> -->
+	<div class="article-box-title"><div style="margin-left:70px;">Personal Information</div></div>
 	<div class="form-line"><?php echo $this->form->birthdate ;?></div>
 	<div class="form-line not-text"><?php echo $this->form->gender;?></div>
 	

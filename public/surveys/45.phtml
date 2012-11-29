@@ -75,8 +75,13 @@
 	</script>
 	<script type="text/javascript">
 		function showOrHide(val){
-			if(val==199){
+			if(val==199||val==196){
 				jQuery("#q_69").css("display","block");
+				if (val==196) {
+					jQuery(".changetitle").text("URL")
+				}else{
+					jQuery(".changetitle").text("Other way")
+				}
 			}else{
 				jQuery("#q_69").css("display","none");
 			}
@@ -213,7 +218,7 @@
 		<table class="question-table">
 			<tr>
 				<td width=50% valign="top">
-					<div class="question-title">
+					<div class="question-title changetitle">
 						Other way
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
@@ -250,7 +255,7 @@
 				<td width=50% valign="top">
 					<div class="question-title">
 						Provide us with the summary of what you have talked about  or chat records <!-- <a href='http://community.wildfire.asia/public/training/samplereport' target='_blank'>(Sample Report)</a> -->
-						<a class="btn" href="javascript:void(0)"  id="toggletest" style="background: url(../images/big-button.gif) no-repeat center center;
+						<a class="btn" href="javascript:void(0)"  id="toggletest" style="background: url(../public/images/big-button.gif) no-repeat center center;
 	display: block;
 	float: left;
 	color: #fff;
@@ -263,7 +268,11 @@
     </div>
     <div id="collapseOne" class="accordion-body collapse">
       <div class="accordion-inner">
-       “I am so glad that Sergeant Major store in Huaihai Parkson opened. I went there last Friday and saw the clerks with special hats in the elevator between 6th and 7th floor. Those are not made of straw nor very light. They were made of jeans- thick and heavy. But since the hat’s color is bright (yellow in the front of hat and green in the back) and the feather is red, the kids never took them off of their heads. The clothes Sergeant major sells are for children younger than 7 years old, but I think it was a bit too large for my kids since this brand is European. However, I still bought a coat with a removable lining for my boy and a pink wind coat for my baby girl. To my surprise, the staff gave me a gift- a cat toy that can be painted. I was rally happy about it. The staff also told me that I can bring my kids to the store to measure their height and take pictures with the VIP card, and those will be uploaded on the official website! I even told my friends back home to visit Sergeant Major store. Thanks Wildfire for holding this activity, which makes me love Sergeant Major.” --- <span style="font-style:bold;font-size:16px">Wang Feng</span>, 32 years old.
+      When I received Wildfire’s mailed package for Baileys, I couldn’t wait to share it with my good friends. Shown below are the feedbacks from 3 of my friends.
+ 
+			Cathy said, “Normally, I don’t really like to consume alcohol as I’m afraid of the after taste of alcohol. However, the alcohol concentration of Baileys is low and the unique blend of rich Irish cream creates a unique flavor. I can’t distinguish whether I’m consuming alcohol or ice cream. Baileys left a sweet after taste in my mouth. The feeling is perfect.
+			Cecilia said, “At the very first sip, this alcohol had already made a deep impression, it has this flavor that urges a drinker to continue tasting it. I was afraid that I would be addicted to it. This feeling trigger those who drink Baileys to think back on their first relationship.
+			Tina said, “Usually I face huge amount of pressure at work however after having a sip of Baileys, I felt more relaxed. During the weekends, I drink Baileys with 3 to 5 good friends, talk about life, and it makes me feel that life is fun. I will definitely recommend this to my friends around me.
       </div>
     </div>
   </div>
@@ -275,7 +284,21 @@
     </div>
     <div id="collapseTwo" class="accordion-body collapse">
       <div class="accordion-inner">
-       I talked with my friend, Zhu Hong Xia, before she went to the event. She said she already saw the product at the grocery store and tried it for free. She thought it tasted good but the price is a little bit expensive compared to the other brands. If the price is one Chinese Renminbi lower or at least the same as the other brands then she would definitely choose it over the rest. I hope you can relay her comments to Kraft Foods so more consumers will buy the product because it is really a good one!” --- <span style="font-style:bold;font-size:16px">Wang Shuaijun</span>, 28 years old.
+      I spoke with my friend, James Capistrano. He’s very conscious with his body and he goes to the gym at least three times a week. But since he’s busy and tired from work everyday, he needs to take supplements or beverages to have the strength to exercise. So he purchases a bottle of energy drink before he goes to the gym.
+ 
+			James said, “To me, all of the energy drinks on the market have the same effects, good and bad, price could be very expensive or cheap. But what I choose is Cobra Fit. It’s the not-so-expensive brand with great taste, less calories and contains imported vitamin ingredients. I don’t like the brand name though!”
+      </div>
+    </div>
+  </div>
+    <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+        Sample Report 3
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+				I went to kindergarden to pick up my child and talked with some parents I know. They asked: “What snacks did you bring to your kid?” I said: “I brought new biscuits of Uguan (Kraft). It is convenient and nutritious with less food additives. It’s a perfect snack for kids to eat after school so they won’t be very hungry before the dinner officially starts.” The parents totally agreed. I gave 2 pieces to my son to share with his best friends. They finished them quickly. Next time, I will bring some milk as it’s a bit dry. I’ll send more reports soon!
       </div>
     </div>
   </div>
@@ -836,7 +859,7 @@
 <br/>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit" style="display:none;background: url(../images/button.gif) no-repeat center center;
+<input id="submit" type="submit" style="display:none;background: url(../public/images/button.gif) no-repeat center center;
 	display: block;
 	float: left;
 	width: 110px;
