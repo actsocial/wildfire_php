@@ -39,6 +39,15 @@
 				<seg>Share your opinion on Facebook</seg>
 			</tuv>
 		</tu>
+		<tu tuid='Post_to_Facebook'>
+			<tuv xml:lang="zh">
+				<seg>发表</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Post</seg>
+			</tuv>
+		</tu>
+		
 		<tu tuid='Tabs_Photo'>
 			<tuv xml:lang="zh">
 				<seg>上传照片/视频</seg>
@@ -106,6 +115,15 @@
 			</tuv>
 		</tu>
 		<tu tuid='Report_Url_Description'>
+			<tuv xml:lang="zh">
+				<seg>你可以提交一个你和你朋友谈话的网址，我们将会浏览这个页面并尽早的通知你如果你可以提交下一个报告。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What do you think about the brand? How about after trying the product? Share your thoughts with your friends on Facebook. Let them know what you have to say!
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Share_Facebook_Description'>
 			<tuv xml:lang="zh">
 				<seg>你可以提交一个你和你朋友谈话的网址，我们将会浏览这个页面并尽早的通知你如果你可以提交下一个报告。</seg>
 			</tuv>

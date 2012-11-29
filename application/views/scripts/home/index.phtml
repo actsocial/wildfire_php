@@ -3,6 +3,7 @@
       jQuery( "#tabs" ).tabs();
   });
 </script>
+<script src="//connect.facebook.net/en_US/all.js"></script>
 <div id="fillout-dialog">
     <div class="content"></div>
 </div>
@@ -114,9 +115,6 @@
 	</div>
 </div>
 
-<!-- 		<?php if($j==0) { ?>
-			<div class="article-box-title">&nbsp;&nbsp;&nbsp;&nbsp;MY ACTIVITIES</div>
-		<?php } ?> -->
 
 <div class="article-box-title">&nbsp;&nbsp;&nbsp;&nbsp;MY ACTIVITIES</div>
 
@@ -174,9 +172,9 @@
 							style="padding: 0; border: 0; margin-right: 10px;background:none;" />
 						</div>
 						<div class="main-column" style="width:450px;float:left;margin-top:-4px;">
-							<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'description','id'=>$activeCampaign['campaign_id'])); ?>"><h2 style="color:#000000">Quality for Life™ Philippines Campaign</h2></a>
+							<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'description','id'=>$activeCampaign['campaign_id'])); ?>"><h2 style="color:#000000" id="campaign_name_<?php echo $activeCampaign['campaign_id'] ?>">Quality for Life™ Philippines Campaign</h2></a>
 
-							<span>
+							<span id="campaign_description_<?php echo $activeCampaign['campaign_id'] ?>">
 								A globally recognized brand that supplies high-quality vitamins ingredients to companies worldwide. It aims at improving your education about vitamins to give you peace of mind when you choose food and beverage products.
 							</span>
 
@@ -216,7 +214,7 @@
 								<?php if ($reportCount == 1):?>
 									<div class="li-wrapper">
 										<li>
-											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#1</a> (0-500 <?php echo $this->translate("points")?>)
+											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><?php echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#1</a> (0-500 <?php echo $this->translate("points")?>)
 											
 										</li>
 									</div>
@@ -323,49 +321,22 @@
 						<div class="main-column" style="width:450px;float:left;margin-top:11px;">
 							<div class='report-panel-header'>
 								<!-- <span class="campaign-name"><?php echo $activeCampaign["name"]?></span> -->
-								<span class="tab-description"> <?php echo $this->translate('Report_Url_Description')?><span>
+								<span class="tab-description"> <?php echo $this->translate('Share_Facebook_Description')?><span>
 							</div>
-							<div class="submit-url submit-url-done submit-url-container">
+							<?php if($this->consumer[0]['facebookid']){ ?>
+							<div class="share share-done share-container">
 								<!-- <div class="status"><?php echo $this->translate("Home_Submit_URL_Report")?></div> -->
-								<div class="submit-url-input-container">
-						        <input class="submit-url-input" id="url_<?php echo $activeCampaign['campaign_id'];?>" type="text" name="url" class="text-box" value=""/>
-								<?php //if($activeCampaign['url'] == null || $activeCampaign['url'] == ''){?>
-								<input class="btn btn-primary" id = "url_report_submit_<?php echo $activeCampaign['campaign_id'];?>" type="button" value="<?php echo $this->translate("Home_URL_Report_Submit")?>" class="button" onclick="submitURL(<?php echo $activeCampaign['campaign_id'];?>);"/>
-					        <?php 
-					            $i = 0;
-					            foreach ($this->urlreport as $url){
-					            	if($i == 2){
-					            	   break;	
-					            	}
-					            	if($url['campaign_id'] == $activeCampaign['campaign_id']){
-					            		if($url['state'] == 'APPROVED'){
-					            			$state = '审核成功';
-					            		}elseif($url['state'] == 'NEW'){
-					            			$state = '等待审核';
-					            		}else{
-					            			$state = '审核失败';
-					            		}
-					            		echo '<i>'.$url['url'].'</i>'.$state.'<br/>';
-					            	}	
-					            	$i++;			            	
-					            }				        
-					        ?>
+								<div class="share-input-container">
+									<input class="btn btn-primary" id = "share_submit_<?php echo $activeCampaign['campaign_id'];?>" type="button" value="<?php echo $this->translate("Post_to_Facebook")?>" class="button" onclick="submitShare(<?php echo $activeCampaign['campaign_id'];?>);"/>
 								</div>
 
-								<div class="intro-text">
-									<ul>
-										<li id='url_report_notice_<?php echo $activeCampaign['campaign_id'];?>'></li>							
-									</ul>
-								</div>
 							</div>
+							<?php }else{ ?>
 							<div>Your Wildfire account is not associated with a Facebook account. Link now?</div>
+							<?php } ?>
 						</div>
 					</div>
 
-					<div class="report-task-bar" style="display:none;">
-						<a href="#" onclick="showReportPanel(0);return false;" class="button-submit-report"><img src="<?php echo $this->baseUrl();?>/images/tab_button_report_blue.png"/></a>
-						<a href="#" onclick="showReportPanel(2);return false;" class="button-submit-url"><img src="<?php echo $this->baseUrl();?>/images/tab_button_url_grey.png"/></a>
-					</div>
 				</div><!-- end for tabs -->
 			
 			<?php }else{?>
@@ -639,8 +610,20 @@
 	
 
 </div>
+<div id="fb-root"></div>
 <script language="javascript">
+window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '234132663359597', // App ID from the App Dashboard
+      channelUrl : '//community.wildfire.asia/channel.phtml', // Channel File for x-domain communication
+      status     : true, // check the login status upon init?
+      cookie     : true, // set sessions cookies to allow your server to access the session?
+      xfbml      : true  // parse XFBML tags on this page?
+    });
 
+
+  };
 var campaign_id;
 function showtip(id){
 	var tip = $("tip"+id);
@@ -669,6 +652,27 @@ function showUlTab(id){
 
 }
 */
+function submitShare(campaignId){
+	FB.ui(
+  {
+   method: 'feed',
+   name: jQuery("#campaign_name_"+campaignId).text(),
+   caption: "",
+   description: (
+      jQuery("#campaign_description_"+campaignId).text()
+   ),
+   link: 'https://developers.facebook.com/docs/reference/javascript/',
+   picture: 'http://www.fbrell.com/public/f8.jpg'
+  },
+  function(response) {
+    if (response && response.post_id) {
+      alert('Post was published.');
+    } else {
+      alert('Post was not published.');
+    }
+  }
+);
+}
 
 function submitURL(campaignId){
 	campaign_id = campaignId;

@@ -246,6 +246,7 @@ class HomeController extends MyController
 		//var_dump($this->view->consumer);die;
 		
 	}
+
 	function editAction()
 	{
 		$this->view->title = "Account Setting";
