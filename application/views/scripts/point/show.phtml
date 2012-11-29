@@ -1,22 +1,24 @@
-<div class="article-box">
+<!-- <div class="article-box">
 	<div class="article-box-inner">
 	<h1 style="margin-left: 0;"><?php echo $this->translate('Point_Show_Header1');?>
 	<?php echo $this->totalPoints?> <?php echo $this->translate('Point_Show_Header2');?></h1>
 	<div style="padding-left: 20px;"><?php echo $this->translate('Point_Show_Content');?></div>
 	</div>
 </div>
-
+ -->
 <div class="article-box" style="background: #fff;">
-	<div class="article-box-inner" style="background: #fff; height: 130px;">
+	<div class="article-box-inner" style="background: #fff; height: 230px;">
 		<div class="images-column"><img
 			src="<?php echo $this->baseUrl();?>/images/redeem_icon.gif"
 			style="margin-right: 1px;" />
 		</div>
 		<div class="main-column">
-			<h2 ><?php echo $this->translate('Trade_Your_Spark_Points');?></h2>
-			<ul class="invited" style="height: 50px;">
+			<!-- <h2 ><?php echo $this->translate('Trade_Your_Spark_Points');?></h2> -->
+
+			<h2><?php echo $this->translate('You_Have'); ?><?php echo $this->totalPoints?><?php echo $this->translate('How_Many_Points'); ?></h2>
+			
 			<?php if($this->exchangePointsAuth != null && $this->exchangePointsAuth == 'No'):?>
-				
+				<ul class="invited" style="height: 50px;">
 			    <?php if($this->finishingCampaign != null && $this->finishingCampaign != ''):?>
 					<li>
 					<?php echo $this->translate('Exchange_Points_Hint');?>
@@ -43,22 +45,27 @@
 				<?php endif;?>
 			<?php endif;?>	
 				
-				<?php if($this->exchangePointsAuth == null || $this->exchangePointsAuth != 'No'):?>
+<!-- 				<?php if($this->exchangePointsAuth == null || $this->exchangePointsAuth != 'No'):?>
 					<li>
 					<?php echo $this->translate('Total_Spark_Points');?>		
 					<?php echo $this->totalPoints?>
 					<?php echo $this->translate('Points')?>
 					</li>
-					<!--<li>
+					<li>
 					<?php echo $this->translate('Gift_New_Version_Notice')?>
 					</li>
-				--><?php endif;?>
+				<?php endif;?> -->
 			</ul>
+			<div>
+				<?php if($this->exchangePointsAuth == null || $this->exchangePointsAuth != 'No'):?>
+						<?php echo $this->translate('Gift_Desc'); ?>
+				<?php endif;?> 
+			</div>
 			<div class="buttons-bar">
-			<a class="button" href="<?php echo $this->url(array('controller'=>'gift','action'=>'list'));?>">
-			<?php echo $this->translate('Check_Gifts');?></a>
-			<a class="button" href="<?php echo $this->url(array('controller'=>'gift','action'=>'listorder'));?>">
-			<?php echo $this->translate('Gift_Place_Order');?></a>
+				<a class="button" href="<?php echo $this->url(array('controller'=>'gift','action'=>'list'));?>">
+				<?php echo $this->translate('Check_Gifts');?></a>
+				<a class="button" href="<?php echo $this->url(array('controller'=>'gift','action'=>'listorder'));?>">
+				<?php echo $this->translate('Gift_Place_Order');?></a>
 			</div>
 			<!--
 			<div class="buttons-bar">

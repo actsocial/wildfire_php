@@ -121,7 +121,7 @@
 </div> -->
 
 <div class="article-box" id="selectCampaigns">
-    <div class="article-box-inner">
+    <div class="article-box-inner" style="height: 750px;">
         <h1 style="margin-left:0;">
             <?php echo $this->
                 translate('INVITATION_MAIL_CAMPAIGN_INTRODUCTION_HEAD'); ?>
@@ -156,19 +156,47 @@
 
            <!--  <iframe width="100%" scrolling="no" height="500px" frameborder="0" src="/public/js/fckeditor/editor/fckeditor.html?InstanceName=htmlmessage&amp;Toolbar=Default" id="htmlmessage___Frame" style="margin: 0px; padding: 0px; border: 0px none; background-color: transparent; background-image: none; width: 100%; height: 500px;"></iframe>
             <div id='htmlMessage' style="padding: 20px; padding-top:0px; margin-left: 20px; width:770px; display:none;"> -->
+
+
                 <div id='htmlMessage' style="padding: 20px; padding-top:0px; margin-left: 20px; width:580px; " >
-                    <?php $this->oFCKeditor->create();?>
+
+                    <!-- <?php $this->oFCKeditor->create();?> -->
+
+
                       <!-- Hi!<br><br>
                       &nbsp;&nbsp;&nbsp;&nbsp;Join me in the word-of-mouth campaign for Quality for Life Philippines.
                       <br><br>
                       &nbsp;&nbsp;&nbsp;&nbsp;Kindly answer the survey by clicking the link below. Once you are selected, Wildfire will contact you directly to formally invite you to join this campaign: <a href="https://www.facebook.com/QualityForLifePhilippines/app_127709503932081">https://www.facebook.com/QualityForLifePhilippines/app_127709503932081</a><br><br>
                       &nbsp;&nbsp;&nbsp;&nbsp;For more information about Quality for Life Philippines, you can visit the official Facebook page at <a href="www.facebook.com/QualityForLifePhilippines">www.facebook.com/QualityForLifePhilippines</a>. Please do not forget to click the Like button to receive updates about health, vitamins, and nutrition!<br><br>
                       Have a great day!<br><br> -->
+                
+                <div style="padding: 20px; padding-top:0px; width:580px; " id="htmlMessage">
+                    <input type="hidden" style="display:none" value="Hi!&lt;br&gt;&lt;br&gt;
+
+                &amp;nbsp;&amp;nbsp;Join me in the word-of-mouth campaign for Quality for Life Philippines.&lt;br&gt;&lt;br&gt;
+
+                &amp;nbsp;&amp;nbsp;Kindly answer the survey by clicking the link below. Once you are selected, Wildfire will contact you directly to formally invite you to join this campaign: &lt;a href=&quot;https://www.facebook.com/QualityForLifePhilippines/app_127709503932081&quot;&gt;https://www.facebook.com/QualityForLifePhilippines/app_127709503932081 &lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+                &amp;nbsp;&amp;nbsp;For more information about Quality for Life Philippines, you can visit the official Facebook page at &lt;a href=&quot;www.facebook.com/QualityForLifePhilippines.&quot;&gt;www.facebook.com/QualityForLifePhilippines&lt;/a&gt;. Please do not forget to click the Like button to receive updates about health, vitamins, and nutrition!&lt;br&gt;&lt;br&gt;
+
+                Have a great day!&lt;br&gt;
+
+                " name="htmlmessage" id="htmlmessage"><input type="hidden" style="display:none" value="" id="htmlmessage___Config"><iframe width="100%" scrolling="no" height="500px" frameborder="0" src="/public/js/fckeditor/editor/fckeditor2.html?InstanceName=htmlmessage&amp;Toolbar=Default" id="htmlmessage___Frame" style="margin: 0px; padding: 0px; border: 0px none; background-color: transparent; background-image: none; width: 100%; height: 500px;"></iframe>                      <!-- Hi!<br><br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;Join me in the word-of-mouth campaign for Quality for Life Philippines.
+                      <br><br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;Kindly answer the survey by clicking the link below. Once you are selected, Wildfire will contact you directly to formally invite you to join this campaign: <a href="https://www.facebook.com/QualityForLifePhilippines/app_127709503932081">https://www.facebook.com/QualityForLifePhilippines/app_127709503932081</a><br><br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;For more information about Quality for Life Philippines, you can visit the official Facebook page at <a href="www.facebook.com/QualityForLifePhilippines">www.facebook.com/QualityForLifePhilippines</a>. Please do not forget to click the Like button to receive updates about health, vitamins, and nutrition!<br><br>
+                      Have a great day!<br><br> -->
+                </div>
+
                 </div>
                 
                  <div class="send-invitation">
-                    <input id="submit" type="submit" value="<?php echo $this->translate('INVITATION_MAIL_SEND') ?>"
-                    onclick="onSend();return true;">
+                    <div class="buttons-bar">
+                        <!-- <input id="submit" class="button" type="submit" value="<?php echo $this->translate('INVITATION_MAIL_SEND') ?>"
+                        onclick="onSend();return true;"> -->
+                        <a class="button" href="javascript:void(0);" onclick="onSend()" ><?php echo $this->translate('INVITATION_MAIL_SEND') ?></a>
+                    </div>
                  </div>
          </form>
     </div>

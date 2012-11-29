@@ -329,6 +329,20 @@ a.link {
 	margin-right: 10px;
 }
 
+.buttons-bar input.button {
+	background: url(../images/button.gif) no-repeat center center;
+	display: block;
+	float: left;
+	width: 110px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
 .buttons-bar a.big-button-blue {
 	background: url(../images/big-button-blue.gif) no-repeat center center;
 	display: block;

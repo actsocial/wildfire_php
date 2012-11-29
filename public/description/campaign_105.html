@@ -30,17 +30,17 @@ You will get:</br>
 		<div class="spark-report-box-inner" style="height:150px;">
 			<div class="ul-wrapper" style="font-size:12px;">
 				<!-- <h1 style="font-size:16px;color:#3461ad;">More Information</h1> -->
-				<p class="zh" style="width:640px;line-height:15px;margin-top:15px;font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;font-size: 12px;margin-left:10px;text-align:center;">Thank you very much for participating in this campaign. The more reports you submit to us, the more chances of getting points that you can exchange for gifts from Wildfire.</p>
+				<p class="zh" style="width:640px;line-height:15px;margin-top:15px;font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;font-size: 12px;margin-left:10px;text-align:left;">Thank you very much for participating in this campaign. The more reports you submit to us, the more chances of getting points that you can exchange for gifts from Wildfire.</p>
 				<br/>
 				<!-- <li ><a href="http://blog.xingxinghuo.com " target="blank">Wildfire Blog</a></li> -->
-				<div class="campaign-content" >
+				<div class="campaign-content" style="float:left;margin-left:-15px;">
 					<!-- remove a function onmouseover="openSubMenu();" onmouseout="closeSubMenu();" -->
 					<!-- <div class="submit-report"><a style="TEXT-DECORATION:none" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>" class="standard-report-button"><span style="font-size:11px;">Submit New Report</span></a>
 
 					</div> -->
 
-					<div class="buttons-bar" style="padding-top: 10px;">
-		             <a class="big-button-blue" style="margin-left:260px;" target="_parent"  onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>">
+					<div class="buttons-bar" style="padding-top: 10px;margin-left:10px;">
+		             <a class="big-button-blue" style="margin-left:10px;" target="_parent"  onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>');return false;" href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>105));?>">
 		             	<span style="font-size:11px;">Submit New Report</span>
 		             </a>
 		        	</div>
@@ -60,17 +60,17 @@ You will get:</br>
 
 	<div class="spark-report-box" style="margin-bottom:15px;">
 		<div class="spark-report-box-inner" >
-			<div style="margin-left:65px;">
-				<div class="ul-wrapper" style="font-size:12px;width:100%; margin-left:15px;margin-top:1px;margin-bottom:10px;">
+			<div>
+				<div class="ul-wrapper" style="font-size:12px;width:100%; margin-left:-15px;margin-top:1px;margin-bottom:10px;">
 					<!-- <h1 style="font-size:16px;color:#309BE4;">Quality for Life<sup style="font-size:8px">TM</sup> WOM Campaign</h1> -->
 					<br/>
-					<div style="float:left;margin-left:2px;height:60%">
-						<div style="height:110px;"><strong style="color:#309BE4;font-size:8em;line-height:normal;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">&nbsp;&nbsp;&nbsp;<?php echo $this->dayCount?></strong></div>
+					<div style="float:left;margin-left:-2px;margin-top:5px;">
+						<div style="width:30px;float:left"><strong style="color:#309BE4;font-size:4em;line-height:normal;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif">&nbsp;&nbsp;&nbsp;<?php echo $this->dayCount?></strong></div>
 						<div style="font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
-	font-size: 12px;text-align:center;margin-left:60px;">days left for the  <?php echo $this->campaign["name"]; ?> <br>Word-of-Mouth Campaign.</div>
+	font-size: 12px;text-align:left;margin-left:70px;float:left;margin-top:5px;">days left for the  <?php echo $this->campaign["name"]; ?> <br>Word-of-Mouth Campaign.</div>
 					</div>
 
-					<div style="float:left;align:center;margin-left:50px;margin-top:50px;">
+					<div style="float:left;align:center;margin-left:50px;">
 						<li style="padding-top:4px;font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
 	font-size: 12px;">No. of Reports Submitted:<strong><?php echo $this->reportCount?></strong> </li>
 						<li style="padding-top:4px;font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;
