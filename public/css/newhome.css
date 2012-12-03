@@ -985,6 +985,7 @@ table.profile td {
 .article-box .images-column {
 	float: left;
 	width: 130px;
+	margin-left:55px;
 }
 .article-box .images-column img {
 	float: left;
