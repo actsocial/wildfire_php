@@ -610,18 +610,8 @@
 </div>
 <div id="fb-root"></div>
 <script language="javascript">
-window.fbAsyncInit = function() {
-    // init the FB JS SDK
-    FB.init({
-      appId      : '234132663359597', // App ID from the App Dashboard
-      channelUrl : '//community.wildfire.asia/channel.php', // Channel File for x-domain communication
-      status     : true, // check the login status upon init?
-      cookie     : true, // set sessions cookies to allow your server to access the session?
-      xfbml      : true  // parse XFBML tags on this page?
-    });
-
-
-  };
+// window.fbAsyncInit = function() {
+// };
 var campaign_id;
 function showtip(id){
 	var tip = $("tip"+id);
@@ -869,6 +859,14 @@ var callbacks = [function(){},function(){}];
 
 
 jQuery(document).ready(function(){
+	// init the FB JS SDK
+    FB.init({
+      appId      : '234132663359597', // App ID from the App Dashboard
+      channelUrl : '//community.wildfire.asia/channel.php', // Channel File for x-domain communication
+      status     : true, // check the login status upon init?
+      cookie     : true, // set sessions cookies to allow your server to access the session?
+      xfbml      : true  // parse XFBML tags on this page?
+    });
 jQuery('#fillout-dialog').dialog({dialogClass: 'ui-fillout-dialog', bgiframe: true, autoOpen: false, resizable: false, modal: true, width: 680, height: 600, title: '<?php echo $this->translate("Submit_WOM_Report")?>' });
 jQuery('#check-alert-dialog').dialog(
 		{title:'<?php echo $this->translate("Submit_you_report_error")?>', bgiframe: true, autoOpen: false, resizable: false, modal: true, buttons: {
