@@ -664,13 +664,15 @@ function submitShare(campaignId){
    picture:'http://community.wildfire.asia/public/images/campaign/campaign_105_03.jpg'
   },
   function(response) {
-    if (response && response.post_id) {
+    if (response) {
       // alert('Post was published.');
-      window.location.href="http://community.wildfire.asia"
-    } else {
-      // alert('Post was not published.');
-      window.location.href="http://community.wildfire.asia/public/home/sharefailed"
-    }
+      if(response.post_id){
+      		//window.location.href="http://community.wildfire.asia"
+	  } else {
+	      // alert('Post was not published.');
+	      window.location.href="http://community.wildfire.asia/public/home/sharefailed"
+	  }
+	}
   }
 );
 }
