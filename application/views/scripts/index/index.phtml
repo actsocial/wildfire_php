@@ -116,13 +116,15 @@
 <br/>
 
 <table>
-	<tr>
+		<tr>
             <td><?php echo $this->form->email?></td>
-            <td>&nbsp;</td>
     </tr>
-	<tr>
+		<tr>
             <td><?php echo $this->form->password?></td>
-        </tr>
+    </tr>
+    <tr>
+    				<td><a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:8px;margin-left:240px;">Forgot?</a></td>
+    </tr>
         <!-- <tr>
             <td>
                 <a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>"><?php echo $this->translate("Common_Forget_Password")?></a>&nbsp;&nbsp;&nbsp;
@@ -131,7 +133,7 @@
         </tr> -->
 </table>
 
-  <div style="clear:both"></div>  <br/>
+  <div style="clear:both"></div>
 </div>
 <!-- <div style="padding-left:3px;">
 	<a href="<?php echo $this->facebook_login_url;?>">
@@ -144,8 +146,8 @@
 			<input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>-->
 
 			<input type="submit" id="login" value="Login" style="margin-left:80px;"> 
-			<!-- <?php echo $this->translate("Common_Forget_Password")?> -->
-			<a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:10px;">Forgot your password?</a>
+			<!-- <?php echo $this->translate("Common_Forget_Password")?> 
+			<a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:10px;">Forgot your password?</a>-->
 		</div>
 <input type="hidden" name="url" id="url" value="<?php echo $this->url?>"></input>
 </form>
