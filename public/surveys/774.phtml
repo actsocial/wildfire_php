@@ -1,0 +1,1204 @@
+	<script language="JavaScript" type="text/javascript">
+	<!--
+	// <![CDATA[
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie > 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length > MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+	// ]]>
+	-->
+	</script>
+	
+	<script language="JavaScript" type="text/javascript">
+	function fillintotext(val){
+		jQuery("#question_14549").val(val);
+	}
+
+	function showStores(val){
+		if(val=="12444"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 鞍山火车站店'>乐购超市 鞍山火车站店</option>");
+			jQuery("#test").append("<option value='乐购超市 丹东振兴店'>乐购超市 丹东振兴店</option>");
+			jQuery("#test").append("<option value='乐购超市 辽阳白塔店'>乐购超市 辽阳白塔店</option>");
+			jQuery("#test").append("<option value='乐购超市 沈阳广宜店'>乐购超市 沈阳广宜店</option>");
+			jQuery("#test").append("<option value='乐购超市 沈阳长客店'>乐购超市 沈阳长客店</option>");
+			jQuery("#test").append("<option value='乐购超市 沈阳浑南中店'>乐购超市 沈阳浑南中店</option>");
+			jQuery("#test").append("<option value='乐购超市 大连中山店'>乐购超市 大连中山店</option>");
+			jQuery("#test").append("<option value='乐购超市 大连金马店'>乐购超市 大连金马店</option>");
+			jQuery("#test").append("<option value='乐购超市 沈阳皇姑店'>乐购超市 沈阳皇姑店</option>");
+			jQuery("#test").append("<option value='乐购超市 沈阳明华店'>乐购超市 沈阳明华店</option>");
+			jQuery("#test").append("<option value='乐购超市 抚顺和平店'>乐购超市 抚顺和平店</option>");
+			jQuery("#test").append("<option value='乐购超市 大连友好店'>乐购超市 大连友好店</option>");
+			jQuery("#test").append("<option value='乐购超市 大连西岗店'>乐购超市 大连西岗店</option>");
+			jQuery("#test").append("<option value='乐购超市 沈阳铁西店'>乐购超市 沈阳铁西店</option>");
+			jQuery("#test").append("<option value='乐购超市 抚顺新华店'>乐购超市 抚顺新华店</option>");
+			jQuery("#test").append("<option value='乐购超市 营口渤海店'>乐购超市 营口渤海店</option>");
+			jQuery("#test").append("<option value='乐购超市 辽阳荣华店'>乐购超市 辽阳荣华店</option>");
+			jQuery("#test").append("<option value='乐购超市 丹东锦山店'>乐购超市 丹东锦山店</option>");
+		}
+		if(val=="12445"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 丰台东店'>乐购超市 丰台东店</option>");
+			jQuery("#test").append("<option value='乐购超市 大成东店'>乐购超市 大成东店</option>");
+			jQuery("#test").append("<option value='乐购超市 北京金星店'>乐购超市 北京金星店</option>");
+			jQuery("#test").append("<option value='乐购超市 黄村店'>乐购超市 黄村店</option>");
+			jQuery("#test").append("<option value='乐购超市 欢乐谷'>乐购超市 欢乐谷</option>");
+		}
+		if(val=="12446"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 淮安水渡口店'>乐购超市 淮安水渡口店</option>");
+			jQuery("#test").append("<option value='乐购超市 常州巢湖店'>乐购超市 常州巢湖店</option>");
+			jQuery("#test").append("<option value='乐购超市 无锡中南店'>乐购超市 无锡中南店</option>");
+			jQuery("#test").append("<option value='乐购超市 南通钟秀店'>乐购超市 南通钟秀店</option>");
+			jQuery("#test").append("<option value='乐购超市 常州中吴店'>乐购超市 常州中吴店</option>");
+			jQuery("#test").append("<option value='乐购超市 高邮文游店'>乐购超市 高邮文游店</option>");
+			jQuery("#test").append("<option value='乐购超市 苏州塔园店'>乐购超市 苏州塔园店</option>");
+			jQuery("#test").append("<option value='乐购超市 无锡政和店'>乐购超市 无锡政和店</option>");
+			jQuery("#test").append("<option value='乐购超市 无锡新光店'>乐购超市 无锡新光店</option>");
+			jQuery("#test").append("<option value='乐购超市 南通工农店'>乐购超市 南通工农店</option>");
+			jQuery("#test").append("<option value='乐购超市 昆山吉田店'>乐购超市 昆山吉田店</option>");
+			jQuery("#test").append("<option value='乐购超市 常州公园店'>乐购超市 常州公园店</option>");
+			jQuery("#test").append("<option value='乐购超市 扬州邗江店'>乐购超市 扬州邗江店</option>");
+			jQuery("#test").append("<option value='乐购超市 吴江汾湖店'>乐购超市 吴江汾湖店</option>");
+			jQuery("#test").append("<option value='乐购超市 常州武进店'>乐购超市 常州武进店</option>");
+			jQuery("#test").append("<option value='乐购超市 镇江青年店'>乐购超市 镇江青年店</option>");
+			jQuery("#test").append("<option value='乐购超市 无锡华夏店'>乐购超市 无锡华夏店</option>");
+		}
+		if(val=="12447"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 合肥潜山'>乐购超市 合肥潜山</option>");
+			jQuery("#test").append("<option value='乐购超市 合肥濉溪店'>乐购超市 合肥濉溪店</option>");
+			jQuery("#test").append("<option value='乐购超市 铜陵义安店'>乐购超市 铜陵义安店</option>");
+		}
+		if(val=="12448"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 开发区店'>乐购超市 开发区店</option>");
+			jQuery("#test").append("<option value='乐购超市 福州道店'>乐购超市 福州道店</option>");
+			jQuery("#test").append("<option value='乐购超市 金钟店'>乐购超市 金钟店</option>");
+			jQuery("#test").append("<option value='乐购超市 津友店'>乐购超市 津友店</option>");
+			jQuery("#test").append("<option value='乐购超市 塘沽店'>乐购超市 塘沽店</option>");
+		}
+		if(val=="12449"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 廊坊店'>乐购超市 廊坊店</option>");
+			jQuery("#test").append("<option value='乐购超市 秦皇岛河北大街店'>乐购超市 秦皇岛河北大街店</option>");
+		}
+		if(val=="12450"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 宁波江北万达店'>乐购超市 宁波江北万达店</option>");
+			jQuery("#test").append("<option value='乐购超市 舟山临城店'>乐购超市 舟山临城店</option>");
+			jQuery("#test").append("<option value='乐购超市 宁海兴宁中店'>乐购超市 宁海兴宁中店</option>");
+			jQuery("#test").append("<option value='乐购超市 台州解放南店'>乐购超市 台州解放南店</option>");
+			jQuery("#test").append("<option value='乐购超市 宁波天一店'>乐购超市 宁波天一店</option>");
+			jQuery("#test").append("<option value='乐购超市 义乌北苑店'>乐购超市 义乌北苑店</option>");
+			jQuery("#test").append("<option value='乐购超市 黄岩世纪店'>乐购超市 黄岩世纪店</option>");
+			jQuery("#test").append("<option value='乐购超市 嘉善体育南店'>乐购超市 嘉善体育南店</option>");
+			jQuery("#test").append("<option value='乐购超市 杭州庆春店'>乐购超市 杭州庆春店</option>");
+			jQuery("#test").append("<option value='乐购超市 杭州萧山店'>乐购超市 杭州萧山店</option>");
+			jQuery("#test").append("<option value='乐购超市 温岭九龙店'>乐购超市 温岭九龙店</option>");
+			jQuery("#test").append("<option value='乐购超市 宁波石碶店'>乐购超市 宁波石碶店</option>");
+			jQuery("#test").append("<option value='乐购超市 桐乡庆丰中店'>乐购超市 桐乡庆丰中店</option>");
+			jQuery("#test").append("<option value='乐购超市 湖州店'>乐购超市 湖州店</option>");
+			jQuery("#test").append("<option value='乐购超市 杭州河滨店'>乐购超市 杭州河滨店</option>");
+			jQuery("#test").append("<option value='乐购超市 杭州德胜店'>乐购超市 杭州德胜店</option>");
+		}
+		if(val=="12451"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 上海真北店'>乐购超市 上海真北店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海莘东店'>乐购超市 上海莘东店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海奉贤店'>乐购超市 上海奉贤店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海大渡河店'>乐购超市 上海大渡河店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海中兴店'>乐购超市 上海中兴店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海七宝店'>乐购超市 上海七宝店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海三门店'>乐购超市 上海三门店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海上南店'>乐购超市 上海上南店</option>");
+			jQuery("#test").append("<option value='乐购超市 周浦万达店'>乐购超市 周浦万达店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海都市店'>乐购超市 上海都市店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海南汇店'>乐购超市 上海南汇店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海松江店'>乐购超市 上海松江店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海莘松店'>乐购超市 上海莘松店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海莘庄店'>乐购超市 上海莘庄店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海嘉定店'>乐购超市 上海嘉定店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海卢湾店'>乐购超市 上海卢湾店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海长宁店'>乐购超市 上海长宁店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海大华店'>乐购超市 上海大华店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海金山店'>乐购超市 上海金山店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海锦绣店'>乐购超市 上海锦绣店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海光新店'>乐购超市 上海光新店</option>");
+			jQuery("#test").append("<option value='乐购超市 上海镇宁店'>乐购超市 上海镇宁店</option>");
+		}
+		if(val=="12452"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 厦门罗宾森店'>乐购超市 厦门罗宾森店</option>");
+			jQuery("#test").append("<option value='乐购超市 福州浦上店'>乐购超市 福州浦上店</option>");
+			jQuery("#test").append("<option value='乐购超市 厦门七星店'>乐购超市 厦门七星店</option>");
+			jQuery("#test").append("<option value='乐购超市 泉州宝洲店'>乐购超市 泉州宝洲店</option>");
+		}
+		if(val=="12453"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 广州圣地店'>乐购超市 广州圣地店</option>");
+			jQuery("#test").append("<option value='乐购超市 深圳龙城店'>乐购超市 深圳龙城店</option>");
+			jQuery("#test").append("<option value='乐购超市 东莞虎门店'>乐购超市 东莞虎门店</option>");
+			jQuery("#test").append("<option value='乐购超市 佛山环市店'>乐购超市 佛山环市店</option>");
+			jQuery("#test").append("<option value='乐购超市 江门东华店'>乐购超市 江门东华店</option>");
+			jQuery("#test").append("<option value='乐购超市 东莞厚街店'>乐购超市 东莞厚街店</option>");
+			jQuery("#test").append("<option value='乐购超市 东莞常平店'>乐购超市 东莞常平店</option>");
+			jQuery("#test").append("<option value='乐购超市 广东天佑店'>乐购超市 广东天佑店</option>");
+			jQuery("#test").append("<option value='乐购超市 佛山北滘店'>乐购超市 佛山北滘店</option>");
+			jQuery("#test").append("<option value='乐购超市 广州中六店'>乐购超市 广州中六店</option>");
+		}
+		if(val=="12454"){
+			jQuery("#test").remove();
+			jQuery("#question_14548").after("<select id='test' onchange='fillintotext(this.value)'></select>");
+			jQuery("#question_14549").val("");
+			jQuery("#test").append("<option value=''>请选择</option>");
+			jQuery("#test").append("<option value='乐购超市 潍坊潍州店'>乐购超市 潍坊潍州店</option>");
+			jQuery("#test").append("<option value='乐购超市 青岛即墨店'>乐购超市 青岛即墨店</option>");
+			jQuery("#test").append("<option value='乐购超市 青岛人民店'>乐购超市 青岛人民店</option>");
+			jQuery("#test").append("<option value='乐购超市 济南经四万达店'>乐购超市 济南经四万达店</option>");
+			jQuery("#test").append("<option value='乐购超市 济南东二环店'>乐购超市 济南东二环店</option>");
+		}
+	}
+<!--
+	// <![CDATA[
+	// var jQuery=$.noConflict();
+	// jQuery(function(){
+		// jQuery("#question_14548").attr("onchange","showStores(this.value)");
+		// jQuery("#q_2640").after('<div style="color: gray;font-size:12px;margin-left:25px;margin-bottom:25px;width:938px;">隐私声明：我们非'+'常重视对您隐私权的保护。邮件及手机号等个人资料为用户重要隐私，我们承诺不会将个人资料用作它途；承诺不会在未获得用户许可的情况下'+'擅自将用户的个人资料信息出租或出售给任何第三方。'+
+		// '如果您对本声明或我们的个人信息处理存在任何疑义，请发送邮件至 home@marketing-research.cn 联系我们。</div>');
+		// jQuery("#q_2640").css("display","none");
+		// jQuery("#q_3270 .question-title").css("width","320px");
+		// jQuery("#submit").css("display","");
+		// jQuery("#nextPageButton").css("display","none");
+	// })
+		// ]]>
+	-->
+	</script>
+
+<div class="main-container-outer">
+	<div id="container">
+		<div id="header" class="header" style="display: none;">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			<div class="main-logo" id="main-logo">
+				<a href="http://www.ostrakon.org" target="_blank">
+					<img src="/survey/logoImage/772" style="height:70px; width:301px">
+				</a>
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div> <!-- header -->
+		<div id="nav" class="navigation" style="display:none;">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content">
+ 		
+
+<div id="content" style="width:100%;">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	mandatoryElements = new Array(); 
+// ]]>
+-->
+</script>
+<div class="fillout-container">
+<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
+<div class="mainOneContent">
+
+<div style="margin-top:10px;"></div>
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="loading();return (checkMandatory() &amp;&amp; checkAnswerSet() &amp;&amp; checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
+  <div id="mainzone-top-left">
+    <div id="mainzone-top-right"></div>
+  </div>
+</div>
+<div id="mainzone">
+<div id="mainzone-inner">
+
+
+<input type="hidden" name="id" value="n unexpected error occurred.&lt;h3&gt;Unexpected Exception: com.sun.xml.wss.impl.WssSoapFaultException: Invalid/Repeated Nonce value for Username Token; nested exception is com.sun.xml.wss.XWSSecurityException: com.sun.xml.wss.impl.WssSoapFaultException: Invalid/Repeated Nonce value for Username Token&lt;/h3&gt;&lt;pre&gt;#0 G:\workspace\wildfire_php\application\controllers\CommonController.php(17): Indicate2_Connect-&gt;createParticipation('liuhuazeng@xing...', 774)
+#1 G:\workspace\wildfire_php\library\Zend\Controller\Action.php(503): CommonController-&gt;getaccesscodeAction()
+#2 G:\workspace\wildfire_php\library\Zend\Controller\Dispatcher\Standard.php(285): Zend_Controller_Action-&gt;dispatch('getaccesscodeAc...')
+#3 G:\workspace\wildfire_php\library\Zend\Controller\Front.php(934): Zend_Controller_Dispatcher_Standard-&gt;dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#4 G:\workspace\wildfire_php\public\index.php(170): Zend_Controller_Front-&gt;dispatch()
+#5 {main" id="id">
+<input type="hidden" name="theme" value="wildfire" id="theme">
+<input type="hidden" name="surveyId" value="6pDSgLdN1MpT">
+
+<div class="mandatory"><span style="color: red;">* </span>- It is mandatory</div>
+<div class="page-bar-area">
+<span id="pageBar">Page:&nbsp;</span>
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+
+	
+	<div id="page_0">
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+		 	mandatoryElements.push("14542");
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+		  <div id="q_3264" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tbody><tr>
+				<td width="50%" valign="top">
+					<div class="question-title">
+						您已经开始收集乐购消费满80送的印花了吗?
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout">
+							   
+							</div>
+				</td>
+				<td width="50%" valign="top">
+
+<table width="100%" class="select-table">
+<tbody><tr>
+<td>
+<span class="error-content" id="err_answers[14542].value" style="display:block"></span>
+
+<input type="hidden" name="answers[14542].id" value="" id="answers[14542].id">
+<ul>
+	<li>
+			<input type="radio" group="14542" id="14542_0" name="answers[14542].value" value="12434" class="selection question_radio_14542">		<label for="14542_0">还没有</label>
+	</li>
+	<li>
+			<input type="radio" group="14542" id="14542_1" name="answers[14542].value" value="12435" class="selection question_radio_14542">		<label for="14542_1">是的，已经集了5张以下的印花</label>
+	</li>
+	<li>
+			<input type="radio" group="14542" id="14542_2" name="answers[14542].value" value="12436" class="selection question_radio_14542">		<label for="14542_2">是的，已经集了5~10张印花</label>
+	</li>
+	<li>
+			<input type="radio" group="14542" id="14542_3" name="answers[14542].value" value="12437" class="selection question_radio_14542">		<label for="14542_3">是的，已经集了10张以上的印花</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </tbody></table>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+	
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+				</td>
+			</tr>
+	    </tbody></table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+		 	mandatoryElements.push("14543");
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+		  <div id="q_3265" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tbody><tr>
+				<td width="50%" valign="top">
+					<div class="question-title">
+						您一般去超市单张收银条消费约为多少？
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout">
+							   
+							</div>
+				</td>
+				<td width="50%" valign="top">
+
+<table width="100%" class="select-table">
+<tbody><tr>
+<td>
+<span class="error-content" id="err_answers[14543].value" style="display:block"></span>
+
+<input type="hidden" name="answers[14543].id" value="" id="answers[14543].id">
+<ul>
+	<li>
+			<input type="radio" group="14543" id="14543_0" name="answers[14543].value" value="12438" class="selection question_radio_14543">		<label for="14543_0">50元以下</label>
+	</li>
+	<li>
+			<input type="radio" group="14543" id="14543_1" name="answers[14543].value" value="12439" class="selection question_radio_14543">		<label for="14543_1">50至100元</label>
+	</li>
+	<li>
+			<input type="radio" group="14543" id="14543_2" name="answers[14543].value" value="12440" class="selection question_radio_14543">		<label for="14543_2">100至200元</label>
+	</li>
+	<li>
+			<input type="radio" group="14543" id="14543_3" name="answers[14543].value" value="12441" class="selection question_radio_14543">		<label for="14543_3">200元以上</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </tbody></table>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+	
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+				</td>
+			</tr>
+	    </tbody></table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+		 	mandatoryElements.push("14544");
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+		  <div id="q_3266" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tbody><tr>
+				<td width="50%" valign="top">
+					<div class="question-title">
+						姓名: （请填写身份证上的姓名）
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout">
+							   
+							</div>
+				</td>
+				<td width="50%" valign="top">
+<table width="100%">
+<tbody><tr>
+<td>
+<input type="hidden" name="answers[14544].id" value="" id="answers[14544].id">
+<input type="text" name="answers[14544].value" value="" id="question_14544" group="14544" class="input-text">
+
+<span class="error-content" id="err_answers[14544].value"></span>
+</td>
+
+  </tr>
+  </tbody></table>				</td>
+			</tr>
+	    </tbody></table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+		 	mandatoryElements.push("14545");
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+		  <div id="q_3267" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tbody><tr>
+				<td width="50%" valign="top">
+					<div class="question-title">
+						性别：
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout">
+							   
+							</div>
+				</td>
+				<td width="50%" valign="top">
+
+<table width="100%" class="select-table">
+<tbody><tr>
+<td>
+<span class="error-content" id="err_answers[14545].value" style="display:block"></span>
+
+<input type="hidden" name="answers[14545].id" value="" id="answers[14545].id">
+<ul>
+	<li>
+			<input type="radio" group="14545" id="14545_0" name="answers[14545].value" value="12442" class="selection question_radio_14545">		<label for="14545_0">男</label>
+	</li>
+	<li>
+			<input type="radio" group="14545" id="14545_1" name="answers[14545].value" value="12443" class="selection question_radio_14545">		<label for="14545_1">女</label>
+	</li>
+</ul>
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </tbody></table>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+	
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+				</td>
+			</tr>
+	    </tbody></table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+		 	mandatoryElements.push("14546");
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+		  <div id="q_3268" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tbody><tr>
+				<td width="50%" valign="top">
+					<div class="question-title">
+						Email: （如果您被选中，免费电子印花会发到您的邮箱）
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout">
+							   
+							</div>
+				</td>
+				<td width="50%" valign="top">
+<table width="100%">
+<tbody><tr>
+<td>
+<input type="hidden" name="answers[14546].id" value="" id="answers[14546].id">
+<input type="text" name="answers[14546].value" value="" id="question_14546" group="14546" class="input-text">
+
+<span class="error-content" id="err_answers[14546].value"></span>
+</td>
+
+  </tr>
+  </tbody></table>				</td>
+			</tr>
+	    </tbody></table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+		 	mandatoryElements.push("14547");
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+		  <div id="q_3269" style="margin-bottom:0px;" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tbody><tr>
+				<td width="50%" valign="top">
+					<div class="question-title">
+						联系手机：
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout">
+							   
+							</div>
+				</td>
+				<td width="50%" valign="top">
+<table width="100%">
+<tbody><tr>
+<td>
+<input type="hidden" name="answers[14547].id" value="" id="answers[14547].id">
+<input type="text" name="answers[14547].value" value="" id="question_14547" group="14547" class="input-text">
+
+<span class="error-content" id="err_answers[14547].value"></span>
+</td>
+
+  </tr>
+  </tbody></table>				</td>
+			</tr>
+	    </tbody></table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+		 	mandatoryElements.push("14548");
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+		  <div id="q_3270" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tbody><tr>
+				<td width="50%" valign="top">
+					<div class="question-title">
+						请选择您届时凭指定数量印花兑换刀具的乐购超市：（申请所得的印花只可在您选择的超市使用）
+							<span style="color:red">*</span>
+					</div>
+							<div class="elementInfoText twoColumnLayout">
+							   
+							</div>
+				</td>
+				<td width="50%" valign="top">
+
+<table width="100%" class="select-table">
+<tbody><tr>
+<td>
+<span class="error-content" id="err_answers[14548].value" style="display:block"></span>
+
+<input type="hidden" name="answers[14548].id" value="" id="answers[14548].id">
+
+	<select group="14548" class="selection" id="question_14548" name="answers[14548].value" title="title" size="1" onchange="showStores(this.value)">
+	<option selected="selected" value="0">请选择</option>
+<option value="12444" style="">辽宁</option>
+<option value="12445" style="">北京</option>
+<option value="12446" style="">江苏</option>
+<option value="12447" style="">安徽</option>
+<option value="12448" style="">天津</option>
+<option value="12449" style="">河北</option>
+<option value="12450" style="">浙江</option>
+<option value="12451" style="">上海</option>
+<option value="12452" style="">福建</option>
+<option value="12453" style="">广东</option>
+<option value="12454" style="">山东</option>
+	</select> 
+ </td>
+
+<td valign="top" class="noanswer-td">
+</td>
+</tr>
+
+  </tbody></table>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+	
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+				</td>
+			</tr>
+	    </tbody></table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+// ]]&amp;gt;
+--&amp;gt;
+</script>
+		  <div id="q_2640" style="margin-bottom:0px;display:none" class="question-odd question-area">
+	  	
+		<table class="question-table">
+			<tbody><tr>
+				<td width="50%" valign="top">
+					<div class="question-title">
+						其他
+					</div>
+							<div class="elementInfoText twoColumnLayout">
+							   
+							</div>
+				</td>
+				<td width="50%" valign="top">
+<table width="100%">
+<tbody><tr>
+<td>
+<input type="hidden" name="answers[14549].id" value="" id="answers[14549].id">
+<input type="text" name="answers[14549].value" value="" id="question_14549" group="14549" class="input-text">
+
+<span class="error-content" id="err_answers[14549].value"></span>
+</td>
+
+  </tr>
+  </tbody></table>				</td>
+			</tr>
+	    </tbody></table>
+	  </div>
+	  <div style="clear:both;"></div>
+	
+
+
+</div> 
+<br>
+<div style="clear:both"></div>
+</div> 
+</div> 
+
+<div id="mainzone-bottom-wrapper">
+	<div id="mainzone-bottom-left">
+		<div id="mainzone-bottom-right">&nbsp;</div>
+	</div>
+</div>
+<br>
+<div class="fillout-submit">
+<input type="button" id="nextPageButton" class="button" onclick="showNextPage();" value="Next Page">
+<input type="submit" id="submit" style="display:none" class="button" name="command.submit" value="提交">
+</div>
+<table cellspacing="0" cellpadding="0" border="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
+	<tbody><tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"></td>
+	</tr>
+	<tr>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"></td>
+		<td bgcolor="#ffffff">
+			<div class="web-dialog-message">
+				<p id="web-dialog-message-text" class=""></p>
+			</div>
+			<div class="buttons" id="web-dialog-buttons">
+			</div>
+		</td>
+		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"></td>
+	</tr>
+	<tr>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"></td>
+		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"></td>
+	</tr>
+</tbody></table>
+
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+&amp;lt;!--
+// &amp;lt;![CDATA[
+	var WebDialog = {
+		element : $('web-dialog'),
+		onok : function() {},
+		oncancel : function() {},
+		show : function() {
+			var width = document.body.clientWidth;
+			var height = document.body.offsetHeight;
+			var left = (width - this.element.offsetWidth) / 2;
+			var top = (height - this.element.offsetHeight) / 2;
+			if (top &amp;lt; 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+		},
+		alert : function(msg,agree,disagree,onok,oncancel) {
+			var buttons = ["OK","Cancel"];
+			var callbacks = [onok, oncancel];
+			this.showMessageBox(msg, "alert", "left", 400, buttons, callbacks);
+		},
+		ok : function() {
+			this.onok();
+		},
+		close : function() {
+			this.element.hide();
+			$('mask').hide();
+			this.oncancel();
+		},
+		showMessageBox : function(msg, icon_type, msg_align, window_width, buttons, callback_functions) {
+			// icon_type : "none", "alert", "question"
+			// msg_align : "left", "center", "right"
+			// width : -1 means auto
+			
+			var width = document.body.clientWidth;
+			var height = window.screen.availHeight;
+			var left = (width - window_width) / 2;
+			var top = (height - 300) / 2;
+			var pos = 0;
+			if (window.innerHeight) {
+		    	pos = window.pageYOffset
+		    } else if (document.documentElement &amp;amp;&amp;amp; document.documentElement.scrollTop) {
+		    	pos = document.documentElement.scrollTop
+		    } else if (document.body) {
+		    	pos = document.body.scrollTop;
+		    }
+		    top += pos;
+			if (top &amp;lt; 300) {
+				top = 300;
+			}
+			this.element.style.left = left + "px";
+			this.element.style.top = top + "px";
+			$('mask').style.height = document.body.scrollHeight + "px";
+			
+			if (width != undefined) {
+				this.element.style.width = window_width + "px";
+			}
+			if (msg != undefined) {
+				$('web-dialog-message-text').innerHTML = msg;
+			}
+			if (icon_type != undefined &amp;amp;&amp;amp; msg_align != undefined) {
+				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
+			} else if (icon_type == undefined &amp;amp;&amp;amp; msg_align == undefined) {
+				$('web-dialog-message-text').className = "icon-none left";
+			} else if (icon_type == undefined) {
+				$('web-dialog-message-text').className = msg_align;
+			} else {
+				$('web-dialog-message-text').className = "icon-"+icon_type;
+			}
+			
+			$('web-dialog-buttons').innerHTML = "";
+			if (buttons!=undefined &amp;amp;&amp;amp; callback_functions!=undefined) {
+				for (var i=0; i&amp;lt;buttons.length; i++) {
+					if (buttons[i]==undefined || callback_functions[i]==undefined) {
+						continue;
+					}
+					var e = document.createElement('a');
+					e.setAttribute('href', '#');
+					e.innerHTML = buttons[i];
+					e.onclick = callback_functions[i];
+					$('web-dialog-buttons').appendChild(e);
+				}
+			}
+			
+			
+			this.element.show();
+			//$('mask').show();
+		}
+	}
+</script>
+</form>
+</div> 
+<div class="clear"></div>
+<br>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+  var pageNum=0;
+ 
+  var noPage0 = false;
+  var currentPage=0;
+  
+
+  function showPage(_pageIndex) {
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex == pageNum) {
+    	Element.hide("nextPageButton");
+    } else {
+    	Element.show("nextPageButton");
+    }
+    
+    if (_pageIndex <1 && noPage0) return ;
+  	var _pageElement = $("page_"+_pageIndex);
+  	var _currElement = $("page_"+currentPage);
+  	
+  	Element.hide(_currElement);
+  	Element.show(_pageElement);
+	
+	if($("pageNum" + _pageIndex) != undefined) {
+		$("pageNum" + _pageIndex).style.fontWeight = "bolder"; 
+		$("pageNum" + _pageIndex).style.textDecoration = "underline";
+	}
+    if($("pageNum" + currentPage) != undefined) {		
+  		$("pageNum" + currentPage).style.fontWeight = "normal"; 
+		$("pageNum" + currentPage).style.textDecoration = "none";
+	}
+	
+
+  	currentPage = _pageIndex;
+	
+	if(_pageIndex == pageNum) {
+		Element.show($('submit'));
+	} else if ( _pageIndex < pageNum) {
+		Element.hide($('submit'));
+	}
+  }
+  
+  function showNextPage(){
+  	showPage(currentPage+1);
+  }
+  
+  function showPrevPage(){
+  	showPage(currentPage-1);
+  }
+  
+  function initPages() {
+  	var i;
+
+  	for (i=0; i<=pageNum; i++) {
+  		Element.hide($("page_"+i));
+  	}
+  	
+ 
+  	var _pageBar = document.getElementById("pageBar");
+  	if (pageNum==0) {
+  		_pageBar.innerHTML = "";
+  	} else {
+	  	for (i=0; i<=pageNum; i++) {
+			var s ="";
+			if( i == 0 ) {
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
+			}
+
+			if (noPage0){
+	  		 if (i!=0){ 
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
+	  		  }
+	  		}else{
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
+	  		}
+	  		
+			if( i == pageNum ) {
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
+			}
+	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  	}		
+  	}
+  }
+  
+  initPages();
+  if (noPage0){
+  	showPage(1);
+  }else{
+  	showPage(0);
+  }
+// ]]>
+-->
+</script>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+    //do not include radio answers
+	if(typeof checkNoAnswer=="undefined") {
+		checkNoAnswer=function(index,checkbox) {
+			var question = $("question_" + index);
+			var checked = checkbox.checked;
+			if( checked) {
+				question.disabled="disabled";
+				checkbox.value=false;
+			} else {
+				question.disabled="";
+				checkbox.value=true;
+			}
+		};
+	};
+	
+		if(typeof checkRadioNoAnswer=="undefined") {
+		checkRadioNoAnswer = function(index,checkbox) {
+			var clazz = "question_radio_" +index;
+			var radios = document.getElementsByClassName(clazz).each(function(radio) {
+				var checked = checkbox.checked;
+			    if( checked) {
+					if(radio.checked="checked")radio.checked="";
+					radio.disabled="disabled";
+					checkbox.value=false;
+			    } else {
+					radio.disabled="";
+					checkbox.value=true;
+			    }
+			});
+		};
+	}
+	
+	if(typeof checkSubboxes=="undefined") {
+		checkSubboxes = function(qc_id) {
+			//get the question context checkbox's value
+			var qc_value = $("qc_checkbox_" + qc_id).checked;
+			//get the checkBoxed belongs to the above question context
+			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
+			for(var i = 0; i < checkBoxes.length;i++) {
+				var checkBox = checkBoxes[i];
+				//to reuse checkRadioNoAnswer and checkNoAnswer
+				checkBox.checked=qc_value;
+				var clazzName = checkBox.className;
+				var question_id = clazzName.split(" ")[0].split("_")[1];
+				if( clazzName.indexOf("radio") != -1) {
+					checkRadioNoAnswer(question_id,checkBox);
+				} else {
+					checkNoAnswer(question_id,checkBox);
+				}
+			}
+		}
+		
+	}
+// ]]>
+-->
+</script>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function loading() {
+		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
+		WebDialog.showMessageBox(html, "none", "center", 600);
+	}
+	
+	function checkMandatory() {
+	    var fillMandatory = true;
+	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+			if(elements.length > 1) {
+			  var filled = false;
+			  for(var i=0; i < elements.length; i++) {
+			  	var element = elements[i];
+				if(element.checked) {
+				  filled = true;
+				  break;
+				}
+			  }
+			  if(!filled) {
+			  	fillMandatory = false;
+			  	break;
+			  }
+			} else {
+			  var element = elements[0];
+			  if(element.hasClassName("selection")) {
+			  	if(element.value.strip() == '') {
+	    			fillMandatory =  false;
+	    			break;                                  
+	    		}
+			  } else if (element.hasClassName("input-text")) {
+			 	if(element.value == 0) {
+					fillMandatory = false;
+					break;
+				}
+			  }
+			}
+	    }
+	    if(!fillMandatory) {
+	    	var html = '提交失败：必填的题目不能为空';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    }
+		return fillMandatory;
+	}
+	
+	function checkMandatoryOfSelectionQuestion() {
+	 var mandatory = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+
+
+	function checkAnswerSet() {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
+		    return true;
+		} else {
+			var html = '提交失败：不能提交空报告';
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			return false;
+		}
+	}
+	
+	function checkAnswersOfSelectionQuestions() {
+	 var filled = false;
+	 $$('input.selection').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 if(!filled) {
+	 $$('select.selection').each(function(element) {
+										if(element.value != 0) {
+											filled = true;
+											throw $break;
+										}
+	                                });
+	 }                      
+	  return filled;
+	}
+	
+	function checkAnswersOfRatingQuestions() {
+	    var filled = false;
+	    $$('input.rating').each(function(element) {
+										if(element.checked) {
+											filled = true;
+											throw $break;  
+										}
+	                                });
+
+		 return filled;
+	}
+	
+	function checkAnswersOfCommentQuestions() {
+	    var filled = false;
+	    $$('.input-text').each(function(element) {
+	                                    if(element.value.strip() != '') {
+	                                        filled = true;
+	                                    	throw $break;                                 
+	                                    }
+	                                });
+		 return filled;
+	}
+	
+	function locateErrorPage() {
+		var errorElements = $$('span.error-content') ;
+		var hasError = false;
+		var errorElementsPointer = 0;
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+			var html = errorElements[errorElementsPointer].innerHTML;
+			if (html != "") {
+				hasError = true;
+				break;
+			}
+		}
+		if( hasError ) {
+			var errorParentElement = errorElements[errorElementsPointer].up('div');
+			while (errorParentElement != undefined) {
+			var elementId = errorParentElement.id;
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
+				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
+				showPage(errorPageNum);
+				break;
+		}
+		errorParentElement = errorParentElement.up('div');
+		}
+		}
+	}
+	locateErrorPage();
+	
+	function showOtherValueInputInSelect(element) {
+	    var options = element.options;
+	    var selectedOption;
+	    for( var i = 0; i < options.length; i++) {
+	       if( options[i].selected) {
+	       	 selectedOption = options[i];
+	       }
+	    }
+	    var selectedOptionId = selectedOption.id;
+	    if( selectedOptionId.indexOf("other") != -1) {
+	    	$(element.id + "_other").show();
+	    } else {
+	        $(element.id + "_other").value = "";
+	    	$(element.id + "_other").hide();
+	    }
+	}
+	
+	function showOtherValueInputInRadio(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( value == 0 ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+	function showOtherValueInputInCheckBox(element) {
+		var elementId = element.id.split("_")[0];
+		var value = element.value;
+		if( element.checked ) {
+			$(elementId + "_other_input").show();
+		} else {
+		    $(elementId + "_other_input").value = "";
+			$(elementId + "_other_input").hide();
+		}
+	}
+
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5436862-10']);
+  _gaq.push(['_setDomainName', '.marketing-research.cn']);
+  _gaq.push(['setAllowHash', 'false']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+	
+// ]]>
+-->
+</script>
+</div>
+</div> 
+</div>
+
+<div class="footer" style="display:none;">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/c/methodName/c" target="_blank">Help</a> | <a href="http://www.ostrakon.org" target="_blank">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow" style="display:none;"></div>
+	<div style="clear: both"></div>
+	
+</div>
