@@ -158,10 +158,19 @@
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
+
+		function showOrHide(val){
+			if(val=="12455"){
+				jQuery("#q_3274").css("display","block");
+				jQuery("#q_3275").css("display","block");
+				jQuery("#q_3277").css("display","block");
+			}else{
+				jQuery("#q_3274").css("display","none");
+				jQuery("#q_3275").css("display","none");
+				jQuery("#q_3277").css("display","none");
+			}
+		}
+
 </script>
 		  <div id="q_3273" style="margin-bottom:0px;" class="question-even question-area">
 	  	
@@ -182,10 +191,10 @@
 <input type="hidden" name="answers[14552].id" value="" id="answers[14552].id">
 <ul>
 	<li>
-			<input group="14552" type="radio" id="14552_0" name="answers[14552].value" value="12455" class="selection question_radio_14552">		<label for="14552_0">是</label>
+			<input group="14552" type="radio" id="14552_0" name="answers[14552].value" value="12455" class="selection question_radio_14552" onclick="showOrHide(this.value)">		<label for="14552_0">是</label>
 	</li>
 	<li>
-			<input group="14552" type="radio" id="14552_1" name="answers[14552].value" value="12456" class="selection question_radio_14552">		<label for="14552_1">否</label>
+			<input group="14552" type="radio" id="14552_1" name="answers[14552].value" value="12456" class="selection question_radio_14552" onclick="showOrHide(this.value)">		<label for="14552_1">否</label>
 	</li>
 </ul>
  </td>
@@ -209,12 +218,31 @@
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
+function showOrHide2(val){
+	if (jQuery("#14553_6").attr("checked")=="checked") {
+		jQuery("#q_3202").css("display","block");
+	}else{
+		jQuery("#q_3202").css("display","none");
+	}
+}
+
+
+function showOrHide5(val){
+	if (jQuery("#14553_0").attr("checked")=="checked") {
+		jQuery("#pingjia").css("display","block");
+		jQuery("#q_3293").css("display","block");
+		jQuery("#q_3294").css("display","block");
+		jQuery("#q_3297").css("display","block");
+	}else{
+		jQuery("#pingjia").css("display","none");
+		jQuery("#q_3293").css("display","none");
+		jQuery("#q_3294").css("display","none");
+		jQuery("#q_3297").css("display","none");
+	}
+}
+
 </script>
-		  <div id="q_3274" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3274" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -239,25 +267,25 @@
 </span>
 <ul>
 	<li>
-			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_0" name="answers[14553].value" value="12457" onclick=" ">		<label for="14553_0">Sergent Major</label>
+			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_0" name="answers[14553].value" value="12457" onclick="showOrHide5(this.value) ">		<label for="14553_0">Sergent Major</label>
 	</li>
 	<li>
-			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_1" name="answers[14553].value" value="12458" onclick=" ">		<label for="14553_1">paw in paw</label>
+			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_1" name="answers[14553].value" value="12458" onclick="showOrHide5(this.value) ">		<label for="14553_1">paw in paw</label>
 	</li>
 	<li>
-			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_2" name="answers[14553].value" value="12459" onclick=" ">		<label for="14553_2">E-land Kids</label>
+			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_2" name="answers[14553].value" value="12459" onclick="showOrHide5(this.value) ">		<label for="14553_2">E-land Kids</label>
 	</li>
 	<li>
-			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_3" name="answers[14553].value" value="12460" onclick=" ">		<label for="14553_3">OHHO</label>
+			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_3" name="answers[14553].value" value="12460" onclick="showOrHide5(this.value) ">		<label for="14553_3">OHHO</label>
 	</li>
 	<li>
-			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_4" name="answers[14553].value" value="12461" onclick=" ">		<label for="14553_4">小木马</label>
+			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_4" name="answers[14553].value" value="12461" onclick="showOrHide5(this.value) ">		<label for="14553_4">小木马</label>
 	</li>
 	<li>
-			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_5" name="answers[14553].value" value="12462" onclick=" ">		<label for="14553_5">Tweenie Wennie</label>
+			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_5" name="answers[14553].value" value="12462" onclick="showOrHide5(this.value) ">		<label for="14553_5">Tweenie Wennie</label>
 	</li>
 	<li>
-			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_6" name="answers[14553].value" value="12463" onclick=" ">		<label for="14553_6">其他(可填)</label>
+			<input group="14553" class="question_radio_14553 selection" type="checkbox" id="14553_6" name="answers[14553].value" value="12463" onclick="showOrHide2(this.value) ">		<label for="14553_6">其他(可填)</label>
 	</li>
 </ul>
  </td>
@@ -285,7 +313,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3202" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3202" style="margin-bottom:0px;display:none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -316,7 +344,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3275" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3275" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -436,7 +464,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3277" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3277" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -491,10 +519,206 @@
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
+function showOrHide3(val){
+	if(jQuery("#14558_0").attr("checked")=="checked"){
+		jQuery("#baisheng").css("display","block");
+	}else{
+		jQuery("div [group='baisheng'] input").each(function(index,el){el.checked=""});
+		fillStores();
+		jQuery("#baisheng").css("display","none");
+	}
+
+	if(jQuery("#14558_1").attr("checked")=="checked"){
+		jQuery("#baodaxiang").css("display","block");
+	}else{
+		jQuery("div [group='baodaxiang'] input").each(function(index,el){el.checked=""});
+		fillStores();
+		jQuery("#baodaxiang").css("display","none");
+	}
+
+	if(jQuery("#14558_2").attr("checked")=="checked"){
+		jQuery("#balichuntian").css("display","block");
+	}else{
+		jQuery("div [group='balichuntian'] input").each(function(index,el){el.checked=""});
+		fillStores();
+		jQuery("#balichuntian").css("display","none");
+	}
+
+	if(jQuery("#14558_3").attr("checked")=="checked"){
+		jQuery("#taipingyang").css("display","block");
+	}else{
+		jQuery("div [group='taipingyang'] input").each(function(index,el){el.checked=""});
+		fillStores();
+		jQuery("#taipingyang").css("display","none");
+	}
+
+	if(jQuery("#14558_4").attr("checked")=="checked"){
+		jQuery("#huijin").css("display","block");
+	}else{
+		jQuery("div [group='huijin'] input").each(function(index,el){el.checked=""});
+		fillStores();
+		jQuery("#huijin").css("display","none");
+	}
+
+	if(jQuery("#14558_5").attr("checked")=="checked"){
+		jQuery("#dongfangshangcheng").css("display","block");
+	}else{
+		jQuery("div [group='dongfangshangcheng'] input").each(function(index,el){el.checked=""});
+		fillStores();
+		jQuery("#dongfangshangcheng").css("display","none");
+	}
+
+}
+
+function fillStores(){
+	var stores ="";
+	jQuery("#question_14559").val(stores);
+	if(jQuery("#14558_0").attr("checked")=="checked"){
+		stores += "百盛:"
+		if(jQuery("#14558_0_0").attr("checked")=="checked"){
+			stores += jQuery("#14558_0_0").val() + " ";
+		}
+		if(jQuery("#14558_0_1").attr("checked")=="checked"){
+			stores += jQuery("#14558_0_1").val() + " ";
+		}
+		if(jQuery("#14558_0_2").attr("checked")=="checked"){
+			stores += jQuery("#14558_0_2").val() + "  ";
+		}
+	}
+	if(jQuery("#14558_1").attr("checked")=="checked"){
+		stores += "宝大祥青少年儿童购物中心:"
+		if(jQuery("#14558_1_0").attr("checked")=="checked"){
+			stores += jQuery("#14558_1_0").val() + " ";
+		}
+		if(jQuery("#14558_1_1").attr("checked")=="checked"){
+			stores += jQuery("#14558_1_1").val() + " ";
+		}
+		if(jQuery("#14558_1_2").attr("checked")=="checked"){
+			stores += jQuery("#14558_1_2").val() + " ";
+		}
+		if(jQuery("#14558_1_3").attr("checked")=="checked"){
+			stores += jQuery("#14558_1_3").val() + " ";
+		}
+		if(jQuery("#14558_1_4").attr("checked")=="checked"){
+			stores += jQuery("#14558_1_4").val() + " ";
+		}
+		if(jQuery("#14558_1_5").attr("checked")=="checked"){
+			stores += jQuery("#14558_1_5").val() + " ";
+		}
+		if(jQuery("#14558_1_6").attr("checked")=="checked"){
+			stores += jQuery("#14558_1_6").val() + " ";
+		}
+		if(jQuery("#14558_1_7").attr("checked")=="checked"){
+			stores += jQuery("#14558_1_7").val() + " ";
+		}
+		if(jQuery("#14558_1_8").attr("checked")=="checked"){
+			stores += jQuery("#14558_1_8").val() + " ";
+		}
+		if(jQuery("#14558_1_9").attr("checked")=="checked"){
+			stores += jQuery("#14558_1_9").val() + " ";
+		}
+	}
+
+	if(jQuery("#14558_2").attr("checked")=="checked"){
+		stores += "巴黎春天:"
+		if(jQuery("#14558_2_0").attr("checked")=="checked"){
+			stores += jQuery("#14558_2_0").val() + " ";
+		}
+		if(jQuery("#14558_2_1").attr("checked")=="checked"){
+			stores += jQuery("#14558_2_1").val() + " ";
+		}
+		if(jQuery("#14558_2_2").attr("checked")=="checked"){
+			stores += jQuery("#14558_2_2").val() + " ";
+		}
+		if(jQuery("#14558_2_3").attr("checked")=="checked"){
+			stores += jQuery("#14558_2_3").val() + " ";
+		}
+		if(jQuery("#14558_2_4").attr("checked")=="checked"){
+			stores += jQuery("#14558_2_4").val() + " ";
+		}
+		if(jQuery("#14558_2_5").attr("checked")=="checked"){
+			stores += jQuery("#14558_2_5").val() + " ";
+		}
+		if(jQuery("#14558_2_6").attr("checked")=="checked"){
+			stores += jQuery("#14558_2_6").val() + " ";
+		}
+		if(jQuery("#14558_2_7").attr("checked")=="checked"){
+			stores += jQuery("#14558_2_7").val() + " ";
+		}
+		if(jQuery("#14558_2_8").attr("checked")=="checked"){
+			stores += jQuery("#14558_2_8").val() + " ";
+		}
+		if(jQuery("#14558_2_9").attr("checked")=="checked"){
+			stores += jQuery("#14558_2_9").val() + " ";
+		}
+	}
+
+	if(jQuery("#14558_3").attr("checked")=="checked"){
+		stores += "太平洋:"
+		if(jQuery("#14558_3_0").attr("checked")=="checked"){
+			stores += jQuery("#14558_3_0").val() + " ";
+		}
+		if(jQuery("#14558_3_1").attr("checked")=="checked"){
+			stores += jQuery("#14558_3_1").val() + " ";
+		}
+		if(jQuery("#14558_3_2").attr("checked")=="checked"){
+			stores += jQuery("#14558_3_2").val() + " ";
+		}
+	}
+	if(jQuery("#14558_4").attr("checked")=="checked"){
+		stores += "汇金:"
+		if(jQuery("#14558_4_0").attr("checked")=="checked"){
+			stores += jQuery("#14558_4_0").val() + " ";
+		}
+		if(jQuery("#14558_4_1").attr("checked")=="checked"){
+			stores += jQuery("#14558_4_1").val() + " ";
+		}
+		if(jQuery("#14558_4_2").attr("checked")=="checked"){
+			stores += jQuery("#14558_4_2").val() + " ";
+		}
+	}
+
+	if(jQuery("#14558_5").attr("checked")=="checked"){
+		stores += "东方商场:"
+		if(jQuery("#14558_5_0").attr("checked")=="checked"){
+			stores += jQuery("#14558_5_0").val() + " ";
+		}
+		if(jQuery("#14558_5_1").attr("checked")=="checked"){
+			stores += jQuery("#14558_5_1").val() + " ";
+		}
+		if(jQuery("#14558_5_2").attr("checked")=="checked"){
+			stores += jQuery("#14558_5_2").val() + " ";
+		}
+		if(jQuery("#14558_5_3").attr("checked")=="checked"){
+			stores += jQuery("#14558_5_3").val() + " ";
+		}
+		if(jQuery("#14558_5_4").attr("checked")=="checked"){
+			stores += jQuery("#14558_5_4").val() + " ";
+		}
+		if(jQuery("#14558_5_5").attr("checked")=="checked"){
+			stores += jQuery("#14558_5_5").val() + " ";
+		}
+		if(jQuery("#14558_5_6").attr("checked")=="checked"){
+			stores += jQuery("#14558_5_6").val() + " ";
+		}
+		if(jQuery("#14558_5_7").attr("checked")=="checked"){
+			stores += jQuery("#14558_5_7").val() + " ";
+		}
+		if(jQuery("#14558_5_8").attr("checked")=="checked"){
+			stores += jQuery("#14558_5_8").val() + " ";
+		}
+	}
+	// alert(stores);
+	jQuery("#question_14559").val(stores);
+}
+
+function showOrHide4(val){
+	if(jQuery("#14558_6").attr("checked")=="checked"){
+		jQuery("#q_3280").css("display","block");
+	}else{
+		jQuery("#q_3280").css("display","none");
+	}
+}
 </script>
 		  <div id="q_3278" style="margin-bottom:0px;" class="question-even question-area">
 	  	
@@ -521,25 +745,74 @@
 </span>
 <ul>
 	<li>
-			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_0" name="answers[14558].value" value="12479" onclick=" ">		<label for="14558_0">百盛</label>
+			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_0" name="answers[14558].value" value="12479" onclick="showOrHide3(this.value) ">		<label for="14558_0">百盛</label>
+			<div id="baisheng" group="baisheng" style="display:none;margin-left: 50px;">
+						<input class="question_radio_14558 selection" id="14558_0_0" value="淮海店" type="checkbox" onclick="fillStores()"><label for="14558_0">淮海店</label>
+						<input class="question_radio_14558 selection" id="14558_0_1" value="莘庄店" type="checkbox" onclick="fillStores()"><label for="14558_0">莘庄店</label>
+						<input class="question_radio_14558 selection"  id="14558_0_2" value="长宁区天山店" type="checkbox" onclick="fillStores()"><label for="14558_0">长宁区天山店</label>
+			</div>
 	</li>
 	<li>
-			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_1" name="answers[14558].value" value="12480" onclick=" ">		<label for="14558_1">宝大祥青少年儿童购物中心</label>
+			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_1" name="answers[14558].value" value="12480" onclick="showOrHide3(this.value) ">		<label for="14558_1">宝大祥青少年儿童购物中心</label>
+			<div id="baodaxiang" group="baodaxiang" style="display:none;margin-left: 50px;">
+						<input class="question_radio_14558 selection" id="14558_1_0" value="东南店" type="checkbox" onclick="fillStores()"><label for="14558_0">东南店</label>
+						<input class="question_radio_14558 selection" id="14558_1_1" value="五角场店" type="checkbox" onclick="fillStores()"><label for="14558_0">五角场店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_2" value="96广场" type="checkbox" onclick="fillStores()"><label for="14558_0">96广场</label>
+						<input class="question_radio_14558 selection"  id="14558_1_3" value="七宝店" type="checkbox" onclick="fillStores()"><label for="14558_0">七宝店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_4" value="大华店" type="checkbox" onclick="fillStores()"><label for="14558_0">大华店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_5" value="中环店" type="checkbox" onclick="fillStores()"><label for="14558_0">中环店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_6" value="江桥万达店" type="checkbox" onclick="fillStores()"><label for="14558_0">江桥万达店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_7" value="四川北路店" type="checkbox" onclick="fillStores()"><label for="14558_0">四川北路店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_8" value="莘庄店" type="checkbox" onclick="fillStores()"><label for="14558_0">莘庄店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_9" value="奥莱店" type="checkbox" onclick="fillStores()"><label for="14558_0">奥莱店</label>
+			</div>
 	</li>
 	<li>
-			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_2" name="answers[14558].value" value="12481" onclick=" ">		<label for="14558_2">巴黎春天</label>
+			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_2" name="answers[14558].value" value="12481" onclick="showOrHide3(this.value) ">		<label for="14558_2">巴黎春天</label>
+			<div id="balichuntian" group="balichuntian" style="display:none;margin-left: 50px;">
+						<input class="question_radio_14558 selection" id="14558_2_0" value="虹口店" type="checkbox" onclick="fillStores()"><label for="14558_0">虹口店</label>
+						<input class="question_radio_14558 selection" id="14558_2_1" value="定西路店" type="checkbox" onclick="fillStores()"><label for="14558_0">定西路店</label>
+						<input class="question_radio_14558 selection"  id="14558_2_2" value="淮海店" type="checkbox" onclick="fillStores()"><label for="14558_0">淮海店</label>
+						<input class="question_radio_14558 selection"  id="14558_2_3" value="五角场" type="checkbox" onclick="fillStores()"><label for="14558_0">五角场</label>
+						<input class="question_radio_14558 selection"  id="14558_2_4" value="浦建店" type="checkbox" onclick="fillStores()"><label for="14558_0">浦建店</label>
+						<input class="question_radio_14558 selection"  id="14558_2_5" value="七宝店" type="checkbox" onclick="fillStores()"><label for="14558_0">七宝店</label>
+						<input class="question_radio_14558 selection"  id="14558_2_6" value="中山公园" type="checkbox" onclick="fillStores()"><label for="14558_0">中山公园</label>
+						<input class="question_radio_14558 selection"  id="14558_2_7" value="长寿路店" type="checkbox" onclick="fillStores()"><label for="14558_0">长寿路店</label>
+						<input class="question_radio_14558 selection"  id="14558_2_8" value="宝山店生活馆" type="checkbox" onclick="fillStores()"><label for="14558_0">宝山店生活馆</label>
+						<input class="question_radio_14558 selection"  id="14558_2_9" value="天成店" type="checkbox" onclick="fillStores()"><label for="14558_0">天成店</label>
+			</div>
 	</li>
 	<li>
-			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_3" name="answers[14558].value" value="12482" onclick=" ">		<label for="14558_3">太平洋</label>
+			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_3" name="answers[14558].value" value="12482" onclick="showOrHide3(this.value) ">		<label for="14558_3">太平洋</label>
+			<div id="taipingyang" group="taipingyang" style="display:none;margin-left: 50px;">
+						<input class="question_radio_14558 selection" id="14558_3_0" value="淮海店" type="checkbox" onclick="fillStores()"><label for="14558_0">淮海店</label>
+						<input class="question_radio_14558 selection" id="14558_3_1" value="徐汇店" type="checkbox" onclick="fillStores()"><label for="14558_0">徐汇店</label>
+						<input class="question_radio_14558 selection"  id="14558_3_2" value="不夜店" type="checkbox" onclick="fillStores()"><label for="14558_0">不夜店</label>
+			</div>
 	</li>
 	<li>
-			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_4" name="answers[14558].value" value="12483" onclick=" ">		<label for="14558_4">汇金</label>
+			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_4" name="answers[14558].value" value="12483" onclick="showOrHide3(this.value) ">		<label for="14558_4">汇金</label>
+			<div id="huijin" group="huijin" style="display:none;margin-left: 50px;">
+						<input class="question_radio_14558 selection" id="14558_4_0" value="徐汇店" type="checkbox" onclick="fillStores()"><label for="14558_0">徐汇店</label>
+						<input class="question_radio_14558 selection" id="14558_4_1" value="虹桥店" type="checkbox" onclick="fillStores()"><label for="14558_0">虹桥店</label>
+			</div>
 	</li>
 	<li>
-			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_5" name="answers[14558].value" value="12484" onclick=" ">		<label for="14558_5">东方商场</label>
+			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_5" name="answers[14558].value" value="12484" onclick="showOrHide3(this.value) ">		<label for="14558_5">东方商场</label>
+			<div id="dongfangshangcheng" group="dongfangshangcheng" style="display:none;margin-left: 50px;">
+						<input class="question_radio_14558 selection" id="14558_5_0" value="徐汇店" type="checkbox" onclick="fillStores()"><label for="14558_0">徐汇店</label>
+						<input class="question_radio_14558 selection" id="14558_5_1" value="杨浦店" type="checkbox" onclick="fillStores()"><label for="14558_0">杨浦店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_2" value="南东店" type="checkbox" onclick="fillStores()"><label for="14558_0">南东店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_3" value="奉贤店" type="checkbox" onclick="fillStores()"><label for="14558_0">奉贤店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_4" value="淮海店" type="checkbox" onclick="fillStores()"><label for="14558_0">淮海店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_5" value="嘉定店" type="checkbox" onclick="fillStores()"><label for="14558_0">嘉定店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_6" value="百联中环店" type="checkbox" onclick="fillStores()"><label for="14558_0">百联中环店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_7" value="宝山店" type="checkbox" onclick="fillStores()"><label for="14558_0">宝山店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_8" value="虹口店" type="checkbox" onclick="fillStores()"><label for="14558_0">虹口店</label>
+			</div>
 	</li>
 	<li>
-			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_6" name="answers[14558].value" value="12485" onclick=" ">		<label for="14558_6">请写出您最经常光顾的商区及商场：</label>
+			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_6" name="answers[14558].value" value="12485" onclick="showOrHide4() ">		<label for="14558_6">请写出您最经常光顾的商区及商场：</label>
 	</li>
 </ul>
  </td>
@@ -567,7 +840,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3279" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3279" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -598,7 +871,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3280" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3280" style="margin-bottom:0px;display:none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -692,12 +965,17 @@
 // ]]>
 -->
 </script>
+
+<div class="question-title" id="pingjia" style = "display:none;">请对Sergent Major这个品牌所展现的个性评分：
+	[1-5: 完全不同意 - 完全同意 ]
+
+
 		  <div id="q_3282" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
-					<div class="question-title">
+					<div class="">
 						款式时尚/流行
 					</div>
 				</td>
@@ -709,7 +987,7 @@
 
 <td>
 
-<div class="left-label">左标签</div>
+<div class="left-label"></div>
 	<table class="rating-table">
 		<tbody><tr class="radio-line">
 
@@ -736,8 +1014,9 @@
 				<td>4</td>
 				<td>5</td>
 		</tr>
-	</tbody></table> <div class="right-label">右标签</div>
-
+	</tbody></table> <div class="right-label"></div>
+<div class="right-label"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="answers[14374].value" value="" id="" group="14562" class="question_radio_14562 rating" onclick="" style="background-color: #ffffff" />我不知道
+</div>
 </td>
 <td valign="top" class="noanswer-td">
 <input type="radio" name="answers[14562].value" value="" id="answers[14562].value" class="q_14562 qc_0 radio">
@@ -760,7 +1039,7 @@
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
-					<div class="question-title">
+					<div class="">
 						款式齐全选择面广
 					</div>
 				</td>
@@ -772,7 +1051,7 @@
 
 <td>
 
-<div class="left-label">左标签</div>
+<div class="left-label"></div>
 	<table class="rating-table">
 		<tbody><tr class="radio-line">
 
@@ -799,8 +1078,9 @@
 				<td>4</td>
 				<td>5</td>
 		</tr>
-	</tbody></table> <div class="right-label">右标签</div>
-
+	</tbody></table> <div class="right-label"></div>
+<div class="right-label"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="answers[14374].value" value="" id="" group="14563" class="question_radio_14563 rating" onclick="" style="background-color: #ffffff" />我不知道
+</div>
 </td>
 <td valign="top" class="noanswer-td">
 <input type="radio" name="answers[14563].value" value="" id="answers[14563].value" class="q_14563 qc_0 radio">
@@ -823,7 +1103,7 @@
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
-					<div class="question-title">
+					<div class="">
 						衣服质量好，耐穿
 					</div>
 				</td>
@@ -835,7 +1115,7 @@
 
 <td>
 
-<div class="left-label">左标签</div>
+<div class="left-label"></div>
 	<table class="rating-table">
 		<tbody><tr class="radio-line">
 
@@ -862,8 +1142,9 @@
 				<td>4</td>
 				<td>5</td>
 		</tr>
-	</tbody></table> <div class="right-label">右标签</div>
-
+	</tbody></table> <div class="right-label"></div>
+<div class="right-label"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="answers[14374].value" value="" id="" group="14564" class="question_radio_14564 rating" onclick="" style="background-color: #ffffff" />我不知道
+</div>
 </td>
 <td valign="top" class="noanswer-td">
 <input type="radio" name="answers[14564].value" value="" id="answers[14564].value" class="q_14564 qc_0 radio">
@@ -886,7 +1167,7 @@
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
-					<div class="question-title">
+					<div class="">
 						价格实惠
 					</div>
 				</td>
@@ -898,7 +1179,7 @@
 
 <td>
 
-<div class="left-label">左标签</div>
+<div class="left-label"></div>
 	<table class="rating-table">
 		<tbody><tr class="radio-line">
 
@@ -925,8 +1206,9 @@
 				<td>4</td>
 				<td>5</td>
 		</tr>
-	</tbody></table> <div class="right-label">右标签</div>
-
+	</tbody></table> <div class="right-label"></div>
+<div class="right-label"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="answers[14374].value" value="" id="" group="14565" class="question_radio_14565 rating" onclick="" style="background-color: #ffffff" />我不知道
+</div>
 </td>
 <td valign="top" class="noanswer-td">
 <input type="radio" name="answers[14565].value" value="" id="answers[14565].value" class="q_14565 qc_0 radio">
@@ -949,7 +1231,7 @@
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
-					<div class="question-title">
+					<div class="">
 						设计有欧美范
 					</div>
 				</td>
@@ -961,7 +1243,7 @@
 
 <td>
 
-<div class="left-label">左标签</div>
+<div class="left-label"></div>
 	<table class="rating-table">
 		<tbody><tr class="radio-line">
 
@@ -988,8 +1270,9 @@
 				<td>4</td>
 				<td>5</td>
 		</tr>
-	</tbody></table> <div class="right-label">右标签</div>
-
+	</tbody></table> <div class="right-label"></div>
+<div class="right-label"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="answers[14374].value" value="" id="" group="14566" class="question_radio_14566 rating" onclick="" style="background-color: #ffffff" />我不知道
+</div>
 </td>
 <td valign="top" class="noanswer-td">
 <input type="radio" name="answers[14566].value" value="" id="answers[14566].value" class="q_14566 qc_0 radio">
@@ -1012,7 +1295,7 @@
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
-					<div class="question-title">
+					<div class="">
 						衣服让小孩感觉舒适
 					</div>
 				</td>
@@ -1024,7 +1307,7 @@
 
 <td>
 
-<div class="left-label">左标签</div>
+<div class="left-label"></div>
 	<table class="rating-table">
 		<tbody><tr class="radio-line">
 
@@ -1051,8 +1334,9 @@
 				<td>4</td>
 				<td>5</td>
 		</tr>
-	</tbody></table> <div class="right-label">右标签</div>
-
+	</tbody></table> <div class="right-label"></div>
+<div class="right-label"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="answers[14374].value" value="" id="" group="14567" class="question_radio_14567 rating" onclick="" style="background-color: #ffffff" />我不知道
+</div>
 </td>
 <td valign="top" class="noanswer-td">
 <input type="radio" name="answers[14567].value" value="" id="answers[14567].value" class="q_14567 qc_0 radio">
@@ -1075,7 +1359,7 @@
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
-					<div class="question-title">
+					<div class="">
 						店铺服务热情得体
 					</div>
 				</td>
@@ -1087,7 +1371,7 @@
 
 <td>
 
-<div class="left-label">左标签</div>
+<div class="left-label"></div>
 	<table class="rating-table">
 		<tbody><tr class="radio-line">
 
@@ -1114,8 +1398,9 @@
 				<td>4</td>
 				<td>5</td>
 		</tr>
-	</tbody></table> <div class="right-label">右标签</div>
-
+	</tbody></table> <div class="right-label"></div>
+<div class="right-label"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="answers[14374].value" value="" id="" group="14568" class="question_radio_14568 rating" onclick="" style="background-color: #ffffff" />我不知道
+</div>
 </td>
 <td valign="top" class="noanswer-td">
 <input type="radio" name="answers[14568].value" value="" id="answers[14568].value" class="q_14568 qc_0 radio">
@@ -1138,7 +1423,7 @@
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
-					<div class="question-title">
+					<div class="">
 						陈列有条理
 					</div>
 				</td>
@@ -1150,7 +1435,7 @@
 
 <td>
 
-<div class="left-label">左标签</div>
+<div class="left-label"></div>
 	<table class="rating-table">
 		<tbody><tr class="radio-line">
 
@@ -1177,8 +1462,9 @@
 				<td>4</td>
 				<td>5</td>
 		</tr>
-	</tbody></table> <div class="right-label">右标签</div>
-
+	</tbody></table> <div class="right-label"></div>
+<div class="right-label"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="answers[14374].value" value="" id="" group="14569" class="question_radio_14569 rating" onclick="" style="background-color: #ffffff" />我不知道
+</div>
 </td>
 <td valign="top" class="noanswer-td">
 <input type="radio" name="answers[14569].value" value="" id="answers[14569].value" class="q_14569 qc_0 radio">
@@ -1201,7 +1487,7 @@
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
-					<div class="question-title">
+					<div class="">
 						店铺充满欧洲风情
 					</div>
 				</td>
@@ -1213,7 +1499,7 @@
 
 <td>
 
-<div class="left-label">左标签</div>
+<div class="left-label"></div>
 	<table class="rating-table">
 		<tbody><tr class="radio-line">
 
@@ -1240,8 +1526,9 @@
 				<td>4</td>
 				<td>5</td>
 		</tr>
-	</tbody></table> <div class="right-label">右标签</div>
-
+	</tbody></table> <div class="right-label"></div>
+<div class="right-label"  >&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="answers[14374].value" value="" id="" group="14570" class="question_radio_14570 rating" onclick="" style="background-color: #ffffff" />我不知道
+</div>
 </td>
 <td valign="top" class="noanswer-td">
 <input type="radio" name="answers[14570].value" value="" id="answers[14570].value" class="q_14570 qc_0 radio">
@@ -1254,17 +1541,20 @@
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
+function showOrHide6(val){
+	if(val=="12486"){
+		jQuery("#q_3292").css("display","block");
+	}else{
+		jQuery("#q_3292").css("display","none");
+	}
+}
 </script>
 		  <div id="q_3291" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
-					<div class="question-title">
+					<div class="">
 						还有其他印象
 					</div>
 				</td>
@@ -1278,7 +1568,7 @@
 <input type="hidden" name="answers[14571].id" value="" id="answers[14571].id">
 <ul>
 	<li>
-			<input group="14571" type="radio" id="14571_0" name="answers[14571].value" value="12486" class="selection question_radio_14571">		<label for="14571_0">其他印象</label>
+			<input group="14571" type="radio" id="14571_0" name="answers[14571].value" value="12486" class="selection question_radio_14571" onclick="showOrHide6(this.value)">		<label for="14571_0">其他印象</label>
 	</li>
 </ul>
  </td>
@@ -1301,19 +1591,20 @@
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
+</div>
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
 // ]]>
 -->
 </script>
-		  <div id="q_3292" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3292" style="margin-bottom:0px;display:none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
 					<div class="question-title">
-						还有其他印象(复制)
+						还有其他印象
 					</div>
 				</td>
 				<td width="50%" valign="top">
@@ -1338,7 +1629,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3293" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3293" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -1369,7 +1660,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3294" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3294" style="margin-bottom:0px;display:none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -1518,7 +1809,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3297" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3297" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
