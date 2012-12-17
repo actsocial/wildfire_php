@@ -812,7 +812,7 @@ function showOrHide4(val){
 			</div>
 	</li>
 	<li>
-			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_6" name="answers[14558].value" value="12485" onclick="showOrHide4() ">		<label for="14558_6">请写出您最经常光顾的商区及商场：</label>
+			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_6" name="answers[14558].value" value="12485" onclick="showOrHide4() ">		<label for="14558_6">其他商区和商场：</label>
 	</li>
 </ul>
  </td>
@@ -877,7 +877,7 @@ function showOrHide4(val){
 			<tbody><tr>
 				<td width="50%" valign="top">
 					<div class="question-title">
-						其他商区和商场：
+						请写出您最经常光顾的商区及商场：
 					</div>
 				</td>
 				<td width="50%" valign="top">
@@ -1542,7 +1542,7 @@ function showOrHide4(val){
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
 function showOrHide6(val){
-	if(val=="12486"){
+	if(jQuery("#14571_0").attr("checked")=="checked"){
 		jQuery("#q_3292").css("display","block");
 	}else{
 		jQuery("#q_3292").css("display","none");
@@ -1568,7 +1568,7 @@ function showOrHide6(val){
 <input type="hidden" name="answers[14571].id" value="" id="answers[14571].id">
 <ul>
 	<li>
-			<input group="14571" type="radio" id="14571_0" name="answers[14571].value" value="12486" class="selection question_radio_14571" onclick="showOrHide6(this.value)">		<label for="14571_0">其他印象</label>
+			<input group="14571" type="checkbox" id="14571_0" name="answers[14571].value" value="12486" class="selection question_radio_14571" onclick="showOrHide6()">		<label for="14571_0">其他印象</label>
 	</li>
 </ul>
  </td>
