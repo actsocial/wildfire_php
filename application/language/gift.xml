@@ -602,7 +602,7 @@
 		<p><strong>FINISHED：</strong>Your rewards have been sent.</p>
 		<p><strong>CANCELED：</strong>You have canceled the order.</p>
 		<p><strong>UNAPPROVED：</strong>The order is not approved.</p>
-		<p>For questions, please do not hesitate to <a href='../site/contactus'>contact us</a>!</p>]]></seg>
+		<p>For questions, please do not hesitate to <a href='../site/contactus'><span style='color:#17365D'>contact us</span></a>!</p>]]></seg>
 			</tuv>
 		</tu>
 		<tu tuid='Gift_Description_Product_ID'>

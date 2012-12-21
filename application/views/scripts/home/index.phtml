@@ -107,6 +107,7 @@
     <div class="article-box-inner" >
 		<?php if ($this->consumer!=null){ ?>
 			<p style="margin: 10px 0 5px 0;"><?php echo $this->translate("Home_head_content_1")?></p>
+			<p style="margin: 10px 0 5px 0;"><?php echo $this->translate("Home_head_content_2_1")?>
 			<!--<p style="margin: 0 0 5px 0;font-size:120%;"><?php echo $this->translate("Home_head_content_2_1")?>
 			 <a href="<?php echo $this->url(array('controller'=>'training',	'action'=>'howitworks','id'=>'0'));?>"><?php echo $this->translate("Home_head_content_2_2")?></a> 
 			</p>-->
@@ -177,7 +178,7 @@
 							<a href="<?php echo $this->url(array('controller'=>'campaign','action'=>'description','id'=>$activeCampaign['campaign_id'])); ?>"><h2 style="color:#000000" id="campaign_name_<?php echo $activeCampaign['campaign_id'] ?>">Quality for Life™ Philippines Campaign</h2></a>
 
 							<span id="campaign_description_<?php echo $activeCampaign['campaign_id'] ?>">
-								A globally recognized brand that supplies high-quality vitamins ingredients to companies worldwide. It aims at improving your education about vitamins to give you peace of mind when you choose food and beverage products.
+								It is a globally recognized brand, created by Royal DSM from Netherlands, that supplies high-quality vitamins ingredients to companies worldwide. It aims at improving your education about vitamins to give you peace of mind when you choose food and beverage products.
 							</span>
 
 							<!-- </ul> -->
@@ -216,19 +217,19 @@
 								<?php if ($reportCount == 1):?>
 									<div class="li-wrapper">
 										<li>
-											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><?php echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#1</a> (0-500 <?php echo $this->translate("points")?>)
+											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><?php echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?> no.1 </a> (0-500 <?php echo $this->translate("points")?>)
 											
 										</li>
 									</div>
 									<div class="li-wrapper">
 										<li>
-											<?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)
+											<?php echo $this->translate("Spark_Report")?> no.2 (0-500 <?php echo $this->translate("points")?>)
 											
 										</li>
 									</div>
 									<div class="li-wrapper">
 										<li>
-											<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
+											<?php echo $this->translate("Spark_Report")?> no.3 (0-500 <?php echo $this->translate("points")?>)
 
 										</li>
 									</div>
@@ -237,12 +238,12 @@
 								<?php if ($reportCount ==2):?>
 									<div class="li-wrapper">
 										<li>
-											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#2 (0-500 <?php echo $this->translate("points")?>)</a>
+											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?> no.2 (0-500 <?php echo $this->translate("points")?>)</a>
 										</li>
 									</div>
 									<div class="li-wrapper">
 										<li>
-											<?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)
+											<?php echo $this->translate("Spark_Report")?> no.3 (0-500 <?php echo $this->translate("points")?>)
 
 										</li>
 									</div>
@@ -251,7 +252,7 @@
 								<?php if ($reportCount ==3):?>
 									<div class="li-wrapper">
 										<li>
-											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?>#3 (0-500 <?php echo $this->translate("points")?>)</a>
+											<a href="<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>" onclick="filloutDialogOpen('<?php echo $this->url(array('controller'=>'report','action'=>'create', 'id'=>$activeCampaign['campaign_id']));?>');return false;"><? echo $this->translate('Click_here_and_submit'); ?><?php echo $this->translate("Spark_Report")?> no.3 (0-500 <?php echo $this->translate("points")?>)</a>
 										</li>
 									</div>
 								<?php endif;?>

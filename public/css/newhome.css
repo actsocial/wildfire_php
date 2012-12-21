@@ -311,7 +311,7 @@ a.link {
 .article-box h2 {
 	font-size: 14px;
 	font-weight: bold;
-	color: #f00;
+	color: #17365D;
 	margin:0;
 	margin-top: -1px;
 }
@@ -468,7 +468,7 @@ form fieldset table td input#agree {
 	width: 185px;
 }
 form input#register,
-form dd input#login{
+form input#login{
 	background: url(../images/button.gif) no-repeat center center;
 	display: block;
 	float: left;
@@ -482,6 +482,18 @@ form dd input#login{
 	margin-bottom: 20px;
 	border: 0;
 	cursor: pointer;
+
+/*background: url('../public/images/button.gif') no-repeat scroll center center transparent;    
+	color: #FFFFFF;
+  float: left;
+  height: 36px;
+  margin-left:80px;
+  line-height: 36px;
+  margin-right: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 110px;*/
+
 }
 
 .contents-3-col h1 {
@@ -710,7 +722,7 @@ table.spark-show td img {
 	clear: left;
 }
 .spark-report-box .report-panel ul li a {
-	color: #f00;
+	color: #17365D;
 	text-decoration: none;
 	line-height: 18px;
 }
@@ -1761,7 +1773,7 @@ ul.steps li a img {
 }
 .gift-list .gift .price {
 	font-size: 14px;
-	color: #f00;
+	color: #17365D;
 	margin: 5px;
 	font-weight: bold;
 }
@@ -2104,7 +2116,7 @@ ul.steps li a img {
  ***********************************************/
  .order-list h1 {
 	font-size: 14px;
-	color: #007ccc;
+	color: #17365D;
 	margin: 0 0 20px 0;
 	height: 24px;
 	line-height: 24px;
@@ -2471,9 +2483,9 @@ a.list-orders:hover {
 	line-height: 20px;
 }
 .yourinfo span a {
-	color: #006BC4;
+	/*color: #006BC4;*/
 	font-weight: bold;
-	color: #f00;
+	color: #17365D;
 }
 
 .progressbar {
@@ -2895,4 +2907,12 @@ label.error {
 	font-size:16px;
 	color:#ffffff;
 	font-weight:bold;
+}
+
+.vertical_bar{
+  border-left: 3px solid gray;
+  float: left;
+  height: 130px;
+  margin-left: 70px;
+  margin-top: 20px;
 }

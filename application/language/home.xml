@@ -91,6 +91,33 @@
 			</tuv>
 		</tu>
 
+		<tu tuid='Contact_Text_Title_Philippines'>
+			<tuv xml:lang="zh">
+				<seg>Philippines</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Philippines</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Title_China'>
+			<tuv xml:lang="zh">
+				<seg>China</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>China</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Title_Sgp'>
+			<tuv xml:lang="zh">
+				<seg>Singapore</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Singapore</seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='Contact_Text_desc'>
 			<tuv xml:lang="zh">
 				<seg>If you do have questions about the Wildfire community website,
@@ -104,38 +131,91 @@ Please do not hesitate to let us know and we’ll get back to you within 48 busi
 
 		<tu tuid='Contact_Text_email'>
 			<tuv xml:lang="zh">
-				<seg>Email：<a href="home@wildfire.asia">home@wildfire.asia</a></seg>
+				<seg>Email：<a href="home@wildfire.asia" style='color:#17365D'>home@wildfire.asia</a></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Email：<a href="home@wildfire.asia">home@wildfire.asia</a></seg>
+				<seg>Email：<a href="home@wildfire.asia" style='color:#17365D'>home@wildfire.asia</a></seg>
 			</tuv>
 		</tu>
-		<tu tuid='Contact_Text_Yahoo'>
+
+		<tu tuid='Contact_Text_email_china'>
 			<tuv xml:lang="zh">
-				<seg>雅虎通：<a href="wildfire.asia@yahoo.com">wildfire.asia@yahoo.com</a></seg>
+				<seg>Email：<a href="info@wildfire.asia " style='color:#17365D'>info@wildfire.asia</a></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Yahoo Messenger: <a href="wildfire.asia@yahoo.com">wildfire.asia@yahoo.com</a></seg>
+				<seg>Email：<a href="info@wildfire.asia " style='color:#17365D'>info@wildfire.asia </a></seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_email_sgp'>
+			<tuv xml:lang="zh">
+				<seg>Email：<a href="home@wildfire.asia" style='color:#17365D'>home@wildfire.asia</a></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email：<a href="home@wildfire.asia" style='color:#17365D'>home@wildfire.asia</a></seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Yahoo'>
+			<tuv xml:lang="zh">
+				<seg>雅虎通：<a href="wildfire.asia@yahoo.com" style='color:#17365D'>wildfire.asia@yahoo.com</a></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Yahoo Messenger: <a href="wildfire.asia@yahoo.com" style='color:#17365D'>wildfire.asia@yahoo.com</a></seg>
 			</tuv>
 		</tu>
 		<tu tuid='Contact_Text_Facebook'>
 			<tuv xml:lang="zh">
-				<seg>Facebook: <a href="http://www.facebook.com/Wildfire">http://www.facebook.com/Wildfire</a></seg>
+				<seg>Facebook: <a href="http://www.facebook.com/Wildfire" style='color:#17365D'>http://www.facebook.com/Wildfire</a></seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Facebook: <a href="http://www.facebook.com/Wildfire">http://www.facebook.com/Wildfire</a></seg>
+				<seg>Facebook: <a href="http://www.facebook.com/Wildfire" style='color:#17365D'>http://www.facebook.com/Wildfire</a></seg>
 			</tuv>
 		</tu>
 		<tu tuid='Contact_Text_Mobile'>
 			<tuv xml:lang="zh">
-				<seg>Mobile (SMS only): 09156768666 or 09982007891 
-</seg>
+				<seg>Mobile (SMS only): 09156768666 or 09982007891</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Mobile (SMS only): 09156768666 or 09982007891 
-</seg>
+				<seg>Mobile (SMS only): 09156768666 or 09982007891</seg>
 			</tuv>
 		</tu>
+		<tu tuid='Contact_Text_address_china'>
+			<tuv xml:lang="zh">
+				<seg>Address:Room 510-512, Changping Road #68,Shanghai, China 200140</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Address:Room 510-512, Changping Road #68,Shanghai, China 200140</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_address_sgp'>
+			<tuv xml:lang="zh">
+				<seg>Address:1 George Street #17-05 One George Street Singapore 049145</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Address:1 George Street #17-05 One George Street Singapore 049145</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Mobile_china'>
+			<tuv xml:lang="zh">
+				<seg>Phone:+86 400 600 8707 Fax: +86 21 5836 3217</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>phone:+86 400 600 8707 Fax: +86 21 5836 3217</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Mobile_sgp'>
+			<tuv xml:lang="zh">
+				<seg>Phone: +65 6435 5295 Fax: +65 6536 7908</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Phone: +65 6435 5295 Fax: +65 6536 7908</seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='Report_Url_Description'>
 			<tuv xml:lang="zh">
 				<seg>你可以提交一个你和你朋友谈话的网址，我们将会浏览这个页面并尽早的通知你如果你可以提交下一个报告。</seg>
@@ -167,7 +247,7 @@ Please do not hesitate to let us know and we’ll get back to you within 48 busi
 				<seg>发送你与朋友的对话内容给我们。诚实详尽的内容会为你赚来更多的积分和活动。只有在我们批准了你当前的这个报告之后才可以提交下一个报告。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Start sending us your conversation with your friends one at a time. Honest and detailed ones will earn you more points and more campaigns. </seg>
+				<seg>We’d love to hear what your friends said about a brand you’re trying from Wildfire!  Whenever you have a conversation, tell us about it here. Remember, honesty and details earn you more points!</seg>
 			</tuv>
 		</tu>
                 <tu tuid='Account_Info_Pic'>
@@ -215,7 +295,9 @@ Please do not hesitate to let us know and we’ll get back to you within 48 busi
 				<seg>这是你的星星火主页，告诉我们你与朋友谈话或是参与问卷，你就可以获得积分。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Welcome to your Spark homepage. This is where you can let us know what people say about the brand and take polls to earn points that you can exchange for items.</seg>
+				<seg>Talk to anyone about a brand you tried from Wildfire? Let us know what they said!
+				
+				</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Home_head_content_2_1'>
@@ -223,7 +305,7 @@ Please do not hesitate to let us know and we’ll get back to you within 48 busi
 				<seg>你如果想了解更多内容，可以查看下面的问号提示，或是点击</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>To learn more about the process, click on the training tab above. </seg>
+				<seg>You can also earn points by sharing your opinion to Facebook, or by sharing a photo or video with us. The more points you earn, the more campaigns you’ll be invited to in the future!</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Home_head_content_2_2'>
@@ -428,7 +510,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>活动报告 </seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Spark Report </seg>
+				<seg>word-of-mouth Report</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Bonus_Report'>

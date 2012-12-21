@@ -96,19 +96,22 @@
 		</div> -->
 
 	</div>
-	<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
-						<a href="<?php echo $this->facebook_login_url;?>">
-						   
-						  <img src="<?php echo $this->baseUrl();?>/images/facebook_login.png">
-						</a>
-						<!-- Not a member yet? Click  
-						<a href="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>">
-							here
-						</a> to sign-up! -->
+<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
+					<a href="<?php echo $this->facebook_login_url;?>">
+					   
+					  <img src="<?php echo $this->baseUrl();?>/images/facebookloginv2.png">
+					</a>
+					<!-- Not a member yet? Click  
+					<a href="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>">
+						here
+					</a> to sign-up! -->
 
-				<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
+			<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
 
-				</div>
+</div>
+<table class="vertical_bar">
+	<tr><td></td></tr>
+</table>
 <form enctype="application/x-www-form-urlencoded" style="width:300px;float:left;margin-left:20px;" action="<?php echo $this->url(array('controller'=>'login',
 		'action'=>'login'));?>" method="post" target="_parent">
 		
@@ -123,7 +126,7 @@
             <td><?php echo $this->form->password?></td>
     </tr>
     <tr>
-    				<td><a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:8px;margin-left:240px;">Forgot?</a></td>
+    				<td><a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:8px;margin-left:240px;color:#17365D;margin-left:80px;">Forgot your Password?</a></td>
     </tr>
         <!-- <tr>
             <td>
@@ -145,7 +148,7 @@
 			<!--<?php echo $this->form->login?>
 			<input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>-->
 
-			<input type="submit" id="login" value="Login" style="margin-left:80px;"> 
+			<input type="submit" id="login" value="Submit" style="margin-left:80px;"> 
 			<!-- <?php echo $this->translate("Common_Forget_Password")?> 
 			<a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:10px;">Forgot your password?</a>-->
 		</div>
