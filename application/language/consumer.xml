@@ -1108,7 +1108,7 @@ You can also update your contact information and preferences.</seg>
 				<seg>完善你的个人资料</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Your personal info</seg>
+				<seg>Your personal information completeness:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Consumer_Extra_Info_Completeness'>

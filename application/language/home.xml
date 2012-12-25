@@ -207,12 +207,39 @@ Please do not hesitate to let us know and we’ll get back to you within 48 busi
 			</tuv>
 		</tu>
 
-		<tu tuid='Contact_Text_Mobile_sgp'>
+				<tu tuid='Contact_Text_Mobile_china'>
 			<tuv xml:lang="zh">
-				<seg>Phone: +65 6435 5295 Fax: +65 6536 7908</seg>
+				<seg>Phone:+86 400 600 8707</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Phone: +65 6435 5295 Fax: +65 6536 7908</seg>
+				<seg>phone:+86 400 600 8707</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_fax_china'>
+			<tuv xml:lang="zh">
+				<seg>Fax: +86 21 5836 3217</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Fax: +86 21 5836 3217</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_fax_sgp'>
+			<tuv xml:lang="zh">
+				<seg>Fax: +65 6536 7908</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Fax: +65 6536 7908</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Mobile_sgp'>
+			<tuv xml:lang="zh">
+				<seg>Phone: +65 6435 5295</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Phone: +65 6435 5295</seg>
 			</tuv>
 		</tu>
 
@@ -345,7 +372,7 @@ Please do not hesitate to let us know and we’ll get back to you within 48 busi
 				<seg>什么是星星火积分？</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>What are Spark Points?</seg>
+				<seg><![CDATA[What are Word-of-Mouth <br>(WOM) points? ]]></seg>
 			</tuv>
 		</tu>
 		<tu tuid='What_is_Status_Content_1'>

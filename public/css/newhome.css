@@ -230,7 +230,7 @@ td.article_column {
 }
 .article-box  a {
 	text-decoration: none;
-	color: #f00;
+	color: #17365D;
 }
 /*
 .container .contents-3-col .content {
@@ -1207,7 +1207,7 @@ ul.tabbed-buttons li.active a:visited {
 }
 #tip2 {
 	width:257px;
-	/*height:384px;*/
+	height:217px;
 	/*margin-left:-52px;
 	margin-top:35px;*/
 	margin-left: 35px;
@@ -1433,7 +1433,7 @@ ul.tabbed-buttons li.active a:visited {
 	margin-bottom: 7px;
 	padding:0;
 	font-size: 14px;
-	color: #f00;
+	color: #17365D;
 	float: left;
 }
 .web-dialog .content-2column .main-column a.close-button {
@@ -2160,10 +2160,11 @@ ul.steps li a img {
 	text-decoration: none;
 }
 .order-list .intro {
-	background: url(../images/help-80x80.gif) no-repeat 20px 20px #fafafa;
+	/*background: url(../images/help-80x80.gif) no-repeat 20px 20px #fafafa;*/
 	border: 1px solid #eee;
 	padding: 15px 0;
 	margin-top: 5px;
+	margin-left: -125px;
 }
 .order-list .intro h2 {
 	margin:0 15px 10px 125px;
