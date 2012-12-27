@@ -436,8 +436,7 @@ class ConsumerController extends MyController {
 					}
 				} 
 				
-				
-				$this->_helper->redirector ( 'index', 'campaigninvitation' );
+				$this->_forward('description','campaign',null,array('id'=>$campaign));
 			}else{
 				$this->view->errMessage = "Please fill out all mandatory fields and make sure your emails are correct!";
 				$this->_forward('precampaignfinished',
