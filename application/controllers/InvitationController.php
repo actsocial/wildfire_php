@@ -12,10 +12,11 @@ class InvitationController extends MyController
 		// error_reporting(0);
 
 		$fc = Zend_Controller_Front::getInstance ();
-		$this->view->oFCKeditor = new FCKeditor ( 'htmlmessage' );
+		$this->view->oFCKeditor = new FCKeditor ( 'htmlmessage',"500px");
 		$this->view->oFCKeditor->BasePath = $fc->getBaseUrl () . "/js/fckeditor/";
 		$this->view->oFCKeditor->Height = "500px";
-		$this->view->oFCKeditor->width = "580px";
+		$this->view->oFCKeditor->Width = "580px";
+		$this->view->oFCKeditor->ToolbarSet = "Basic";
 		$this->view->oFCKeditor->Value =$this->view->translate("INVITE_FRIENDS_TEMPLATE_105");
 
 		$this->view->title = $this->view->translate("Wildfire")." - ".$this->view->translate("Friend_Invitations");

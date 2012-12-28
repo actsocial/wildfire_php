@@ -168,7 +168,7 @@ class FacebookloginController extends MyController {
 							$emailBody = "Dear ?username?
 														<br><br>Since you signed up on the Wildfire Community Platform with your Facebook account, did you know that you can also login with your Facebook email address?
 														<br><br>Follow the steps below to access your Wildfire Community Platform profile through your Facebook email address:
-														<br>1. Go to http://community.wildfire.asia/public
+														<br>1. Go to http://ph.wildfire.asia/public
 														<br>2. Enter your Facebook email address.
 														<br>3. Enter your password. Your default password is ?password?
 														<br>4. Click Login.
