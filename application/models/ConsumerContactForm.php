@@ -12,6 +12,7 @@ class ConsumerContactForm extends Zend_Form
 		$phone->setLabel($this->getView()->translate('CONTACT INFORMATION_PHONE'))
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
+		->addValidator('NotEmpty', true)
 		->addValidators(array(array('StringLength', false, array(0, 50)),));
 		
 		$qq = new Zend_Form_Element_Text('qq');
@@ -72,6 +73,7 @@ class ConsumerContactForm extends Zend_Form
 		$recipients_name->setLabel($this->getView()->translate('CONTACT INFORMATION_RECIPIENTS_NAME'))
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
+		->addValidator('NotEmpty', true)
 		->addValidators(array(array('StringLength', false, array(1, 50)),));
 
 		$address1 = new Zend_Form_Element_Textarea('address1');
@@ -91,10 +93,12 @@ class ConsumerContactForm extends Zend_Form
 		$gender->setLabel($this->getView()->translate('Consumer_gender'))->addMultiOptions(array(
 							'0' => $this->getView()->translate('Consumer_gender_Female'), 
 							'1' => $this->getView()->translate('Consumer_gender_Male')
-		))->setSeparator('&nbsp;&nbsp;');
+		))->addValidator('NotEmpty', true)
+		->setSeparator('&nbsp;&nbsp;');
 		
 		$education = new Zend_Form_Element_Select('education');
 		$education->setLabel($this->getView()->translate('Consumer_education'))
+		->addValidator('NotEmpty', true)
 		->addMultiOptions( array(
 		'' => '',
 		'High-School' => $this->getView()->translate('Consumer_education_High-School'), 
@@ -111,10 +115,12 @@ class ConsumerContactForm extends Zend_Form
 		//->setAttrib('readOnly', true)
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
+		->addValidator('NotEmpty', true)
 		->addErrorMessage($this->getView()->translate('Please_enter_your_birthdate'));
 		
 		$income = new Zend_Form_Element_Select('income');
-		$income->setLabel($this->getView()->translate('Consumer_income_level_per_month'));
+		$income->setLabel($this->getView()->translate('Consumer_income_level_per_month'))
+		->addValidator('NotEmpty', true);
 
 		$income->addMultiOptions( array(
 			'' => '',
