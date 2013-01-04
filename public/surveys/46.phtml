@@ -73,6 +73,7 @@ function showOrHide1(){
 </head>
 
 <body>
+
 <div class="main-container-outer">
 	<div id="container">
 		<!-- <div id="header" class="header">
@@ -222,7 +223,7 @@ function showOrHide1(){
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-	mandatoryElements.push("1256");
+	
 </script>
 		  <div id="q_180" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
@@ -230,7 +231,7 @@ function showOrHide1(){
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						why ?<span style="color:red">*</span>
+						why?
 					</div>
 				</td>
 				<td width=50% valign="top">
@@ -576,7 +577,7 @@ mandatoryElements.push("1262");
 	  </div>
 	  <div style="clear:both;"></div>
 <script language="JavaScript" type="text/javascript">
-mandatoryElements.push("1263");
+
 </script>
 		  <div id="q_133" style="margin-bottom:0px;" class="question-even question-area">
 	  	
@@ -584,7 +585,7 @@ mandatoryElements.push("1263");
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						why?<span style="color:red">*</span>
+						why?
 					</div>
 				</td>
 				<td width=50% valign="top">
@@ -631,7 +632,9 @@ mandatoryElements.push("1264");
 	  </div>
 	  <div style="clear:both;"></div>
 	
-
+<div id="check-alert-dialog">
+    <p class="content"></p>
+</div>
 
 </div> 
 <br/>
@@ -969,9 +972,12 @@ mandatoryElements.push("1264");
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = '<span style="color:red">*&nbsp;&nbsp;</span>Mandatory questions must be filled out';
-		    jQuery("#check-alert-dialog .content").html(html);
-		    jQuery("#check-alert-dialog").dialog('open');
+	    	var html = '<span style="color:red">*&nbsp;&nbsp;</span>Please Complete the required fields before you submit';
+		    /*jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');*/
+				var buttons = ["OK"];
+				var callbacks = [ function() { WebDialog.close();return false;}]; 
+				WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 	    }
 		return fillMandatory;
 	}
@@ -1001,8 +1007,11 @@ mandatoryElements.push("1264");
 		    return true;
 		} else {
 			var html = '<span style="color:red">*&nbsp;&nbsp;</span>Can not submit empty questionnaire form';
-		    jQuery("#check-alert-dialog .content").html(html);
-		    jQuery("#check-alert-dialog").dialog('open');
+		    /*jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');*/
+			var buttons = ["OK"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 			return false;
 		}
 	}
