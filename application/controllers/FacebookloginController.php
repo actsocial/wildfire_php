@@ -16,19 +16,15 @@ class FacebookloginController extends MyController {
 
 		$code = $_REQUEST['code'];
   	if($code) {
-        $user_profile = $facebook->api('/me');
-  			// $user_profile = $facebook->api('/me');
-  			// var_dump($user_profile);die;
-		  	// $token = $facebook->getAccessTokenFromCode($code, FB_CALLBACK_URL);
-		  	// var_dump($token);die();
+        $token = $facebook->getAccessTokenFromCode($code, FB_REGISTER_CALLBACK_URL);
+				$user_profile = $facebook->setAccessToken($token)->api('/me');
 		  	if($user_profile) {
-		  		// $facebook->setAccessToken($token);
-		  		// $user = $facebook->getUserInfoFromAccessToken($params = array('access_token' => $token));var_dump($user);die();
+		  		
 		  		$user = $user_profile["id"];
 		  		if(!$user){
 						$this->_helper->redirector('loginfailed','index');
 		  		}
-		  		// var_dump($user['id']);die();
+
 		  		$uid = $user_profile["id"];
 		  		$uname = $user_profile['name'];
 		  		$email = $user_profile['email'];
@@ -73,18 +69,21 @@ class FacebookloginController extends MyController {
 }
 
 	function registerAction() {
+
 		$facebook = new Facebook(array(
 		  'appId'  => FB_AKEY,
 		  'secret' => FB_SKEY,
 		  'authorizationRedirectUrl' => FB_REGISTER_CALLBACK_URL,
 		));
 		$code = $_REQUEST['code'];
+
   	if($code) {
-	  	// $token = $facebook->getAccessTokenFromCode($code, FB_REGISTER_CALLBACK_URL);
-	  	$user_profile = $facebook->api('/me');
+			
+	  	$token = $facebook->getAccessTokenFromCode($code, FB_REGISTER_CALLBACK_URL);
+			$user_profile = $facebook->setAccessToken($token)->api('/me');
+
 	  	if($user_profile) {
-	  		// $facebook->setAccessToken($token);
-	  		// $user = $facebook->getUserInfoFromAccessToken($params = array('access_token' => $token));
+
 	  		$user = $user_profile["id"];
 	  		if(!$user){
 					$this->_helper->redirector('index','index');
