@@ -816,7 +816,7 @@ abstract class BaseFacebook
     if (!isset($response_params['access_token'])) {
       return false;
     }
-
+    
     return $response_params['access_token'];
   }
 
