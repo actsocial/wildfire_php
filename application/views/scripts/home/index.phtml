@@ -300,7 +300,7 @@
 									  <?php if($imageReport['state'] == 'APPROVED' && isset($imageReport['point_amount'])) { ?>
 										图片已审核, 您已获得<strong><?php echo $imageReport['point_amount'] ?></strong>分
 									  <?php } else if($imageReport['state'] == 'NEW') { ?>
-										图片需要审核, 请等待
+										Your photo is pending for approval. 
 									  <?php } else if($imageReport['state'] == 'UNAPPROVED') { ?>
 									  	图片审核未通过
 									  <?php }?>

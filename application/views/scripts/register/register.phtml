@@ -101,11 +101,16 @@
 	</div>
 <?php if(!$this->registered){?>
 
+
+
 <div style="float:left;margin-top:155px;">
 	<!-- <p style="font-size:18px">Sign Up</p> --><br>
+	&nbsp;&nbsp;Invitation Code<input id="auth_code2" type="text" value="<?php echo $this->auto_code; ?>" name="auth_code"><br>
 	<a href="<?php echo $this->facebook_login_url;?>">
    		<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
   		<img src="<?php echo $this->baseUrl();?>/images/signupfacebook.gif" style="margin-left:5px;">
+  	<!-- 	Invitation Code:
+  		<input id="auth_code" type="text" style="width:180px;" value="<?php echo $this->auto_code; ?>" name="auth_code"> -->
 	</a>
 </div>
 
@@ -132,7 +137,7 @@
 			</colgroup>
 			<tr>
 				<td><?php echo $this->translate('Invitation_Code');?></td>
-				<td><input id="auth_code" type="text" style="width:240px;" readonly value="<?php echo $this->auto_code; ?>" name="auth_code"></td>
+				<td><input id="auth_code" type="text" style="width:240px;" value="<?php echo $this->auto_code; ?>" name="auth_code"></td>
 			</tr>
 			<tr>
 				<td><?php echo $this->translate('Register_Contact_Email');?></td>

@@ -374,6 +374,9 @@ class ConsumerController extends MyController {
 				if ($formData ['birthdate'] != null) {
 					$consumer->birthdate = $formData ['birthdate'];
 				}
+				if ($formData ['gender'] != null) {
+					$consumer->gender = $formData ['gender'];
+				}
 				if ($formData ['qq'] != null) {
 					$consumer->qq = $formData ['qq'];
 				}
