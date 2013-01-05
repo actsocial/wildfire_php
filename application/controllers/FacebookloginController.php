@@ -16,8 +16,8 @@ class FacebookloginController extends MyController {
 
 		$code = $_REQUEST['code'];
   	if($code) {
-  			// $user = $facebook->getUser();
-  			$user_profile = $facebook->api('/me');
+        $user_profile = $facebook->api('/me');
+  			// $user_profile = $facebook->api('/me');
   			// var_dump($user_profile);die;
 		  	// $token = $facebook->getAccessTokenFromCode($code, FB_CALLBACK_URL);
 		  	// var_dump($token);die();
@@ -29,7 +29,7 @@ class FacebookloginController extends MyController {
 						$this->_helper->redirector('loginfailed','index');
 		  		}
 		  		// var_dump($user['id']);die();
-		  		$uid = $user_profile['id'];
+		  		$uid = $user_profile["id"];
 		  		$uname = $user_profile['name'];
 		  		$email = $user_profile['email'];
 		  		$db = Zend_Registry :: get('db');
