@@ -118,7 +118,6 @@ class FacebookloginController extends MyController {
 		  			$is_invitation_code_valid = True;
 	  			}
 	  		}
-
 	  		if($is_invitation_code_valid) {
 	  			$consumer = $db->fetchOne("SELECT *  FROM consumer WHERE email=:email", array('email'=>$email));
 	  			if($consumer) {
@@ -130,7 +129,6 @@ class FacebookloginController extends MyController {
 							$consumerModel.update(array("facebookid"=>$uid), array('id'=>$consumer['id']));
 	  				}
 	  			}else {
-	  				
 	  				$pass = $this->create_password();
 	  				$consumerModel = new Consumer();
     				$row = $consumerModel->createRow();
@@ -150,6 +148,7 @@ class FacebookloginController extends MyController {
 		  			$invitation_code = $invitation_code[0];
 						$invitation_code->receiver = $row->id;
     				$invitation_code->use_date= (string)$currentTime;
+
     				$invitation_code->save();
 
 		  			if (!empty($invitation_code->auto_invitation) && $invitation_code->auto_invitation!=0){
@@ -161,6 +160,7 @@ class FacebookloginController extends MyController {
 		    					$ci->state = "NEW";
 		    					$ci->save();
     				}
+
 		    		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
 		  				$config = Zend_Registry::get('config');
 							$smtpSender = new Zend_Mail_Transport_Smtp(
@@ -216,6 +216,7 @@ class FacebookloginController extends MyController {
 				$adapter = new FacebookLoginAuthAdaptor($uid,$uname,$email);
 				$auth = Zend_Auth :: getInstance();
 				$result = $auth->authenticate($adapter);
+				
 				if($result->isValid()){
 					$authNamespace = new Zend_Session_Namespace('Zend_Auth');
 					$authNamespace->user = $consumer;
