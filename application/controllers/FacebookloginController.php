@@ -93,7 +93,7 @@ class FacebookloginController extends MyController {
 	  		$uid = $user_profile['id'];
 	  		$uname = $user_profile['name'];
 	  		$email = $user_profile['email'];
-	  		$is_invitation_code_valid = False;
+	  		$is_invitation_code_valid = True;
 	  		$db = Zend_Registry :: get('db');
 	  		//if state param is not null, then the value is invite code, get email from database by invite code
 	  		$invitation_code_id = $_REQUEST['state'];
@@ -145,21 +145,33 @@ class FacebookloginController extends MyController {
 		  			$invitation_code_id = intval($invitation_code_id);
 		  			$signupAuthCodeModel = new SignupAuthCode();
 		  			$invitation_code =	$signupAuthCodeModel->find($invitation_code_id);
-		  			$invitation_code = $invitation_code[0];
-						$invitation_code->receiver = $row->id;
-    				$invitation_code->use_date= (string)$currentTime;
+		  			if($invitation_code){
+		  				$invitation_code = $invitation_code[0];
+							$invitation_code->receiver = $row->id;
+	    				$invitation_code->use_date= (string)$currentTime;
 
-    				$invitation_code->save();
-
-		  			if (!empty($invitation_code->auto_invitation) && $invitation_code->auto_invitation!=0){
-		    					$campaignInvitationModel = new CampaignInvitation();
-		    					$ci = $campaignInvitationModel->createRow();
-		    					$ci->consumer_id = $row->id;
-		    					$ci->campaign_id = $invitation_code->auto_invitation;
-		    					$ci->create_date = $currentTime;
-		    					$ci->state = "NEW";
-		    					$ci->save();
-    				}
+	    				$invitation_code->save();
+	    				if (!empty($invitation_code->auto_invitation) && $invitation_code->auto_invitation!=0){
+	    					$campaignInvitationModel = new CampaignInvitation();
+	    					$ci = $campaignInvitationModel->createRow();
+	    					$ci->consumer_id = $row->id;
+	    					$ci->campaign_id = $invitation_code->auto_invitation;
+	    					$ci->create_date = $currentTime;
+	    					$ci->state = "NEW";
+	    					$ci->save();
+    					}else{
+    						//default campaign is Quality of life 
+    						$campaignInvitationModel = new CampaignInvitation();
+	    					$ci = $campaignInvitationModel->createRow();
+	    					$ci->consumer_id = $row->id;
+	    					$ci->campaign_id = "105";
+	    					$ci->create_date = $currentTime;
+	    					$ci->state = "NEW";
+	    					$ci->save();
+    					}
+		  			}
+		  			
+		  			
 
 		    		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
 		  				$config = Zend_Registry::get('config');
