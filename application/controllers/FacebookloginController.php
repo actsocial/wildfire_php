@@ -17,8 +17,7 @@ class FacebookloginController extends MyController {
 		$code = $_REQUEST['code'];
   	if($code) {
   			$user = $facebook->getUser();
-				$token = $facebook->getAccessTokenFromCode($code, FB_CALLBACK_URL);
-				$user_profile = $facebook->setAccessToken($token)->api('/me');
+				$user_profile = $facebook->api('/me');
         
 		  	if($user_profile) {
 		  		
@@ -81,8 +80,7 @@ class FacebookloginController extends MyController {
 
   	if($code) {
 			$user = $facebook->getUser();
-	  	$token = $facebook->getAccessTokenFromCode($code, FB_REGISTER_CALLBACK_URL);
-			$user_profile = $facebook->setAccessToken($token)->api('/me');
+			$user_profile = $facebook->api('/me');
 
 	  	if($user_profile) {
 
