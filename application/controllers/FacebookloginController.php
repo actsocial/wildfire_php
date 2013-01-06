@@ -79,9 +79,7 @@ class FacebookloginController extends MyController {
 		$code = $_REQUEST['code'];
 
   	if($code) {
-
 			$user = $facebook->getUser();
-
 			$user_profile = $facebook->api('/me');
 
 	  	if($user_profile) {
@@ -93,7 +91,7 @@ class FacebookloginController extends MyController {
 	  		$uid = $user_profile['id'];
 	  		$uname = $user_profile['name'];
 	  		$email = $user_profile['email'];
-	  		$is_invitation_code_valid = True;
+	  		$is_invitation_code_valid = False;
 	  		$db = Zend_Registry :: get('db');
 	  		//if state param is not null, then the value is invite code, get email from database by invite code
 	  		$invitation_code_id = $_REQUEST['state'];
@@ -103,7 +101,6 @@ class FacebookloginController extends MyController {
 	  			$invitation_code_id = intval($invitation_code_id);
 	  			$signupAuthCodeModel = new SignupAuthCode();
 	  			$invitation_code =	$signupAuthCodeModel->find($invitation_code_id);
-
 	  			if(isset($invitation_code)) {
 	  				// $invitation_code = $invitation_code[0];
 	  				// if ($invitation_code->id) {
@@ -118,10 +115,10 @@ class FacebookloginController extends MyController {
 		  			$is_invitation_code_valid = True;
 	  			}
 	  		}
+
 	  		if($is_invitation_code_valid) {
 	  			$consumer = $db->fetchOne("SELECT *  FROM consumer WHERE email=:email", array('email'=>$email));
 	  			if($consumer) {
-
 	  				if($consumer['facebookid'] == $uid) {
 
 	  				}else {
@@ -137,7 +134,6 @@ class FacebookloginController extends MyController {
     				$row->password = md5($pass);
 						$row->state ="ACTIVE";
 						$row->facebookid = $uid;
-
 		    		$row->save();
 		    		
 
@@ -145,32 +141,20 @@ class FacebookloginController extends MyController {
 		  			$invitation_code_id = intval($invitation_code_id);
 		  			$signupAuthCodeModel = new SignupAuthCode();
 		  			$invitation_code =	$signupAuthCodeModel->find($invitation_code_id);
-		  			if($invitation_code){
-		  				$invitation_code = $invitation_code[0];
-							$invitation_code->receiver = $row->id;
-	    				$invitation_code->use_date= (string)$currentTime;
+		  			$invitation_code = $invitation_code[0];
+						$invitation_code->receiver = $row->id;
+    				$invitation_code->use_date= (string)$currentTime;
+    				$invitation_code->save();
 
-	    				$invitation_code->save();
-	    				if (!empty($invitation_code->auto_invitation) && $invitation_code->auto_invitation!=0){
-	    					$campaignInvitationModel = new CampaignInvitation();
-	    					$ci = $campaignInvitationModel->createRow();
-	    					$ci->consumer_id = $row->id;
-	    					$ci->campaign_id = $invitation_code->auto_invitation;
-	    					$ci->create_date = $currentTime;
-	    					$ci->state = "NEW";
-	    					$ci->save();
-    					}
-		  			}else{
-		  				//default campaign is Quality of life 
-    						$campaignInvitationModel = new CampaignInvitation();
-	    					$ci = $campaignInvitationModel->createRow();
-	    					$ci->consumer_id = $row->id;
-	    					$ci->campaign_id = "105";
-	    					$ci->create_date = $currentTime;
-	    					$ci->state = "NEW";
-	    					$ci->save();
-		  			}		  			
-		  			
+		  			if (!empty($invitation_code->auto_invitation) && $invitation_code->auto_invitation!=0){
+		    					$campaignInvitationModel = new CampaignInvitation();
+		    					$ci = $campaignInvitationModel->createRow();
+		    					$ci->consumer_id = $row->id;
+		    					$ci->campaign_id = $invitation_code->auto_invitation;
+		    					$ci->create_date = $currentTime;
+		    					$ci->state = "NEW";
+		    					$ci->save();
+    				}
 		    		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
 		  				$config = Zend_Registry::get('config');
 							$smtpSender = new Zend_Mail_Transport_Smtp(
@@ -226,7 +210,6 @@ class FacebookloginController extends MyController {
 				$adapter = new FacebookLoginAuthAdaptor($uid,$uname,$email);
 				$auth = Zend_Auth :: getInstance();
 				$result = $auth->authenticate($adapter);
-				
 				if($result->isValid()){
 					$authNamespace = new Zend_Session_Namespace('Zend_Auth');
 					$authNamespace->user = $consumer;
@@ -235,10 +218,10 @@ class FacebookloginController extends MyController {
 					$logId = $logModel->insert(array (
 									'consumer_id' => $consumer->id,
 									'date' => date("Y-m-d H:i:s"),
-									'event' => 'register'
+									'event' => 'LOGIN'
 					));
 				}
-				$this->_helper->redirector('index','index');
+				$this->_helper->redirector('index','home');
   		}else {
   			$this->_helper->redirector('loginfailed','index');
   		}
