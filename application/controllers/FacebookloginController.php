@@ -159,8 +159,9 @@ class FacebookloginController extends MyController {
 	    					$ci->create_date = $currentTime;
 	    					$ci->state = "NEW";
 	    					$ci->save();
-    					}else{
-    						//default campaign is Quality of life 
+    					}
+		  			}else{
+		  				//default campaign is Quality of life 
     						$campaignInvitationModel = new CampaignInvitation();
 	    					$ci = $campaignInvitationModel->createRow();
 	    					$ci->consumer_id = $row->id;
@@ -168,11 +169,8 @@ class FacebookloginController extends MyController {
 	    					$ci->create_date = $currentTime;
 	    					$ci->state = "NEW";
 	    					$ci->save();
-    					}
-		  			}
+		  			}		  			
 		  			
-		  			
-
 		    		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
 		  				$config = Zend_Registry::get('config');
 							$smtpSender = new Zend_Mail_Transport_Smtp(
