@@ -99,16 +99,34 @@
 		<p ><?php echo $this->translate("Common_Please_login_Content")?></p>
 		</div>
 	</div>
+
+<script language="JavaScript" type="text/javascript">
+// 	var href ;
+// 	jQuery(document).ready(function(){
+// 		href = jQuery("#facebooksignup").attr("href");
+// 		jQuery("#facebooksignup").attr("href","");
+// 		jQuery("#facebooksignupimg").attr("onclick",imgLogin());
+// 	});
+</script>
+
+ <script language="JavaScript" type="text/javascript">
+// 	function imgLogin(){
+// 			if(/^[0-9]\d{0,4}$/.test(jQuery("#auth_code2").val())){
+// 				window.location.href = href;
+// 			}else{
+// 				alert("The Code must be 5 bit.");
+// 			}
+// 		}
+ </script>
+
 <?php if(!$this->registered){?>
-
-
 
 <div style="float:left;margin-top:155px;">
 	<!-- <p style="font-size:18px">Sign Up</p> --><br>
 	&nbsp;&nbsp;Invitation Code<input id="auth_code2" type="text" value="<?php echo $this->auto_code; ?>" name="auth_code"><br>
-	<a href="<?php echo $this->facebook_login_url;?>">
+	<a href="<?php echo $this->facebook_login_url;?>" id="facebooksignup">
    		<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
-  		<img src="<?php echo $this->baseUrl();?>/images/signupfacebook.gif" style="margin-left:5px;">
+  		<img src="<?php echo $this->baseUrl();?>/images/signupfacebook.gif" style="margin-left:5px;" id="facebooksignupimg">
   	<!-- 	Invitation Code:
   		<input id="auth_code" type="text" style="width:180px;" value="<?php echo $this->auto_code; ?>" name="auth_code"> -->
 	</a>

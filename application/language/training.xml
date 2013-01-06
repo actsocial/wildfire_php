@@ -11,7 +11,7 @@
 				<seg>会员训练 - 星星火是如何运作的？</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Spark Training - How Does Wildfire Work?</seg>
+				<seg>Influencer Training - How Does Wildfire Work?</seg>
 			</tuv>
 		</tu>
 
@@ -20,7 +20,7 @@
 				<seg>会员训练 - 示例报告</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Spark Training - Sample Report</seg>
+				<seg>Influencer Training - Sample Report</seg>
 			</tuv>
 		</tu>
 		
@@ -29,7 +29,7 @@
 				<seg>这项入门培训会告诉你星星火运作流程的所有基本知识--从加入星星火到签署了一项活动，再到提交报告。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>This introductory training will give you all the basics of how a Spark campaign works - from joining Wildfire, to signing up for a campaign, to submitting reports.</seg>
+				<seg>This introductory training will give you all the basics of how a Influencer campaign works - from joining Wildfire, to signing up for a campaign, to submitting reports.</seg>
 			</tuv>
 		</tu>
 		<tu tuid="step-start">
@@ -45,7 +45,7 @@
 				<seg>
 					<![CDATA[
 					<h3>What is Wildfire?</h3><p>Wildfire is a natural word-of-mouth community. With Wildfire, consumers are the first to learn about exciting new products, and the first to spread authentic word of mouth with their friends, family, and co-workers.</p>
-<h3>What's a Spark Campaign?</h3><p>At the beginning of every Spark Campaign, you’ll receive a free product, based on your interests. During the campaign (lasting about three months) you form an opinion, talk to your friends as you normally would, and let us know what your friends had to say. A Spark Campaign is 100% natural word-of-mouth - the only difference is that instead of buying the product, we provide it to passionate consumers for free.</p>
+<h3>What's a Word-of-mouth Campaign?</h3><p>At the beginning of every Word-of-mouth Campaign, you’ll receive a free product, based on your interests. During the campaign (lasting about three months) you form an opinion, talk to your friends as you normally would, and let us know what your friends had to say. A Word-of-mouth Campaign is 100% natural word-of-mouth - the only difference is that instead of buying the product, we provide it to passionate consumers for free.</p>
 					]]>
 				</seg>
 			</tuv>
@@ -73,7 +73,7 @@
 					<h3>How does Wildfire work?</h3>
 					<h4>Step 1: You Sign Up for a Wildfire Campaign</h4><p>
 					<ol>
-						<li>A new campaign invitation appears on your Spark Homepage.</li>
+						<li>A new campaign invitation appears on your Influencer Homepage.</li>
 						<li>You learn about the product and decide if you'd like to join.</li>
 						<li>To join, you complete a quick pre-campaign survey.</li>
 					</ol>
@@ -106,7 +106,7 @@
 					<h4>Step 2: You Receive the Product for Free</h4>
 					<p><ul>
 						<li>We give you an exciting product, based on your interests.</li>
-						<li>Most campaigns include a mailed package, which have coupons for your friends and a printed Spark Guide with interesting product info.</li>
+						<li>Most campaigns include a mailed package, which have coupons for your friends and a printed Influencer Guide with interesting product info.</li>
 						<li>Some campaigns have everything you need online.</li>
 						<li>You try the product and form an opinion, whether positive or negative.</li>
 					</ul></p>
@@ -132,7 +132,7 @@
 				<seg>
 					<![CDATA[
 					<p>&nbsp;</p>
-					<h3>How does Wildfire work?</h3><h4>Step 3: You Spark Word-of-Mouth About the Product</h4>
+					<h3>How does Wildfire work?</h3><h4>Step 3: You Word-of-Mouth About the Product</h4>
 					<ul>
 						<li>You share your natural opinion, both positive and negative, with your friends.</li>
 						<li>You make sure they all know you got the product from Wildfire and that you’re not trying to promote, sell, or hype anything.</li>
@@ -166,7 +166,7 @@
 						<li>Each time you create word-of-mouth, you return to <a href="http://community.wildfire.asia" target="_blank">community.wildfire.asia</a></li>
 						<li>You take a moment to tell us what was said: who, what, when and where.</li>
 						<li>We read and respond to every report you send us.</li>
-						<li>The more detail you provide, the more Spark Points you’ll earn.</li>
+						<li>The more detail you provide, the more Influencer Points you’ll earn.</li>
 					</ul>
 					]]>
 				</seg>
@@ -192,7 +192,7 @@
 					<h3>How does Wildfire work?</h3>
 					<h4>Rewards</h4>
 					<p>The more you contribute, the more rewards you receive, including valuable stuff, and more invitations to exclusive and high-value campaigns.</p>
-					<p>You’ll get up to 200 points for every poll, and up to 500 points for every Spark Report.</p>
+					<p>You’ll get up to 200 points for every poll, and up to 500 points for every Word-of-mouth Report.</p>
 					<p>It doesn’t matter how many people you’ve talk to or whether the feedback is good or bad - just let us know when you’ve mentioned a product, and what was said. The most important thing is staying honest, and staying in touch!</p>
 					]]>
 				</seg>
@@ -216,8 +216,8 @@
 					<p>&nbsp;</p>
 					<h3>How does Wildfire work?</h3>
 					<h3>That’s it! </h3>
-					<p>We hope this short slide show helped answer most of your questions about how a Spark Campaign works, and that you’ve seen how easy it is to participate!</p>
-					<p>If you have further questions, please see our <a target='_blank' href="http://www.xingxinghuo.cn/index.php?option=com_content&view=article&id=91&Itemid=53&lang=en">frequently asked questions</a>.</p> <p>&nbsp;</p>
+					<p>We hope this short slide show helped answer most of your questions about how a Word-of-mouth Campaign works, and that you’ve seen how easy it is to participate!</p>
+					<p>If you have further questions, please see our <a target='_blank' href="http://community.wildfire.asia/index.php?option=com_content&view=article&id=91&Itemid=53&lang=en">frequently asked questions</a>.</p> <p>&nbsp;</p>
 					]]>
 				</seg>
 			</tuv>

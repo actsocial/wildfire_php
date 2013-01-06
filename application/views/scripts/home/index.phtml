@@ -298,11 +298,13 @@
 			                          </div>
 									  <div class="status" style="<?php if(!$is_first) {echo 'display:none';}?>">
 									  <?php if($imageReport['state'] == 'APPROVED' && isset($imageReport['point_amount'])) { ?>
-										图片已审核, 您已获得<strong><?php echo $imageReport['point_amount'] ?></strong>分
+										<!-- 图片已审核, 您已获得<strong><?php echo $imageReport['point_amount'] ?></strong>分 -->
+										Your photo is approved,you have received <strong><?php echo $imageReport['point_amount'] ?></strong> points.
 									  <?php } else if($imageReport['state'] == 'NEW') { ?>
 										Your photo is pending for approval. 
 									  <?php } else if($imageReport['state'] == 'UNAPPROVED') { ?>
-									  	图片审核未通过
+									  	<!-- 图片审核未通过 -->
+									  Your photo is not approved.
 									  <?php }?>
 									  </div>
 	                  <?php }?>
