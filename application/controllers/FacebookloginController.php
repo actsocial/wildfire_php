@@ -79,7 +79,9 @@ class FacebookloginController extends MyController {
 		$code = $_REQUEST['code'];
 
   	if($code) {
+
 			$user = $facebook->getUser();
+
 			$user_profile = $facebook->api('/me');
 
 	  	if($user_profile) {
@@ -101,6 +103,7 @@ class FacebookloginController extends MyController {
 	  			$invitation_code_id = intval($invitation_code_id);
 	  			$signupAuthCodeModel = new SignupAuthCode();
 	  			$invitation_code =	$signupAuthCodeModel->find($invitation_code_id);
+
 	  			if(isset($invitation_code)) {
 	  				// $invitation_code = $invitation_code[0];
 	  				// if ($invitation_code->id) {
@@ -119,6 +122,7 @@ class FacebookloginController extends MyController {
 	  		if($is_invitation_code_valid) {
 	  			$consumer = $db->fetchOne("SELECT *  FROM consumer WHERE email=:email", array('email'=>$email));
 	  			if($consumer) {
+
 	  				if($consumer['facebookid'] == $uid) {
 
 	  				}else {
@@ -126,6 +130,7 @@ class FacebookloginController extends MyController {
 							$consumerModel.update(array("facebookid"=>$uid), array('id'=>$consumer['id']));
 	  				}
 	  			}else {
+	  				
 	  				$pass = $this->create_password();
 	  				$consumerModel = new Consumer();
     				$row = $consumerModel->createRow();
@@ -134,6 +139,7 @@ class FacebookloginController extends MyController {
     				$row->password = md5($pass);
 						$row->state ="ACTIVE";
 						$row->facebookid = $uid;
+
 		    		$row->save();
 		    		
 
