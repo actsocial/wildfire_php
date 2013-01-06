@@ -225,10 +225,10 @@ class FacebookloginController extends MyController {
 					$logId = $logModel->insert(array (
 									'consumer_id' => $consumer->id,
 									'date' => date("Y-m-d H:i:s"),
-									'event' => 'LOGIN'
+									'event' => 'register'
 					));
 				}
-				$this->_helper->redirector('index','home');
+				$this->_helper->redirector('index','index');
   		}else {
   			$this->_helper->redirector('loginfailed','index');
   		}
