@@ -18,7 +18,6 @@ class FacebookloginController extends MyController {
   			$user = $facebook->getUser();
 		
 			$user_profile = $facebook->api('/me');
-			
         
 		  	if($user_profile) {
 		  		
@@ -81,7 +80,6 @@ class FacebookloginController extends MyController {
   	if($code) {
 			$user = $facebook->getUser();
 			$user_profile = $facebook->api('/me');
-	  	
 
 	  	if($user_profile) {
 
