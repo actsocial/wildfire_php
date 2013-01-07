@@ -31,7 +31,6 @@ class RegisterController extends MyController
 		  'secret' => FB_SKEY,
 		  'cookies' => false
 		));
-		$facebook->destroySession();
 		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email','redirect_uri' => FB_REGISTER_CALLBACK_URL));
 
 		$form = new RegisterForm();

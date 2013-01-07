@@ -28,7 +28,6 @@ class IndexController extends MyController
 		  'secret' => FB_SKEY,
 		  'cookies' => false
 		));
-		$facebook->destroySession();
 		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email','redirect_uri' => FB_CALLBACK_URL));
 		
 		$lang = $this->_request->getParam('lang');
@@ -55,8 +54,7 @@ class IndexController extends MyController
 		  'secret' => FB_SKEY,
 		  'cookies' => false
 		));
-		$facebook->destroySession();
-		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email'));
+		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email','redirect_uri' => FB_CALLBACK_URL));
 		/*$this->view->messages = $this->_flashMessenger->getMessages();
 		
 		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email'));

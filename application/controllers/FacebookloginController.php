@@ -22,13 +22,14 @@ class FacebookloginController extends MyController {
 				return;
 			}
 			$token = $facebook->getAccessToken();
+			$user_profile = NULL;
 			try{
 				$user_profile = $facebook->api('/me?access_token='.$token);
 			}catch(Exception $e){
+				print_r("2");die;
 				$this->_helper->redirector('loginfailed','index');
 				return;
 			}
-			
         
 		  	if($user_profile) {
 		  		
@@ -92,10 +93,11 @@ class FacebookloginController extends MyController {
   	if($code && $_SESSION['auth_code']) {
 			$user = $facebook->getUser();
 			if(!$user){
-				$this->_helper->redirector('loginfailed','index');
+				$this->_helper->redirector('register','register');
 				return;
 			}
 			$token = $facebook->getAccessToken();
+			$user_profile = NULL;
 			try{
 				$user_profile = $facebook->api('/me?access_token='.$token);
 			}catch(Exception $e){
