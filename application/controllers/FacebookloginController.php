@@ -26,11 +26,10 @@ class FacebookloginController extends MyController {
 			try{
 				$user_profile = $facebook->api('/me?access_token='.$token);
 			}catch(Exception $e){
-				print_r("2");die;
+				
 				$this->_helper->redirector('loginfailed','index');
 				return;
 			}
-        
 		  	if($user_profile) {
 		  		
 		  		$user = $user_profile["id"];
@@ -93,7 +92,7 @@ class FacebookloginController extends MyController {
   	if($code && $_SESSION['auth_code']) {
 			$user = $facebook->getUser();
 			if(!$user){
-				$this->_helper->redirector('register','register');
+				 $this->_helper->redirector->gotoUrl("/register/register/a/".$_SESSION['auth_code']);
 				return;
 			}
 			$token = $facebook->getAccessToken();
@@ -101,7 +100,7 @@ class FacebookloginController extends MyController {
 			try{
 				$user_profile = $facebook->api('/me?access_token='.$token);
 			}catch(Exception $e){
-				$this->_helper->redirector('register','register');
+				$this->_helper->redirector->gotoUrl("/register/register/a/".$_SESSION['auth_code']);
 				return;
 			}
 
@@ -146,7 +145,7 @@ class FacebookloginController extends MyController {
 
 	  				}else {
 	  					$consumerModel = new Consumer();
-							$consumerModel->update(array("facebookid"=>$uid), array('id'=>$consumer['id']));
+							$consumerModel->update(array("facebookid"=>$uid), 'id = "'.$consumer['id'].'"');
 	  				}
 	  			}else {
 	  				$pass = $this->create_password();
