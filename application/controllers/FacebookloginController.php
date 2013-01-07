@@ -121,8 +121,8 @@ class FacebookloginController extends MyController {
 	  				if($consumer['facebookid'] == $uid) {
 
 	  				}else {
-	  					$consumer->facebookid = $uid;
-						$consumer->save();
+	  					$consumerModel = new Consumer();
+							$consumerModel->update(array("facebookid"=>$uid), array('id'=>$consumer['id']));
 	  				}
 	  			}else {
 	  				$pass = $this->create_password();
