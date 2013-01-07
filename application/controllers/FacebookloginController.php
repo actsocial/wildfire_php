@@ -91,6 +91,7 @@ class FacebookloginController extends MyController {
 
   	if($code && $_SESSION['auth_code']) {
 			$user = $facebook->getUser();
+			$signupAuthCodeModel = new SignupAuthCode();
 			if(!$user){
 				$code = $signupAuthCodeModel->fetchRow("use_date is null and id = '".$_SESSION['auth_code']."'");
 				 $this->_helper->redirector->gotoUrl("/register/register/a/".$code->auth_code);
@@ -123,7 +124,6 @@ class FacebookloginController extends MyController {
 	  		if($invitation_code_id)
 	  		{
 	  			$invitation_code_id = intval($invitation_code_id);
-	  			$signupAuthCodeModel = new SignupAuthCode();
 	  			$invitation_code =	$signupAuthCodeModel->find($invitation_code_id);
 	  			if(isset($invitation_code)) {
 	  				// $invitation_code = $invitation_code[0];
@@ -180,7 +180,7 @@ class FacebookloginController extends MyController {
 		    					$ci->save();
     				}
 		    		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
-		  				$config = Zend_Registry::get('config');
+		  				/*$config = Zend_Registry::get('config');
 							$smtpSender = new Zend_Mail_Transport_Smtp(
 							$config->smtp->friend->mail->server,
 							array(
@@ -220,7 +220,7 @@ class FacebookloginController extends MyController {
 							$mail->setSubject($emailSubject);
 							$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
 							$mail->addTo($email,$uname);
-							$mail->send();
+							$mail->send();*/
 	  			}
 	  		}else {
 	  			$this->_helper->redirector('loginfailed','index');
