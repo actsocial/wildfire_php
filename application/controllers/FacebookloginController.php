@@ -180,7 +180,7 @@ class FacebookloginController extends MyController {
 		    					$ci->save();
     				}
 		    		// when you sign up with facebook eamil and authcode . we launch default password  and send to you .2012-11-08
-		  				/*$config = Zend_Registry::get('config');
+		  				$config = Zend_Registry::get('config');
 							$smtpSender = new Zend_Mail_Transport_Smtp(
 							$config->smtp->friend->mail->server,
 							array(
@@ -220,7 +220,7 @@ class FacebookloginController extends MyController {
 							$mail->setSubject($emailSubject);
 							$mail->setFrom($config->smtp->friend->mail->username, "Wildfire");
 							$mail->addTo($email,$uname);
-							$mail->send();*/
+							$mail->send();
 	  			}
 	  		}else {
 	  			$this->_helper->redirector('loginfailed','index');
