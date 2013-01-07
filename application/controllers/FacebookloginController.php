@@ -99,7 +99,7 @@ class FacebookloginController extends MyController {
 			try{
 				$user_profile = $facebook->api('/me?access_token='.$token);
 			}catch(Exception $e){
-				$this->_helper->redirector('loginfailed','index');
+				$this->_helper->redirector('register','register');
 				return;
 			}
 
