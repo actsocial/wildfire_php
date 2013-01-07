@@ -25,10 +25,9 @@ class IndexController extends MyController
 		$this->_helper->layout->disableLayout();
 		$facebook = new Facebook(array(
 		  'appId'  => FB_AKEY,
-		  'secret' => FB_SKEY,
-		  'authorizationRedirectUrl' => FB_CALLBACK_URL,
+		  'secret' => FB_SKEY
 		));
-		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email'));
+		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email','redirect_uri' => FB_CALLBACK_URL));
 		
 		$lang = $this->_request->getParam('lang');
 		if (isset($lang)){

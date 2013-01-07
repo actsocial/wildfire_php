@@ -10,15 +10,15 @@ class FacebookloginController extends MyController {
 	function indexAction() {
 		$facebook = new Facebook(array(
 		  'appId'  => FB_AKEY,
-		  'secret' => FB_SKEY,
-		  'authorizationRedirectUrl' => FB_CALLBACK_URL,
+		  'secret' => FB_SKEY
 		));
 
 		$code = $_REQUEST['code'];
   	if($code) {
-  			
-				$token = $facebook->getAccessTokenFromCode($code, FB_CALLBACK_URL);
-				$user_profile = $facebook->setAccessToken($token)->api('/me');
+  			$user = $facebook->getUser();
+		
+			$user_profile = $facebook->api('/me');
+			
         
 		  	if($user_profile) {
 		  		
@@ -74,15 +74,14 @@ class FacebookloginController extends MyController {
 
 		$facebook = new Facebook(array(
 		  'appId'  => FB_AKEY,
-		  'secret' => FB_SKEY,
-		  'authorizationRedirectUrl' => FB_REGISTER_CALLBACK_URL,
+		  'secret' => FB_SKEY
 		));
 		$code = $_REQUEST['code'];
 
   	if($code) {
-			
-	  	$token = $facebook->getAccessTokenFromCode($code, FB_REGISTER_CALLBACK_URL);
-			$user_profile = $facebook->setAccessToken($token)->api('/me');
+			$user = $facebook->getUser();
+			$user_profile = $facebook->api('/me');
+	  	
 
 	  	if($user_profile) {
 

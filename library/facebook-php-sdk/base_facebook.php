@@ -120,7 +120,7 @@ abstract class BaseFacebook
   /**
    * Version.
    */
-  const VERSION = '3.2.0';
+  const VERSION = '3.2.2';
 
   /**
    * Signed Request Algorithm.
@@ -135,7 +135,6 @@ abstract class BaseFacebook
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_TIMEOUT        => 60,
     CURLOPT_USERAGENT      => 'facebook-php-3.2',
-    CURLOPT_SSL_VERIFYPEER => false
   );
 
   /**
@@ -226,7 +225,6 @@ abstract class BaseFacebook
   public function __construct($config) {
     $this->setAppId($config['appId']);
     $this->setAppSecret($config['secret']);
-    $this->setAuthorizationRedirectUrl($config['authorizationRedirectUrl']);
     if (isset($config['fileUpload'])) {
       $this->setFileUploadSupport($config['fileUpload']);
     }
@@ -301,21 +299,6 @@ abstract class BaseFacebook
     return $this->appSecret;
   }
 
-  public function setAuthorizationRedirectUrl($url) {
-    $this->authorizationRedirectUrl = $url;
-  }
-
-  public function getAuthorizationRedirectUrl() {
-    return $this->authorizationRedirectUrl;
-  }
-
-  public function setTokenRedirectUrl() {
-    $this->tokenRedirectUrl = $url;
-  }
-
-  public function getTokenRedirectUrl() {
-    return $this->tokenRedirectUrl;
-  }
   /**
    * Set the file upload support status.
    *
@@ -384,20 +367,20 @@ abstract class BaseFacebook
       // In any event, we don't have an access token, so say so.
       return false;
     }
-  
+
     if (empty($access_token_response)) {
       return false;
     }
-      
+
     $response_params = array();
     parse_str($access_token_response, $response_params);
-    
+
     if (!isset($response_params['access_token'])) {
       return false;
     }
-    
+
     $this->destroySession();
-    
+
     $this->setPersistentData(
       'access_token', $response_params['access_token']
     );
@@ -456,6 +439,11 @@ abstract class BaseFacebook
       // the JS SDK puts a code in with the redirect_uri of ''
       if (array_key_exists('code', $signed_request)) {
         $code = $signed_request['code'];
+        if ($code && $code == $this->getPersistentData('code')) {
+          // short-circuit if the code we have is the same as the one presented
+          return $this->getPersistentData('access_token');
+        }
+
         $access_token = $this->getAccessTokenFromCode($code, '');
         if ($access_token) {
           $this->setPersistentData('code', $code);
@@ -500,10 +488,10 @@ abstract class BaseFacebook
    */
   public function getSignedRequest() {
     if (!$this->signedRequest) {
-      if (isset($_REQUEST['signed_request'])) {
+      if (!empty($_REQUEST['signed_request'])) {
         $this->signedRequest = $this->parseSignedRequest(
           $_REQUEST['signed_request']);
-      } else if (isset($_COOKIE[$this->getSignedRequestCookieName()])) {
+      } else if (!empty($_COOKIE[$this->getSignedRequestCookieName()])) {
         $this->signedRequest = $this->parseSignedRequest(
           $_COOKIE[$this->getSignedRequestCookieName()]);
       }
@@ -585,13 +573,7 @@ abstract class BaseFacebook
    */
   public function getLoginUrl($params=array()) {
     $this->establishCSRFTokenState();
-    // print_r($this->getCurrentUrl());die;
-    $redirect_url = $this->getAuthorizationRedirectUrl();
-    if($redirect_url) {
-      $currentUrl = $redirect_url;
-    } else {
-      $currentUrl = $this->getCurrentUrl();
-    }
+    $currentUrl = $this->getCurrentUrl();
 
     // if 'scope' is passed as an array, convert to comma separated list
     $scopeParams = isset($params['scope']) ? $params['scope'] : null;
@@ -700,7 +682,7 @@ abstract class BaseFacebook
    * @return mixed The authorization code, or false if the authorization
    *               code could not be determined.
    */
-  public function getCode() {
+  protected function getCode() {
     if (isset($_REQUEST['code'])) {
       if ($this->state !== null &&
           isset($_REQUEST['state']) &&
@@ -729,19 +711,10 @@ abstract class BaseFacebook
    * @return integer Returns the UID of the Facebook user, or 0
    *                 if the Facebook user could not be determined.
    */
-  public function getUserFromAccessToken() {
+  protected function getUserFromAccessToken() {
     try {
       $user_info = $this->api('/me');
       return $user_info['id'];
-    } catch (FacebookApiException $e) {
-      return 0;
-    }
-  }
-
-  public function getUserInfoFromAccessToken() {
-    try {
-      $user_info = $this->api('/me');
-      return $user_info;
     } catch (FacebookApiException $e) {
       return 0;
     }
@@ -782,7 +755,7 @@ abstract class BaseFacebook
    * @return mixed An access token exchanged for the authorization code, or
    *               false if an access token could not be generated.
    */
-  public function getAccessTokenFromCode($code, $redirect_uri = null) {
+  protected function getAccessTokenFromCode($code, $redirect_uri = null) {
     if (empty($code)) {
       return false;
     }
@@ -816,7 +789,7 @@ abstract class BaseFacebook
     if (!isset($response_params['access_token'])) {
       return false;
     }
-    
+
     return $response_params['access_token'];
   }
 
@@ -1175,8 +1148,14 @@ abstract class BaseFacebook
       }
       return 'http';
     }
+    /*apache + variants specific way of checking for https*/
     if (isset($_SERVER['HTTPS']) &&
         ($_SERVER['HTTPS'] === 'on' || $_SERVER['HTTPS'] == 1)) {
+      return 'https';
+    }
+    /*nginx way of checking for https*/
+    if (isset($_SERVER['SERVER_PORT']) &&
+        ($_SERVER['SERVER_PORT'] === '443')) {
       return 'https';
     }
     return 'http';
