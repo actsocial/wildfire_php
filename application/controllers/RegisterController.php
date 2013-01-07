@@ -28,7 +28,8 @@ class RegisterController extends MyController
 
 		$facebook = new Facebook(array(
 		  'appId'  => FB_AKEY,
-		  'secret' => FB_SKEY
+		  'secret' => FB_SKEY,
+		  'cookies' => false
 		));
 		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email','redirect_uri' => FB_REGISTER_CALLBACK_URL));
 

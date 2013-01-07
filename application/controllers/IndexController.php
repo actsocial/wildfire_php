@@ -25,7 +25,8 @@ class IndexController extends MyController
 		$this->_helper->layout->disableLayout();
 		$facebook = new Facebook(array(
 		  'appId'  => FB_AKEY,
-		  'secret' => FB_SKEY
+		  'secret' => FB_SKEY,
+		  'cookies' => false
 		));
 		$this->view->facebook_login_url = $facebook->getLoginUrl(array('scope' => 'email','redirect_uri' => FB_CALLBACK_URL));
 		

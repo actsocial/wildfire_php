@@ -10,14 +10,15 @@ class FacebookloginController extends MyController {
 	function indexAction() {
 		$facebook = new Facebook(array(
 		  'appId'  => FB_AKEY,
-		  'secret' => FB_SKEY
+		  'secret' => FB_SKEY,
+		  'cookies' => false
 		));
 
 		$code = $_REQUEST['code'];
   	if($code) {
   			$user = $facebook->getUser();
-		
-			$user_profile = $facebook->api('/me');
+			$token = $facebook->getAccessToken();
+			$user_profile = $facebook->api('/me?access_token='.$token);
         
 		  	if($user_profile) {
 		  		
@@ -73,13 +74,15 @@ class FacebookloginController extends MyController {
 
 		$facebook = new Facebook(array(
 		  'appId'  => FB_AKEY,
-		  'secret' => FB_SKEY
+		  'secret' => FB_SKEY,
+		  'cookies' => false
 		));
 		$code = $_REQUEST['code'];
 
   	if($code && $_SESSION['auth_code']) {
 			$user = $facebook->getUser();
-			$user_profile = $facebook->api('/me');
+			$token = $facebook->getAccessToken();
+			$user_profile = $facebook->api('/me?access_token='.$token);
 
 	  	if($user_profile) {
 
