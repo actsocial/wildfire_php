@@ -17,8 +17,18 @@ class FacebookloginController extends MyController {
 		$code = $_REQUEST['code'];
   	if($code) {
   			$user = $facebook->getUser();
+			if(!$user){
+				$this->_helper->redirector('loginfailed','index');
+				return;
+			}
 			$token = $facebook->getAccessToken();
-			$user_profile = $facebook->api('/me?access_token='.$token);
+			try{
+				$user_profile = $facebook->api('/me?access_token='.$token);
+			}catch(Exception $e){
+				$this->_helper->redirector('loginfailed','index');
+				return;
+			}
+			
         
 		  	if($user_profile) {
 		  		
@@ -81,8 +91,17 @@ class FacebookloginController extends MyController {
 
   	if($code && $_SESSION['auth_code']) {
 			$user = $facebook->getUser();
+			if(!$user){
+				$this->_helper->redirector('loginfailed','index');
+				return;
+			}
 			$token = $facebook->getAccessToken();
-			$user_profile = $facebook->api('/me?access_token='.$token);
+			try{
+				$user_profile = $facebook->api('/me?access_token='.$token);
+			}catch(Exception $e){
+				$this->_helper->redirector('loginfailed','index');
+				return;
+			}
 
 	  	if($user_profile) {
 
@@ -147,7 +166,7 @@ class FacebookloginController extends MyController {
 						$invitation_code->receiver = $row->id;
     				$invitation_code->use_date= (string)$currentTime;
     				$invitation_code->save();
-
+					$_SESSION['auth_code'] = NULL;
 		  			if (!empty($invitation_code->auto_invitation) && $invitation_code->auto_invitation!=0){
 		    					$campaignInvitationModel = new CampaignInvitation();
 		    					$ci = $campaignInvitationModel->createRow();

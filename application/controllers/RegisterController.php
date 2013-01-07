@@ -44,6 +44,9 @@ class RegisterController extends MyController
 		if ($auth_code){
 			$form->auth_code->setValue($auth_code);			
 			$code =	$signupAuthCodeModel->fetchRow("use_date is null and auth_code = '".$auth_code."'");
+		}else if($_SESSION['auth_code']){
+			$code = $signupAuthCodeModel->fetchRow("use_date is null and id = '".$_SESSION['auth_code']."'");
+			$form->auth_code->setValue($code->auth_code);
 		}
 		$this->view->auto_code = $auth_code ;
 
