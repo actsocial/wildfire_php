@@ -92,7 +92,8 @@ class FacebookloginController extends MyController {
   	if($code && $_SESSION['auth_code']) {
 			$user = $facebook->getUser();
 			if(!$user){
-				 $this->_helper->redirector->gotoUrl("/register/register/a/".$_SESSION['auth_code']);
+				$code = $signupAuthCodeModel->fetchRow("use_date is null and id = '".$_SESSION['auth_code']."'");
+				 $this->_helper->redirector->gotoUrl("/register/register/a/".$code->auth_code);
 				return;
 			}
 			$token = $facebook->getAccessToken();
@@ -100,7 +101,8 @@ class FacebookloginController extends MyController {
 			try{
 				$user_profile = $facebook->api('/me?access_token='.$token);
 			}catch(Exception $e){
-				$this->_helper->redirector->gotoUrl("/register/register/a/".$_SESSION['auth_code']);
+				$code = $signupAuthCodeModel->fetchRow("use_date is null and id = '".$_SESSION['auth_code']."'");
+				 $this->_helper->redirector->gotoUrl("/register/register/a/".$code->auth_code);
 				return;
 			}
 
