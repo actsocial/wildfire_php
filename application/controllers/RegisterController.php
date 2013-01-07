@@ -53,8 +53,8 @@ class RegisterController extends MyController
 			$select1->where("invitation_email.signup_auth_code_id = ?",$code->id);
 			$toEmail = $db->fetchOne($select1);
 			$form->registerEmail->setValue($toEmail);
-
-			$this->view->facebook_login_url = $this->view->facebook_login_url."&state=".$code->id;
+			$_SESSION['auth_code'] = $code->id;
+			//$this->view->facebook_login_url = $this->view->facebook_login_url."&state=".$code->id;
 
 			$code->view_date = $currentTime;
 			$code->save();

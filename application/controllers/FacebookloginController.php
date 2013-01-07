@@ -77,7 +77,7 @@ class FacebookloginController extends MyController {
 		));
 		$code = $_REQUEST['code'];
 
-  	if($code) {
+  	if($code && $_SESSION['auth_code']) {
 			$user = $facebook->getUser();
 			$user_profile = $facebook->api('/me');
 
@@ -93,7 +93,7 @@ class FacebookloginController extends MyController {
 	  		$is_invitation_code_valid = False;
 	  		$db = Zend_Registry :: get('db');
 	  		//if state param is not null, then the value is invite code, get email from database by invite code
-	  		$invitation_code_id = $_REQUEST['state'];
+	  		$invitation_code_id = $_SESSION['auth_code'];
 	  		//邀请码ID，在菲律宾的活动中不需验证
 	  		if($invitation_code_id)
 	  		{
