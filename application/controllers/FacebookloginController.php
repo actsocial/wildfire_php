@@ -269,7 +269,7 @@ class FacebookloginController extends MyController {
   		}
 	  }else {
 	  	if($_SESSION['auth_code_input']){
-				$this->_helper->redirector->gotoUrl("/register/defaultregister/a/".$_SESSION['auth_code_input']);
+				$this->_helper->redirector->gotoUrl("/register/register/a/".$_SESSION['auth_code_input']);
 				return;
 	  	}else{
 	  		$this->_helper->redirector('loginfailed','index');
