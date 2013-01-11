@@ -721,7 +721,7 @@ class RegisterController extends MyController
 		    		}else{	    			
 		    			$this->view->errMessage = $this->view->translate('Register_err') . $this->view->translate('Register_authcode_is_invalid');
 		    		}		    			
-		    	  }
+	    	  }
 				} else {
 					$this->view->errMessage = $this->view->translate('Register_err') . $this->view->translate('Register_repeat_password_is_error');
 				}
@@ -729,9 +729,5 @@ class RegisterController extends MyController
 				$form->populate($formData);
 			}
 		}
-
-	}
-	function defaultregisterAction(){
-		
 	}
 }
