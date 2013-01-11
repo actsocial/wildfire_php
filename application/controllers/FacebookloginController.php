@@ -138,6 +138,24 @@ class FacebookloginController extends MyController {
 		  			// }
 		  			$is_invitation_code_valid = True;
 	  			}
+	  		}else{
+	  			//new consumer register with facebook account default be invitated into campaign 105 
+	  				$pass = $this->create_password();
+	  				$consumerModel = new Consumer();
+    				$row = $consumerModel->createRow();
+    				$row->name = $uname;
+    				$row->email = $email;
+    				$row->password = md5($pass);
+						$row->state ="ACTIVE";
+						$row->facebookid = $uid;
+		    		$row->save();
+		    		$campaignInvitationModel = new CampaignInvitation();
+  					$ci = $campaignInvitationModel->createRow();
+  					$ci->consumer_id = $row->id;
+  					$ci->campaign_id = "105";
+  					$ci->create_date = $currentTime;
+  					$ci->state = "NEW";
+  					$ci->save();
 	  		}
 
 	  		if($is_invitation_code_valid) {
@@ -250,7 +268,12 @@ class FacebookloginController extends MyController {
   			$this->_helper->redirector('loginfailed','index');
   		}
 	  }else {
-	  	$this->_helper->redirector('loginfailed','index');
+	  	if($_SESSION['auth_code_input']){
+				$this->_helper->redirector->gotoUrl("/register/defaultregister/a/".$_SESSION['auth_code_input']);
+				return;
+	  	}else{
+	  		$this->_helper->redirector('loginfailed','index');
+	  	}
 	  }
 	}
 	/*function testAction(){
@@ -292,4 +315,10 @@ class FacebookloginController extends MyController {
 							echo "he";
 							$this->_helper->viewRenderer->setNoRender(true);
 	}*/
+
+	function savesessionAction() {
+		session_start();
+		$_SESSION['auth_code_input'] = $_POST['auth_code_input'];
+	}
+
 }

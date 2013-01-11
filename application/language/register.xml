@@ -255,6 +255,15 @@
 				<seg>It is less than 6 characters long.</seg>
 			</tuv>
 		</tu>
+
+		<tu tuid='Auth_code_is_invalid'>
+			<tuv xml:lang="zh">
+				<seg>Auth_code is not a valid code.</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Auth_code is not a valid code.</seg>
+			</tuv>
+		</tu>
 		
 		<tu tuid='Register_email_is_invalid'>
 			<tuv xml:lang="zh">

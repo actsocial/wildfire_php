@@ -731,5 +731,7 @@ class RegisterController extends MyController
 		}
 
 	}
-
+	function defaultregisterAction(){
+		
+	}
 }

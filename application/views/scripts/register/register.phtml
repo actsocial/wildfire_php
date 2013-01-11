@@ -43,8 +43,42 @@
 <!--[if IE]>
 <link href="<?php echo $this->joomlahome;?>/templates/wildfire_obsidian/css/ieonly.css"  rel="stylesheet" type="text/css" />
 <![endif]-->
+<script type="text/javascript">
+function loadChangeing(){
+	jQuery("form").submit(function(e){
+    if(jQuery("#auth_code").val()==""){
+	    alert("Auth_code is required!");
+	    return false;
+    }
+    if(jQuery("#registerEmail").val()==""){
+      alert("Email is required!");
+      return false;
+    }
+    if(jQuery("#name").val()==""){
+      alert("Name is required!");
+      return false;
+    }
+    if(jQuery("#loginPhone").val()==""){
+      alert("Loginphone is required!");
+      return false;
+    }
+    if(jQuery("#registerPassword").val()==""){
+      alert("Password is required!");
+      return false;
+    }
+    if(jQuery("#repeat").val()==""){
+      alert("Repeat password is required!");
+      return false;
+    }
+    if(jQuery("#registerPassword").val()!=jQuery("#repeat").val()){
+    	alert("Repeat password must be same with Password");
+    	return false;
+    }
+	});
+}
+</script>
 </head>
-<body>
+<body onload="atfirst()">
 	 <div class="header"><div class="header-inner">
 		<!-- <div class="logo">
 			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.gif" /></a>
@@ -107,6 +141,24 @@
 // 		jQuery("#facebooksignup").attr("href","");
 // 		jQuery("#facebooksignupimg").attr("onclick",imgLogin());
 // 	});
+var ahref="";
+function atfirst(){
+	if(jQuery("#auth_code2").val()==""){
+		ahref=jQuery("#facebooksignup").attr("href");
+		jQuery("#facebooksignup").attr("href","");
+	}
+}
+function intoSession(){
+
+		if(jQuery("#auth_code2").val()!=""){
+			jQuery("#facebooksignup").attr("href",ahref);
+			jQuery.post("../facebooklogin/saveSession", {"auth_code_input": jQuery("#auth_code2").val()});	
+		}else{
+			alert("Please input your invitation code !");
+			return false;
+		}
+    
+}
 </script>
 
  <script language="JavaScript" type="text/javascript">
@@ -123,7 +175,7 @@
 
 <div style="float:left;margin-top:155px;">
 	<!-- <p style="font-size:18px">Sign Up</p> --><br>
-	&nbsp;&nbsp;Invitation Code<input id="auth_code2" type="text" value="<?php echo $this->auto_code; ?>" name="auth_code"><br>
+	&nbsp;&nbsp;Invitation Code <input id="auth_code2" onblur="intoSession()" type="text" value="<?php echo $this->auto_code; ?>" name="auth_code"><br>
 	<a href="<?php echo $this->facebook_login_url;?>" id="facebooksignup">
    		<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
   		<img src="<?php echo $this->baseUrl();?>/images/signupfacebook.gif" style="margin-left:5px;" id="facebooksignupimg">
