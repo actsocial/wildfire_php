@@ -93,9 +93,9 @@ img {
 .header .logout-panel a:hover {position:relative; left:0.5px; top:1px; clip:rect()}
 .header .navigator {
 	clear: left;
-	float: left;
+	/*float: left;*/
 	height: 36px;
-	width: 680px;
+	width:450px;
 	border: 0px solid #000;
 	margin-top: 8px;
 }
@@ -1720,6 +1720,7 @@ ul.steps li a img {
 .gift-description {
 	width: 490px;
 	float: left;
+	height: 700px;
 }
 .gift-description h1 {
 	margin:2px 20px 10px 20px;
