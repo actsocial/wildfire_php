@@ -630,5 +630,110 @@
         		<seg></seg>
         	</tuv>
         </tu>
+
+        <!-- 第二个童装问卷！ -->
+        <tu tuid='Campaign_name_42'>
+			<tuv xml:lang="zh">
+				<seg>Sergent Major童装</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Sergent Major童装</seg>
+			</tuv>
+		</tu>		   
+		<tu tuid='Campaign_simple_description_42'>
+			<tuv xml:lang="zh">
+				<seg></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg></seg>
+			</tuv>
+		</tu>		
+		<tu tuid='Campaign_invitation_description_42'>
+			<tuv xml:lang="zh">
+				<seg>法国童装品牌Sergent Major(思佳美儿)作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>法国童装品牌Sergent Major(思佳美儿)作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
+			</tuv>
+		</tu>	
+		<tu tuid='Campaign_invitation_image_name_2'>
+			<tuv xml:lang="zh">
+				<seg>campaign_invitation_bk_zh_2.png</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>campaign_invitation_bk_en_2.png</seg>
+			</tuv>
+		</tu>	
+		<tu tuid='Campaign_invitation_description2_42'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+					<p>如果你确认参加活动，将会收到：</p><br/>
+						<table style='float:left;width:100%;display:block;'>
+							<tr><td><em>－  Sergent Major 专卖店 VIP卡1张 及代金券5张
+   (活动期间，你和五位朋友可凭卡或代金券享受童装买一送一</em></td></tr>
+							<tr><td><em>－ 彩页、羽毛及折纸玩具6份      (可至门店兑换礼物)</em></td></tr>
+						</table>
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+					<p>如果你确认参加活动，将会收到：</p><br/>
+						<table style='float:left;width:100%;display:block;'>
+							<tr><td><em>－  Sergent Major 专卖店 VIP卡1张 及代金券5张
+   (活动期间，你和五位朋友可凭卡或代金券享受童装买一送一</em></td></tr>
+							<tr><td><em>－ 彩页、羽毛及折纸玩具6份      (可至门店兑换礼物)</em></td></tr>
+						</table>
+				]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Pre_campaign_intro_42'>
+			<tuv xml:lang="zh">
+				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于该童装品牌的看法。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_42'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成Sergent Major童装的星星火活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>你已经完成Sergent Major童装的星星火活动。</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_42'>
+			<tuv xml:lang="zh">
+				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Campaign_post_survey_notice_42'>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[<p>非常感谢你参加Sergent Major童装的星星火活动！</p>]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[<p>Thank you for participating in the Sergent Major Spark Campaign!</p>]]></seg>
+            </tuv>
+        </tu>
+        <tu tuid='pre_campaign_info_42'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
+			</tuv>
+		</tu> 
+        <tu tuid="pre_campaign_thankyou_42">
+        	<tuv xml:lang="zh">
+        		<!--<seg>请填写上海地区的办公地址</seg>-->
+        		<seg></seg>
+        	</tuv>
+        </tu>
+	    <tu tuid="pre_campaign_friends_42">
+        	<tuv xml:lang="zh">
+        		<seg></seg>
+        	</tuv>
+        </tu>
+
 	</body>
 </tmx>
