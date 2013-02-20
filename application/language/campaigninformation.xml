@@ -634,10 +634,10 @@
         <!-- 第二个童装问卷！ -->
         <tu tuid='Campaign_name_42'>
 			<tuv xml:lang="zh">
-				<seg>Sergent Major童装</seg>
+				<seg>SERGENT MAJOR童装</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Sergent Major童装</seg>
+				<seg>SERGENT MAJOR童装</seg>
 			</tuv>
 		</tu>		   
 		<tu tuid='Campaign_simple_description_42'>
@@ -650,10 +650,10 @@
 		</tu>		
 		<tu tuid='Campaign_invitation_description_42'>
 			<tuv xml:lang="zh">
-				<seg>法国童装品牌Sergent Major(思佳美儿)作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
+				<seg>法国童装品牌SERGENT MAJOR(思佳美儿)作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>法国童装品牌Sergent Major(思佳美儿)作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
+				<seg>法国童装品牌SERGENT MAJOR(思佳美儿)作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
 			</tuv>
 		</tu>	
 		<tu tuid='Campaign_invitation_image_name_2'>
@@ -669,9 +669,10 @@
 				<seg><![CDATA[
 					<p>如果你确认参加活动，将会收到：</p><br/>
 						<table style='float:left;width:100%;display:block;'>
-							<tr><td><em>－  Sergent Major 专卖店 VIP卡1张 及代金券5张
-   (活动期间，你和五位朋友可凭卡或代金券享受童装买一送一</em></td></tr>
-							<tr><td><em>－ 彩页、羽毛及折纸玩具6份      (可至门店兑换礼物)</em></td></tr>
+							<tr><td><em>－  SERGENT MAJOR 为您和您的朋友准备的精美礼盒</em></td></tr>
+							<tr><td><em>－ 	VIP卡1张，100元代金券 (活动期间您可凭礼券至芮欧门店抵用100元现金)</em></td></tr>
+							
+							<tr><td><em>－ 	羽毛及折纸玩具1份      (可至芮欧门店兑换礼物)</em></td></tr>
 						</table>
 				]]></seg>
 			</tuv>
@@ -679,9 +680,9 @@
 				<seg><![CDATA[
 					<p>如果你确认参加活动，将会收到：</p><br/>
 						<table style='float:left;width:100%;display:block;'>
-							<tr><td><em>－  Sergent Major 专卖店 VIP卡1张 及代金券5张
-   (活动期间，你和五位朋友可凭卡或代金券享受童装买一送一</em></td></tr>
-							<tr><td><em>－ 彩页、羽毛及折纸玩具6份      (可至门店兑换礼物)</em></td></tr>
+							<tr><td><em>－  SERGENT MAJOR 为您和您的朋友准备的精美礼盒</em></td></tr>
+							<tr><td><em>－ 	VIP卡1张，100元代金券 (活动期间您可凭礼券至芮欧门店抵用100元现金)</em></td></tr>
+							<tr><td><em>－ 	羽毛及折纸玩具1份      (可至芮欧门店兑换礼物)</em></td></tr>
 						</table>
 				]]></seg>
 			</tuv>
@@ -696,10 +697,10 @@
 		</tu>
 		<tu tuid='Thanks_For_Post_Campaign_Survey_42'>
 			<tuv xml:lang="zh">
-				<seg>你已经完成Sergent Major童装的星星火活动。</seg>
+				<seg>你已经完成SERGENT MAJOR童装的星星火活动。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>你已经完成Sergent Major童装的星星火活动。</seg>
+				<seg>你已经完成SERGENT MAJOR童装的星星火活动。</seg>
 			</tuv>
 		</tu> 
 		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_42'>
@@ -712,10 +713,10 @@
 		</tu>
 		<tu tuid='Campaign_post_survey_notice_42'>
             <tuv xml:lang="zh">
-                <seg><![CDATA[<p>非常感谢你参加Sergent Major童装的星星火活动！</p>]]></seg>
+                <seg><![CDATA[<p>非常感谢你参加SERGENT MAJOR童装的星星火活动！</p>]]></seg>
             </tuv>
             <tuv xml:lang="en">
-                <seg><![CDATA[<p>Thank you for participating in the Sergent Major Spark Campaign!</p>]]></seg>
+                <seg><![CDATA[<p>Thank you for participating in the SERGENT MAJOR Spark Campaign!</p>]]></seg>
             </tuv>
         </tu>
         <tu tuid='pre_campaign_info_42'>
