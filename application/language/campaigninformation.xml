@@ -667,7 +667,7 @@
 		<tu tuid='Campaign_invitation_description2_42'>
 			<tuv xml:lang="zh">
 				<seg><![CDATA[
-					<p>如果你确认参加活动，将会收到：</p><br/>
+					<p>如果你确认参加活动，将会收到</p><br/>
 					<p>SERGENT MAJOR 为您和您的朋友准备的精美礼盒:</p><br>
 						<table style='float:left;width:100%;display:block;'>
 							<tr><td><em>－ 	若干100元代金券 (活动期间您可凭礼券至芮欧门店抵用100元现金)</em></td></tr>
@@ -678,7 +678,7 @@
 			</tuv>
 			<tuv xml:lang="en">
 				<seg><![CDATA[
-					<p>如果你确认参加活动，将会收到：</p><br/>
+					<p>如果你确认参加活动，将会收到</p><br/>
 					<p>SERGENT MAJOR 为您和您的朋友准备的精美礼盒:</p><br>
 						<table style='float:left;width:100%;display:block;'>
 							<tr><td><em>－ 	若干100元代金券 (活动期间您可凭礼券至芮欧门店抵用100元现金)</em></td></tr>
