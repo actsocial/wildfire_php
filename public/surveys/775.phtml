@@ -523,7 +523,10 @@ function showOrHide3(val){
 	if(jQuery("#14558_0").attr("checked")=="checked"){
 		jQuery("#baisheng").css("display","block");
 	}else{
-		jQuery("div [group='baisheng'] input").each(function(index,el){el.checked=""});
+		jQuery("div [group='baisheng'] input").each(
+			function(index,el){
+				el.checked="";
+			});
 		fillStores();
 		jQuery("#baisheng").css("display","none");
 	}
@@ -531,7 +534,10 @@ function showOrHide3(val){
 	if(jQuery("#14558_1").attr("checked")=="checked"){
 		jQuery("#baodaxiang").css("display","block");
 	}else{
-		jQuery("div [group='baodaxiang'] input").each(function(index,el){el.checked=""});
+		jQuery("div [group='baodaxiang'] input").each(
+			function(index,el){
+				el.checked="";
+			});
 		fillStores();
 		jQuery("#baodaxiang").css("display","none");
 	}
@@ -539,7 +545,10 @@ function showOrHide3(val){
 	if(jQuery("#14558_2").attr("checked")=="checked"){
 		jQuery("#balichuntian").css("display","block");
 	}else{
-		jQuery("div [group='balichuntian'] input").each(function(index,el){el.checked=""});
+		jQuery("div [group='balichuntian'] input").each(
+			function(index,el){
+				el.checked="";
+			});
 		fillStores();
 		jQuery("#balichuntian").css("display","none");
 	}
@@ -547,7 +556,10 @@ function showOrHide3(val){
 	if(jQuery("#14558_3").attr("checked")=="checked"){
 		jQuery("#taipingyang").css("display","block");
 	}else{
-		jQuery("div [group='taipingyang'] input").each(function(index,el){el.checked=""});
+		jQuery("div [group='taipingyang'] input").each(
+			function(index,el){
+				el.checked="";
+			});
 		fillStores();
 		jQuery("#taipingyang").css("display","none");
 	}
@@ -555,7 +567,10 @@ function showOrHide3(val){
 	if(jQuery("#14558_4").attr("checked")=="checked"){
 		jQuery("#huijin").css("display","block");
 	}else{
-		jQuery("div [group='huijin'] input").each(function(index,el){el.checked=""});
+		jQuery("div [group='huijin'] input").each(
+			function(index,el){
+				el.checked="";
+			});
 		fillStores();
 		jQuery("#huijin").css("display","none");
 	}
@@ -563,7 +578,10 @@ function showOrHide3(val){
 	if(jQuery("#14558_5").attr("checked")=="checked"){
 		jQuery("#dongfangshangcheng").css("display","block");
 	}else{
-		jQuery("div [group='dongfangshangcheng'] input").each(function(index,el){el.checked=""});
+		jQuery("div [group='dongfangshangcheng'] input").each(
+			function(index,el){
+				el.checked="";
+			});
 		fillStores();
 		jQuery("#dongfangshangcheng").css("display","none");
 	}
@@ -747,68 +765,68 @@ function showOrHide4(val){
 	<li>
 			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_0" name="answers[14558].value" value="12479" onclick="showOrHide3(this.value) ">		<label for="14558_0">百盛</label>
 			<div id="baisheng" group="baisheng" style="display:none;margin-left: 50px;">
-						<input class="question_radio_14558 selection" id="14558_0_0" value="淮海店" type="checkbox" onclick="fillStores()"><label for="14558_0">淮海店</label>
-						<input class="question_radio_14558 selection" id="14558_0_1" value="莘庄店" type="checkbox" onclick="fillStores()"><label for="14558_0">莘庄店</label>
-						<input class="question_radio_14558 selection"  id="14558_0_2" value="长宁区天山店" type="checkbox" onclick="fillStores()"><label for="14558_0">长宁区天山店</label>
+						<input class="question_radio_14558 selection" id="14558_0_0" value="淮海店" type="checkbox" onclick="fillStores()"><label >淮海店</label>
+						<input class="question_radio_14558 selection" id="14558_0_1" value="莘庄店" type="checkbox" onclick="fillStores()"><label >莘庄店</label>
+						<input class="question_radio_14558 selection"  id="14558_0_2" value="长宁区天山店" type="checkbox" onclick="fillStores()"><label >长宁区天山店</label>
 			</div>
 	</li>
 	<li>
 			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_1" name="answers[14558].value" value="12480" onclick="showOrHide3(this.value) ">		<label for="14558_1">宝大祥青少年儿童购物中心</label>
 			<div id="baodaxiang" group="baodaxiang" style="display:none;margin-left: 50px;">
-						<input class="question_radio_14558 selection" id="14558_1_0" value="东南店" type="checkbox" onclick="fillStores()"><label for="14558_0">东南店</label>
-						<input class="question_radio_14558 selection" id="14558_1_1" value="五角场店" type="checkbox" onclick="fillStores()"><label for="14558_0">五角场店</label>
-						<input class="question_radio_14558 selection"  id="14558_1_2" value="96广场" type="checkbox" onclick="fillStores()"><label for="14558_0">96广场</label>
-						<input class="question_radio_14558 selection"  id="14558_1_3" value="七宝店" type="checkbox" onclick="fillStores()"><label for="14558_0">七宝店</label>
-						<input class="question_radio_14558 selection"  id="14558_1_4" value="大华店" type="checkbox" onclick="fillStores()"><label for="14558_0">大华店</label>
-						<input class="question_radio_14558 selection"  id="14558_1_5" value="中环店" type="checkbox" onclick="fillStores()"><label for="14558_0">中环店</label>
-						<input class="question_radio_14558 selection"  id="14558_1_6" value="江桥万达店" type="checkbox" onclick="fillStores()"><label for="14558_0">江桥万达店</label>
-						<input class="question_radio_14558 selection"  id="14558_1_7" value="四川北路店" type="checkbox" onclick="fillStores()"><label for="14558_0">四川北路店</label>
-						<input class="question_radio_14558 selection"  id="14558_1_8" value="莘庄店" type="checkbox" onclick="fillStores()"><label for="14558_0">莘庄店</label>
-						<input class="question_radio_14558 selection"  id="14558_1_9" value="奥莱店" type="checkbox" onclick="fillStores()"><label for="14558_0">奥莱店</label>
+						<input class="question_radio_14558 selection" id="14558_1_0" value="东南店" type="checkbox" onclick="fillStores()"><label for="">东南店</label>
+						<input class="question_radio_14558 selection" id="14558_1_1" value="五角场店" type="checkbox" onclick="fillStores()"><label for="">五角场店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_2" value="96广场" type="checkbox" onclick="fillStores()"><label for="">96广场</label>
+						<input class="question_radio_14558 selection"  id="14558_1_3" value="七宝店" type="checkbox" onclick="fillStores()"><label for="">七宝店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_4" value="大华店" type="checkbox" onclick="fillStores()"><label for="">大华店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_5" value="中环店" type="checkbox" onclick="fillStores()"><label for="">中环店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_6" value="江桥万达店" type="checkbox" onclick="fillStores()"><label >江桥万达店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_7" value="四川北路店" type="checkbox" onclick="fillStores()"><label for="">四川北路店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_8" value="莘庄店" type="checkbox" onclick="fillStores()"><label for="">莘庄店</label>
+						<input class="question_radio_14558 selection"  id="14558_1_9" value="奥莱店" type="checkbox" onclick="fillStores()"><label for="">奥莱店</label>
 			</div>
 	</li>
 	<li>
 			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_2" name="answers[14558].value" value="12481" onclick="showOrHide3(this.value) ">		<label for="14558_2">巴黎春天</label>
 			<div id="balichuntian" group="balichuntian" style="display:none;margin-left: 50px;">
-						<input class="question_radio_14558 selection" id="14558_2_0" value="虹口店" type="checkbox" onclick="fillStores()"><label for="14558_0">虹口店</label>
-						<input class="question_radio_14558 selection" id="14558_2_1" value="定西路店" type="checkbox" onclick="fillStores()"><label for="14558_0">定西路店</label>
-						<input class="question_radio_14558 selection"  id="14558_2_2" value="淮海店" type="checkbox" onclick="fillStores()"><label for="14558_0">淮海店</label>
-						<input class="question_radio_14558 selection"  id="14558_2_3" value="五角场" type="checkbox" onclick="fillStores()"><label for="14558_0">五角场</label>
-						<input class="question_radio_14558 selection"  id="14558_2_4" value="浦建店" type="checkbox" onclick="fillStores()"><label for="14558_0">浦建店</label>
-						<input class="question_radio_14558 selection"  id="14558_2_5" value="七宝店" type="checkbox" onclick="fillStores()"><label for="14558_0">七宝店</label>
-						<input class="question_radio_14558 selection"  id="14558_2_6" value="中山公园" type="checkbox" onclick="fillStores()"><label for="14558_0">中山公园</label>
-						<input class="question_radio_14558 selection"  id="14558_2_7" value="长寿路店" type="checkbox" onclick="fillStores()"><label for="14558_0">长寿路店</label>
-						<input class="question_radio_14558 selection"  id="14558_2_8" value="宝山店生活馆" type="checkbox" onclick="fillStores()"><label for="14558_0">宝山店生活馆</label>
-						<input class="question_radio_14558 selection"  id="14558_2_9" value="天成店" type="checkbox" onclick="fillStores()"><label for="14558_0">天成店</label>
+						<input class="question_radio_14558 selection" id="14558_2_0" value="虹口店" type="checkbox" onclick="fillStores()"><label for="">虹口店</label>
+						<input class="question_radio_14558 selection" id="14558_2_1" value="定西路店" type="checkbox" onclick="fillStores()"><label for="">定西路店</label>
+						<input class="question_radio_14558 selection"  id="14558_2_2" value="淮海店" type="checkbox" onclick="fillStores()"><label for="">淮海店</label>
+						<input class="question_radio_14558 selection"  id="14558_2_3" value="五角场" type="checkbox" onclick="fillStores()"><label for="">五角场</label>
+						<input class="question_radio_14558 selection"  id="14558_2_4" value="浦建店" type="checkbox" onclick="fillStores()"><label for="">浦建店</label>
+						<input class="question_radio_14558 selection"  id="14558_2_5" value="七宝店" type="checkbox" onclick="fillStores()"><label for="">七宝店</label>
+						<input class="question_radio_14558 selection"  id="14558_2_6" value="中山公园" type="checkbox" onclick="fillStores()"><label for="">中山公园</label>
+						<input class="question_radio_14558 selection"  id="14558_2_7" value="长寿路店" type="checkbox" onclick="fillStores()"><label for="">长寿路店</label>
+						<input class="question_radio_14558 selection"  id="14558_2_8" value="宝山店生活馆" type="checkbox" onclick="fillStores()"><label for="">宝山店生活馆</label>
+						<input class="question_radio_14558 selection"  id="14558_2_9" value="天成店" type="checkbox" onclick="fillStores()"><label for="">天成店</label>
 			</div>
 	</li>
 	<li>
 			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_3" name="answers[14558].value" value="12482" onclick="showOrHide3(this.value) ">		<label for="14558_3">太平洋</label>
 			<div id="taipingyang" group="taipingyang" style="display:none;margin-left: 50px;">
-						<input class="question_radio_14558 selection" id="14558_3_0" value="淮海店" type="checkbox" onclick="fillStores()"><label for="14558_0">淮海店</label>
-						<input class="question_radio_14558 selection" id="14558_3_1" value="徐汇店" type="checkbox" onclick="fillStores()"><label for="14558_0">徐汇店</label>
-						<input class="question_radio_14558 selection"  id="14558_3_2" value="不夜店" type="checkbox" onclick="fillStores()"><label for="14558_0">不夜店</label>
+						<input class="question_radio_14558 selection" id="14558_3_0" value="淮海店" type="checkbox" onclick="fillStores()"><label for="">淮海店</label>
+						<input class="question_radio_14558 selection" id="14558_3_1" value="徐汇店" type="checkbox" onclick="fillStores()"><label for="">徐汇店</label>
+						<input class="question_radio_14558 selection"  id="14558_3_2" value="不夜店" type="checkbox" onclick="fillStores()"><label for="">不夜店</label>
 			</div>
 	</li>
 	<li>
 			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_4" name="answers[14558].value" value="12483" onclick="showOrHide3(this.value) ">		<label for="14558_4">汇金</label>
 			<div id="huijin" group="huijin" style="display:none;margin-left: 50px;">
-						<input class="question_radio_14558 selection" id="14558_4_0" value="徐汇店" type="checkbox" onclick="fillStores()"><label for="14558_0">徐汇店</label>
-						<input class="question_radio_14558 selection" id="14558_4_1" value="虹桥店" type="checkbox" onclick="fillStores()"><label for="14558_0">虹桥店</label>
+						<input class="question_radio_14558 selection" id="14558_4_0" value="徐汇店" type="checkbox" onclick="fillStores()"><label for="">徐汇店</label>
+						<input class="question_radio_14558 selection" id="14558_4_1" value="虹桥店" type="checkbox" onclick="fillStores()"><label for="">虹桥店</label>
 			</div>
 	</li>
 	<li>
 			<input group="14558" class="question_radio_14558 selection" type="checkbox" id="14558_5" name="answers[14558].value" value="12484" onclick="showOrHide3(this.value) ">		<label for="14558_5">东方商场</label>
 			<div id="dongfangshangcheng" group="dongfangshangcheng" style="display:none;margin-left: 50px;">
-						<input class="question_radio_14558 selection" id="14558_5_0" value="徐汇店" type="checkbox" onclick="fillStores()"><label for="14558_0">徐汇店</label>
-						<input class="question_radio_14558 selection" id="14558_5_1" value="杨浦店" type="checkbox" onclick="fillStores()"><label for="14558_0">杨浦店</label>
-						<input class="question_radio_14558 selection"  id="14558_5_2" value="南东店" type="checkbox" onclick="fillStores()"><label for="14558_0">南东店</label>
-						<input class="question_radio_14558 selection"  id="14558_5_3" value="奉贤店" type="checkbox" onclick="fillStores()"><label for="14558_0">奉贤店</label>
-						<input class="question_radio_14558 selection"  id="14558_5_4" value="淮海店" type="checkbox" onclick="fillStores()"><label for="14558_0">淮海店</label>
-						<input class="question_radio_14558 selection"  id="14558_5_5" value="嘉定店" type="checkbox" onclick="fillStores()"><label for="14558_0">嘉定店</label>
-						<input class="question_radio_14558 selection"  id="14558_5_6" value="百联中环店" type="checkbox" onclick="fillStores()"><label for="14558_0">百联中环店</label>
-						<input class="question_radio_14558 selection"  id="14558_5_7" value="宝山店" type="checkbox" onclick="fillStores()"><label for="14558_0">宝山店</label>
-						<input class="question_radio_14558 selection"  id="14558_5_8" value="虹口店" type="checkbox" onclick="fillStores()"><label for="14558_0">虹口店</label>
+						<input class="question_radio_14558 selection" id="14558_5_0" value="徐汇店" type="checkbox" onclick="fillStores()"><label for="">徐汇店</label>
+						<input class="question_radio_14558 selection" id="14558_5_1" value="杨浦店" type="checkbox" onclick="fillStores()"><label for="">杨浦店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_2" value="南东店" type="checkbox" onclick="fillStores()"><label for="">南东店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_3" value="奉贤店" type="checkbox" onclick="fillStores()"><label for="">奉贤店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_4" value="淮海店" type="checkbox" onclick="fillStores()"><label for="">淮海店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_5" value="嘉定店" type="checkbox" onclick="fillStores()"><label for="">嘉定店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_6" value="百联中环店" type="checkbox" onclick="fillStores()"><label for="">百联中环店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_7" value="宝山店" type="checkbox" onclick="fillStores()"><label for="">宝山店</label>
+						<input class="question_radio_14558 selection"  id="14558_5_8" value="虹口店" type="checkbox" onclick="fillStores()"><label for="">虹口店</label>
 			</div>
 	</li>
 	<li>
