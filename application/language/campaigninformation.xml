@@ -650,10 +650,10 @@
 		</tu>		
 		<tu tuid='Campaign_invitation_description_42'>
 			<tuv xml:lang="zh">
-				<seg>法国童装品牌SERGENT MAJOR(思佳美儿)作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
+				<seg>法国童装品牌SERGENT MAJOR作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>法国童装品牌SERGENT MAJOR(思佳美儿)作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
+				<seg>法国童装品牌SERGENT MAJOR作为孩子们的伙伴，通过不断激发想象力和创造力，让他们更加快乐健康的成长。</seg>
 			</tuv>
 		</tu>	
 		<tu tuid='Campaign_invitation_image_name_2'>
@@ -668,22 +668,22 @@
 			<tuv xml:lang="zh">
 				<seg><![CDATA[
 					<p>如果你确认参加活动，将会收到：</p><br/>
+					<p>SERGENT MAJOR 为您和您的朋友准备的精美礼盒:</p><br>
 						<table style='float:left;width:100%;display:block;'>
-							<tr><td><em>－  SERGENT MAJOR 为您和您的朋友准备的精美礼盒:</em></td></tr>
-							<tr><td><em>－ 	VIP卡1张 </em></td></tr>
 							<tr><td><em>－ 	若干100元代金券 (活动期间您可凭礼券至芮欧门店抵用100元现金)</em></td></tr>
 							<tr><td><em>－ 	若干羽毛及折纸玩具  (可至芮欧门店兑换礼物)</em></td></tr>
+							<tr><td><em>－ 	VIP卡1张 </em></td></tr>
 						</table>
 				]]></seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg><![CDATA[
 					<p>如果你确认参加活动，将会收到：</p><br/>
+					<p>SERGENT MAJOR 为您和您的朋友准备的精美礼盒:</p><br>
 						<table style='float:left;width:100%;display:block;'>
-							<tr><td><em>－  SERGENT MAJOR 为您和您的朋友准备的精美礼盒:</em></td></tr>
-							<tr><td><em>－ 	VIP卡1张 </em></td></tr>
 							<tr><td><em>－ 	若干100元代金券 (活动期间您可凭礼券至芮欧门店抵用100元现金)</em></td></tr>
 							<tr><td><em>－ 	若干羽毛及折纸玩具  (可至芮欧门店兑换礼物)</em></td></tr>
+							<tr><td><em>－ 	VIP卡1张 </em></td></tr>
 						</table>
 				]]></seg>
 			</tuv>
