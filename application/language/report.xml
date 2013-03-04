@@ -897,7 +897,7 @@
 				</tuv>
 			</tu>
 			
-			<tu tuid='Report_Tag_H&M'>
+<!-- 			<tu tuid='Report_Tag_H&M'>
 				<tuv xml:lang="zh">
 					<seg>H&M 童装系列</seg>
 				</tuv>
@@ -913,7 +913,7 @@
 				<tuv xml:lang="en">
 					<seg>Me&City</seg>
 				</tuv>
-			</tu>
+			</tu> -->
 			
 			<tu tuid='Report_Tag_Others'>
 				<tuv xml:lang="zh">
