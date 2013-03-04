@@ -94,10 +94,10 @@
 
                 <tu tuid='Upload_hint'>
 			<tuv xml:lang="zh">
-				<seg>支持格式：jpg，gif，png，最大数量：3张，每张大小限制：10MB</seg>
+				<seg>    支持格式：jpg，gif，png，每张大小限制：10MB</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Support format: jpg,gif,png, Quantity limit: 3, Size limit: 10MB</seg>
+				<seg>    Support format: jpg,gif,png, Size limit: 10MB</seg>
 			</tuv>
 		</tu>
 
@@ -136,191 +136,271 @@
 				<seg>Wom report</seg>
 			</tuv>
 		</tu>
-		<!-- Report Tag -->
-		<tu tuid='Report_Tag_Negative'>
-			<tuv xml:lang="zh">
-				<seg>负面报告</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Negative</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Off-topic'>
-			<tuv xml:lang="zh">
-				<seg>偏离主题</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Off-topic</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Coupon'>
-			<tuv xml:lang="zh">
-				<seg>优惠券</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Coupon</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Coupon Problem'>
-			<tuv xml:lang="zh">
-				<seg>优惠券问题</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Coupon Problem</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_IM'>
-			<tuv xml:lang="zh">
-				<seg>网络聊天工具</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>IM</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Blog'>
-			<tuv xml:lang="zh">
-				<seg>博客</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Blog</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_BBS'>
-			<tuv xml:lang="zh">
-				<seg>论坛</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>BBS</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Casual chatting'>
-			<tuv xml:lang="zh">
-				<seg>普通谈论</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Casual chatting</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Telephone'>
-			<tuv xml:lang="zh">
-				<seg>电话</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Telephone</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Competitor'>
-			<tuv xml:lang="zh">
-				<seg>谈到竞争者</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Competitor</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Discussion group'>
-			<tuv xml:lang="zh">
-				<seg>与一群人谈论</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Discussion group</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Suspicious'>
-			<tuv xml:lang="zh">
-				<seg>报告令人怀疑</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Suspicious</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Pest'>
-			<tuv xml:lang="zh">
-				<seg>Pest报告</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Pest</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Very Notable'>
-			<tuv xml:lang="zh">
-				<seg>值得关注</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Very Notable</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Website Drip'>
-			<tuv xml:lang="zh">
-				<seg>可以公开显示</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Website Drip</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Client+'>
-			<tuv xml:lang="zh">
-				<seg>好评商家</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Client+</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Client-'>
-			<tuv xml:lang="zh">
-				<seg>差评商家</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Client-</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Client Suggestion'>
-			<tuv xml:lang="zh">
-				<seg>建议商家</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Client Suggestion</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_XXH+'>
-			<tuv xml:lang="zh">
-				<seg>表扬星星火</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>XXH+</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_XXH-'>
-			<tuv xml:lang="zh">
-				<seg>批评星星火</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>XXH-</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_XXH Suggestion'>
-			<tuv xml:lang="zh">
-				<seg>建议星星火</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>XXH Suggestion</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Purchase+'>
-			<tuv xml:lang="zh">
-				<seg>有意购买</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Purchase+</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Purchase-'>
-			<tuv xml:lang="zh">
-				<seg>不想购买</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Purchase-</seg>
-			</tuv>
-		</tu>
+				<!-- Report Tag  a:报告内容 report content  -->
+					<tu tuid='Report_Tag_Negative'>
+						<tuv xml:lang="zh">
+							<seg>负面报告</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Negative</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Off-topic'>
+						<tuv xml:lang="zh">
+							<seg>偏离主题</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Off-topic</seg>
+						</tuv>
+					</tu>
+					<!-- new add tag -->
+					<tu tuid='Report_Tag_Voucher'>
+						<tuv xml:lang="zh">
+							<seg>优惠券</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Voucher</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid='Report_Tag_VIP Card'>
+						<tuv xml:lang="zh">
+							<seg>VIP卡</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>VIP Card</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Hat Redemption'>
+						<tuv xml:lang="zh">
+							<seg>帽子兑换</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Hat Redemption</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid='Report_Tag_Mention the Competitors'>
+						<tuv xml:lang="zh">
+							<seg>谈到竞争者</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Mention the Competitors</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid='Report_Tag_Talk with a bunch of people'>
+						<tuv xml:lang="zh">
+							<seg>与一群人谈论</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Talk with a bunch of people</seg>
+						</tuv>
+					</tu>
+					<!-- add new tag b:谈论方式  The Conversation -->
+					
+					<tu tuid='Report_Tag_Face-to-face'>
+						<tuv xml:lang="zh">
+							<seg>面对面</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Face-to-face</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid='Report_Tag_IM Service'>
+						<tuv xml:lang="zh">
+							<seg>网络聊天工具</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>IM Service</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid='Report_Tag_phone'>
+						<tuv xml:lang="zh">
+							<seg>电话</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>phone</seg>
+						</tuv>
+					</tu>		
+					
+					<tu tuid='Report_Tag_Blog'>
+						<tuv xml:lang="zh">
+							<seg>博客</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Blog</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Weibo'>
+						<tuv xml:lang="zh">
+							<seg>微博</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Weibo</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Forum'>
+						<tuv xml:lang="zh">
+							<seg>论坛</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Forum</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid='Report_Tag_Others Way'>
+						<tuv xml:lang="zh">
+							<seg>其他谈论方式</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Others Way</seg>
+						</tuv>
+					</tu>
+					<!-- add new tag c:评价报告 Report Review -->
+					<tu tuid='Report_Tag_Suspicious Report'>
+						<tuv xml:lang="zh">
+							<seg>报告令人怀疑</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Suspicious Report</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Pest Report'>
+						<tuv xml:lang="zh">
+							<seg>Pest报告</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Pest Report</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Worth to pay attention'>
+						<tuv xml:lang="zh">
+							<seg>值得关注</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Worth to pay attention</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Can go public'>
+						<tuv xml:lang="zh">
+							<seg>可以公开显示</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Can go public</seg>
+						</tuv>
+					</tu>
+					
+					<!-- add new tag d:用户评价  comments -->
+					
+					<tu tuid='Report_Tag_Good Comments to SM'>
+						<tuv xml:lang="zh">
+							<seg>好评商家</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Good Comments to SM</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Bad Comments to SM'>
+						<tuv xml:lang="zh">
+							<seg>差评商家</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Bad Comments to SM</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Suggestion to SM'>
+						<tuv xml:lang="zh">
+							<seg>建议商家</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Suggestion to SM</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Praise Wildfire'>
+						<tuv xml:lang="zh">
+							<seg>表扬星星火</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Praise Wildfire</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Criticize Wildfire'>
+						<tuv xml:lang="zh">
+							<seg>批评星星火</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Criticize Wildfire</seg>
+						</tuv>
+					</tu>
+					<tu tuid='Report_Tag_Suggestion to Wildfire'>
+						<tuv xml:lang="zh">
+							<seg>建议星星火</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Suggestion to Wildfire</seg>
+						</tuv>
+					</tu>
+					
+					<!-- add new tag e:购买意向 Purchase Intention -->
+					
+					<tu tuid='Report_Tag_Intent to buy'>
+						<tuv xml:lang="zh">
+							<seg>有意购买</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Intent to buy</seg>
+						</tuv>
+					</tu>
+					<tu tuid="Report_Tag_Don't want to buy">
+						<tuv xml:lang="zh">
+							<seg>不想购买</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Don't want to buy</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid="Report_Tag_Price is high">
+						<tuv xml:lang="zh">
+							<seg>价格高</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Price is high</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid="Report_Tag_Price is good">
+						<tuv xml:lang="zh">
+							<seg>价格实惠</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Price is good</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid="Report_Tag_Price is low">
+						<tuv xml:lang="zh">
+							<seg>价格低</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Price is low</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid="Report_Tag_Others Intent">
+						<tuv xml:lang="zh">
+							<seg>其他购买意向</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Others Intent</seg>
+						</tuv>
+					</tu>
+					
+			<!-- end of add new tag -->
+		
 		<tu tuid='Report_Tag_Environmental Conditions'>
 			<tuv xml:lang="zh">
 				<seg>谈到馅饼的使用环境</seg>
@@ -403,70 +483,80 @@
 		</tu>
 		<tu tuid='Report_Tag_Type_x'>
 			<tuv xml:lang="zh">
-				<seg>The Frequency of Drink：</seg>
+				<seg>产品相关：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>The Frequency of Drink:</seg>
+				<seg>Other:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Report_Tag_Type_y'>
 			<tuv xml:lang="zh">
-				<seg>The Taste：</seg>
+				<seg>线下活动：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>The Taste:</seg>
+				<seg>Other:</seg>
 			</tuv>
 		</tu>
-	       <tu tuid='Report_Tag_Type_z'>
-		  <tuv xml:lang="zh">
-		   <seg>Reason for drinking maternal milk:</seg>
-		  </tuv>
-		  <tuv xml:lang="en">
-		   <seg>Reason for drinking maternal milk:</seg>
-		  </tuv>
-		 </tu>
 		<tu tuid='Report_Tag_Type_w'>
 			<tuv xml:lang="zh">
-				<seg>Consumption Occasion：</seg>
+				<seg>品牌信息：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Consumption Occasion:</seg>
+				<seg>Brand message:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Report_Tag_Type_v'>
 			<tuv xml:lang="zh">
-				<seg>Preferred Way of Consumption：</seg>
+				<seg>口味反馈：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Preferred Way of Consumption:</seg>
+				<seg>Taste feedback:</seg>
 			</tuv>
 		</tu>
-		<tu tuid='Report_Tag_Type_s'>
+		<tu tuid='Report_Tag_Type_u'>
 			<tuv xml:lang="zh">
-				<seg>Competitor:</seg>
+				<seg>饮用场合：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Competitor:</seg>
+				<seg>Moments to drink:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Report_Tag_Type_t'>
 			<tuv xml:lang="zh">
-				<seg>The Conversation:</seg>
+				<seg>饮用方法：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>The Conversation:</seg>
+				<seg>Ways to drink:</seg>
 			</tuv>
 		</tu>
-
-                <tu tuid='Report_Tag_Type_u'>
-                	<tuv xml:lang="zh">
-                		<seg>Purchase Intent:</seg>
-                	</tuv>
-                	<tuv xml:lang="en">
-                	 	<seg>Purchase Intent:</seg>
-                	</tuv>
-                 </tu>
-
+		<!-- 童装tag -->
+					<tu tuid='Report_Tag_Type_K'>
+						<tuv xml:lang="zh">
+							<seg>竞争对手：</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>Competitor:</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid='Report_Tag_Type_L'>
+						<tuv xml:lang="zh">
+							<seg>童装：</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>The Clothes:</seg>
+						</tuv>
+					</tu>
+					
+					<tu tuid='Report_Tag_Type_M'>
+						<tuv xml:lang="zh">
+							<seg>门店：</seg>
+						</tuv>
+						<tuv xml:lang="en">
+							<seg>The Store:</seg>
+						</tuv>
+					</tu>
+		
 		<tu tuid='Report_Tag_Perpect baileys'>
 			<tuv xml:lang="zh">
 				<seg>完美百利</seg>
@@ -520,7 +610,6 @@
 			<tuv xml:lang="zh">
 				<seg>在酒吧/KTV/俱乐部聚会</seg>
 			</tuv>
-
 			<tuv xml:lang="en">
 				<seg>Gathering at bar/KTV/club</seg>
 			</tuv>
@@ -733,414 +822,268 @@
 				<seg>Office</seg>
 			</tuv>
 		</tu>
-		<tu tuid='Report_Tag_Chilled / Iced'>
-			<tuv xml:lang="zh">
-				<seg>Chilled / Iced</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Chilled / Iced</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Warm'>
-			<tuv xml:lang="zh">
-				<seg>Warm</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Warm</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Room temperature'>
-			<tuv xml:lang="zh">
-				<seg>Room temperature</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Room temperature</seg>
-			</tuv>
-		</tu>
-
-		<tu tuid='Report_Tag_Mixed with chocolate powder'>
-			<tuv xml:lang="zh">
-				<seg>Mixed with chocolate powder</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Mixed with chocolate powder</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Fruit/ Yoghurt smoothie'>
-			<tuv xml:lang="zh">
-				<seg>Fruit/ Yoghurt smoothie</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Fruit/ Yoghurt smoothie</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Drink with the meal'>
-			<tuv xml:lang="zh">
-				<seg>Drink with the meal</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Drink with the meal</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Irregular ( ask why if influencers say they drink irregularly)'>
-			<tuv xml:lang="zh">
-				<seg>Irregular ( ask why if influencers say they drink irregularly)</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Irregular ( ask why if influencers say they drink irregularly)</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Morning'>
-			<tuv xml:lang="zh">
-				<seg>Morning</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Morning</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Before sleep'>
-			<tuv xml:lang="zh">
-				<seg>Before sleep</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Before sleep</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_As a snack in between meals'>
-			<tuv xml:lang="zh">
-				<seg>As a snack in between meals</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>As a snack in between meals</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_once a day'>
-			<tuv xml:lang="zh">
-				<seg>once a day</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>once a day</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_twice a day'>
-			<tuv xml:lang="zh">
-				<seg>twice a day</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>twice a day</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_three times a day'>
-			<tuv xml:lang="zh">
-				<seg>three times a day</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>three times a day</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_more than three times a day'>
-			<tuv xml:lang="zh">
-				<seg>more than three times a day</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>more than three times a day</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Others'>
-			<tuv xml:lang="zh">
-				<seg>Others</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Others</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Like the taste'>
-			<tuv xml:lang="zh">
-				<seg>Like the taste</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Like the taste</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Has the right level of sweetness'>
-			<tuv xml:lang="zh">
-				<seg>Has the right level of sweetness</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Has the right level of sweetness</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_too Nice smell'>
-			<tuv xml:lang="zh">
-				<seg>too Nice smell</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>too Nice smell</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Good Mouthfeel'>
-			<tuv xml:lang="zh">
-				<seg>Good Mouthfeel</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Good Mouthfeel</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Balance my diet'>
-			<tuv xml:lang="zh">
-				<seg>Balance my diet</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Balance my diet</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Provides Vitamins'>
-			<tuv xml:lang="zh">
-				<seg>Provides Vitamins</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Provides Vitamins</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_For healthy digestive system / probiotics'>
-			<tuv xml:lang="zh">
-				<seg>For healthy digestive system / probiotics</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>For healthy digestive system / probiotics</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_DHA'>
-			<tuv xml:lang="zh">
-				<seg>DHA</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>DHA</seg>
-			</tuv>
-		</tu>
-				<tu tuid='Report_Tag_Folic Acid'>
-			<tuv xml:lang="zh">
-				<seg>Folic Acid</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Folic Acid</seg>
-			</tuv>
-		</tu>
-				<tu tuid='Report_Tag_Calcium'>
-			<tuv xml:lang="zh">
-				<seg>Calcium</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Calcium</seg>
-			</tuv>
-		</tu>
-				<tu tuid='Report_Tag_Iron'>
-			<tuv xml:lang="zh">
-				<seg>Iron</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Iron</seg>
-			</tuv>
-		</tu>
-				<tu tuid='Report_Tag_Reduced / low fat'>
-			<tuv xml:lang="zh">
-				<seg>Reduced / low fat</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Reduced / low fat</seg>
-			</tuv>
-		</tu>
-				<tu tuid='Report_Tag_Physical development (others)'>
-			<tuv xml:lang="zh">
-				<seg>Physical development (others)</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Physical development (others)</seg>
-			</tuv>
-		</tu>
-				<tu tuid='Report_Tag_For breastfeeding'>
-			<tuv xml:lang="zh">
-				<seg>For breastfeeding</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>For breastfeeding</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Cinelex'>
-			<tuv xml:lang="zh">
-				<seg>Cinelex</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Cinelex</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Annum'>
-			<tuv xml:lang="zh">
-				<seg>Annum</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Annum</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_other'>
-			<tuv xml:lang="zh">
-				<seg>other</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>other</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Face-to-face'>
-			<tuv xml:lang="zh">
-				<seg>Face-to-face</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Face-to-face</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Phone'>
-			<tuv xml:lang="zh">
-				<seg>Phone</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Phone</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Instant Messenger Service'>
-			<tuv xml:lang="zh">
-				<seg>Instant Messenger Service</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Instant Messenger Service</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Blog'>
-			<tuv xml:lang="zh">
-				<seg>Blog</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Blog</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Forum'>
-			<tuv xml:lang="zh">
-				<seg>Forum</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Forum</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_ante- pre- or post natal class'>
-			<tuv xml:lang="zh">
-				<seg>ante- pre- or post natal class</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>ante- pre- or post natal class</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_Intent to buy'>
-			<tuv xml:lang="zh">
-				<seg>Intent to buy</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Intent to buy</seg>
-			</tuv>
-		</tu>
-		<tu tuid="Report_Tag_don't want to buy">
-			<tuv xml:lang="zh">
-				<seg>don't want to buy</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>don't want to buy</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_price too high'>
-			<tuv xml:lang="zh">
-				<seg>price too high</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>price too high</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_price is good'>
-			<tuv xml:lang="zh">
-				<seg>price is good</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>price is good</seg>
-			</tuv>
-		</tu>
-		<tu tuid='Report_Tag_price is low'>
-			<tuv xml:lang="zh">
-				<seg>price is low</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>price is low</seg>
-			</tuv>
-		</tu>
-		<tu tuid="Report_Tag_don't know where to buy">
-			<tuv xml:lang="zh">
-				<seg>don't know where to buy</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>don't know where to buy</seg>
-			</tuv>
-		</tu>
-		<tu tuid="Report_Tag_Similac">
-			<tuv xml:lang="zh">
-				<seg>Similac</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Similac</seg>
-			</tuv>
-		</tu>
-		<tu tuid="Report_Tag_Aumum">
-			<tuv xml:lang="zh">
-				<seg>Aumum</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Aumum</seg>
-			</tuv>
-		</tu>
-		<tu tuid="Report_Tag_Wyeth">
-			<tuv xml:lang="zh">
-				<seg>Wyeth</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Wyeth</seg>
-			</tuv>
-		</tu>
-		<tu tuid="Report_Tag_Abbott">
-			<tuv xml:lang="zh">
-				<seg>Abbott</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Abbott</seg>
-			</tuv>
-		</tu>
-		<tu tuid="Report_Tag_Dumex">
-			<tuv xml:lang="zh">
-				<seg>Dumex</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Dumex</seg>
-			</tuv>
-		</tu>
-		<tu tuid="Report_Tag_Friso">
-			<tuv xml:lang="zh">
-				<seg>Friso</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Friso</seg>
-			</tuv>
-		</tu>
-		<tu tuid="Report_Tag_Meiji">
-			<tuv xml:lang="zh">
-				<seg>Meiji</seg>
-			</tuv>
-			<tuv xml:lang="en">
-				<seg>Meiji</seg>
-			</tuv>
-		</tu>
+		
+		<!--  童装活动Tags   -->
+			<!-- Competitor 关于品牌 -->
+			<tu tuid='Report_Tag_Eland'>
+				<tuv xml:lang="zh">
+					<seg>Eland 童装系列</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Eland</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Paw in Paw'>
+				<tuv xml:lang="zh">
+					<seg>Paw in Paw 童装</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Paw in Paw</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Okaidi'>
+				<tuv xml:lang="zh">
+					<seg>Okaidi 欧开蒂</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Okaidi</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Jacadi'>
+				<tuv xml:lang="zh">
+					<seg>Jacadi 亚卡迪</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Jacadi</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Classic Teddy'>
+				<tuv xml:lang="zh">
+					<seg>Classic Teddy 精典泰迪</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Classic Teddy</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Tweenie Weenie'>
+				<tuv xml:lang="zh">
+					<seg>Tweenie Weenie 维尼熊</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Tweenie Weenie</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Ivy House'>
+				<tuv xml:lang="zh">
+					<seg>Ivy House 常春藤</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Ivy House</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_ZARA'>
+				<tuv xml:lang="zh">
+					<seg>ZARA 童装系列</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>ZARA</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_H&M'>
+				<tuv xml:lang="zh">
+					<seg>H&M 童装系列</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>H&M</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Me&City'>
+				<tuv xml:lang="zh">
+					<seg>Me&City 童装系列</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Me&City</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Others'>
+				<tuv xml:lang="zh">
+					<seg>其他童装品牌</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Others</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Others'>
+				<tuv xml:lang="zh">
+					<seg>其他童装品牌</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Others</seg>
+				</tuv>
+			</tu>
+			<!-- 童装 -->
+			<tu tuid='Report_Tag_Quality'>
+				<tuv xml:lang="zh">
+					<seg>质量</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Quality</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Design'>
+				<tuv xml:lang="zh">
+					<seg>设计风格</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Design</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Easy for Mix-match'>
+				<tuv xml:lang="zh">
+					<seg>易于混搭</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Easy for Mix-match</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Trendy'>
+				<tuv xml:lang="zh">
+					<seg>时尚</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Trendy</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Comfort'>
+				<tuv xml:lang="zh">
+					<seg>舒适度</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Comfort</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Colors'>
+				<tuv xml:lang="zh">
+					<seg>颜色</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Colors</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Fitting/Size'>
+				<tuv xml:lang="zh">
+					<seg>尺寸</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Fitting/Size</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Fabrics'>
+				<tuv xml:lang="zh">
+					<seg>面料</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Fabrics</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Others Characteristic'>
+				<tuv xml:lang="zh">
+					<seg>其他童装特点</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Others Characteristic</seg>
+				</tuv>
+			</tu>
+			<!-- 门店 -->
+			<tu tuid='Report_Tag_Store Location'>
+				<tuv xml:lang="zh">
+					<seg>门店位置</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Store Location</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Store Environment'>
+				<tuv xml:lang="zh">
+					<seg>门店环境</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Store Environment</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Store Service'>
+				<tuv xml:lang="zh">
+					<seg>门店服务</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Store Service</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Store Experience'>
+				<tuv xml:lang="zh">
+					<seg>门店购物经历</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Store Experience</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Sotre Animation(Shooting, Play Ground, Measurment, etc.)'>
+				<tuv xml:lang="zh">
+					<seg>门店动画</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Sotre Animation(Shooting, Play Ground, Measurment, etc.)</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Clothes Display'>
+				<tuv xml:lang="zh">
+					<seg>衣服陈列</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Clothes Display</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Trying Room'>
+				<tuv xml:lang="zh">
+					<seg>试衣间</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Trying Room</seg>
+				</tuv>
+			</tu>
+			
+			<tu tuid='Report_Tag_Others'>
+				<tuv xml:lang="zh">
+					<seg>门店其他特点</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Others</seg>
+				</tuv>
+			</tu>
+			
 	</body>
 </tmx>
