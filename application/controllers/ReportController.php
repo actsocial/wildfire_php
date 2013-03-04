@@ -296,7 +296,7 @@ class ReportController extends MyController
 				    	$reportModel = new Report();
 				    	$report = $reportModel->find($reportId)->current();
 				    	$config = Zend_Registry::get('config');
-				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/11376";
+				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2293";
 				    	// $url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 							$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
               $url_other = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/77";
@@ -1536,7 +1536,7 @@ function adminreportbatchreplyAction(){
 				    	$reportModel = new Report();
 				    	$report = $reportModel->find($reportId)->current();
 				    	$config = Zend_Registry::get('config');
-				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/11376";
+				    	$url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/2293";
 				    	// $url_zh = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/645";
 						$url_en = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/707";
                                                 $url_other = $config->indicate2->home."/report/showAnswer/accessCode/".$report['accesscode']."/questionId/77";
