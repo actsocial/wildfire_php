@@ -897,7 +897,7 @@
 				</tuv>
 			</tu>
 			
-<!-- 			<tu tuid='Report_Tag_H&M'>
+			<tu tuid='Report_Tag_HM'>
 				<tuv xml:lang="zh">
 					<seg>H&M 童装系列</seg>
 				</tuv>
@@ -906,16 +906,16 @@
 				</tuv>
 			</tu>
 			
-			<tu tuid='Report_Tag_Me&City'>
+			<tu tuid='Report_Tag_MeCity'>
 				<tuv xml:lang="zh">
 					<seg>Me&City 童装系列</seg>
 				</tuv>
 				<tuv xml:lang="en">
 					<seg>Me&City</seg>
 				</tuv>
-			</tu> -->
+			</tu>
 			
-			<tu tuid='Report_Tag_Others'>
+			<tu tuid='Report_Tag_Others Brand'>
 				<tuv xml:lang="zh">
 					<seg>其他童装品牌</seg>
 				</tuv>
