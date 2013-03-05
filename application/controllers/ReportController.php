@@ -1864,6 +1864,7 @@ function adminreportbatchreplyAction(){
 				// get survey_id for campaign
 				$campaignModel = new Campaign();
 				$campaign = $campaignModel->fetchRow('id = '.$formData['campaign_id']);
+				Zend_Debug::dump($formData['submittype']);
 				switch ($formData['submittype']){
 					case 'pre_campaign':
 						$survey_id = $campaign['pre_campaign_survey'];
