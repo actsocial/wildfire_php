@@ -1945,8 +1945,9 @@ function adminreportbatchreplyAction(){
 			$this->view->reportExtraInfoArray = $reportInforArray;
 			$this->view->surveyQuestionArray = $response->QuestionType;
 			$this->view->surveyArray = $response->AnswerSetType;
-			//Zend_Debug::dump($response);
-			//die;
+			Zend_Debug::dump($accessCodeList."######################");
+			Zend_Debug::dump($response);
+			die;
 
 			// create phpexcel obj.
 			require_once 'PHPExcel.php';
