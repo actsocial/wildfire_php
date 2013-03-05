@@ -1896,7 +1896,7 @@ function adminreportbatchreplyAction(){
 						->where("report.state = 'APPROVED'")
 						->order("create_date desc")
 						->limit(0);
-						Zend_Debug::dump($selectAccessCode);die();
+						// Zend_Debug::dump($selectAccessCode);die();
 						$accessCodeArray = $db->fetchAll($selectAccessCode);
 						foreach($accessCodeArray as $accessCode):
 							array_push($accessCodeList,$accessCode['accesscode']);
