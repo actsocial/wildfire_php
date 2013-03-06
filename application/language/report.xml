@@ -632,19 +632,19 @@
 			
 			<tu tuid='Report_Tag_HM'>
 				<tuv xml:lang="zh">
-					<seg>H&M 童装系列</seg>
+					<seg>HM 童装系列</seg>
 				</tuv>
 				<tuv xml:lang="en">
-					<seg>H&M</seg>
+					<seg>HM</seg>
 				</tuv>
 			</tu>
 			
 			<tu tuid='Report_Tag_MeCity'>
 				<tuv xml:lang="zh">
-					<seg>Me&City 童装系列</seg>
+					<seg>MeCity 童装系列</seg>
 				</tuv>
 				<tuv xml:lang="en">
-					<seg>Me&City</seg>
+					<seg>MeCity</seg>
 				</tuv>
 			</tu>
 			
