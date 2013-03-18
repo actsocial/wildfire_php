@@ -1812,7 +1812,7 @@ function adminreportbatchreplyAction(){
 				$selectAccessCode = $db->select();
 				$selectAccessCode->from('report', array('consumer_id','accesscode', 'create_date', 'source'))
 				->joinLeft('reward_point_transaction_record', 'report.reward_point_transaction_record_id = reward_point_transaction_record.id', 'point_amount')
-				->join('consumer', 'consumer.id = report.consumer_id', array('email,login_phone,recipients_name'))
+				->join('consumer', 'consumer.id = report.consumer_id', array('email,login_phone,phone,recipients_name'))
 				->where('report.accesscode in ('.substr($accessCodeString,0,strlen($accessCodeString)-1).")")
 				->where("report.state = 'APPROVED'")
 				->order(" create_date desc ")
@@ -1824,6 +1824,7 @@ function adminreportbatchreplyAction(){
 					$reportInforArray[$accessCode['accesscode']]['consumer_id'] = $accessCode['consumer_id'];
 					$reportInforArray[$accessCode['accesscode']]['email'] = $accessCode['email'];
 					$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
+					$reportInforArray[$accessCode['accesscode']]['phone'] = $accessCode['phone'];
 					$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
 					$reportInforArray[$accessCode['accesscode']]['createdate'] = $accessCode['create_date'];
 					$reportInforArray[$accessCode['accesscode']]['source'] = $accessCode['source'];
@@ -1890,7 +1891,7 @@ function adminreportbatchreplyAction(){
 						$selectAccessCode = $db->select();
 						$selectAccessCode->from('report', array('consumer_id','accesscode', 'create_date', 'source'))
 						->joinLeft('reward_point_transaction_record', 'report.reward_point_transaction_record_id = reward_point_transaction_record.id', 'point_amount')
-						->join('consumer', 'consumer.id = report.consumer_id', array('email','login_phone','recipients_name'))
+						->join('consumer', 'consumer.id = report.consumer_id', array('email','login_phone','phone','recipients_name'))
 						->where('report.campaign_id = ?',$formData['campaign_id'])
 						->where("report.state = 'APPROVED'")
 						->order("create_date desc")
@@ -1902,6 +1903,7 @@ function adminreportbatchreplyAction(){
 							$reportInforArray[$accessCode['accesscode']]['consumer_id'] = $accessCode['consumer_id'];
 							$reportInforArray[$accessCode['accesscode']]['email'] = $accessCode['email'];
 							$reportInforArray[$accessCode['accesscode']]['login_phone'] = $accessCode['login_phone'];
+							$reportInforArray[$accessCode['accesscode']]['phone'] = $accessCode['phone'];
 							$reportInforArray[$accessCode['accesscode']]['recipients_name'] = $accessCode['recipients_name'];
 							$reportInforArray[$accessCode['accesscode']]['createdate'] = $accessCode['create_date'];
 							$reportInforArray[$accessCode['accesscode']]['source'] = $accessCode['source'];
@@ -2027,6 +2029,7 @@ function adminreportbatchreplyAction(){
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "ConsumerEmail");
 				//TOCHECK
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "login_phone");
+				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "phone");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "recipients_name");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Create_date");
 				$objActSheet->setCellValue($columnNameArray[$columnNumber++]."2", "Source");
