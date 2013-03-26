@@ -73,21 +73,7 @@
 	// ]]>
 	-->
 	</script>
-	<script type="text/javascript">
-		function showOrHide(val){
-			if(val==199||val==196){
-				jQuery("#q_69").css("display","block");
-				if (val==196) {
-					jQuery(".changetitle").text("URL")
-				}else{
-					jQuery(".changetitle").text("Other way")
-				}
-			}else{
-				jQuery("#q_69").css("display","none");
-			}
 
-		}
-	</script>
 </head>
 
 <body>
@@ -153,12 +139,21 @@
 
 	
 	<div id="page_0">
-<script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
-</script>
+	<script type="text/javascript">
+		function showOrHide(val){
+			if(val==199||val==196){
+				jQuery("#q_69").css("display","");
+				if (val==196) {
+					jQuery(".changetitle").text("URL")
+				}else{
+					jQuery(".changetitle").text("Other way")
+				}
+			}else{
+				jQuery("#q_69").css("display","none");
+			}
+
+		}
+	</script>
 		  <div id="q_68" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
@@ -858,7 +853,7 @@
 </div>
 <br/>
 <div class="fillout-submit">
-<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' style="display:none" />
 <input id="submit" type="submit" style="display:none;background: url(../public/images/button.gif) no-repeat center center;
 	display: block;
 	float: left;
