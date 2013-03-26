@@ -10,7 +10,7 @@
 	<h2><?php echo $this->translate('Edit_Campaign')?></h2>
 	<?php echo $this->form ;?>
 -->
-<form id="campaign_name_value" method="post" enctype="multipart/form-data"  action="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminedit','id'=>"29"));?>">
+<!-- <form id="campaign_name_value" method="post" enctype="multipart/form-data"  action="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminedit','id'=>"29"));?>">
 		<table style="font-size:14px;">
 						<tr> <td colspan="2" > <h4 align="center" style="color:red"><?php echo $this->translate('Add_New_Campaign')?></h4> </td> </tr>
 						<tr> <td><?php echo $this->form->name?></td> <td><?php echo $this->form->company?></td></tr>
@@ -45,7 +45,8 @@
 			<tr> <td colspan="2" align="center"> <input type="submit" value="提交"> </td> </tr>
 		</table>
 			
-		</form>
+		</form> -->
+		<?php = $form; ?>
 </fieldset>
 <ul class="blank">
 <li><a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'adminindex'));?>'><?php echo $this->translate('Back')?></a></li>

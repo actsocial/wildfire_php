@@ -267,13 +267,23 @@ class CampaignController extends MyController
 	{
 		$this->view->title = "Edit Campaign";
 
+		$id = (int)$this->_request->getPost('id');
 		$form = new CampaignForm();
 		$form->submit->setLabel($this->view->translate('Save'));
 		$this->view->form = $form;
 
+		if($id>0){
+
+			$db = Zend_Registry::get('db');
+			$select = $db->select();
+			$select->from('campaign');
+			$select->where ("id=?",id);
+			$form = $db->fetchOne($select);
+
+		}else{
 		if ($this->_request->isPost()) {
 			$formData = $this->_request->getPost();
-//			$id = (int)$this->_request->getPost('id');
+
 			if ($form->isValid($formData)) {
 				$campaign = new Campaign();
 				$id = (int)$form->getValue('id');
@@ -481,7 +491,7 @@ class CampaignController extends MyController
 			}
 		}
 		$this->_helper->layout->setLayout("layout_admin");
-
+	}
 	}
 	function admindeleteAction()
 	{

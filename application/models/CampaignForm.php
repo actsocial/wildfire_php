@@ -10,27 +10,35 @@ class CampaignForm extends Zend_Form
 		$name = new Zend_Form_Element_Text('name');
 		$name->setLabel($this->getView()->translate('Campaigns_Name'))
 		->setRequired(true)
+		->setAttrib("placeholder","输入活动名称")
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
 		->addValidator('NotEmpty');
 		
-		
-		
 		$company = new Zend_Form_Element_Text('company');
 		$company->setLabel($this->getView()->translate('Company_Name'))
 		->setRequired(false)
+		->setAttrib("placeholder","公司名称不显示在该活动中")
 		->addFilter('StripTags')
 		->addFilter('StringTrim');
-		
-//		$campaign_type=new Zend_Form_Element_Text('campaigntype');
-//		$campaign_type->setLabel($this->getView()->translate('Campaign_type'))
-//		->setRequired(false)
-//		->addFilter('StripTags')
-//		->addFilter('StringTrim');
 
-		$campaign_type=new Zend_Form_Element_Text('i2_survey_id');
-		$campaign_type->setLabel($this->getView()->translate('Campaign_i2_survey_id'))
+		$campaign_type = new Zend_Form_Element_Select('campaigntype');
+		$campaign_type->setLabel("活动类型")
+		->setRequired(true)
+		// ->addMultiOptions(array('Please Choose','Campaign','Mission'),array('0','campaign','mission'))
+		->addMultiOption('0',"Please Choose")
+		->addMultiOption('campaign',"Campaign")
+		->addMultiOption('mission',"Mission")
+		->addFilter('StripTags')
+		->addFilter('StringTrim')
+		->addValidator('NotEmpty');
+
+		$campaign_type->setValue('campaign','Campaign');
+		
+		$campaign_survey=new Zend_Form_Element_Text('i2_survey_id');
+		$campaign_survey->setLabel($this->getView()->translate('Campaign_i2_survey_id'))
 		->setRequired(false)
+		->setAttrib("placeholder","请填写数字(活动报告ID)")
 		->addFilter('StripTags')
 		->addFilter('StringTrim');
 
@@ -43,12 +51,14 @@ class CampaignForm extends Zend_Form
  		$campaign_pre_campaign_survey=new Zend_Form_Element_Text('pre_campaign_survey');
 		$campaign_pre_campaign_survey->setLabel($this->getView()->translate('pre_campaign_survey'))
 		->setRequired(false)
+		->setAttrib("placeholder","请填写数字(活动前问卷ID)")
 		->addFilter('StripTags')
 		->addFilter('StringTrim');
 		
  		$campaign_post_campaign_survey=new Zend_Form_Element_Text('post_campaign_survey');
 		$campaign_post_campaign_survey->setLabel($this->getView()->translate('post_campaign_survey'))
 		->setRequired(false)
+		->setAttrib("placeholder","请填写数字(活动后问卷ID)")
 		->addFilter('StripTags')
 		->addFilter('StringTrim');
 		
@@ -56,21 +66,23 @@ class CampaignForm extends Zend_Form
 		$campaign_invitation_total
 		->setLabel("最高参与人数")
 		->setRequired(false)
+		->setAttrib("placeholder","请填写数字,设置活动最高参与人数")
 		->addFilter('StripTags')
 		->addFilter('StringTrim');
 		
-		$campaign_participation=new Zend_Form_Element_Text("participation");
-		$campaign_participation
-		->setLabel("实际参与人数")
-		->setRequired(false)
-		->addFilter('StripTags')
-		->addFilter('StringTrim');
+		// $campaign_participation=new Zend_Form_Element_Text("participation");
+		// $campaign_participation
+		// ->setLabel("实际参与人数")
+		// ->setRequired(false)
+		// ->addFilter('StripTags')
+		// ->addFilter('StringTrim');
 		
  		$campaign_product_name=new Zend_Form_Element_Textarea('product_name');
 		$campaign_product_name
 		->setAttrib("rows", 3)
 		->setLabel('产品名称')
 		->setRequired(false)
+		->setAttrib("placeholder","请填写产品名称")
 		->addFilter('StripTags')
 		->addFilter('StringTrim');
 		
@@ -79,6 +91,7 @@ class CampaignForm extends Zend_Form
 		->setLabel('活动简单描述')
 		->setAttrib("rows",3)
 		->setRequired(false)
+		->setAttrib("placeholder","活动弹出框的上部分")
 		->addFilter('StripTags')
 		->addFilter('StringTrim');
 		
@@ -87,18 +100,18 @@ class CampaignForm extends Zend_Form
 		->setLabel('邀请描述')
 		->setAttrib("rows", 3)
 		->setRequired(false)
+		->setAttrib("placeholder","活动弹出框的下部分")
 		->addFilter('StripTags')
 		->addFilter('StringTrim');
 		
-		//该属性暂时没有使用
-		$invitation_image_name=new Zend_Form_Element_Textarea('invitation_image_name');
-		$invitation_image_name
-		->setLabel('邀请图片')
-		->setAttrib("rows", 3)
-		->setAttrib("disabled","disabled")
-		->setRequired(false)
-		->addFilter('StripTags')
-		->addFilter('StringTrim');
+		// $invitation_image_name=new Zend_Form_Element_Textarea('invitation_image_name');
+		// $invitation_image_name
+		// ->setLabel('邀请图片')
+		// ->setAttrib("rows", 3)
+		// ->setAttrib("disabled","disabled")
+		// ->setRequired(false)
+		// ->addFilter('StripTags')
+		// ->addFilter('StringTrim');
 		
 		$campaign_simple_description2=new Zend_Form_Element_Textarea('invitation_description2');
 		$campaign_simple_description2
@@ -161,6 +174,7 @@ class CampaignForm extends Zend_Form
 		->setRequired(false)
 		->setLabel("Pre_campaign_friends")
 		->setAttrib("rows", 3)
+		->setAttrib("placeholder","(文字)提醒会员填写朋友信息")
 		->addFilter('StripTags')
 		->addFilter('StringTrim');
 		
@@ -168,6 +182,7 @@ class CampaignForm extends Zend_Form
 		$upload_photo1
 		->setDestination(PUBLIC_PATH.'/images/campaign/')
 		->setName('photo_one')
+		->setAttrib("placeholder","图片大小为80*80-110-110之间，正方形为宜")
 		->setLabel("图片1");
 		
 //		$fileName = "campaign_".$id."_01.jpg";
@@ -210,8 +225,9 @@ class CampaignForm extends Zend_Form
 		$submit->setAttrib('id', 'submitbutton');
 		$id = new Zend_Form_Element_Hidden('id');
 		
-		$this->addElements(array($name, $company,$campaign_type,$campaign_expire_date,$campaign_pre_campaign_survey,$campaign_post_campaign_survey,$campaign_invitation_total,$campaign_participation, 
-		$campaign_product_name,$campaign_simple_description,$campaign_invitation_description,$invitation_image_name,$campaign_simple_description2,
+
+		$this->addElements(array($name, $company,$campaign_type,$campaign_survey,$campaign_expire_date,$campaign_pre_campaign_survey,$campaign_post_campaign_survey,$campaign_invitation_total, 
+		$campaign_product_name,$campaign_simple_description,$campaign_invitation_description,$campaign_simple_description2,
 		$Pre_campaign_intro,$Thanks_for_post_campaign_survey_title,$Thanks_for_post_campaign_survey_content,$Campaign_post_survey_notice,$Pre_campaign_info,
 		$Pre_campaign_thankyou,$Pre_campaign_friends,$upload_photo1, $upload_photo2,$upload_photo3,$upload_photo4,$upload_photo5,$upload_photo6,
 		$submit,$id));

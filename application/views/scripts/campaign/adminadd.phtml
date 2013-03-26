@@ -18,14 +18,14 @@ function isNum(val){
 <!--
 	<?php echo $this->form ;?>
 -->
-		<form id="campaign_name_value" method="post" enctype="multipart/form-data"  action="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminadd'));?>">
+		<!-- <form id="campaign_name_value" method="post" enctype="multipart/form-data"  action="<?php echo $this->url(array('controller'=>'campaign','action'=>'adminadd'));?>">
 		<table style="font-size:14px;">
 						<tr> <td colspan="2" > <h4 align="center" style="color:red"><?php echo $this->translate('Add_New_Campaign')?></h4> </td> </tr>
 						<tr> <td><?php echo $this->form->name?></td> <td><?php echo $this->form->company?></td></tr>
 						<tr> <td><?php echo $this->form->campaigntype?></td>   <td><?php echo $this->form->i2_survey_id?></td> </tr>
 						<tr> <td><?php echo $this->form->pre_campaign_survey?></td> <td><?php echo $this->form->post_campaign_survey?></td></tr>
-						<tr> <td> <?php echo $this->form->start_date?> </td><td><?php echo $this->form->expire_date?></td></tr>
-						<tr> <td> <?php echo $this->form->total?>   </td> </tr>
+						<tr> <td><?php echo $this->form->expire_date?></td><td><?php echo $this->form->total?></td></tr>
+						
 		</table>
 		<table style="font-size:14px;" >
 			<tr> <td colspan="2" > <h4 align="center" style="color:red">填写活动附属信息：</h4> </td> </tr>
@@ -53,9 +53,10 @@ function isNum(val){
 			<tr> <td colspan="2" align="center"> <input type="submit" value="提交"> </td> </tr>
 		</table>
 			
-		</form>
+		</form> -->
+		<?php echo $this->form?>
 </fieldset>
-<ul class="blank">
+<ul class="blank"> 
 <li><a href='<?php echo $this->url(array('controller'=>'campaign','action'=>'index'));?>'><?php echo $this->translate('Back')?></a></li>
 </ul>
 </div>
