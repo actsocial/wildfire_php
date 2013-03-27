@@ -13,8 +13,7 @@
 	<!--[if IE]>
 	<link href="/css/fillout_default-ie.css" rel="stylesheet" type="text/css" media="screen" />
 	<![endif]-->
-	<link href="/css/niftyCorners.css" rel="stylesheet" type="text/css" media="screen" />
-
+		<link href="/css/niftyCorners.css" rel="stylesheet" type="text/css" media="screen" />
     <script type="text/javascript" src="<?php echo $this->baseUrl();?>/css/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo $this->baseUrl();?>/css/bootstrap/js/bootstrap-modal.js"></script>
     <script type="text/javascript" src="<?php echo $this->baseUrl();?>/css/bootstrap/js/bootstrap-tooltip.js"></script>
@@ -22,6 +21,7 @@
     <link type="text/css" href="<?php echo $this->baseUrl();?>/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <script type='text/javascript'>
+  	document.getElementById("question_141").setAttribute("onchange","showOrHide(this.value)");
     jQuery.fn.collapse.Constructor.prototype.transition = function (method, startEvent, completeEvent) {
       var that = this
         , complete = function () {
@@ -44,8 +44,7 @@
 
 	<script src="/js/all.js" language="JavaScript" type="text/javascript"></script>
 	<script language="JavaScript" type="text/javascript">
-	<!--
-	// <![CDATA[
+
 	function msieversion() {
 		var ua = window.navigator.userAgent
 		var msie = ua.indexOf ( "MSIE " )
@@ -70,8 +69,7 @@
 		}
 		return !hasError;
 	}
-	// ]]>
-	-->
+
 	</script>
 
 </head>
@@ -136,24 +134,31 @@
 </div>
 <div class="clear"></div>
 
-
-	
-	<div id="page_0">
 	<script type="text/javascript">
 		function showOrHide(val){
+
 			if(val==199||val==196){
-				jQuery("#q_69").css("display","");
+				// jQuery("#q_69").css("display","");
+				var doc = document.getElementById("q_69")
+				doc.style.display="";
 				if (val==196) {
 					jQuery(".changetitle").text("URL")
 				}else{
 					jQuery(".changetitle").text("Other way")
 				}
 			}else{
-				jQuery("#q_69").css("display","none");
+				document.getElementById("q_69").style.display="none";
 			}
 
 		}
+
+		function showOrHide1(){
+			alert(2);
+		}
 	</script>
+	
+	<div id="page_0">
+
 		  <div id="q_68" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
@@ -176,12 +181,12 @@
 <input type="hidden" name="answers[141].id" value="" id="answers[141].id" />
 
 	<select group="141" class="selection" id="question_141" name="answers[141].value" title="title"  size = "1" >
-	<option selected="selected" value="0" onclick="showOrHide(this.value)" >Please choose</option>
-<option value="195" style=""  onclick="showOrHide(this.value)" >face-to-face</option>
-<option value="196" style=""  onclick="showOrHide(this.value)" >Web (Forum, social media, blog)</option>
-<option value="197" style=""  onclick="showOrHide(this.value)" >Telephone or SMS</option>
-<option value="198" style=""  onclick="showOrHide(this.value)" >Instant Messenger Service</option>
-<option value="199" style=""  onclick="showOrHide(this.value)" >Other</option>
+	<option selected="selected" value="0" >Please choose</option>
+<option value="195"    >face-to-face</option>
+<option value="196"  >Web (Forum, social media, blog)</option>
+<option value="197"  >Telephone or SMS</option>
+<option value="198"  >Instant Messenger Service</option>
+<option value="199"  >Other</option>
 	</select> 
  </td>
 
