@@ -212,6 +212,7 @@ class ConsumerController extends MyController {
 					$consumer->city = null;
 					$consumer->province = null;
 				}
+				$consumer->birthdate = $formData ['birthdate'] != null ? $formData ['birthdate'] : null;
 				$consumer->save ();
 				// consumer_extra_info table
 				if ($consumerextra == null) {

@@ -99,6 +99,14 @@ You can also update your contact information and preferences.</seg>
 				<seg>Recipient: </seg>
 			</tuv>
 		</tu>
+				<tu tuid='CONTACT BIRTHDATE'>
+			<tuv xml:lang="zh">
+				<seg>生日：</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Birthday: </seg>
+			</tuv>
+		</tu>
 		<tu tuid='CONTACT INFORMATION_ADDRESS'>
 			<tuv xml:lang="zh">
 				<seg>地址：</seg>
@@ -237,7 +245,7 @@ You can also update your contact information and preferences.</seg>
 		</tu>
 		<tu tuid='CONTACT MAILING_ADDRESS'>
 			<tuv xml:lang="zh">
-				<seg>邮寄地址:</seg>
+				<seg>邮寄信息:</seg>
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>Mailing Address:</seg>
