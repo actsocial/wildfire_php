@@ -266,18 +266,16 @@ class CampaignController extends MyController
 	function admineditAction()
 	{
 		$this->view->title = "Edit Campaign";
-
 		$id = (int)$this->_request->getPost('id');
+		// $id = $this->_request->getParam ( 'id' );
 		$form = new CampaignForm();
 		$form->submit->setLabel($this->view->translate('Save'));
-		$this->view->form = $form;
-
 		if($id>0){
 
 			$db = Zend_Registry::get('db');
 			$select = $db->select();
 			$select->from('campaign');
-			$select->where ("id=?",id);
+			$select->where ("id=?",$id);
 			$form = $db->fetchOne($select);
 
 		}else{
@@ -491,7 +489,9 @@ class CampaignController extends MyController
 			}
 		}
 		$this->_helper->layout->setLayout("layout_admin");
-	}
+		}
+		$this->view->form = $form;
+
 	}
 	function admindeleteAction()
 	{

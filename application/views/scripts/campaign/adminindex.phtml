@@ -35,7 +35,7 @@
 	<a class="thickbox" href="<?php echo $this->url(array('controller'=>'campaignparticipation', 'action'=>'adminexportdata', 'id'=>$campaign->id));?>&TB_iframe=true">
 		导出数据
 	</a>
-	<a target="_blank" href="/public/campaign/adminedit/id/<?php echo $campaign->id?>">修改</a>
+	<a target="_blank" href="<?php echo $this->url(array('controller'=>'campaign', 'action'=>'adminedit', 'id'=>$campaign->id));?>">修改</a>
 	</td>
 	</tr>
 	<?php }?>
