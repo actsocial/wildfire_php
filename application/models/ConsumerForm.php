@@ -25,11 +25,11 @@ class ConsumerForm extends Zend_Form
 							));
 
 		$phone = new Zend_Form_Element_Text('phone');
-		$phone->setLabel($this->getView()->translate('CONTACT INFORMATION_PHONE'))
+		$phone->setLabel($this->getView()->translate('CONTACT INFORMATION_CONTACT_NUMBER'))
 		->addFilter('StripTags')
-		->addFilter('StringTrim')
-		->addValidators(array(array('StringLength', false, array(0, 50)),))
-		->addErrorMessage($this->getView()->translate('Please_enter_your_phone'));
+		->addFilter('StringTrim');
+/*		->addValidators(array(array('StringLength', false, array(0, 50)),))
+		->addErrorMessage($this->getView()->translate('Please_enter_your_phone'));*/
 		$phone->setDecorators(array('ViewHelper',
 								'Errors',
 								array('HtmlTag', array('tag'=>'div', 'class'=>'input-area')),
@@ -40,8 +40,8 @@ class ConsumerForm extends Zend_Form
 		$login_phone->setLabel($this->getView()->translate('CONTACT INFORMATION_PHONE'))
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
-		->setAttrib('readOnly', true)
-		->addValidators(array(array('StringLength', false, array(0, 50)),))
+/*		->setAttrib('readOnly', true)*/
+/*		->addValidators(array(array('StringLength', false, array(0, 50)),))*/
 		->addErrorMessage($this->getView()->translate('Please_enter_your_phone'));
 		$login_phone->setDecorators(array('ViewHelper',
 									array('Description', array('color' => 'red','tag' => 'font')),
@@ -76,6 +76,31 @@ class ConsumerForm extends Zend_Form
 		->addValidators(array(array('StringLength', false, array(1, 30)),))
 		->addErrorMessage($this->getView()->translate('Please_enter_your_recipients_name'));
 		$recipients_name->setDecorators(array(
+										'ViewHelper',
+										'Errors',
+										array('HtmlTag', array('tag'=>'div', 'class'=>'input-area')),
+										array('Label')
+										));
+
+		$city = new Zend_Form_Element_Text('city');
+		$city->setLabel($this->getView()->translate('CONTACT INFORMATION_RECIPIENTS_CITY'))
+		->addFilter('StripTags')
+		->addFilter('StringTrim')
+		->addValidators(array(array('StringLength', false, array(1, 30)),));
+		$city->setDecorators(array(
+										'ViewHelper',
+										'Errors',
+										array('HtmlTag', array('tag'=>'div', 'class'=>'input-area')),
+										array('Label')
+										));
+
+		$country = new Zend_Form_Element_Text('country');
+		$country->setLabel($this->getView()->translate('CONTACT INFORMATION_RECIPIENTS_COUNTRY'))
+		->addFilter('StripTags')
+		->addFilter('StringTrim')
+		->addValidators(array(array('StringLength', false, array(1, 30)),));
+		// ->addErrorMessage($this->getView()->translate('Please_enter_your_recipients_name'));
+		$country->setDecorators(array(
 										'ViewHelper',
 										'Errors',
 										array('HtmlTag', array('tag'=>'div', 'class'=>'input-area')),
@@ -127,10 +152,10 @@ class ConsumerForm extends Zend_Form
 		$gender = new Zend_Form_Element_Radio('gender');
 		$gender->setLabel($this->getView()->translate('Consumer_gender'))
 		->addMultiOptions( array(
-							'0' => $this->getView()->translate('Consumer_gender_Female'), 
 							'1' => $this->getView()->translate('Consumer_gender_Male'),
+							'0' => $this->getView()->translate('Consumer_gender_Female'), 
+							
 		))
-		->setSeparator('&nbsp;&nbsp;')
 		->addDecorators(array(
 		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'gender_value')),
 		    array('Label')
@@ -181,7 +206,7 @@ class ConsumerForm extends Zend_Form
 		$education->setLabel($this->getView()->translate('Consumer_education'))
 		->addMultiOptions( array(
 		'' => '',
-		'High-School' => $this->getView()->translate('Consumer_education_High-School'), 
+		'High School' => $this->getView()->translate('Consumer_education_High-School'), 
 		'Junior college' => $this->getView()->translate('Consumer_education_Junior_college'),
 		'Bachelor' => $this->getView()->translate('Consumer_education_Bachelor'),
 		'Master' => $this->getView()->translate('Consumer_education_Master'),
@@ -205,30 +230,61 @@ class ConsumerForm extends Zend_Form
 		));
 		$have_children->setSeparator('&nbsp;');
 		//
-		$children_birth_year = new Zend_Form_Element_Select('children_birth_year');
-		$children_birth_year->setLabel($this->getView()->translate('Consumer_children_birth_year'));
-		$children_birth_year->addMultiOption('', '');
-		$children_birth_year->addMultiOption('<1980', $this->getView()->translate('Consumer_children_birth_year_Before 1980'));
-		for($i = 1980; $i<=2010; $i++){
-			$children_birth_year->addMultiOption($i, $i);
-		}
-		$children_birth_year->addMultiOption('>2010', $this->getView()->translate('Consumer_children_birth_year_After 2010'))
+
+		$children_birth_year = new Zend_Form_Element_Text('children_birth_year');
+		// $children_birth_year->setLabel($this->getView()->translate('Consumer_children_birth_year'));
+		// $children_birth_year->addMultiOption('', '');
+		// $children_birth_year->addMultiOption('<1980', $this->getView()->translate('Consumer_children_birth_year_Before 1980'));
+		// for($i = 1980; $i<=2010; $i++){
+			// $children_birth_year->addMultiOption($i, $i);
+		// }
+		// $children_birth_year->addMultiOption('>2010', $this->getView()->translate('Consumer_children_birth_year_After 2010'))
+		// ->addDecorators(array(
+		    // array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'children_birth_year_value')),
+		    // array('Label')
+		// ));
+		$children_birth_year->setLabel($this->getView()->translate('Consumer_children_birth_year'))
 		->addDecorators(array(
-		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'children_birth_year_value')),
+		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'child_birthdate_value')),
 		    array('Label')
 		));
 		//
 		$income = new Zend_Form_Element_Select('income');
 		$income->setLabel($this->getView()->translate('Consumer_income_level_per_month'));
-		$income->addMultiOption('', '');
+/*		$income->addMultiOption('', '');
 		for($i = 0; $i < 20000; $i = $i+2000){
 			$income->addMultiOption($i."-".($i+2000), $i."-".($i+2000));
-		}
-		$income->addMultiOption('>20000', '>20000')
+		}*/
+		$income->addMultiOptions( array(
+			'' => '',
+			'Php 30,000 and above'=> 'Php 30,000 and above',
+			'Php 15,000 – Php 29,999'=>'Php 15,000 – Php 29,999',
+			'Php 14,999 and below'=>'Php 14,999 and below'
+		))
 		->addDecorators(array(
 		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'income_value')),
 		    array('Label')
 		));
+
+		$status = new Zend_Form_Element_Select('status');
+		$status ->setLabel("Relationship Status:");
+		$status -> addMultiOptions( array(
+			'' => '',
+			'Single'=> 'Single',
+			'Married'=>'Married',
+			'Separated'=>'Separated',
+			'Widowed'=>'Widowed'
+		))
+		->addDecorators(array(
+		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'status_value')),
+		    array('Label')
+		));
+
+	/*	$income->addMultiOption('>20000', '>20000')
+		->addDecorators(array(
+		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'income_value')),
+		    array('Label')
+		));*/
 		//
 		$online_shopping = new Zend_Form_Element_Radio('online_shopping');
 		$online_shopping->setLabel($this->getView()->translate('Consumer_do_your_often_go_shopping_online'))
@@ -238,7 +294,6 @@ class ConsumerForm extends Zend_Form
 		'Less then once a month' => $this->getView()->translate('Consumer_do_your_often_go_shopping_online_Less then once a month'),  
 		'Never' => $this->getView()->translate('Consumer_do_your_often_go_shopping_online_Never'),
 		))
-		->setSeparator('')
 		->addDecorators(array(
 		    array('HtmlTag',array('tag'=>'div','class'=>'info_value input-area','id'=>'onlineShopping_value')),
 		    array('Label')
@@ -270,8 +325,8 @@ class ConsumerForm extends Zend_Form
 		$submit->setLabel($this->getView()->translate('CONTACT INFORMATION_EDIT'))
 		->setAttrib('id', 'edit');
 		
-		$this->addElements(array($id, $email, $login_phone, $name, $recipients_name, $phone, $address1, $postalcode, $birthdate, 
-		$gender, $profession, $education, $have_children, $children_birth_year, $income, $online_shopping, $use_extra_bonus_for, 
+		$this->addElements(array($id, $email, $login_phone, $name, $recipients_name, $phone, $city,$country,$address1, $postalcode, $birthdate, 
+		$gender, $profession, $education, $have_children, $children_birth_year, $income,$status, $online_shopping, $use_extra_bonus_for, 
 		$submit));
 
 	}

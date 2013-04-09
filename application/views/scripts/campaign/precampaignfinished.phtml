@@ -1,11 +1,85 @@
 <div class="article-box" style="padding-bottom:10px;">
 	<div class="article-box-inner">
-		<h1><?php echo $this->translate("You_are_in")?></h1>
+		<h1><?php echo $this->translate("You_are_in")?> <?php echo $this->translate('Confirm_shipping_address');?></h1>
 		<p><?php echo $this->campaign['pre_campaign_info']?></p>
 	</div>
 </div>
+
+<script language="JavaScript" type="text/javascript">
+
+jQuery(document).ready(function(){
+		jQuery("[for='recipients_name']").html("Name of Recipient <span style='color:red'>*</span>:");
+		jQuery("[for='gender']").html("Gender <span style='color:red'>*</span>:");
+		jQuery("[for='birthdate']").html("Birthdate <span style='color:red'>*</span>:");
+		jQuery("[for='phone']").html("Phone Number <span style='color:red'>*</span>:");
+		jQuery("[for='address1']").html("Address <span style='color:red'>*</span>:");
+		jQuery("[for='postalcode']").html("Post Code <span style='color:red'>*</span>:");
+	 jQuery("form").submit(function(e){
+			var flag = true;
+			  if(jQuery("#recipients_name").val() ==""){
+				  var html = '<span style="color:red">*&nbsp;&nbsp;</span>Please Complete the required fields before you Confirm';
+					jQuery("#check-alert-dialog .content").html(html);
+			    jQuery("#check-alert-dialog").dialog('open');
+			    flag=false;
+				}
+
+				if(jQuery("#gender-0").attr("checked")!="checked"&&jQuery("#gender-1").attr("checked")!="checked"){
+				  var html = '<span style="color:red">*&nbsp;&nbsp;</span>Please Complete the required fields before you Confirm ';
+					jQuery("#check-alert-dialog .content").html(html);
+			    jQuery("#check-alert-dialog").dialog('open');
+			    flag=false;
+				}
+
+				if(jQuery("#birthdate").val() ==""){
+				  var html = '<span style="color:red">*&nbsp;&nbsp;</span>Please Complete the required fields before you Confirm ';
+					jQuery("#check-alert-dialog .content").html(html);
+			    jQuery("#check-alert-dialog").dialog('open');
+			    flag=false;
+				}
+				if(jQuery("#phone").val() ==""){
+				  var html = '<span style="color:red">*&nbsp;&nbsp;</span>Please Complete the required fields before you Confirm ';
+					jQuery("#check-alert-dialog .content").html(html);
+			    jQuery("#check-alert-dialog").dialog('open');
+			    flag=false;
+				}else{
+					if(!(/^[0-9]\d{0,10}$/.test(jQuery("#phone").val()))) {
+						var html = '<span style="color:red">*&nbsp;&nbsp;</span>Phone must be number  ';
+						jQuery("#check-alert-dialog .content").html(html);
+				    jQuery("#check-alert-dialog").dialog('open');
+				    flag=false;
+					}
+				}
+
+				if(jQuery("#englishcity").val() ==""){
+				  var html = '<span style="color:red">*&nbsp;&nbsp;</span>Please Complete the required fields before you Confirm';
+					jQuery("#check-alert-dialog .content").html(html);
+			    jQuery("#check-alert-dialog").dialog('open');
+			    flag=false;
+				}
+
+				if(jQuery("#address1").val() ==""){
+				  var html = '<span style="color:red">*&nbsp;&nbsp;</span>Please Complete the required fields before you Confirm ';
+					jQuery("#check-alert-dialog .content").html(html);
+			    jQuery("#check-alert-dialog").dialog('open');
+			    flag=false;
+				}
+
+				if(jQuery("#postalcode").val() ==""){
+				  var html = '<span style="color:red">*&nbsp;&nbsp;</span>Please Complete the required fields before you Confirm ';
+					jQuery("#check-alert-dialog .content").html(html);
+			    jQuery("#check-alert-dialog").dialog('open');
+			    flag=false;
+				}
+
+		  	return flag;
+			});
+});
+
+</script>
+
+
 <div class="edit-profile" >
-		<h1 style="margin-left: 10px; padding-top: 10px;"><?php echo $this->translate('Confirm_shipping_address');?></h1>
+		<!-- <h1 style="margin-left: 10px; padding-top: 10px;"></h1> -->
 		<form name="form" action="<?php echo $this->url(array('controller'=>'consumer','action'=>'editcontact','cid'=>$this->campaign->id));?>" method="post">
 		<dl>
 		<fieldset>
@@ -20,7 +94,7 @@
 		
 			<!--div><?php echo $this->form->qq;?></div-->
 			<div>
-				<dt><label><?php echo $this->translate('CONTACT CITY')?></label></dt>
+				<dt><label><?php echo $this->translate('CONTACT CITY')?> <span style='color:red'>*</span></label></dt>
 				<dd><input type="text" id="englishcity" name="englishcity" /> <select
 					name="province" id="province" style="width: 80px"
 					onChange="JavaScript:ChangeOption('province', 'city')">
@@ -104,7 +178,7 @@
 			</fieldset>		
 				</dl>
 				<div style="float:left;color:red;"><?php echo $this->errMessage; ?></div>
-				
+				<div id="check-alert-dialog"><p class="content"></p></div>
 				<div style="clear: both; "></div>
 		<div class="buttons-bar">
 			<?php echo $this->form->submit ;?>

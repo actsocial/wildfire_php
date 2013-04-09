@@ -27,11 +27,19 @@
 
 <body>
 
-	<div class="header"><div class="header-inner">
-		<!--<div class="logo">
+<!-- in the div which class = header <div class="logo">
 			<a href="<?php echo $this->joomlahome;?>"><img src="<?php echo $this->baseUrl();?>/images/mainlogo.png" /></a>
 		</div>
-		--><div class="login-panel">
+		-->
+
+	 <div class="header"><div class="header-inner">
+ 				<div class="logo">
+					<a href="http://community.wildfire.asia">
+						<!-- <img style="width:110px;margin-top:-13px;" src="/public/images/popup-fillout-logo.gif"  /> -->
+						<img src="/public/images/mainlogo.png" style="width:110px;height: 60px;margin-top:-4px;">
+					</a>
+				</div>
+		<!-- <div class="login-panel">
 			<form action="<?php echo $this->url(array('controller'=>'login','action'=>'login'));?>" method="post">
 				<div class="user-info">
 					<span for="username" style="float:left;height:27px;line-height:27px;padding-left:5px;"><?php echo $this->translate("Common_Username")?></span>
@@ -43,9 +51,11 @@
 				<input type="submit" name="login" value=<?php echo $this->translate("Common_login")?> />
 				<input type="button" name="help" value=<?php echo $this->translate("Common_help")?> />
 			</form>
-		</div>
+		</div>  -->
+
 
 <!-- 		<div class="navigator">
+
 			<ul id="mainlevel-nav"><li><a href="http://www.wildfire.asia/index.html" class="mainlevel-nav" ><?php echo $this->translate("Common_home")?></a></li>
 			<li><a href="http://www.wildfire.asia/about/about-wildfire.html" class="mainlevel-nav" id="active_menu-nav"><?php echo $this->translate("Common_about_us")?></a></li>
 			<li><a href="http://www.wildfire.asia/spark/member-profiles.html" class="mainlevel-nav" ><?php echo $this->translate("Common_about_Sparks")?></a></li>
@@ -55,6 +65,7 @@
 				<ul class="jflanguageselection"><li id="active_language"><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'zh'));?>"><span lang="zh" xml:lang="zh">中文&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li><li><a href="<?php echo $this->url(array('controller'=>'language','action'=>'index','lang'=>'en'));?>" ><span lang="en" xml:lang="en">English</span></a></li></ul></div>
 
 				<div id="jflanguageselection"></div>
+
 			</div>
 			   <div id="qq_online" style="position:absolute;top:75px;left:1100px">
 
@@ -62,6 +73,7 @@
 
 			 </div>	
 		</div> -->
+
 
 		<div class="clear"></div>
 	</div></div>
@@ -73,41 +85,81 @@
 		
 		<div class="contents-3-col">
 		<div class="article-box"><div class="article-box-inner">
-		<h1><?php echo $this->translate("Common_Please_login")?></h1>
+		<!-- <h1><?php echo $this->translate("Common_Please_login")?></h1> -->
 		<p ><?php echo $this->translate("Common_Please_login_Content")?></p>
-		</div></div>
-<form enctype="application/x-www-form-urlencoded" action="<?php echo $this->url(array('controller'=>'login',
+		</div>
+<!-- 
+		<div class="article-box"><div class="article-box-inner">
+			<section>
+			    <h1>Using the Object tag to play media using the Flash plug-in</h1> 
+			    <object type="application/x-shockwave-flash"
+			               data="QFL-Banner-468x60-with-Landing-Page.swf" width="720" height="90">
+			        <param name="movie" value="player.swf">
+			    </object>
+			</section>
+		</div> -->
+
+	</div>
+<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
+					<a href="<?php echo $this->facebook_login_url;?>">
+					   
+					  <img src="<?php echo $this->baseUrl();?>/images/facebookloginv2.png">
+					</a>
+					<!-- Not a member yet? Click  
+					<a href="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>">
+						here
+					</a> to sign-up! -->
+
+			<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
+
+</div>
+<table class="vertical_bar">
+	<tr><td></td></tr>
+</table>
+<form enctype="application/x-www-form-urlencoded" style="width:300px;float:left;margin-left:20px;" action="<?php echo $this->url(array('controller'=>'login',
 		'action'=>'login'));?>" method="post" target="_parent">
 		
 <div class="login_form">
 <br/>
 
 <table>
-	<tr>
+		<tr>
             <td><?php echo $this->form->email?></td>
-            <td>&nbsp;</td>
     </tr>
-	<tr>
+		<tr>
             <td><?php echo $this->form->password?></td>
-        </tr>
-        <tr>
+    </tr>
+    <tr>
+    				<td><a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:8px;margin-left:240px;color:#17365D;margin-left:80px;">Forgot your Password?</a></td>
+    </tr>
+        <!-- <tr>
             <td>
                 <a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>"><?php echo $this->translate("Common_Forget_Password")?></a>&nbsp;&nbsp;&nbsp;
                 <a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>"><?php echo $this->translate("Common_Inactive_Account")?></a>
             </td>
-        </tr>
+        </tr> -->
 </table>
 
-  <div style="clear:both"></div>  <br/>
+  <div style="clear:both"></div>
 </div>
-<div class="buttons-bar">
-<?php echo $this->form->login?>
-<input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>
-</div>
+<!-- <div style="padding-left:3px;">
+	<a href="<?php echo $this->facebook_login_url;?>">
+	  <img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">
+	  <img src="../public/imags/facebook_login.png">
+	</a>
+</div> -->
+		<div class="buttons-bar">
+			<!--<?php echo $this->form->login?>
+			<input target='_parent' class="button" onclick="window.location.href='<?php echo $this->url(array('controller'=>'register',	'action'=>'register'));?>'" type='button' id='register' value='<?php echo $this->translate("Register")?>'></input>-->
+
+			<input type="submit" id="login" value="Submit" style="margin-left:80px;"> 
+			<!-- <?php echo $this->translate("Common_Forget_Password")?> 
+			<a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:10px;">Forgot your password?</a>-->
+		</div>
 <input type="hidden" name="url" id="url" value="<?php echo $this->url?>"></input>
 </form>
 			
-
+				
 
 		</div>
 		<div class="clear"></div>

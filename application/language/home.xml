@@ -23,6 +23,260 @@
 				<seg>Your info completeness: </seg>
 			</tuv>
 		</tu>
+		<tu tuid='Tabs_Report'>
+			<tuv xml:lang="zh">
+				<seg> 提交报告</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg> Submit a word-of-mouth report</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Tabs_Url'>
+			<tuv xml:lang="zh">
+				<seg>分享网址</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Share your opinion on Facebook</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Post_to_Facebook'>
+			<tuv xml:lang="zh">
+				<seg>发表</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Post</seg>
+			</tuv>
+		</tu>
+		
+		<tu tuid='Tabs_Photo'>
+			<tuv xml:lang="zh">
+				<seg>上传照片/视频</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Upload photos/videos</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Tabs_Contact'>
+			<tuv xml:lang="zh">
+				<seg>联系我们</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Contact Us</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Tabs_brandinfo'>
+			<tuv xml:lang="zh">
+				<seg>联系我们</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Brand Information</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Upload_Photo_Text'>
+			<tuv xml:lang="zh">
+				<seg>上传你与朋友分享这次活动的图片就能额外赚取100分哦！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Upload photos of you speaking with your friends about this campaign and earn up to 100 points extra!</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Contact_Text_Title'>
+			<tuv xml:lang="zh">
+				<seg>如有任何问题，请与我们联系。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Contact us!</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Title_Philippines'>
+			<tuv xml:lang="zh">
+				<seg>Philippines</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Philippines</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Title_China'>
+			<tuv xml:lang="zh">
+				<seg>China</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>China</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Title_Sgp'>
+			<tuv xml:lang="zh">
+				<seg>Singapore</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Singapore</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_desc'>
+			<tuv xml:lang="zh">
+				<seg>If you do have questions about the Wildfire community website,
+Please do not hesitate to let us know and we’ll get back to you within 48 business hours.</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>If you do have questions about the Wildfire community website,
+Please do not hesitate to let us know and we’ll get back to you within 48 business hours.</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_email'>
+			<tuv xml:lang="zh">
+				<seg>Email：<a href="home@wildfire.asia" style='color:#17365D'>home@wildfire.asia</a></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email：<a href="home@wildfire.asia" style='color:#17365D'>home@wildfire.asia</a></seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_email_china'>
+			<tuv xml:lang="zh">
+				<seg>Email：<a href="info@wildfire.asia " style='color:#17365D'>info@wildfire.asia</a></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email：<a href="info@wildfire.asia " style='color:#17365D'>info@wildfire.asia </a></seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_email_sgp'>
+			<tuv xml:lang="zh">
+				<seg>Email：<a href="home@wildfire.asia" style='color:#17365D'>home@wildfire.asia</a></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Email：<a href="home@wildfire.asia" style='color:#17365D'>home@wildfire.asia</a></seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Yahoo'>
+			<tuv xml:lang="zh">
+				<seg>雅虎通：<a href="wildfire.asia@yahoo.com" style='color:#17365D'>wildfire.asia@yahoo.com</a></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Yahoo Messenger: <a href="wildfire.asia@yahoo.com" style='color:#17365D'>wildfire.asia@yahoo.com</a></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Contact_Text_Facebook'>
+			<tuv xml:lang="zh">
+				<seg>Facebook: <a href="http://www.facebook.com/Wildfire" style='color:#17365D'>http://www.facebook.com/Wildfire</a></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Facebook: <a href="http://www.facebook.com/Wildfire" style='color:#17365D'>http://www.facebook.com/Wildfire</a></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Contact_Text_Mobile'>
+			<tuv xml:lang="zh">
+				<seg>Mobile (SMS only): 09156768666 or 09982007891</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Mobile (SMS only): 09156768666 or 09982007891</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Contact_Text_address_china'>
+			<tuv xml:lang="zh">
+				<seg>Address:Room 510-512, Changping Road #68,Shanghai, China 200140</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Address:Room 510-512, Changping Road #68,Shanghai, China 200140</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_address_sgp'>
+			<tuv xml:lang="zh">
+				<seg>Address:1 George Street #17-05 One George Street Singapore 049145</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Address:1 George Street #17-05 One George Street Singapore 049145</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Mobile_china'>
+			<tuv xml:lang="zh">
+				<seg>Phone:+86 400 600 8707 Fax: +86 21 5836 3217</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>phone:+86 400 600 8707 Fax: +86 21 5836 3217</seg>
+			</tuv>
+		</tu>
+
+				<tu tuid='Contact_Text_Mobile_china'>
+			<tuv xml:lang="zh">
+				<seg>Phone:+86 400 600 8707</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>phone:+86 400 600 8707</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_fax_china'>
+			<tuv xml:lang="zh">
+				<seg>Fax: +86 21 5836 3217</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Fax: +86 21 5836 3217</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_fax_sgp'>
+			<tuv xml:lang="zh">
+				<seg>Fax: +65 6536 7908</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Fax: +65 6536 7908</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Contact_Text_Mobile_sgp'>
+			<tuv xml:lang="zh">
+				<seg>Phone: +65 6435 5295</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Phone: +65 6435 5295</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Report_Url_Description'>
+			<tuv xml:lang="zh">
+				<seg>你可以提交一个你和你朋友谈话的网址，我们将会浏览这个页面并尽早的通知你如果你可以提交下一个报告。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What do you think about the brand? How about after trying the product? Share your thoughts with your friends on Facebook. Let them know what you have to say!
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Share_Facebook_Description'>
+			<tuv xml:lang="zh">
+				<seg>你可以提交一个你和你朋友谈话的网址，我们将会浏览这个页面并尽早的通知你如果你可以提交下一个报告。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>What do you think about the brand? How about after trying the product? Share your thoughts with your friends on Facebook. Let them know what you have to say!
+				</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Report_Contact_Description'>
+			<tuv xml:lang="zh">
+				<seg>如有任何疑问，请联系我们！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Do you have questions to ask? Please do not hesitate to contact us!</seg>
+			</tuv>
+		</tu>		
+		<tu tuid='Report_Submit_Description'>
+			<tuv xml:lang="zh">
+				<seg>发送你与朋友的对话内容给我们。诚实详尽的内容会为你赚来更多的积分和活动。只有在我们批准了你当前的这个报告之后才可以提交下一个报告。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>We’d love to hear what your friends said about a brand you’re trying from Wildfire!  Whenever you have a conversation, tell us about it here. Remember, honesty and details earn you more points!</seg>
+			</tuv>
+		</tu>
                 <tu tuid='Account_Info_Pic'>
 			<tuv xml:lang="zh">
 				<seg>/images/lb_ac_inf.gif</seg>
@@ -68,7 +322,9 @@
 				<seg>这是你的星星火主页，告诉我们你与朋友谈话或是参与问卷，你就可以获得积分。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>This is your Spark home page, where you earn points for telling us the word on the street, and for taking polls.</seg>
+				<seg>Talk to anyone about a brand you tried from Wildfire? Let us know what they said!
+				
+				</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Home_head_content_2_1'>
@@ -76,7 +332,7 @@
 				<seg>你如果想了解更多内容，可以查看下面的问号提示，或是点击</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Roll-over the question marks to learn more, or click training above to </seg>
+				<seg>You can also earn points by sharing your opinion to Facebook, or by sharing a photo or video with us. The more points you earn, the more campaigns you’ll be invited to in the future!</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Home_head_content_2_2'>
@@ -116,7 +372,7 @@
 				<seg>什么是星星火积分？</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>What are Spark Points?</seg>
+				<seg><![CDATA[What are Word-of-Mouth <br>(WOM) points? ]]></seg>
 			</tuv>
 		</tu>
 		<tu tuid='What_is_Status_Content_1'>
@@ -124,7 +380,8 @@
 				<seg>积分是对星星火会员积极参与活动的一种奖励。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Spark Points are a “thank you” for being an active member.</seg>
+				<seg>Word-of-Mouth Points are a small thank you for sharing your conversations with us. They can be redeemed for rewards, and the more points you earn, the more rewards you get! Whether your friends enjoyed the product or not, we want to hear what they had to say! 
+</seg>
 			</tuv>
 		</tu>
 		<tu tuid='What_is_Status_Content_2'>
@@ -215,7 +472,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>可用兑换积分：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Can be Used:</seg>
+				<seg>Points to Spend:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='New_points'>
@@ -240,7 +497,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>什么是星星火报告？</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>What’s a Spark Report?</seg>
+				<seg>What’s a Word-of-mouth Report?</seg>
 			</tuv>
 		</tu>
 		<tu tuid='What’s_a_Spark_Report?_Content_1'>
@@ -248,7 +505,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>我们根据你的兴趣提供给你喜欢的产品，同时我们也希望听到你和朋友间关于产品的谈论。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Wildfire works by giving you products that you love (based on your interests) and by listening to what your friends have to say.</seg>
+				<seg>A word-of-mouth (WOM) report is a summary of what you and your friends have talked about a brand.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='What’s_a_Spark_Report?_Content_2'>
@@ -256,7 +513,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>当你与朋友谈论我们给你的产品时，请花几分钟来填写活动报告来记录下你们的谈话。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>When you mention a product you received from Wildfire to a friend, take a second to submit a Spark Report!</seg>
+				<seg>It all works by learning everything about it in the WOM kit, trying a sample product, sharing your opinion and then listening to what they have to say.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='What’s_a_Spark_Report?_Content_3'>
@@ -264,7 +521,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>人们总是到处谈论产品，所以希望你每次谈论起星星火的活动时，都能提交报告来告诉我们。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>People talk about products all the time, so we don’t expect you to tell us EVERY time you mention a product from Wildfire.</seg>
+				<seg>You are always welcome to come back to our Community Platform to send your WOM report and earn points!</seg>
 			</tuv>
 		</tu>
 		<tu tuid='What’s_a_Spark_Report?_Content_4'>
@@ -272,7 +529,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>你提交的报告越多，你将获得越多的积分，同时你将会收到更多其它有意思的活动产品。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>However, the more you report, the more points you’ll earn. With more points, you’ll be invited to receive more products!</seg>
+				<seg>If you have questions, please let us know and we’ll keep in touch with you!</seg>
 			</tuv>
 		</tu>
 		
@@ -281,7 +538,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>活动报告 </seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Spark Report </seg>
+				<seg>Word-of-Mouth Report</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Bonus_Report'>
@@ -699,7 +956,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>口碑活动</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Spark Campaign </seg>
+				<seg>Spark Campaign</seg>
 			</tuv>
 		</tu>
 		
@@ -838,7 +1095,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>口碑活动！</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg> Spark Campaign! </seg>
+				<seg> Philippines Campaign!</seg>
 			</tuv>
 		</tu>
 		
@@ -1041,7 +1298,7 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>暂时没有可供您参加的星星活动！</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>All campaigns are currently full!</seg>
+				<seg>Sorry, all campaigns are full.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='This_Spark_Campaign_is_Full_Content'>
@@ -1049,7 +1306,8 @@ Each Report = Up to 500 Points]]></seg>
 				<seg>但是，大部分的会员都会在加入星星火几周内收到活动邀请！请记得完成在你首页上出现的问卷，让我们更了解你，我们会及时通知你参加你感兴趣的活动。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>The participation is on a first come, first serve basis and as it’s currently full, we won’t be able to admit you to the campaign and apologize for any inconvenience caused.</seg>
+				<!-- <seg>The participation is on a first come, first serve basis and as it’s currently full, we won’t be able to admit you to the campaign and apologize for any inconvenience caused.</seg> -->
+				<seg>We know how interested you are in joining a campaign. Kindly take polls and we’ll get in touch once we found one which you can join!</seg>
 			</tuv>
 		</tu>
 		

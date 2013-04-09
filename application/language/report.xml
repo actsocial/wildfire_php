@@ -20,7 +20,7 @@
 				<seg>星星火报告</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg> Spark Report</seg>
+				<seg> WOM Report</seg>
 			</tuv>
 		</tu>
         <tu tuid='Submit_you_report_error'>
@@ -44,7 +44,10 @@
 				<seg><![CDATA[<p>谈论产品的方式有：面对面，电话，QQ，MSN，或者你的博客或你喜欢的论坛。无论你如何分享的，请详细地诚实地告诉我们，这样你将获得更多的积分和更多参与活动的机会！</p>]]> </seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg><![CDATA[<p>There are many ways to talk about products: face-to-face, telephone, QQ or MSN, or even on your blog or favorite BBS. Regardless of how you shared, be sure to let us know all the details, and be honest. Only honest and detailed reports will earn you more points and more campaigns!</p>]]></seg>
+				<seg><![CDATA[<p>Regardless of how you speak with your friends, let us know the details and we will analyze your reports. Honest and detailed ones will earn you more points and more campaigns.</p>]]></seg>
+				<!-- There are many ways to talk with someone about products: face-to-face, over the phone, through SMS, Yahoo Messenger, and BBM. Regardless of how you share, let us know the details and we will analyze your reports. Honest and detailed ones will earn you more points and more campaigns.
+<br><br>
+However, since your time is very valuable, you may directly upload screenshots/pictures of your conversations. -->
 			</tuv>
 		</tu>
 		
@@ -53,7 +56,7 @@
 				<seg>谢谢你提交星星火报告！</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Thank you for your Spark Report!</seg>
+				<seg>Thank you for your word-of-mouth Report!</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Thanks_For_Report_Content1'>

@@ -252,12 +252,40 @@
 				<seg>Others</seg>
 			</tuv>
 		</tu>
+
+		<tu tuid='Gift_list_category_globe'>
+			<tuv xml:lang="zh">
+				<seg>Globe Network</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Globe Network</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Gift_list_category_smart'>
+			<tuv xml:lang="zh">
+				<seg>Smart Network</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Smart Network</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Gift_list_category_sun'>
+			<tuv xml:lang="zh">
+				<seg>Sun Network</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Sun Network</seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='Gift_list_available_gifts'>
 			<tuv xml:lang="zh">
 				<seg>可兑换的奖品</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Available rewards</seg>
+				<seg>All</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Gift_list_show_details'>
@@ -530,7 +558,7 @@
 				<seg>我的订单</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>My Order</seg>
+				<seg>My Orders:</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Gift_Cancel_the_Order?'>
@@ -574,7 +602,7 @@
 		<p><strong>FINISHED：</strong>Your rewards have been sent.</p>
 		<p><strong>CANCELED：</strong>You have canceled the order.</p>
 		<p><strong>UNAPPROVED：</strong>The order is not approved.</p>
-		<p>If you have any questions, please contact with 021-58363216-0。</p>]]></seg>
+		<p>For questions, please do not hesitate to <a href='../site/contactus'><span style='color:#17365D'>contact us</span></a>!</p>]]></seg>
 			</tuv>
 		</tu>
 		<tu tuid='Gift_Description_Product_ID'>
@@ -623,7 +651,7 @@ Remember, you must have completed at least one campaign to redeem your Spark poi
 				<seg>你当前没有订单。</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>There are no orders now.</seg>
+				<seg>You currently do not have orders. To place one, please click the back button.</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Gift_Are_you_sure_delete_gift_cart?'>

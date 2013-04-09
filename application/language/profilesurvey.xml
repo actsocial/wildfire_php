@@ -60,6 +60,17 @@ Completing polls also increases the likelyhood that you’ll be invited to futur
 				<seg>Take me home</seg>
 			</tuv>
 		</tu>
+
+		
+		<tu tuid='Take_Me_Back'>
+			<tuv xml:lang="zh">
+				<seg>返回主页</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Back</seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='More_Polls'>
 			<tuv xml:lang="zh">
 				<seg>更多问卷调查</seg>

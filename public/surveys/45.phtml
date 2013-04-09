@@ -13,11 +13,38 @@
 	<!--[if IE]>
 	<link href="/css/fillout_default-ie.css" rel="stylesheet" type="text/css" media="screen" />
 	<![endif]-->
-	<link href="/css/niftyCorners.css" rel="stylesheet" type="text/css" media="screen" />
+		<link href="/css/niftyCorners.css" rel="stylesheet" type="text/css" media="screen" />
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/css/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/css/bootstrap/js/bootstrap-modal.js"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/css/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script type="text/javascript" src="<?php echo $this->baseUrl();?>/css/bootstrap/js/bootstrap-popover.js"></script>
+    <link type="text/css" href="<?php echo $this->baseUrl();?>/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <script type='text/javascript'>
+  	document.getElementById("question_141").setAttribute("onchange","showOrHide(this.value)");
+    jQuery.fn.collapse.Constructor.prototype.transition = function (method, startEvent, completeEvent) {
+      var that = this
+        , complete = function () {
+            if (startEvent.type == 'show') that.reset();
+            that.transitioning = 0;
+            that.$element.trigger(completeEvent);
+          }
+
+      //this.$element.trigger(startEvent);
+      //if (startEvent.isDefaultPrevented()) return;
+      this.transitioning = 1;
+      this.$element[method]('in');
+      (jQuery.support.transition && this.$element.hasClass('collapse')) ?
+    this.$element.one(jQuery.support.transition.end, complete) :
+        complete();
+    };
+    
+    jQuery.noConflict();
+</script>
+
 	<script src="/js/all.js" language="JavaScript" type="text/javascript"></script>
 	<script language="JavaScript" type="text/javascript">
-	<!--
-	// <![CDATA[
+
 	function msieversion() {
 		var ua = window.navigator.userAgent
 		var msie = ua.indexOf ( "MSIE " )
@@ -42,27 +69,27 @@
 		}
 		return !hasError;
 	}
-	// ]]>
-	-->
+
 	</script>
+
 </head>
 
 <body>
 <div class="main-container-outer">
 	<div id="container">
-		<div id="header" class="header">
+		<!-- <div id="header" class="header">
 			<div class="header-left"></div>
 			<div class="header-content"><div class="user-info">
 			</div></div>
 			<div class="header-right"></div><div class="logo">
 			<div class="main-logo" id="main-logo">
 				<a href="http://www.wildfire.asia" target="_blank">
-					<!-- <img src="/survey/logoImage/45" style="height:70px; width:301px" /> -->
+					<img src="/survey/logoImage/45" style="height:70px; width:301px" />
 				</a>
 			</div>
 			<div class="image-banner"></div>
 			</div> 
-		</div> <!-- header -->
+		</div>  --><!-- header -->
 		<div id="nav" class="navigation">
 			<div class="nav-left"></div>
 			<div class="nav-right"></div>
@@ -94,8 +121,8 @@
 </div>
 <div id="mainzone">
 <div id="mainzone-inner">
-<div class="questionnaire-title">DSM Report</div>
-
+<!-- <div class="questionnaire-title">Quality for Life<sup style='font-size:8px'>TM</sup> Report</div> -->
+<br>
 
 <input type="hidden" name="id" value="" id="id" />
 <input type="hidden" name="theme" value="default" id="theme" />
@@ -107,15 +134,31 @@
 </div>
 <div class="clear"></div>
 
+	<script type="text/javascript">
+		function showOrHide(val){
 
+			if(val==199||val==196){
+				// jQuery("#q_69").css("display","");
+				var doc = document.getElementById("q_69")
+				doc.style.display="";
+				if (val==196) {
+					jQuery(".changetitle").text("URL")
+				}else{
+					jQuery(".changetitle").text("Other way")
+				}
+			}else{
+				document.getElementById("q_69").style.display="none";
+			}
+
+		}
+
+		function showOrHide1(){
+			alert(2);
+		}
+	</script>
 	
 	<div id="page_0">
-<script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
-</script>
+
 		  <div id="q_68" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
@@ -138,12 +181,12 @@
 <input type="hidden" name="answers[141].id" value="" id="answers[141].id" />
 
 	<select group="141" class="selection" id="question_141" name="answers[141].value" title="title"  size = "1" >
-	<option selected="selected" value="0">Please choose</option>
-<option value="195" style=""  >face-to-face</option>
-<option value="196" style=""  >Web (Forum, social media, blog)</option>
-<option value="197" style=""  >Telephone or SMS</option>
-<option value="198" style=""  >Instant Messenger Service</option>
-<option value="199" style=""  >Other</option>
+	<option selected="selected" value="0" >Please choose</option>
+<option value="195"    >face-to-face</option>
+<option value="196"  >Web (Forum, social media, blog)</option>
+<option value="197"  >Telephone or SMS</option>
+<option value="198"  >Instant Messenger Service</option>
+<option value="199"  >Other</option>
 	</select> 
  </td>
 
@@ -170,12 +213,12 @@
 // ]]>
 -->
 </script>
-		  <div id="q_69" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_69" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tr>
 				<td width=50% valign="top">
-					<div class="question-title">
+					<div class="question-title changetitle">
 						Other way
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
@@ -204,13 +247,93 @@
 // ]]>
 -->
 </script>
+
+  <div id="q_77" style="margin-bottom:0px;" class="question-even question-area">
+	  	
+		<table class="question-table">
+			<tr>
+				<td width=50% valign="top">
+					<div class="question-title">
+						Provide us with the summary of what you have talked about  or chat records <!-- <a href='http://community.wildfire.asia/public/training/samplereport' target='_blank'>(Sample Report)</a> -->
+						<a class="btn" href="javascript:void(0)"  id="toggletest" style="background: url(../public/images/big-button.gif) no-repeat center center;
+	display: block;
+	float: left;
+	color: #fff;
+	text-decoration: none;" rel="popover" data-content='<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Sample Report 1
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="accordion-inner">
+      When I received Wildfire’s mailed package for Baileys, I couldn’t wait to share it with my good friends. Shown below are the feedbacks from 3 of my friends.
+ 
+			Cathy said, “Normally, I don’t really like to consume alcohol as I’m afraid of the after taste of alcohol. However, the alcohol concentration of Baileys is low and the unique blend of rich Irish cream creates a unique flavor. I can’t distinguish whether I’m consuming alcohol or ice cream. Baileys left a sweet after taste in my mouth. The feeling is perfect.
+			Cecilia said, “At the very first sip, this alcohol had already made a deep impression, it has this flavor that urges a drinker to continue tasting it. I was afraid that I would be addicted to it. This feeling trigger those who drink Baileys to think back on their first relationship.
+			Tina said, “Usually I face huge amount of pressure at work however after having a sip of Baileys, I felt more relaxed. During the weekends, I drink Baileys with 3 to 5 good friends, talk about life, and it makes me feel that life is fun. I will definitely recommend this to my friends around me.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        Sample Report 2
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+      I spoke with my friend, James Capistrano. He’s very conscious with his body and he goes to the gym at least three times a week. But since he’s busy and tired from work everyday, he needs to take supplements or beverages to have the strength to exercise. So he purchases a bottle of energy drink before he goes to the gym.
+ 
+			James said, “To me, all of the energy drinks on the market have the same effects, good and bad, price could be very expensive or cheap. But what I choose is Cobra Fit. It’s the not-so-expensive brand with great taste, less calories and contains imported vitamin ingredients. I don’t like the brand name though!”
+      </div>
+    </div>
+  </div>
+    <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+        Sample Report 3
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+				I went to kindergarden to pick up my child and talked with some parents I know. They asked: “What snacks did you bring to your kid?” I said: “I brought new biscuits of Uguan (Kraft). It is convenient and nutritious with less food additives. It’s a perfect snack for kids to eat after school so they won’t be very hungry before the dinner officially starts.” The parents totally agreed. I gave 2 pieces to my son to share with his best friends. They finished them quickly. Next time, I will bring some milk as it’s a bit dry. I’ll send more reports soon!
+      </div>
+    </div>
+  </div>
+</div>'  data-title="Sample Report">See Sample Report</a>
+					</div>
+				</td>
+				<td width=50% valign="top">
+<table width="100%">
+<tr>
+<td>
+<input type="hidden" name="answers[149].id" value="" id="answers[149].id" />
+<textarea name="answers[149].value" id="question_149" cols="40" group="149" rows="12" class="input-text" ></textarea>
+<span class="error-content" id="err_answers[149].value"  class="redFieldError"></span>
+</td>
+
+  </tr>
+  </table>				</td>
+			</tr>
+	    </table>
+	  </div>
+	  <div style="clear:both;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
+</script>
+
 		  <div id="q_70" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						How many people have you been talking with this time?
+						How many people have you been<br> talking with this time?
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
 							   
@@ -276,7 +399,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						Among these people, with how many did you talk about the product?
+						Among these people, how many did<br> you talk about Quality for Life with?
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
 							   
@@ -336,7 +459,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						Among these people, how many people have heard about the product before?
+						How many of them have heard about  Quality for Life  with?
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
 							   
@@ -422,7 +545,7 @@
 <option value="245" style=""  >No Comments</option>
 <option value="246" style=""  >1 point（completely not interested）</option>
 <option value="247" style=""  >2 points</option>
-<option value="248" style=""  >3points（slightly interested）</option>
+<option value="248" style=""  >3 points（slightly interested）</option>
 <option value="249" style=""  >4 points</option>
 <option value="250" style=""  >5 points（interested）</option>
 <option value="251" style=""  >6 points</option>
@@ -516,7 +639,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						If you have talked with friends on the internet, please leave the URL:
+						How did you communicate with your friends?
 					</div>
 							<div class="elementInfoText twoColumnLayout" >
 							   
@@ -527,38 +650,8 @@
 <tr>
 <td>
 <input type="hidden" name="answers[148].id" value="" id="answers[148].id" />
-<textarea name="answers[148].value" id="question_148" cols="40" group="148" rows="5" class="input-text" ></textarea>
+<textarea name="answers[148].value" id="question_148" cols="40" group="148" rows="3" class="input-text" ></textarea>
 <span class="error-content" id="err_answers[148].value"  class="redFieldError"></span>
-</td>
-
-  </tr>
-  </table>				</td>
-			</tr>
-	    </table>
-	  </div>
-	  <div style="clear:both;"></div>
-<script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-// ]]>
--->
-</script>
-		  <div id="q_77" style="margin-bottom:0px;" class="question-even question-area">
-	  	
-		<table class="question-table">
-			<tr>
-				<td width=50% valign="top">
-					<div class="question-title">
-						your conversation contents (or chatting records)<a href='http://home.xingxinghuo.com/public/training/samplereport' target='_blank'>(please check the example report)</a>
-					</div>
-				</td>
-				<td width=50% valign="top">
-<table width="100%">
-<tr>
-<td>
-<input type="hidden" name="answers[149].id" value="" id="answers[149].id" />
-<textarea name="answers[149].value" id="question_149" cols="40" group="149" rows="12" class="input-text" ></textarea>
-<span class="error-content" id="err_answers[149].value"  class="redFieldError"></span>
 </td>
 
   </tr>
@@ -579,7 +672,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						Does Each person whom you've talked with know that you are a member of Wildfire Community?
+						Does each person whom you've talked <br> with know that you are a member of Wildfire Community?
 					</div>
 				</td>
 				<td width=50% valign="top">
@@ -627,7 +720,7 @@
 			<tr>
 				<td width=50% valign="top">
 					<div class="question-title">
-						Can we please share this report with other Wildfire Community members?
+						Can we share this report to the Quality<br> for Life website and Facebook page?
 					</div>
 				</td>
 				<td width=50% valign="top">
@@ -765,8 +858,17 @@
 </div>
 <br/>
 <div class="fillout-submit">
-<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' />
-<input id="submit" type="submit" style="display:none" class="button" name="command.submit" value="Submit" />
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value='Next Page' style="display:none" />
+<input id="submit" type="submit" style="display:none;background: url(../public/images/button.gif) no-repeat center center;
+	display: block;
+	float: left;
+	width: 110px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
+	margin-right: 10px;" class="button" name="command.submit" value="Submit" />
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tr>
@@ -1279,7 +1381,28 @@
 	<div class="bottom-shadow"></div>
 	<div style="clear: both"></div>
 	
-</div> 
+</div>
+
+<script type="text/javascript">
+jQuery(function ()  
+{ 
+	/*jQuery("#toggletest").popover({
+		placement: 'right',
+		trigger:'click',
+	});*/
+
+	jQuery('#toggletest')
+	   .popover({
+	   		trigger:'click',
+	   })
+	   .click(function(e) { 
+	       e.preventDefault(); 
+	       $(this).focus(); 
+	   });
+
+});
+</script>
+
 </body>
 </html>
 

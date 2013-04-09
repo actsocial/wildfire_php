@@ -1,8 +1,8 @@
 <div class="consumer-edit">
 <div class="article-box" style="margin-bottom: 15px;"><div class="article-box-inner">
 <h1 style="float: left;"><?php echo $this->translate('Consumer_Extra_Info_Subject')?></h1>
-<div class="yourinfo">
-	<span><?php echo $this->translate("Home_Your_Info_Completeness")?></span>
+<div class="yourinfo2">
+	<!-- <span><?php echo $this->translate("Home_Your_Info_Completeness")?></span> -->
 	<?php if ($this->consumerextrainfo<40): ?>
 	<div class="progressbar-red">
 	<?php endif;?>
@@ -27,14 +27,19 @@
 	action="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>"
 	method="post">
 <fieldset>
-  <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Account_Info_Pic');?>" /></legend>
+  <!-- <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Account_Info_Pic');?>" /></legend> -->
+  <div class="article-box-title"><div style="margin-left:70px;">Account Information</div></div>
+  <div style="height:1px;"></div>
   <div class="form-line"><?php echo $this->form->email ;?></div>
   <div class="form-line"><?php echo $this->form->login_phone ;?></div>
   <div class="form-line"><?php echo $this->form->name ;?></div>
 </fieldset>
 
 <fieldset>
-  <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Post_Address_Pic');?>" /></legend>
+<!--   <legend><div><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Post_Address_Pic');?>" /></div>
+  	<div>*We will be sending your Word-of-Mouth kit soon. Please provide us with your correct information. </div></legend> -->
+	<div class="article-box-title"><div style="margin-left:70px;">Post Address</div></div>
+	<div style="margin-left:70px;color:#17365D;">*We will be sending your Word-of-Mouth kit soon. Please provide us with your correct information. </div>
 	<div class="form-line"><?php echo $this->form->recipients_name ;?></div>
 	<div class="form-line"><?php echo $this->form->phone ;?></div>
 
@@ -87,21 +92,26 @@
 		</div>
 	</div>
 	<div class="form-line long-text"><?php echo $this->form->address1 ;?></div>
+	<div class="form-line"><?php echo $this->form->city ;?></div>
+	<div class="form-line"><?php echo $this->form->country ;?></div>
 	<div class="form-line"><?php echo $this->form->postalcode ;?></div>
 </fieldset>
 
 <fieldset>
-	<legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Personal_Info_Pic');?>"/></legend>
+	<!-- <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Personal_Info_Pic');?>"/></legend> -->
+	<div class="article-box-title"><div style="margin-left:70px;">Personal Information</div></div>
 	<div class="form-line"><?php echo $this->form->birthdate ;?></div>
-	<div class="form-line not-text" style="height:55px;"><?php echo $this->form->gender;?></div>
-	<div class="form-line"><?php echo $this->form->birth_year;?></div>
+	<div class="form-line not-text"><?php echo $this->form->gender;?></div>
+	
 	<div class="form-line"><?php echo $this->form->profession;?></div>
 	<div class="form-line"><?php echo $this->form->education;?></div>
-	<div class="form-line-long-title" style="height:75px;"><?php echo $this->form->have_children;?></div>
-	<div class="form-line-long-title"><?php echo $this->form->children_birth_year;?></div>
-	<div class="form-line-long-title"><?php echo $this->form->income;?></div>
-	<div class="form-line-long-title" style="height:100px;"><?php echo $this->form->online_shopping;?></div>
-	<div class="form-line-long-title"><?php echo $this->form->use_extra_bonus_for;?></div>
+<!-- 	<div class="form-line-long-title" style="height:50px;"><?php echo $this->form->have_children;?></div> -->
+	<div class="form-line"><?php echo $this->form->status; ?></div>
+	<div class="form-line" style=""><?php echo $this->form->children_birth_year;?></div> 
+	<div class="form-line" style=""><?php echo $this->form->income;?></div>
+
+	<!-- <div class="form-line-long-title" style="height:100px;"><?php echo $this->form->online_shopping;?></div>
+	<div class="form-line-long-title"><?php echo $this->form->use_extra_bonus_for;?></div> -->
 </fieldset>
 
 <div style="clear: both; height: 20px;"></div>
@@ -114,85 +124,86 @@
 </form>
 </div>
 </div><!-- consumer edit -->
-<script>
-    Calendar.setup(
-		{
-			inputField : "birthdate", // ID of the input field
-			ifFormat : "%Y-%m-%d", // the date format
-			input : "birthdate", // ID of the button
-			showsTime : true
-		}
-	);
-</script>
+ <script>
+//     Calendar.setup(
+// 		{
+// 			inputField : "birthdate", // ID of the input field
+// 			ifFormat : "%Y-%m-%d", // the date format
+// 			input : "birthdate", // ID of the button
+// 			showsTime : true
+// 		}
+// 	);
+ </script>
 <script type="text/javascript">
 jQuery().ready(function() {
 // validate signup form on keyup and submit
 	jQuery("#editForm").validate({
-		rules: {
-			email: {
-				required: true,
-				email: true
-			},
-			login_phone: {
-				required: true,
-				number:true
-			},
-			name: {
-				required: true,
-				rangelength:[1,50]
-			},
-			recipients_name: {
-				required: true,
-				rangelength:[1,30]
-			},
-			phone: {
-				required: true,
-				number:true,
-				rangelength:[2,12]
-			},
-			address1: {
-			  //required: true,
-			  maxlength:240
-		  },
-			postalcode: {
-			  //required: true,
-			  number:true,
-			  maxlength:30
-		  }
-		},
-		messages: {
-			email: {
-				required: "请填写邮箱地址",
-				email: "邮箱地址不符合格式"
-			},
-			login_phone: {
-			  required: "请填写电话号码",
-				number: "电话号码只能为数字"
-			},
-			name: {
-				required: "请填写用户名",
-				rangelength: "请输入1-50位的用户名"
-			},
-			recipients_name: {
-				required: "请填写收件人姓名",
-				rangelength: "请输入1-30位的收件人姓名"
-			},
-			phone: {
-				required: "请填写电话号码",
-				number: "电话号码只能为数字",
-				rangelength: "电话号码长度错误"
-			},
-			address1: {
-			  required: "请填写收件人地址",
-				maxlength: "字符长度不能超过240个字符"
-			},
-			postalcode: {
-				required: "请填写收件人邮编",
-				number: "邮编只能为数字",
-				maxlength: "字符长度不能超过30个字符"
-			}
-		}
+		// rules: {
+		// 	email: {
+		// 		required: true,
+		// 		email: true
+		// 	},
+		// 	login_phone: {
+		// 		required: true,
+		// 		number:true
+		// 	},
+		// 	name: {
+		// 		required: true,
+		// 		rangelength:[1,50]
+		// 	},
+		// 	recipients_name: {
+		// 		required: true,
+		// 		rangelength:[1,30]
+		// 	},
+		// 	phone: {
+		// 		required: true,
+		// 		number:true,
+		// 		rangelength:[2,12]
+		// 	},
+		// 	address1: {
+		// 	  //required: true,
+		// 	  maxlength:240
+		//   },
+		// 	postalcode: {
+		// 	  //required: true,
+		// 	  number:true,
+		// 	  maxlength:30
+		//   }
+		// },
+		// messages: {
+		// 	email: {
+		// 		required: "请填写邮箱地址",
+		// 		email: "邮箱地址不符合格式"
+		// 	},
+		// 	login_phone: {
+		// 	  required: "请填写电话号码",
+		// 		number: "电话号码只能为数字"
+		// 	},
+		// 	name: {
+		// 		required: "请填写用户名",
+		// 		rangelength: "请输入1-50位的用户名"
+		// 	},
+		// 	recipients_name: {
+		// 		required: "请填写收件人姓名",
+		// 		rangelength: "请输入1-30位的收件人姓名"
+		// 	},
+		// 	phone: {
+		// 		required: "请填写电话号码",
+		// 		number: "电话号码只能为数字",
+		// 		rangelength: "电话号码长度错误"
+		// 	},
+		// 	address1: {
+		// 	  required: "请填写收件人地址",
+		// 		maxlength: "字符长度不能超过240个字符"
+		// 	},
+		// 	postalcode: {
+		// 		required: "请填写收件人邮编",
+		// 		number: "邮编只能为数字",
+		// 		maxlength: "字符长度不能超过30个字符"
+		// 	}
+		// }
 	});
+	jQuery("#gender_value br").remove();
 });
 function GetObjID(ObjName)
 { for (var ObjID=0; ObjID < document.form.elements.length; ObjID++)
@@ -241,7 +252,7 @@ function init(){
 	var p = $("province");
 	var c = $("city");
 	if('en' == lang || 'EN' == lang){
-		c.style.display = "none"; 
+		// c.style.display = "none"; 
 		p.style.display = "none";
 		$("englishcity").value = encity;
 	}else{
@@ -293,4 +304,5 @@ if (typeof window.onload != 'function') {
 		  init();
 	 	}
 	}
+	jQuery("#birthdate").datepicker({dateFormat: 'yy-mm-dd', maxDate: '0',changeYear: true,yearRange: '1900:2012' });
 </script>

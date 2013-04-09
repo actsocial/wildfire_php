@@ -1,5 +1,5 @@
 <?php
-include_once 'Indicate2Connect.php';
+// include_once 'Indicate2Connect.php';
 
 class HomeController extends MyController
 {
@@ -246,9 +246,14 @@ class HomeController extends MyController
 		//var_dump($this->view->consumer);die;
 		
 	}
+
 	function editAction()
 	{
 		$this->view->title = "Account Setting";
 	}
 	
+	function sharefailedAction(){
+		$this->view->title = "facebook share failed ";
+	}
+
 }

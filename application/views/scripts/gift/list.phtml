@@ -13,28 +13,44 @@
 	<?php endif;?>
 	<div class="category">
 		<h2><?php echo $this->translate('Gift_list_gift_category')?></h2>
-		<ul>
-
+<!-- 		<ul>
 			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_all')?></a></li>	
 			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'NEW', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_news')?></a></li>	
 			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Digital', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_electronics')?></a></li>
 			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Makeup', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_cosmetic')?></a></li>
 			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Commodity', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_supplies')?></a></li>
 			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Other', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_others')?></a></li>
-			
+		</ul> -->
+
+		<ul>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_all')?></a></li>	
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Globe', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_globe')?></a></li>	
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Smart', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_smart')?></a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Sun', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_sun')?></a></li>
+
+			<!-- <li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Commodity', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_supplies')?></a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'Other', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_others')?></a></li> -->
 		</ul>
+
 	</div>
 	<div class="category">
 		<h2><?php echo $this->translate('Gift_list_gift_points')?></h2>
-		<ul>		
-
-			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'0', 'p2'=>'3000', 'page'=>'1'));?>">0~3000</a></li>
+		<ul>
+			<!-- <li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'0', 'p2'=>'3000', 'page'=>'1'));?>">0~3000</a></li>
 			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'3001', 'p2'=>'5000', 'page'=>'1'));?>">3001~5000</a></li>
 			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'5001', 'p2'=>'8000', 'page'=>'1'));?>">5001~8000</a></li>
 			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'8001', 'p2'=>'100000', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_above_8000')?></a></li>
 			<?php if($this->amountPoints >= 1400):?>
 			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'mine', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_available_gifts')?></a></li>
-			<?php endif;?>
+			<?php endif;?> -->
+
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'0', 'p2'=>'0', 'page'=>'1'));?>"><?php echo $this->translate('Gift_list_category_all')?></a></li>	
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'0', 'p2'=>'1000', 'page'=>'1'));?>">0~1000 points</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'1001', 'p2'=>'2000', 'page'=>'1'));?>">1001~2000 points</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'2001', 'p2'=>'3000', 'page'=>'1'));?>">2001~3000 points</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'3001', 'p2'=>'4000', 'page'=>'1'));?>">3001~4000 points</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'4001', 'p2'=>'5000', 'page'=>'1'));?>">4001~5000 points</a></li>
+			<li><a href="<?php echo $this->url(array('controller'=>'gift','action'=>'list', 't'=>'none', 'p1'=>'5001', 'p2'=>'100000', 'page'=>'1'));?>">>5001 points</a></li>
 		</ul>
 	</div>
 

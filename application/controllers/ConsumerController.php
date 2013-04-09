@@ -195,16 +195,23 @@ class ConsumerController extends MyController {
 				$consumer = $consumerModel->find ( $id )
 				->current ();
 				$consumer->name = $form->getValue ( 'name' );
+				$consumer->login_phone = $form->getValue('login_phone');
 				$consumer->phone = $form->getValue ( 'phone' );
 				$consumer->address1 = $form->getValue ( 'address1' );
 				$consumer->postalcode = $form->getValue ( 'postalcode' );
 				$consumer->recipients_name = $form->getValue ( 'recipients_name' );
+				$consumer->birthdate = $form->getValue("birthdate");
+				$consumer->gender=$form->getValue("gender");
 				$consumer->qq = $form->getValue ( 'qq' );
-				if (isset ( $formData ['city'] ) && $formData ['city'] != null && $formData ['province'] != null) {
+				$consumer->city = $formData['city'] ;
+				$consumer->country = $formData['country'];
+
+				/*if (isset ( $formData ['city'] ) && $formData ['city'] != null && $formData ['province'] != null) {
 					$consumer->city = $formData ['city'];
 					$consumer->province = $formData ['province'];
-				}
-				if ($formData ['englishcity'] != null) {
+				}*/
+				// no need province 2012-11-07
+				/*if ($formData ['englishcity'] != null) {
 					$consumer->city = $formData ['englishcity'];
 					$consumer->province = null;
 				}
@@ -212,6 +219,7 @@ class ConsumerController extends MyController {
 					$consumer->city = null;
 					$consumer->province = null;
 				}
+				}*/
 				$consumer->birthdate = $formData ['birthdate'] != null ? $formData ['birthdate'] : null;
 				$consumer->save ();
 				// consumer_extra_info table
@@ -226,6 +234,7 @@ class ConsumerController extends MyController {
 				$consumerextra->have_children = isset ( $formData ['have_children'] ) ? $formData ['have_children'] : null;
 				$consumerextra->children_birth_year = $formData ['children_birth_year'];
 				$consumerextra->income = $formData ['income'];
+				$consumerextra->status = $formData['status'];
 				$consumerextra->online_shopping = isset ( $formData ['online_shopping'] ) ? $formData ['online_shopping'] : null;
 				if (isset ( $formData ['use_extra_bonus_for'] )) {
 					$use_extra_bonus_forstr = '';
@@ -367,6 +376,9 @@ class ConsumerController extends MyController {
 				if ($formData ['birthdate'] != null) {
 					$consumer->birthdate = $formData ['birthdate'];
 				}
+				if ($formData ['gender'] != null) {
+					$consumer->gender = $formData ['gender'];
+				}
 				if ($formData ['qq'] != null) {
 					$consumer->qq = $formData ['qq'];
 				}
@@ -390,6 +402,7 @@ class ConsumerController extends MyController {
 				$consumerextra->birthdate = $formData ['birthdate'] != null ? $formData ['birthdate'] : null;
 				$consumerextra->education = $formData ['education'];
 				$consumerextra->income = $formData ['income'];
+				$consumerextra->status = $formData ['status'];
 				$consumerextra->save();
 				
 				
@@ -428,8 +441,7 @@ class ConsumerController extends MyController {
 					}
 				} 
 				
-				
-				$this->_helper->redirector ( 'index', 'campaigninvitation' );
+				$this->_forward('description','campaign',null,array('id'=>$campaign));
 			}else{
 				$this->view->errMessage = "Please fill out all mandatory fields and make sure your emails are correct!";
 				$this->_forward('precampaignfinished',
@@ -816,7 +828,7 @@ class ConsumerController extends MyController {
 		$postData = $this->_request->getPost ();
 		$consumerModel = new Consumer ();
 		$consumerExtraModel = new ConsumerExtraInfo();
-		if ($postData ['field']== "birthdate" || $postData ['field']== "education" || $postData ['field']== "have_children"|| $postData ['field']== "children_birth_year"|| $postData ['field']== "income" ){
+		if ($postData ['field']== "birthdate" || $postData ['field']== "education" || $postData ['field']== "have_children"|| $postData ['field']== "children_birth_year"|| $postData ['field']== "income" || $postData['field']=="status" ){
 			$consumerExtraModel->update (array($postData ['field'] => $postData ['value'] ), 'consumer_id = ' . $uid );
 		}else {
 			$consumerModel->update ( array ($postData ['field'] => $postData ['value'] ), 'id = ' . $uid );

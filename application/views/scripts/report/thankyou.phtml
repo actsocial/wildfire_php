@@ -62,34 +62,53 @@ jQuery(document).ready(function() {
 <div class="article-box" style="height:120px;">
 	<div class="article-box-inner" style="margin-bottom: 20px;">
 		<h2><?php echo $this->translate('Thanks_For_report')?></h2>
-		<p style="padding-top: 10px;"><?php echo $this->translate('Thanks_For_Report_Content1')?>
-          <br/>
-      </p>
-      <p><?php echo $this->translate('Choose_file')?></p>
-      <form  id="uploadImage" action="" method="post" enctype="multipart/form-data">
-        <table>
-            <tr>
-                <td><?php echo $this->form->image;?></td>
-                <td style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $this->translate('Upload_hint');?></td>
-            </tr>
-            <tr>
-                <td><?php echo $this->form->submit;?></td>
-                <tr>
-                </table>
-            </form>
-            <?php if($this->saved == 1){?>
-            <h3><?php echo $this->translate('Successful_upload')?></h3>
-            <?php }?>
-            <?php if($this->saved == -1){?>
-            <h3><?php echo $this->translate('Unsuccessful_upload');?></h3>
-            <?php }?>
 
-            <div class="buttons-bar" style="padding-top: 10px;">
-               <a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>">
-                <?php echo $this->translate('Take_Me_Home')?>
-            </a>
+        <p style="padding-top:10px">
+           We will check your report then contact you at your registered email address to inform you when you can submit the next one. Please note that our reply may go to your Spam mailbox. Have a nice day!
+        </p>
+		<!-- <p style="padding-top: 10px;"><?php echo $this->translate('Thanks_For_Report_Content1')?>
+		<br/>
+		</p>
+		<p><?php echo $this->translate('Choose_file')?></p> -->
+               <!--  <form  id="uploadImage" action="" method="post" enctype="multipart/form-data">
+                    <table>
+                        <tr>
+                            <td><?php echo $this->form->image;?></td>
+                            <td style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $this->translate('Upload_hint');?></td>
+                        </tr>
+                        <tr>
+                            <td><?php echo $this->form->submit;?></td>
+                        <tr>
+                    </table>
+                </form>
+                <?php if($this->saved == 1){?>
+                <h3><?php echo $this->translate('Successful_upload')?></h3>
+                <?php }?>
+                <?php if($this->saved == -1){?>
+                <h3><?php echo $this->translate('Unsuccessful_upload');?></h3>
+                <?php }?>
+                <br/> -->
+
+                <div class="buttons-bar" style="padding-top: 10px;">
+		             <a class="big-button-blue" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>">
+                            <?php echo $this->translate('Take_Me_Home')?>
+
+                         </a>
+<!--		</div>
+
+
+        <div class="addthis_toolbox addthis_default_style " style="margin-top:20px;">
+        <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+        <a class="addthis_button_tweet"></a>
         </div>
-    </div>
+        <script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-5084bf9276fa636c"></script>
+ -->
+
+                         </a>
+		        </div>
+	</div>
+</div>
+
 
     <a onclick='postToFeed(); return false;' style="float: left;margin: 1px 5px 0 0;cursor:pointer;"><img src="<?php echo $this->baseUrl()?>/images/sns/facebook.png"></a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>

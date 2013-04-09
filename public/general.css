@@ -19,7 +19,9 @@ img {
 }
 .header {
 	width: 100%;
-	background: url(/public/images/background-top.jpg) repeat-x left top;
+	/*background: url(/public/images/background-top.jpg) repeat-x left top;*/
+	background-color: #309BE4;
+	height: 60px;
 }
 .header .header-inner {
 	width: 680px;
@@ -133,7 +135,7 @@ img {
 }
 .container {
 	width: 100%;
-	background: url(/public/images/background-banner.jpg) repeat-x left top;
+	/*background: url(/public/images/background-banner.jpg) repeat-x left top;*/
 }
 .container-inner {
 	width: 680px;
@@ -141,6 +143,7 @@ img {
 }
 .container .banner {
 	float: left;
+	/*margin-top:60px;*/
 }
 .container .text-banner {
 	float: left;
@@ -390,6 +393,7 @@ form dd input#login{
 	margin-bottom: 20px;
 	float: left;
 	width:680px;
+	margin-left: 115px;
 }
 .contents-3-col .buttons-bar dt,
 .contents-3-col .buttons-bar dd {

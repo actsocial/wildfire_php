@@ -23,6 +23,7 @@ class MyController extends Zend_Controller_Action
 		$this->view->joomlahome = $config->joomla->home;
 		if (Zend_Auth::getInstance()->hasIdentity()){
 			$authNamespace = new Zend_Session_Namespace('Zend_Auth');
+//			var_dump($authNamespace->user);die();
 			$this->_currentUser  = $authNamespace->user;
 			//2011-04-08 ham.bao separate the sessions with admin
 			$this->_currentAdmin = $authNamespace->admin;
@@ -41,8 +42,9 @@ class MyController extends Zend_Controller_Action
 		$controller = $this->getRequest()->getControllerName();
 		$action = $this->getRequest()->getActionName();
 		$authNamespace = new Zend_Session_Namespace('Zend_Auth');
-		// print_r($controller);die;
+		// Zend_Debug::dump($controller.$action);die;
 		if($this->filter($controller, $action)) {
+			// print_r("need auth");
 		  if (!Zend_Auth::getInstance()->hasIdentity()) {
 		    $config = Zend_Registry::get('config');
 	    	$lang = $this->_request->getParam('lang');
@@ -95,6 +97,7 @@ class MyController extends Zend_Controller_Action
                        'site'        =>null, 
                        'training'    =>null,
 	  				   'weibologin'  =>null,
+	  				   'facebooklogin'	=> null,
 	  				   'qqlogin'     =>null, 
                        'language'    =>null, 
                        'register'    =>null,

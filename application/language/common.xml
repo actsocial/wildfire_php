@@ -39,7 +39,7 @@
 				<seg>主页</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>my home</seg>
+				<seg>My Home</seg>
 			</tuv>
 		</tu>
 		<tu tuid='Index_HOME'>
@@ -242,7 +242,7 @@
 				<seg>活动</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>campaigns</seg>
+				<seg>Campaigns</seg>
 			</tuv>
 		</tu>
 		<tu tuid='TRAINING'>
@@ -250,7 +250,7 @@
 				<seg>培训</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>training</seg>
+				<seg>Training</seg>
 			</tuv>
 		</tu>
 		<tu tuid='POLLS'>
@@ -258,7 +258,7 @@
 				<seg>问卷</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>polls</seg>
+				<seg>Polls</seg>
 			</tuv>
 		</tu>
 		<tu tuid='PROFILE'>
@@ -503,7 +503,11 @@
 				<seg>欢迎来到中国第一个“口口相传”社区，在这里你可以得到你喜欢的各种免费产品，请马上登录和你的朋友一起来分享吧！</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Welcome to Wildfire Community, where you'll get exciting free products based on your interests, and be the first to tell your friends!</seg>
+				<seg>
+					<h2 style='color:#17365D'>Become an influencer and let your voice be heard! Be a part of the consumer-powered marketing revolution!
+</h2>
+					As a Wildfire member, you can be invited to join natural word-of-mouth campaigns, receive free products or services, and share your experiences with the people around you!
+</seg>
 			</tuv>
 		</tu>
 

@@ -1,6 +1,7 @@
 <?php
 require_once 'Zend/Mail/Transport/Smtp.php';
 require_once 'Zend/Mail.php';
+include_once 'fckeditor_php5.php';
 
 class InvitationController extends MyController
 {
@@ -8,9 +9,20 @@ class InvitationController extends MyController
 
 	function indexAction()
 	{
+		// error_reporting(0);
+
+		$fc = Zend_Controller_Front::getInstance ();
+		$this->view->oFCKeditor = new FCKeditor ( 'htmlmessage',"500px");
+		$this->view->oFCKeditor->BasePath = $fc->getBaseUrl () . "/js/fckeditor/";
+		$this->view->oFCKeditor->Height = "500px";
+		$this->view->oFCKeditor->Width = "580px";
+		$this->view->oFCKeditor->ToolbarSet = "Basic";
+		$this->view->oFCKeditor->Value =$this->view->translate("INVITE_FRIENDS_TEMPLATE_105");
+
 		$this->view->title = $this->view->translate("Wildfire")." - ".$this->view->translate("Friend_Invitations");
 
 		$consumer = $this->_currentUser;
+
 		//selcet the email address which has been invited
 		$db = Zend_Registry::get('db');
 		$select = $db->select();
@@ -18,8 +30,18 @@ class InvitationController extends MyController
 		$select->where('consumer_id = ?',$this->_currentUser->id);
 		$receivers = $db->fetchAll($select);
 		
-		$select2=$db->select();
+		//select campaigns which were this consumer joined in.
+				
+		$select3 = $db->select();
+		$select3->from('campaign','campaign.*')
+				->join('campaign_invitation','campaign.id=campaign_invitation.campaign_id','campaign_invitation.state')
+				->where("campaign_invitation.state !='NEW' ")
+				->where("campaign_invitation.consumer_id = ?",$this->_currentUser->id);
+
+		$allCampaigns = $db->fetchAll($select3);
+		// print_r($allCampaigns);die();
 		
+		$select2=$db->select();
 		$select2->from('consumer','invitation_limit');
 		$select2->where('id =?',$this->_currentUser->id);
 		$default_count=$db->fetchAll($select2);
@@ -51,6 +73,7 @@ class InvitationController extends MyController
 			$this->view->Invitation_limit = $this->_maxInvitation;
 		}
 		$this->view->sendMailForm->sentMailAmount->setValue(count($receivers));
+		$this->view->allCampaigns = $allCampaigns;
 		//		Zend_Debug::dump($row->create_date);
 	}
 	
@@ -68,6 +91,7 @@ class InvitationController extends MyController
 			$isSentSuccessfully = true;
 			return;
 		}
+
 		if ($this->_request->isPost()) {//POST
 			$formData = $this->_request->getPost();
 			if ($form->isValid($formData)) {
@@ -92,8 +116,16 @@ class InvitationController extends MyController
 							$signup_auth_code = $signup_auth_code.$codePattern{mt_rand(0,35)};
 						}
 						//send mail
+
+						// $emailSubject = $this->view->translate('Invitation_Email_subject');
+						// $emailBody = $this->view->translate('Invitation_Email_body');
+						// fix email contents 2012-11-02 
+
+						// $emailSubject = "test invitation email title";
 						$emailSubject = $this->view->translate('Invitation_Email_subject');
-						$emailBody = $this->view->translate('Invitation_Email_body');
+						$emailBody = $this->_request->getPost('htmlmessage');
+
+
 						$stringChange = array(
 							'?USERNAME?' => $this->_currentUser['name'],
 							'?EMAIL?' => $this->_currentUser['email'],
@@ -101,6 +133,7 @@ class InvitationController extends MyController
 							'?AUTHCODE?' => (string)$signup_auth_code);
 						$emailSubject = strtr($emailSubject,$stringChange);
 						$emailBody = strtr($emailBody,$stringChange);
+						// var_dump($emailBody);die();
 						$config = Zend_Registry::get('config');
 						$smtpSender = new Zend_Mail_Transport_Smtp(
 								$config->smtp->friend->mail->server,
@@ -115,6 +148,7 @@ class InvitationController extends MyController
 //														'username'=>'yun_simon@163.com',
 //																			'password'=>'19990402',
 //																			'auth'=>'login'));
+
 						Zend_Mail::setDefaultTransport($smtpSender);
 						$mail = new Zend_Mail('utf-8');
 						$langNamespace = new Zend_Session_Namespace('Lang');
@@ -123,11 +157,12 @@ class InvitationController extends MyController
 						}else{
 							$mail->setSubject("=?UTF-8?B?".base64_encode($emailSubject)."?=");
 						}
-						$mail->setBodyText($emailBody);
+						$mail->setBodyHtml((string)$emailBody);
 						$mail->setFrom($config->smtp->friend->mail->username, $consumer->name);
 						$mail->addHeader('Reply-To', $consumer->email);
 //						$mail->setFrom('yun_simon@163.com',$this->view->translate('Wildfire'));
 						$mail->addTo($form->getValue('email'.(string)$i));
+						// var_dump($mail);die();
 						//save into DB					
 						try{
 							$currentTime = date("Y-m-d H:i:s");

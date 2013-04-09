@@ -172,6 +172,7 @@ class ReportController extends MyController
 		$this->view->form = $form;
 		
 		if( $this->_request->isPost() ){
+			
 				$image         = $form->getValue ( 'image' );
 				if ( $image !='') {
 					$reportImage   = new ReportImages();
@@ -182,6 +183,7 @@ class ReportController extends MyController
 					$row->crdate   = date('Y-m-d H:i:s');
 					$row->save();
 					$this->view->saved = 1;
+					
 				}else{
 					$this->view->saved = -1;
 				}
@@ -1865,6 +1867,7 @@ function adminreportbatchreplyAction(){
 				// get survey_id for campaign
 				$campaignModel = new Campaign();
 				$campaign = $campaignModel->fetchRow('id = '.$formData['campaign_id']);
+				// Zend_Debug::dump($formData['submittype']);
 				switch ($formData['submittype']){
 					case 'pre_campaign':
 						$survey_id = $campaign['pre_campaign_survey'];
@@ -1896,7 +1899,7 @@ function adminreportbatchreplyAction(){
 						->where("report.state = 'APPROVED'")
 						->order("create_date desc")
 						->limit(0);
-						
+						// Zend_Debug::dump($selectAccessCode);die();
 						$accessCodeArray = $db->fetchAll($selectAccessCode);
 						foreach($accessCodeArray as $accessCode):
 							array_push($accessCodeList,$accessCode['accesscode']);
@@ -1947,8 +1950,9 @@ function adminreportbatchreplyAction(){
 			$this->view->reportExtraInfoArray = $reportInforArray;
 			$this->view->surveyQuestionArray = $response->QuestionType;
 			$this->view->surveyArray = $response->AnswerSetType;
-			//Zend_Debug::dump($response);
-			//die;
+			// Zend_Debug::dump($accessCodeList."######################");
+			// Zend_Debug::dump($response);
+			// die;
 
 			// create phpexcel obj.
 			require_once 'PHPExcel.php';

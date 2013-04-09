@@ -35,7 +35,9 @@ class WeibologinController extends MyController{
 				$token = $this->getToken($o);
 				if ($token) {
 					// Zend_Debug::dump($state['callback']."?token=".json_encode($token));die;
+
 					if(strpos($state['callback'], "?") !== false) {
+
 						$this->getResponse()->setRedirect($state['callback']."&token=".urlencode(json_encode($token)));
 					}else {
 						$this->getResponse()->setRedirect($state['callback']."?token=".urlencode(json_encode($token)));

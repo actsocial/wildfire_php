@@ -26,8 +26,11 @@
 			<tuv xml:lang="zh">
 				<seg>星星火活动邀请</seg>
 			</tuv>
-			<tuv xml:lang="en">
+			<!-- <tuv xml:lang="en">
 				<seg>Spark Campaign Invitations</seg>
+			</tuv> -->
+			<tuv xml:lang="en">
+				<seg>Campaigns</seg>
 			</tuv>
 		</tu>
 		<tu tuid='INDEX_SPARK_CAMPAIGN_INVITATION_CONTENT1'>
@@ -35,7 +38,7 @@
 				<seg>你当前没有</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>You do not currently have invitations to any </seg>
+				<seg>We thank you for your interest </seg>
 			</tuv>
 		</tu>
 		<tu tuid='INDEX_SPARK_CAMPAIGN_INVITATION_CONTENT2'>
@@ -43,8 +46,7 @@
 				<seg>星星火活动的邀请。请你经常查看活动页面，如果发现任何你感兴趣的活动请立即接受邀请！</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Spark Campaigns. 
-				Be sure to check your Spark Homepage often and sign up quick if you see a Spark Campaign that interests you!</seg>
+				<seg>but there are no new campaigns for you at the moment. </seg>
 			</tuv>
 		</tu>
 		<tu tuid='INDEX_LOOK_FOR_FUN'>
@@ -84,7 +86,7 @@
 				<seg>星星火培训</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Spark Training </seg>
+				<seg>Influencer Training </seg>
 			</tuv>
 		</tu>
 		<tu tuid='INDEX_LOOK_FOR_FUN_CONTENT_PART5'>
@@ -92,7 +94,7 @@
 				<seg>？通过参与问卷让我们更加了解你的需要，完成问卷后你将得到星星火积分，同时会更有可能得到下次活动的邀请！</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>while you wait for the next Spark Campaign? Completing polls lets us know more about you, which means you’re more likely to be invited to future campaigns!</seg>
+				<seg>while you wait for the next Influencer Campaign? Completing polls lets us know more about you, which means you’re more likely to be invited to future campaigns!</seg>
 			</tuv>
 		</tu>
 		<tu tuid='INDEX_YOU_ARE_INVITED'>
@@ -215,7 +217,17 @@
 			<tuv xml:lang="en">
 				<seg>How else would you expect us to grow besides by word-of-mouth? Help your friends out by sending them an invitation to become a Spark. They'll be sure to thank you later when you're participating in great campaigns together.</seg>
 			</tuv>
-		</tu>		
+		</tu>
+
+		<tu tuid='INVITATION_MAIL_CAMPAIGN_INTRODUCTION_HEAD'>
+			<tuv xml:lang="zh">
+				<seg>让你的朋友加入星星火活动</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Invite your friends to join a campaign!</seg>
+			</tuv>
+		</tu>
+
 		<tu tuid='INVITATION_MAIL_LIST_PART1_Sucessful'>
 			<tuv xml:lang="zh">
 				<seg>你已成功发送邀请邮件，请继续！</seg>

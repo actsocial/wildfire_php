@@ -52,8 +52,7 @@
 				<seg>邀请码(可以为空)：</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Enter Code:
-					(Leave it blank if you have no invitation code)
+				<seg>Got an invitation code? Enter it now!
 				</seg>
 			</tuv>
 		</tu>
@@ -254,6 +253,15 @@
 			</tuv>
 			<tuv xml:lang="en">
 				<seg>It is less than 6 characters long.</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Auth_code_is_invalid'>
+			<tuv xml:lang="zh">
+				<seg>Auth_code is not a valid code.</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Auth_code is not a valid code.</seg>
 			</tuv>
 		</tu>
 		
