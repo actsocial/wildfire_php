@@ -2463,6 +2463,7 @@ a.list-orders:hover {
 }
 .avatar img{
 	vertical-align:middle;
+	width:100px;
 }
 
 .yourinfo {
