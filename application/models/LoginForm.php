@@ -8,7 +8,8 @@ class LoginForm extends Zend_Form
 		'validators' => array(array('StringLength', false, array(3,50)),),
 		'required' => true,
 		// 'label' => $this->getView()->translate('Email'),
-		'placeholder' => "Email",
+		'label' => "Email/Phone",
+		'placeholder' => "Email/Phone",
 		'class' => 'inputtext'
 		));
 		
@@ -17,6 +18,7 @@ class LoginForm extends Zend_Form
 		'validators' => array(	array('StringLength', false, array(6, 20)),	),
 		'required' => true,
 		// 'label' => $this->getView()->translate('Password'),
+		'label' => 'Password',
 		'placeholder' => "Password",
 		'class' => 'inputtext'
 		));

@@ -100,11 +100,11 @@
 		</div> -->
 
 	</div>
-<div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
+<!-- <div class="facebook_login" style="float:left;margin-top:50px;margin-left:50px;">
 					<a href="<?php echo $this->facebook_login_url;?>">
 					   
 					  <img src="<?php echo $this->baseUrl();?>/images/facebookloginv2.png">
-					</a>
+					</a> -->
 					<!-- Not a member yet? Click  
 					<a href="<?php echo $this->url(array('controller'=>'register','action'=>'register'));?>">
 						here
@@ -112,35 +112,32 @@
 
 			<!--<img src="http://static.ak.fbcdn.net/images/fbconnect/login-buttons/connect_light_medium_long.gif">-->
 
-</div>
-<table class="vertical_bar">
+<!-- </div> -->
+<!-- <table class="vertical_bar">
 	<tr><td></td></tr>
-</table>
+</table> -->
 <form enctype="application/x-www-form-urlencoded" style="width:300px;float:left;margin-left:20px;" action="<?php echo $this->url(array('controller'=>'login',
 		'action'=>'login'));?>" method="post" target="_parent">
 		
 <div class="login_form">
-<br/>
-
-<table>
-		<tr>
-            <td><?php echo $this->form->email?></td>
-    </tr>
-		<tr>
-            <td><?php echo $this->form->password?></td>
-    </tr>
-    <tr>
-    				<td><a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:8px;margin-left:240px;color:#17365D;margin-left:80px;">Forgot your Password?</a></td>
-    </tr>
-        <!-- <tr>
-            <td>
-                <a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>"><?php echo $this->translate("Common_Forget_Password")?></a>&nbsp;&nbsp;&nbsp;
-                <a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>"><?php echo $this->translate("Common_Inactive_Account")?></a>
-            </td>
-        </tr> -->
-</table>
-
-  <div style="clear:both"></div>
+	<table>
+			<tr>
+	            <td><?php echo $this->form->email?></td>
+	    </tr>
+			<tr>
+	            <td><?php echo $this->form->password?></td>
+	    </tr>
+	    <tr>
+	    				<td><a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>" style="font-size:8px;margin-left:240px;color:#17365D;margin-left:80px;">Forgot your Password?</a></td>
+	    </tr>
+	         <!-- <tr>
+	            <td>
+	                <a href="<?php echo $this->url(array('controller'=>'forgetpassword','action'=>'index'));?>"><?php echo $this->translate("Common_Forget_Password")?></a>&nbsp;&nbsp;&nbsp;
+	                <a href="<?php echo $this->url(array('controller'=>'register','action'=>'sendenableemail'));?>"><?php echo $this->translate("Common_Inactive_Account")?></a>
+	            </td>
+	        </tr>  -->
+	</table>
+<div style="clear:both"></div>
 </div>
 <!-- <div style="padding-left:3px;">
 	<a href="<?php echo $this->facebook_login_url;?>">
