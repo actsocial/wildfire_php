@@ -8,7 +8,7 @@ class LoginForm extends Zend_Form
 		'validators' => array(array('StringLength', false, array(3,50)),),
 		'required' => true,
 		// 'label' => $this->getView()->translate('Email'),
-		'placeholder' => "Email",
+		'placeholder' => "Email/Phone",
 		'class' => 'inputtext'
 		));
 		
