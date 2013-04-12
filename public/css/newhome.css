@@ -1414,7 +1414,7 @@ ul.tabbed-buttons li.active a:visited {
 .web-dialog .content-2column .images-column img {
 	float: left;
 	clear: left;
-	width: 80px;
+	/*width: 80px;*/
 	height: 80px;
 	padding: 5px;
 	background: #eee;

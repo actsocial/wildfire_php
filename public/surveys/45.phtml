@@ -21,7 +21,7 @@
     <link type="text/css" href="<?php echo $this->baseUrl();?>/css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <script type='text/javascript'>
-  	document.getElementById("question_141").setAttribute("onchange","showOrHide(this.value)");
+  	// jQuery("#question_141").bind("click change","showOrHide(this.value)");
     jQuery.fn.collapse.Constructor.prototype.transition = function (method, startEvent, completeEvent) {
       var that = this
         , complete = function () {
@@ -142,9 +142,9 @@
 				var doc = document.getElementById("q_69")
 				doc.style.display="";
 				if (val==196) {
-					jQuery(".changetitle").text("URL")
+					jQuery(".changetitle").text("URL");
 				}else{
-					jQuery(".changetitle").text("Other way")
+					jQuery(".changetitle").text("Other way");
 				}
 			}else{
 				document.getElementById("q_69").style.display="none";
@@ -152,9 +152,7 @@
 
 		}
 
-		function showOrHide1(){
-			alert(2);
-		}
+
 	</script>
 	
 	<div id="page_0">
@@ -180,7 +178,7 @@
 
 <input type="hidden" name="answers[141].id" value="" id="answers[141].id" />
 
-	<select group="141" class="selection" id="question_141" name="answers[141].value" title="title"  size = "1" >
+	<select group="141" class="selection" id="question_141" name="answers[141].value" title="title" onclick="showOrHide(this.value)" size = "1" >
 	<option selected="selected" value="0" >Please choose</option>
 <option value="195"    >face-to-face</option>
 <option value="196"  >Web (Forum, social media, blog)</option>
