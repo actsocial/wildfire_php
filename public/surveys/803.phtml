@@ -617,7 +617,7 @@
 <br>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value="Next Page" style="display: none;">
-<input id="submit" type="submit" style="" class="button" name="command.submit" onclick="addFillTime()" value="提交">
+<input id="submit" type="submit" style="" class="button" name="command.submit"  value="提交">
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tbody><tr>
@@ -782,6 +782,7 @@
 	
 	if(_pageIndex == pageNum) {
 		Element.show($('submit'));
+		jQuery("#submit").bind("click",addFillTime());
 	} else if ( _pageIndex < pageNum) {
 		Element.hide($('submit'));
 	}
