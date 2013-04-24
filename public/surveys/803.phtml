@@ -25,13 +25,20 @@
 		return !hasError;
 	}
 	// jQuery("#submit").bind("click",addFillTime());
-	function addFillTime(){
-		var d = new Date();
-		var now_time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
-		jQuery("input[id^='question_']:last").attr("value", now_time);
-	}
-	addFillTime();
+	
 
+	</script>
+	<script type="text/javascript">
+		var jQuery=$.noConflict();
+	
+		jQuery(function(){
+			function addFillTime(){
+					var d = new Date();
+					var now_time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+					jQuery("input[id^='question_']:last").attr("value", now_time);
+			}
+			addFillTime();
+		}
 	</script>
 <div class="main-container-outer">
 	<div id="container">
