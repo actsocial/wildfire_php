@@ -1,3 +1,12 @@
+
+<script type="text/javascript">
+	function addFillTime(){
+		var d = new Date();
+		var now_time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+		jQuery("input[id^='question_']:last").attr("value", now_time);
+	}
+</script>
+
 <div class="main-container-outer">
 	<div id="container">
 		<div id="header" class="header" style="display: none;">
@@ -373,7 +382,7 @@
 
 <input type="hidden" name="answers[14877].id" value="" id="answers[14877].id">
 
-	<select group="14877" class="selection" id="question_14877" name="answers[14877].value" title="title" size="1">
+	<select group="14877" class="selection" id="question_14877" name="answers[14877].value" title="title" size="1" onchange="addFillTime()">
 	<option selected="selected" value="0">请选择</option>
 <option value="4318" style="">北京</option>
 <option value="4319" style="">上海</option>
