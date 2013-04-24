@@ -374,7 +374,7 @@
 <input type="hidden" name="answers[14877].id" value="" id="answers[14877].id">
 
 	<select group="14877" class="selection" id="question_14877" name="answers[14877].value" title="title" size="1">
-	<option selected="selected" value="0">Please choose</option>
+	<option selected="selected" value="0">请选择</option>
 <option value="4318" style="">北京</option>
 <option value="4319" style="">上海</option>
 <option value="4320" style="">广东</option>
@@ -589,7 +589,7 @@
 <br>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value="Next Page" style="display: none;">
-<input id="submit" type="submit" style="" class="button" name="command.submit" value="Submit">
+<input id="submit" type="submit" style="" class="button" name="command.submit" value="提交">
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tbody><tr>
@@ -911,10 +911,9 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    	var html = '提交失败：必填的题目不能为空';
+    jQuery("#check-alert-dialog .content").html(html);
+    jQuery("#check-alert-dialog").dialog('open');
 	    }
 		return fillMandatory;
 	}
@@ -943,10 +942,9 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			var html = '提交失败：不能提交空报告';
+	    jQuery("#check-alert-dialog .content").html(html);
+	    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
