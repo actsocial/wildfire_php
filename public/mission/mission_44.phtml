@@ -1,0 +1,78 @@
+
+
+<div class="search_field">
+<p>参加“跟风购物大调查”活动任务,获取更多积分。</p>
+</div>	
+		
+		<div>
+		<table class='mission' CELLPADDING="5px" style="font-size:11px">
+			<tr >
+				<td style="width:35%">
+					<div class="mission_instruction">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/one.jpg' width=36 height=36 />接受活动邀请
+						</p>
+					</div>
+				</td>
+				<td style="background: url('<?php echo $this->baseUrl();?>images/mission/arrow1.jpg') no-repeat bottom left;"></td>
+				<td style="width:25%"></td>
+			</tr>
+			<tr style="width:50%">
+				<td></td>
+				<td>
+					<div class="mission_process">
+						<p><img src='<?php echo $this->baseUrl();?>/images/mission/two.jpg' width=36 height=36 /><a style="color:#FE6700;font-weight:bold;">
+							提交报告，等待审核（审核通过后将无法再次提交报告，请慎重填写内容）
+
+						</p>
+					</div>
+				</td>
+				<td></td>
+			</tr>
+			<tr >
+				<td>
+					<div class="mission_reward">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/three.jpg' width=35 height=36 />审核通过，获得积分，可用于礼品兑换
+</p>
+					</div>
+				</td>
+				<td  style="background: url('<?php echo $this->baseUrl();?>/images/mission/arrow3.jpg') no-repeat top left ;"></td>
+                <td  style="background: url('<?php echo $this->baseUrl();?>/images/mission/arrow1.jpg') no-repeat bottom left;"></td>
+                
+			</tr>
+            <tr>
+            <td></td>
+            <td></td>
+            <td  > </td>
+            
+            </tr>
+            <tr>
+            <td></td>
+            <td></td>
+				<td>
+					<div class="mission_reward">
+						<p><a style="color:#FE6700;font-weight:bold;"><img src='<?php echo $this->baseUrl();?>/images/mission/four.jpg' width=36 height=36 />如若不通过，请再次提交
+
+</p>
+					</div>
+				</td>
+            </tr>
+			<tr>
+				<td></td>
+				<td style="height:60px; background: url('<?php echo $this->baseUrl();?>/images/mission/button.jpg') no-repeat center center; ">
+				<ul class="submit-report" style="display: block;">
+			<div class="li-wrapper">
+		<li><?php if ($this->state == 'COMPLETED'){?>
+		
+		           <div style="font-weight:bold; font-size:16px; text-align:center;"><a  onclick="return false;" href="#">已经完成任务</a></div>
+		<?php }else{?>
+			<div style="font-weight:bold; font-size:16px; text-align:center;"><a  onclick="filloutDialogOpen('<?php echo $this->baseUrl();?>/mission/paticipate/id/<?php echo $this->campaign_id ?>');return false;" href="#">点击参与任务</a></div>
+		<?php }?>
+		</li>
+			</div>
+</ul>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+		
+		</div>

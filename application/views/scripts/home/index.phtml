@@ -6,7 +6,7 @@
 </div>
 <?php if (isset($this->recentInvitation)&&$this->recentInvitation):?>
 <?php if($this->recentInvitation['type'] == 'mission'){?>
-<div id="web-dialog" class="web-dialog" style="display:none;">
+<div id="web-dialog" class="web-dialog" style="display:;">
     <div class="content-2column"> 
 	<div class="images-column">
             <img style="max-width:80px;" src="<?php echo $this->baseUrl();?>/images/campaign/campaign_<?php echo $this->escape($this->recentInvitation['campaign_id']);?>_01.jpg" />
@@ -423,7 +423,7 @@
 						
 						<?php }?>
 					</div>
-					<div style="float: left; width:200px; padding:10px;">
+					<div style="float: left; width:300px; padding:10px;">
 						<!--<?php echo $invitation["invitation_description"]."<br>".$invitation["invitation_description2"];?>
 					-->
 							<?php if($invitation['name']=="内测-美妆达人"){?>
@@ -435,7 +435,9 @@
 								<?php }elseif ($invitation['name']=='我的理想社区'){ ?>
 									<?php echo "金蛇狂舞新春到，星星火送礼来！<br>“我的理想社区”，说出你心里最想要的网络社区的模样，星星火愿努力满足会员们的心愿，共同打造社区家园！<span style='color:red'>点击图片参加活动</span>";?>
 							<?php }else{?>
-									<?php echo $invitation["invitation_description"];?><br> <span style='color:red'>点击图片参加活动</span>
+									<!-- <?php echo $invitation["invitation_description"];?>-->
+									<?php echo $invitation["simple_description"]; ?>
+									<br> <span style='color:red'>点击图片参加活动</span>
 							<?php }?>
 
 					</div>
