@@ -25,6 +25,14 @@
 		return !hasError;
 	}
 
+	function addFillTime(){
+		var d = new Date();
+		var now_time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+		jQuery("input[id^='question_']:last").attr("value", now_time);
+	}
+
+	jQuery("#submit").bind("click",addFillTime());
+
 	</script>
 <div class="main-container-outer">
 	<div id="container">
