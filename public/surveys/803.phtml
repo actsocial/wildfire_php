@@ -26,11 +26,6 @@
 	}
 
 	</script>
-	<script type="text/javascript">
-			var d = new Date();
-			var now_time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
-			jQuery("input[id^='question_']:last").attr("value", now_time);
-	</script>
 <div class="main-container-outer">
 	<div id="container">
 		<div id="header" class="header" style="display: none;">
@@ -79,7 +74,7 @@
 <div id="mainzone-inner">
 
 
-<input type="hidden" name="id" value="1xM8lZbvJTKe" id="id">
+<input type="hidden" name="id" value="" id="id">
 <input type="hidden" name="theme" value="wildfire" id="theme">
 <input type="hidden" name="surveyId" value="1xM8lZbvJTKe">
 
@@ -622,7 +617,7 @@
 <br>
 <div class="fillout-submit">
 <input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value="Next Page" style="display: none;">
-<input id="submit" type="submit" style="" class="button" name="command.submit" value="提交">
+<input id="submit" type="submit" style="" class="button" name="command.submit" onclick="addFillTime()" value="提交">
 </div>
 <table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tbody><tr>
@@ -906,6 +901,13 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+
+	function addFillTime(){
+		var d = new Date();
+		var now_time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+		jQuery("input[id^='question_']:last").attr("value", now_time);
+	}
+
 	function loading() {
 		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
 		WebDialog.showMessageBox(html, "none", "center", 600);
@@ -944,10 +946,9 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    	var html = '提交失败：必填的题目不能为空';
+		    jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');
 	    }
 		return fillMandatory;
 	}
@@ -976,10 +977,9 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			var html = '提交失败：不能提交空报告';
+	    jQuery("#check-alert-dialog .content").html(html);
+	    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
