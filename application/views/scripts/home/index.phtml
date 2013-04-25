@@ -15,8 +15,8 @@
         <div class="main-column">
             <h2><?php echo $this->translate('You_Are_Invited_1')?><?php echo $this->recentInvitation['name'];?><?php if($this->recentInvitation['name']=="campaign"){ echo $this->translate('You_Are_Invited_2');} else {echo $this->translate('You_Are_Invited_3');}?></h2>
             <a href="#" class="close-button" onclick="WebDialog.close();return false;"><img src="<?php echo $this->baseUrl();?>/images/web-dialog-close.gif"/></a>
-            <span><?php echo $this->recentInvitation['invitation_description']?></span>
-            <span><?php echo $this->recentInvitation['invitation_description2']?></span>
+            <span style="float:left;"><?php echo $this->recentInvitation['invitation_description']?></span>
+            <span style="float:left;"><br><?php echo $this->recentInvitation['invitation_description2']?></span>
         </div>
         <div class="buttons-bar">
         <?php if ($this->recentInvitation["name"]=="内测-美妆达人"){?>
