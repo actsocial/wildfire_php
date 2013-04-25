@@ -98,6 +98,9 @@
 	<li>
 			<input group="14884" type="radio" id="14884_3" name="answers[14884].value" value="12569" class="selection question_radio_14884">		<label for="14884_3">经济型购买（购买时特别重视价格，对“大甩卖”、“清仓”等低价促销最感兴趣）</label>
 	</li>
+	<li>
+			<input type="radio" class="selection question_radio_14884" value="12602" name="answers[14884].value" id="14884_4" group="14884">		<label for="14884_4">其他类型</label>
+	</li>
 </ul>
  </td>
 
@@ -249,16 +252,16 @@
 <input type="hidden" name="answers[14887].id" value="" id="answers[14887].id">
 <ul>
 	<li>
-			<input group="14887" type="radio" id="14887_0" name="answers[14887].value" value="12577" class="selection question_radio_14887">		<label for="14887_0">没有</label>
+			<input group="14887" type="radio" id="14887_0" name="answers[14887].value" value="12577" onclick="showOrHide3(this.value)" class="selection question_radio_14887">		<label for="14887_0">没有</label>
 	</li>
 	<li>
-			<input group="14887" type="radio" id="14887_1" name="answers[14887].value" value="12578" class="selection question_radio_14887">		<label for="14887_1">1-5次</label>
+			<input group="14887" type="radio" id="14887_1" name="answers[14887].value" value="12578" onclick="showOrHide3(this.value)" class="selection question_radio_14887">		<label for="14887_1">1-5次</label>
 	</li>
 	<li>
-			<input group="14887" type="radio" id="14887_2" name="answers[14887].value" value="12579" class="selection question_radio_14887">		<label for="14887_2">5-15次</label>
+			<input group="14887" type="radio" id="14887_2" name="answers[14887].value" value="12579" onclick="showOrHide3(this.value)" class="selection question_radio_14887">		<label for="14887_2">5-15次</label>
 	</li>
 	<li>
-			<input group="14887" type="radio" id="14887_3" name="answers[14887].value" value="12580" class="selection question_radio_14887">		<label for="14887_3">15次以上</label>
+			<input group="14887" type="radio" id="14887_3" name="answers[14887].value" value="12580" onclick="showOrHide3(this.value)" class="selection question_radio_14887">		<label for="14887_3">15次以上</label>
 	</li>
 </ul>
  </td>
@@ -270,11 +273,17 @@
 
   </tbody></table>
 <script language="JavaScript" type="text/javascript">
-<!--
-// <![CDATA[
-	
-// ]]>
--->
+function showOrHide3(val){
+	if("12577"==val){
+		jQuery("#q_3351").css("display","none");
+		jQuery("#q_3352").css("display","none");
+		jQuery("#q_3354").css("display","none");
+	}else{
+		jQuery("#q_3351").css("display","");
+		jQuery("#q_3352").css("display","");
+		jQuery("#q_3354").css("display","");		
+	}
+}
 </script>
 				</td>
 			</tr>
@@ -287,7 +296,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3350" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3350" style="margin-bottom:0px;display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -320,7 +329,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3351" style="margin-bottom:0px;" class="question-odd question-area">
+		  <div id="q_3351" style="margin-bottom:0px;display:none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -380,7 +389,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3352" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3352" style="margin-bottom:0px;display:none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -497,7 +506,7 @@
 // ]]>
 -->
 </script>
-		  <div id="q_3354" style="margin-bottom:0px;" class="question-even question-area">
+		  <div id="q_3354" style="margin-bottom:0px;display:none" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -554,6 +563,7 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+mandatoryElements.push("14893");
 // ]]>
 -->
 </script>
@@ -563,7 +573,8 @@
 			<tbody><tr>
 				<td width="50%" valign="top">
 					<div class="question-title">
-						详细分享一次您的跟风购物经验（不论是成功的或是失败的）：
+						如果你没有跟过风，小编很佩服你！求分享你是如何hold住诱惑，保护钱包君的！
+若你有过跟风的经历，详细分享一次你的跟风购物经历（不论成功的还是失败的）：<span style="color:red">*</span>
 					</div>
 				</td>
 				<td width="50%" valign="top">
