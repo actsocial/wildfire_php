@@ -1363,16 +1363,29 @@ ul.tabbed-buttons li.active a:visited {
 	margin-top: 4px;
 }
 .web-dialog .content-2column .main-column p {
-	/*
+	
 	margin:0;
 	margin-top: 10px;
 	margin-left: 2px;
-	*/
-	font-size: 14px;
+	float:left;
+	/*font-size: 14px;
 	float: left;
 	clear: left;
-	width: 460px;
+	width: 460px;*/
 }
+
+.web-dialog .content-2column .main-column span {
+	
+	margin:0;
+	margin-top: 10px;
+	margin-left: 2px;
+	float:left;
+	/*font-size: 14px;
+	float: left;
+	clear: left;
+	width: 460px;*/
+}
+
 .web-dialog .content-2column .main-column ul {
 	padding-left: 16px;
 	margin:0;
