@@ -28,6 +28,40 @@
 		</div>
 
 	</div>
+<script language="JavaScript" type="text/javascript">
+	function showOrHide(){
+		if(jQuery("#14885_6").attr("checked")=="checked"){
+			jQuery("#q_3348").css("display","block");
+		}else{
+			jQuery("#q_3348").css("display","none");
+		}
+	}
+</script>
+
+<script language="JavaScript" type="text/javascript">
+function showOrHide3(val){
+	if("12577"==val){
+		jQuery("#q_3351").css("display","none");
+		jQuery("#q_3352").css("display","none");
+		jQuery("#q_3354").css("display","none");
+	}else{
+		jQuery("#q_3351").css("display","");
+		jQuery("#q_3352").css("display","");
+		jQuery("#q_3354").css("display","");		
+	}
+}
+</script>
+
+<script language="JavaScript" type="text/javascript">
+	function showOrHide2(){
+		if(jQuery("#14890_10").attr("checked")=="checked"){
+			jQuery("#q_3353").css("display","block");
+		}else{
+			jQuery("#q_3353").css("display","none");
+		}
+	}
+</script>
+
 <script language="javascript">
 
 var campaign_id;
@@ -136,7 +170,7 @@ var getWidth = function() {
 		width = d.body.clientWidth;
 	
 	return width;
-}
+};
 var getHeight = function() {
 	var w = window;
 	var d = document;
@@ -151,7 +185,7 @@ var getHeight = function() {
 		height = d.body.clientHeight;
 	
 	return height;
-}
+};
 var WebDialog = {
 	count:0,
 	showpointer:1,
@@ -227,7 +261,7 @@ var WebDialog = {
 		$('mask').style.height = height + "px";
 		$('mask').show();
 	}
-}
+};
 
 
 var html = "aaa";
@@ -314,19 +348,19 @@ var filloutDialogOpen = function(url) {
 jQuery("#fillout-dialog .content").load(url,function(){
 });
 jQuery("#fillout-dialog").dialog('open');
-}
+};
 var currentReportPanel = 0;
 var showReportPanel = function(panelId) {
-var panels = new Array('.submit-report','.uploading-image','.submit-url');
-var buttons = new Array('.button-submit-report img','.button-upload-image img','.button-submit-url img');
-var buttonsGrey = new Array('tab_button_report_grey.png','tab_button_photo_grey.png','tab_button_url_grey.png');
-var buttonsBlue = new Array('tab_button_report_blue.png','tab_button_photo_blue.png','tab_button_url_blue.png');
-jQuery(panels[currentReportPanel]).hide();
-jQuery(buttons[currentReportPanel]).attr("src","/wildfire/public/images/"+buttonsGrey[currentReportPanel]);
-jQuery(buttons[panelId]).attr("src","/wildfire/public/images/"+buttonsBlue[panelId]);
-jQuery(panels[panelId]).show('slide');
-currentReportPanel = panelId;
-}
+	var panels = new Array('.submit-report','.uploading-image','.submit-url');
+	var buttons = new Array('.button-submit-report img','.button-upload-image img','.button-submit-url img');
+	var buttonsGrey = new Array('tab_button_report_grey.png','tab_button_photo_grey.png','tab_button_url_grey.png');
+	var buttonsBlue = new Array('tab_button_report_blue.png','tab_button_photo_blue.png','tab_button_url_blue.png');
+	jQuery(panels[currentReportPanel]).hide();
+	jQuery(buttons[currentReportPanel]).attr("src","/wildfire/public/images/"+buttonsGrey[currentReportPanel]);
+	jQuery(buttons[panelId]).attr("src","/wildfire/public/images/"+buttonsBlue[panelId]);
+	jQuery(panels[panelId]).show('slide');
+	currentReportPanel = panelId;
+};
 
 function move_down(e) {
   var parent = jQuery(jQuery(e).parent());
