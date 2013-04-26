@@ -98,6 +98,8 @@
 	</li>
 </ul>
  </td>
+
+
 </tr>
 
   </tbody></table>
@@ -568,18 +570,18 @@ mandatoryElements.push("14893");
 		show : function() {
 			var width = document.body.clientWidth;
 			var height = document.body.offsetHeight;
-			var left = (width - this.element.offsetWidth) / 5;
+			// var left = (width - this.element.offsetWidth) / 5;
 			var top = (height - this.element.offsetHeight) / 5;
 			if (top < 300) {
 				top = 300;
 			}
-			this.element.style.left = left + "px";
+			this.element.style.left = "120px";
 			this.element.style.top = top + "px";
 		},
 		alert : function(msg,agree,disagree,onok,oncancel) {
 			var buttons = ["OK","Cancel"];
 			var callbacks = [onok, oncancel];
-			this.showMessageBox(msg, "alert", "left", 200, buttons, callbacks);
+			this.showMessageBox(msg, "alert", "left", 120, buttons, callbacks);
 		},
 		ok : function() {
 			this.onok();
@@ -596,7 +598,7 @@ mandatoryElements.push("14893");
 			
 			var width = document.body.clientWidth;
 			var height = window.screen.availHeight;
-			var left = (width - window_width) / 2;
+			// var left = (width - window_width) / 2;
 			var top = (height - 300) / 2;
 			var pos = 0;
 			if (window.innerHeight) {
@@ -610,12 +612,12 @@ mandatoryElements.push("14893");
 			if (top < 300) {
 				top = 300;
 			}
-			this.element.style.left = left + "px";
+			this.element.style.left = "150px";
 			this.element.style.top = top + "px";
-			$('mask').style.height = document.body.scrollHeight + "px";
-			
+			$('mask').style.height = "100px";
+			this.element.style.height = "100px";
 			if (width != undefined) {
-				this.element.style.width = window_width + "px";
+				this.element.style.width = "250px";
 			}
 			if (msg != undefined) {
 				$('web-dialog-message-text').innerHTML = msg;
@@ -849,7 +851,7 @@ mandatoryElements.push("14893");
 	    	var html = '提交失败：必填的题目不能为空';
 			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			WebDialog.showMessageBox(html, "center", "center", 150, buttons, callbacks);
 	    }
 		return fillMandatory;
 	}
