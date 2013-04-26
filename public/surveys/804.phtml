@@ -903,11 +903,12 @@ mandatoryElements.push("14893");
 			}
 	    }
 	    if(!fillMandatory) {
-	    	/*var html = '提交失败：必填的题目不能为空';
+	    	var html = '提交失败：必填的题目不能为空';
 			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);*/
-			alert("必填的题目不能为空!");
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			// alert("必填的题目不能为空!");
+			// return false;
 	    }
 		return fillMandatory;
 	}
