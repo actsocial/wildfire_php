@@ -253,30 +253,48 @@
 			</tuv>
 		</tu>
 
-		<tu tuid='Gift_list_category_globe'>
+		<tu tuid='Gift_list_category_cellphone'>
 			<tuv xml:lang="zh">
-				<seg>Globe Network</seg>
+				<seg>Cellphone load</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Globe Network</seg>
+				<seg>Cellphone load</seg>
 			</tuv>
 		</tu>
 
-		<tu tuid='Gift_list_category_smart'>
+		<tu tuid='Gift_list_category_Wellness'>
 			<tuv xml:lang="zh">
-				<seg>Smart Network</seg>
+				<seg>Wellness</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Smart Network</seg>
+				<seg>Wellness</seg>
 			</tuv>
 		</tu>
 
-		<tu tuid='Gift_list_category_sun'>
+		<tu tuid='Gift_list_category_Supplements'>
 			<tuv xml:lang="zh">
-				<seg>Sun Network</seg>
+				<seg>Supplements</seg>
 			</tuv>
 			<tuv xml:lang="en">
-				<seg>Sun Network</seg>
+				<seg>Supplements</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Gift_list_category_Beauty'>
+			<tuv xml:lang="zh">
+				<seg>Beauty</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Beauty</seg>
+			</tuv>
+		</tu>
+
+		<tu tuid='Gift_list_category_Sports'>
+			<tuv xml:lang="zh">
+				<seg>Sports</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Sports</seg>
 			</tuv>
 		</tu>
 
