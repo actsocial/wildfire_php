@@ -42,6 +42,8 @@ class GiftController extends MyController
 //						Zend_Debug::dump($products);die();
 					}else if($this->_request->getParam('t')=="Supplements"||$this->_request->getParam('t')=="Beauty"){
 						$products = $productModel->fetchAll("(category = '".$this->_request->getParam('t')."' or category = 'Supplements/Beauty')".' and state ="STOCK"', 'point')->toArray();
+					}else{
+						$products = $productModel->fetchAll("category = '".$this->_request->getParam('t')."'".' and state ="STOCK"', 'point')->toArray();
 					}
 				}else{
 					$products = $productModel->fetchAll('state ="STOCK"', 'point')->toArray(); 
