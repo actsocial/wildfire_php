@@ -40,8 +40,8 @@ class GiftController extends MyController
 						//添加最新上架 Bruce.Liu
 						$products = $productModel->fetchAll(' state ="STOCK" ','id desc',18,'point')->toArray();
 //						Zend_Debug::dump($products);die();
-					}else{
-						$products = $productModel->fetchAll("category = '".$this->_request->getParam('t')."'".' and state ="STOCK"', 'point')->toArray();
+					}else if($this->_request->getParam('t')=="Supplements"||$this->_request->getParam('t')=="Beauty"){
+						$products = $productModel->fetchAll("(category = '".$this->_request->getParam('t')."' or category = 'Supplements/Beauty')".' and state ="STOCK"', 'point')->toArray();
 					}
 				}else{
 					$products = $productModel->fetchAll('state ="STOCK"', 'point')->toArray(); 
