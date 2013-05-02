@@ -12,7 +12,7 @@ class ConsumerForm extends Zend_Form
 		$email->setLabel($this->getView()->translate('CONTACT INFORMATION_EMAIL'))
 		->setRequired(true)
 		->setDescription('*')
-		->setAttrib('readOnly', true)
+		// ->setAttrib('readOnly', true)
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
 		->addValidator('NotEmpty')
@@ -40,7 +40,7 @@ class ConsumerForm extends Zend_Form
 		$login_phone->setLabel($this->getView()->translate('CONTACT INFORMATION_PHONE'))
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
-		->setAttrib('readOnly', true)
+		// ->setAttrib('readOnly', true)
 		->addValidators(array(array('StringLength', false, array(0, 50)),))
 		->addErrorMessage($this->getView()->translate('Please_enter_your_phone'));
 		$login_phone->setDecorators(array('ViewHelper',

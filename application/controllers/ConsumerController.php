@@ -194,6 +194,7 @@ class ConsumerController extends MyController {
 				//consumer table
 				$consumer = $consumerModel->find ( $id )
 				->current ();
+				$consumer->email = $form->getValue("email");
 				$consumer->name = $form->getValue ( 'name' );
 				$consumer->phone = $form->getValue ( 'phone' );
 				$consumer->address1 = $form->getValue ( 'address1' );
