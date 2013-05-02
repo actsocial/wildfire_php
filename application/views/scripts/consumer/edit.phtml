@@ -193,6 +193,13 @@ jQuery().ready(function() {
 			}
 		}
 	});
+	 jQuery("#dialog").dialog({
+        autoOpen:false, 
+        modal:true,
+        close: function(event, ui){
+            jQuery("#dialog").html("");    
+        }
+    });
 });
 function GetObjID(ObjName)
 { for (var ObjID=0; ObjID < document.form.elements.length; ObjID++)

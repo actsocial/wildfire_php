@@ -51,6 +51,7 @@ img {
 	height: 27px;
 	line-height: 27px;
 }
+
 .header .login-panel input {
 	width: 76px;
 	height: 27px;
@@ -2502,6 +2503,13 @@ a.list-orders:hover {
 	line-height: normal;
 	color: #000;
 }
+
+label.error{
+ 		color: red !important;
+    float: right !important;
+    font-size: 18px;
+}
+
 .consumer-edit fieldset .form-line label strong {
 	color:#F00;
 	font-weight: normal;
