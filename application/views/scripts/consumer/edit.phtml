@@ -27,7 +27,7 @@
 <form name="form" id="editForm"
 	action="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>"
 	method="post">
-<div id="web-dialog-new" class="web-dialog-new" <?php if(""!=$this->consumeraffected||""!=$this->consumerextraaffected){?> style="display:block;" <?php }else{ ?> style="display:none;" <?php } ?> >
+<div id="web-dialog-new" class="web-dialog-new" <?php if((""!=$this->consumeraffected||""!=$this->consumerextraaffected)&&!isset($this->errMessage)){?> style="display:block;" <?php }else{ ?> style="display:none;" <?php } ?> >
     <div style="height:125px; width: 305px;"> 
         <div style="margin-top:20px;margin-left:30px;height: 75px;font-size:18px;font-weight: bold;">
             您的信息修改成功！
@@ -131,7 +131,7 @@
 </form>
 </div>
 </div><!-- consumer edit -->
-<div class="mask" id="mask" <?php if(""!=$this->consumeraffected||""!=$this->consumerextraaffected){?> style="display:block;" <?php }else{ ?> style="display:none;" <?php } ?> ></div>
+<div class="mask" id="mask" <?php if((""!=$this->consumeraffected||""!=$this->consumerextraaffected)&&!isset($this->errMessage)){?> style="display:block;" <?php }else{ ?> style="display:none;" <?php } ?> ></div>
 <script>
     Calendar.setup(
 		{
