@@ -184,7 +184,7 @@ class ConsumerController extends MyController {
 		$consumerextraModel = new ConsumerExtraInfo ();
 		$consumerextra = $consumerextraModel->fetchRow ( 'consumer_id = ' . $this->_currentUser->id );
 		$consumer = $this->_currentUser;
-
+		$db = Zend_Registry::get('db');
 		if ($this->_request
 		->isPost ()) { //POST
 			$formData = $this->_request
@@ -194,7 +194,16 @@ class ConsumerController extends MyController {
 				//consumer table
 				$consumer = $consumerModel->find ( $id )
 				->current ();
-				$consumer->email = $form->getValue("email");
+
+				if($consumer->email!=$form->getValue("email")){
+						$result = $db->fetchOne("SELECT COUNT(*) FROM consumer WHERE email = :temp",array('temp' => $form->getValue("email")));	
+						if($result>0){
+							$this->view->errMessage = $form->getValue("email")." ".$this->view->translate('Register_email_is_invalid');
+						}else{
+							$consumer->email = $form->getValue("email");
+						}
+				}
+							
 				$consumer->name = $form->getValue ( 'name' );
 				$consumer->phone = $form->getValue ( 'phone' );
 				$consumer->address1 = $form->getValue ( 'address1' );

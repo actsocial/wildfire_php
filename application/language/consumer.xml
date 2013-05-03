@@ -50,6 +50,14 @@
 				<seg>Name</seg>
 			</tuv>
 		</tu>
+		<tu tuid='ErrorMessage'>
+			<tuv xml:lang="zh">
+				<seg>你修改后的邮箱无效或已使用</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>You email is not valid.</seg>
+			</tuv>
+		</tu>
 		<tu tuid='YOUR PROFILE'>
 			<tuv xml:lang="zh">
 				<seg>你的个人信息</seg>

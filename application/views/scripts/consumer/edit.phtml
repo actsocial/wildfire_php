@@ -29,6 +29,7 @@
 <fieldset>
   <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Account_Info_Pic');?>" /></legend>
   <div class="form-line"><?php echo $this->form->email ;?></div>
+  <div <?php if(""!=$this->errMessage&&null!=$this->errMessage){ ?> style='display:block' <?php }else{ ?> style='display:none'  <?php  }?> ><label style="color: red !important;font-size: 12px;margin-left: 45px;width: 200px !important;"><?php echo $this->errMessage; ?></label></div>
   <div class="form-line"><?php echo $this->form->login_phone ;?></div>
   <div class="form-line"><?php echo $this->form->name ;?></div>
 </fieldset>
@@ -165,6 +166,7 @@ jQuery().ready(function() {
 				required: "请填写邮箱地址",
 				email: "邮箱地址不符合格式"
 			},
+
 			login_phone: {
 			  required: "请填写电话号码",
 				number: "电话号码只能为数字"
@@ -193,13 +195,7 @@ jQuery().ready(function() {
 			}
 		}
 	});
-	 jQuery("#dialog").dialog({
-        autoOpen:false, 
-        modal:true,
-        close: function(event, ui){
-            jQuery("#dialog").html("");    
-        }
-    });
+
 });
 function GetObjID(ObjName)
 { for (var ObjID=0; ObjID < document.form.elements.length; ObjID++)

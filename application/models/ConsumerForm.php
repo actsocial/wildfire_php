@@ -16,6 +16,7 @@ class ConsumerForm extends Zend_Form
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
 		->addValidator('NotEmpty')
+		->addErrorMessage($this->getView()->translate('Register_email_is_invalid'))
 		->addValidator('EmailAddress');
 		$email->setDecorators(array('ViewHelper',
 							array('Description', array('color' => 'red','tag' => 'font')),
