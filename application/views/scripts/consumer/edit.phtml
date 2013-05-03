@@ -22,10 +22,26 @@
 <p><?php echo $this->translate('Consumer_Extra_Info_Notice_Content');?></p>
 </div></div>
 
+
 <div class="edit-profile">
 <form name="form" id="editForm"
 	action="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>"
 	method="post">
+<div id="web-dialog-new" class="web-dialog-new" <?php if(""!=$this->consumeraffected||""!=$this->consumerextraaffected){?> style="display:block;" <?php }else{ ?> style="display:none;" <?php } ?> >
+    <div style="height:125px; width: 305px;"> 
+        <div style="margin-top:20px;margin-left:30px;height: 75px;font-size:18px;font-weight: bold;">
+            您的信息修改成功！
+        </div>
+	    	<div style="margin-left:40px;">
+	        <div style="float:left;width:120px"><a class="big-button-blue-new" target="_parent"  href="<?php echo $this->url(array('controller'=>'consumer','action'=>'edit'));?>">
+	                <?php echo $this->translate('Con_Change')?></a> </div>
+	        <div style="float: left;width:120px;">        	        	       	
+	        	<a class="big-button-blue-new" target="_parent"  href="<?php echo $this->url(array('controller'=>'home','action'=>'index'));?>">
+	                <?php echo $this->translate('Take_Me_Home')?></a>
+	        </div>
+	      </div>
+    </div>
+</div>
 <fieldset>
   <legend><img src="<?php echo $this->baseUrl();?><?php echo $this->translate('Account_Info_Pic');?>" /></legend>
   <div class="form-line"><?php echo $this->form->email ;?></div>
@@ -115,6 +131,7 @@
 </form>
 </div>
 </div><!-- consumer edit -->
+<div class="mask" id="mask" <?php if(""!=$this->consumeraffected||""!=$this->consumerextraaffected){?> style="display:block;" <?php }else{ ?> style="display:none;" <?php } ?> ></div>
 <script>
     Calendar.setup(
 		{
@@ -126,6 +143,7 @@
 	);
 </script>
 <script type="text/javascript">
+
 jQuery().ready(function() {
 // validate signup form on keyup and submit
 	jQuery("#editForm").validate({
@@ -296,4 +314,12 @@ if (typeof window.onload != 'function') {
 		  init();
 	 	}
 	}
+</script>
+
+<script type="javascript">
+	// if(jQuery("#web-dialog-new").css("display")=="block"){
+		// jQuery("#mask").css("display","block");
+	// }else{
+		// jQuery("#mask").css("display","none");
+	// }
 </script>

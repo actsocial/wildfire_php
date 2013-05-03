@@ -223,7 +223,7 @@ class ConsumerController extends MyController {
 					$consumer->province = null;
 				}
 				$consumer->birthdate = $formData ['birthdate'] != null ? $formData ['birthdate'] : null;
-				$consumer->save ();
+				$consumer_affected = $consumer->save ();
 				// consumer_extra_info table
 				if ($consumerextra == null) {
 					$consumerextra = $consumerextraModel->createRow ();
@@ -244,8 +244,10 @@ class ConsumerController extends MyController {
 					}
 				}
 				$consumerextra->use_extra_bonus_for = isset ( $formData ['use_extra_bonus_for'] ) ? $use_extra_bonus_forstr : null;
-				$consumerextra->save ();
-
+				$consumerextra_affected = $consumerextra->save ();
+				$this->view->consumeraffected = $consumer_affected;
+				$this->view->consumerextraaffected = $consumerextra_affected;
+				
 				//session
 				$authNamespace = new Zend_Session_Namespace ( 'Zend_Auth' );
 				$authNamespace->user = $consumer;

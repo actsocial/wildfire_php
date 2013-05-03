@@ -60,6 +60,15 @@ Completing polls also increases the likelyhood that you’ll be invited to futur
 				<seg>Take me home</seg>
 			</tuv>
 		</tu>
+		
+		<tu tuid='Con_Change'>
+			<tuv xml:lang="zh">
+				<seg>继续修改</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Continue</seg>
+			</tuv>
+		</tu>
 		<tu tuid='More_Polls'>
 			<tuv xml:lang="zh">
 				<seg>更多问卷调查</seg>
