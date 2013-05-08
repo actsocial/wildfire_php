@@ -9,7 +9,7 @@ class HomeController extends MyController
 	{
 		$this->view->title = $this->view->translate("Wildfire")." - ".$this->view->translate("Index_HOME");
 		$this->view->activeTab = 'Home';
-		
+		 
 		$consumer = $this->_currentUser;
 		$this->view->currentUser = $consumer;
 		$langNamespace = new Zend_Session_Namespace('Lang');
