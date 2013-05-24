@@ -31,7 +31,14 @@
 	</script>
 
 <script type="text/javascript">
+
+</script>
+
+<script type="text/javascript">
 		jQuery(document).ready(function(){
+		var d = new Date();
+		var now_time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+		jQuery("input[id^='question_']:last").attr("value", now_time);
 		jQuery("#question_14917").empty();
 		jQuery("#question_14917").append('<option value="0" selected="selected">请选择</option>');
 		jQuery("#question_14916").bind("change",function(){
