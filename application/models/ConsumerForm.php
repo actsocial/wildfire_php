@@ -12,7 +12,7 @@ class ConsumerForm extends Zend_Form
 		$email->setLabel($this->getView()->translate('CONTACT INFORMATION_EMAIL'))
 		->setRequired(true)
 		->setDescription('*')
-		// ->setAttrib('readOnly', true)
+		->setAttrib('readOnly', true)
 		->addFilter('StripTags')
 		->addFilter('StringTrim')
 		->addValidator('NotEmpty')
