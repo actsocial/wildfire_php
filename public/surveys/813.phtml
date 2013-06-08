@@ -19,8 +19,8 @@
 		$$('input.input-text').each(function(element) {
 			var value = element.value;
 			if( value.length < MAX_LENGTH_OF_COMMENT_QUESTION) {
-				element.next().innerHTML = errorMessage;
-				hasError = true;
+				// element.next().innerHTML = errorMessage;
+				// hasError = true;
 			}
 		});
 		if( hasError ) {
