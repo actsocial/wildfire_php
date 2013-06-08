@@ -1,16 +1,46 @@
+<div class="main-container-outer">
+	<div id="container">
+		<!-- <div id="header" class="header">
+			<div class="header-left"></div>
+			<div class="header-content"><div class="user-info">
+			</div></div>
+			<div class="header-right"></div><div class="logo">
+			<div class="main-logo" id="main-logo">
+				<a href="http://www.88brands.com/" target="_blank">
+					<img src="/survey/logoImage/813" style="height:70px; width:301px"> 
+				</a>
+			</div>
+			<div class="image-banner"></div>
+			</div> 
+		</div>  --><!-- header -->
+		<div id="nav" class="navigation">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+			<ul>
+			</ul>
+		</div>	
+		
+ 
+
+		<div style="clear:both;"></div>
+		<div class="main-content-outer" id="content">
+ 		
+
 <div id="content">
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 	mandatoryElements = new Array(); 
-
+// ]]>
+-->
 </script>
 <div class="fillout-container">
 <!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());" action="http://www.marketing-research.cn/fillout" method="post" id="fillout">
-<div style="display:none" id="mainzone-top-wrapper">
+<form id="fillout" method="post" action="http://www.marketing-research.cn/fillout" onsubmit="return (checkMandatory() &amp;&amp; checkAnswerSet() &amp;&amp; checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
   </div>
@@ -18,30 +48,32 @@
 <div id="mainzone">
 <div id="mainzone-inner">
 
-<!-- <div class="questionnaire-title">France wine</div> -->
+<div class="questionnaire-title" style="display: none;">France wine</div>
 
 
-<input type="hidden" id="id" value="" name="id">
-<input type="hidden" id="theme" value="default" name="theme">
-<input type="hidden" value="813" name="surveyId">
+<input type="hidden" name="id" value="813" id="id">
+<input type="hidden" name="theme" value="brucetest" id="theme">
+<input type="hidden" name="surveyId" value="813">
 
-<div class="mandatory"><span style="color: red;">* </span>- It is mandatory</div>
-<div class="page-bar-area">
-<span id="pageBar"></span>
-<!-- <strong class="no-answer">No Answer</strong>
-<img align="absmiddle" src="/images/no_answer.gif" class="no-answer"> -->
+<div class="mandatory" style="display: none;"><span style="color: red;">* </span>- It is mandatory</div>
+<div class="page-bar-area" style="display: none;">
+<span id="pageBar">Page:&nbsp;</span>
+<strong class="no-answer">No Answer</strong><img class="no-answer" src="/images/no_answer.gif" align="absmiddle">
 <div class="clear"></div>
 </div>
 <div class="clear"></div>
 
 
-<div id="page_0" style="">
-<script type="text/javascript" language="JavaScript">
-
+	
+	<div id="page_0">
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("14966");
-
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_3370">
+		  <div id="q_3370" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -59,48 +91,55 @@
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14966].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14966].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14966].id" value="" name="answers[14966].id">
+<input type="hidden" name="answers[14966].id" value="" id="answers[14966].id">
 <ul>
 	<li>
-			<input type="radio" class="selection question_radio_14966" value="12623" name="answers[14966].value" id="14966_0" group="14966">		<label for="14966_0">喜欢，一个月两次以上</label>
+			<input group="14966" type="radio" id="14966_0" name="answers[14966].value" value="12623" class="selection question_radio_14966">		<label for="14966_0">喜欢，一个月两次以上</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14966" value="12624" name="answers[14966].value" id="14966_1" group="14966">		<label for="14966_1">喜欢，通常半个月喝一次</label>
+			<input group="14966" type="radio" id="14966_1" name="answers[14966].value" value="12624" class="selection question_radio_14966">		<label for="14966_1">喜欢，通常半个月喝一次</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14966" value="12625" name="answers[14966].value" id="14966_2" group="14966">		<label for="14966_2">喜欢，一般一个月一次</label>
+			<input group="14966" type="radio" id="14966_2" name="answers[14966].value" value="12625" class="selection question_radio_14966">		<label for="14966_2">喜欢，一般一个月一次</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14966" value="12626" name="answers[14966].value" id="14966_3" group="14966">		<label for="14966_3">喜欢，每月不到一次</label>
+			<input group="14966" type="radio" id="14966_3" name="answers[14966].value" value="12626" class="selection question_radio_14966">		<label for="14966_3">喜欢，每月不到一次</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14966" value="12627" name="answers[14966].value" id="14966_4" group="14966">		<label for="14966_4">不喜欢，但是愿意试试</label>
+			<input group="14966" type="radio" id="14966_4" name="answers[14966].value" value="12627" class="selection question_radio_14966">		<label for="14966_4">不喜欢，但是愿意试试</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14966" value="12628" name="answers[14966].value" id="14966_5" group="14966">		<label for="14966_5">一点都不喜欢</label>
+			<input group="14966" type="radio" id="14966_5" name="answers[14966].value" value="12628" class="selection question_radio_14966">		<label for="14966_5">一点都不喜欢</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3371">
+		  <div id="q_3371" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -117,9 +156,9 @@
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14967].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14967].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14967].id" value="" name="answers[14967].id">
+<input type="hidden" name="answers[14967].id" value="" id="answers[14967].id">
 
 
 
@@ -128,61 +167,68 @@
 </span>
 <ul>
 	<li>
-			<input type="checkbox" onclick=" " value="12629" name="answers[14967].value" id="14967_0" class="question_radio_14967 selection" group="14967">		<label for="14967_0">啤酒</label>
+			<input group="14967" class="question_radio_14967 selection" type="checkbox" id="14967_0" name="answers[14967].value" value="12629" onclick=" ">		<label for="14967_0">啤酒</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12630" name="answers[14967].value" id="14967_1" class="question_radio_14967 selection" group="14967">		<label for="14967_1">白酒</label>
+			<input group="14967" class="question_radio_14967 selection" type="checkbox" id="14967_1" name="answers[14967].value" value="12630" onclick=" ">		<label for="14967_1">白酒</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12631" name="answers[14967].value" id="14967_2" class="question_radio_14967 selection" group="14967">		<label for="14967_2">黄酒</label>
+			<input group="14967" class="question_radio_14967 selection" type="checkbox" id="14967_2" name="answers[14967].value" value="12631" onclick=" ">		<label for="14967_2">黄酒</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12632" name="answers[14967].value" id="14967_3" class="question_radio_14967 selection" group="14967">		<label for="14967_3">威士忌</label>
+			<input group="14967" class="question_radio_14967 selection" type="checkbox" id="14967_3" name="answers[14967].value" value="12632" onclick=" ">		<label for="14967_3">威士忌</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12633" name="answers[14967].value" id="14967_4" class="question_radio_14967 selection" group="14967">		<label for="14967_4">伏特加</label>
+			<input group="14967" class="question_radio_14967 selection" type="checkbox" id="14967_4" name="answers[14967].value" value="12633" onclick=" ">		<label for="14967_4">伏特加</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12634" name="answers[14967].value" id="14967_5" class="question_radio_14967 selection" group="14967">		<label for="14967_5">白兰地</label>
+			<input group="14967" class="question_radio_14967 selection" type="checkbox" id="14967_5" name="answers[14967].value" value="12634" onclick=" ">		<label for="14967_5">白兰地</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12635" name="answers[14967].value" id="14967_6" class="question_radio_14967 selection" group="14967">		<label for="14967_6">香槟</label>
+			<input group="14967" class="question_radio_14967 selection" type="checkbox" id="14967_6" name="answers[14967].value" value="12635" onclick=" ">		<label for="14967_6">香槟</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12636" name="answers[14967].value" id="14967_7" class="question_radio_14967 selection" group="14967">		<label for="14967_7">红葡萄酒</label>
+			<input group="14967" class="question_radio_14967 selection" type="checkbox" id="14967_7" name="answers[14967].value" value="12636" onclick=" ">		<label for="14967_7">红葡萄酒</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12637" name="answers[14967].value" id="14967_8" class="question_radio_14967 selection" group="14967">		<label for="14967_8">白葡萄酒</label>
+			<input group="14967" class="question_radio_14967 selection" type="checkbox" id="14967_8" name="answers[14967].value" value="12637" onclick=" ">		<label for="14967_8">白葡萄酒</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick="showOrHide() " value="12638" name="answers[14967].value" id="14967_9" class="question_radio_14967 selection" group="14967">		<label for="14967_9">其他（请举例）</label>
+			<input group="14967" class="question_radio_14967 selection" type="checkbox" id="14967_9" name="answers[14967].value" value="12638" onclick="showOrHide1()">		<label for="14967_9">其他（请举例）</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-function showOrHide(){
-	if(jQuery("#14967_9").attr("checked")){
-		jQuery("#q_3372").css("display","");
-	}else{
-		jQuery("#q_3372").css("display","none");
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function showOrHide1(){
+		if(jQuery("#14967_9").attr("checked")=="checked"){
+			jQuery("#q_3372").css("display","");
+		}else{
+			jQuery("#q_3372").css("display","none");
+		}
 	}
-}
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;display:none;" id="q_3372">
+		  <div id="q_3372" style="margin-bottom: 0px; display:none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -198,10 +244,10 @@ function showOrHide(){
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[14968].id" value="" name="answers[14968].id">
-<input type="text" class="input-text" group="14968" id="question_14968" value="" name="answers[14968].value">
+<input type="hidden" name="answers[14968].id" value="" id="answers[14968].id">
+<input type="text" name="answers[14968].value" value="" id="question_14968" group="14968" class="input-text">
 
-<span id="err_answers[14968].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14968].value"></span>
 </td>
 
   </tr>
@@ -210,10 +256,13 @@ function showOrHide(){
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3373">
+		  <div id="q_3373" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -230,9 +279,9 @@ function showOrHide(){
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14969].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14969].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14969].id" value="" name="answers[14969].id">
+<input type="hidden" name="answers[14969].id" value="" id="answers[14969].id">
 
 
 
@@ -241,55 +290,62 @@ function showOrHide(){
 </span>
 <ul>
 	<li>
-			<input type="checkbox" onclick=" " value="12639" name="answers[14969].value" id="14969_0" class="question_radio_14969 selection" group="14969">		<label for="14969_0">中国</label>
+			<input group="14969" class="question_radio_14969 selection" type="checkbox" id="14969_0" name="answers[14969].value" value="12639" onclick=" ">		<label for="14969_0">中国</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12640" name="answers[14969].value" id="14969_1" class="question_radio_14969 selection" group="14969">		<label for="14969_1">法国</label>
+			<input group="14969" class="question_radio_14969 selection" type="checkbox" id="14969_1" name="answers[14969].value" value="12640" onclick=" ">		<label for="14969_1">法国</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12641" name="answers[14969].value" id="14969_2" class="question_radio_14969 selection" group="14969">		<label for="14969_2">西班牙</label>
+			<input group="14969" class="question_radio_14969 selection" type="checkbox" id="14969_2" name="answers[14969].value" value="12641" onclick=" ">		<label for="14969_2">西班牙</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12642" name="answers[14969].value" id="14969_3" class="question_radio_14969 selection" group="14969">		<label for="14969_3">意大利</label>
+			<input group="14969" class="question_radio_14969 selection" type="checkbox" id="14969_3" name="answers[14969].value" value="12642" onclick=" ">		<label for="14969_3">意大利</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12643" name="answers[14969].value" id="14969_4" class="question_radio_14969 selection" group="14969">		<label for="14969_4">澳洲</label>
+			<input group="14969" class="question_radio_14969 selection" type="checkbox" id="14969_4" name="answers[14969].value" value="12643" onclick=" ">		<label for="14969_4">澳洲</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12644" name="answers[14969].value" id="14969_5" class="question_radio_14969 selection" group="14969">		<label for="14969_5">南美</label>
+			<input group="14969" class="question_radio_14969 selection" type="checkbox" id="14969_5" name="answers[14969].value" value="12644" onclick=" ">		<label for="14969_5">南美</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12645" name="answers[14969].value" id="14969_6" class="question_radio_14969 selection" group="14969">		<label for="14969_6">北美</label>
+			<input group="14969" class="question_radio_14969 selection" type="checkbox" id="14969_6" name="answers[14969].value" value="12645" onclick=" ">		<label for="14969_6">北美</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick="showOrHide2() " value="12646" name="answers[14969].value" id="14969_7" class="question_radio_14969 selection" group="14969">		<label for="14969_7">其他（请举例）</label>
+			<input group="14969" class="question_radio_14969 selection" type="checkbox" id="14969_7" name="answers[14969].value" value="12646" onclick="showOrHide2()">		<label for="14969_7">其他（请举例）</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-function showOrHide2(){
-	if(jQuery("#14969_7").attr("checked")){
-		jQuery("#q_3374").css("display","");
-	}else{
-		jQuery("#q_3374").css("display","none");
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function showOrHide2(){
+		if(jQuery("#14969_7").attr("checked")=="checked"){
+			jQuery("#q_3374").css("display","");
+		}else{
+			jQuery("#q_3374").css("display","none");
+		}
 	}
-}
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;display:none;" id="q_3374">
+		  <div id="q_3374" style="margin-bottom: 0px; display: none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -305,10 +361,10 @@ function showOrHide2(){
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[14970].id" value="" name="answers[14970].id">
-<input type="text" class="input-text" group="14970" id="question_14970" value="" name="answers[14970].value">
+<input type="hidden" name="answers[14970].id" value="" id="answers[14970].id">
+<input type="text" name="answers[14970].value" value="" id="question_14970" group="14970" class="input-text">
 
-<span id="err_answers[14970].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14970].value"></span>
 </td>
 
   </tr>
@@ -317,10 +373,13 @@ function showOrHide2(){
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3375">
+		  <div id="q_3375" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -337,9 +396,9 @@ function showOrHide2(){
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14971].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14971].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14971].id" value="" name="answers[14971].id">
+<input type="hidden" name="answers[14971].id" value="" id="answers[14971].id">
 
 
 
@@ -348,49 +407,56 @@ function showOrHide2(){
 </span>
 <ul>
 	<li>
-			<input type="checkbox" onclick=" " value="12647" name="answers[14971].value" id="14971_0" class="question_radio_14971 selection" group="14971">		<label for="14971_0">电视</label>
+			<input group="14971" class="question_radio_14971 selection" type="checkbox" id="14971_0" name="answers[14971].value" value="12647" onclick=" ">		<label for="14971_0">电视</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12648" name="answers[14971].value" id="14971_1" class="question_radio_14971 selection" group="14971">		<label for="14971_1">纸媒</label>
+			<input group="14971" class="question_radio_14971 selection" type="checkbox" id="14971_1" name="answers[14971].value" value="12648" onclick=" ">		<label for="14971_1">纸媒</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12649" name="answers[14971].value" id="14971_2" class="question_radio_14971 selection" group="14971">		<label for="14971_2">户外广告</label>
+			<input group="14971" class="question_radio_14971 selection" type="checkbox" id="14971_2" name="answers[14971].value" value="12649" onclick=" ">		<label for="14971_2">户外广告</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12650" name="answers[14971].value" id="14971_3" class="question_radio_14971 selection" group="14971">		<label for="14971_3">网络</label>
+			<input group="14971" class="question_radio_14971 selection" type="checkbox" id="14971_3" name="answers[14971].value" value="12650" onclick=" ">		<label for="14971_3">网络</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12651" name="answers[14971].value" id="14971_4" class="question_radio_14971 selection" group="14971">		<label for="14971_4">广播里</label>
+			<input group="14971" class="question_radio_14971 selection" type="checkbox" id="14971_4" name="answers[14971].value" value="12651" onclick=" ">		<label for="14971_4">广播里</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick="showOrHide3() " value="12652" name="answers[14971].value" id="14971_5" class="question_radio_14971 selection" group="14971">		<label for="14971_5">其他（请举例）</label>
+			<input group="14971" class="question_radio_14971 selection" type="checkbox" id="14971_5" name="answers[14971].value" value="12652" onclick="showOrHide3()">		<label for="14971_5">其他（请举例）</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function showOrHide3(){
+		if(jQuery("#14971_5").attr("checked")=="checked"){
+			jQuery("#q_3376").css("display","");
+		}else{
+			jQuery("#q_3376").css("display","none");
+		}
+	}
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-function showOrHide3(){
-	if(jQuery("#14971_5").attr("checked")){
-		jQuery("#q_3376").css("display","");
-	}else{
-		jQuery("#q_3376").css("display","none");
-	}
-}
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;display:none;" id="q_3376">
+		  <div id="q_3376" style="margin-bottom: 0px; display: none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -406,10 +472,10 @@ function showOrHide3(){
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[14972].id" value="" name="answers[14972].id">
-<input type="text" class="input-text" group="14972" id="question_14972" value="" name="answers[14972].value">
+<input type="hidden" name="answers[14972].id" value="" id="answers[14972].id">
+<input type="text" name="answers[14972].value" value="" id="question_14972" group="14972" class="input-text">
 
-<span id="err_answers[14972].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14972].value"></span>
 </td>
 
   </tr>
@@ -418,10 +484,13 @@ function showOrHide3(){
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3377">
+		  <div id="q_3377" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -438,39 +507,45 @@ function showOrHide3(){
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14973].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14973].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14973].id" value="" name="answers[14973].id">
+<input type="hidden" name="answers[14973].id" value="" id="answers[14973].id">
 <ul>
 	<li>
-			<input type="radio" class="selection question_radio_14973" value="12653" name="answers[14973].value" id="14973_0" group="14973">		<label for="14973_0">收到过</label>
+			<input group="14973" type="radio" id="14973_0" name="answers[14973].value" value="12653" class="selection question_radio_14973">		<label for="14973_0">收到过</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14973" value="12654" name="answers[14973].value" id="14973_1" group="14973">		<label for="14973_1">没收到过</label>
+			<input group="14973" type="radio" id="14973_1" name="answers[14973].value" value="12654" class="selection question_radio_14973">		<label for="14973_1">没收到过</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
-		<input type="radio" name="answers[14973].value" class="q_14973  qc_0 radio">
+<td valign="top" class="noanswer-td" style="display: none;">
+		<input class="q_14973  qc_0 radio" type="radio" name="answers[14973].value">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("14974");
-
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_3378">
+		  <div id="q_3378" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -488,58 +563,65 @@ function showOrHide3(){
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14974].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14974].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14974].id" value="" name="answers[14974].id">
+<input type="hidden" name="answers[14974].id" value="" id="answers[14974].id">
 <ul>
 	<li>
-			<input type="radio" class="selection question_radio_14974" value="12655" name="answers[14974].value" id="14974_0" group="14974" onclick="showOrHide4()">		<label for="14974_0">不会</label>
+			<input group="14974" type="radio" id="14974_0" name="answers[14974].value" value="12655" class="selection question_radio_14974" onclick="showOrHide4()">		<label for="14974_0">不会</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14974" value="12656" name="answers[14974].value" id="14974_1" group="14974" onclick="showOrHide4()">		<label for="14974_1">会，在商店里</label>
+			<input group="14974" type="radio" id="14974_1" name="answers[14974].value" value="12656" class="selection question_radio_14974" onclick="showOrHide4()">		<label for="14974_1">会，在商店里</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14974" value="12657" name="answers[14974].value" id="14974_2" group="14974" onclick="showOrHide4()">		<label for="14974_2">会，在网上买</label>
+			<input group="14974" type="radio" id="14974_2" name="answers[14974].value" value="12657" class="selection question_radio_14974" onclick="showOrHide4()">		<label for="14974_2">会，在网上买</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14974" value="12658" name="answers[14974].value" id="14974_3" group="14974" onclick="showOrHide4()">		<label for="14974_3">会，在餐厅或酒馆</label>
+			<input group="14974" type="radio" id="14974_3" name="answers[14974].value" value="12658" class="selection question_radio_14974" onclick="showOrHide4()">		<label for="14974_3">会，在餐厅或酒馆</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14974" value="12659" name="answers[14974].value" id="14974_4" group="14974" onclick="showOrHide4()">		<label for="14974_4">会，在其他地方(请举例)</label>
+			<input group="14974" type="radio" id="14974_4" name="answers[14974].value" value="12659" class="selection question_radio_14974" onclick="showOrHide4()">		<label for="14974_4">会，在其他地方(请举例)</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-function showOrHide4(){
-	if(jQuery("#14974_4").attr("checked")){
-		jQuery("#q_3379").css("display","");
-		jQuery("#q_3380").css("display","");
-		jQuery("#q_3381").css("display","");
-	}else if(jQuery("#14974_0").attr("checked")){
-		jQuery("#q_3380").css("display","none");
-		jQuery("#q_3381").css("display","none");
-	}else{
-		jQuery("#q_3379").css("display","none");
-		jQuery("#q_3380").css("display","");
-		jQuery("#q_3381").css("display","");
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	function showOrHide4(){
+		if(jQuery("#14974_4").attr("checked")){
+				jQuery("#q_3379").css("display","");
+				jQuery("#q_3380").css("display","");
+				jQuery("#q_3381").css("display","");
+			}else if(jQuery("#14974_0").attr("checked")){
+				jQuery("#q_3380").css("display","none");
+				jQuery("#q_3381").css("display","none");
+			}else{
+				jQuery("#q_3379").css("display","none");
+				jQuery("#q_3380").css("display","");
+				jQuery("#q_3381").css("display","");
+			}
 	}
-}
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;display:none;" id="q_3379">
+		  <div id="q_3379" style="margin-bottom: 0px; display: none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -555,10 +637,10 @@ function showOrHide4(){
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[14975].id" value="" name="answers[14975].id">
-<input type="text" class="input-text" group="14975" id="question_14975" value="" name="answers[14975].value">
+<input type="hidden" name="answers[14975].id" value="" id="answers[14975].id">
+<input type="text" name="answers[14975].value" value="" id="question_14975" group="14975" class="input-text">
 
-<span id="err_answers[14975].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14975].value"></span>
 </td>
 
   </tr>
@@ -567,10 +649,13 @@ function showOrHide4(){
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;display:none;" id="q_3380">
+		  <div id="q_3380" style="margin-bottom: 0px; display: none;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -587,40 +672,47 @@ function showOrHide4(){
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14976].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14976].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14976].id" value="" name="answers[14976].id">
+<input type="hidden" name="answers[14976].id" value="" id="answers[14976].id">
 <ul>
 	<li>
-			<input type="radio" class="selection question_radio_14976" value="12660" name="answers[14976].value" id="14976_0" group="14976">		<label for="14976_0">送人</label>
+			<input group="14976" type="radio" id="14976_0" name="answers[14976].value" value="12660" class="selection question_radio_14976">		<label for="14976_0">送人</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14976" value="12661" name="answers[14976].value" id="14976_1" group="14976">		<label for="14976_1">自己喝</label>
+			<input group="14976" type="radio" id="14976_1" name="answers[14976].value" value="12661" class="selection question_radio_14976">		<label for="14976_1">自己喝</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14976" value="12662" name="answers[14976].value" id="14976_2" group="14976">		<label for="14976_2">都有</label>
+			<input group="14976" type="radio" id="14976_2" name="answers[14976].value" value="12662" class="selection question_radio_14976">		<label for="14976_2">都有</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
-		<input type="radio" name="answers[14976].value" class="q_14976  qc_0 radio">
+<td valign="top" class="noanswer-td" style="display: none;">
+		<input class="q_14976  qc_0 radio" type="radio" name="answers[14976].value">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;display:none;" id="q_3381">
+		  <div id="q_3381" style="margin-bottom: 0px; display: none;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -637,9 +729,9 @@ function showOrHide4(){
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14977].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14977].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14977].id" value="" name="answers[14977].id">
+<input type="hidden" name="answers[14977].id" value="" id="answers[14977].id">
 
 
 
@@ -648,54 +740,60 @@ function showOrHide4(){
 </span>
 <ul>
 	<li>
-			<input type="checkbox" onclick=" " value="12663" name="answers[14977].value" id="14977_0" class="question_radio_14977 selection" group="14977">		<label for="14977_0">口味</label>
+			<input group="14977" class="question_radio_14977 selection" type="checkbox" id="14977_0" name="answers[14977].value" value="12663" onclick=" ">		<label for="14977_0">口味</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12664" name="answers[14977].value" id="14977_1" class="question_radio_14977 selection" group="14977">		<label for="14977_1">产区</label>
+			<input group="14977" class="question_radio_14977 selection" type="checkbox" id="14977_1" name="answers[14977].value" value="12664" onclick=" ">		<label for="14977_1">产区</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12665" name="answers[14977].value" id="14977_2" class="question_radio_14977 selection" group="14977">		<label for="14977_2">品质</label>
+			<input group="14977" class="question_radio_14977 selection" type="checkbox" id="14977_2" name="answers[14977].value" value="12665" onclick=" ">		<label for="14977_2">品质</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12666" name="answers[14977].value" id="14977_3" class="question_radio_14977 selection" group="14977">		<label for="14977_3">年份</label>
+			<input group="14977" class="question_radio_14977 selection" type="checkbox" id="14977_3" name="answers[14977].value" value="12666" onclick=" ">		<label for="14977_3">年份</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12667" name="answers[14977].value" id="14977_4" class="question_radio_14977 selection" group="14977">		<label for="14977_4">名声</label>
+			<input group="14977" class="question_radio_14977 selection" type="checkbox" id="14977_4" name="answers[14977].value" value="12667" onclick=" ">		<label for="14977_4">名声</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12668" name="answers[14977].value" id="14977_5" class="question_radio_14977 selection" group="14977">		<label for="14977_5">价格</label>
+			<input group="14977" class="question_radio_14977 selection" type="checkbox" id="14977_5" name="answers[14977].value" value="12668" onclick=" ">		<label for="14977_5">价格</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12669" name="answers[14977].value" id="14977_6" class="question_radio_14977 selection" group="14977">		<label for="14977_6">朋友/家人推荐</label>
+			<input group="14977" class="question_radio_14977 selection" type="checkbox" id="14977_6" name="answers[14977].value" value="12669" onclick=" ">		<label for="14977_6">朋友/家人推荐</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12670" name="answers[14977].value" id="14977_7" class="question_radio_14977 selection" group="14977">		<label for="14977_7">包装/广告</label>
+			<input group="14977" class="question_radio_14977 selection" type="checkbox" id="14977_7" name="answers[14977].value" value="12670" onclick=" ">		<label for="14977_7">包装/广告</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12671" name="answers[14977].value" id="14977_8" class="question_radio_14977 selection" group="14977">		<label for="14977_8">随便选，碰碰运气</label>
+			<input group="14977" class="question_radio_14977 selection" type="checkbox" id="14977_8" name="answers[14977].value" value="12671" onclick=" ">		<label for="14977_8">随便选，碰碰运气</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("14978");
-
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_3382">
+		  <div id="q_3382" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -713,9 +811,9 @@ function showOrHide4(){
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14978].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14978].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14978].id" value="" name="answers[14978].id">
+<input type="hidden" name="answers[14978].id" value="" id="answers[14978].id">
 
 
 
@@ -724,39 +822,45 @@ function showOrHide4(){
 </span>
 <ul>
 	<li>
-			<input type="checkbox" onclick=" " value="12672" name="answers[14978].value" id="14978_0" class="question_radio_14978 selection" group="14978">		<label for="14978_0">愿意，上海，7月6日</label>
+			<input group="14978" class="question_radio_14978 selection" type="checkbox" id="14978_0" name="answers[14978].value" value="12672" onclick=" ">		<label for="14978_0">愿意，上海，7月6日</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12673" name="answers[14978].value" id="14978_1" class="question_radio_14978 selection" group="14978">		<label for="14978_1">愿意，上海，7月13日</label>
+			<input group="14978" class="question_radio_14978 selection" type="checkbox" id="14978_1" name="answers[14978].value" value="12673" onclick=" ">		<label for="14978_1">愿意，上海，7月13日</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12674" name="answers[14978].value" id="14978_2" class="question_radio_14978 selection" group="14978">		<label for="14978_2">愿意，成都，7月13日以后（具体待定）</label>
+			<input group="14978" class="question_radio_14978 selection" type="checkbox" id="14978_2" name="answers[14978].value" value="12674" onclick=" ">		<label for="14978_2">愿意，成都，7月13日以后（具体待定）</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12675" name="answers[14978].value" id="14978_3" class="question_radio_14978 selection" group="14978">		<label for="14978_3">这几个时间都不方便</label>
+			<input group="14978" class="question_radio_14978 selection" type="checkbox" id="14978_3" name="answers[14978].value" value="12675" onclick=" ">		<label for="14978_3">这几个时间都不方便</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("14979");
-
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3383">
+		  <div id="q_3383" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -774,39 +878,45 @@ function showOrHide4(){
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14979].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14979].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14979].id" value="" name="answers[14979].id">
+<input type="hidden" name="answers[14979].id" value="" id="answers[14979].id">
 
-	<select size="1" title="title" name="answers[14979].value" id="question_14979" class="selection" group="14979">
-	<option value="0" selected="selected">请选择</option>
-<option style="" value="12676">&lt; 23岁</option>
-<option style="" value="12677">23-34 岁</option>
-<option style="" value="12678">35-44 岁</option>
-<option style="" value="12679">45-60 岁</option>
-<option style="" value="12680">&gt;60岁</option>
+	<select group="14979" class="selection" id="question_14979" name="answers[14979].value" title="title" size="1">
+	<option selected="selected" value="0">请选择</option>
+<option value="12676" style="">&lt; 23岁</option>
+<option value="12677" style="">23-34 岁</option>
+<option value="12678" style="">35-44 岁</option>
+<option value="12679" style="">45-60 岁</option>
+<option value="12680" style="">&gt;60岁</option>
 	</select> 
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("14980");
-
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_3384">
+		  <div id="q_3384" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -824,38 +934,44 @@ function showOrHide4(){
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14980].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14980].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14980].id" value="" name="answers[14980].id">
+<input type="hidden" name="answers[14980].id" value="" id="answers[14980].id">
 <ul>
 	<li>
-			<input type="radio" class="selection question_radio_14980" value="12681" name="answers[14980].value" id="14980_0" group="14980">		<label for="14980_0">女</label>
+			<input group="14980" type="radio" id="14980_0" name="answers[14980].value" value="12681" class="selection question_radio_14980">		<label for="14980_0">女</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_14980" value="12682" name="answers[14980].value" id="14980_1" group="14980">		<label for="14980_1">男</label>
+			<input group="14980" type="radio" id="14980_1" name="answers[14980].value" value="12682" class="selection question_radio_14980">		<label for="14980_1">男</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("14981");
-
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3385">
+		  <div id="q_3385" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -873,38 +989,45 @@ function showOrHide4(){
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14981].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14981].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14981].id" value="" name="answers[14981].id">
+<input type="hidden" name="answers[14981].id" value="" id="answers[14981].id">
 
-	<select size="1" title="title" name="answers[14981].value" id="question_14981" class="selection" group="14981">
-	<option value="0" selected="selected">请选择</option>
-<option style="" value="12683">&lt; 5,000/月</option>
-<option style="" value="12684">￥5,000～8,000/月</option>
-<option style="" value="12685">￥8,000～15,000/月</option>
-<option style="" value="12686">￥15,000～20,000/月</option>
-<option style="" value="12687">￥20,000～25,000/月</option>
-<option style="" value="12688">&gt;25,000/月</option>
+	<select group="14981" class="selection" id="question_14981" name="answers[14981].value" title="title" size="1">
+	<option selected="selected" value="0">请选择</option>
+<option value="12683" style="">&lt; 5,000/月</option>
+<option value="12684" style="">￥5,000～8,000/月</option>
+<option value="12685" style="">￥8,000～15,000/月</option>
+<option value="12686" style="">￥15,000～20,000/月</option>
+<option value="12687" style="">￥20,000～25,000/月</option>
+<option value="12688" style="">&gt;25,000/月</option>
 	</select> 
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_3386">
+		  <div id="q_3386" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -920,10 +1043,10 @@ function showOrHide4(){
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[14982].id" value="" name="answers[14982].id">
-<input type="text" class="input-text" group="14982" id="question_14982" value="" name="answers[14982].value">
+<input type="hidden" name="answers[14982].id" value="" id="answers[14982].id">
+<input type="text" name="answers[14982].value" value="" id="question_14982" group="14982" class="input-text">
 
-<span id="err_answers[14982].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14982].value"></span>
 </td>
 
   </tr>
@@ -932,10 +1055,13 @@ function showOrHide4(){
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3387">
+		  <div id="q_3387" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -951,10 +1077,10 @@ function showOrHide4(){
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[14983].id" value="" name="answers[14983].id">
-<input type="text" class="input-text" group="14983" id="question_14983" value="" name="answers[14983].value">
+<input type="hidden" name="answers[14983].id" value="" id="answers[14983].id">
+<input type="text" name="answers[14983].value" value="" id="question_14983" group="14983" class="input-text">
 
-<span id="err_answers[14983].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14983].value"></span>
 </td>
 
   </tr>
@@ -963,16 +1089,21 @@ function showOrHide4(){
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-mandatoryElements.push("14984");
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+		 	mandatoryElements.push("14984");
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_3388">
+		  <div id="q_3388" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
 					<div class="question-title">
-						你的电话：<span style="color:red">*</span>
+						你的电话：
+							<span style="color:red">*</span>
 					</div>
 							<div class="elementInfoText twoColumnLayout">
 							   
@@ -982,10 +1113,10 @@ mandatoryElements.push("14984");
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[14984].id" value="" name="answers[14984].id">
-<input type="text" class="input-text" group="14984" id="question_14984" value="" name="answers[14984].value">
+<input type="hidden" name="answers[14984].id" value="" id="answers[14984].id">
+<input type="text" name="answers[14984].value" value="" id="question_14984" group="14984" class="input-text">
 
-<span id="err_answers[14984].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14984].value"></span>
 </td>
 
   </tr>
@@ -994,16 +1125,21 @@ mandatoryElements.push("14984");
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-mandatoryElements.push("2158");
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+		 	mandatoryElements.push("14985");
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_2158">
+		  <div id="q_2158" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
 					<div class="question-title">
-						城市：<span style="color:red">*</span>
+						城市:
+							<span style="color:red">*</span>
 					</div>
 							<div class="elementInfoText twoColumnLayout">
 							   
@@ -1014,121 +1150,121 @@ mandatoryElements.push("2158");
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[14985].value" class="error-content"></span>
+<span class="error-content" id="err_answers[14985].value" style="display:block"></span>
 
-<input type="hidden" id="answers[14985].id" value="" name="answers[14985].id">
+<input type="hidden" name="answers[14985].id" value="" id="answers[14985].id">
 
-	<select size="1" title="title" name="answers[14985].value" id="question_14985" class="selection" group="14985">
-	<option value="0" selected="selected">请选择</option>
-	<option style="" value="8320">北京市</option>
-	<option style="" value="8370">上海市</option>
-	<option style="" value="8335">广州市</option>
-	<option style="" value="8326">成都市</option>
-<option style="" value="8315">鞍山市</option>
-<option style="" value="8316">蚌埠市</option>
-<option style="" value="8317">包头市</option>
-<option style="" value="8318">宝鸡市</option>
-<option style="" value="8319">保定市</option>
-
-<option style="" value="8321">沧州市</option>
-<option style="" value="8322">长春市</option>
-<option style="" value="8323">长沙市</option>
-<option style="" value="8324">常州市</option>
-<option style="" value="8325">郴州市</option>
-
-<option style="" value="8327">大理市</option>
-<option style="" value="8328">大连市</option>
-<option style="" value="8329">大庆市</option>
-<option style="" value="8330">大同市</option>
-<option style="" value="8331">东莞市</option>
-<option style="" value="8332">佛山市</option>
-<option style="" value="8333">福州市</option>
-<option style="" value="8334">抚顺市</option>
-
-<option style="" value="8336">贵阳市</option>
-<option style="" value="8337">桂林市</option>
-<option style="" value="8338">哈尔滨市</option>
-<option style="" value="8339">海口市</option>
-<option style="" value="8340">杭州市</option>
-<option style="" value="8341">合肥市</option>
-<option style="" value="8342">衡阳市</option>
-<option style="" value="8343">呼和浩特市</option>
-<option style="" value="8344">惠州市</option>
-<option style="" value="8345">吉林市</option>
-<option style="" value="8346">济南市</option>
-<option style="" value="8347">嘉兴市</option>
-<option style="" value="8348">江门市</option>
-<option style="" value="8349">九江市</option>
-<option style="" value="8350">开封市</option>
-<option style="" value="8351">昆明市</option>
-<option style="" value="8352">兰州市</option>
-<option style="" value="8353">廊坊市</option>
-<option style="" value="8354">连云港市</option>
-<option style="" value="8355">洛阳市</option>
-<option style="" value="8356">马安山市</option>
-<option style="" value="8357">牡丹江市</option>
-<option style="" value="8358">南昌市</option>
-<option style="" value="8359">南京市</option>
-<option style="" value="8360">南宁市</option>
-<option style="" value="8361">南通市</option>
-<option style="" value="8362">宁波市</option>
-<option style="" value="8363">攀枝花市</option>
-<option style="" value="8364">平顶山市</option>
-<option style="" value="8365">齐齐哈尔</option>
-<option style="" value="8366">秦皇岛市</option>
-<option style="" value="8367">青岛市</option>
-<option style="" value="8368">泉州市</option>
-<option style="" value="8369">汕头市</option>
-
-<option style="" value="8371">绍兴市</option>
-<option style="" value="8372">深圳市</option>
-<option style="" value="8373">沈阳市</option>
-<option style="" value="8374">石家庄市</option>
-<option style="" value="8375">苏州市</option>
-<option style="" value="8376">太原市</option>
-<option style="" value="8377">泰州市</option>
-<option style="" value="8378">唐山市</option>
-<option style="" value="8379">天津市</option>
-<option style="" value="8380">威海市</option>
-<option style="" value="8381">潍坊市</option>
-<option style="" value="8382">温州市</option>
-<option style="" value="8383">乌鲁木齐市</option>
-<option style="" value="8384">无锡市</option>
-<option style="" value="8385">芜湖市</option>
-<option style="" value="8386">武汉市</option>
-<option style="" value="8387">西安市</option>
-<option style="" value="8388">西宁市</option>
-<option style="" value="8389">厦门市</option>
-<option style="" value="8390">新乡市</option>
-<option style="" value="8391">徐州市</option>
-<option style="" value="8392">烟台市</option>
-<option style="" value="8393">延安市</option>
-<option style="" value="8394">扬州市</option>
-<option style="" value="8395">宜宾市</option>
-<option style="" value="8396">银川市</option>
-<option style="" value="8397">玉林市</option>
-<option style="" value="8398">玉溪市</option>
-<option style="" value="8399">湛江市</option>
-<option style="" value="8400">漳州市</option>
-<option style="" value="8401">镇江市</option>
-<option style="" value="8402">郑州市</option>
-<option style="" value="8403">中山市</option>
-<option style="" value="8404">重庆市</option>
-<option style="" value="8405">珠海市</option>
-<option style="" value="8406">淄博市</option>
-<option style="" value="8407">自贡市</option>
-<option style="" value="8408">遵义市</option>
-<option style="" value="8409">其他</option>
+	<select group="14985" class="selection" id="question_14985" name="answers[14985].value" title="title" size="1">
+	<option selected="selected" value="0">请选择</option>
+<option value="8315" style="">北京市</option>
+<option value="8316" style="">上海市</option>
+<option value="8317" style="">广州市</option>
+<option value="8318" style="">成都市</option>
+<option value="8319" style="">保定市</option>
+<option value="8320" style="">鞍山市</option>
+<option value="8321" style="">沧州市</option>
+<option value="8322" style="">长春市</option>
+<option value="8323" style="">长沙市</option>
+<option value="8324" style="">常州市</option>
+<option value="8325" style="">郴州市</option>
+<option value="8326" style="">宝鸡市</option>
+<option value="8327" style="">大理市</option>
+<option value="8328" style="">大连市</option>
+<option value="8329" style="">大庆市</option>
+<option value="8330" style="">大同市</option>
+<option value="8331" style="">东莞市</option>
+<option value="8332" style="">佛山市</option>
+<option value="8333" style="">福州市</option>
+<option value="8334" style="">抚顺市</option>
+<option value="8335" style="">包头市</option>
+<option value="8336" style="">贵阳市</option>
+<option value="8337" style="">桂林市</option>
+<option value="8338" style="">哈尔滨市</option>
+<option value="8339" style="">海口市</option>
+<option value="8340" style="">杭州市</option>
+<option value="8341" style="">合肥市</option>
+<option value="8342" style="">衡阳市</option>
+<option value="8343" style="">呼和浩特市</option>
+<option value="8344" style="">惠州市</option>
+<option value="8345" style="">吉林市</option>
+<option value="8346" style="">济南市</option>
+<option value="8347" style="">嘉兴市</option>
+<option value="8348" style="">江门市</option>
+<option value="8349" style="">九江市</option>
+<option value="8350" style="">开封市</option>
+<option value="8351" style="">昆明市</option>
+<option value="8352" style="">兰州市</option>
+<option value="8353" style="">廊坊市</option>
+<option value="8354" style="">连云港市</option>
+<option value="8355" style="">洛阳市</option>
+<option value="8356" style="">马安山市</option>
+<option value="8357" style="">牡丹江市</option>
+<option value="8358" style="">南昌市</option>
+<option value="8359" style="">南京市</option>
+<option value="8360" style="">南宁市</option>
+<option value="8361" style="">南通市</option>
+<option value="8362" style="">宁波市</option>
+<option value="8363" style="">攀枝花市</option>
+<option value="8364" style="">平顶山市</option>
+<option value="8365" style="">齐齐哈尔</option>
+<option value="8366" style="">秦皇岛市</option>
+<option value="8367" style="">青岛市</option>
+<option value="8368" style="">泉州市</option>
+<option value="8369" style="">汕头市</option>
+<option value="8370" style="">蚌埠市</option>
+<option value="8371" style="">绍兴市</option>
+<option value="8372" style="">深圳市</option>
+<option value="8373" style="">沈阳市</option>
+<option value="8374" style="">石家庄市</option>
+<option value="8375" style="">苏州市</option>
+<option value="8376" style="">太原市</option>
+<option value="8377" style="">泰州市</option>
+<option value="8378" style="">唐山市</option>
+<option value="8379" style="">天津市</option>
+<option value="8380" style="">威海市</option>
+<option value="8381" style="">潍坊市</option>
+<option value="8382" style="">温州市</option>
+<option value="8383" style="">乌鲁木齐市</option>
+<option value="8384" style="">无锡市</option>
+<option value="8385" style="">芜湖市</option>
+<option value="8386" style="">武汉市</option>
+<option value="8387" style="">西安市</option>
+<option value="8388" style="">西宁市</option>
+<option value="8389" style="">厦门市</option>
+<option value="8390" style="">新乡市</option>
+<option value="8391" style="">徐州市</option>
+<option value="8392" style="">烟台市</option>
+<option value="8393" style="">延安市</option>
+<option value="8394" style="">扬州市</option>
+<option value="8395" style="">宜宾市</option>
+<option value="8396" style="">银川市</option>
+<option value="8397" style="">玉林市</option>
+<option value="8398" style="">玉溪市</option>
+<option value="8399" style="">湛江市</option>
+<option value="8400" style="">漳州市</option>
+<option value="8401" style="">镇江市</option>
+<option value="8402" style="">郑州市</option>
+<option value="8403" style="">中山市</option>
+<option value="8404" style="">重庆市</option>
+<option value="8405" style="">珠海市</option>
+<option value="8406" style="">淄博市</option>
+<option value="8407" style="">自贡市</option>
+<option value="8408" style="">遵义市</option>
+<option value="8409" style="">其他</option>
 	</select> 
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
@@ -1138,9 +1274,7 @@ mandatoryElements.push("2158");
 	
 
 
-</div>
-	
-	
+</div> 
 <br>
 <div style="clear:both"></div>
 </div> 
@@ -1153,10 +1287,10 @@ mandatoryElements.push("2158");
 </div>
 <br>
 <div class="fillout-submit">
-<input type="button" value="Next Page" onclick="showNextPage();" class="button" id="nextPageButton" style="display: none;">
-<input type="submit" value="提交" name="command.submit" class="button" style="" id="submit">
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value="Next Page" style="display: none;">
+<input id="submit" type="submit" style="" class="button" name="command.submit" value="提交">
 </div>
-<table cellspacing="0" cellpadding="0" border="0" style="display:none; margin:15px 20px;" id="web-dialog" class="web-dialog">
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display:none; margin:15px 20px;">
 	<tbody><tr>
 		<td width="9" height="9"><img src="http://www.marketing-research.cn/images/web_dialog_l_t.gif"></td>
 		<td height="9" background="http://www.marketing-research.cn/images/web_dialog_m_t.gif"><img src="http://www.marketing-research.cn/images/web_dialog_m_t.gif"></td>
@@ -1166,9 +1300,9 @@ mandatoryElements.push("2158");
 		<td width="9" background="http://www.marketing-research.cn/images/web_dialog_l_m.gif"><img src="http://www.marketing-research.cn/images/web_dialog_l_m.gif"></td>
 		<td bgcolor="#ffffff">
 			<div class="web-dialog-message">
-				<p class="" id="web-dialog-message-text"></p>
+				<p id="web-dialog-message-text" class=""></p>
 			</div>
-			<div id="web-dialog-buttons" class="buttons">
+			<div class="buttons" id="web-dialog-buttons">
 			</div>
 		</td>
 		<td width="9" background="http://www.marketing-research.cn/images/web_dialog_r_m.gif"><img src="http://www.marketing-research.cn/images/web_dialog_r_m.gif"></td>
@@ -1180,9 +1314,10 @@ mandatoryElements.push("2158");
 	</tr>
 </tbody></table>
 
-
-<script type="text/javascript" language="JavaScript">
-
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 	var WebDialog = {
 		element : $('web-dialog'),
 		onok : function() {},
@@ -1271,7 +1406,8 @@ mandatoryElements.push("2158");
 			//$('mask').show();
 		}
 	}
-
+// ]]>
+-->
 </script>
 </form>
 </div> 
@@ -1279,8 +1415,9 @@ mandatoryElements.push("2158");
 <br>
 </div>
 
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
   var pageNum=0;
  
   var noPage0 = false;
@@ -1288,7 +1425,7 @@ mandatoryElements.push("2158");
   
 
   function showPage(_pageIndex) {
-    if (_pageIndex <0 || _pageIndex < pageNum) return ;
+    if (_pageIndex <0 || _pageIndex > pageNum) return ;
     if (_pageIndex == pageNum) {
     	Element.hide("nextPageButton");
     } else {
@@ -1344,19 +1481,19 @@ mandatoryElements.push("2158");
 	  	for (i=0; i<=pageNum; i++) {
 			var s ="";
 			if( i == 0 ) {
-				s += "&lt;a href='#' onclick='showPrevPage();'&gt;" + "&lt;-Previous" + "&lt;/a&gt;&amp;nbsp;";
+				s += "<a href='#' onclick='showPrevPage();'>" + "<-Previous" + "</a>&nbsp;";
 			}
 
 			if (noPage0){
 	  		 if (i!=0){ 
-	  		 	s += "&lt;a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'&gt;" + (i) + "&lt;/a&gt;&amp;nbsp;";
+	  		 	s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i) + "</a>&nbsp;";
 	  		  }
 	  		}else{
-	  		  s += "&lt;a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'&gt;" + (i+1) + "&lt;/a&gt;&amp;nbsp;";
+	  		  s += "<a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'>" + (i+1) + "</a>&nbsp;";
 	  		}
 	  		
 			if( i == pageNum ) {
-				s+= "&lt;a href='#' onclick='showNextPage();'&gt;" + "Next -&gt;" + "&lt;/a&gt;&amp;nbsp;";
+				s+= "<a href='#' onclick='showNextPage();'>" + "Next ->" + "</a>&nbsp;";
 			}
 	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
 	  	}		
@@ -1369,11 +1506,13 @@ mandatoryElements.push("2158");
   }else{
   	showPage(0);
   }
-
+// ]]>
+-->
 </script>
 
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
     //do not include radio answers
 	if(typeof checkNoAnswer=="undefined") {
 		checkNoAnswer=function(index,checkbox) {
@@ -1427,22 +1566,24 @@ mandatoryElements.push("2158");
 		}
 		
 	}
-
+// ]]>
+-->
 </script>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 	function loading() {
-		var html = "&lt;img src='http://www.marketing-research.cn/images/spinner.gif' /&gt;Please wait...";
+		var html = "<img src='http://www.marketing-research.cn/images/spinner.gif' />Please wait...";
 		WebDialog.showMessageBox(html, "none", "center", 600);
 	}
 	
 	function checkMandatory() {
 	    var fillMandatory = true;
-	    for(var j=0; j<mandatoryElements.length; j++) {
+	    for(var j=0; j < mandatoryElements.length; j++) {
 	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
-			if(elements.length < 1) {
+			if(elements.length > 1) {
 			  var filled = false;
-			  for(var i=0; i<elements.length; i++) {
+			  for(var i=0; i < elements.length; i++) {
 			  	var element = elements[i];
 				if(element.checked) {
 				  filled = true;
@@ -1469,7 +1610,7 @@ mandatoryElements.push("2158");
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
+	    	var html = '提交失败：必填的题目不能为空';
 			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
@@ -1501,7 +1642,7 @@ mandatoryElements.push("2158");
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
+			var html = '提交失败：不能提交空报告';
 			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
@@ -1639,5 +1780,25 @@ mandatoryElements.push("2158");
 
 
 	
+// ]]>
+-->
 </script>
+</div>
+</div> 
+</div>
+<!-- <div class="main-content-outer"><div style="color:#999;width:800; margin-left:20px; margin-right:20px;">我们非常重视对您隐私权的保护。邮件及手机号等个人资料为用户重要隐私，我们承诺不会将个人资料用作它途；承诺不会在未获得用户许可的情况下擅自将用户的个人资料信息出租或出售给任何第三方。如果您对本声明或我们的个人信息处理存在任何疑义，请发送邮件至home@marketing-research.cn联系我们。</div></div> -->
+<div class="footer">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link" style="display: none;">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a href="http://www.ostrakon.org" target="_blank">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a href="/help/index/actionName/s/methodName/s" target="_blank">Help</a> | <a href="http://www.ostrakon.org" target="_blank">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div class="bottom-shadow"></div>
+	<div style="clear: both"></div>
+	
 </div>
