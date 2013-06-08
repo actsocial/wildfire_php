@@ -7,7 +7,7 @@
 	function msieversion() {
 		var ua = window.navigator.userAgent
 		var msie = ua.indexOf ( "MSIE " )
-		if ( msie &gt; 0 )      // If Internet Explorer, return version number
+		if ( msie < 0 )      // If Internet Explorer, return version number
 		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
 		else                 // If another browser, return 0
 		   return 0
@@ -18,7 +18,7 @@
 		var hasError = false;
 		$$('input.input-text').each(function(element) {
 			var value = element.value;
-			if( value.length &gt; MAX_LENGTH_OF_COMMENT_QUESTION) {
+			if( value.length < MAX_LENGTH_OF_COMMENT_QUESTION) {
 				element.next().innerHTML = errorMessage;
 				hasError = true;
 			}
@@ -95,7 +95,7 @@
 <div class="mandatory"><span style="color: red;">* </span>- It is mandatory</div>
 <div class="page-bar-area">
 <span id="pageBar"></span>
-<strong class="no-answer">No Answer</strong><img align="absmiddle" src="/images/no_answer.gif" class="no-answer">
+<!-- <strong class="no-answer">No Answer</strong><img align="absmiddle" src="/images/no_answer.gif" class="no-answer"> -->
 <div class="clear"></div>
 </div>
 <div class="clear"></div>
@@ -1259,7 +1259,7 @@ function showOrHide4(){
 			var height = document.body.offsetHeight;
 			var left = (width - this.element.offsetWidth) / 2;
 			var top = (height - this.element.offsetHeight) / 2;
-			if (top &lt; 300) {
+			if (top < 300) {
 				top = 300;
 			}
 			this.element.style.left = left + "px";
@@ -1290,7 +1290,7 @@ function showOrHide4(){
 			var pos = 0;
 			if (window.innerHeight) {
 		    	pos = window.pageYOffset
-		    } else if (document.documentElement &amp;&amp; document.documentElement.scrollTop) {
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
 		    	pos = document.documentElement.scrollTop
 		    } else if (document.body) {
 		    	pos = document.body.scrollTop;
@@ -1309,9 +1309,9 @@ function showOrHide4(){
 			if (msg != undefined) {
 				$('web-dialog-message-text').innerHTML = msg;
 			}
-			if (icon_type != undefined &amp;&amp; msg_align != undefined) {
+			if (icon_type != undefined && msg_align != undefined) {
 				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
-			} else if (icon_type == undefined &amp;&amp; msg_align == undefined) {
+			} else if (icon_type == undefined && msg_align == undefined) {
 				$('web-dialog-message-text').className = "icon-none left";
 			} else if (icon_type == undefined) {
 				$('web-dialog-message-text').className = msg_align;
@@ -1320,7 +1320,7 @@ function showOrHide4(){
 			}
 			
 			$('web-dialog-buttons').innerHTML = "";
-			if (buttons!=undefined &amp;&amp; callback_functions!=undefined) {
+			if (buttons!=undefined && callback_functions!=undefined) {
 				for (var i=0; i<buttons.length; i++) {
 					if (buttons[i]==undefined || callback_functions[i]==undefined) {
 						continue;
@@ -1347,7 +1347,7 @@ function showOrHide4(){
 </div>
 
 <script type="text/javascript" language="JavaScript">
-[
+
   var pageNum=0;
  
   var noPage0 = false;
@@ -1355,7 +1355,7 @@ function showOrHide4(){
   
 
   function showPage(_pageIndex) {
-    if (_pageIndex <0 || _pageIndex &gt; pageNum) return ;
+    if (_pageIndex <0 || _pageIndex < pageNum) return ;
     if (_pageIndex == pageNum) {
     	Element.hide("nextPageButton");
     } else {
@@ -1507,7 +1507,7 @@ function showOrHide4(){
 	    var fillMandatory = true;
 	    for(var j=0; j < mandatoryElements.length; j++) {
 	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
-			if(elements.length &gt; 1) {
+			if(elements.length < 1) {
 			  var filled = false;
 			  for(var i=0; i < elements.length; i++) {
 			  	var element = elements[i];
@@ -1536,7 +1536,7 @@ function showOrHide4(){
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = 'Mandatory questions must be filled out';
+	    	var html = '提交失败：必填的题目不能为空';
 			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
@@ -1633,7 +1633,7 @@ function showOrHide4(){
 			var errorParentElement = errorElements[errorElementsPointer].up('div');
 			while (errorParentElement != undefined) {
 			var elementId = errorParentElement.id;
-			if (elementId != undefined &amp;&amp; elementId.indexOf('page') != -1) {
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
 				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
 				showPage(errorPageNum);
 				break;
