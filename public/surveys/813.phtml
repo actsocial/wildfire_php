@@ -9,7 +9,7 @@
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form onsubmit="loading();return (checkMandatory() &amp;&amp; checkAnswerSet() &amp;&amp; checkCommentAnswers());" action="http://www.marketing-research.cn/fillout" method="post" id="fillout">
+<form onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());" action="http://www.marketing-research.cn/fillout" method="post" id="fillout">
 <div style="display:none" id="mainzone-top-wrapper">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -1192,7 +1192,7 @@ mandatoryElements.push("2158");
 			var height = document.body.offsetHeight;
 			var left = (width - this.element.offsetWidth) / 2;
 			var top = (height - this.element.offsetHeight) / 2;
-			if (top &lt; 300) {
+			if (top < 300) {
 				top = 300;
 			}
 			this.element.style.left = left + "px";
@@ -1223,13 +1223,13 @@ mandatoryElements.push("2158");
 			var pos = 0;
 			if (window.innerHeight) {
 		    	pos = window.pageYOffset
-		    } else if (document.documentElement &amp;&amp; document.documentElement.scrollTop) {
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
 		    	pos = document.documentElement.scrollTop
 		    } else if (document.body) {
 		    	pos = document.body.scrollTop;
 		    }
 		    top += pos;
-			if (top &lt; 300) {
+			if (top < 300) {
 				top = 300;
 			}
 			this.element.style.left = left + "px";
@@ -1242,9 +1242,9 @@ mandatoryElements.push("2158");
 			if (msg != undefined) {
 				$('web-dialog-message-text').innerHTML = msg;
 			}
-			if (icon_type != undefined &amp;&amp; msg_align != undefined) {
+			if (icon_type != undefined && msg_align != undefined) {
 				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
-			} else if (icon_type == undefined &amp;&amp; msg_align == undefined) {
+			} else if (icon_type == undefined && msg_align == undefined) {
 				$('web-dialog-message-text').className = "icon-none left";
 			} else if (icon_type == undefined) {
 				$('web-dialog-message-text').className = msg_align;
@@ -1253,8 +1253,8 @@ mandatoryElements.push("2158");
 			}
 			
 			$('web-dialog-buttons').innerHTML = "";
-			if (buttons!=undefined &amp;&amp; callback_functions!=undefined) {
-				for (var i=0; i&lt;buttons.length; i++) {
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
 					if (buttons[i]==undefined || callback_functions[i]==undefined) {
 						continue;
 					}
@@ -1288,14 +1288,14 @@ mandatoryElements.push("2158");
   
 
   function showPage(_pageIndex) {
-    if (_pageIndex &lt;0 || _pageIndex &gt; pageNum) return ;
+    if (_pageIndex <0 || _pageIndex < pageNum) return ;
     if (_pageIndex == pageNum) {
     	Element.hide("nextPageButton");
     } else {
     	Element.show("nextPageButton");
     }
     
-    if (_pageIndex &lt;1 &amp;&amp; noPage0) return ;
+    if (_pageIndex <1 && noPage0) return ;
   	var _pageElement = $("page_"+_pageIndex);
   	var _currElement = $("page_"+currentPage);
   	
@@ -1316,7 +1316,7 @@ mandatoryElements.push("2158");
 	
 	if(_pageIndex == pageNum) {
 		Element.show($('submit'));
-	} else if ( _pageIndex &lt; pageNum) {
+	} else if ( _pageIndex < pageNum) {
 		Element.hide($('submit'));
 	}
   }
@@ -1332,7 +1332,7 @@ mandatoryElements.push("2158");
   function initPages() {
   	var i;
 
-  	for (i=0; i&lt;=pageNum; i++) {
+  	for (i=0; i<=pageNum; i++) {
   		Element.hide($("page_"+i));
   	}
   	
@@ -1341,7 +1341,7 @@ mandatoryElements.push("2158");
   	if (pageNum==0) {
   		_pageBar.innerHTML = "";
   	} else {
-	  	for (i=0; i&lt;=pageNum; i++) {
+	  	for (i=0; i<=pageNum; i++) {
 			var s ="";
 			if( i == 0 ) {
 				s += "&lt;a href='#' onclick='showPrevPage();'&gt;" + "&lt;-Previous" + "&lt;/a&gt;&amp;nbsp;";
@@ -1412,7 +1412,7 @@ mandatoryElements.push("2158");
 			var qc_value = $("qc_checkbox_" + qc_id).checked;
 			//get the checkBoxed belongs to the above question context
 			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
-			for(var i = 0; i &lt; checkBoxes.length;i++) {
+			for(var i = 0; i < checkBoxes.length;i++) {
 				var checkBox = checkBoxes[i];
 				//to reuse checkRadioNoAnswer and checkNoAnswer
 				checkBox.checked=qc_value;
@@ -1438,11 +1438,11 @@ mandatoryElements.push("2158");
 	
 	function checkMandatory() {
 	    var fillMandatory = true;
-	    for(var j=0; j &lt; mandatoryElements.length; j++) {
+	    for(var j=0; j<mandatoryElements.length; j++) {
 	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
-			if(elements.length &gt; 1) {
+			if(elements.length < 1) {
 			  var filled = false;
-			  for(var i=0; i &lt; elements.length; i++) {
+			  for(var i=0; i<elements.length; i++) {
 			  	var element = elements[i];
 				if(element.checked) {
 				  filled = true;
@@ -1555,7 +1555,7 @@ mandatoryElements.push("2158");
 		var errorElements = $$('span.error-content') ;
 		var hasError = false;
 		var errorElementsPointer = 0;
-		for (errorElementsPointer=0; errorElementsPointer&lt;errorElements.length; errorElementsPointer++) {
+		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
 			var html = errorElements[errorElementsPointer].innerHTML;
 			if (html != "") {
 				hasError = true;
@@ -1566,7 +1566,7 @@ mandatoryElements.push("2158");
 			var errorParentElement = errorElements[errorElementsPointer].up('div');
 			while (errorParentElement != undefined) {
 			var elementId = errorParentElement.id;
-			if (elementId != undefined &amp;&amp; elementId.indexOf('page') != -1) {
+			if (elementId != undefined && elementId.indexOf('page') != -1) {
 				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
 				showPage(errorPageNum);
 				break;
@@ -1580,7 +1580,7 @@ mandatoryElements.push("2158");
 	function showOtherValueInputInSelect(element) {
 	    var options = element.options;
 	    var selectedOption;
-	    for( var i = 0; i &lt; options.length; i++) {
+	    for( var i = 0; i < options.length; i++) {
 	       if( options[i].selected) {
 	       	 selectedOption = options[i];
 	       }
