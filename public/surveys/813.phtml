@@ -1,3 +1,42 @@
+
+<div class="container">
+	<div class="container-inner">
+
+	<script type="text/javascript" language="JavaScript">
+
+	function msieversion() {
+		var ua = window.navigator.userAgent
+		var msie = ua.indexOf ( "MSIE " )
+		if ( msie &gt; 0 )      // If Internet Explorer, return version number
+		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
+		else                 // If another browser, return 0
+		   return 0
+	}
+	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	function checkCommentAnswers() {
+		var errorMessage = "Your input is too long";
+		var hasError = false;
+		$$('input.input-text').each(function(element) {
+			var value = element.value;
+			if( value.length &gt; MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
+			}
+		});
+		if( hasError ) {
+			locateErrorPage();
+		}
+		return !hasError;
+	}
+
+	</script>
+
+<script type="text/javascript">
+
+</script>
+
+
+
 <div class="main-container-outer">
 	<div id="container">
 		<!-- <div id="header" class="header">
@@ -1257,7 +1296,7 @@ function showOrHide4(){
 		    	pos = document.body.scrollTop;
 		    }
 		    top += pos;
-			if (top &lt; 300) {
+			if (top < 300) {
 				top = 300;
 			}
 			this.element.style.left = left + "px";
@@ -1282,7 +1321,7 @@ function showOrHide4(){
 			
 			$('web-dialog-buttons').innerHTML = "";
 			if (buttons!=undefined &amp;&amp; callback_functions!=undefined) {
-				for (var i=0; i&lt;buttons.length; i++) {
+				for (var i=0; i<buttons.length; i++) {
 					if (buttons[i]==undefined || callback_functions[i]==undefined) {
 						continue;
 					}
@@ -1316,14 +1355,14 @@ function showOrHide4(){
   
 
   function showPage(_pageIndex) {
-    if (_pageIndex &lt;0 || _pageIndex &gt; pageNum) return ;
+    if (_pageIndex <0 || _pageIndex &gt; pageNum) return ;
     if (_pageIndex == pageNum) {
     	Element.hide("nextPageButton");
     } else {
     	Element.show("nextPageButton");
     }
     
-    if (_pageIndex &lt;1 &amp;&amp; noPage0) return ;
+    if (_pageIndex <1 && noPage0) return ;
   	var _pageElement = $("page_"+_pageIndex);
   	var _currElement = $("page_"+currentPage);
   	
@@ -1344,7 +1383,7 @@ function showOrHide4(){
 	
 	if(_pageIndex == pageNum) {
 		Element.show($('submit'));
-	} else if ( _pageIndex &lt; pageNum) {
+	} else if ( _pageIndex <pageNum) {
 		Element.hide($('submit'));
 	}
   }
@@ -1360,7 +1399,7 @@ function showOrHide4(){
   function initPages() {
   	var i;
 
-  	for (i=0; i&lt;=pageNum; i++) {
+  	for (i=0; i<=pageNum; i++) {
   		Element.hide($("page_"+i));
   	}
   	
@@ -1369,7 +1408,7 @@ function showOrHide4(){
   	if (pageNum==0) {
   		_pageBar.innerHTML = "";
   	} else {
-	  	for (i=0; i&lt;=pageNum; i++) {
+	  	for (i=0; i<=pageNum; i++) {
 			var s ="";
 			if( i == 0 ) {
 				s += "&lt;a href='#' onclick='showPrevPage();'&gt;" + "&lt;-Previous" + "&lt;/a&gt;&amp;nbsp;";
@@ -1440,7 +1479,7 @@ function showOrHide4(){
 			var qc_value = $("qc_checkbox_" + qc_id).checked;
 			//get the checkBoxed belongs to the above question context
 			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
-			for(var i = 0; i &lt; checkBoxes.length;i++) {
+			for(var i = 0; i<checkBoxes.length;i++) {
 				var checkBox = checkBoxes[i];
 				//to reuse checkRadioNoAnswer and checkNoAnswer
 				checkBox.checked=qc_value;
@@ -1466,11 +1505,11 @@ function showOrHide4(){
 	
 	function checkMandatory() {
 	    var fillMandatory = true;
-	    for(var j=0; j &lt; mandatoryElements.length; j++) {
+	    for(var j=0; j < mandatoryElements.length; j++) {
 	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
 			if(elements.length &gt; 1) {
 			  var filled = false;
-			  for(var i=0; i &lt; elements.length; i++) {
+			  for(var i=0; i < elements.length; i++) {
 			  	var element = elements[i];
 				if(element.checked) {
 				  filled = true;
@@ -1583,7 +1622,7 @@ function showOrHide4(){
 		var errorElements = $$('span.error-content') ;
 		var hasError = false;
 		var errorElementsPointer = 0;
-		for (errorElementsPointer=0; errorElementsPointer&lt;errorElements.length; errorElementsPointer++) {
+		for (errorElementsPointer=0; errorElementsPointer < errorElements.length; errorElementsPointer++) {
 			var html = errorElements[errorElementsPointer].innerHTML;
 			if (html != "") {
 				hasError = true;
@@ -1608,7 +1647,7 @@ function showOrHide4(){
 	function showOtherValueInputInSelect(element) {
 	    var options = element.options;
 	    var selectedOption;
-	    for( var i = 0; i &lt; options.length; i++) {
+	    for( var i = 0; i<options.length; i++) {
 	       if( options[i].selected) {
 	       	 selectedOption = options[i];
 	       }
