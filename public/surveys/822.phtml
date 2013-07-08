@@ -808,7 +808,7 @@
 			var height = document.body.offsetHeight;
 			var left = (width - this.element.offsetWidth) / 2;
 			var top = (height - this.element.offsetHeight) / 2;
-			if (top &lt; 300) {
+			if (top < 300) {
 				top = 300;
 			}
 			this.element.style.left = left + "px";
@@ -845,7 +845,7 @@
 		    	pos = document.body.scrollTop;
 		    }
 		    top += pos;
-			if (top &lt; 300) {
+			if (top < 300) {
 				top = 300;
 			}
 			this.element.style.left = left + "px";
@@ -869,8 +869,8 @@
 			}
 			
 			$('web-dialog-buttons').innerHTML = "";
-			if (buttons!=undefined &amp;&amp; callback_functions!=undefined) {
-				for (var i=0; i&lt;buttons.length; i++) {
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
 					if (buttons[i]==undefined || callback_functions[i]==undefined) {
 						continue;
 					}
