@@ -624,8 +624,8 @@
 <tbody><tr>
 <td>
 	<input type="hidden" id="answers[15069].id" value="" name="answers[15069].id">
-<?php if(null != $this->user->name) {?>
-<input type="text" class="input-text" group="15069" id="question_15069" value=<?php echo $this->user->name; ?> name="answers[15069].value">
+<?php if(null != $this->user->recipients_name) {?>
+<input type="text" class="input-text" group="15069" id="question_15069" value=<?php echo $this->user->recipients_name; ?> name="answers[15069].value">
 <?php } else {?>
 <input type="text" class="input-text" group="15069" id="question_15069" value="" name="answers[15069].value">
 <?php } ?>
