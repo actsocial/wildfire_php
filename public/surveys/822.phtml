@@ -77,7 +77,7 @@
 
 	<div style="margin-top:10px;"></div>
 
-<form onsubmit="loading();return (checkMandatory()&&checkAnswerSet()&&checkCommentAnswers());" action="http://q.xingxinghuo.cn/fillout" method="post" id="fillout">
+<form onsubmit="return (checkMandatory()&&checkAnswerSet()&&checkCommentAnswers());" action="http://q.xingxinghuo.cn/fillout" method="post" id="fillout">
 <div style="display:none" id="mainzone-top-wrapper">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -203,7 +203,7 @@
 <tbody><tr>
 <td>
 <input type="hidden" id="answers[15062].id" value="" name="answers[15062].id">
-<textarea class="input-text" rows="12" group="15062" cols="40" id="question_15062" name="answers[15062].value"></textarea>
+<input class="input-text" rows="12" group="15062" cols="40" id="question_15062" name="answers[15062].value"></input>
 <span id="err_answers[15062].value" class="error-content"></span>
 </td>
 
@@ -267,7 +267,7 @@
 <tbody><tr>
 <td>
 <input type="hidden" id="answers[15064].id" value="" name="answers[15064].id">
-<textarea class="input-text" rows="12" group="15064" cols="40" id="question_15064" name="answers[15064].value"></textarea>
+<input class="input-text" rows="12" group="15064" cols="40" id="question_15064" name="answers[15064].value"></input>
 <span id="err_answers[15064].value" class="error-content"></span>
 </td>
 
@@ -839,7 +839,7 @@
 			var pos = 0;
 			if (window.innerHeight) {
 		    	pos = window.pageYOffset
-		    } else if (document.documentElement &amp;&amp; document.documentElement.scrollTop) {
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
 		    	pos = document.documentElement.scrollTop
 		    } else if (document.body) {
 		    	pos = document.body.scrollTop;
@@ -858,9 +858,9 @@
 			if (msg != undefined) {
 				$('web-dialog-message-text').innerHTML = msg;
 			}
-			if (icon_type != undefined &amp;&amp; msg_align != undefined) {
+			if (icon_type != undefined && msg_align != undefined) {
 				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
-			} else if (icon_type == undefined &amp;&amp; msg_align == undefined) {
+			} else if (icon_type == undefined && msg_align == undefined) {
 				$('web-dialog-message-text').className = "icon-none left";
 			} else if (icon_type == undefined) {
 				$('web-dialog-message-text').className = msg_align;
@@ -869,8 +869,8 @@
 			}
 			
 			$('web-dialog-buttons').innerHTML = "";
-			if (buttons!=undefined &amp;&amp; callback_functions!=undefined) {
-				for (var i=0; i&lt;buttons.length; i++) {
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
 					if (buttons[i]==undefined || callback_functions[i]==undefined) {
 						continue;
 					}
@@ -1055,9 +1055,14 @@
 	
 	function checkMandatory() {
 	    var fillMandatory = true;
+	    alert(1);
+	    alert(mandatoryElements.length+"-------");
 	    for(var j=0; j < mandatoryElements.length; j++) {
+	    	alert(mandatoryElements[j]);
 	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+	    	alert(elements);
 			if(elements.length < 1) {
+				alert(3);
 			  var filled = false;
 			  for(var i=0; i < elements.length; i++) {
 			  	var element = elements[i];
@@ -1071,6 +1076,7 @@
 			  	break;
 			  }
 			} else {
+				alert(4);
 			  var element = elements[0];
 			  if(element.hasClassName("selection")) {
 			  	if(element.value.strip() == '') {
@@ -1085,6 +1091,7 @@
 			  }
 			}
 	    }
+	    alert(100);
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目不能为空';
 			var buttons = ["OK"];
