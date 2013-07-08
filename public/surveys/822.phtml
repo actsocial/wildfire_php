@@ -1055,14 +1055,14 @@
 	
 	function checkMandatory() {
 	    var fillMandatory = true;
-	    alert(1);
-	    alert(mandatoryElements.length+"-------");
+	    
+	    
 	    for(var j=0; j < mandatoryElements.length; j++) {
-	    	alert(mandatoryElements[j]);
+	    	
 	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
-	    	alert(elements);
+	    	
 			if(elements.length < 1) {
-				alert(3);
+				
 			  var filled = false;
 			  for(var i=0; i < elements.length; i++) {
 			  	var element = elements[i];
@@ -1076,7 +1076,7 @@
 			  	break;
 			  }
 			} else {
-				alert(4);
+				
 			  var element = elements[0];
 			  if(element.hasClassName("selection")) {
 			  	if(element.value.strip() == '') {
@@ -1091,7 +1091,7 @@
 			  }
 			}
 	    }
-	    alert(100);
+	    
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目不能为空';
 			var buttons = ["OK"];
