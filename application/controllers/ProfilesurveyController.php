@@ -106,6 +106,7 @@ class ProfilesurveyController extends MyController
         }
 		
 		$this->view->includeCrystalCss = true;
+		$this->view->user = $this->_currentUser;
 		
 //		Zend_Debug::dump($consumer->email);
 //		Zend_Debug::dump($result);
