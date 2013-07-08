@@ -772,10 +772,10 @@
 <input type="button" value="Next Page" onclick="showNextPage();" class="button" id="nextPageButton" style="display: none;">
 <input type="submit" value="提交" name="command.submit" class="button" style="" id="submit">
 </div>
-<table border="0" cellspacing="0" cellpadding="0" style="display:none; margin:15px 20px;" id="web-dialog" class="web-dialog">
+<table cellspacing="0" cellpadding="0" border="0" style="display:none; margin:15px 20px;" id="web-dialog" class="web-dialog">
 	<tbody><tr>
 		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"></td>
-		<td background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"></td>
 		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"></td>
 	</tr>
 	<tr>
@@ -791,7 +791,7 @@
 	</tr>
 	<tr>
 		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"></td>
-		<td background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"></td>
+		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"></td>
 		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"></td>
 	</tr>
 </tbody></table>
@@ -808,7 +808,7 @@
 			var height = document.body.offsetHeight;
 			var left = (width - this.element.offsetWidth) / 2;
 			var top = (height - this.element.offsetHeight) / 2;
-			if (top < 300) {
+			if (top &lt; 300) {
 				top = 300;
 			}
 			this.element.style.left = left + "px";
@@ -845,7 +845,7 @@
 		    	pos = document.body.scrollTop;
 		    }
 		    top += pos;
-			if (top < 300) {
+			if (top &lt; 300) {
 				top = 300;
 			}
 			this.element.style.left = left + "px";
@@ -869,8 +869,8 @@
 			}
 			
 			$('web-dialog-buttons').innerHTML = "";
-			if (buttons!=undefined && callback_functions!=undefined) {
-				for (var i=0; i<buttons.length; i++) {
+			if (buttons!=undefined &amp;&amp; callback_functions!=undefined) {
+				for (var i=0; i&lt;buttons.length; i++) {
 					if (buttons[i]==undefined || callback_functions[i]==undefined) {
 						continue;
 					}
@@ -890,14 +890,13 @@
 
 </script>
 </form>
-
 </div> 
 <div class="clear"></div>
 <br>
 </div>
 
 <script type="text/javascript" language="JavaScript">
-
+[
   var pageNum=0;
  
   var noPage0 = false;
@@ -905,14 +904,14 @@
   
 
   function showPage(_pageIndex) {
-    if (_pageIndex <0 || _pageIndex < pageNum) return ;
+    if (_pageIndex &lt;0 || _pageIndex &gt; pageNum) return ;
     if (_pageIndex == pageNum) {
     	Element.hide("nextPageButton");
     } else {
     	Element.show("nextPageButton");
     }
     
-    if (_pageIndex <1 && noPage0) return ;
+    if (_pageIndex &lt;1 &amp;&amp; noPage0) return ;
   	var _pageElement = $("page_"+_pageIndex);
   	var _currElement = $("page_"+currentPage);
   	
@@ -933,7 +932,7 @@
 	
 	if(_pageIndex == pageNum) {
 		Element.show($('submit'));
-	} else if ( _pageIndex <pageNum) {
+	} else if ( _pageIndex &lt; pageNum) {
 		Element.hide($('submit'));
 	}
   }
@@ -949,7 +948,7 @@
   function initPages() {
   	var i;
 
-  	for (i=0; i<=pageNum; i++) {
+  	for (i=0; i&lt;=pageNum; i++) {
   		Element.hide($("page_"+i));
   	}
   	
@@ -958,7 +957,7 @@
   	if (pageNum==0) {
   		_pageBar.innerHTML = "";
   	} else {
-	  	for (i=0; i<=pageNum; i++) {
+	  	for (i=0; i&lt;=pageNum; i++) {
 			var s ="";
 			if( i == 0 ) {
 				s += "&lt;a href='#' onclick='showPrevPage();'&gt;" + "&lt;-Previous" + "&lt;/a&gt;&amp;nbsp;";
@@ -1029,7 +1028,7 @@
 			var qc_value = $("qc_checkbox_" + qc_id).checked;
 			//get the checkBoxed belongs to the above question context
 			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
-			for(var i = 0; i<checkBoxes.length;i++) {
+			for(var i = 0; i &lt; checkBoxes.length;i++) {
 				var checkBox = checkBoxes[i];
 				//to reuse checkRadioNoAnswer and checkNoAnswer
 				checkBox.checked=qc_value;
@@ -1055,11 +1054,11 @@
 	
 	function checkMandatory() {
 	    var fillMandatory = true;
-	    for(var j=0; j < mandatoryElements.length; j++) {
+	    for(var j=0; j &lt; mandatoryElements.length; j++) {
 	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
-			if(elements.length < 1) {
+			if(elements.length &gt; 1) {
 			  var filled = false;
-			  for(var i=0; i < elements.length; i++) {
+			  for(var i=0; i &lt; elements.length; i++) {
 			  	var element = elements[i];
 				if(element.checked) {
 				  filled = true;
@@ -1086,7 +1085,7 @@
 			}
 	    }
 	    if(!fillMandatory) {
-	    	var html = '提交失败：必填的题目不能为空';
+	    	var html = 'Mandatory questions must be filled out';
 			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
@@ -1172,7 +1171,7 @@
 		var errorElements = $$('span.error-content') ;
 		var hasError = false;
 		var errorElementsPointer = 0;
-		for (errorElementsPointer=0; errorElementsPointer < errorElements.length; errorElementsPointer++) {
+		for (errorElementsPointer=0; errorElementsPointer&lt;errorElements.length; errorElementsPointer++) {
 			var html = errorElements[errorElementsPointer].innerHTML;
 			if (html != "") {
 				hasError = true;
@@ -1183,7 +1182,7 @@
 			var errorParentElement = errorElements[errorElementsPointer].up('div');
 			while (errorParentElement != undefined) {
 			var elementId = errorParentElement.id;
-			if (elementId != undefined && elementId.indexOf('page') != -1) {
+			if (elementId != undefined &amp;&amp; elementId.indexOf('page') != -1) {
 				var errorPageNum = parseInt(elementId.substring(elementId.indexOf('_')+1));
 				showPage(errorPageNum);
 				break;
@@ -1197,7 +1196,7 @@
 	function showOtherValueInputInSelect(element) {
 	    var options = element.options;
 	    var selectedOption;
-	    for( var i = 0; i<options.length; i++) {
+	    for( var i = 0; i &lt; options.length; i++) {
 	       if( options[i].selected) {
 	       	 selectedOption = options[i];
 	       }
