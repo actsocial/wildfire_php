@@ -1,4 +1,3 @@
-
 <div class="container">
 	<div class="container-inner">
 
@@ -7,7 +6,7 @@
 	function msieversion() {
 		var ua = window.navigator.userAgent
 		var msie = ua.indexOf ( "MSIE " )
-		if ( msie < 0 )      // If Internet Explorer, return version number
+		if ( msie &gt; 0 )      // If Internet Explorer, return version number
 		   return parseInt (ua.substring (msie+5, ua.indexOf (".", msie )))
 		else                 // If another browser, return 0
 		   return 0
@@ -18,9 +17,9 @@
 		var hasError = false;
 		$$('input.input-text').each(function(element) {
 			var value = element.value;
-			if( value.length < MAX_LENGTH_OF_COMMENT_QUESTION) {
-				// element.next().innerHTML = errorMessage;
-				// hasError = true;
+			if( value.length &gt; MAX_LENGTH_OF_COMMENT_QUESTION) {
+				element.next().innerHTML = errorMessage;
+				hasError = true;
 			}
 		});
 		if( hasError ) {
@@ -35,64 +34,91 @@
 
 </script>
 
-
+<script type="text/javascript">
+		jQuery(document).ready(function(){
+		var d = new Date();
+		var now_time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours()+":"+d.getMinutes()+":"+d.getSeconds();
+		jQuery("input[id^='question_']:last").attr("value", now_time);
+		jQuery("#question_14917").empty();
+		jQuery("#question_14917").append('<option value="0" selected="selected">请选择</option>');
+		jQuery("#question_14916").bind("change",function(){
+			    if(jQuery("#question_14916 option:selected").text()=="请选择"){
+		        jQuery("#question_14917").empty();
+		        jQuery("#question_14917").append('<option value="0" selected="selected">请选择</option>');
+			    }else if(jQuery("#question_14916 option:selected").text()=="罗马鞋"){
+		        jQuery("#question_14917").empty();
+						jQuery("#question_14917").append('<option value="0" selected="selected">请选择</option>');
+						jQuery("#question_14917").append('<option style="" value="12620">浅蓝色</option>');
+						jQuery("#question_14917").append('<option style="" value="12622">棕色</option>');
+			    }else if(jQuery("#question_14916 option:selected").text()=="户外凉鞋"){
+		        jQuery("#question_14917").empty();
+						jQuery("#question_14917").append('<option value="0" selected="selected">请选择</option>');
+						jQuery("#question_14917").append('<option style="" value="12620">浅蓝色</option>');
+						jQuery("#question_14917").append('<option style="" value="12621">黄色</option>');
+			    }else if(jQuery("#question_14916 option:selected").text()=="拖鞋"){
+		        jQuery("#question_14917").empty();
+						jQuery("#question_14917").append('<option value="0" selected="selected">请选择</option>');
+						jQuery("#question_14917").append('<option style="" value="12620">浅蓝色</option>');
+			    }
+				});
+	})
+</script>
 
 <div class="main-container-outer">
 	<div id="container">
-		<!-- <div id="header" class="header">
+		<div style="display: none;" class="header" id="header">
 			<div class="header-left"></div>
 			<div class="header-content"><div class="user-info">
 			</div></div>
 			<div class="header-right"></div><div class="logo">
-			<div class="main-logo" id="main-logo">
-				<a href="http://www.88brands.com/" target="_blank">
-					<img src="/survey/logoImage/813" style="height:70px; width:301px"> 
+			<div id="main-logo" class="main-logo">
+				<a target="_blank" href="http://www.ostrakon.org">
+					<img style="height:70px; width:301px" src="/survey/logoImage/811">
 				</a>
 			</div>
 			<div class="image-banner"></div>
 			</div> 
-		</div>  --><!-- header -->
-			<div id="nav" class="navigation">
-				<div class="nav-left"></div>
-				<div class="nav-right"></div>
-				<ul>
-				</ul>
-			</div>	
-		
+		</div> <!-- header -->
+		<div style="display:none;" class="navigation" id="nav">
+			<div class="nav-left"></div>
+			<div class="nav-right"></div>
+		</div>
  
 
-			<div style="clear:both;"></div>
-			<div class="main-content-outer" id="content">
+		<div style="clear:both;"></div>
+		<div id="content" class="main-content-outer">
  		
 
-<div id="content">
-	<script language="JavaScript" type="text/javascript">
+<div style="width:100%;" id="content">
+<script type="text/javascript" language="JavaScript">
 
-		mandatoryElements = new Array(); 
+	mandatoryElements = new Array(); 
 
-	</script>
+</script>
 <div class="fillout-container">
 <!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
 <div class="mainOneContent">
 
-	<div style="margin-top:10px;"></div>
+<div style="margin-top:10px;"></div>
 
-	<form onsubmit="loading();return (checkMandatory()&&checkAnswerSet()&&checkCommentAnswers());" action="http://q.xingxinghuo.cn/fillout" method="post" id="fillout">
-<div style="display:none" id="mainzone-top-wrapper">
+<form id="fillout" method="post" action="http://www.marketing-research.cn/fillout" onsubmit="loading();return (checkMandatory() &amp;&amp; checkAnswerSet() &amp;&amp; checkCommentAnswers());">
+<div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
   </div>
 </div>
-<div id="mainzone">
+<div id="mainzone" style="margin-top: 220px;">
 <div id="mainzone-inner">
 
+<div class="questionnaire-title" style="display: none;">Quechuabag</div>
 
-<input type="hidden" id="id" value="" name="id">
-<input type="hidden" id="theme" value="wildfire" name="theme">
-<input type="hidden" value="GqO5tYZHgN4S" name="surveyId">
 
-<div class="mandatory"><span style="color: red;">* </span>- It is mandatory</div>
-<div class="page-bar-area">
+<input type="hidden" name="id" value="819" id="id">
+<input type="hidden" name="theme" value="quechuabagsurvey" id="theme">
+<input type="hidden" name="surveyId" value="819">
+
+<div class="mandatory" style="display: none;"><span style="color: red;">* </span>- 必填</div>
+<div class="page-bar-area" style="display: none;">
 <span id="pageBar"></span>
 <div class="clear"></div>
 </div>
@@ -101,12 +127,14 @@
 
 	
 	<div id="page_0" style="">
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15061");
-
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_3340">
+		  <div style="font-size:12px;width:95%;margin-left: 30px;"><br>#寻找趣岳品牌大使#活动第三波开始啦！迪卡侬旗下“Quechua趣岳”（<a href="http://e.weibo.com/quechuachina">@Quechua趣岳中国</a>）每月通过不同的主题问卷甄选出10位品牌大使，享有免费体验Quechua趣岳明星产品，及与朋友分享Quechua趣岳专属礼物的特权。<br>2013年7月16日24点前，填写本问卷，即有机会成为品牌大使，并获得本月明星产品——价值129元的Daypack休闲背包，让你休闲徒步随心欲动在城市和山野间。<br>请正确填写Email等联系信息。本活动最终解释权归活动主办方 - Quechua趣岳所有。<br><br></div><div id="q_3340" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -124,9 +152,9 @@
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[15061].value" class="error-content"></span>
+<span class="error-content" id="err_answers[15061].value" style="display:block"></span>
 
-<input type="hidden" id="answers[15061].id" value="" name="answers[15061].id">
+<input type="hidden" name="answers[15061].id" value="" id="answers[15061].id">
 
 
 
@@ -135,57 +163,63 @@
 </span>
 <ul>
 	<li>
-			<input type="checkbox" onclick=" " value="12556" name="answers[15061].value" id="15061_0" class="question_radio_15061 selection" group="15061">		<label for="15061_0">Columbia 哥伦比亚</label>
+			<input group="15061" class="question_radio_15061 selection" type="checkbox" id="15061_0" name="answers[15061].value" value="12556" onclick=" ">		<label for="15061_0">Columbia 哥伦比亚</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12557" name="answers[15061].value" id="15061_1" class="question_radio_15061 selection" group="15061">		<label for="15061_1">The North Face 乐斯菲斯</label>
+			<input group="15061" class="question_radio_15061 selection" type="checkbox" id="15061_1" name="answers[15061].value" value="12557" onclick=" ">		<label for="15061_1">The North Face 乐斯菲斯</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12558" name="answers[15061].value" id="15061_2" class="question_radio_15061 selection" group="15061">		<label for="15061_2">Quechua 趣岳</label>
+			<input group="15061" class="question_radio_15061 selection" type="checkbox" id="15061_2" name="answers[15061].value" value="12558" onclick=" ">		<label for="15061_2">Quechua 趣岳</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12559" name="answers[15061].value" id="15061_3" class="question_radio_15061 selection" group="15061">		<label for="15061_3">Kailas 凯乐石</label>
+			<input group="15061" class="question_radio_15061 selection" type="checkbox" id="15061_3" name="answers[15061].value" value="12559" onclick=" ">		<label for="15061_3">Kailas 凯乐石</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12560" name="answers[15061].value" id="15061_4" class="question_radio_15061 selection" group="15061">		<label for="15061_4">Toread 探路者</label>
+			<input group="15061" class="question_radio_15061 selection" type="checkbox" id="15061_4" name="answers[15061].value" value="12560" onclick=" ">		<label for="15061_4">Toread 探路者</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12561" name="answers[15061].value" id="15061_5" class="question_radio_15061 selection" group="15061">		<label for="15061_5">Jack Wolfskin 狼爪</label>
+			<input group="15061" class="question_radio_15061 selection" type="checkbox" id="15061_5" name="answers[15061].value" value="12561" onclick=" ">		<label for="15061_5">Jack Wolfskin 狼爪</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12562" name="answers[15061].value" id="15061_6" class="question_radio_15061 selection" group="15061">		<label for="15061_6">LOWA 洛瓦</label>
+			<input group="15061" class="question_radio_15061 selection" type="checkbox" id="15061_6" name="answers[15061].value" value="12562" onclick=" ">		<label for="15061_6">LOWA 洛瓦</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12563" name="answers[15061].value" id="15061_7" class="question_radio_15061 selection" group="15061">		<label for="15061_7">ARCTERYX 始祖鸟</label>
+			<input group="15061" class="question_radio_15061 selection" type="checkbox" id="15061_7" name="answers[15061].value" value="12563" onclick=" ">		<label for="15061_7">ARCTERYX 始祖鸟</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12564" name="answers[15061].value" id="15061_8" class="question_radio_15061 selection" group="15061">		<label for="15061_8">Black Yak 布来亚克</label>
+			<input group="15061" class="question_radio_15061 selection" type="checkbox" id="15061_8" name="answers[15061].value" value="12564" onclick=" ">		<label for="15061_8">Black Yak 布来亚克</label>
 	</li>
 	<li>
-			<input type="checkbox" onclick=" " value="12565" name="answers[15061].value" id="15061_9" class="question_radio_15061 selection" group="15061">		<label for="15061_9">GORE-TEX 戈尔特斯</label>
+			<input group="15061" class="question_radio_15061 selection" type="checkbox" id="15061_9" name="answers[15061].value" value="12565" onclick=" ">		<label for="15061_9">GORE-TEX 戈尔特斯</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15062");
-
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3421">
+		  <div id="q_3421" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -202,9 +236,9 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[15062].id" value="" name="answers[15062].id">
-<textarea class="input-text" rows="12" group="15062" cols="40" id="question_15062" name="answers[15062].value"></textarea>
-<span id="err_answers[15062].value" class="error-content"></span>
+<input type="hidden" name="answers[15062].id" value="" id="answers[15062].id">
+<textarea name="answers[15062].value" id="question_15062" cols="40" group="15062" rows="12" class="input-text"></textarea>
+<span class="error-content" id="err_answers[15062].value"></span>
 </td>
 
   </tr>
@@ -213,10 +247,13 @@
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_3363">
+		  <div id="q_3363" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -232,10 +269,10 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[15066].id" value="" name="answers[15066].id">
-<input type="text" class="input-text" group="15066" id="question_15066" value="" name="answers[15066].value">
+<input type="hidden" name="answers[15066].id" value="" id="answers[15066].id">
+<input type="text" name="answers[15066].value" value="" id="question_15066" group="15066" class="input-text">
 
-<span id="err_answers[15066].value" class="error-content"></span>
+<span class="error-content" id="err_answers[15066].value"></span>
 </td>
 
   </tr>
@@ -244,20 +281,21 @@
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15064");
-
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3428">
+		  <div id="q_3428" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
 				<td width="50%" valign="top">
 					<div class="question-title">
-			请点击<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w17-8193795924.117.ChfrIh&id=18898851810" target="_blank" >此链接</a>查看Quechua的Daypack休闲背包，你觉得它最大的优点是什么呢？
-							<span style="color:red">*</span>
-					</div>
+						请点击<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w17-8193795924.117.ChfrIh&amp;id=18898851810" target="_blank">此链接</a>查看Quechua的Daypack休闲背包，你觉得它最大的优点是什么呢？
+							<span style="color:red">*</span></div>
 							<div class="elementInfoText twoColumnLayout">
 							   
 							</div>
@@ -266,9 +304,9 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[15064].id" value="" name="answers[15064].id">
-<textarea class="input-text" rows="12" group="15064" cols="40" id="question_15064" name="answers[15064].value"></textarea>
-<span id="err_answers[15064].value" class="error-content"></span>
+<input type="hidden" name="answers[15064].id" value="" id="answers[15064].id">
+<textarea name="answers[15064].value" id="question_15064" cols="40" group="15064" rows="12" class="input-text"></textarea>
+<span class="error-content" id="err_answers[15064].value"></span>
 </td>
 
   </tr>
@@ -277,12 +315,14 @@
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15065");
-
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_3429">
+		  <div id="q_3429" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -296,46 +336,46 @@
 							</div>
 				</td>
 				<td width="50%" valign="top">
-<span id="err_answers[15065].value" class="error-content"></span>
-<input type="hidden" id="answers[15065].id" value="" name="answers[15065].id">
+<span class="error-content" id="err_answers[15065].value"></span>
+<input type="hidden" name="answers[15065].id" value="" id="answers[15065].id">
 <table>
 <tbody><tr>
 
 <td>
 
-<div class="left-label">肯定不会</div>
-	<table class="rating-table" style="width:220px !important;">
+<div class="left-label" style="float: left;">肯定不会</div>
+	<table class="rating-table" style="float: left;">
 		<tbody><tr class="radio-line">
 
-					<td class="leftRadio" style="background-color: #ffffff;">
-<input type="radio" style="background-color: #ffffff" class="question_radio_15065 rating" group="15065" id="15065_1" value="1" name="answers[15065].value">
+					<td style="background-color: #ffffff;" class="leftRadio">
+<input type="radio" name="answers[15065].value" value="1" id="15065_1" group="15065" class="question_radio_15065 rating" style="background-color: #ffffff">
 					</td>
 					<td style="background-color: #ffffff;">
-<input type="radio" style="background-color: #ffffff" class="question_radio_15065 rating" group="15065" id="15065_2" value="2" name="answers[15065].value">
+<input type="radio" name="answers[15065].value" value="2" id="15065_2" group="15065" class="question_radio_15065 rating" style="background-color: #ffffff">
 					</td>
 					<td style="background-color: #ffffff;">
-<input type="radio" style="background-color: #ffffff" class="question_radio_15065 rating" group="15065" id="15065_3" value="3" name="answers[15065].value">
+<input type="radio" name="answers[15065].value" value="3" id="15065_3" group="15065" class="question_radio_15065 rating" style="background-color: #ffffff">
 					</td>
 					<td style="background-color: #ffffff;">
-<input type="radio" style="background-color: #ffffff" class="question_radio_15065 rating" group="15065" id="15065_4" value="4" name="answers[15065].value">
+<input type="radio" name="answers[15065].value" value="4" id="15065_4" group="15065" class="question_radio_15065 rating" style="background-color: #ffffff">
 					</td>
 					<td style="background-color: #ffffff;">
-<input type="radio" style="background-color: #ffffff" class="question_radio_15065 rating" group="15065" id="15065_5" value="5" name="answers[15065].value">
+<input type="radio" name="answers[15065].value" value="5" id="15065_5" group="15065" class="question_radio_15065 rating" style="background-color: #ffffff">
 					</td>
 					<td style="background-color: #ffffff;">
-<input type="radio" style="background-color: #ffffff" class="question_radio_15065 rating" group="15065" id="15065_6" value="6" name="answers[15065].value">
+<input type="radio" name="answers[15065].value" value="6" id="15065_6" group="15065" class="question_radio_15065 rating" style="background-color: #ffffff">
 					</td>
 					<td style="background-color: #ffffff;">
-<input type="radio" style="background-color: #ffffff" class="question_radio_15065 rating" group="15065" id="15065_7" value="7" name="answers[15065].value">
+<input type="radio" name="answers[15065].value" value="7" id="15065_7" group="15065" class="question_radio_15065 rating" style="background-color: #ffffff">
 					</td>
 					<td style="background-color: #ffffff;">
-<input type="radio" style="background-color: #ffffff" class="question_radio_15065 rating" group="15065" id="15065_8" value="8" name="answers[15065].value">
+<input type="radio" name="answers[15065].value" value="8" id="15065_8" group="15065" class="question_radio_15065 rating" style="background-color: #ffffff">
 					</td>
 					<td style="background-color: #ffffff;">
-<input type="radio" style="background-color: #ffffff" class="question_radio_15065 rating" group="15065" id="15065_9" value="9" name="answers[15065].value">
+<input type="radio" name="answers[15065].value" value="9" id="15065_9" group="15065" class="question_radio_15065 rating" style="background-color: #ffffff">
 					</td>
-					<td class="rightRadio" style="background-color: #ffffff;">
-<input type="radio" style="background-color: #ffffff" class="question_radio_15065 rating" group="15065" id="15065_10" value="10" name="answers[15065].value">
+					<td style="background-color: #ffffff;" class="rightRadio">
+<input type="radio" name="answers[15065].value" value="10" id="15065_10" group="15065" class="question_radio_15065 rating" style="background-color: #ffffff">
 					</td>
 		</tr>
 		<tr class="number">
@@ -350,10 +390,10 @@
 				<td>9</td>
 				<td>10</td>
 		</tr>
-	</tbody></table> <div class="right-label">肯定会</div>
+	</tbody></table> <div class="right-label" style="float: left;">肯定会</div>
 
 </td>
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 </tbody></table>
@@ -362,12 +402,14 @@
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15063");
-
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3427">
+		  <div id="q_3427" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -385,38 +427,44 @@
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[15063].value" class="error-content"></span>
+<span class="error-content" id="err_answers[15063].value" style="display:block"></span>
 
-<input type="hidden" id="answers[15063].id" value="" name="answers[15063].id">
+<input type="hidden" name="answers[15063].id" value="" id="answers[15063].id">
 
-	<select size="1" title="title" name="answers[15063].value" id="question_15063" class="selection" group="15063">
-	<option value="0" selected="selected">请选择</option>
-<option style="" value="12776">一年三次以上</option>
-<option style="" value="12777">一年两到三次</option>
-<option style="" value="12778">一年一次</option>
-<option style="" value="12779">不到一年一次</option>
+	<select group="15063" class="selection" id="question_15063" name="answers[15063].value" title="title" size="1">
+	<option selected="selected" value="0">请选择</option>
+<option value="12776" style="">一年三次以上</option>
+<option value="12777" style="">一年两到三次</option>
+<option value="12778" style="">一年一次</option>
+<option value="12779" style="">不到一年一次</option>
 	</select> 
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15067");
-
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_3406">
+		  <div id="q_3406" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -434,39 +482,45 @@
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[15067].value" class="error-content"></span>
+<span class="error-content" id="err_answers[15067].value" style="display:block"></span>
 
-<input type="hidden" id="answers[15067].id" value="" name="answers[15067].id">
+<input type="hidden" name="answers[15067].id" value="" id="answers[15067].id">
 
-	<select size="1" title="title" name="answers[15067].value" id="question_15067" class="selection" group="15067">
-	<option value="0" selected="selected">请选择</option>
-<option style="" value="12722">18岁以下</option>
-<option style="" value="12723">18~25岁</option>
-<option style="" value="12724">26~35岁</option>
-<option style="" value="12725">36~45岁</option>
-<option style="" value="12726">45岁以上</option>
+	<select group="15067" class="selection" id="question_15067" name="answers[15067].value" title="title" size="1">
+	<option selected="selected" value="0">请选择</option>
+<option value="12722" style="">18岁以下</option>
+<option value="12723" style="">18~25岁</option>
+<option value="12724" style="">26~35岁</option>
+<option value="12725" style="">36~45岁</option>
+<option value="12726" style="">45岁以上</option>
 	</select> 
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15068");
-
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3430">
+		  <div id="q_3430" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -484,129 +538,135 @@
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[15068].value" class="error-content"></span>
+<span class="error-content" id="err_answers[15068].value" style="display:block"></span>
 
-<input type="hidden" id="answers[15068].id" value="" name="answers[15068].id">
+<input type="hidden" name="answers[15068].id" value="" id="answers[15068].id">
 
-	<select size="1" title="title" name="answers[15068].value" id="question_15068" class="selection" group="15068">
-	<option value="0" selected="selected">请选择</option>
-<option style="" value="12780">北京市</option>
-<option style="" value="12781">上海市</option>
-<option style="" value="12782">广州市</option>
-<option style="" value="12783">成都市</option>
-<option style="" value="12784">保定市</option>
-<option style="" value="12785">鞍山市</option>
-<option style="" value="12786">沧州市</option>
-<option style="" value="12787">长春市</option>
-<option style="" value="12788">长沙市</option>
-<option style="" value="12789">常州市</option>
-<option style="" value="12790">郴州市</option>
-<option style="" value="12791">宝鸡市</option>
-<option style="" value="12792">大理市</option>
-<option style="" value="12793">大连市</option>
-<option style="" value="12794">大庆市</option>
-<option style="" value="12795">大同市</option>
-<option style="" value="12796">东莞市</option>
-<option style="" value="12797">佛山市</option>
-<option style="" value="12798">福州市</option>
-<option style="" value="12799">抚顺市</option>
-<option style="" value="12800">包头市</option>
-<option style="" value="12801">贵阳市</option>
-<option style="" value="12802">桂林市</option>
-<option style="" value="12803">哈尔滨市</option>
-<option style="" value="12804">海口市</option>
-<option style="" value="12805">杭州市</option>
-<option style="" value="12806">合肥市</option>
-<option style="" value="12807">衡阳市</option>
-<option style="" value="12808">呼和浩特市</option>
-<option style="" value="12809">惠州市</option>
-<option style="" value="12810">吉林市</option>
-<option style="" value="12811">济南市</option>
-<option style="" value="12812">嘉兴市</option>
-<option style="" value="12813">江门市</option>
-<option style="" value="12814">九江市</option>
-<option style="" value="12815">开封市</option>
-<option style="" value="12816">昆明市</option>
-<option style="" value="12817">兰州市</option>
-<option style="" value="12818">廊坊市</option>
-<option style="" value="12819">连云港市</option>
-<option style="" value="12820">洛阳市</option>
-<option style="" value="12821">马安山市</option>
-<option style="" value="12822">牡丹江市</option>
-<option style="" value="12823">南昌市</option>
-<option style="" value="12824">南京市</option>
-<option style="" value="12825">南宁市</option>
-<option style="" value="12826">南通市</option>
-<option style="" value="12827">宁波市</option>
-<option style="" value="12828">攀枝花市</option>
-<option style="" value="12829">平顶山市</option>
-<option style="" value="12830">齐齐哈尔</option>
-<option style="" value="12831">秦皇岛市</option>
-<option style="" value="12832">青岛市</option>
-<option style="" value="12833">泉州市</option>
-<option style="" value="12834">汕头市</option>
-<option style="" value="12835">蚌埠市</option>
-<option style="" value="12836">绍兴市</option>
-<option style="" value="12837">深圳市</option>
-<option style="" value="12838">沈阳市</option>
-<option style="" value="12839">石家庄市</option>
-<option style="" value="12840">苏州市</option>
-<option style="" value="12841">太原市</option>
-<option style="" value="12842">泰州市</option>
-<option style="" value="12843">唐山市</option>
-<option style="" value="12844">天津市</option>
-<option style="" value="12845">威海市</option>
-<option style="" value="12846">潍坊市</option>
-<option style="" value="12847">温州市</option>
-<option style="" value="12848">乌鲁木齐市</option>
-<option style="" value="12849">无锡市</option>
-<option style="" value="12850">芜湖市</option>
-<option style="" value="12851">武汉市</option>
-<option style="" value="12852">西安市</option>
-<option style="" value="12853">西宁市</option>
-<option style="" value="12854">厦门市</option>
-<option style="" value="12855">新乡市</option>
-<option style="" value="12856">徐州市</option>
-<option style="" value="12857">烟台市</option>
-<option style="" value="12858">延安市</option>
-<option style="" value="12859">扬州市</option>
-<option style="" value="12860">宜宾市</option>
-<option style="" value="12861">银川市</option>
-<option style="" value="12862">玉林市</option>
-<option style="" value="12863">玉溪市</option>
-<option style="" value="12864">湛江市</option>
-<option style="" value="12865">漳州市</option>
-<option style="" value="12866">镇江市</option>
-<option style="" value="12867">郑州市</option>
-<option style="" value="12868">中山市</option>
-<option style="" value="12869">重庆市</option>
-<option style="" value="12870">珠海市</option>
-<option style="" value="12871">淄博市</option>
-<option style="" value="12872">自贡市</option>
-<option style="" value="12873">遵义市</option>
-<option style="" value="12874">其他</option>
+	<select group="15068" class="selection" id="question_15068" name="answers[15068].value" title="title" size="1">
+	<option selected="selected" value="0">请选择</option>
+<option value="12780" style="">北京市</option>
+<option value="12781" style="">上海市</option>
+<option value="12782" style="">广州市</option>
+<option value="12783" style="">成都市</option>
+<option value="12784" style="">保定市</option>
+<option value="12785" style="">鞍山市</option>
+<option value="12786" style="">沧州市</option>
+<option value="12787" style="">长春市</option>
+<option value="12788" style="">长沙市</option>
+<option value="12789" style="">常州市</option>
+<option value="12790" style="">郴州市</option>
+<option value="12791" style="">宝鸡市</option>
+<option value="12792" style="">大理市</option>
+<option value="12793" style="">大连市</option>
+<option value="12794" style="">大庆市</option>
+<option value="12795" style="">大同市</option>
+<option value="12796" style="">东莞市</option>
+<option value="12797" style="">佛山市</option>
+<option value="12798" style="">福州市</option>
+<option value="12799" style="">抚顺市</option>
+<option value="12800" style="">包头市</option>
+<option value="12801" style="">贵阳市</option>
+<option value="12802" style="">桂林市</option>
+<option value="12803" style="">哈尔滨市</option>
+<option value="12804" style="">海口市</option>
+<option value="12805" style="">杭州市</option>
+<option value="12806" style="">合肥市</option>
+<option value="12807" style="">衡阳市</option>
+<option value="12808" style="">呼和浩特市</option>
+<option value="12809" style="">惠州市</option>
+<option value="12810" style="">吉林市</option>
+<option value="12811" style="">济南市</option>
+<option value="12812" style="">嘉兴市</option>
+<option value="12813" style="">江门市</option>
+<option value="12814" style="">九江市</option>
+<option value="12815" style="">开封市</option>
+<option value="12816" style="">昆明市</option>
+<option value="12817" style="">兰州市</option>
+<option value="12818" style="">廊坊市</option>
+<option value="12819" style="">连云港市</option>
+<option value="12820" style="">洛阳市</option>
+<option value="12821" style="">马安山市</option>
+<option value="12822" style="">牡丹江市</option>
+<option value="12823" style="">南昌市</option>
+<option value="12824" style="">南京市</option>
+<option value="12825" style="">南宁市</option>
+<option value="12826" style="">南通市</option>
+<option value="12827" style="">宁波市</option>
+<option value="12828" style="">攀枝花市</option>
+<option value="12829" style="">平顶山市</option>
+<option value="12830" style="">齐齐哈尔</option>
+<option value="12831" style="">秦皇岛市</option>
+<option value="12832" style="">青岛市</option>
+<option value="12833" style="">泉州市</option>
+<option value="12834" style="">汕头市</option>
+<option value="12835" style="">蚌埠市</option>
+<option value="12836" style="">绍兴市</option>
+<option value="12837" style="">深圳市</option>
+<option value="12838" style="">沈阳市</option>
+<option value="12839" style="">石家庄市</option>
+<option value="12840" style="">苏州市</option>
+<option value="12841" style="">太原市</option>
+<option value="12842" style="">泰州市</option>
+<option value="12843" style="">唐山市</option>
+<option value="12844" style="">天津市</option>
+<option value="12845" style="">威海市</option>
+<option value="12846" style="">潍坊市</option>
+<option value="12847" style="">温州市</option>
+<option value="12848" style="">乌鲁木齐市</option>
+<option value="12849" style="">无锡市</option>
+<option value="12850" style="">芜湖市</option>
+<option value="12851" style="">武汉市</option>
+<option value="12852" style="">西安市</option>
+<option value="12853" style="">西宁市</option>
+<option value="12854" style="">厦门市</option>
+<option value="12855" style="">新乡市</option>
+<option value="12856" style="">徐州市</option>
+<option value="12857" style="">烟台市</option>
+<option value="12858" style="">延安市</option>
+<option value="12859" style="">扬州市</option>
+<option value="12860" style="">宜宾市</option>
+<option value="12861" style="">银川市</option>
+<option value="12862" style="">玉林市</option>
+<option value="12863" style="">玉溪市</option>
+<option value="12864" style="">湛江市</option>
+<option value="12865" style="">漳州市</option>
+<option value="12866" style="">镇江市</option>
+<option value="12867" style="">郑州市</option>
+<option value="12868" style="">中山市</option>
+<option value="12869" style="">重庆市</option>
+<option value="12870" style="">珠海市</option>
+<option value="12871" style="">淄博市</option>
+<option value="12872" style="">自贡市</option>
+<option value="12873" style="">遵义市</option>
+<option value="12874" style="">其他</option>
 	</select> 
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15069");
-
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_581">
+		  <div id="q_581" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -623,10 +683,10 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[15069].id" value="" name="answers[15069].id">
-<input type="text" class="input-text" group="15069" id="question_15069" value="" name="answers[15069].value">
+<input type="hidden" name="answers[15069].id" value="" id="answers[15069].id">
+<input type="text" name="answers[15069].value" value="" id="question_15069" group="15069" class="input-text">
 
-<span id="err_answers[15069].value" class="error-content"></span>
+<span class="error-content" id="err_answers[15069].value"></span>
 </td>
 
   </tr>
@@ -635,12 +695,14 @@
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15070");
-
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3431">
+		  <div id="q_3431" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -658,39 +720,44 @@
 <table width="100%" class="select-table">
 <tbody><tr>
 <td>
-<span style="display:block" id="err_answers[15070].value" class="error-content"></span>
+<span class="error-content" id="err_answers[15070].value" style="display:block"></span>
 
-<input type="hidden" id="answers[15070].id" value="" name="answers[15070].id">
+<input type="hidden" name="answers[15070].id" value="" id="answers[15070].id">
 <ul>
 	<li>
-			<input type="radio" class="selection question_radio_15070" value="12875" name="answers[15070].value" id="15070_0" group="15070">		<label for="15070_0">男</label>
+			<input group="15070" type="radio" id="15070_0" name="answers[15070].value" value="12875" class="selection question_radio_15070">		<label for="15070_0">男</label>
 	</li>
 	<li>
-			<input type="radio" class="selection question_radio_15070" value="12876" name="answers[15070].value" id="15070_1" group="15070">		<label for="15070_1">女</label>
+			<input group="15070" type="radio" id="15070_1" name="answers[15070].value" value="12876" class="selection question_radio_15070">		<label for="15070_1">女</label>
 	</li>
 </ul>
  </td>
 
-<td valign="top" class="noanswer-td">
+<td valign="top" class="noanswer-td" style="display: none;">
 </td>
 </tr>
 
   </tbody></table>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
+	
+// ]]>
+-->
 </script>
 				</td>
 			</tr>
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15071");
-
+// ]]>
+-->
 </script>
-		  <div class="question-even question-area" style="margin-bottom:0px;" id="q_1710">
+		  <div id="q_1710" style="margin-bottom:0px;" class="question-even question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -707,10 +774,10 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[15071].id" value="" name="answers[15071].id">
-<input type="text" class="input-text" group="15071" id="question_15071" value="" name="answers[15071].value">
+<input type="hidden" name="answers[15071].id" value="" id="answers[15071].id">
+<input type="text" name="answers[15071].value" value="" id="question_15071" group="15071" class="input-text">
 
-<span id="err_answers[15071].value" class="error-content"></span>
+<span class="error-content" id="err_answers[15071].value"></span>
 </td>
 
   </tr>
@@ -719,12 +786,14 @@
 	    </tbody></table>
 	  </div>
 	  <div style="clear:both;"></div>
-<script type="text/javascript" language="JavaScript">
-
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 		 	mandatoryElements.push("15072");
-
+// ]]>
+-->
 </script>
-		  <div class="question-odd question-area" style="margin-bottom:0px;" id="q_3432">
+		  <div id="q_3432" style="margin-bottom:0px;" class="question-odd question-area">
 	  	
 		<table class="question-table">
 			<tbody><tr>
@@ -741,10 +810,10 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<input type="hidden" id="answers[15072].id" value="" name="answers[15072].id">
-<input type="text" class="input-text" group="15072" id="question_15072" value="" name="answers[15072].value">
+<input type="hidden" name="answers[15072].id" value="" id="answers[15072].id">
+<input type="text" name="answers[15072].value" value="" id="question_15072" group="15072" class="input-text">
 
-<span id="err_answers[15072].value" class="error-content"></span>
+<span class="error-content" id="err_answers[15072].value"></span>
 </td>
 
   </tr>
@@ -768,37 +837,38 @@
 	</div>
 </div>
 <br>
-<div class="fillout-submit">
-
-<input type="submit" value="提交" name="command.submit" class="button" style="" id="submit">
+<div style="font-size:12px;width:95%;margin-left:30px;"><br>隐私声明：我们非常重视对您隐私权的保护。邮件及手机号等个人资料为用户重要隐私，我们承诺不会将个人资料用作它途；承诺不会在未获得用户许可的情况下擅自将用户的个人资料信息出租或出售给任何第三方。如果您对本声明或我们的个人信息处理存在任何疑义，请发送邮件至 home@marketing-research.cn 联系我们。<br><br></div><div class="fillout-submit">
+<input id="nextPageButton" type="button" class="button" onclick="showNextPage();" value="下一页" style="display: none;">
+<input id="submit" type="submit" style="" class="button" name="command.submit" value="提交">
 </div>
-<table cellspacing="0" cellpadding="0" border="0" style="display:none; margin:15px 20px;" id="web-dialog" class="web-dialog">
+<table border="0" cellspacing="0" cellpadding="0" class="web-dialog" id="web-dialog" style="display: none; margin: 15px 20px;">
 	<tbody><tr>
-		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_t.gif"></td>
-		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_t.gif"></td>
-		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_t.gif"></td>
+		<td width="9" height="9"><img src="http://www.marketing-research.cn/images/web_dialog_l_t.gif"></td>
+		<td height="9" background="http://www.marketing-research.cn/images/web_dialog_m_t.gif"><img src="http://www.marketing-research.cn/images/web_dialog_m_t.gif"></td>
+		<td width="9" height="9"><img src="http://www.marketing-research.cn/images/web_dialog_r_t.gif"></td>
 	</tr>
 	<tr>
-		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_m.gif"></td>
+		<td width="9" background="http://www.marketing-research.cn/images/web_dialog_l_m.gif"><img src="http://www.marketing-research.cn/images/web_dialog_l_m.gif"></td>
 		<td bgcolor="#ffffff">
 			<div class="web-dialog-message">
-				<p class="" id="web-dialog-message-text"></p>
+				<p id="web-dialog-message-text" class=""></p>
 			</div>
-			<div id="web-dialog-buttons" class="buttons">
+			<div class="buttons" id="web-dialog-buttons">
 			</div>
 		</td>
-		<td width="9" background="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_m.gif"></td>
+		<td width="9" background="http://www.marketing-research.cn/images/web_dialog_r_m.gif"><img src="http://www.marketing-research.cn/images/web_dialog_r_m.gif"></td>
 	</tr>
 	<tr>
-		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_l_b.gif"></td>
-		<td height="9" background="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"><img src="http://q.xingxinghuo.cn/images/web_dialog_m_b.gif"></td>
-		<td width="9" height="9"><img src="http://q.xingxinghuo.cn/images/web_dialog_r_b.gif"></td>
+		<td width="9" height="9"><img src="http://www.marketing-research.cn/images/web_dialog_l_b.gif"></td>
+		<td height="9" background="http://www.marketing-research.cn/images/web_dialog_m_b.gif"><img src="http://www.marketing-research.cn/images/web_dialog_m_b.gif"></td>
+		<td width="9" height="9"><img src="http://www.marketing-research.cn/images/web_dialog_r_b.gif"></td>
 	</tr>
 </tbody></table>
 
-<div style="display:none;" id="mask" class="mask"></div>
-<script type="text/javascript" language="JavaScript">
-
+<div class="mask" id="mask" style="display:none;"></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+// <![CDATA[
 	var WebDialog = {
 		element : $('web-dialog'),
 		onok : function() {},
@@ -808,7 +878,7 @@
 			var height = document.body.offsetHeight;
 			var left = (width - this.element.offsetWidth) / 2;
 			var top = (height - this.element.offsetHeight) / 2;
-			if (top &lt; 300) {
+			if (top < 300) {
 				top = 300;
 			}
 			this.element.style.left = left + "px";
@@ -839,13 +909,13 @@
 			var pos = 0;
 			if (window.innerHeight) {
 		    	pos = window.pageYOffset
-		    } else if (document.documentElement &amp;&amp; document.documentElement.scrollTop) {
+		    } else if (document.documentElement && document.documentElement.scrollTop) {
 		    	pos = document.documentElement.scrollTop
 		    } else if (document.body) {
 		    	pos = document.body.scrollTop;
 		    }
 		    top += pos;
-			if (top &lt; 300) {
+			if (top < 300) {
 				top = 300;
 			}
 			this.element.style.left = left + "px";
@@ -858,9 +928,9 @@
 			if (msg != undefined) {
 				$('web-dialog-message-text').innerHTML = msg;
 			}
-			if (icon_type != undefined &amp;&amp; msg_align != undefined) {
+			if (icon_type != undefined && msg_align != undefined) {
 				$('web-dialog-message-text').className = "icon-"+icon_type+" "+msg_align;
-			} else if (icon_type == undefined &amp;&amp; msg_align == undefined) {
+			} else if (icon_type == undefined && msg_align == undefined) {
 				$('web-dialog-message-text').className = "icon-none left";
 			} else if (icon_type == undefined) {
 				$('web-dialog-message-text').className = msg_align;
@@ -869,8 +939,8 @@
 			}
 			
 			$('web-dialog-buttons').innerHTML = "";
-			if (buttons!=undefined &amp;&amp; callback_functions!=undefined) {
-				for (var i=0; i&lt;buttons.length; i++) {
+			if (buttons!=undefined && callback_functions!=undefined) {
+				for (var i=0; i<buttons.length; i++) {
 					if (buttons[i]==undefined || callback_functions[i]==undefined) {
 						continue;
 					}
@@ -887,9 +957,11 @@
 			//$('mask').show();
 		}
 	}
-
+// ]]>
+-->
 </script>
 </form>
+
 </div> 
 <div class="clear"></div>
 <br>
