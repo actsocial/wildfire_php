@@ -666,7 +666,7 @@
 
 <input type="hidden" id="answers[15070].id" value="" name="answers[15070].id">
 <?php if(null != $this->user->gender) {?>
-	<?php if("1" == $this->user->gender) {?>
+	<?php if("male" == $this->user->gender) {?>
 		<ul>
 			<li>
 					<input type="radio" class="selection question_radio_15070" value="12875" name="answers[15070].value" id="15070_0" group="15070" checked>		<label for="15070_0">男</label>
@@ -675,7 +675,7 @@
 					<input type="radio" class="selection question_radio_15070" value="12876" name="answers[15070].value" id="15070_1" group="15070">		<label for="15070_1">女</label>
 			</li>
 		</ul>
-		<?php }else{ ?>
+		<?php }elseif("female" == $this->user->gender){ ?>
 			<ul>
 			<li>
 					<input type="radio" class="selection question_radio_15070" value="12875" name="answers[15070].value" id="15070_0" group="15070">		<label for="15070_0">男</label>
