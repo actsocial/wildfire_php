@@ -1089,7 +1089,6 @@
 	    
 	    
 	    for(var j=0; j < mandatoryElements.length; j++) {
-	    	
 	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
 	    	
 			if(elements.length < 1) {
@@ -1119,6 +1118,16 @@
 					fillMandatory = false;
 					break;
 				}
+			  } else if (element.hasClassName("rating")){
+            for(var i=0;i<elements.length;i++){
+				  		if(elements[i].checked){
+				  				fillMandatory =  true;
+				  				break;
+				  		}else{
+				  		    fillMandatory =  false;
+				  		    continue;
+				  		}
+			  	}
 			  }
 			}
 	    }
