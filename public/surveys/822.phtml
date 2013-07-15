@@ -203,7 +203,7 @@
 <tbody><tr>
 <td>
 <input type="hidden" id="answers[15062].id" value="" name="answers[15062].id">
-<input class="input-text" rows="12" group="15062" cols="40" id="question_15062" name="answers[15062].value"></input>
+<input class="input-text"  group="15062" cols="40" id="question_15062" name="answers[15062].value"></input>
 <span id="err_answers[15062].value" class="error-content"></span>
 </td>
 
@@ -255,7 +255,7 @@
 			<tbody><tr>
 				<td width="50%" valign="top">
 					<div class="question-title">
-			请点击<a href="http://detail.tmall.com/item.htm?spm=a1z10.3.w17-8193795924.130.1QO5dA&id=18707281147&" target="_blank" style="color:red" >此链接</a>查看Quechua的Daypack休闲背包，你觉得它最大的优点是什么呢？
+			请点击<a href='http://detail.tmall.com/item.htm?spm=a1z10.3.w17-8193795924.130.1QO5dA&id=18707281147&' target="_blank" style="color:red" >此链接</a>查看Quechua的Daypack休闲背包，你觉得它最大的优点是什么呢？
 							<span style="color:red">*</span>
 					</div>
 							<div class="elementInfoText twoColumnLayout">
@@ -985,30 +985,30 @@
   	}
   	
  
-  	var _pageBar = document.getElementById("pageBar");
-  	if (pageNum==0) {
-  		_pageBar.innerHTML = "";
-  	} else {
-	  	for (i=0; i<=pageNum; i++) {
-			var s ="";
-			if( i == 0 ) {
-				s += "&lt;a href='#' onclick='showPrevPage();'&gt;" + "&lt;-Previous" + "&lt;/a&gt;&amp;nbsp;";
-			}
+  	// var _pageBar = document.getElementById("pageBar");
+  	// if (pageNum==0) {
+  	// 	_pageBar.innerHTML = "";
+  	// } else {
+	  // 	for (i=0; i<=pageNum; i++) {
+			// var s ="";
+			// if( i == 0 ) {
+			// 	s += "&lt;a href='#' onclick='showPrevPage();'&gt;" + "&lt;-Previous" + "&lt;/a&gt;&amp;nbsp;";
+			// }
 
-			if (noPage0){
-	  		 if (i!=0){ 
-	  		 	s += "&lt;a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'&gt;" + (i) + "&lt;/a&gt;&amp;nbsp;";
-	  		  }
-	  		}else{
-	  		  s += "&lt;a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'&gt;" + (i+1) + "&lt;/a&gt;&amp;nbsp;";
-	  		}
+			// if (noPage0){
+	  // 		 if (i!=0){ 
+	  // 		 	s += "&lt;a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'&gt;" + (i) + "&lt;/a&gt;&amp;nbsp;";
+	  // 		  }
+	  // 		}else{
+	  // 		  s += "&lt;a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'&gt;" + (i+1) + "&lt;/a&gt;&amp;nbsp;";
+	  // 		}
 	  		
-			if( i == pageNum ) {
-				s+= "&lt;a href='#' onclick='showNextPage();'&gt;" + "Next -&gt;" + "&lt;/a&gt;&amp;nbsp;";
-			}
-	  		_pageBar.innerHTML = _pageBar.innerHTML + s ;
-	  	}		
-  	}
+			// if( i == pageNum ) {
+			// 	s+= "&lt;a href='#' onclick='showNextPage();'&gt;" + "Next -&gt;" + "&lt;/a&gt;&amp;nbsp;";
+			// }
+	  // 		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  // 	}		
+  	// }
   }
   
   initPages();
@@ -1085,7 +1085,7 @@
 	}
 	
 	function checkMandatory() {
-	    var fillMandatory = true;
+	    var fillMandatory = false;
 	    
 	    
 	    for(var j=0; j < mandatoryElements.length; j++) {
@@ -1125,9 +1125,9 @@
 	    
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目不能为空';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+				var buttons = ["OK"];
+				var callbacks = [ function() { WebDialog.close();return false;}]; 
+				WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 	    }
 		return fillMandatory;
 	}
