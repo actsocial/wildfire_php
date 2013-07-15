@@ -1110,7 +1110,7 @@
 				
 			  var element = elements[0];
 			  if(element.hasClassName("selection")) {
-			  	if(element.value.strip() == '') {
+			  	if(element.value.strip() == ''||element.value.strip() == '0') {
 	    			fillMandatory =  false;
 	    			break;                                  
 	    		}
