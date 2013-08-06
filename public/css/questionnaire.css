@@ -145,8 +145,8 @@ form .fillout-content .question-title a {
 	display: block;
 	width: 215px;
 	float: left;
-	margin-bottom: 5px;
-	padding-left: 1px;
+	margin-bottom: 3px;
+	padding-left: 5px;
 	color: #666;
 }
 .fillout-content .fillout-container table td table.select-table select {
