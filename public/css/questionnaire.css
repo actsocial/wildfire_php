@@ -146,7 +146,7 @@ form .fillout-content .question-title a {
 	width: 215px;
 	float: left;
 	margin-bottom: 5px;
-	padding-top: 3px;
+	/*padding-top: 3px;*/
 	padding-left: 1px;
 	color: #666;
 }
