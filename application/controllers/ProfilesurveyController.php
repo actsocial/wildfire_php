@@ -122,7 +122,7 @@ class ProfilesurveyController extends MyController
 		
 		$profileSurveyModel = new ProfileSurvey();
 		$profileSurvey = $profileSurveyModel->fetchRow("i2_survey_id =".$id." or "."i2_survey_id_en =".$id);
-		
+		// $this->view->point = $profileSurvey->points;
 		//check history to prevent multiple participation
 		$db = Zend_Registry::get('db');
 		$select1 = $db->select();
@@ -136,7 +136,7 @@ class ProfilesurveyController extends MyController
 			$indicate2Connect = new Indicate2_Connect();
 			$ids = array($id);
 			$wsResult = $indicate2Connect->getAnswerSetCount($consumer->email,$ids);	
-			
+			Zend_Debug::dump($wsResult."------------".$profileSurvey->points);die;
 			if ($wsResult>0){
 				// add poll participation
 				$currentTime = date("Y-m-d H:i:s");
@@ -148,13 +148,13 @@ class ProfilesurveyController extends MyController
 				$pollParticipation->save();
 				
 				// add points
-		    	$pointRecordModel = new RewardPointTransactionRecord();
-    			$point = $pointRecordModel->createRow();
-    			$point->consumer_id =  $consumer->id;
-    			$point->transaction_id = 3;
-    			$point->date = $currentTime;
-    			$point->point_amount = $profileSurvey->points;
-    			$point->save();
+	    	$pointRecordModel = new RewardPointTransactionRecord();
+  			$point = $pointRecordModel->createRow();
+  			$point->consumer_id =  $consumer->id;
+  			$point->transaction_id = 3;
+  			$point->date = $currentTime;
+  			$point->point_amount = $profileSurvey->points;
+  			$point->save();
 				//2011-05-13 change the rank of consumer 
 				$rankModel = new Rank();
 				$rankModel->changeConsumerRank($consumer->id);
