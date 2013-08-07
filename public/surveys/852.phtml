@@ -732,7 +732,13 @@
 <tbody><tr>
 <td>
 <input type="hidden" name="answers[15433].id" value="" id="answers[15433].id">
-<input type="text" name="answers[15433].value" value="" id="question_15433" group="15433" class="input-text">
+
+
+<?php if(null != $this->user->email) {?>
+<input type="text" class="input-text" group="15433" id="question_15433" value=<?php echo $this->user->email; ?> name="answers[15433].value">
+<?php } else {?>
+<input type="text" class="input-text" group="15433" id="question_15433" value="" name="answers[15433].value">
+<?php }?>
 
 <span class="error-content" id="err_answers[15433].value"></span>
 </td>
@@ -802,7 +808,12 @@
 <tbody><tr>
 <td>
 <input type="hidden" name="answers[15435].id" value="" id="answers[15435].id">
-<input type="text" name="answers[15435].value" value="" id="question_15435" group="15435" class="input-text">
+
+<?php if(null != $this->user->login_phone) {?>
+<input type="text" class="input-text" group="15435" id="question_15435" value=<?php echo $this->user->login_phone; ?> name="answers[15435].value">
+<?php }else {?>
+<input type="text" class="input-text" group="15435" id="question_15435" value="" name="answers[15435].value">
+<?php }?>
 
 <span class="error-content" id="err_answers[15435].value"></span>
 </td>
