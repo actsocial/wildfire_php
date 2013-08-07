@@ -136,8 +136,30 @@ class ProfilesurveyController extends MyController
 			$indicate2Connect = new Indicate2_Connect();
 			$ids = array($id);
 			$wsResult = $indicate2Connect->getAnswerSetCount($consumer->email,$ids);	
-			Zend_Debug::dump($wsResult."------------".$profileSurvey->points);die;
+			// Zend_Debug::dump($wsResult."------------".$profileSurvey->points);die;
 			if ($wsResult>0){
+				// add poll participation
+				$currentTime = date("Y-m-d H:i:s");
+				$pollParticipationModel = new PollParticipation();
+				$pollParticipation = $pollParticipationModel->createRow();
+				$pollParticipation->poll_id = $profileSurvey->id;
+				$pollParticipation->consumer_id = $consumer->id;
+				$pollParticipation->date = $currentTime;
+				$pollParticipation->save();
+				
+				// add points
+	    	$pointRecordModel = new RewardPointTransactionRecord();
+  			$point = $pointRecordModel->createRow();
+  			$point->consumer_id =  $consumer->id;
+  			$point->transaction_id = 3;
+  			$point->date = $currentTime;
+  			$point->point_amount = $profileSurvey->points;
+  			$point->save();
+				//2011-05-13 change the rank of consumer 
+				$rankModel = new Rank();
+				$rankModel->changeConsumerRank($consumer->id);
+    			$this->view->point = $point->point_amount;
+			}else{
 				// add poll participation
 				$currentTime = date("Y-m-d H:i:s");
 				$pollParticipationModel = new PollParticipation();
