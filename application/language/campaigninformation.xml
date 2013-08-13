@@ -737,5 +737,120 @@
         	</tuv>
         </tu>
 
+
+
+
+
+
+
+
+
+ <!-- Kiss悠漫Kiss好时光 -->
+        <tu tuid='Campaign_name_48'>
+			<tuv xml:lang="zh">
+				<seg>Kiss悠漫Kiss好时光</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>Kiss悠漫Kiss好时光</seg>
+			</tuv>
+		</tu>		   
+		<tu tuid='Campaign_simple_description_48'>
+			<tuv xml:lang="zh">
+				<seg></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg></seg>
+			</tuv>
+		</tu>		
+		<tu tuid='Campaign_invitation_description_48'>
+			<tuv xml:lang="zh">
+				<seg>悠漫奶焙糖，好时公司最新出品，传承百年的大师级香浓制糖秘方——“奶焙工艺”，严选100%进口奶源，以精湛技艺长时间悉心熬制，制成真正奶香浓郁，丝滑绵软的悠漫奶焙糖。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>悠漫奶焙糖，好时公司最新出品，传承百年的大师级香浓制糖秘方——“奶焙工艺”，严选100%进口奶源，以精湛技艺长时间悉心熬制，制成真正奶香浓郁，丝滑绵软的悠漫奶焙糖。</seg>
+			</tuv>
+		</tu>	
+		<tu tuid='Campaign_invitation_image_name_2'>
+			<tuv xml:lang="zh">
+				<seg>campaign_invitation_bk_zh_2.png</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>campaign_invitation_bk_en_2.png</seg>
+			</tuv>
+		</tu>	
+		<tu tuid='Campaign_invitation_description2_48'>
+			<tuv xml:lang="zh">
+				<seg><![CDATA[
+					<p>如果你确认参加活动，将会收到</p><br/>
+					<p>悠漫VIP礼盒1份:</p><br>
+						<table style='float:left;width:100%;display:block;'>
+							<tr><td><em>－ 	大包装悠漫奶焙糖1份</em></td></tr>
+							<tr><td><em>－ 	小包装悠漫奶焙糖4份</em></td></tr>
+						</table>
+				]]></seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg><![CDATA[
+					<p>如果你确认参加活动，将会收到</p><br/>
+					<p>悠漫VIP礼盒1份:</p><br>
+						<table style='float:left;width:100%;display:block;'>
+							<tr><td><em>－ 	大包装悠漫奶焙糖1份</em></td></tr>
+							<tr><td><em>－ 	小包装悠漫奶焙糖4份</td></tr>
+						</table>
+				]]></seg>
+			</tuv>
+		</tu>
+		<tu tuid='Pre_campaign_intro_48'>
+			<tuv xml:lang="zh">
+				<seg>请花2分钟时间填写活动前问卷，以帮助我们了解你目前对于悠漫奶焙糖的看法。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>.</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Thanks_For_Post_Campaign_Survey_48'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成Kiss悠漫Kiss好时光的星星火活动。</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>你已经完成Kiss悠漫Kiss好时光的星星火活动。</seg>
+			</tuv>
+		</tu> 
+		<tu tuid='Thanks_For_Post_Campaign_Survey_Content_48'>
+			<tuv xml:lang="zh">
+				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+			</tuv>
+			<tuv xml:lang="en">
+				<seg>感谢参与结束活动问卷，你将获得200星星火积分！</seg>
+			</tuv>
+		</tu>
+		<tu tuid='Campaign_post_survey_notice_48'>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[<p>非常感谢你参加Kiss悠漫Kiss好时光的星星火活动！</p>]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[<p>Thank you for participating in the SERGENT MAJOR Spark Campaign!</p>]]></seg>
+            </tuv>
+        </tu>
+        <tu tuid='pre_campaign_info_48'>
+			<tuv xml:lang="zh">
+				<seg>你已经完成了活动前调查，现在可以访问你的主页面了。请确认你填写了正确的联系地址，我们会尽快给你发出星星火体验礼包。</seg>
+			</tuv>
+		</tu> 
+        <tu tuid="pre_campaign_thankyou_48">
+        	<tuv xml:lang="zh">
+        		<!--<seg>请填写上海地区的办公地址</seg>-->
+        		<seg></seg>
+        	</tuv>
+        </tu>
+	    <tu tuid="pre_campaign_friends_48">
+        	<tuv xml:lang="zh">
+        		<seg></seg>
+        	</tuv>
+        </tu>
+
+
+
+
 	</body>
 </tmx>
