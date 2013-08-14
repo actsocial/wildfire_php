@@ -963,6 +963,132 @@
 					<seg>Too Sticky</seg>
 				</tuv>
 			</tu>
+
+			<!-- 礼盒: -->
+			<tu tuid='Report_Tag_Type_M'>
+				<tuv xml:lang="zh">
+					<seg>礼盒:</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>The Store:</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Beautiful'>
+				<tuv xml:lang="zh">
+					<seg>漂亮</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Beautiful</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Ugly'>
+				<tuv xml:lang="zh">
+					<seg>难看</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Ugly</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Common'>
+				<tuv xml:lang="zh">
+					<seg>普通</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Common</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Originality'>
+				<tuv xml:lang="zh">
+					<seg>创意</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Originality</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Top Grade'>
+				<tuv xml:lang="zh">
+					<seg>高档</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Top Grade</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Practical'>
+				<tuv xml:lang="zh">
+					<seg>实用</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Practical</seg>
+				</tuv>
+			</tu>
+
+			<!-- 悠漫品牌印象: -->
+			<tu tuid='Report_Tag_Type_N'>
+				<tuv xml:lang="zh">
+					<seg>悠漫品牌印象:</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>The Store:</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Positive'>
+				<tuv xml:lang="zh">
+					<seg>正面</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Positive</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Negative'>
+				<tuv xml:lang="zh">
+					<seg>负面</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Negative</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Ordinary'>
+				<tuv xml:lang="zh">
+					<seg>一般</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Ordinary</seg>
+				</tuv>
+			</tu>
+
+			<!-- 产品包装: -->
+			<tu tuid='Report_Tag_Type_O'>
+				<tuv xml:lang="zh">
+					<seg>产品包装:</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>The Store:</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Suit'>
+				<tuv xml:lang="zh">
+					<seg>好看</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Suit</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Ugly'>
+				<tuv xml:lang="zh">
+					<seg>难看</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Ugly</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Ordinary'>
+				<tuv xml:lang="zh">
+					<seg>一般</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Ordinary</seg>
+				</tuv>
+			</tu>
 			
 	</body>
 </tmx>
