@@ -817,6 +817,86 @@
 					<seg>Others</seg>
 				</tuv>
 			</tu>
+
+
+
+
+
+			<tu tuid='Report_Tag_Others'>
+				<tuv xml:lang="zh">
+					<seg>门店其他特点</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Others</seg>
+				</tuv>
+			</tu>
+
+
+			<!-- 竞争对手 -->
+			<tu tuid='Report_Tag_Type_M'>
+				<tuv xml:lang="zh">
+					<seg>竞争对手：</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>The Store:</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Uha'>
+				<tuv xml:lang="zh">
+					<seg>悠哈</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Uha</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Alps'>
+				<tuv xml:lang="zh">
+					<seg>阿尔卑斯</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Alps</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_White Rabbit'>
+				<tuv xml:lang="zh">
+					<seg>大白兔</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>White Rabbit</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Eclairs'>
+				<tuv xml:lang="zh">
+					<seg>怡口莲</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Eclairs</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Hershey'>
+				<tuv xml:lang="zh">
+					<seg>好时</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Hershey</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Brand'>
+				<tuv xml:lang="zh">
+					<seg>品牌</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Brand</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Chocolate'>
+				<tuv xml:lang="zh">
+					<seg>巧克力</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Chocolate</seg>
+				</tuv>
+			</tu>
 			
 	</body>
 </tmx>
