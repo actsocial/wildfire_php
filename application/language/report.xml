@@ -833,7 +833,7 @@
 
 
 			<!-- 竞争对手 -->
-			<tu tuid='Report_Tag_Type_M'>
+			<tu tuid='Report_Tag_Type_K'>
 				<tuv xml:lang="zh">
 					<seg>竞争对手：</seg>
 				</tuv>
