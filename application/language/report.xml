@@ -897,6 +897,72 @@
 					<seg>Chocolate</seg>
 				</tuv>
 			</tu>
+
+			<!-- 口感： -->
+			<tu tuid='Report_Tag_Type_L'>
+				<tuv xml:lang="zh">
+					<seg>口感：</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>The Store:</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Slide'>
+				<tuv xml:lang="zh">
+					<seg>滑</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Slide</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Sweet'>
+				<tuv xml:lang="zh">
+					<seg>甜</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Sweet</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Too Sweet'>
+				<tuv xml:lang="zh">
+					<seg>太甜</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Too Sweet</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Too Tart'>
+				<tuv xml:lang="zh">
+					<seg>太酸</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Too Tart</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Fragrant'>
+				<tuv xml:lang="zh">
+					<seg>香</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Fragrant</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Strong'>
+				<tuv xml:lang="zh">
+					<seg>浓</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Strong</seg>
+				</tuv>
+			</tu>
+			<tu tuid='Report_Tag_Too Sticky'>
+				<tuv xml:lang="zh">
+					<seg>太粘</seg>
+				</tuv>
+				<tuv xml:lang="en">
+					<seg>Too Sticky</seg>
+				</tuv>
+			</tu>
 			
 	</body>
 </tmx>
