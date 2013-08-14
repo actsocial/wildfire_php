@@ -163,7 +163,7 @@
 						</tuv>
 					</tu>
 					
-					<tu tuid='Report_Tag_VIP Card'>
+<!-- 					<tu tuid='Report_Tag_VIP Card'>
 						<tuv xml:lang="zh">
 							<seg>VIP卡</seg>
 						</tuv>
@@ -178,7 +178,7 @@
 						<tuv xml:lang="en">
 							<seg>Hat Redemption</seg>
 						</tuv>
-					</tu>
+					</tu> -->
 					
 					<tu tuid='Report_Tag_Mention the Competitors'>
 						<tuv xml:lang="zh">
@@ -883,7 +883,7 @@
 			</tu>
 			<tu tuid='Report_Tag_Brand'>
 				<tuv xml:lang="zh">
-					<seg>品牌</seg>
+					<seg>其他品牌</seg>
 				</tuv>
 				<tuv xml:lang="en">
 					<seg>Brand</seg>
