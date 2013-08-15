@@ -11,9 +11,9 @@
 		<fieldset>
 			<div><dl><?php echo $this->form->recipients_name ;?></dl></div>
 			<div class="form-line not-text" ><?php echo $this->form->gender ;?></div>
-			<div class="form-line"><?php echo $this->form->education ;?></div>
+		<!--	<div class="form-line"><?php echo $this->form->education ;?></div>
 			<div class="form-line-long-title"><?php echo $this->form->income ;?></div>
-			<div class="form-line"><?php echo $this->form->birthdate ;?></div>
+			<div class="form-line"><?php echo $this->form->birthdate ;?></div>	-->
 			<div><?php echo $this->form->phone ;?></div>
 			<!--div><?php echo $this->form->telephone;?></div-->
 			
@@ -21,7 +21,7 @@
 			<!--div><?php echo $this->form->qq;?></div-->
 			<div>
 				<dt><label><?php echo $this->translate('CONTACT CITY')?></label></dt>
-				<dd><input type="text" id="englishcity" name="englishcity" /> <select
+				<dd> <!-- <input type="text" id="englishcity" name="englishcity" /> --> <select
 					name="province" id="province" style="width: 80px"
 					onChange="JavaScript:ChangeOption('province', 'city')">
 					<OPTION VALUE="" Selected>未选择</OPTION>
@@ -83,7 +83,7 @@
 						<!-- </dt>
 					</div> -->
 
-				<div style="float:left;">
+				<!-- <div style="float:left;">
 					<?php echo $this->campaign['pre_campaign_friends'];?>
 
 					<table align="center">
@@ -100,7 +100,7 @@
 					<?php }			
 					?> 
 				</table>
-					</div>
+					</div> -->
 			</fieldset>		
 				</dl>
 				<div style="float:left;color:red;"><?php echo $this->errMessage; ?></div>
@@ -262,3 +262,26 @@ if (typeof window.onload != 'function') {
 	}
 	jQuery("#birthdate").datepicker({dateFormat: 'yy-mm-dd', maxDate: '0',changeYear: true,yearRange: '1900:2012' });
 </script>
+
+
+
+<script language="JavaScript" type="text/javascript">
+jQuery(function(){
+jQuery("#edit").bind("click",checkMandatory);
+});
+
+function checkMandatory() {
+	
+	var name = jQuery("#recipients_name").val().trim();
+	var phone = jQuery("#phone").val().trim();
+	var province = jQuery("#province").val().trim();
+	var address1 = jQuery("#address1").val().trim();
+	if(name == "" || phone == "" || province == "" || address == ""){
+		alert("提交失败：姓名，电话，城市，地址 不能为空")
+		return false;
+		}
+	}
+
+
+</script>
+
