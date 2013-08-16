@@ -10,6 +10,7 @@
 		   return 0
 	}
 	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
+	alert(0);
 	function checkCommentAnswers() {
 		var errorMessage = "Your input is too long";
 		var hasError = false;
@@ -800,6 +801,8 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+	alert(1);
+
 	var WebDialog = {
 		element : $('web-dialog'),
 		onok : function() {},
@@ -901,7 +904,8 @@
 <!--
 // <![CDATA[
   var pageNum=0;
- 
+ 	alert(2);
+
   var noPage0 = false;
   var currentPage=0;
   
@@ -996,6 +1000,8 @@
 <!--
 // <![CDATA[
     //do not include radio answers
+    	alert(3);
+
 	if(typeof checkNoAnswer=="undefined") {
 		checkNoAnswer=function(index,checkbox) {
 			var question = $("question_" + index);
@@ -1054,6 +1060,8 @@
 <script language="JavaScript" type="text/javascript">
 <!--
 // <![CDATA[
+	alert(4);
+
 	function loading() {
 		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
 		WebDialog.showMessageBox(html, "none", "center", 600);
@@ -1120,7 +1128,7 @@
 
 
 	function checkAnswerSet() {
-		if( checkAnswersOfSelectionQuestions() && checkAnswersOfRatingQuestions() && checkAnswersOfCommentQuestions()) {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
 			var html = '提交失败：不能提交空报告';
@@ -1286,6 +1294,7 @@
 <!--
 // <![CDATA[
 
+	alert(5);
 
 	 Element.hide("q_2292");
 
