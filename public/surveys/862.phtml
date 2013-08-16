@@ -9,7 +9,6 @@
 		   return 0
 	}
 	var MAX_LENGTH_OF_COMMENT_QUESTION = 100000;
-	alert(0);
 	function checkCommentAnswers() {
 		var errorMessage = "Your input is too long";
 		var hasError = false;
@@ -25,7 +24,6 @@
 		}
 		return !hasError;
 	}
-	alert(1);
 
 	</script>
 <div class="main-container-outer" >
@@ -57,14 +55,13 @@
 <script language="JavaScript" type="text/javascript">
 
 	mandatoryElements = new Array(); 
-alert("11");
 </script>
 <div class="fillout-container">
 <!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
 <div class="mainOneContent">
 
 <div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="alert(0);return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -718,8 +715,6 @@ alert("11");
 <div class="mask" id="mask" style="display:none;"></div>
 <script language="JavaScript" type="text/javascript">
 
-	alert(1);
-
 	var WebDialog = {
 		element : $('web-dialog'),
 		onok : function() {},
@@ -819,7 +814,6 @@ alert("11");
 <script language="JavaScript" type="text/javascript">
 
   var pageNum=0;
- 	alert(2);
 
   var noPage0 = false;
   var currentPage=0;
@@ -913,7 +907,6 @@ alert("11");
 <script language="JavaScript" type="text/javascript">
 
     //do not include radio answers
-    	alert(3);
 
 	if(typeof checkNoAnswer=="undefined") {
 		checkNoAnswer=function(index,checkbox) {
@@ -971,7 +964,6 @@ alert("11");
 </script>
 <script language="JavaScript" type="text/javascript">
 
-	alert(4);
 
 	function loading() {
 		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
@@ -1200,7 +1192,6 @@ alert("11");
 </div> 
 <script language="JavaScript" type="text/javascript">
 
-	alert(5);
 
 	 Element.hide("q_2292");
 
