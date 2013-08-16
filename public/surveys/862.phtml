@@ -1060,6 +1060,7 @@
 	}
 	
 	function checkMandatory() {
+		alert(0);
 	    var fillMandatory = true;
 	    for(var j=0; j < mandatoryElements.length; j++) {
 	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
@@ -1093,6 +1094,7 @@
 	    }
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目不能为空';
+	    	alert(1);
 	        jQuery("#check-alert-dialog .content").html(html);
 	        jQuery("#check-alert-dialog").dialog('open');
 	    }
@@ -1120,7 +1122,7 @@
 
 
 	function checkAnswerSet() {
-		if( checkAnswersOfSelectionQuestions() && checkAnswersOfRatingQuestions() && checkAnswersOfCommentQuestions()) {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
 			var html = '提交失败：不能提交空报告';
