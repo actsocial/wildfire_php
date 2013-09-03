@@ -77,7 +77,7 @@
 	<div style="margin-top:10px;"></div>
 
 
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (loading(); checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -1461,7 +1461,7 @@
 <script type="text/javascript" language="JavaScript">
 
 	function loading() {
-		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />Please wait...";
+		var html = "<img src='http://q.xingxinghuo.cn/images/spinner.gif' />请等待……";
 		WebDialog.showMessageBox(html, "none", "center", 600);
 	}
 	
@@ -1556,7 +1556,7 @@
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
+			var html = '提交失败：不能提交空报告';
 			jQuery("#check-alert-dialog .content").html(html);
     		jQuery("#check-alert-dialog").dialog('open');
 			return false;
