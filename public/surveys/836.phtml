@@ -1390,9 +1390,9 @@
 	    }
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目不能为空';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 150, buttons, callbacks);
+			jQuery("#check-alert-dialog .content").html(html);
+    jQuery("#check-alert-dialog").dialog('open');
+
 	    }
 		return fillMandatory;
 	}
@@ -1422,9 +1422,8 @@
 		    return true;
 		} else {
 			var html = '提交失败：不能提交空报告';
-			var buttons = ["OK"];
-    		var callbacks = [ function() { WebDialog.close();return false;}]; 
-    		WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			jQuery("#check-alert-dialog .content").html(html);
+    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
