@@ -1491,15 +1491,14 @@
 			  var element = elements[0];
 			  if(element.hasClassName("selection")) {
 			  	if(element.type == "radio"){
-			  		 for(var i=0;i<elements.length;i++){
-				  		if(elements[i].checked){
-				  				fillMandatory =  true;
-				  				break;
-				  		}else{
-				  		    fillMandatory =  false;
-				  		    continue;
-				  		}
-			  		}
+			  		var filledThis = false;
+	            	for(var i=0;i<elements.length;i++){
+					  		if(elements[i].checked){
+					  				filledThis =  true;
+					  				break;
+					  		}
+				  	}
+				  	fillMandatory = fillMandatory && filledThis;
 			  	}
 			  	if(element.value.strip() == ''||element.value.strip() == '0') {
 	    			fillMandatory =  false;
@@ -1511,15 +1510,14 @@
 					break;
 				}
 			  } else if (element.hasClassName("rating")){
-            for(var i=0;i<elements.length;i++){
+			  	var filledThis = false;
+            	for(var i=0;i<elements.length;i++){
 				  		if(elements[i].checked){
-				  				fillMandatory =  true;
+				  				filledThis =  true;
 				  				break;
-				  		}else{
-				  		    fillMandatory =  false;
-				  		    continue;
 				  		}
 			  	}
+			  	fillMandatory = fillMandatory && filledThis;
 			  }
 			}
 	    }
