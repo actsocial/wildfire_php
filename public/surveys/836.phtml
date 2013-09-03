@@ -77,7 +77,7 @@
 	<div style="margin-top:10px;"></div>
 
 
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (loading(); checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -89,7 +89,7 @@
 <!-- <div class="questionnaire-title">社交媒体使用调查</div> -->
 
 
-<input type="hidden" name="id" value="836" id="id">
+<input type="hidden" name="id" value="" id="id">
 <input type="hidden" name="theme" value="default" id="theme">
 <input type="hidden" name="surveyId" value="836">
 
@@ -1526,9 +1526,8 @@
 	    
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目不能为空';
-				var buttons = ["OK"];
-				var callbacks = [ function() { WebDialog.close();return false;}]; 
-				WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+				jQuery("#check-alert-dialog .content").html(html);
+    			jQuery("#check-alert-dialog").dialog('open');
 	    }
 		return fillMandatory;
 	}
@@ -1558,9 +1557,8 @@
 		    return true;
 		} else {
 			var html = 'Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			jQuery("#check-alert-dialog .content").html(html);
+    		jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
