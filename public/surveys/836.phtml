@@ -1445,7 +1445,7 @@
 
 
 	function checkAnswerSet() {
-		if( checkAnswersOfSelectionQuestions() && checkAnswersOfRatingQuestions() && checkAnswersOfCommentQuestions()) {
+		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
 			var html = '提交失败：不能提交空报告';
