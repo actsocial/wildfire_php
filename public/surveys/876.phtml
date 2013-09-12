@@ -676,12 +676,12 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<?php if(null != $this->user->email) {?>
-<input type="hidden" name="answers[16131].id" value=<?php echo $this->user->email; ?> id="answers[16131].id">
-<?php } else {?>
 <input type="hidden" name="answers[16131].id" value="" id="answers[16131].id">
-<?php }?>
+<?php if(null != $this->user->email) {?>
+<input type="text" name="answers[16131].value" value=<?php echo $this->user->email; ?> id="question_16131" group="16131" class="input-text">
+<?php } else {?>
 <input type="text" name="answers[16131].value" value="" id="question_16131" group="16131" class="input-text">
+<?php }?>
 
 <span class="error-content" id="err_answers[16131].value"></span>
 </td>
@@ -714,12 +714,12 @@
 <table width="100%">
 <tbody><tr>
 <td>
-<?php if(null != $this->user->login_phone) {?>
-<input type="hidden" name="answers[16132].id" value=<?php echo $this->user->login_phone; ?> id="answers[16132].id">
-<?php }else {?>
 <input type="hidden" name="answers[16132].id" value="" id="answers[16132].id">
-<?php }?>
+<?php if(null != $this->user->login_phone) {?>
+<input type="text" name="answers[16132].value" value=<?php echo $this->user->login_phone; ?> id="question_16132" group="16132" class="input-text">
+<?php }else {?>
 <input type="text" name="answers[16132].value" value="" id="question_16132" group="16132" class="input-text">
+<?php }?>
 
 <span class="error-content" id="err_answers[16132].value"></span>
 </td>
