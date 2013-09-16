@@ -170,13 +170,33 @@ class HomeController extends MyController
 		// add expire_date by Bruce.Liu 
 		$select3 = $db->select();
 		$select3->from('campaign_invitation','*');
-		$select3->join('campaign', 'campaign.id = campaign_invitation.campaign_id ', array('pre_campaign_survey','name','type','product_name','simple_description','invitation_description','invitation_description2'));
+		$select3->join('campaign', 'campaign.id = campaign_invitation.campaign_id ', array('campaign.id','pre_campaign_survey','name','type','product_name','simple_description','invitation_description','invitation_description2','campaign.total'));
 		$select3->where('campaign_invitation.consumer_id = ?', $this->_currentUser->id);
 		$select3->where('campaign_invitation.state = ?', 'NEW');
 		$select3->where('campaign.expire_date > ?', $currentTime);
 		$select3->order('campaign_invitation.create_date DESC');
-		$this->view->recentInvitation = $db->fetchRow($select3);
-		$this->view->allInvitations = $db->fetchAll($select3);
+
+		$recentInvitationTotalArray =  $db->fetchAll($select3);
+		// add logic campare total and campaign_partation number  2013-09-16 
+		// 取到当前被邀请的活动 比较 当前活动的参与人数和当前活动的最高参加人数
+		$recentInvitationTotalArrayNew = array();
+		$select_participation_sql_rs = array();
+
+		foreach ($recentInvitationTotalArray as $recentInvitationTotal) {
+			$select_participation_sql = $db->select();
+			 $select_participation_sql->from('campaign_invitation','*');
+			 $select_participation_sql->join('campaign_participation','campaign_invitation.id = campaign_participation.campaign_invitation_id');
+			 $select_participation_sql->where('campaign_invitation.state = "ACCEPTED" ');
+			 $select_participation_sql->where('campaign_invitation.campaign_id = '.$recentInvitationTotal['id']);
+			 $select_participation_sql_rs = $db->fetchAll($select_participation_sql);
+				if(intval($recentInvitationTotal['total']) > count($select_participation_sql_rs)){
+					array_push($recentInvitationTotalArrayNew, $recentInvitationTotal);
+				}
+		}
+		$this->view->recentInvitation = $recentInvitationTotalArrayNew ;
+		$this->view->allInvitations = $this->view->recentInvitation ;
+		// $this->view->recentInvitation = $db->fetchRow($select3);
+		// $this->view->allInvitations = $db->fetchAll($select3);
 		//print_r($this->view->allInvitations);die;
 //		Zend_Debug::dump($this->view->allInvitations);die();
 		
