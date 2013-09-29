@@ -1,20 +1,4 @@
 <body>
-<div class="main-container-outer">
-	<div id="container">
-		<div id="nav" class="navigation">
-			<div class="nav-left"></div>
-			<div class="nav-right"></div>
-			<ul>
-			</ul>
-		</div>	
-		
- 
-
-		<div style="clear:both;"></div>
-		<div class="main-content-outer" id="content">
- 		
-
-<div id="content">
 <script language="JavaScript" type="text/javascript">
 	mandatoryElements = new Array(); 
 </script>
@@ -272,6 +256,17 @@
 
   </tbody></table>
 <script language="JavaScript" type="text/javascript">
+function showOrHide(){
+if(jQuery("#16256_3").attr("checked")=="checked"){
+jQuery("#q_3632").css("display","");
+
+}else{
+jQuery("#q_3632").css("display","none");
+}
+}
+jQuery(function(){
+jQuery("#16256_3").bind("click",showOrHide);
+})
 </script>
 				</td>
 			</tr>
