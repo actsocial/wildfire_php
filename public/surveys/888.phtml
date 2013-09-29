@@ -1265,9 +1265,13 @@ jQuery("#16256_3").bind("click",showOrHide);
 	
 	function checkMandatory() {
 	    var fillMandatory = true;
+	    
+	    
 	    for(var j=0; j < mandatoryElements.length; j++) {
 	    	var elements = ($('mainzone-inner').getElementsBySelector('[group="'+ mandatoryElements[j] +'"]'));
+	    	
 			if(elements.length > 1) {
+				
 			  var filled = false;
 			  for(var i=0; i < elements.length; i++) {
 			  	var element = elements[i];
@@ -1281,9 +1285,21 @@ jQuery("#16256_3").bind("click",showOrHide);
 			  	break;
 			  }
 			} else {
+				
 			  var element = elements[0];
 			  if(element.hasClassName("selection")) {
-			  	if(element.value.strip() == '') {
+			  	 if(element.type == "radio"){
+			  		var filledThis = false;
+	            	for(var i=0;i<elements.length;i++){
+					  		if(elements[i].checked){
+					  				filledThis =  true;
+					  				break;
+					  		}
+				  	}
+				  	fillMandatory = fillMandatory && filledThis;
+			  	 }
+			  	
+			  	if(element.value.strip() == ''||element.value.strip() == '0') {
 	    			fillMandatory =  false;
 	    			break;                                  
 	    		}
@@ -1292,6 +1308,15 @@ jQuery("#16256_3").bind("click",showOrHide);
 					fillMandatory = false;
 					break;
 				}
+			  } else if (element.hasClassName("rating")){
+			  	var filledThis = false;
+            	for(var i=0;i<elements.length;i++){
+				  		if(elements[i].checked){
+				  				filledThis =  true;
+				  				break;
+				  		}
+			  	}
+			  	fillMandatory = fillMandatory && filledThis;
 			  }
 			}
 	    }
