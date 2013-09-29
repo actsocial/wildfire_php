@@ -272,21 +272,6 @@
 
   </tbody></table>
 <script language="JavaScript" type="text/javascript">
-function showOrHide()
-{
-	if(jQuery("#16256_3").attr("checked")=="checked")
-	{
-		jQuery("#q_3632").css("display","");
-	}
-	else
-	{
-		jQuery("#q_3632").css("display","none");
-	}
-}
-jQuery(function()
-{
-	jQuery("#16256_3").bind("click",showOrHide);
-})
 </script>
 				</td>
 			</tr>
@@ -576,11 +561,8 @@ jQuery(function()
 <tbody><tr>
 <td>
 <input type="hidden" name="answers[16354].id" value="" id="answers[16354].id">
-<?php if(null != $this->user->recipients_name) {?>
-<input type="text" name="answers[16354].value" value=<?php echo $this->user->recipients_name; ?> id="question_16354" group="16354" class="input-text">
-<?php } else {?>
 <input type="text" name="answers[16354].value" value="" id="question_16354" group="16354" class="input-text">
-<?php } ?>
+
 <span class="error-content" id="err_answers[16354].value"></span>
 </td>
 
@@ -669,27 +651,6 @@ jQuery(function()
 <span class="error-content" id="err_answers[16263].value" style="display:block"></span>
 
 <input type="hidden" name="answers[16263].id" value="" id="answers[16263].id">
-<?php if(null != $this->user->gender) {?>
-<?php if("male" == $this->user->gender) {?>
-<ul>
-	<li>
-			<input group="16263" type="radio" id="16263_0" name="answers[16263].value" value="11834" class="selection question_radio_16263" checked>		<label for="16263_0">男</label>
-	</li>
-	<li>
-			<input group="16263" type="radio" id="16263_1" name="answers[16263].value" value="11835" class="selection question_radio_16263">		<label for="16263_1">女</label>
-	</li>
-</ul>
-<?php }elseif("female" == $this->user->gender){ ?>
-<ul>
-	<li>
-			<input group="16263" type="radio" id="16263_0" name="answers[16263].value" value="11834" class="selection question_radio_16263">		<label for="16263_0">男</label>
-	</li>
-	<li>
-			<input group="16263" type="radio" id="16263_1" name="answers[16263].value" value="11835" class="selection question_radio_16263" chenked>		<label for="16263_1">女</label>
-	</li>
-</ul>
-<?php } ?>
-<?php } else {?>
 <ul>
 	<li>
 			<input group="16263" type="radio" id="16263_0" name="answers[16263].value" value="11834" class="selection question_radio_16263">		<label for="16263_0">男</label>
@@ -698,7 +659,6 @@ jQuery(function()
 			<input group="16263" type="radio" id="16263_1" name="answers[16263].value" value="11835" class="selection question_radio_16263">		<label for="16263_1">女</label>
 	</li>
 </ul>
-<?php }?>
  </td>
 
 <td valign="top" class="noanswer-td">
@@ -734,11 +694,8 @@ jQuery(function()
 <tbody><tr>
 <td>
 <input type="hidden" name="answers[16355].id" value="" id="answers[16355].id">
-<?php if(null != $this->user->email) {?>
-<input type="text" name="answers[16355].value" value=<?php echo $this->user->email; ?> id="question_16355" group="16355" class="input-text">
-<?php } else {?>
 <input type="text" name="answers[16355].value" value="" id="question_16355" group="16355" class="input-text">
-<?php }?>
+
 <span class="error-content" id="err_answers[16355].value"></span>
 </td>
 
@@ -801,11 +758,8 @@ jQuery(function()
 <tbody><tr>
 <td>
 <input type="hidden" name="answers[16265].id" value="" id="answers[16265].id">
-<?php if(null != $this->user->login_phone) {?>
-<input type="text" name="answers[16265].value" value=<?php echo $this->user->login_phone; ?> id="question_16265" group="16265" class="input-text">
-<?php }else {?>
 <input type="text" name="answers[16265].value" value="" id="question_16265" group="16265" class="input-text">
-<?php }?>
+
 <span class="error-content" id="err_answers[16265].value"></span>
 </td>
 
@@ -1125,7 +1079,6 @@ jQuery(function()
 </div>
 
 <script language="JavaScript" type="text/javascript">
-
   var pageNum=0;
  
   var noPage0 = false;
@@ -1312,7 +1265,7 @@ jQuery(function()
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目（带*）不能为空';
 			jQuery("#check-alert-dialog .content").html(html);
-    		jQuery("#check-alert-dialog").dialog('open');
+		    jQuery("#check-alert-dialog").dialog('open');
 	    }
 		return fillMandatory;
 	}
@@ -1343,7 +1296,7 @@ jQuery(function()
 		} else {
 			var html = '不能够提交空表单';
 			jQuery("#check-alert-dialog .content").html(html);
-    		jQuery("#check-alert-dialog").dialog('open');
+		    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
@@ -1476,7 +1429,6 @@ jQuery(function()
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 
-
 </script>
 </div>
 </div> 
@@ -1487,17 +1439,10 @@ jQuery(function()
 	
 </div> 
 
-
-
 <script language="JavaScript" type="text/javascript">
-
 	 Element.hide("q_3632");
-
-
 var myrules = {
 }
-
 Behaviour.register(myrules);
-
 </script>
 </body>
