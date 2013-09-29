@@ -1,4 +1,3 @@
-<body>
 <div class="container">
 	<div class="container-inner">
 
@@ -72,11 +71,11 @@
 
 	</script>
 <div class="fillout-container">
-<!--<h1><div class="round1"><div class="round2"><div class="round3">Fill out survey</div></div></div></h1>-->
 <div class="mainOneContent">
 
-<div style="margin-top:10px;"></div>
-<form id="fillout" method="post" action="http://q.xingxinghuo.cn/fillout" onsubmit="return (checkMandatory() && checkAnswerSet() && checkCommentAnswers());">
+	<div style="margin-top:10px;"></div>
+
+<form onsubmit="return (checkMandatory()&&checkAnswerSet()&&checkCommentAnswers());" action="http://q.xingxinghuo.cn/fillout" method="post" id="fillout">
 <div id="mainzone-top-wrapper" style="display:none">
   <div id="mainzone-top-left">
     <div id="mainzone-top-right"></div>
@@ -1078,7 +1077,8 @@ jQuery("#16256_3").bind("click",showOrHide);
 
 <div class="mask" id="mask" style="display:none;"></div>
 <script language="JavaScript" type="text/javascript">
-
+<!--
+// <![CDATA[
 	var WebDialog = {
 		element : $('web-dialog'),
 		onok : function() {},
@@ -1167,15 +1167,17 @@ jQuery("#16256_3").bind("click",showOrHide);
 			//$('mask').show();
 		}
 	}
-
+// ]]>
+-->
 </script>
 </form>
+
 </div> 
 <div class="clear"></div>
 <br>
 </div>
 
-<script language="JavaScript" type="text/javascript">
+<script type="text/javascript" language="JavaScript">
 
   var pageNum=0;
  
@@ -1184,7 +1186,7 @@ jQuery("#16256_3").bind("click",showOrHide);
   
 
   function showPage(_pageIndex) {
-    if (_pageIndex <0 || _pageIndex > pageNum) return ;
+    if (_pageIndex <0 || _pageIndex < pageNum) return ;
     if (_pageIndex == pageNum) {
     	Element.hide("nextPageButton");
     } else {
@@ -1212,7 +1214,7 @@ jQuery("#16256_3").bind("click",showOrHide);
 	
 	if(_pageIndex == pageNum) {
 		Element.show($('submit'));
-	} else if ( _pageIndex < pageNum) {
+	} else if ( _pageIndex <pageNum) {
 		Element.hide($('submit'));
 	}
   }
@@ -1233,7 +1235,31 @@ jQuery("#16256_3").bind("click",showOrHide);
   	}
   	
  
-  	
+  	// var _pageBar = document.getElementById("pageBar");
+  	// if (pageNum==0) {
+  	// 	_pageBar.innerHTML = "";
+  	// } else {
+	  // 	for (i=0; i<=pageNum; i++) {
+			// var s ="";
+			// if( i == 0 ) {
+			// 	s += "&lt;a href='#' onclick='showPrevPage();'&gt;" + "&lt;-Previous" + "&lt;/a&gt;&nbsp;";
+			// }
+
+			// if (noPage0){
+	  // 		 if (i!=0){ 
+	  // 		 	s += "&lt;a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'&gt;" + (i) + "&lt;/a&gt;&nbsp;";
+	  // 		  }
+	  // 		}else{
+	  // 		  s += "&lt;a id=pageNum" + i + " href='#' onclick='showPage(" + i + ");'&gt;" + (i+1) + "&lt;/a&gt;&nbsp;";
+	  // 		}
+	  		
+			// if( i == pageNum ) {
+			// 	s+= "&lt;a href='#' onclick='showNextPage();'&gt;" + "Next -&gt;" + "&lt;/a&gt;&nbsp;";
+			// }
+	  // 		_pageBar.innerHTML = _pageBar.innerHTML + s ;
+	  // 	}		
+  	// }
+  }
   
   initPages();
   if (noPage0){
@@ -1244,7 +1270,7 @@ jQuery("#16256_3").bind("click",showOrHide);
 
 </script>
 
-<script language="JavaScript" type="text/javascript">
+<script type="text/javascript" language="JavaScript">
 
     //do not include radio answers
 	if(typeof checkNoAnswer=="undefined") {
@@ -1284,7 +1310,7 @@ jQuery("#16256_3").bind("click",showOrHide);
 			var qc_value = $("qc_checkbox_" + qc_id).checked;
 			//get the checkBoxed belongs to the above question context
 			var checkBoxes = $("mainzone").getElementsByClassName("qc_"+qc_id);
-			for(var i = 0; i < checkBoxes.length;i++) {
+			for(var i = 0; i<checkBoxes.length;i++) {
 				var checkBox = checkBoxes[i];
 				//to reuse checkRadioNoAnswer and checkNoAnswer
 				checkBox.checked=qc_value;
@@ -1301,10 +1327,10 @@ jQuery("#16256_3").bind("click",showOrHide);
 	}
 
 </script>
-<script language="JavaScript" type="text/javascript">
+<script type="text/javascript" language="JavaScript">
 
 	function loading() {
-		var html = "<img src='http://www.marketing-research.cn/images/spinner.gif' />请稍候...";
+		var html = "&lt;img src='http://q.xingxinghuo.cn/images/spinner.gif' /&gt;Please wait...";
 		WebDialog.showMessageBox(html, "none", "center", 600);
 	}
 	
@@ -1365,11 +1391,12 @@ jQuery("#16256_3").bind("click",showOrHide);
 			  }
 			}
 	    }
+	    
 	    if(!fillMandatory) {
-	    	var html = '提交失败：必填的题目（带*）不能为空';
-			var buttons = ["确定"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+	    	var html = '提交失败：必填的题目不能为空';
+				var buttons = ["OK"];
+				var callbacks = [ function() { WebDialog.close();return false;}]; 
+				WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 	    }
 		return fillMandatory;
 	}
@@ -1398,8 +1425,8 @@ jQuery("#16256_3").bind("click",showOrHide);
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = '不能够提交空表单';
-			var buttons = ["确定"];
+			var html = 'Can not submit empty questionnaire form';
+			var buttons = ["OK"];
 			var callbacks = [ function() { WebDialog.close();return false;}]; 
 			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 			return false;
@@ -1452,7 +1479,7 @@ jQuery("#16256_3").bind("click",showOrHide);
 		var errorElements = $$('span.error-content') ;
 		var hasError = false;
 		var errorElementsPointer = 0;
-		for (errorElementsPointer=0; errorElementsPointer<errorElements.length; errorElementsPointer++) {
+		for (errorElementsPointer=0; errorElementsPointer < errorElements.length; errorElementsPointer++) {
 			var html = errorElements[errorElementsPointer].innerHTML;
 			if (html != "") {
 				hasError = true;
@@ -1477,7 +1504,7 @@ jQuery("#16256_3").bind("click",showOrHide);
 	function showOtherValueInputInSelect(element) {
 	    var options = element.options;
 	    var selectedOption;
-	    for( var i = 0; i < options.length; i++) {
+	    for( var i = 0; i<options.length; i++) {
 	       if( options[i].selected) {
 	       	 selectedOption = options[i];
 	       }
@@ -1512,12 +1539,61 @@ jQuery("#16256_3").bind("click",showOrHide);
 		}
 	}
 
+	/*
+	new PeriodicalExecuter(function() {
+		$('fillout').request({
+  			method: 'post',
+  			parameters: { 'command.pause':"Continue Later"}
+		});
+		}, 5);
+	*/
+
+  /*var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5436862-10']);
+  _gaq.push(['_setDomainName', '.marketing-research.cn']);
+  _gaq.push(['setAllowHash', 'false']);
+
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();*/
+
+
+
 </script>
 </div>
 </div> 
 </div>
 
-<script language="JavaScript" type="text/javascript">
-	 Element.hide("q_3632");
-</script>
-</body>
+<div style="display:none;" class="footer">
+	<div class="footer-left"></div>
+	<div class="footer-content">
+		<div class="footer-logo"></div>
+		<div class="footer-link">
+			<p>ostrakon indicate version 2.0</p>
+			<p><a target="_blank" href="http://www.ostrakon.org">About Us</a> | <a href="mailto:software@ostrakon.org">Contact Us</a> | <a target="_blank" href="/help/index/actionName/c/methodName/c">Help</a> | <a target="_blank" href="http://www.ostrakon.org">Ostrakon.org</a></p>
+		</div>
+	</div>
+	<div class="footer-right"></div>
+</div>
+	<div style="display:none;" class="bottom-shadow"></div>
+	<div style="clear: both"></div>
+	
+</div> 
+
+
+
+<!-- 
+<div class="content" style="background:#fff;">
+<div class="buttons-bar"><a href='/public/profilesurvey'>Back</a>
+<div style="clear:both;"></div>
+
+</div>
+</div>
+ -->
+
+</pre>		<div class="clear"></div>
+	</div></div>
