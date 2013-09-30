@@ -1394,9 +1394,8 @@ jQuery("#16256_3").bind("click",showOrHide);
 	    
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目不能为空';
-				var buttons = ["OK"];
-				var callbacks = [ function() { WebDialog.close();return false;}]; 
-				WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+				jQuery("#check-alert-dialog .content").html(html);
+			    jQuery("#check-alert-dialog").dialog('open');
 	    }
 		return fillMandatory;
 	}
@@ -1425,10 +1424,9 @@ jQuery("#16256_3").bind("click",showOrHide);
 		if( checkAnswersOfSelectionQuestions() || checkAnswersOfRatingQuestions() || checkAnswersOfCommentQuestions()) {
 		    return true;
 		} else {
-			var html = 'Can not submit empty questionnaire form';
-			var buttons = ["OK"];
-			var callbacks = [ function() { WebDialog.close();return false;}]; 
-			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
+			var html = '不能提交空报告';
+			jQuery("#check-alert-dialog .content").html(html);
+		    jQuery("#check-alert-dialog").dialog('open');
 			return false;
 		}
 	}
