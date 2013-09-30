@@ -2091,6 +2091,75 @@ var myrules = {
 		}
 }
 
+function showOrHide1(){
+		if(jQuery("#16386_3").attr("checked")=="checked"){
+			jQuery("#q_3661").css("display","");
+		}else{
+			jQuery("#q_3661").css("display","none");
+		}
+	}
+	function showOrHide2(){
+		if(jQuery("#16386_4").attr("checked")=="checked"){
+			jQuery("#q_3662").css("display","");
+		}else{
+			jQuery("#q_3662").css("display","none");
+		}
+	}
+	function showOrHide3(){
+		if(jQuery("#16392_4").attr("checked")=="checked"){
+			jQuery("#q_3667").css("display","");
+		}else{
+			jQuery("#q_3667").css("display","none");
+		}
+	}
+	function showOrHide4(){
+		if(jQuery("#16396_3").attr("checked")=="checked"){
+			jQuery("#q_3443").css("display","");
+		}else{
+			jQuery("#q_3443").css("display","none");
+		}
+	}
+	function showOrHide5(){
+		if(jQuery("#16400_5").attr("checked")=="checked"){
+			jQuery("#q_3674").css("display","");
+		}else{
+			jQuery("#q_3674").css("display","none");
+		}
+	}
+	function showOrHide6(){
+		if(jQuery("#16402_5").attr("checked")=="checked"){
+			jQuery("#q_3379").css("display","");
+		}else{
+			jQuery("#q_3379").css("display","none");
+		}
+	}
+	function showOrHide7(){
+		if(jQuery("#16402_4").attr("checked")=="checked"){
+			jQuery("#q_3676").css("display","");
+		}else{
+			jQuery("#q_3676").css("display","none");
+			jQuery("#q_3677").css("display","none");
+		}
+	}
+	function showOrHide8(){
+		if(jQuery("#16404_4").attr("checked")=="checked"){
+			jQuery("#q_3677").css("display","");
+		}else{
+			jQuery("#q_3677").css("display","none");
+		}
+	}
+
+	jQuery(function(){
+		jQuery("#16386_3").bind("click",showOrHide1);
+		jQuery("#16386_4").bind("click",showOrHide2);
+		jQuery("#16392_4").bind("click",showOrHide3);
+		jQuery("#16396_3").bind("click",showOrHide4);
+		jQuery("#16400_5").bind("click",showOrHide5);
+		jQuery("#16402_5").bind("click",showOrHide6);
+		jQuery("#16402_4").bind("click",showOrHide7);
+		jQuery("#16404_4").bind("click",showOrHide8);
+	})
+
 Behaviour.register(myrules);
 
 </script>
