@@ -1394,8 +1394,9 @@ jQuery("#16256_3").bind("click",showOrHide);
 	    
 	    if(!fillMandatory) {
 	    	var html = '提交失败：必填的题目不能为空';
-				jQuery("#check-alert-dialog .content").html(html);
-			    jQuery("#check-alert-dialog").dialog('open');
+				var buttons = ["确定"];
+				var callbacks = [ function() { WebDialog.close();return false;}]; 
+				WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 	    }
 		return fillMandatory;
 	}
@@ -1425,8 +1426,9 @@ jQuery("#16256_3").bind("click",showOrHide);
 		    return true;
 		} else {
 			var html = '不能提交空报告';
-			jQuery("#check-alert-dialog .content").html(html);
-		    jQuery("#check-alert-dialog").dialog('open');
+			var buttons = ["确定"];
+			var callbacks = [ function() { WebDialog.close();return false;}]; 
+			WebDialog.showMessageBox(html, "center", "center", 600, buttons, callbacks);
 			return false;
 		}
 	}
